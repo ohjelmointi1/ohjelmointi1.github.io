@@ -328,9 +328,11 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
 </table>
 
 
-# Kurssin sisältö
+## Kurssin sisältö
 
 Tunneilla opetellaan ohjelmoinnin perusteita sekä hyviä ohjelmointikäytäntöjä ja käydään läpi esimerkkejä. Lisäksi opiskelijat ohjelmoivat tuntitehtäviä ja saavat niihin ohjausta. Kurssin suorittamiseksi sinun tulee palauttaa hyväksytysti automaattisesti arvioitavia harjoitustehtäviä Viope-järjestelmään sekä suorittaa kurssin lopuksi järjestettävä koe. Koe sisältää harjoitustehtävien kaltaisia ohjelmointitehtäviä ja se tehdään tietokoneella.
+
+[Opintojaksokuvaus](https://opinto-opas.haaga-helia.fi/course_unit/SWD4TN032)
 
 ## Kehitys ohjelmistokehittäjänä
 
@@ -431,7 +433,7 @@ Saat käyttää myös muita työkaluja, mutta niihin ei voida tarjota käyttötu
 
 Kurssin harjoitustehtävien tehtävänannot löytyvät Viope-järjestelmästä, jonne tehtävät myös palautetaan, ja joka tarkistaa tehtävät automaattisesti. 
 
-Rekisteröidy Viopeen osoitteessa: https://vw4.viope.com/login?org=hh. Huomaa että rekisteröitymisosoitteessa on oltava parametri `?org=hh`, jotta pääset käsiksi Haaga-Helian kurssitarjontaan. Rekisteröityessäsi valitse tämä toteutus `Ohjelmointi 1-3012 ⛄`.
+Rekisteröidy Viopeen osoitteessa [https://vw4.viope.com/login?org=hh](https://vw4.viope.com/login?org=hh). Huomaa että rekisteröitymisosoitteessa on oltava parametri `?org=hh`, jotta pääset käsiksi Haaga-Helian kurssitarjontaan. Rekisteröityessäsi valitse tämä toteutus `Ohjelmointi 1-3012 ⛄`.
 
 **Teknisistä syistä johtuen Viopeen palautettavista lähdekoodeista täytyy aina poistaa mahdolliset package -lauseet luokan yläpuolelta.** Viope on myös muilla tavoin erittäin tarkka ohjelmien oikeellisuudesta, mikä saattaa aiheuttaa ensimmäisillä viikoilla hämmennystä. Tyypillisiä Viope-virhetilanteita ja niiden ratkaisuja on dokumentoitu [erilliselle wiki-sivulle](../../wiki/Viope), jota päivitetään kurssin edetessä.
 
@@ -444,11 +446,11 @@ Teamsissa voi myös esittää toivomuksia kurssin kehittämiseksi jo kurssin aik
 Teams on saatavilla puhelimien sovelluskaupoista sekä työpöytäsovelluksena, tai voit käyttää sitä selaimen web-käyttöliittymässä ilman asennuksia. Kirjautuminen Teamsiin tapahtuu Haaga-Helian `@myy.haaga-helia.fi`-tunnuksella.
 
 * [Teams Quick Start -ohje (pdf)](https://download.microsoft.com/download/D/9/F/D9FE8B9E-22F5-47BF-A1AB-09539C41FCD0/Teams%20QS.pdf)
-* Web-käyttöliittymä: https://teams.microsoft.com/
-* Lataussivu: https://teams.microsoft.com/downloads
+* Web-käyttöliittymä: [https://teams.microsoft.com/](https://teams.microsoft.com/)
+* Lataussivu: [https://teams.microsoft.com/downloads](https://teams.microsoft.com/downloads)
 
 **GitHub**
 
 Kurssin tehtäväpohjien ja malliratkaisujen jakelussa hyödynnetään ohjelmistokehityksen alalla erittäin vakiintunutta Git-versionhallintaa ja GitHub-palvelua. Voit kloonata itsellesi tämän projektin repositorion ylälaidassa olevien painikkeiden avulla. Kurssin edetessä projektiin lisätään uusia tiedostoja, jotka voit myös päivittää itsellesi Git:in avulla.
 
-Gitin käytön opetteluun voit käyttää esimerkiksi Helsingin yliopiston erinomaista "Tietokone Työvälineenä"-kurssin Git-materiaalia: https://tkt-lapio.github.io/git/. Vaikka Git tuntuisi aluksi vaikealta tai ahdistavalta, sinun ei tarvitse opetella kaikkea kerralla, vaan tee vain sen verran mistä on sinulle välitöntä hyötyä. Voit hyvin suorittaa tämän kurssin myös perehtymättä erikseen Gittiin.
+Gitin käytön opetteluun voit käyttää esimerkiksi Helsingin yliopiston erinomaista "Tietokone Työvälineenä"-kurssin Git-materiaalia: [https://tkt-lapio.github.io/git/](https://tkt-lapio.github.io/git/). Vaikka Git tuntuisi aluksi vaikealta tai ahdistavalta, sinun ei tarvitse opetella kaikkea kerralla, vaan tee vain sen verran mistä on sinulle välitöntä hyötyä. Voit hyvin suorittaa tämän kurssin myös perehtymättä erikseen Gittiin.
