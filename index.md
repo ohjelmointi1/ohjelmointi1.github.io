@@ -1,4 +1,4 @@
-# Ohjelmointi 1, kevät 2021 ⛄
+# Tervetuloa kurssille!
 
 Tervetuloa Haaga-Helian ohjelmointi 1 -opintojaksolle! 
 
