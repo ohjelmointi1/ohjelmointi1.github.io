@@ -33,7 +33,7 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
                 Eclipse-sovelluskehitin<br />
                 Perustietotyypit</strong><br />
                 <a href="https://vw4.viope.com/login?org=hh">🔗 Viope-rekisteröityminen</a> (valitse <em>Ohjelmointi 1-3012 ⛄</em>)<br />
-                <a href="../../wiki/Ohjelmoinnin-aloitus">📝 Muistiinpanot</a><br />
+                <a href="wiki/Ohjelmoinnin-aloitus">📝 Muistiinpanot</a><br />
                 <a href="src/viikko1/perusteet/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <strong>Oppitunnin videot:</strong><br />
@@ -51,7 +51,7 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
             <td>26.8.</td>
             <td>
                 <strong>Ehtolauseet</strong><br />
-                <a href="../../wiki/Totuusarvot-ja-ehtolauseet">📝 Muistiinpanot</a><br />
+                <a href="wiki/Totuusarvot-ja-ehtolauseet">📝 Muistiinpanot</a><br />
                 <a href="src/viikko1/ehtolauseet/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <strong>Oppitunnin videot:</strong><br />
@@ -70,7 +70,7 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
             <td>31.8.</td>
             <td>
                 <strong>Toistorakenteet</strong><br />
-                <a href="../../wiki/Toistorakenteet">📝 Muistiinpanot</a><br />
+                <a href="wiki/Toistorakenteet">📝 Muistiinpanot</a><br />
                 <a href="src/viikko2/toistorakenteet/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <strong>Oppitunnin videot:</strong><br />
@@ -86,7 +86,7 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
             <td>2.9.</td>
             <td>
                 <strong>Merkkijonot</strong><br />
-                <a href="../../wiki/Merkkijonot">📝 Muistiinpanot</a><br />
+                <a href="wiki/Merkkijonot">📝 Muistiinpanot</a><br />
                 <a href="src/viikko2/merkkijonot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <strong>Oppitunnin videot:</strong><br />
@@ -107,7 +107,7 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
             <td>7.9.</td>
             <td>
                 <strong>Listat</strong><br />
-                <a href="../../wiki/Listat">📝 Muistiinpanot</a><br />
+                <a href="wiki/Listat">📝 Muistiinpanot</a><br />
                 <a href="src/viikko3/listat/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <em>Lisämateriaali (Ohjelmoinnin MOOC):</em><br />
@@ -129,7 +129,7 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
             <td>9.9.</td>
             <td>
                 <strong>Taulukot</strong><br />
-                <a href="../../wiki/Taulukot-(arrays)">📝 Muistiinpanot</a><br />
+                <a href="wiki/Taulukot-(arrays)">📝 Muistiinpanot</a><br />
                 <a href="src/viikko3/taulukot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <a href="https://cscircles.cemc.uwaterloo.ca/java_visualize/">🔗 Java Visualizer -työkalu</a><br />
                 <a href="https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.Arrays%3B%0A%0Apublic+class+Kaupunkitaulukko+%7B%0A%0A++++public+static+void+main(String%5B%5D+args)+%7B%0A%0A++++++++String%5B%5D+kaupungit+%3D+%7B+%22Rauma%22,+%22Helsinki%22,+%22Espoo%22,+%22Vantaa%22,+%22Turku%22+%7D%3B%0A%0A++++++++System.out.println(%22Alkuper%C3%A4inen%3A%22)%3B%0A++++++++System.out.println(Arrays.toString(kaupungit))%3B%0A%0A++++++++System.out.println()%3B%0A%0A++++++++String%5B%5D+kaupungitSort+%3D+Arrays.copyOf(kaupungit,+kaupungit.length)%3B%0A%0A++++++++Arrays.sort(kaupungitSort)%3B%0A%0A++++++++System.out.println(%22Sorttauksen+j%C3%A4lkeen%3A%22)%3B%0A++++++++System.out.println(Arrays.toString(kaupungit))%3B%0A++++++++System.out.println(Arrays.toString(kaupungitSort))%3B%0A%0A++++%7D%0A%7D%0A&mode=display&curInstr=0">🔗 Kaupungit-esimerkki Visualizerissa (taulukon kopioiminen)</a><br />
@@ -152,7 +152,7 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
             <td>14.9.</td>
             <td>
                 <strong>Staattiset luokkametodit, parametrit ja paluuarvot</strong><br />
-                <a href="../../wiki/Metodit">📝 Muistiinpanot</a><br />
+                <a href="wiki/Metodit">📝 Muistiinpanot</a><br />
                 <a href="src/viikko4/metodit/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <strong>Oppitunnin videot:</strong><br />
@@ -172,7 +172,7 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
                 <strong>Ajan käsitteleminen Javassa<br />
                 Ohjelman paketointi ja suorittaminen Eclipsen ulkopuolella<br />
                 Komentoriviparametrit</strong><br />
-                <a href="../../wiki/Ajan-käsittely-ja-ohjelman-kääntäminen">📝 Muistiinpanot</a><br />
+                <a href="wiki/Ajan-käsittely-ja-ohjelman-kääntäminen">📝 Muistiinpanot</a><br />
                 <a href="src/viikko4/aika/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <strong>Oppitunnin videot:</strong><br />
@@ -197,7 +197,7 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
                 Olio-ohjelmoinnin alkeet<br />
                 Käsitteet luokka ja olio<br />
                 Oliometodit ja -muuttujat<br /></strong>
-                <a href="../../wiki/Oliot">📝 Muistiinpanot</a><br />
+                <a href="wiki/Oliot">📝 Muistiinpanot</a><br />
                 <a href="src/viikko5/oliot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <strong>Oppitunnin videot:</strong><br />
@@ -224,7 +224,7 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
                 <strong>Olio-ohjelmointi jatkuu:<br/>
                 Luokkien yhteyssuhteet<br/>
                 Olioita listoilla ja listoja olioissa</strong><br/> 
-                <a href="../../wiki/osoitekirja_projekti">📝 Tunnin esimerkin lyhyt kuvaus</a><br />
+                <a href="wiki/osoitekirja_projekti">📝 Tunnin esimerkin lyhyt kuvaus</a><br />
                 <a href="src/viikko5/oliot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br/>
                 <strong>Oppitunnin videot:</strong><br />
@@ -242,7 +242,7 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
             <td>28.9.</td>
             <td>
                 <strong>Olioiden vertailu ja järjestäminen</strong><br/> 
-                <a href="../../wiki/Olioiden-vertailu">📝 Muistiinpanot</a><br />
+                <a href="wiki/Olioiden-vertailu">📝 Muistiinpanot</a><br />
                 <a href="src/viikko6/oliot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br/>
                 <strong>Oppitunnin videot:</strong><br />
@@ -261,7 +261,7 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
             <td>30.9.</td>
             <td>
                 <strong>Poikkeukset</strong><br />
-                <a href="../../wiki/Poikkeukset">📝 Muistiinpanot</a><br />
+                <a href="wiki/Poikkeukset">📝 Muistiinpanot</a><br />
                 <a href="src/viikko6/poikkeukset/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br/>
                 <strong>Oppitunnin videot:</strong><br />
@@ -284,7 +284,7 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
             <td>5.10.</td>
             <td>
                 <strong>Tekstitiedostojen lukeminen ja tallentaminen</strong><br />
-                <a href="../../wiki/Tiedostot">📝 Muistiinpanot</a><br />
+                <a href="wiki/Tiedostot">📝 Muistiinpanot</a><br />
                 <a href="src/viikko7/tiedostot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br/>
                 <strong>Oppitunnin videot:</strong><br />
@@ -435,7 +435,7 @@ Kurssin harjoitustehtävien tehtävänannot löytyvät Viope-järjestelmästä, 
 
 Rekisteröidy Viopeen osoitteessa [https://vw4.viope.com/login?org=hh](https://vw4.viope.com/login?org=hh). Huomaa että rekisteröitymisosoitteessa on oltava parametri `?org=hh`, jotta pääset käsiksi Haaga-Helian kurssitarjontaan. Rekisteröityessäsi valitse tämä toteutus `Ohjelmointi 1-3012 ⛄`.
 
-**Teknisistä syistä johtuen Viopeen palautettavista lähdekoodeista täytyy aina poistaa mahdolliset package -lauseet luokan yläpuolelta.** Viope on myös muilla tavoin erittäin tarkka ohjelmien oikeellisuudesta, mikä saattaa aiheuttaa ensimmäisillä viikoilla hämmennystä. Tyypillisiä Viope-virhetilanteita ja niiden ratkaisuja on dokumentoitu [erilliselle wiki-sivulle](../../wiki/Viope), jota päivitetään kurssin edetessä.
+**Teknisistä syistä johtuen Viopeen palautettavista lähdekoodeista täytyy aina poistaa mahdolliset package -lauseet luokan yläpuolelta.** Viope on myös muilla tavoin erittäin tarkka ohjelmien oikeellisuudesta, mikä saattaa aiheuttaa ensimmäisillä viikoilla hämmennystä. Tyypillisiä Viope-virhetilanteita ja niiden ratkaisuja on dokumentoitu [erilliselle wiki-sivulle](wiki/Viope), jota päivitetään kurssin edetessä.
 
 **Teams**
 
