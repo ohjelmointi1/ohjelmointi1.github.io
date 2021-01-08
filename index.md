@@ -26,7 +26,7 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
     <tbody>
         <tr>
             <td>Ma</td>
-            <td>24.8.</td>
+            <td>18.1.</td>
             <td>
                 <strong>
                 Kurssin järjestelyt ja osallistumisen vahvistaminen<br />
@@ -34,7 +34,7 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
                 Perustietotyypit</strong><br />
                 <a href="https://vw4.viope.com/login?org=hh">🔗 Viope-rekisteröityminen</a> (valitse <em>Ohjelmointi 1-3012 ⛄</em>)<br />
                 <a href="wiki/Ohjelmoinnin-aloitus">📝 Muistiinpanot</a><br />
-                <a href="src/viikko1/perusteet/">📁 Oppitunnin esimerkkikoodit</a><br />
+                <!--<a href="src/viikko1/perusteet/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <strong>Oppitunnin videot:</strong><br />
                 <a href="https://web.microsoftstream.com/video/2d26c6ab-1852-404c-a509-15b43cb3dd64">📼 Eclipse-sovelluskehitin ja tehtävän palauttaminen Viopeen</a><br />
@@ -43,16 +43,16 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
                 <a href="https://web.microsoftstream.com/video/2dc12d8b-c449-49e4-be02-c694ff32aa68">📼 Muuttujat (int), niiden määrittely ja käyttäminen</a><br />
                 <a href="https://web.microsoftstream.com/video/c8362d33-bdbf-4344-852d-d9c82a5e015b">📼 Tietotyypit long, double ja String</a><br />
                 <a href="https://web.microsoftstream.com/video/8e4d9ea2-a5d1-4805-997b-09656ab51238">📼 Merkkijonojen yhdistäminen (String) ja kokonaislukujen jako-operaatiot</a><br />
-                <a href="https://web.microsoftstream.com/video/8d390425-62c2-4bbe-b85b-d32d8e577f4d">📼 Syötteiden lukeminen (Scanner) ja HeiEtunimi-tehtävä</a><br />
+                <a href="https://web.microsoftstream.com/video/8d390425-62c2-4bbe-b85b-d32d8e577f4d">📼 Syötteiden lukeminen (Scanner) ja HeiEtunimi-tehtävä</a><br />-->
             </td>
         </tr>
         <tr>
             <td>Ke</td>
-            <td>26.8.</td>
+            <td>20.1.</td>
             <td>
                 <strong>Ehtolauseet</strong><br />
                 <a href="wiki/Totuusarvot-ja-ehtolauseet">📝 Muistiinpanot</a><br />
-                <a href="src/viikko1/ehtolauseet/">📁 Oppitunnin esimerkkikoodit</a><br />
+                <!--<a href="src/viikko1/ehtolauseet/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <strong>Oppitunnin videot:</strong><br />
                 <a href="https://web.microsoftstream.com/video/0fcecdc5-4bb9-43d4-a7a3-5533289551e0">📼 Kokonaislukujen jakaminen ja liukulukujen pyöristäminen (Juhlat-tehtävä)</a><br />
@@ -63,31 +63,32 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
                 <a href="https://web.microsoftstream.com/video/663db56f-390c-48cc-b197-85179cf2d52f">📼 else ja else if -rakenteet: kangaskassi-esimerkki
 </a><br />
                 <a href="https://web.microsoftstream.com/video/f515288c-56ec-4cc0-ac96-bda94e8686cc">📼 Kellonajan selvittäminen: LocalTime ja Tervehdys-tehtävä</a><br />
+                -->
             </td>
         </tr>
         <tr>
             <td>Ma</td>
-            <td>31.8.</td>
+            <td>25.1.</td>
             <td>
                 <strong>Toistorakenteet</strong><br />
                 <a href="wiki/Toistorakenteet">📝 Muistiinpanot</a><br />
-                <a href="src/viikko2/toistorakenteet/">📁 Oppitunnin esimerkkikoodit</a><br />
+                <!--<a href="src/viikko2/toistorakenteet/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <strong>Oppitunnin videot:</strong><br />
                 <a href="https://web.microsoftstream.com/video/c58fca05-1cbd-4cf8-9869-f84ad31209a2">📼 Sisäkkäiset ehtorakenteet ja Math-luokka / MatkalippujenHinnat.java</a><br />
                 <a href="https://web.microsoftstream.com/video/ececddca-5ca6-453a-9d3f-65d1e701ba3f">📼 While-toistorakenne</a><br />
                 <a href="https://web.microsoftstream.com/video/d6547f01-2f9e-4fe3-bfe7-8b396d4b26ea">📼 While-toistorakenne ja toiston neskeyttäminen (break)</a><br />
                 <a href="https://web.microsoftstream.com/video/1c548a60-8027-4b25-a7d1-816991070513">📼 For-toistorakenne</a><br />
-                <a href="https://web.microsoftstream.com/video/cfc1a7bc-96b3-4353-84ce-83d3f34a0ee1">📼 FizzBuzz-esimerkki, ehtorakenteiden soveltaminen toistorakenteessa</a><br />
+                <a href="https://web.microsoftstream.com/video/cfc1a7bc-96b3-4353-84ce-83d3f34a0ee1">📼 FizzBuzz-esimerkki, ehtorakenteiden soveltaminen toistorakenteessa</a><br />-->
             </td>
         </tr>
         <tr>
             <td>Ke</td>
-            <td>2.9.</td>
+            <td>27.1.</td>
             <td>
                 <strong>Merkkijonot</strong><br />
                 <a href="wiki/Merkkijonot">📝 Muistiinpanot</a><br />
-                <a href="src/viikko2/merkkijonot/">📁 Oppitunnin esimerkkikoodit</a><br />
+                <!--<a href="src/viikko2/merkkijonot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <strong>Oppitunnin videot:</strong><br />
                 <a href="https://web.microsoftstream.com/video/923c1e1d-8e36-4e71-8ddd-4c126a978934">📼 Toistorakenteet ja kotitalousvähennys-tehtävä
@@ -99,16 +100,16 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
                 <a href="https://web.microsoftstream.com/video/cb88e4a5-ce49-42c3-ab94-9763375ba5eb">📼 Erikoismerkit merkkijonoissa</a><br />
                 <a href="https://web.microsoftstream.com/video/f8b57b2e-4b8f-4313-a1f4-e943987460e2">📼 Osamerkkijonot ja merkkijono läpikäynti + palindromi-esimerkki</a><br />
                 <a href="https://web.microsoftstream.com/video/003660e2-0186-48a8-ae64-c4364a39e495">📼 Ohjelman suorituksen tutkiminen Java visualizerilla</a><br />
-                <a href="https://web.microsoftstream.com/video/f0b7e8fd-e95a-44c1-9af4-a1b34eaad31c">📼 Säännölliset lausekkeet</a><br />
+                <a href="https://web.microsoftstream.com/video/f0b7e8fd-e95a-44c1-9af4-a1b34eaad31c">📼 Säännölliset lausekkeet</a><br />-->
             </td>
         </tr>
         <tr>
             <td>Ma</td>
-            <td>7.9.</td>
+            <td>1.2.</td>
             <td>
                 <strong>Listat</strong><br />
                 <a href="wiki/Listat">📝 Muistiinpanot</a><br />
-                <a href="src/viikko3/listat/">📁 Oppitunnin esimerkkikoodit</a><br />
+                <!--<a href="src/viikko3/listat/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <em>Lisämateriaali (Ohjelmoinnin MOOC):</em><br />
                 <a href="https://ohjelmointi-19.mooc.fi/osa-3/2-listat" target="_blank">Listamuuttujan käyttö useamman arvon tallentamiseen</a><br />
@@ -121,16 +122,16 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
                 <a href="https://web.microsoftstream.com/video/d10b4dfe-bb44-481c-accb-5c4c50f87f35">📼 Listamuuttujien määrittely ja listatyyppien yhteensopivuus</a><br />
                 <a href="https://web.microsoftstream.com/video/a7b40cc4-049f-41a6-8345-ac82c6361101">📼 Listan sisällön tutkiminen ja sisällön läpikäynti</a><br />
                 <a href="https://web.microsoftstream.com/video/ad0cd980-1d48-4987-942f-cb1e5ca58240">📼 Listan järjestäminen ja kopioiminen
-</a><br />
+</a><br />-->
             </td>
         </tr>
         <tr>
             <td>Ke</td>
-            <td>9.9.</td>
+            <td>3.2.</td>
             <td>
                 <strong>Taulukot</strong><br />
                 <a href="wiki/Taulukot-(arrays)">📝 Muistiinpanot</a><br />
-                <a href="src/viikko3/taulukot/">📁 Oppitunnin esimerkkikoodit</a><br />
+                <!--<a href="src/viikko3/taulukot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <a href="https://cscircles.cemc.uwaterloo.ca/java_visualize/">🔗 Java Visualizer -työkalu</a><br />
                 <a href="https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.Arrays%3B%0A%0Apublic+class+Kaupunkitaulukko+%7B%0A%0A++++public+static+void+main(String%5B%5D+args)+%7B%0A%0A++++++++String%5B%5D+kaupungit+%3D+%7B+%22Rauma%22,+%22Helsinki%22,+%22Espoo%22,+%22Vantaa%22,+%22Turku%22+%7D%3B%0A%0A++++++++System.out.println(%22Alkuper%C3%A4inen%3A%22)%3B%0A++++++++System.out.println(Arrays.toString(kaupungit))%3B%0A%0A++++++++System.out.println()%3B%0A%0A++++++++String%5B%5D+kaupungitSort+%3D+Arrays.copyOf(kaupungit,+kaupungit.length)%3B%0A%0A++++++++Arrays.sort(kaupungitSort)%3B%0A%0A++++++++System.out.println(%22Sorttauksen+j%C3%A4lkeen%3A%22)%3B%0A++++++++System.out.println(Arrays.toString(kaupungit))%3B%0A++++++++System.out.println(Arrays.toString(kaupungitSort))%3B%0A%0A++++%7D%0A%7D%0A&mode=display&curInstr=0">🔗 Kaupungit-esimerkki Visualizerissa (taulukon kopioiminen)</a><br />
                 <br />
@@ -144,16 +145,16 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
                 <em>Lisämateriaali:</em><br />
                 <a href="https://video.haaga-helia.fi/media/Taulukot+osa+1/0_mbinzbve">📼 Taulukot osa 1</a><br />
                 <a href="https://video.haaga-helia.fi/media/Taulukot+osa+2A+Arrays-apuluokka/0_jorn81gr">📼 Taulukot osa 2: Arrays-apuluokka</a><br />
-                <a href="https://video.haaga-helia.fi/media/Taulukot+osa+3A+SanojenVaihtaminen/0_nm4j9anr">📼 Malliratkaisu (SanojenVaihtaminen, Arrays.toString, String.join)</a><br />
+                <a href="https://video.haaga-helia.fi/media/Taulukot+osa+3A+SanojenVaihtaminen/0_nm4j9anr">📼 Malliratkaisu (SanojenVaihtaminen, Arrays.toString, String.join)</a><br />-->
             </td>
         </tr>
         <tr>
             <td>Ma</td>
-            <td>14.9.</td>
+            <td>8.2.</td>
             <td>
                 <strong>Staattiset luokkametodit, parametrit ja paluuarvot</strong><br />
                 <a href="wiki/Metodit">📝 Muistiinpanot</a><br />
-                <a href="src/viikko4/metodit/">📁 Oppitunnin esimerkkikoodit</a><br />
+                <!--<a href="src/viikko4/metodit/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <strong>Oppitunnin videot:</strong><br />
                 <a href="https://web.microsoftstream.com/video/d0266f32-aad8-4480-89ff-998502ead32a">📼 Metodien terminologia ja main-metodi</a><br />
@@ -162,18 +163,18 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
                 <a href="https://web.microsoftstream.com/video/261be2fd-63a6-42c8-85e3-bada4e51fea4">📼 Paluuarvojen palauttaminen ja vastaanottaminen</a><br />
                 <a href="https://web.microsoftstream.com/video/d9a19395-8d0f-428e-8649-cf05d9c31312">📼 Toisissa luokissa olevien metodien kutsuminen ja metodien näkyvyys</a><br />
                 <a href="https://web.microsoftstream.com/video/90129541-ad0e-48e2-b3c9-043ded34b663">📼 Demo: Listan muuttaminen metodissa muuttaa sen kaikkialla</a><br />
-                <a href="https://web.microsoftstream.com/video/c104e446-ed8c-4fb7-8d3f-ec3b867bcda4">📼 Extra: satunnaisen nimen generointi omassa metodissa</a><br />
+                <a href="https://web.microsoftstream.com/video/c104e446-ed8c-4fb7-8d3f-ec3b867bcda4">📼 Extra: satunnaisen nimen generointi omassa metodissa</a><br />-->
             </td>
         </tr>
         <tr>
             <td>Ke</td>
-            <td>16.9.</td>
+            <td>10.2.</td>
             <td>
                 <strong>Ajan käsitteleminen Javassa<br />
                 Ohjelman paketointi ja suorittaminen Eclipsen ulkopuolella<br />
                 Komentoriviparametrit</strong><br />
                 <a href="wiki/Ajan-käsittely-ja-ohjelman-kääntäminen">📝 Muistiinpanot</a><br />
-                <a href="src/viikko4/aika/">📁 Oppitunnin esimerkkikoodit</a><br />
+                <!--<a href="src/viikko4/aika/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <strong>Oppitunnin videot:</strong><br />
                 <a href="https://web.microsoftstream.com/video/f7aa89e6-bb68-4b25-8cae-c7b52ed4fc48">📼 Ajan käsitteleminen Javassa: vanha ja nykyinen tapa + Aikaluokat ja aikaoliot</a><br />
@@ -186,19 +187,19 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
                 <br/>
                 <em>Lisämateriaali:</em><br />
                 <a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html">🔗 Java API: LocalDate</a><br />
-                <a href="https://video.haaga-helia.fi/media/Luokat+ja+oliot+osa+6/0_4xlz2stq">📼 Ajan käsittely Javassa</a><br />
+                <a href="https://video.haaga-helia.fi/media/Luokat+ja+oliot+osa+6/0_4xlz2stq">📼 Ajan käsittely Javassa</a><br />-->
             </td>
         </tr>
         <tr>
             <td>Ma</td>
-            <td>21.9.</td>
+            <td>15.2.</td>
             <td>
                 <strong>
                 Olio-ohjelmoinnin alkeet<br />
                 Käsitteet luokka ja olio<br />
                 Oliometodit ja -muuttujat<br /></strong>
                 <a href="wiki/Oliot">📝 Muistiinpanot</a><br />
-                <a href="src/viikko5/oliot/">📁 Oppitunnin esimerkkikoodit</a><br />
+                <!--<a href="src/viikko5/oliot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <strong>Oppitunnin videot:</strong><br />
                 <a href="https://web.microsoftstream.com/video/d7b2f03d-5645-45d4-90ee-be57c24e4938">📼 Olio-ohjelmoinnin perusidea ja -käsitteet</a><br />
@@ -214,18 +215,18 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
                 <a href="https://video.haaga-helia.fi/media/Luokat+ja+oliot+osa+1/0_njq4rntg">📼 Olio-ohjelmoinnin teoriaosuus</a><br />
                 <a href="https://video.haaga-helia.fi/media/Luokat+ja+oliot+osa+2/0_4jqh6858">📼 Auto-tehtävän malliratkaisu</a><br />
                 <a href="https://video.haaga-helia.fi/media/Luokat+ja+oliot+osa+3/0_20k2dkco">📼 Debuggerin käyttäminen ohjelman suorituksen tutkimiseksi</a><br />
-                <a href="https://video.haaga-helia.fi/media/Luokat+ja+oliot+osa+5/0_u5i95q8h">📼 null-viittaukset, NullPointerException ja viittausten kopiointi</a><br />
+                <a href="https://video.haaga-helia.fi/media/Luokat+ja+oliot+osa+5/0_u5i95q8h">📼 null-viittaukset, NullPointerException ja viittausten kopiointi</a><br />-->
             </td>
         </tr>
         <tr>
             <td>Ke</td>
-            <td>23.9.</td>
+            <td>17.2.</td>
             <td>
                 <strong>Olio-ohjelmointi jatkuu:<br/>
                 Luokkien yhteyssuhteet<br/>
                 Olioita listoilla ja listoja olioissa</strong><br/> 
                 <a href="wiki/osoitekirja_projekti">📝 Tunnin esimerkin lyhyt kuvaus</a><br />
-                <a href="src/viikko5/oliot/">📁 Oppitunnin esimerkkikoodit</a><br />
+                <!--<a href="src/viikko5/oliot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br/>
                 <strong>Oppitunnin videot:</strong><br />
                 <a href="https://web.microsoftstream.com/video/20d4a83b-56de-4c5d-8dd5-9eaa9ef1b66a">📼 Olioiden yhteyssuhteet ja null-arvojen käsittely</a><br />
@@ -234,16 +235,21 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
                 <br />
                 <em>Lisämateriaali (Viope-vinkkejä):</em><br />
                 <a href="https://video.haaga-helia.fi/media/Luokat+ja+oliot+osa+7+++kokoojamuuttuja/0_8k2wjem9">📼 Kokoojamuuttujan hyödyntäminen Playlist-tehtävän kaltaisessa ongelmassa</a><br />
-                <a href="https://video.haaga-helia.fi/media/Oliot+listallaA+pituuksien+summan+laskeminen/0_c16cldiu">📼 Pelaajat listalla / "olioiden summan laskeminen"</a><br />
+                <a href="https://video.haaga-helia.fi/media/Oliot+listallaA+pituuksien+summan+laskeminen/0_c16cldiu">📼 Pelaajat listalla / "olioiden summan laskeminen"</a><br />-->
             </td>
         </tr>
         <tr>
+            <td></td>
+            <td></td>
+            <td>Talviloma</td>
+        </tr>
+        <tr>
             <td>Ma</td>
-            <td>28.9.</td>
+            <td>1.3.</td>
             <td>
                 <strong>Olioiden vertailu ja järjestäminen</strong><br/> 
                 <a href="wiki/Olioiden-vertailu">📝 Muistiinpanot</a><br />
-                <a href="src/viikko6/oliot/">📁 Oppitunnin esimerkkikoodit</a><br />
+                <!--<a href="src/viikko6/oliot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br/>
                 <strong>Oppitunnin videot:</strong><br />
                 <a href="https://web.microsoftstream.com/video/a0f3c7de-8d0f-4104-bc49-b698e1462663">📼 Olioiden kertaus: olioiden läpikäyntiä listoilla</a><br />
@@ -253,16 +259,16 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
                 <a href="https://web.microsoftstream.com/video/8c9d933e-29be-46da-aff7-1f5e00e39d3b">📼 Merkkijonot: merkkijonojen vertailu equals ja equalsIgnoreCase</a><br />
                 <br />
                 <em>Lisämateriaali:</em><br />
-                <a href="https://video.haaga-helia.fi/media/Viittaukset%2C+alkeistietotyypit+ja+null/0_xqxbgc52">📼 Viittaukset, alkeistietotyypit ja null</a><br />
+                <a href="https://video.haaga-helia.fi/media/Viittaukset%2C+alkeistietotyypit+ja+null/0_xqxbgc52">📼 Viittaukset, alkeistietotyypit ja null</a><br />-->
             </td>
         </tr>
         <tr>
             <td>Ke</td>
-            <td>30.9.</td>
+            <td>3.3.</td>
             <td>
                 <strong>Poikkeukset</strong><br />
                 <a href="wiki/Poikkeukset">📝 Muistiinpanot</a><br />
-                <a href="src/viikko6/poikkeukset/">📁 Oppitunnin esimerkkikoodit</a><br />
+                <!--<a href="src/viikko6/poikkeukset/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br/>
                 <strong>Oppitunnin videot:</strong><br />
                 <a href="https://web.microsoftstream.com/video/a089f75b-2576-4705-aba4-a18cfa9b08bc">📼 Ohjelmointikurssin pisteidenlasku ja arvosanat</a><br />
@@ -276,16 +282,16 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
                 <a href="https://video.haaga-helia.fi/media/Poikkeukset+osa+1A+try%2C+catch%2C+throw%2C+finally/0_vll0cxij">📼 Poikkeukset osa 1: try, catch, throw, finally </a><br />
                 <a href="https://video.haaga-helia.fi/media/Poikkeukset+osa+2A+KysyUudestaan/0_0cdojqx9">📼 Poikkeukset osa 2: KysyUudestaan</a><br />
                 <a href="https://video.haaga-helia.fi/media/PoikkeuksetA+stack+trace%2C+poikkeustyypit+ja+poikkeusten+heitt%C3%A4minen/0_x7o4wbyy">📼 Poikkeukset osa 3: Stack trace, poikkeustyypit ja poikkeusten heittäminen </a><br />
-                <a href="https://video.haaga-helia.fi/media/PoikkeuksetA+omat+poikkeusluokat/0_13i68b5g">📼 Poikkeukset osa 4: omat poikkeusluokat (vapaaehtoinen lisäsisältö)</a><br />
+                <a href="https://video.haaga-helia.fi/media/PoikkeuksetA+omat+poikkeusluokat/0_13i68b5g">📼 Poikkeukset osa 4: omat poikkeusluokat (vapaaehtoinen lisäsisältö)</a><br />-->
             </td>
         </tr>
         <tr>
             <td>Ma</td>
-            <td>5.10.</td>
+            <td>8.3.</td>
             <td>
                 <strong>Tekstitiedostojen lukeminen ja tallentaminen</strong><br />
                 <a href="wiki/Tiedostot">📝 Muistiinpanot</a><br />
-                <a href="src/viikko7/tiedostot/">📁 Oppitunnin esimerkkikoodit</a><br />
+                <!--<a href="src/viikko7/tiedostot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br/>
                 <strong>Oppitunnin videot:</strong><br />
                 <a href="https://web.microsoftstream.com/video/a7fc6726-ac27-4da4-a8b5-9e8509cca2bd">📼 Tekstitiedoston lukeminen ja merkistökoodaukset</a><br />
@@ -294,34 +300,34 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
                 <a href="https://web.microsoftstream.com/video/1d066780-25d7-4d7d-b227-e097e3844014">📼 Tiedostonkäsittely osana ohjelmaa ja AddressBook-tehtävä</a><br />
                 <br/>
                 <em>Lisämateriaali:</em><br />
-                <a href="https://video.haaga-helia.fi/media/Tiedostojen+k%C3%A4sittely/0_96nk6czv">📼 Tiedostojen käsittely</a><br />
-            </td>
-        </tr>
-        <tr>
-            <td><del>Ke</del></td>
-            <td><del>7.10.</del></td>
-            <td>
-                <strong>Oppitunti peruttu Bite-valintakokeen valvonnan vuoksi</strong>
-            </td>
-        </tr>
-        <tr>
-            <td>Ma</td>
-            <td>12.10.</td>
-            <td>
-                <strong>Kurssin sisällön kertaus</strong><br />
-                <a href="src/viikko8/kertaus/">📁 Oppitunnin esimerkkikoodit</a><br />
-                <br/>
-                <strong>Oppitunnin videot:</strong><br />
-                <a href="https://web.microsoftstream.com/video/7c65bed8-7724-4ee9-94eb-3b715c8ad630">📼 Kurssin kertaus: merkkijonot, metodit, ehtorakenteet, poikkeukset</a><br />
-                <a href="https://web.microsoftstream.com/video/e547ee47-b4ac-4182-8a1c-bdcfe3ef060a">📼 Kurssin kertaus: olio-ohjelmointi</a><br />
+                <a href="https://video.haaga-helia.fi/media/Tiedostojen+k%C3%A4sittely/0_96nk6czv">📼 Tiedostojen käsittely</a><br />-->
             </td>
         </tr>
         <tr>
             <td>Ke</td>
-            <td>14.10.</td>
+            <td>10.3.</td>
+            <td>
+                Kurssin aiheiden soveltaminen pikkuprojektissa.
+            </td>
+        </tr>
+        <tr>
+            <td>Ma</td>
+            <td>15.3.</td>
+            <td>
+                <strong>Kurssin sisällön kertaus tai harjoituskoe</strong><br />
+                <!--<a href="src/viikko8/kertaus/">📁 Oppitunnin esimerkkikoodit</a><br />
+                <br/>
+                <strong>Oppitunnin videot:</strong><br />
+                <a href="https://web.microsoftstream.com/video/7c65bed8-7724-4ee9-94eb-3b715c8ad630">📼 Kurssin kertaus: merkkijonot, metodit, ehtorakenteet, poikkeukset</a><br />
+                <a href="https://web.microsoftstream.com/video/e547ee47-b4ac-4182-8a1c-bdcfe3ef060a">📼 Kurssin kertaus: olio-ohjelmointi</a><br />-->
+            </td>
+        </tr>
+        <tr>
+            <td>Ke</td>
+            <td>17.3.</td>
             <td>
                 <strong>Kurssin loppukoe</strong><br />
-                <strong>Viope-tehtävien DL 14.10. klo 9.</strong>
+                <strong>Viope-tehtävien DL klo 9.</strong>
             </td>
         </tr>
     </tbody>
