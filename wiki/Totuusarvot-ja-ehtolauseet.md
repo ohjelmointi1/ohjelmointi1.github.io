@@ -87,7 +87,7 @@ Totuusarvoja voidaan yhdistellä ja- sekä tai-operaatioilla. Näiden operaatioi
 
 Lausekkeen `a && b` arvoksi tulee `true` vain silloin, kun molemmat arvoista ovat `true`:
 
-| a     | b     | a \&\& b |
+| a     | b     | a &amp;&amp; b |
 |-------|-------|--------  |
 | true  | true  | true     |
 | True  | false | false    |
