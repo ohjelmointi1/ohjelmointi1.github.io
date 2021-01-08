@@ -241,7 +241,7 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
         <tr>
             <td></td>
             <td></td>
-            <td>Talviloma</td>
+            <td><em>Talviloma</em></td>
         </tr>
         <tr>
             <td>Ma</td>
@@ -307,7 +307,7 @@ Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanan
             <td>Ke</td>
             <td>10.3.</td>
             <td>
-                Kurssin aiheiden soveltaminen pikkuprojektissa.
+                <strong>Kurssin aiheiden soveltaminen pikkuprojektissa</strong>
             </td>
         </tr>
         <tr>
