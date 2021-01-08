@@ -1,19 +1,22 @@
 # Tervetuloa kurssille!
 
-Tervetuloa Haaga-Helian ohjelmointi 1 -opintojaksolle! 
+Tervetuloa Haaga-Helian ohjelmointi 1 -opintojaksolle! Tämä sivusto toimii toteutuksen swd4tn032-3012 kotisivuna, materiaalipankkina sekä lähdekoodien jakelukanavana.
 
-Kurssin opettajana toimii Teemu Havulinna (etunimi.sukunimi@haaga-helia.fi). Kurssi järjestetään etätyösuosituksen mukaisesti etäopetuksena. 
-
-Tämä sivusto toimii toteutuksen swd4tn032-3012 kotisivuna, materiaalipankkina sekä lähdekoodien jakelukanavana.
-
-🚧 **Sivujen päivittäminen on kesken ja linkit ovat toistaiseksi toimimattomat.** 🚧
+Kurssin opettajana toimii Teemu Havulinna (*etunimi.sukunimi@haaga-helia.fi*). Kurssi järjestetään etätyösuosituksen mukaisesti etäopetuksena. 
 
 ## Oppitunnit
 
-Kurssin opetus järjestetään lukujärjestyksen mukaisesti 1. periodilla maanantaisin klo 8-10:45 ja keskiviikkoisin klo 9-11:45 MS Teamsissa. Osa oppitunneista tallennetaan myös myöhempää katselua varten. Lisäksi käytettävissänne on valikoituja tallenteita aikaisemmilta ohjelmointikursseilta sekä tekstimuotoiset muistiinpanot kultakin oppitunnilta.
+Kurssin opetus järjestetään lukujärjestyksen mukaisesti MS Teamsissa kahdesti viikossa:
+
+* maanantaisin klo 8:15-10:45
+* keskiviikkoisin klo 9-11:45 
+
+Osa oppitunneista tallennetaan myöhempää katselua varten. Lisäksi käytettävissänne on valikoituja tallenteita aikaisemmilta ohjelmointikursseilta sekä tekstimuotoiset muistiinpanot kultakin oppitunnilta.
 
 
 ## Aikataulu
+
+Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin oppituntiin lisätään MS Teamsiin noin päivää ennen kyseistä oppituntia.
 
 <table>
     <thead>
@@ -372,14 +375,19 @@ Tällä  kurssilla opetellaan Java-kielen syntaksia, mutta erityisesti pyrimme o
 
    * Viopessa on tarjolla myös syventäviä ja kertaavia bonustehtäviä, joiden tekeminen kasvattaa pistekertymään, mutta joiden tekemättä jättäminen ei laske arvosanaa
 
-   * **kaikkien Viope-tehtävien DL on ke 14.10. klo 9 (kurssikokeen alku)**
+   * Viopessa on automaattinen plagioinnin tunnistus, joten ethän kopioi muiden vastauksia!
+
+   * **kaikkien Viope-tehtävien DL on kurssikokeen alku**
 
 2. Kurssikoe (50 % loppuarvosanasta)
 
     * sisältää harjoitustehtävien kaltaisia ohjelmointitehtäviä
 
+    * suoritetaan Viope-järjestelmässä
+
     * arvostellaan asteikolla 0-5
 
+Arviointilogiikka on esitetty alla myös Java-ohjelmakoodina. Tehtävien ja kokeen maksimipisteet ovat suuntaa-antavat kunnes kaikki tehtävät on julkaistu.
 
 ```java
 package arviointi;
@@ -387,8 +395,8 @@ package arviointi;
 import static arviointi.OsasuoritustenArviointi.*;
 
 public class KurssinArviointi {
-    // tehtävien ja kokeen maksimipisteet lukitaan kurssin aikana:
-    private static int viopeMaksimi = 58; // bonukset huomioiden maksimi on 73
+
+    private static int viopeMaksimi = 58; // normaalitehtävien maksimipisteet (ilman bonuksia)
     private static int kokeenMaksimi = 25;
 
     public static int laskeLoppuarvosana(int tehtavienPisteet, int kokeenPisteet) {
@@ -439,9 +447,9 @@ Saat käyttää myös muita työkaluja, mutta niihin ei voida tarjota käyttötu
 
 Kurssin harjoitustehtävien tehtävänannot löytyvät Viope-järjestelmästä, jonne tehtävät myös palautetaan, ja joka tarkistaa tehtävät automaattisesti. 
 
-Rekisteröidy Viopeen osoitteessa [https://vw4.viope.com/login?org=hh](https://vw4.viope.com/login?org=hh). Huomaa että rekisteröitymisosoitteessa on oltava parametri `?org=hh`, jotta pääset käsiksi Haaga-Helian kurssitarjontaan. Rekisteröityessäsi valitse tämä toteutus `Ohjelmointi 1-3012 ⛄`.
+Rekisteröidy Viopeen osoitteessa [https://vw4.viope.com/login?org=hh](https://vw4.viope.com/login?org=hh). Huomaa, että rekisteröitymisosoitteessa on oltava parametri `?org=hh`, jotta pääset käsiksi Haaga-Helian kurssitarjontaan. Rekisteröityessäsi valitse tämä toteutus `Ohjelmointi 1-3012 ⛄`.
 
-**Teknisistä syistä johtuen Viopeen palautettavista lähdekoodeista täytyy aina poistaa mahdolliset package -lauseet luokan yläpuolelta.** Viope on myös muilla tavoin erittäin tarkka ohjelmien oikeellisuudesta, mikä saattaa aiheuttaa ensimmäisillä viikoilla hämmennystä. Tyypillisiä Viope-virhetilanteita ja niiden ratkaisuja on dokumentoitu [erilliselle wiki-sivulle](wiki/Viope), jota päivitetään kurssin edetessä.
+**Teknisistä syistä johtuen Viopeen palautettavista lähdekoodeista täytyy aina poistaa mahdolliset package -lauseet luokan yläpuolelta.** Viope on myös muilla tavoin erittäin tarkka ohjelmien oikeellisuudesta, mikä saattaa aiheuttaa ensimmäisillä viikoilla hämmennystä. Tyypillisiä Viope-virhetilanteita ja niiden ratkaisuja on dokumentoitu [erilliselle sivulle](wiki/Viope), jota päivitetään kurssin edetessä.
 
 **Teams**
 
