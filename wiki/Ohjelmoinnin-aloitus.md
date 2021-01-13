@@ -264,11 +264,10 @@ int paivia = 31;
 Jos muuttuja on määritetty vakioksi (final), se kirjoitetaan usein isoilla kirjaimilla:
 
 ```java
-final double PI = 3.141592;
-
-// Javassa on myös valmis arvo piille: Math.PI
-// https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html#PI
+final int PAIVIA_VIIKOSSA = 7;
 ```
+
+Vakiomuuttujaan ei voida asettaa enää uusia arvoja sen jälkeen, kun ensimmäinen arvo on asetettu.
 
 
 ## Javan tietotyyppejä: kokonaisluvut (int ja long)
@@ -327,30 +326,37 @@ System.out.println(2_147_483_647L + 1);
 
 Tietojenkäsittelyssä desimaalilukuja käsitellään tyypillisesti liukulukuina. Liukuluku-termi tulee siitä, että luvussa kokonais- ja desimaaliosille ei ole varattu kiinteää määrää bittejä, vaan pisteen paikka "liukuu" sen mukaan, kuinka suuresta tai pienestä luvusta on kyse.
 
-Liukulukujen toteutuksesta johtuen niillä laskettaessa esiintyy usein pieniä laskuvirheitä, minkä vuoksi niitä ei tule käyttää täydellistä tarkkuutta vaativissa tarkoituksissa.
+Yleisin liukulukutyyppi Javassa on `double`, jossa kokonais- ja desimaaliosa erotetaan toisistaan pisteellä:
 
-Javan oletustietotyyppi liukuluvuille on nimeltään `double`. Doublen tarkkuus desimaalilukuna on noin 15 numeroa, esimerkiksi `1234567.89012345`.
+```java
+double pii = 3.141592;
 
-Esim. piin likiarvo on double-tyyppisenä voisi olla `3.141592653589793`.
+// Javassa on myös valmis arvo piille: Math.PI
+// https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html#PI
+```
 
-Lisäksi on olemassa myös epätarkempi float, jota käytetään lähinnä silloin, kun lukuja on valtavia määriä ja niiden tarkkuudesta voidaan tinkiä.
+Double-tyypin tarkkuus desimaalilukuna on noin 15 numeroa, esimerkiksi `1234567.89012345`. Yllä esitetty piin likiarvo voidaan double-tyyppisenä esittää tarkimmillaan luvulla `3.141592653589793`.
+
+Lisäksi on olemassa myös epätarkempi `float`, jota käytetään nykyään lähinnä silloin, kun lukuja on valtavia määriä ja niiden tarkkuudesta voidaan tinkiä.
+
 
 ## Laskuvirheet liukuluvuilla
 
-Laskutoimitukset liukuluvuilla ovat erittäin nopeita. Tietokoneet käsittelevät mm. pelien grafiikkaa ja muuta matematiikkaa liukuluvuilla.
-
-Liukulukujen toteutuksesta johtuen niillä laskettaessa esiintyy kuitenkin usein pieniä tarkkuusvirheitä, minkä vuoksi niitä ei tule käyttää täydellistä tarkkuutta vaativissa tarkoituksissa.
+Laskutoimitukset liukuluvuilla ovat erittäin nopeita. Tietokoneet käsittelevät mm. pelien grafiikkaa ja muuta matematiikkaa liukuluvuilla. Liukulukujen toteutuksesta johtuen niillä laskettaessa esiintyy kuitenkin usein pieniä laskuvirheitä, minkä vuoksi niitä ei tule käyttää täydellistä tarkkuutta vaativissa tarkoituksissa.
 
 Kokeile suorittaa seuraava yhteenlasku. Minkä tuloksen saat?
 
 ```java
-System.out.println(0.1 + 0.2); 
+System.out.println(0.1 + 0.2); // syntyy pieni laskuvirhe!
 ```
 
-Liukulukujen laskuvirhe ei niinkään liity Javaan, vaan yleisesti siihen, miten liukuluvut esitetään tietokoneen muistissa.
+Liukulukujen laskuvirhe ei niinkään liity Javaan, vaan yleisesti siihen, miten liukuluvut esitetään tietokoneen muistissa rajallisella määrällä ykkösiä ja nollia. Kaikkia lukuja ei vain ole mahdollista esittää täydellisellä tarkkuudella. Vastaavasti kymmenjärjestelmässä ei voida tarkasti esittää desimaalina lukua `1/3`.
+
 
 
 ## Aritmeettiset operaatiot
+
+Javassa on käytössä normaalit matemaattiset laskuoperaatiot kaikille lukutyypeille:
 
 Operaattori | Käyttötarkoitus
 ------------|----------------
@@ -360,34 +366,47 @@ Operaattori | Käyttötarkoitus
 /           | Jakolasku
 %           | Jakojäännös
 
-
 Lähde: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html
 
-#### Laskuoperaatiot Javassa
+Yllä olevista operaattoreista "erikoisin" on kenties jakojäännös `%`, jonka avulla saadaan selvitettyä kokonaislukujen jakolaskussa "yli jäävä osuus". Toinen huomionarvoinen operaatio on kokonaislukujen jakolasku, joka tuottaa aina vain kokonaislukuja.
+
+
+### Laskuoperaatiot Javassa
+
+Yhteen-, vähennys- ja kertolaskut toimivat kuten normaalisti:
 
 ```java
 1 + 2 == 3
 4 - 1 == 3
 2 * 4 == 8
-8 / 2 == 4
-
-// % -operaattorilla saadaan laskettua jakolaskun jakojäännös:
-9 % 2 == 1
-
-9.0 / 2 == 4.5
-
-// Huom! Kokonaislukujen jakolasku on katkaiseva, eli 
-// tulosta ei pyöristetä ja desimaaliosa "katkeaa" pois:
-9 / 2 == 4
 ```
 
-Jos jakolasku tehdään kahdelle kokonaisluvulle, tulokseksi saadaan myös kokonaisluku, ja mahdollinen desimaaliosa "katkeaa pois". Jos vähintään toinen luvuista on liukuluku, tulee tuloksesta liukuluku, jolloin katkaisua ei tapahdu.
+Jakolaskujen suhteen tulee huomioida kokonaislukulogiikka, jossa jakolaskun mahdollinen desimaaliosa "katkeaa" pois tuloksesta:
 
-Kokonaisluvusta saadaan tarvittaessa liukuluku helposti esim. kertomalla se luvulla `1.0`:
+```java
+9 / 2 == 4 // tuloksesta "katkeaa" pois 0.5
+```
+
+Edellä sekä `9` että `2` ovat kokonaislukuja, joten myös tulokseksi saadaan kokonaisluku.
+
+Jos kumpi tahansa jakolaskun arvoista on tyypiltään liukuluku, myös tuloksena saadaan liukuluku:
+
+```java
+9.0 / 2 == 4.5
+```
+
+Kokonaislukujen jaollisuutta voidaan tutkia jakojäännöksen (`%`) avulla:
+
+```java
+9 % 2 == 1
+```
+
+Mistä tahansa kokonaisluvusta saadaan tarvittaessa tehtyä liukuluku helposti esimerkiksi kertomalla se luvulla `1.0`:
 
 ```java
 // a saadaan "muutettua" liukuluvuksi kertomalla se 1.0:lla.
-// Tällöin myös tulos c on liukuluku, eikä desimaaliosan katkaisua tapahdu:
+// Tällöin myös tulos c on liukuluku, eikä desimaaliosan
+// katkaisua tapahdu:
 (1.0 * a) / b == c
 ```
 
@@ -402,38 +421,43 @@ double a = Math.floor(6.8);
 // Pyöristys aina ylöspäin: 7.0
 double b = Math.ceil(6.1); 
 
-// Pyöristys aina lähimpään tasalukuun: 6.0
-double c = Math.round(5.6); 
+// "Normaali" pyöristys lähimpään tasalukuun: 6.0
+double c = Math.round(5.5); 
 ```
 
 Math.ceil:
 
 > Returns the smallest (closest to negative infinity) double value that is greater than or equal to the argument and is equal to a mathematical integer. 
 >
-> https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Math.html#ceil(double)
+> [https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Math.html#ceil(double)](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Math.html#ceil(double))
 
 Math.floor:
 
 > Returns the largest (closest to positive infinity) double value that is less than or equal to the argument and is equal to a mathematical integer.
 >
-> https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Math.html#floor(double)
+> [https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Math.html#floor(double)](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Math.html#floor(double))
 
 Math.round:
 
 > Returns the closest int to the argument, with ties rounding to positive infinity.
 >
-> https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Math.html#round(double)
+> [https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Math.html#round(double)](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Math.html#round(double))
 
 
 ## Liukuluvun muuttaminen kokonaisluvuksi
 
-Liukuluvulle voidaan tehdä **tyyppimuunos** kokonaisluvuksi kirjoittamalla sen eteen suluissa `(int)`:
+Ylempänä muutimme kokonaisluvun liukuluvuksi kertomalla sen luvulla `1.0`. Joskus on tarpeen myös muuttaa liukulukuja kokonaisluvuiksi. Tällöin liukuluvulle voidaan tehdä **tyyppimuunos** kokonaisluvuksi kirjoittamalla sen eteen suluissa `(int)`:
 
 ```java
-int a = (int) Math.round(5.6); // pyöristää ensin, ja sitten katkaisee
+int pyoristetty = (int) Math.round(5.6);
 ```
 
-### Yksittäisten arvojen operaatiot
+Yllä olevassa esimerkissä luku `5.6` pyöristetään ensin luvuksi `6.0`, joka muutetaan kokonaisluvuksi `6` tyyppimuunnoksella.
+
+
+## Yksittäisten arvojen operaatiot
+
+Kahden luvun laskuoperaatioiden lisäksi Javassa on operaatiot yksittäisen luvun kasvattamiseksi ja vähentämiseksi, sekä totuusarvon kääntämiseksi:
 
 Operaattori | Kuvaus
 ------------|---------
@@ -445,43 +469,67 @@ https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html
 
 ```java
 int luku = 10;
-luku++;
+luku++; // kasvattaa yhdellä
 
 System.out.println(luku); // 11
-luku--;
+luku--; // vähentää yhdellä
 
 System.out.println(luku); // 10
+```
 
-boolean ok = true;
+Kasvatus ja vähennys voitaisiin tehdä yhtä hyvin myös aikaisemmin esitellyillä yhteen- ja vähennyslaskuilla:
 
-// ! kääntää totuusarvon vastakkaiseksi:
-System.out.println(!ok); // false
+```java
+// kasvatus
+luku = luku + 1;
+
+// vähennys
+luku = luku - 1;
+```
+
+Lukujen kasvattaminen tai vähentäminen yhdellä ovat toistologiikassa niin tavanomaisia operaatioita, että tulet kurssin aikana törmäämään niihin myös myöhemmin.
+
+Totuusarvot `true` ja `false` voidaan Javassa kääntää toisin päin negaation (`!`) avulla:
+
+```java
+boolean tosi = true;
+boolean epatosi = !tosi;
+
+System.out.println(tosi); // true
+System.out.println(epatosi); // false
 ```
 
 ### Luvun kasvattaminen, vähentäminen tai kertominen
 
+Luvun kasvattaminen yhdellä onnistuu `++` ja `--` operaatioilla. Muiden yhteen-, vähennys-, kerto- ja jakolaskujen tekemiseksi on vielä omat tapansa:
+
 ```java
 int numero = 6;
 
-numero += 5; 		// numero = numero + 5
-numero *= 3; 		// numero = numero * 3
-numero /= 7; 		// numero = numero / 7
+numero += 5;  // numero = numero + 5
+numero *= 3;  // numero = numero * 3
+numero /= 7;  // numero = numero / 7
 
 // Mikä luku tulostuu lopulta? Miksi?
 System.out.println(numero);
-
-// Tulos on 4, koska: (6 + 5) * 3 / 7 = 4.714,
-// josta desimaaliosa leikkautuu pois!
 ```
+
+Yllä olevan esimerkkikoodin tulos on 4, koska: 
+
+```
+(6 + 5) * 3 / 7 = 4.714
+```
+
+Koska kaikki luvut ovat kuitenkin kokonaislukuja, jakolaskussa desimaaliosa leikkautuu pois!
+
 
 ## Koodausharjoitus
 
+Tässä harjoituksessa on tarkoituksena soveltaa edellä esitettyjä lasku sääntöjä kokonaislukujen ja liukulukujen yhteydessä.
+
 Alla esitetyssä luokassa on kolme muuttujaa, joiden arvot tulostetaan ruudulle. Muokkaa ohjelmaa siten, että ohjelma laskee ja tulostaa myös muuttujien keskiarvon `7.333333333333333`. 
 
-Keskiarvoa ei saa pyöristää tai muulla tavoin muotoilla. 
-
-**Huom!** Jos muuttujien arvoja muutetaan, tulee myös tulostuksen muuttua. Älä siis "kovakoodaa" lukuja.
-
+Keskiarvoa ei saa pyöristää tai muulla tavoin muotoilla. On myös suositeltavaa käyttää apumuuttujia, kuten `int summa` ja `double keskiarvo`.
 
 ```java
 public class LukujenKeskiarvo {
@@ -500,6 +548,10 @@ public class LukujenKeskiarvo {
     }
 }
 ```
+
+Palauta lopuksi ratkaisusi Viopeen.
+
+**Huom!** Jos muuttujien arvoja muutetaan, tulee myös tulostuksen muuttua. Älä siis "kovakoodaa" lukuja.
 
 Tämä tehtävä on lainattu [Helsingin yliopiston Agile Education Research -tutkimusryhmän ohjelmointikurssilta](https://2017-ohjelmointi.github.io/part1/#exercise-8-kolmen-luvun-keskiarvo) ja se on lisensoitu Creative Commons BY-NC-SA-lisenssillä.
 
@@ -529,16 +581,21 @@ Kirjoitettu teksti ja numerot voidaan lukea tietovirrasta merkkijonoiksi ja nume
 import java.util.Scanner;
 ```
 
+Helsingin Yliopiston ohjelmoinnin perusteet -kurssin video esittelee Scannerin käyttöä vaihe vaiheelta:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7lswbb_R7uM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ### Käyttäjän syötteen lukeminen
 
-Kun Scanner on otettu käyttöön import-käskyllä, voidaan ohjelmaan luoda uusi syötteitä lukeva Scanner-olio. Oliot luodaan aina `new`-avainsanalla. `Scanner`-luokan tapauksessa oliota luotaessa pitää lisäksi määritellä, mistä tietovirrasta syötteet luetaan:
+Kun Scanner on otettu käyttöön import-käskyllä, voidaan ohjelmaan luoda uusi syötteitä lukeva Scanner-olio. Oliot luodaan aina `new`-avainsanalla. `Scanner`-luokan tapauksessa oliota luotaessa pitää lisäksi määritellä, mistä tietovirrasta syötteet luetaan. Jotta scanneria voidaan luonnin jälkeen käyttää tietojen lukemiseen, täytyy se ottaa myös talteen `Scanner`-tyyppisen muuttujan:
 
 ```java
 // luodaan olio, joka lukee System.in-tietovirtaa:
 Scanner lukija = new Scanner(System.in);
 ```
 
-Jotta scanneria voidaan käyttää tietojen lukemiseen, täytyy se ottaa luonnin jälkeen talteen `Scanner`-tyyppisen muuttujan. Kun Scanner-olio on luotu ja se on tallessa muuttujassa, voidaan sen avulla lukea mm. tekstiä ja numeroita.  
+Kun Scanner-olio on luotu ja se on tallessa muuttujassa, voidaan sen avulla lukea mm. tekstiä ja numeroita.  
 
 Kokonainen rivi tekstiä voidaan lukea nextLine-nimisellä metodilla:
 
@@ -551,13 +608,14 @@ String teksti = lukija.nextLine();
 
 Jos tietovirrassa ei ole valmiiksi dataa, jää ohjelma odottamaan, että käyttäjä kirjoittaa syötteen ja painaa enter-painiketta. Jos käyttäjä on jo kirjoittanut dataa tietovirtaan, lukee Scanner valmiiksi syötettyä dataa.
 
-Annettu teksti otetaan tässä esimerkissä talteen sijoittamalla se `String`-tyyppiseen muuttujaan:
+Annettu teksti otetaan yllä olevassa koodissa talteen sijoittamalla se `String`-tyyppiseen muuttujaan:
 
 ```java
 String teksti = lukija.nextLine();
 ```
 
 Tämän jälkeen `teksti`-muuttujaa voidaan käyttää kuten mitä tahansa merkkijonomuuttujaa. Samalla `Scanner`-oliolla voidaan myös lukea lukuisia eri syötteitä peräjälkeen.
+
 
 ### Eri tyyppisten syötteiden lukeminen
 
@@ -582,9 +640,12 @@ double liukuluku = lukija.nextDouble();
 
 **Huom!** Jos tietovirrassa on odottamassa esim. kirjaimia, ja sieltä yritetään lukea numeroa, ohjelma kaatuu ajonaikaiseen poikkeukseen.
 
+
 ## Koodausharjoitus
 
-Kirjoita luokka `HeiEtunimi`. Toteuta luokkaan `main`-metodi, jossa kysytään ensin käyttäjän etunimi ja sen jälkeen tervehditään käyttäjää nimeltä. 
+Tässä harjoituksessa sovelletaan yllä käsiteltyjä asioita String-tyyppisten muuttujien sekä Scanner-olion käyttämisen osalta.
+
+Luo uusi luokka `HeiEtunimi`. Toteuta luokkaan `main`-metodi, jossa kysytään ensin käyttäjän etunimi ja sen jälkeen tervehditään käyttäjää nimeltä. 
 
 Esimerkki ohjelman suorituksesta:
 
@@ -593,21 +654,30 @@ Syötä etunimi: Teppo
 Hei Teppo!
 ```
 
-# Liukulukujen tulostaminen
+Palauta lopuksi koodaamasi luokka Viopeen.
+
+
+# Liukulukujen muotoilu ja tulostaminen
 
 Liukulukuja tulostettaessa tulostettavien desimaalien määrä vaihtelee ja desimaalierottimena käytetään oletuksena pistettä. Tulostettavien desimaalien määrään ja käytettävään desimaalierottimeen voidaan vaikuttaa muotoilemalla desimaaliluvut Javan `DecimalFormat`-luokan avulla.
 
 **Tulet tarvitsemaan DecimalFormat-luokkaa Viope-tehtävien ratkaisemisessa.**
 
+
 ## `DecimalFormat`-luokka
 
-`DecimalFormat`-luokka otetaan käyttöön kirjoittamalla luokan alkuun `import`-komento:
+`DecimalFormat`-luokan käyttöä käsitellään mm. alla olevalla YouTube-videolla:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DN620PyBC4A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+`DecimalFormat`-luokka otetaan käyttöön kirjoittamalla tiedoston alkuun `import`-komento:
 
 ```java
 import java.text.DecimalFormat;
 ```
 
-Sen jälkeen luodaan uusi `DecimalFormat`-olio, jolle kerrotaan, missä muodossa luvut halutaan tulostaa. `"0.00"` muotoilee luvun kahden desimaalin tarkkuudella käyttäen käyttöjärjestelmän desimaalierotinta (pilkku tai piste).
+Sen jälkeen luodaan uusi `DecimalFormat`-olio, jolle kerrotaan, missä muodossa luvut halutaan tulostaa. `"0.00"` muotoilee luvun kahden desimaalin tarkkuudella käyttäen käyttöjärjestelmän desimaalierotinta (asetuksista riippuen pilkku tai piste).
 
 DecimalFormat-oliolla on `format`-metodi, joka muotoilee liukuluvun merkkijonoksi. Esimerkiksi:
 
@@ -660,15 +730,8 @@ Mistä johtuu, että alla oleva luku näyttää olevan esitetty tarpeettoman suu
 
 ![Pyöristysvirhe](https://github.com/haagahelia/swd4tn032-TH_JJ/raw/master/muistiinpanot/assets/pyoristysvirhe.png)
 
-Laskutoimitukset liukuluvuilla ovat erittäin nopeita. Tietokoneet käsittelevät mm. pelien grafiikkaa ja muuta matematiikkaa liukuluvuilla. Esim. Javascript ei muuta käytäkään. Liukulukujen toteutuksesta johtuen niillä laskettaessa esiintyy kuitenkin usein pieniä tarkkuusvirheitä, minkä vuoksi niitä ei tule käyttää täydellistä tarkkuutta vaativissa tarkoituksissa.
+Liukulukujen toteutuksesta johtuen niillä laskettaessa esiintyy usein pieniä tarkkuusvirheitä. Tässä tapauksessa tulos lienee yritetty pyöristää kolmen desimaalin tarkkuuteen, mutta on syntynyt hyvin pieni laskuvirhe, jonka vuoksi desimaaliosan lopussa on `99999999999`.
 
-Kokeile suorittaa seuraava yhteenlasku. Minkä tuloksen saat?
-
-```java
-System.out.println(0.1 + 0.2); // tulostaa 0.30000000000000004
-```
-
-Liukulukujen laskuvirhe ei niinkään liity Javaan, vaan yleisesti siihen, miten liukuluvut esitetään tietokoneen muistissa. Kaikkia lukuja ei vain ole mahdollista esittää rajatulla määrällä desimaaleja. Vastaavasti kymmenjärjestelmässä ei voida tarkasti esittää lukua `1/3`.
 
 # Viope-harjoitukset
 
