@@ -1,12 +1,17 @@
-# Ohjelmoinnin aloitus
+[&larr; Takaisin etusivulle](/)
+
+
+<h1 class="js-toc-ignore">Ohjelmoinnin aloitus</h1>
 
 Tällä oppitunnilla tutustumme Java-lähdekooditiedostojen rakenteeseen sekä koodin kirjoittamiseen ja suorittamiseen Eclipse-sovelluskehittimessä. Käsittelemme numeerisia sekä tekstimuotoisia tietotyyppejä ja teemme yksinkertaista vuorovaikutusta käyttäjän kanssa tulosteiden ja syötteiden avulla. Lopuksi tunnilla opittuja asioita harjoitellaan Viope-järjestelmässä olevien tehtävien avulla.
 
+**Sisällysluettelo**
+
 <div class="js-toc"></div>
 
-# Java-luokan rakenne
+# Java-lähdekooditiedostot
 
-Java-ohjelmat koostuvat aina luokista (class). Tyypillisesti kukin luokka tallennetaan samannimiseen .java-päätteiseen tiedostoon. Tiedoston sisällä ohjelmakoodi alkaa ja päättyy luokan määrittelyyn:
+Java-ohjelmat koostuvat aina **luokista** (class). Tyypillisesti kukin luokka tallennetaan omaan `.java`-päätteiseen tiedostoonsa. Tiedoston sisällä ohjelmakoodi kirjoitetaan ns. luokan sisään:
 
 ```java
 // Tiedosto HelloWorld.java
@@ -15,14 +20,16 @@ public class HelloWorld {
 }
 ```
 
-Ohjelman varsinaiset käskyt kirjoitetaan niin sanottuihin metodeihin, jotka ovat hyvin samankaltaisia kuin monissa kielissä käytettävät funktiot. Metodit koostuvat käskyistä, jotka kirjoitetaan omille riveilleen ja rivit päätetään puolipisteellä.
-  
+Sekä tiedoston että luokan nimi kirjoitetaan isolla alkukirjaimella ja kaikki sanat yhteen. On myös tärkeää, että nimi sekä sen kirjainkoko on täsmälleen samalla tavalla sekä luokassa että tiedostossa.
+
+Ohjelman varsinaiset käskyt kirjoitetaan niin sanottuihin **metodeihin**. Metodit ovat hyvin samankaltaisia kuin monissa kielissä käytettävät funktiot. Metodit koostuvat käskyistä, jotka kirjoitetaan omille riveilleen, ja rivit päätetään puolipisteellä:
+
 
 ```java
 // Tiedosto HelloWorld.java
 public class HelloWorld {
 
-    // Kaikki metodit kirjoitetaan luokkien sisään
+    // Kaikki metodit kirjoitetaan luokan sisään
     public static void main(String[] args) {
 
         // Tekstiä voidaan tulostaa System.out.println-komennolla:
@@ -33,53 +40,95 @@ public class HelloWorld {
 ```
 
 
-Javassa `main`-metodilla on erityinen rooli: ohjelman suoritus alkaa main-metodista. Tätä koodia suoritettaessa ohjelma käynnistyy siis main-metodista ja ruudulle tulostuu teksti `Hello world!`.
+Javassa `main`-metodilla on erityinen rooli: ohjelman suoritus alkaa main-metodista. Tätä koodia suoritettaessa ohjelma käynnistyy siis main-metodista ja ruudulle tulostuu teksti `Hello world!`. `main`-metodin määrittelyssä esiintyviin muihin sanoihin ja erikoismerkkeihin palaamme myöhemmin.
 
-Tulostettava teksti on kirjoitettu koodissa lainausmerkkeihin, koska se ei ole suoritettavaa koodia, vaan tekstidataa. Tekstimuotoista dataa kutsutaan ohjelmoinnin yhteydessä merkkijonoiksi (string).
+Tulostettava teksti on kirjoitettu koodissa lainausmerkkeihin `"Hello world!"`, koska se ei ole suoritettavaa koodia, vaan tekstidataa. Tekstimuotoista dataa kutsutaan ohjelmoinnin yhteydessä **merkkijonoiksi** (eng. string).
 
 
 # Java-kielisen ohjelman suorittaminen
 
-Java on käännettävä ohjelmointikieli. Kytännössä se tarkoittaa sitä, että ohjelmoija kirjoittaa lähdekoodin "ihmisen ymmärrettävään muotoon", eli Java-kielisinä komentoina ja rakenteina. 
+Yllä oleva esimerkkikoodi voidaan tallentaa ja suorittaa Eclipsessä esimerkiksi run-painikkeella. Suorituksen aikana Eclipsen Console-välilehdelle tulostuu haluamamme teksti, ja ohjelman suoritus päättyy. Java-kielisen ohjelman suorittamiseen liittyy kuitenkin eri välivaiheita, jotka Eclipse suorittaa taustalla automaattisesti.
 
-Tämän jälkeen Java-koodi käännetään tavukoodiksi, joka on eräänlainen välimuoto ihmisen ja tietokoneen ymmärtämien kielten välillä. Lopulta käännetty tavukoodi voidaan suorittaa Javan virtuaalikoneella, joka tulkkaa käskyt kunkin käyttöjärjestelmän mukaisiksi konekielisiksi komennoiksi. 
+Java on **käännettävä ohjelmointikieli**. Kytännössä se tarkoittaa sitä, että ohjelmoija kirjoittaa lähdekoodin "ihmisen ymmärrettävään muotoon", eli Java-kielisinä komentoina ja rakenteina, kuten yllä.
+
+Tämän jälkeen Java-koodi **käännetään tavukoodiksi**, joka on eräänlainen välimuoto ihmisen ja tietokoneen ymmärtämien kielten välillä. Lopulta käännetty **tavukoodi** voidaan suorittaa Javan **virtuaalikoneella** (JVM), joka tulkkaa käskyt kunkin käyttöjärjestelmän mukaisiksi konekielisiksi komennoiksi. 
+
+Java-ohjelmistopakettia tarjotaan usein erilaisina versioina riippuen siitä, oletko aikeissa vain suorittaa Java-koodia vai oletko myös kehittämässä uutta koodia. Tällä kurssilla tarvitsemme erityisesti JDK-version (Java SE Development Kit), joka sisältää työkalut ohjelmien kääntämiseksi.
+
+> **JDK (Java SE Development Kit)**
+>
+> *For Java Developers. Includes a complete JRE plus tools for developing, debugging, and monitoring Java applications.*
+>
+> **JRE (Java Runtime Environment)**
+>
+> *Contains everything required to >run Java applications on your system.*
+>
+> Oracle. Which Java package do I need? [https://www.oracle.com/java/technologies/javase-downloads.html](https://www.oracle.com/java/technologies/javase-downloads.html)
 
 ## Kääntämisen edut
 
-Koska koodi käännetään ennen suoritusta, tarkistaa kääntäjä koodin syntaksisen oikeellisuuden jo ennen koodin suorittamista. Näin esimerkiksi huolimattomuusvirheet, kuten puuttuvat merkit ja kirjoitusvirheet, havaitaan hyvin nopeasti.
+Koska koodi käännetään ennen suoritusta, tarkistaa kääntäjä koodin syntaksisen oikeellisuuden jo ennen koodin suorittamista. Näin esimerkiksi huolimattomuusvirheet, kuten puuttuvat merkit ja kirjoitusvirheet, havaitaan jo ennen koodin suorittamista nopeasti.
 
-Koska Java-koodi käännetään tavukoodiksi eikä suoraan tietyn järjestelmän mukaisiksi käskyiksi, voidaan samaa käännettyä Java-ohjelmaa suorittaa hyvin erilaisilla järjestelmillä. Kunkin järjestelmän Java-virtuaalikone pystyy tulkitsemaan saman käännetyn ohjelman käskyt omiksi komennoikseen.
+Koska Java-koodi käännetään tavukoodiksi eikä suoraan tietyn järjestelmän mukaisiksi käskyiksi, voidaan samaa käännettyä Java-ohjelmaa suorittaa hyvin erilaisilla järjestelmillä. Kunkin järjestelmän Java-virtuaalikone pystyy tulkitsemaan saman käännetyn ohjelman käskyt omiksi komennoikseen. Javan kehittäjien slogan oli aikanaan tämän ominaisuuden mukaisesti ["Write once, run anywhere"](https://en.wikipedia.org/wiki/Write_once,_run_anywhere).
+
 
 # Eclipse-sovelluskehitin
 
-Eclipse automatisoi lähdekoodin kääntämisen ja tekee ohjelman suorituksesta helppoa. Et tule edes huomaamaan että ohjelmointiin liittyy kyseinen välivaihe. Eclipse kuitenkin kääntää Java-koodisi automaattisesti aina kun tallennat tiedoston. Eclipsen käyttöliittymään ilmestyvät punaiset ja keltaiset virheet ja varoitukset ovat Java-kääntäjän havaitsemia ongelmia.
+Eclipse automatisoi lähdekoodin kääntämisen ja tekee ohjelman suorituksesta helppoa. Et kenties tule edes huomaamaan, että ohjelmointiin liittyy kyseinen välivaihe. Eclipse kuitenkin kääntää Java-koodisi automaattisesti aina kun tallennat tiedoston ja kertoo, mikäli kääntäjä havaitsi koodissasi virheitä.
 
-## Tehtävä: Eclipsen käyttö
+Eclipsen käyttöliittymään ilmestyvät punaiset ja keltaiset virheet ja varoitukset ovat Java-kääntäjän havaitsemia ongelmia.
 
-1. Avatkaa koneiltanne Eclipse-sovelluskehitin
-2. Eclipse pyytää aluksi valitsemaan työtilan (workspace), eli hakemiston tiedostojen tallennusta varten
-3. Luokaa työtila haluamaanne hakemistoon (kampuksen koneilla esim. M-asemalle)
-4. Luokaa itsellenne uusi Java-projekti: `File 🡪 New 🡪 Java project`
-5. Lisätkää projektiin uusi Java-luokka nimeltä TerveMaailma (`TerveMaailma.java`)
-6. Lisätkää luokkaan main-metodi, jonka sisällä tulostakaa teksti "Terve maailma!"
-7. Suorittakaa kirjoittamanne koodi (Eclipsen run-painike)
-8. Eclipsen konsoliin pitäisi nyt tulostua toivottu teksti
+
+## Eclipsen käyttö ja ensimmäinen Viope-tehtävä
+
+1. Avaa koneeltasi Eclipse-sovelluskehitin
+1. Eclipse pyytää aluksi valitsemaan työtilan (workspace), eli hakemiston tiedostojen tallennusta varten
+    * Luo työtila haluamaasi hakemistoon (kampuksen koneilla esim. M-asemalle)
+    * Sulje Eclipsen mahdollisesti näyttämä "Welcome"-ruutu yläkulman rastista.
+1. Luo itsellesi uusi Java-projekti: (`File 🡪 New 🡪 Java project`)
+1. Lisää projektiin uusi Java-luokka nimeltä TerveMaailma (`File 🡪 New 🡪 Class`) 
+    * Voit halutessasi valita luokalle myös paketin (package), joka helpottaa lähdekooditiedostojen hallitsemista jakamalla ne erillisiin kansioihin.
+    * Huomaa, että Eclipse nimeää tiedoston automaattisesti luokan nimiseksi.
+1. Lisää luokkaan main-metodi, jonka sisällä tulostakaa merkkijono `"Terve maailma!"`
+1. Suorita kirjoittamasi koodi (Eclipsen run-painike)
+1. Eclipsen konsoliin pitäisi nyt tulostua toivottu teksti
+
+Tämä oli samalla kurssin ensimmäinen Viope-tehtävä. Saatuasi koodin toimimaan omalla koneellasi, kopioi se Viopen tehtäväkenttään ja suorita koodi Viopessa. Viope ei tue tiedostojen paketteja, eli joudut poistamaan tiedoston alusta `package`-rivin, mikäli käytit pakettia luokkaa luodessasi.
+
+Mikäli Viope hyväksyy ratkaisusi, voit tallentaa sen Viopeen, jolloin saat myös tehtävästä pisteet.
 
 ## Viopen tyypillisiä virhetilanteita
 
-* package-lause luokan alussa
+### "Could not find or load main class"
 
-    Vaikka ohjelmoisit omat ratkaisusi Eclipsessä hyvien käytäntöjen mukaisesti erillisiin paketteihin, tulee `package`-rivit poistaa aina palautettavien tiedostojen alusta. Viope ei tue paketteja tehtävien ratkaisuissa.
+> <span style="color: red">Error: Could not find or load main class TerveMaailma
+> Caused by: java.lang.NoClassDefFoundError: viikko1/perusteet/th/TerveMaailma (wrong name: TerveMaailma)</span>
 
-* Käännösvirhe
+Tämä virhe johtuu siitä, että Viope ei löydä toteuttamaasi luokkaa. Ongelma voi johtua joko virheellisesti nimetystä luokasta tai koodin alussa olevasta **package**-rivistä.
 
-    Jos luokassa on syntaksivirhe, ei kääntäjä pysty kääntämään ratkaisuasi eikä ohjelman suoritus ala lainkaan. Tällaisten tapausten välttämiseksi on tärkeää toteuttaa ja testata ratkaisusi aina ensin Eclipsessä, ja vasta sen jälkeen kopioida ainakin syntaksiltaan toimivaksi varmistettu ratkaisu Viopeen.
+Vaikka ohjelmoisit omat ratkaisusi Eclipsessä hyvien käytäntöjen mukaisesti erillisiin paketteihin, tulee `package`-rivit poistaa aina palautettavien tiedostojen alusta. Viope ei tue paketteja tehtävien ratkaisuissa.
 
-* Virheellinen luokan nimi
+Vaikka ohjelma toimisi täysin oikein omalla Eclipselläsi, saattaa se aiheuttaa käännösvirheen, mikäli luokkasi nimi on eri kuin mitä Viope odottaa. Tarkista siis, että luokan nimi `public class Nimi { ... }` on kirjoitettu oikein kirjainkoko huomioiden.
 
-    Vaikka ohjelma toimisi täysin oikein omalla Eclipselläsi, saattaa se aiheuttaa käännösvirheen, mikäli luokkasi nimi on eri kuin mitä Viope odottaa. Tarkista siis, että luokan nimi `class Nimi { ... }` on kirjoitettu oikein kirjainkoko huomioiden.
 
-[Tyypillisiä virhetilanteita ja niiden ratkaisuja on dokumentoitu Wikiin.](Viope)
+### "Virhe tulostuksessa"
+
+> Virhe tulostuksessa: ohjelmasi tulosti "maailma", vaikka tulostuksen olisi pitänyt olla "maailma!"
+
+Vertaile merkki kerrallaan oman ohjelmasi tulostetta esimerkkitulosteeseen. Onko välimerkeissä tai numeroissa eroja? Entä kirjoitusvirheitä? Yllä olevassa esimerkkivirheessä oikeassa ratkaisussa on lopussa huutomerkki, joka puuttuu lähetetyn ratkaisun tulosteesta.
+
+
+### "Virhe: ohjelmasi ei kääntynyt"
+
+Jos luokassa on syntaksivirhe, ei kääntäjä pysty kääntämään ratkaisuasi eikä ohjelman suoritus ala lainkaan. Tällaisten tapausten välttämiseksi on tärkeää toteuttaa ja testata ratkaisusi aina ensin Eclipsessä, ja vasta sen jälkeen kopioida ainakin syntaksiltaan toimivaksi varmistettu ratkaisu Viopeen.
+
+Nähdäksesi tarkemman virheilmoituksen Viopessa, avaa näkyville Java-kääntäjän antama virhe klikkaamalla "Kääntäjän viesti"-painiketta:
+
+![Viopen kääntäjän viesti](assets/viope_ohjelmasi_ei_kaantynyt.png)
+
+Painike on Viopessa hieman hankala ymmärtää klikattavaksi sen tyylistä johtuen. Kääntäjän viesti kertoo missä kohdassa koodiasi virhe on.
+
+[Tyypillisiä virhetilanteita ja niiden ratkaisuja on dokumentoitu Wikiin.](/wiki/Viope)
 
 
 # Tekstin ja lukujen tulostaminen
@@ -89,50 +138,45 @@ Javassa on erilaisia metodeita ja tietovirtoja, joilla voidaan tulostaa esim. te
 `System.out` on oletustietovirta, johon voidaan tulostaa seuraavasti:
 
 ```java
-System.out.println(tuloste);
+System.out.println("tulostettava teksti");
 ```
 
 `println` tulostaa annetun arvon ja lopuksi aina rivinvaihdon, eli seuraava tuloste tulostuu eri riville. `print` tekee saman, mutta ilman rivinvaihtoa tulosteen loppuun:
 
 ```java
-System.out.print(tuloste);
+System.out.print("tulostettava teksti");
 ```
 
 `print`-metodia käytettäessä seuraava tuloste jatkuu samalle riville.
 
 
-## Tulostusesimerkki
+Kuten merkkijonoja, Javassa voidaan tulostaa myös lukuja sekä muita arvoja. Jos tulostettavan arvon paikalle ei laiteta "kovakoodattua arvoa", vaan esimerkiksi lauseke, lausekkeen arvo selvitetään aina ennen tulostamista:
 
 ```java
-// tiedosto Tulostaja.java
-public class Tulostaja {
-    public static void main(String[] args) {
-        // laskuoperaatiot suoritetaan aina ensin ja vasta sitten tulostetaan:
-        System.out.println(1 + 2);
-        System.out.println(4 - 1);
-        System.out.println(2 * 4);
-        System.out.println(9 / 2); // huomaa tämän operaation tulos!! (4)
-    }
-}
-```
+// vakiot tulostetaan sellaisenaan:
+System.out.println(42);
 
-Kuten yllä huomaat, luvuille voidaan Javassa suorittaa tavanomaiset laskuoperaatiot: yhteen-, vähennys-, kerto- ja jakolaskut. Kokonaislukujen jakolaskuun liittyy kuitenkin erikoinen piirre, jota käsittelemme alempana.
+// lausekkeet suoritetaan aina ennen tulostamista:
+System.out.println(1 + 2); // 3
+System.out.println(4 - 1); // 3
+System.out.println(1 * 3); // 3
+```
 
 
 # Muuttujat
 
-Ohjelmissa käytettäviä arvoja, esimerkiksi numeroita (int) tai merkkijonoja (String), voidaan pitää tallessa muuttujissa. 
+Ohjelmissa käytettäviä arvoja, esimerkiksi numeroita (`int`) tai merkkijonoja (`String`), voidaan pitää tallessa muuttujissa. 
 
 Javassa muuttujilla on aina ennalta määritettävä tyyppi, joka määrää sen, minkä tyyppisiä arvoja kyseiseen muuttujaan voidaan asettaa, esim:
 
 ```java
-int leveys; // luo uuden muuttujan
+int leveys; // luo uuden muuttujan (nimi: leveys, tyyppi: int)
 ```
 
-Muuttujiin asetetaan arvoja sijoitusoperaattorilla `=`:
+Muuttujiin asetetaan arvoja sijoitusoperaattorilla (`=`):
 
 ```java
-int leveys = 3; // luo uuden muuttujan ja asettaa siihen alkuarvon
+int leveys = 3; // luo uuden muuttujan ja asettaa siihen samalla arvon
 ```
 
 Muuttujia voidaan käyttää myöhemmin esimerkiksi laskutoimituksissa kirjoittamalla luvun tilalle muuttujan nimi:
@@ -140,6 +184,7 @@ Muuttujia voidaan käyttää myöhemmin esimerkiksi laskutoimituksissa kirjoitta
 ```java
 int leveys = 2;
 int korkeus = 3;
+
 int ala = leveys * korkeus;
 
 System.out.println(ala);
@@ -152,15 +197,32 @@ korkeus = 6;
 System.out.println(ala);
 ```
 
+## Javan staattinen tyypitys
+
+Java on ns. staattisesti tyypitetty kieli, eli kaikella datalla on olemassa tietty tyyppi, joka on ennalta määritetty. Muuttujien tapauksessa tyyppi määritellään muuttujaa luotaessa, eikä Java salli asettaa muuttujaan arvoja, jotka eivät ole yhteensopivia muuttujan tyypin kanssa.
+
+Esimerkiksi `int`-tyyppisessä muuttujassa voidaan varastoida ainoastaan kokonaislukuja:
+
+```java
+int numero = 1;
+
+numero = "kaksi"; // Aiheutuu käännösvirhe:
+                  // "Type mismatch: cannot convert from
+                  // String to int"
+```
+
+Huomaa, että Javassa virhe tapahtuu jo ennen kuin ohjelmaa voidaan suorittaa. Tämä johtuu siitä, että Java on käännettävä ohjelmointikieli ja kääntäjä tarkistaa ohjelmakoodin ennen suoritusta.
+
+
 ## String-muuttuja
 
-Vastaavasti merkkijonoja voidaan asettaa muuttujiin, kun muuttujan tyypiksi määritellään `String`, eli merkkijono:
+Kuten kokonaislukuja, myös merkkijonoja voidaan asettaa muuttujiin. Tällöin muuttujan tyypiksi määritellään `String`, eli merkkijono:
 
 ```java
 String etunimi = "Matti";
 ```
 
-Merkkijonoja voidaan yhdistää toisiinsa, eli konkatenoida, plus-merkillä `+`:
+Merkkijonoja voidaan yhdistää toisiinsa, eli katenoida, plus-merkillä `+`:
 
 ```java
 String etunimi = "Matti";
@@ -172,11 +234,11 @@ String kokonimi = etunimi + " " + sukunimi;
 System.out.println(kokonimi);
 ```
 
-Yllä käytettyjen muuttujien tyyppi on `String`, eli niihin voidaan asettaa ainoastaan merkkijonoja.
+Yllä käytettyjen muuttujien tyyppi on `String`, eli niihin voidaan asettaa ainoastaan merkkijonoja. Muuttujan `kokonimi` kohdalla yhdistetään käytännössä kolme merkkijonoa toisiinsa. `etunimi` ja `sukunimi` muuttujien väliin on asetettu myös välilyönnin sisältävä merkkijono `" "`, jotta `"Matti Meikäläinen"` sisältää välilyönnin nimen osien välissä.
 
 ## Vakiot
 
-Muuttuja voidaan myös määritellä ”vakioksi”, jolloin siihen asetettavaa arvoa ei voida enää korvata toisella arvolla. Tämä tehdään lisäämällä sana `final` muuttujan määrittelyn alkuun:
+Muuttuja voidaan myös määritellä "vakioksi", jolloin siihen asetettavaa arvoa ei voida enää korvata toisella arvolla. Tämä tehdään lisäämällä sana `final` muuttujan määrittelyn alkuun:
 
 ```java
 final double PI = 3.141592;
@@ -187,63 +249,48 @@ Yllä olevan muuttujan tyypiksi on määritetty `double`, joka on yleisin Javass
 
 ## Muuttujien nimeäminen
 
-Hyvä lähde koodin tyylikäytäntöjen opetteluun on esimerkiksi Google Java Style Guide, https://google.github.io/styleguide/javaguide.html#s5-naming.
+Hyvä lähde koodin tyylikäytäntöjen opetteluun on esimerkiksi [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html#s5-naming):
 
-* Muuttujien nimissä voi olla kirjaimia, numeroita sekä joitakin erikoismerkkejä
+* muuttujien nimissä voi olla kirjaimia, numeroita sekä tiettyjä erikoismerkkejä
 * useimpien erikoismerkkien ja ääkkösten käyttöä ei kuitenkaan suositella
-* Muuttujan nimi ei saa alkaa numerolla
-* Usean sanan pituiset muuttujan nimet kirjoitetaan yhteen, jälkimmäiset sanat isoilla alkukirjaimilla (camelCase):
+* muuttujan nimi ei saa alkaa numerolla
+* usean sanan pituiset muuttujan nimet kirjoitetaan yhteen, jälkimmäiset sanat isoilla alkukirjaimilla (camelCase):
 
-```diff
-+ String nykyinenKuukausi = "tammikuu";  // näin!
-- String nykyinen kuukausi = "tammikuu"; // ei näin!
-
-+ int paivia = 31; // näin!
-- int päiviä = 31; // ei näin!
+```java
+String nykyinenKuukausi = "tammikuu";
+int paivia = 31;
 ```
 
-Kun muuttuja on määritetty vakioksi, se kirjoitetaan usein isoilla kirjaimilla:
+Jos muuttuja on määritetty vakioksi (final), se kirjoitetaan usein isoilla kirjaimilla:
 
 ```java
 final double PI = 3.141592;
 
-// Javassa on myös valmis arvo piille:
+// Javassa on myös valmis arvo piille: Math.PI
 // https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html#PI
 ```
 
 
-# Javan tyypit (staattinen tyypitys)
-
-Java-kääntäjä varmistaa, että muuttujiin ei aseteta väärän tyyppisiä arvoja. Esim. `int`-tyyppisessä muuttujassa voidaan varastoida ainoastaan kokonaislukuja:
-
-```java
-int numero = 1;
-
-// Aiheutuu käännösvirhe "Type mismatch: cannot convert from String to int"
-numero = "kaksi";
-```
-
-Huomaa, että virhe tapahtuu jo ennen kuin ohjelmaa voidaan suorittaa. Tämä johtuu siitä, että Java on käännettävä ohjelmointikieli.
-
-
 ## Javan tietotyyppejä: kokonaisluvut (int ja long)
 
-Javassa kokonaisluvut ovat oletuksena tyyppiä `int` (integer). `int` on 32-bittinen kokonaisluku väliltä  -2 147 483 648 – 2 147 483 647.
+Javassa kokonaisluvut ovat oletuksena tyyppiä `int` (integer). `int` on 32-bittinen kokonaisluku väliltä  -2&nbsp;147&nbsp;483&nbsp;648 – 2&nbsp;147&nbsp;483&nbsp;647.
 
 Kun tarvitaan suurempia lukuja, voidaan käyttää `long`-tyyppisiä lukuja.
 
-long on 64-bittinen kokonaisluku väliltä -9 223 372 036 854 775 808 – 9 223 372 036 854 775 807
+long on 64-bittinen kokonaisluku väliltä -9&nbsp;223&nbsp;372&nbsp;036&nbsp;854&nbsp;775&nbsp;808 – 9&nbsp;223&nbsp;372&nbsp;036&nbsp;854&nbsp;775&nbsp;807.
 
-Luku määritellään long-tyyppisenä kirjoittamalla sen perään L-kirjain: 
+Luku voidaan määritellään long-tyyppiseksi kirjoittamalla sen perään L-kirjain: 
 
 ```
 987654321098765432L
 ```
 
+Jos `L` puuttuu, käsittelee Java lukua int-tyyppisenä.
+
 Suurten lukujen hahmottaminen yhteenkirjoitettuna voi olla hankalaa. Java mahdollistaa myös [alaviivan käyttämisen erottimena pitkien lukujen esityksissä](https://docs.oracle.com/javase/7/docs/technotes/guides/language/underscores-literals.html):
 
-```
-987_654_321_098_765_432L
+```java
+long suurinLuku = 987_654_321_098_765_432L;
 ```
 
 Muuttujien tyypeiksi int ja long määritellään seuraavasti:
@@ -256,11 +303,11 @@ int ika = 20;
 long ihmisia = 7_644_362_948L;
 ```
 
-Lisäksi on olemassa pienemmät lukutyypit `byte` ja `short`, joita tarvitaan harvemmin.
+Lisäksi on olemassa pienemmät lukutyypit `byte` ja `short`, joita tarvitaan harvemmin. Mikäli puolestaan tarvitaan `long`-tyyppiä suurempia lukuja tai `double`-tyyppiä tarkempia desimaaleja, voidaan käyttää [BigInteger](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigInteger.html)- tai [BigDecimal](https://docs.oracle.com/javase/7/docs/api/java/math/BigDecimal.html)-tyyppiä. 
 
 ## Kokonaislukujen "ylivuoto"
 
-Jos laskutoimituksen tulos on suurempi, kuin mitä kyseinen lukutyyppi pystyy esittämään, tapahtuu ns. ylivuoto, eli numero "pyörähtää ympäri"
+Jos laskutoimituksen tulos on suurempi tai pienempi, kuin mitä kyseinen lukutyyppi pystyy esittämään, tapahtuu ns. ylivuoto, eli numero "pyörähtää ympäri".
 
 Kokeile suorittaa seuraavat rivit. Mitä tuloksia saat ja miksi?
 

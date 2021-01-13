@@ -2,23 +2,32 @@
 
 ## "Could not find or load main class"
 
-> Error: Could not find or load main class TerveMaailma
-> Caused by: java.lang.NoClassDefFoundError: viikko1/perusteet/th/TerveMaailma (wrong name: TerveMaailma)
+> <span style="color: red">Error: Could not find or load main class TerveMaailma
+> Caused by: java.lang.NoClassDefFoundError: viikko1/perusteet/th/TerveMaailma (wrong name: TerveMaailma)</span>
 
-Viope ei löydä ratkaisusi luokkaa (`class`). Tarkasta, että olet poistanut `package`-rivin ohjelmasi alusta Viopessa.
+Tämä virhe johtuu siitä, että Viope ei löydä toteuttamaasi luokkaa. Ongelma voi johtua joko virheellisesti nimetystä luokasta tai koodin alussa olevasta **package**-rivistä.
+
+Vaikka ohjelmoisit omat ratkaisusi Eclipsessä hyvien käytäntöjen mukaisesti erillisiin paketteihin, tulee `package`-rivit poistaa aina palautettavien tiedostojen alusta. Viope ei tue paketteja tehtävien ratkaisuissa.
+
+Vaikka ohjelma toimisi täysin oikein omalla Eclipselläsi, saattaa se aiheuttaa käännösvirheen, mikäli luokkasi nimi on eri kuin mitä Viope odottaa. Tarkista siis, että luokan nimi `public class Nimi { ... }` on kirjoitettu oikein kirjainkoko huomioiden.
+
 
 ## "Virhe tulostuksessa"
 
 > Virhe tulostuksessa: ohjelmasi tulosti "maailma", vaikka tulostuksen olisi pitänyt olla "maailma!"
 
-Vertaile merkki kerrallaan oman ohjelmasi tulostetta esimerkkitulosteeseen. Onko välimerkeissä tai numeroissa eroja? Entä kirjoitusvirheitä?
+Vertaile merkki kerrallaan oman ohjelmasi tulostetta esimerkkitulosteeseen. Onko välimerkeissä tai numeroissa eroja? Entä kirjoitusvirheitä? Yllä olevassa esimerkkivirheessä oikeassa ratkaisussa on lopussa huutomerkki, joka puuttuu lähetetyn ratkaisun tulosteesta.
+
 
 ## "Virhe: ohjelmasi ei kääntynyt"
 
-Avaa Viopessa näkyville Java-kääntäjän antama virhe klikkaamalla "Kääntäjän viesti"-painiketta:
+Jos luokassa on syntaksivirhe, ei kääntäjä pysty kääntämään ratkaisuasi eikä ohjelman suoritus ala lainkaan. Tällaisten tapausten välttämiseksi on tärkeää toteuttaa ja testata ratkaisusi aina ensin Eclipsessä, ja vasta sen jälkeen kopioida ainakin syntaksiltaan toimivaksi varmistettu ratkaisu Viopeen.
 
-![](assets/viope_ohjelmasi_ei_kaantynyt.png)
+Nähdäksesi tarkemman virheilmoituksen Viopessa, avaa näkyville Java-kääntäjän antama virhe klikkaamalla "Kääntäjän viesti"-painiketta:
 
-Kääntäjän viesti kertoo missä kohdassa koodiasi virhe on.
+![Viopen kääntäjän viesti](assets/viope_ohjelmasi_ei_kaantynyt.png)
+
+Painike on Viopessa hieman hankala ymmärtää klikattavaksi sen tyylistä johtuen. Kääntäjän viesti kertoo missä kohdassa koodiasi virhe on.
+
 
 <a href="https://video.haaga-helia.fi/media/K%C3%A4%C3%A4nt%C3%A4j%C3%A4n+virheilmoitukset+Viopessa/0_tpfd5pfd">Video: Kääntäjän virheilmoitukset Viopessa.</a>
