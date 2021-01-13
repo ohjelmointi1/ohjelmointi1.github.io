@@ -242,11 +242,9 @@ Yllä käytettyjen muuttujien tyyppi on `String`, eli niihin voidaan asettaa ain
 Muuttuja voidaan myös määritellä "vakioksi", jolloin siihen asetettavaa arvoa ei voida enää korvata toisella arvolla. Tämä tehdään lisäämällä sana `final` muuttujan määrittelyn alkuun:
 
 ```java
-final double PI = 3.141592;
+final int PAIVIA_VIIKOSSA = 7;
 ```
-
-Yllä olevan muuttujan tyypiksi on määritetty `double`, joka on yleisin Javassa käytettävä tietotyyppi desimaalilukujen käsittelemiseksi.
-
+Vakiot kirjoitetaan pääasiassa isoilla kirjaimilla kuten yllä. Tässä tapauksessa muuttujan määrittely vakioksi voi olla perusteltua, koska päivien määrä viikossa ei saa muuttua ohjelman suorituksen aikana.
 
 ## Muuttujien nimeäminen
 
@@ -261,15 +259,6 @@ Hyvä lähde koodin tyylikäytäntöjen opetteluun on esimerkiksi [Google Java S
 String nykyinenKuukausi = "tammikuu";
 int paivia = 31;
 ```
-
-Jos muuttuja on määritetty vakioksi (final), se kirjoitetaan usein isoilla kirjaimilla:
-
-```java
-final int PAIVIA_VIIKOSSA = 7;
-```
-
-Vakiomuuttujaan ei voida asettaa enää uusia arvoja sen jälkeen, kun ensimmäinen arvo on asetettu.
-
 
 ## Javan tietotyyppejä: kokonaisluvut (int ja long)
 
@@ -292,16 +281,12 @@ long maailmanVakiluku = 7838721501L;
 long suurinLuku = 987654321098765432L;
 ```
 
-Jos `L` puuttuu luvun lopusta, käsittelee Java lukua int-tyyppisenä.
-
-Suurten lukujen hahmottaminen yhteenkirjoitettuna voi olla hankalaa. Java mahdollistaa myös [alaviivan käyttämisen erottimena pitkien lukujen esityksissä](https://docs.oracle.com/javase/7/docs/technotes/guides/language/underscores-literals.html):
+Suurten lukujen hahmottaminen ilman välimerkkejä voi olla hankalaa. Java ei salli välilyöntejä numeroissa, mutta [alaviivan käyttö erottimena on sallittua](https://docs.oracle.com/javase/7/docs/technotes/guides/language/underscores-literals.html):
 
 ```java
 long maailmanVakiluku = 7_838_721_501L;
 long suurinLuku = 987_654_321_098_765_432L;
 ```
-
-Muuttujien tyypeiksi int ja long määritellään seuraavasti:
 
 Lisäksi on olemassa pienemmät lukutyypit `byte` ja `short`, joita tarvitaan harvemmin. Mikäli puolestaan tarvitaan `long`-tyyppiä suurempia lukuja tai `double`-tyyppiä tarkempia desimaaleja, voidaan käyttää [BigInteger](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigInteger.html)- tai [BigDecimal](https://docs.oracle.com/javase/7/docs/api/java/math/BigDecimal.html)-tyyppiä. 
 
