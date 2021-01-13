@@ -1,3 +1,9 @@
+# Ohjelmoinnin aloitus
+
+Tällä oppitunnilla tutustumme Java-lähdekooditiedostojen rakenteeseen sekä koodin kirjoittamiseen ja suorittamiseen Eclipse-sovelluskehittimessä. Käsittelemme numeerisia sekä tekstimuotoisia tietotyyppejä ja teemme yksinkertaista vuorovaikutusta käyttäjän kanssa tulosteiden ja syötteiden avulla. Lopuksi tunnilla opittuja asioita harjoitellaan Viope-järjestelmässä olevien tehtävien avulla.
+
+<div class="js-toc"></div>
+
 # Java-luokan rakenne
 
 Java-ohjelmat koostuvat aina luokista (class). Tyypillisesti kukin luokka tallennetaan samannimiseen .java-päätteiseen tiedostoon. Tiedoston sisällä ohjelmakoodi alkaa ja päättyy luokan määrittelyyn:
@@ -629,3 +635,12 @@ Kun kohtaatte ongelmia tehtävissä, pyytäkää apua ja vinkkejä kurssin Teams
 ---
 
 Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
+
+
+<script src="/tocbot/tocbot.min.js"></script>
+
+<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+<script>
+tocbot.init({ tocSelector: '.js-toc', contentSelector: '.main-content' });
+</script>
