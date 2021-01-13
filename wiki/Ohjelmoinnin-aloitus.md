@@ -61,7 +61,7 @@ Java-ohjelmistopakettia tarjotaan usein erilaisina versioina riippuen siitä, ol
 >
 > **JRE (Java Runtime Environment)**
 >
-> *Contains everything required to >run Java applications on your system.*
+> *Contains everything required to run Java applications on your system.*
 >
 > Oracle. Which Java package do I need? [https://www.oracle.com/java/technologies/javase-downloads.html](https://www.oracle.com/java/technologies/javase-downloads.html)
 
