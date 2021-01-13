@@ -350,7 +350,7 @@ Operaattori | Käyttötarkoitus
 /           | Jakolasku
 %           | Jakojäännös
 
-Lähde: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html
+Lähde: [https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html)
 
 Yllä olevista operaattoreista "erikoisin" on kenties jakojäännös `%`, jonka avulla saadaan selvitettyä kokonaislukujen jakolaskussa "yli jäävä osuus". Toinen huomionarvoinen operaatio on kokonaislukujen jakolasku, joka tuottaa aina vain kokonaislukuja.
 
@@ -449,7 +449,7 @@ Operaattori | Kuvaus
 --          | Vähentää arvoa yhdellä
 !           | Kääntää totuusarvon päinvastaiseksi
 
-https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html
+[https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html)
 
 ```java
 int luku = 10;
@@ -504,7 +504,7 @@ Yllä olevan esimerkkikoodin tulos on 4, koska:
 (6 + 5) * 3 / 7 = 4.714
 ```
 
-Koska kaikki luvut ovat kuitenkin kokonaislukuja, jakolaskussa desimaaliosa leikkautuu pois!
+Koska jakolaskun molemmat osapuolet ovat kokonaislukuja, desimaaliosa leikkautuu pois!
 
 
 ## Koodausharjoitus
@@ -548,7 +548,7 @@ Tietovirta  | Tarkoitus
 ------------|------------------
 `System.in` | syötteiden lukeminen käyttäjältä (konsolista)
 `System.out`| tulostaminen konsoliin
-`System.err`| virheilmoitusten tulostaminen (punainen teksti)
+`System.err`| virheilmoitusten tulostaminen ("punainen teksti")
 
 Tiedon lukemiseksi `System.in`-tietovirrasta kannattaa käyttää `Scanner`-luokkaa, joka tarjoaa käteviä metodeja eri tyyppisten syötteiden lukemiseksi.
 
@@ -648,7 +648,7 @@ Liukulukuja tulostettaessa tulostettavien desimaalien määrä vaihtelee ja desi
 **Tulet tarvitsemaan DecimalFormat-luokkaa Viope-tehtävien ratkaisemisessa.**
 
 
-## `DecimalFormat`-luokka
+## DecimalFormat-luokka
 
 `DecimalFormat`-luokan käyttöä käsitellään mm. alla olevalla YouTube-videolla:
 
@@ -661,7 +661,7 @@ Liukulukuja tulostettaessa tulostettavien desimaalien määrä vaihtelee ja desi
 import java.text.DecimalFormat;
 ```
 
-Sen jälkeen luodaan uusi `DecimalFormat`-olio, jolle kerrotaan, missä muodossa luvut halutaan tulostaa. `"0.00"` muotoilee luvun kahden desimaalin tarkkuudella käyttäen käyttöjärjestelmän desimaalierotinta (asetuksista riippuen pilkku tai piste).
+Sen jälkeen luodaan uusi `DecimalFormat`-olio, jolle kerrotaan, missä muodossa luvut halutaan tulostaa. `"0.00"` muotoilee luvun kahden desimaalin tarkkuudella käyttäen käyttöjärjestelmän desimaalierotinta, joka on asetuksista riippuen joko pilkku tai piste.
 
 DecimalFormat-oliolla on `format`-metodi, joka muotoilee liukuluvun merkkijonoksi. Esimerkiksi:
 
@@ -684,12 +684,12 @@ System.out.println(muotoiltu); // 123,46 <-- pyöristetty kahteen desimaaliin, e
 
 # Kommentit
 
-Javassa on kolme eri kommenttityyliä:
+Javassa on kolme eri kommenttityyliä. `/**`-alkuiset moniriviset kommentit toimivat dokumentaatiokommentteina, joita hyödynnetään mm. ohjelman dokumentaation automaattisessa generoinnissa. `/*`-alkuiset kommentit mahdollistavat pidempin kommenttien kirjoittamisen. Kaksi kauttaviivaa `//` tarkoittaa yksirivistä kommenttia, joka voidaan kätevästi kirjoittaa myös koodirivin loppuun.
 
 ```java
 /**
  * Luokan ja julkisten metodien "viralliset" dokumentaatiokommentit 
- * kirjoitetaan näin.
+ * kirjoitetaan dokumentoitavan luokan tai metodin eteen.
  *
  * @see https://google.github.io/styleguide/javaguide.html#s7-javadoc
  */
@@ -698,10 +698,12 @@ public class Kommentit {
     public static void main(String[] args) {
         /*
          * Koodinpätkille voidaan kirjoittaa monirivisiä kommentteja näin.
+         * Yksittäisiä muuttujia on harvoin tarpeellista kommentoida, mikäli
+         * ne ovat asianmukaisesti nimettyjä.
          */
         int luku = 1;
 
-        // Yksirivisille kommenteille laitetaan vain kaksi kauttaviivaa
+        // Yksirivisille kommenteille laitetaan vain kaksi kauttaviivaa.
         System.out.println(luku);
     }
 }
