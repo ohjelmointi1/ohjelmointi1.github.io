@@ -197,6 +197,8 @@ korkeus = 6;
 System.out.println(ala);
 ```
 
+Yllä oleva koodi tulostaa lopussa luvun 6, koska myöhemmin tehtävillä sijoitusoperaatioilla `leveys`- ja `korkeus`-muuttujiin ei ole vaikutusta `ala`-muuttujaan aikaisemmin asetettuun arvoon.
+
 ## Javan staattinen tyypitys
 
 Java on ns. staattisesti tyypitetty kieli, eli kaikella datalla on olemassa tietty tyyppi, joka on ennalta määritetty. Muuttujien tapauksessa tyyppi määritellään muuttujaa luotaessa, eikä Java salli asettaa muuttujaan arvoja, jotka eivät ole yhteensopivia muuttujan tyypin kanssa.
@@ -206,8 +208,7 @@ Esimerkiksi `int`-tyyppisessä muuttujassa voidaan varastoida ainoastaan kokonai
 ```java
 int numero = 1;
 
-numero = "kaksi"; // Aiheutuu käännösvirhe:
-                  // "Type mismatch: cannot convert from
+numero = "kaksi"; // "Type mismatch: cannot convert from
                   // String to int"
 ```
 
@@ -272,7 +273,13 @@ Vakiomuuttujaan ei voida asettaa enää uusia arvoja sen jälkeen, kun ensimmäi
 
 ## Javan tietotyyppejä: kokonaisluvut (int ja long)
 
-Javassa kokonaisluvut ovat oletuksena tyyppiä `int` (integer). `int` on 32-bittinen kokonaisluku väliltä  -2&nbsp;147&nbsp;483&nbsp;648 – 2&nbsp;147&nbsp;483&nbsp;647.
+Javassa kokonaisluvut ovat oletuksena tyyppiä `int` (integer). `int` on 32-bittinen kokonaisluku väliltä  -2&nbsp;147&nbsp;483&nbsp;648 – 2&nbsp;147&nbsp;483&nbsp;647, esim:
+
+```java
+int saunanLampotila = 80;
+int pakastimenLampotila = -19;
+int suomenVakiluku = 5518000;
+```
 
 Kun tarvitaan suurempia lukuja, voidaan käyttää `long`-tyyppisiä lukuja.
 
@@ -280,27 +287,21 @@ long on 64-bittinen kokonaisluku väliltä -9&nbsp;223&nbsp;372&nbsp;036&nbsp;85
 
 Luku voidaan määritellään long-tyyppiseksi kirjoittamalla sen perään L-kirjain: 
 
-```
-987654321098765432L
+```java
+long maailmanVakiluku = 7838721501L;
+long suurinLuku = 987654321098765432L;
 ```
 
-Jos `L` puuttuu, käsittelee Java lukua int-tyyppisenä.
+Jos `L` puuttuu luvun lopusta, käsittelee Java lukua int-tyyppisenä.
 
 Suurten lukujen hahmottaminen yhteenkirjoitettuna voi olla hankalaa. Java mahdollistaa myös [alaviivan käyttämisen erottimena pitkien lukujen esityksissä](https://docs.oracle.com/javase/7/docs/technotes/guides/language/underscores-literals.html):
 
 ```java
+long maailmanVakiluku = 7_838_721_501L;
 long suurinLuku = 987_654_321_098_765_432L;
 ```
 
 Muuttujien tyypeiksi int ja long määritellään seuraavasti:
-
-```java
-// Normaali kokonaisluku (int)
-int ika = 20;
-
-// Hyvin iso kokonaisluku (long)
-long ihmisia = 7_644_362_948L;
-```
 
 Lisäksi on olemassa pienemmät lukutyypit `byte` ja `short`, joita tarvitaan harvemmin. Mikäli puolestaan tarvitaan `long`-tyyppiä suurempia lukuja tai `double`-tyyppiä tarkempia desimaaleja, voidaan käyttää [BigInteger](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigInteger.html)- tai [BigDecimal](https://docs.oracle.com/javase/7/docs/api/java/math/BigDecimal.html)-tyyppiä. 
 
@@ -351,8 +352,6 @@ System.out.println(0.1 + 0.2); // syntyy pieni laskuvirhe!
 ```
 
 Liukulukujen laskuvirhe ei niinkään liity Javaan, vaan yleisesti siihen, miten liukuluvut esitetään tietokoneen muistissa rajallisella määrällä ykkösiä ja nollia. Kaikkia lukuja ei vain ole mahdollista esittää täydellisellä tarkkuudella. Vastaavasti kymmenjärjestelmässä ei voida tarkasti esittää desimaalina lukua `1/3`.
-
-
 
 ## Aritmeettiset operaatiot
 

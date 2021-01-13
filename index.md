@@ -53,7 +53,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
             <td>Ke</td>
             <td>20.1.</td>
             <td>
-                <strong>Ehtolauseet</strong><br />
+                <strong>Totuusarvot ja ehtolauseet</strong><br />
                 <a href="wiki/Totuusarvot-ja-ehtolauseet">📝 Muistiinpanot</a><br />
                 <!--<a href="src/viikko1/ehtolauseet/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />

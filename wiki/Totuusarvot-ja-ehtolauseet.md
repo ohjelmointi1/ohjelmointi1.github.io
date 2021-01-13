@@ -1,16 +1,27 @@
+[&larr; Takaisin etusivulle](/)
+
+
+<h1 class="js-toc-ignore">Totuusarvot ja ehtolauseet</h1>
+
+Tällä tunnilla tutustumme Javan totuusarvoihin `true` ja `false` sekä niihin liittyvään logiikkaan. Opimme vertailemaan eri arvoja toisiinsa ja tekemään vertailun tulosten perusteella ehdollisesti suoritettavaa ohjelmalogiikkaa.
+
 Katso myös: [Ehtolauseet ja vaihtoehtoinen toiminta, Ohjelmoinnin MOOC 2020](https://ohjelmointi-20.mooc.fi/osa-1/6-ehtolauseet).
 
+**Sisällysluettelo**
 
-# Boolean-arvot (totuusarvot)
+<div class="js-toc"></div>
 
-Javassa on kaksi totuusarvoa: `true` ja `false`:
+
+# Totuusarvot (boolean-arvot)
+
+Javassa on kaksi totuusarvoa: `true` ja `false`, jotka ovat tyypiltään `boolean`:
 
 ```java
 boolean tosi = true;
 boolean epatosi = false;
 ```
 
-Totuusarvot ovat tyypiltään `boolean`. Boolean-tyyppisiä arvoja voidaan monella tapaa käyttää kuten numeroita ja merkkijonoja. Niitä voidaan esimerkiksi tulostaa ja asettaa muuttujiin:
+Boolean-tyyppisiä arvoja voidaan monella tapaa käyttää kuten numeroita ja merkkijonoja. Niitä voidaan esimerkiksi tulostaa ja asettaa muuttujiin:
 
 ```java
 System.out.println(true);
@@ -29,23 +40,24 @@ boolean no = !yes; // saa arvoksi false
 
 ## Arvojen vertailu ja loogiset operaatiot
 
-Kun vertailemme Javassa eri arvoja, saamme vertailun tuloksiksi aina totuusarvoja:
+Kun vertailemme Javassa eri arvoja, saamme vertailun tuloksiksi aina totuusarvoja. Tätä voidaan kokeilla suoraviivaisesti esimerkiksi vertailemalla lukuja toisiinsa `>`- ja `<`-operaatioilla: 
 
 ```java
 System.out.println(10 > 5);  // true
 System.out.println(100 < 3); // false
 ```
 
-Vertailujen tuloksena muodostuvia totuusarvoja voidaan myöhemmin hyödyntää esimerkiksi vaihtoehtologiikan toteuttamisessa:
+Vertailujen tuloksena muodostuvia totuusarvoja voidaan myös asettaa muuttujiin:
 
 ```java
-// oletetaan että lukija on Scanner-olio
+// oletetaan, että lukija on edelliseltä oppitunnilta 
+// tuttu Scanner-olio
 int numero = lukija.nextInt(); 
 
 boolean yliKolme = numero > 3;
 boolean alleSata = numero < 100;
 ```
-
+Muuttujien avulla voidaan toteuttaa esimerkiksi erilaisia ehtorakenteita.
 
 ## Vertailuoperaattorit
 
@@ -61,22 +73,21 @@ Operaattori | Selitys
 &lt;=	    | pienempi tai yhtä suuri kuin
 &&	        | ja
 \|\|        | tai
-!           | negaatio <br />`!false == true`<br /> `!true == false`
+!           | negaatio
 
 Lähde: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html
-
 
 Kaikki seuraavan esimerkin muuttujat saavat arvoikseen `true`, eli vertailujen tulokset ovat tosia:
 
 ```java
 int luku = 1;
 
-boolean b1 = luku == 1;
-boolean b2 = luku > 0;
-boolean b3 = luku < 2;
-boolean b4 = luku >= 1;
-boolean b5 = luku <= 1;
-boolean b6 = luku != 0;
+boolean tosi1 = luku == 1;
+boolean tosi2 = luku > 0;
+boolean tosi3 = luku < 2;
+boolean tosi4 = luku >= 1;
+boolean tosi5 = luku <= 1;
+boolean tosi6 = luku != 0;
 ```
 
 ## Totuustaulut
@@ -85,19 +96,26 @@ Totuusarvoja voidaan yhdistellä ja- sekä tai-operaatioilla. Näiden operaatioi
 
 ### Ja (`&&`)
 
-Lausekkeen `a && b` arvoksi tulee `true` vain silloin, kun molemmat arvoista ovat `true`:
+Lausekkeen `a && b` arvoksi tulee `true` vain silloin, kun **molemmat arvoista** ovat `true`:
 
 | a     | b     | a &amp;&amp; b |
 |-------|-------|--------  |
 | true  | true  | true     |
-| True  | false | false    |
+| true  | false | false    |
 | false | true  | false    |
 | false | false | false    |
 
+Yllä olevaa taulukko luetaan siten, että vasemmalla olevien `a`:n ja `b`:n kaikkien arvojen yhdistelmien perusteella on esitetty kyseisten arvojen ja-operaation tulos `a && b`.
+
+Jos kesäkuukausiksi lasketaan kesä, heinä ja elokuu, voidaan `onKesa`-muuttujan logiikassa hyödyntää ja-operaatiota:
+
+```java
+boolean onKesa = kuukausi >= 6 && kuukausi <= 8;
+```
 
 ### Tai (`||`)
 
-Lausekkeen `a || b` arvoksi tulee `true` aina, kun vähintään toinen arvoista on `true`:
+Lausekkeen `a || b` arvoksi tulee `true` aina, kun **vähintään toinen arvoista** on `true`:
 
 | a     | b     | a \|\| b |
 |-------|-------|----------|
@@ -106,6 +124,13 @@ Lausekkeen `a || b` arvoksi tulee `true` aina, kun vähintään toinen arvoista 
 | false | true  | true     |
 | false | false | false    |
 
+Yllä olevaa taulukko luetaan siten, että vasemmalla olevien `a`:n ja `b`:n kaikkien arvojen yhdistelmien perusteella on esitetty kyseisten arvojen tai-operaation tulos `a || b`.
+
+Jos talvikuukausiksi lasketaan tammi-, helmi-, marras- ja joulukuu, tarvitaan kesän logiikasta poiketen tai-operaatiota:
+
+```java
+boolean onTalvi = kuukausi <= 2 || kuukausi >= 11;
+```
 
 # If-ehtolause
 
@@ -117,30 +142,29 @@ Tarkastettava ehto kirjoitetaan `if`-avainsanan jälkeen sulkujen sisään: `if 
 if (ehto) {
     // ehdollisesti suoritettava koodi
 }
-// jos ehto on epätosi, siirtyy suoritus suoraan tänne
 ```
 
 Ehtona on aina oltava totuusarvo tai totuusarvon saava lauseke, esimerkiksi:
 
 ```java
-boolean onPaiva = true;
+boolean taysiIkainen = ika >= 18;
 
-if (onPaiva) {
-    // tähän lohkoon kirjoitettu  koodi suoritetaan 
-    // vain, jos ehto on tosi
-    System.out.println("Hyvää päivää!");
+if (taysiIkainen) {
+    // tähän lohkoon kirjoitettu koodi suoritetaan 
+    // vain, jos taysiIkainen sai arvon true
+    System.out.println("Olet täysi-ikäinen");
 }
 ```
 
-If-lauseen sulkujen sisällä voi olla myös lauseke, joka evaluoidaan, ja päätös tehdään saadun tuloksen mukaan.
+If-lauseen sulkujen sisällä voi olla myös lauseke, joka suoritetaan (evaluoidaan), ja päätös tehdään saadun tuloksen mukaan.
 
 ```java
-int kello = 16;
+int ika = 21;
 
-if (kello < 18) {
-    // tähän lohkoon kirjoitettu koodi suoritetaan, 
-    // jos kello-muuttujan arvo on alle 18
-    System.out.println("Hyvää päivää!");
+if (ika >= 18) {
+    // tähän lohkoon kirjoitettu koodi suoritetaan 
+    // vain, jos vertailu sai arvon true
+    System.out.println("Olet täysi-ikäinen");
 }
 ```
 
@@ -149,18 +173,22 @@ if (kello < 18) {
 Toisinaan ehtolauseen sisään kirjoitetaan kirjoitettavan arvon vertailu `true`-arvoon:
 
 ```java
-if (ehto == true) { }
+if (taysiIkainen == true) {
+    // ...
+}
 ```
 
-Tämä on kuitenkin turhaa, koska `ehto == true` saa aina arvokseen saman arvon kuin `ehto`, eli voimme käyttää suoraan `ehto`-muuttujan arvoa:
+Tämä on kuitenkin turhaa, koska `taysiIkainen == true` saa aina arvokseen saman arvon kuin `taysiIkainen`. Voimme käyttää siis aina suoraan `taysiIkainen`-muuttujan arvoa:
 
 ```java
-if (ehto) { }
+if (taysiIkainen) {
+    // ...
+}
 ```
 
 ## Ehtorakenteet (ja)
 
-Ehtolauseessa voidaan evaluoida myös monimutkaisempia lausekkeita, joissa tehdään useita eri vertailuja:
+Ehtolauseessa voidaan suorittaa (evaluoida) myös monimutkaisempia lausekkeita, joissa tehdään useita eri vertailuja:
 
 ```java
 int kello = 16;
@@ -172,11 +200,11 @@ if (kello >= 10 && kello < 18) {
 }
 ```
 
-Edellä oleva ehto toteutuu vain, jos arvo on samaan aikaan sekä `>= 10` että `< 18`. 
+Edellä oleva ehto toteutuu vain, jos `kello` on samaan aikaan sekä suurempi tai yhtä suuri kuin 10 ja pienempi kuin 18. 
 
 ## Ehtorakenteet (tai)
 
-Vuorokaudenajoista yö asettuu sekä järjestysnumeroltaan pienille että suurille tunneille:
+Vuorokaudenajoista yö asettuu sekä järjestysnumeroltaan pienille että suurille tunneille. Tällainen ehto voidaan tarkistaa yhdistelemällä kaksi vertailua tai-operaatiolla:
 
 ```java
 int kello = 16;
@@ -188,12 +216,12 @@ if (kello >= 22 || kello < 7) {
 }
 ```
 
-Erilaisia ehtoja voidaan kirjoittaa myös erillisiksi lausekkeiksi, joiden tulos sijoitetaan muuttujaan:
+Erilaisia ehtoja voidaan kirjoittaa myös ehtorakenteiden ulkopuolelle, jolloin niiden tulokset voidaan esimerkiksi sijoittaa muuttujiin:
 
 ```java
-// vertailu suoritetaan ensin ja sen tulos (true tai false) asetetaan muuttujaan
-boolean onPaiva = (kello >= 10 && kello < 18);
-boolean onYo = (kello >= 22 || kello < 7);
+// vertailu suoritetaan ensin ja sen tulos asetetaan muuttujaan:
+boolean onPaiva = kello >= 10 && kello < 18;
+boolean onYo = kello >= 22 || kello < 7;
 
 // sama kuin aikaisemmin, mutta muuttujan avulla:
 if (onPaiva) {
@@ -206,13 +234,26 @@ if (onYo) {
 }
 ```
 
-## Oikean kellonajan käyttäminen
-
-Kellonajan "kovakoodaaminen" tai kysyminen käyttäjältä ei vastaa todellisen ohjelman toimintalogiikkaa. Oikeaa kellonaikaa voidaan käyttää esimerkiksi seuraavalla tavalla Javan `LocalTime`-luokan avulla. 
+Vertailujen ympärillä voidaan käyttää aina myös sulkuja. Tarkoituksenmukainen välilyöntien ja sulkujen hyödyntäminen helpottaa koodin lukemista ja vähentää virheiden mahdollisuuksia:
 
 ```java
-// lisää import java.time.LocalTime; -rivi luokan alkuun
+boolean vaikeaLukea = kello>=10&&kello<18;
+boolean helpompiLukea = (kello >= 10) && (kello < 18);
+```
 
+### Oikean kellonajan käyttäminen
+
+Edellisissä esimerkeissä esitetty kellonajan "kovakoodaaminen" tai kysyminen käyttäjältä eivät vastaa tavanomaisen ohjelman oikeeaa toimintalogiikkaa. Oikeaa kellonaikaa voidaan käyttää esimerkiksi seuraavalla tavalla Javan `LocalTime`-luokan avulla. 
+
+Lisää ensin `import`-käsky tiedoston alkuun mahdollisen `package`-rivin alapuolelle, jotta voit käyttää `LocalTime`-luokkaa:
+
+```java
+import java.time.LocalTime;
+```
+
+Sen jälkeen voit luoda `LocalTime`-olion ja käyttää sitä kellonajan selvittämiseksi:
+
+```java
 // luodaan olio ja asetetaan se uuteen muuttujaan:
 LocalTime nykyhetki = LocalTime.now();
 
@@ -227,9 +268,11 @@ if (tunnit >= 10 && tunnit < 18) {
 }
 ```
 
-## Else-lohko
+# Else-lohko
 
-Vapaaehtoisessa else-lohkossa oleva koodi suoritetaan, mikäli if-lauseen ehto ei toteutunut:
+Usein ohjelmissa on tarpeen tehdä joko-tai-tyyppistä logiikkaa. Tämä tapahtuu helpoiten `if-else`-rakenteen avulla.
+
+If-ehtorakenteen jälkeisessä vapaaehtoisessa `else`-lohkossa oleva koodi suoritetaan, mikäli if-lauseen ehto ei toteutunut:
 
 ```java
 int kello = 16;
@@ -252,12 +295,12 @@ if (kello >= 10 && kello < 18) {
 ```java
 int kello = 16;
 
-if (kello >= 22) { // Tämä tarkastus tehdään ensin
+if (kello >= 22) { // tämä tarkastus tehdään aina ensin
     System.out.println("Hyvää yötä!");
-} else if (kello >= 17) { // tarkastetaan vain, jos ensimmäinen oli epätosi
+} else if (kello >= 17) { // tämä ehto tarkastetaan, jos ensimmäinen oli epätosi
     System.out.println("Hyvää iltaa!");
 } else {
-    // Tänne päädytään, jos kaikki edellä olleet ehdot olivat epätosia
+    // tänne päädytään, jos kaikki edellä olleet if-ehdot olivat epätosia
     System.out.println("Hyvää päivää!");
 }
 ```
@@ -276,92 +319,72 @@ Aikaväli    | Tervehdys
 17:00-21:59 | Hyvää iltaa!
 22:00-6:59  | Hyvää yötä!
 
+Vinkki: Koska tässä tehtävässä tervehdys muuttuu aina tasatunnein, sinun ei tarvitse ottaa minuutteja lainkaan huomioon ehtorakenteessasi.
+
 
 ## Sisäkkäiset ehtorakenteet
 
-```java
-/*
- * Tässä esimerkissä demonstroidaan sisäkkäistä vaihtoehtorakennetta. Käyttäjän
- * ensimmäisestä vastauksesta riippuen häneltä joko kysytään toinen kysymys tai
- * tulostetaan vastaus suoraan. Toisen kysymyksen vastauksesta riippuen
- * suoritetaan jompi kumpi vaihtoehtoisista lohkoista.
- */
-public class JunalippujenHinta {
+Ohjelmissa on toisinaan tarpeen tehdä sisäkkäisiä ehtorakenteita. Tällöin sisempi ehtorakenne jää kenties kokonaan suorittamatta ulomman ehtorakenteen arvosta riippuen. Tällainen tilanne saattaisi tulla vastaan esimerkiksi Viope-tehtävässä, jossa lasketaan katsastusasemalla käynnin hinta riippuen päästömittauksista, ajoneuvon polttoainetyypistä ja mahdollisesta jälkitarkastuksesta.
 
-    /*
-     * 1. Kysytään ostaako käyttäjä kuukausilipun vai kertalippuja
-     * 
-     * 2. Jos ostaa kuukausilipun, kerrotaan kuukausihinta
-     * 
-     * 3. Jos kertalippuja, kysytään kuinka monta, ja kerrotaan tulisiko
-     * kuukausilippu halvemmaksi
-     */
-    public static void main(String[] args) {
-        final int kertalipunHinta = 10;
-        final int kuukausilipunHinta = 100;
+Tehtävässä ehtologiikka kannattaa ensin luonnostella kaavioksi, jossa lähdet liikkeelle yksinkertaisimmasta tapauksesta (jälkitarkastus) ja etenet vaihe kerrallaan päästömittauksen ja polttoainetyypin kyselyihin.
 
-        Scanner lukija = new Scanner(System.in);
+<!--```java
+int hinta = 0;
 
-        System.out.println("Ostatko kuukausilipun (1) vai kertalippuja (2)?");
-        int vastaus = lukija.nextInt();
+if (jalkitarkastus) {
+    hinta = 30;
+} else {
+    hinta = 50;
 
-        if (vastaus == 1) {
-            System.out.println("Kuukausilippu maksaa " + kuukausilipunHinta + " €");
-        } else if (vastaus == 2) {
-            System.out.println("Kuinka monta kertalippua käytät kuukaudessa?");
-            int kertalippuja = lukija.nextInt();
-            int kokonaishinta = kertalippuja * kertalipunHinta;
+    // mitataanko päästöt?`
+    // ...
 
-            if (kokonaishinta > kuukausilipunHinta) {
-                System.out.println("Kuukausilippu olisi halvempi");
-            } else {
-                int saasto = kuukausilipunHinta - kokonaishinta;
-                System.out.println("Säästät " + saasto + " € verrattuna kuukausilippuun");
-            }
+    if (mitataanPaastot) {
+        // bensa vai diesel?
+        // ...
+        if (bensa) {
+            hinta += 22;
         } else {
-            System.out.println("Virheellinen valinta");
+            hinta += 31;
         }
-
-        lukija.close();
     }
+}
+```-->
+
+
+# Eri tapoja vertailla: `==`, `!=`, `!` ja `== false`
+
+Tulet ohjelmakoodia lukiessasi ja kirjoittaessasi törmäämään erilaisiin tapoihin toteuttaa samat loogiset ehdot. Tutustu esimerkiksi seuraaviin vertailuihin:
+
+```java
+boolean onKesa = kuukausi >= 6 && kuukausi <= 8;
+
+// Seuraavat kaksi ehtoa ovat loogisesti samat:
+if (onKesa == true) {
+    System.out.println("Muista aurinkorasva!");
+}
+
+if (onKesa) {
+    System.out.println("Muista aurinkorasva!");
 }
 ```
 
-# Eri tapoja vertailla: `==`, `!=`, `!` (negaatio) ja `== false`
-
-Tulet ohjelmakoodia lukiessasi ja kirjoittaessasi törmäämään erilaisiin tapoihin toteuttaa samat loogiset ehdot. Tutustu esimerkiksi seuraaviin vertailuihin, joiden avulla selvitetään, onko tietty lento Finnairin lento:
+Kaikissa seuraavissa ehtorakenteissa ehto toteutuu, mikäli muuttujan arvo on `false`:
 
 ```java
-public class FinnairinLento {
+boolean onKesa = kuukausi >= 6 && kuukausi <= 8;
 
-    public static void main(String[] args) {
-        String lento = "AY1019";
+// Seuraavat kolme ehtoa ovat loogisesti samat:
+if (onKesa == false) {
+    System.out.println("Pukeudu lämpimästi!");
+}
 
-        // lennot, jotka alkavat "AY", ovat Finnairin
-        boolean finnairinLento = lento.startsWith("AY");
+if (onKesa != true) {
+    System.out.println("Pukeudu lämpimästi!");
+}
 
-        // Seuraavat kaksi ehtoa ovat loogisesti samat:
-        if (finnairinLento == true) {
-            System.out.println("On Finnairin lento!");
-        }
-
-        if (finnairinLento) {
-            System.out.println("On Finnairin lento!");
-        }
-
-        // Seuraavat kolme ehtoa ovat loogisesti samat:
-        if (finnairinLento == false) {
-            System.out.println("Ei ole Finnairin lento");
-        }
-
-        if (finnairinLento != true) {
-            System.out.println("Ei ole Finnairin lento");
-        }
-
-        if (!finnairinLento) {
-            System.out.println("Ei ole Finnairin lento");
-        }
-    }
+if (!onKesa) {
+    System.out.println("Pukeudu lämpimästi!");
 }
 ```
 
@@ -400,3 +423,12 @@ class HelloWorld {
 ---
 
 Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
+
+
+<script src="/tocbot/tocbot.min.js"></script>
+
+<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+<script>
+tocbot.init({ tocSelector: '.js-toc', contentSelector: '.main-content' });
+</script>
