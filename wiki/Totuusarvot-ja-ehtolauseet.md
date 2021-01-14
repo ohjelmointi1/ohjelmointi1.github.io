@@ -427,9 +427,5 @@ Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Crea
 
 
 <script src="/tocbot/tocbot.min.js"></script>
-
+<script src="/scripts.js"></script>
 <link rel="stylesheet" href="/tocbot/tocbot.css">
-
-<script>
-tocbot.init({ tocSelector: '.js-toc', contentSelector: '.main-content', disableTocScrollSync: true });
-</script>
