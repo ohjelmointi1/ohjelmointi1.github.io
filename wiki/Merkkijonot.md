@@ -3,6 +3,14 @@
 Kuten olemme aiemmin todenneet, merkkijonot ovat tyyppiä `String`. String on **luokka** ja yksittäiset merkkijonot ovat **olioita**. Merkkijonot luodaan muista olioista poiketen ilman `new`-avainsanaa, kirjoittamalla merkkijonon sisältö suoraan lainausmerkkeihin: `"esimerkki"`.
 
 
+
+
+<!--
+Tehtäväidea: satunnaisen salasanan generointi
+* for-looppi
+* subString tai charAt?
+-->
+
 ## String-luokka
 
 Koska merkkijonot ovat olioita, niihin liittyy seuraavat seikat:

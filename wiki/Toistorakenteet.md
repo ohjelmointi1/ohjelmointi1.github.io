@@ -1,3 +1,7 @@
+[&larr; Takaisin etusivulle](/)
+
+<h1 class="js-toc-ignore">Toistorakenteet</h1>
+
 Ehtorakenteiden tavoin toistorakenteilla voidaan vaikuttaa koodin suorituksen etenemiseen. Toistorakenteiden avulla tietyt koodirivit voidaan toistaa eri logiikoilla tai tarvittaessa jopa "ikuisesti".
 
 Opettelemme aiheeseen liittyen:
@@ -7,6 +11,15 @@ Opettelemme aiheeseen liittyen:
 * toistamaan koodia kunnes tietty ehto toteutuu
 * käymään läpi olemassa olevia arvoja toiston avulla.
 
+**Sisällysluettelo**
+
+<div class="js-toc"></div>
+
+
+<!--
+Tehtäväidea: piste- ja arvosana-asteikon läpikäynti toistorakenteen avulla
+Mahdollisesti CSV-datan generointi?
+-->
 
 # While-toistokäsky
 
