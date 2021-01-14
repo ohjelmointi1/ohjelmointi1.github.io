@@ -12,7 +12,7 @@ Katso myös: [Ehtolauseet ja vaihtoehtoinen toiminta, Ohjelmoinnin MOOC 2020](ht
 <div class="js-toc"></div>
 
 
-# Totuusarvot (boolean-arvot)
+# Totuusarvot (boolean)
 
 Javassa on kaksi totuusarvoa: `true` ja `false`, jotka ovat tyypiltään `boolean`:
 
@@ -75,7 +75,7 @@ Operaattori | Selitys
 \|\|        | tai
 !           | negaatio
 
-Lähde: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html
+Lähde: [https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html)
 
 Kaikki seuraavan esimerkin muuttujat saavat arvoikseen `true`, eli vertailujen tulokset ovat tosia:
 
@@ -92,9 +92,9 @@ boolean tosi6 = luku != 0;
 
 ## Totuustaulut
 
-Totuusarvoja voidaan yhdistellä ja- sekä tai-operaatioilla. Näiden operaatioiden molempien osapuolien on oltava totuusarvoja (tai lausekkeita, joiden tuloksena saadaan totuusarvo).
+Totuusarvoja voidaan yhdistellä ja- sekä tai-operaatioilla. Näiden operaatioiden molempien osapuolien on oltava totuusarvoja tai lausekkeita, joiden tuloksena saadaan totuusarvo.
 
-### Ja (`&&`)
+### Ja
 
 Lausekkeen `a && b` arvoksi tulee `true` vain silloin, kun **molemmat arvoista** ovat `true`:
 
@@ -107,13 +107,13 @@ Lausekkeen `a && b` arvoksi tulee `true` vain silloin, kun **molemmat arvoista**
 
 Yllä olevaa taulukko luetaan siten, että vasemmalla olevien `a`:n ja `b`:n kaikkien arvojen yhdistelmien perusteella on esitetty kyseisten arvojen ja-operaation tulos `a && b`.
 
-Jos kesäkuukausiksi lasketaan kesä, heinä ja elokuu, voidaan `onKesa`-muuttujan logiikassa hyödyntää ja-operaatiota:
+Esimerkki: jos kesäkuukausiksi lasketaan kesä, heinä ja elokuu, voidaan `onKesa`-muuttujan logiikassa hyödyntää `&&`-operaatiota:
 
 ```java
 boolean onKesa = kuukausi >= 6 && kuukausi <= 8;
 ```
 
-### Tai (`||`)
+### Tai
 
 Lausekkeen `a || b` arvoksi tulee `true` aina, kun **vähintään toinen arvoista** on `true`:
 
@@ -126,7 +126,7 @@ Lausekkeen `a || b` arvoksi tulee `true` aina, kun **vähintään toinen arvoist
 
 Yllä olevaa taulukko luetaan siten, että vasemmalla olevien `a`:n ja `b`:n kaikkien arvojen yhdistelmien perusteella on esitetty kyseisten arvojen tai-operaation tulos `a || b`.
 
-Jos talvikuukausiksi lasketaan tammi-, helmi-, marras- ja joulukuu, tarvitaan kesän logiikasta poiketen tai-operaatiota:
+Esimerkki: jos talvikuukausiksi lasketaan tammi-, helmi-, marras- ja joulukuu, tarvitaan kesän logiikasta poiketen `||`-operaatiota:
 
 ```java
 boolean onTalvi = kuukausi <= 2 || kuukausi >= 11;
@@ -237,13 +237,13 @@ if (onYo) {
 Vertailujen ympärillä voidaan käyttää aina myös sulkuja. Tarkoituksenmukainen välilyöntien ja sulkujen hyödyntäminen helpottaa koodin lukemista ja vähentää virheiden mahdollisuuksia:
 
 ```java
-boolean vaikeaLukea = kello>=10&&kello<18;
-boolean helpompiLukea = (kello >= 10) && (kello < 18);
+boolean vaikeaLukea=kello>=10&&kello<18; // vaikea lukea
+boolean helpompiLukea = (kello >= 10) && (kello < 18);  // hieman helpompi lukea
 ```
 
-### Oikean kellonajan käyttäminen
+### Oikean kellonajan käyttäminen 🕒
 
-Edellisissä esimerkeissä esitetty kellonajan "kovakoodaaminen" tai kysyminen käyttäjältä eivät vastaa tavanomaisen ohjelman oikeeaa toimintalogiikkaa. Oikeaa kellonaikaa voidaan käyttää esimerkiksi seuraavalla tavalla Javan `LocalTime`-luokan avulla. 
+Edellisissä esimerkeissä esitetty kellonajan "kovakoodaaminen" tai kysyminen käyttäjältä eivät vastaa tavanomaisen ohjelman oikeaa toimintalogiikkaa. Oikeaa kellonaikaa voidaan käyttää esimerkiksi seuraavalla tavalla Javan `LocalTime`-luokan avulla. 
 
 Lisää ensin `import`-käsky tiedoston alkuun mahdollisen `package`-rivin alapuolelle, jotta voit käyttää `LocalTime`-luokkaa:
 
@@ -275,18 +275,19 @@ Usein ohjelmissa on tarpeen tehdä joko-tai-tyyppistä logiikkaa. Tämä tapahtu
 If-ehtorakenteen jälkeisessä vapaaehtoisessa `else`-lohkossa oleva koodi suoritetaan, mikäli if-lauseen ehto ei toteutunut:
 
 ```java
-int kello = 16;
+int tunnit = nykyhetki.getHour(); // katso edellinen esimerkki
 
-if (kello >= 10 && kello < 18) {
-    System.out.println("Hyvää päivää!");
+if (tunnit >= 8 && tunnit < 16) {
+    System.out.println("Työskentele ahkerasti 🐑!");
 } else {
     // Tässä lohkossa oleva koodi suoritetaan, jos 
     // edellä ollut if-ehto ei toteutunut 
-    System.out.println("Tervehdys!");
+    System.out.println("Vapaa-aika 🥳!");
 }
 ```
 
 `else`-avainsana koodilohkoineen kirjoitetaan aina heti `if`-lohkon jälkeen.
+
 
 ## if / else if / else
 
@@ -352,7 +353,7 @@ if (jalkitarkastus) {
 ```-->
 
 
-# Eri tapoja vertailla: `==`, `!=`, `!` ja `== false`
+# Eri tapoja vertailla: ==, !=, ! ja == false
 
 Tulet ohjelmakoodia lukiessasi ja kirjoittaessasi törmäämään erilaisiin tapoihin toteuttaa samat loogiset ehdot. Tutustu esimerkiksi seuraaviin vertailuihin:
 
@@ -390,7 +391,7 @@ if (!onKesa) {
 
 # Syventävää osaamista: switch/case -rakenne 💪
 
-Edellä esitettyjen `if`-rakenteiden lisäksi on olemassa myös toinen vaihtoehto, `switch`, johon sinun kannattaa tutustua itsenäisesti esimerkiksi osoitteessa https://www.educative.io/edpresso/how-to-use-switch-case-statement-in-java.
+Edellä esitettyjen `if`-rakenteiden lisäksi on olemassa myös toinen vaihtoehto, `switch`, johon sinun kannattaa tutustua itsenäisesti esimerkiksi osoitteessa [https://www.educative.io/edpresso/how-to-use-switch-case-statement-in-java](https://www.educative.io/edpresso/how-to-use-switch-case-statement-in-java).
 
 ```java
 /** By Educative, Inc 
@@ -430,5 +431,5 @@ Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Crea
 <link rel="stylesheet" href="/tocbot/tocbot.css">
 
 <script>
-tocbot.init({ tocSelector: '.js-toc', contentSelector: '.main-content' });
+tocbot.init({ tocSelector: '.js-toc', contentSelector: '.main-content', disableTocScrollSync: true });
 </script>

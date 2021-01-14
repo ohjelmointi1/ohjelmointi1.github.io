@@ -49,7 +49,7 @@ Tulostettava teksti on kirjoitettu koodissa lainausmerkkeihin `"Hello world!"`, 
 
 Yllä oleva esimerkkikoodi voidaan tallentaa ja suorittaa Eclipsessä esimerkiksi run-painikkeella. Suorituksen aikana Eclipsen Console-välilehdelle tulostuu haluamamme teksti, ja ohjelman suoritus päättyy. Java-kielisen ohjelman suorittamiseen liittyy kuitenkin eri välivaiheita, jotka Eclipse suorittaa taustalla automaattisesti.
 
-Java on **käännettävä ohjelmointikieli**. Kytännössä se tarkoittaa sitä, että ohjelmoija kirjoittaa lähdekoodin "ihmisen ymmärrettävään muotoon", eli Java-kielisinä komentoina ja rakenteina, kuten yllä.
+Java on **käännettävä ohjelmointikieli**. Käytännössä se tarkoittaa sitä, että ohjelmoija kirjoittaa lähdekoodin "ihmisen ymmärrettävään muotoon", eli Java-kielisinä komentoina ja rakenteina, kuten yllä.
 
 Tämän jälkeen Java-koodi **käännetään tavukoodiksi**, joka on eräänlainen välimuoto ihmisen ja tietokoneen ymmärtämien kielten välillä. Lopulta käännetty **tavukoodi** voidaan suorittaa Javan **virtuaalikoneella** (JVM), joka tulkkaa käskyt kunkin käyttöjärjestelmän mukaisiksi konekielisiksi komennoiksi. 
 
@@ -128,12 +128,12 @@ Nähdäksesi tarkemman virheilmoituksen Viopessa, avaa näkyville Java-kääntä
 
 Painike on Viopessa hieman hankala ymmärtää klikattavaksi sen tyylistä johtuen. Kääntäjän viesti kertoo missä kohdassa koodiasi virhe on.
 
-[Tyypillisiä virhetilanteita ja niiden ratkaisuja on dokumentoitu Wikiin.](/wiki/Viope)
+[Tyypillisiä virhetilanteita ja niiden ratkaisuja on dokumentoitu erilliselle sivulle.](/wiki/Viope)
 
 
 # Tekstin ja lukujen tulostaminen
 
-Javassa on erilaisia metodeita ja tietovirtoja, joilla voidaan tulostaa esim. tekstiä ja lukuja ruudulle.
+Javassa on erilaisia tietovirtoja, joilla voidaan tulostaa esim. tekstiä ja lukuja ruudulle.
 
 `System.out` on oletustietovirta, johon voidaan tulostaa seuraavasti:
 
@@ -394,7 +394,7 @@ Mistä tahansa kokonaisluvusta saadaan tarvittaessa tehtyä liukuluku helposti e
 (1.0 * a) / b == c
 ```
 
-## Lukujen pyöristäminen `round` sekä `ceil` ja `floor`
+## Lukujen pyöristäminen: round, ceil ja floor
 
 Javan `Math`-luokasta löytyy lukuisia erilaisia metodeja, joiden avulla voidaan pyöristää ylös, alas tai lähimpään kokonaislukuun:
 
@@ -684,7 +684,7 @@ System.out.println(muotoiltu); // 123,46 <-- pyöristetty kahteen desimaaliin, e
 
 # Kommentit
 
-Javassa on kolme eri kommenttityyliä. `/**`-alkuiset moniriviset kommentit toimivat dokumentaatiokommentteina, joita hyödynnetään mm. ohjelman dokumentaation automaattisessa generoinnissa. `/*`-alkuiset kommentit mahdollistavat pidempin kommenttien kirjoittamisen. Kaksi kauttaviivaa `//` tarkoittaa yksirivistä kommenttia, joka voidaan kätevästi kirjoittaa myös koodirivin loppuun.
+Javassa on kolme eri kommenttityyliä. `/**`-alkuiset moniriviset kommentit toimivat dokumentaatiokommentteina, joita hyödynnetään mm. ohjelman dokumentaation automaattisessa generoinnissa. `/*`-alkuiset kommentit mahdollistavat pidempien kommenttien kirjoittamisen. Kaksi kauttaviivaa `//` tarkoittaa yksirivistä kommenttia, joka voidaan kätevästi kirjoittaa myös koodirivin loppuun.
 
 ```java
 /**
@@ -738,5 +738,5 @@ Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Crea
 <link rel="stylesheet" href="/tocbot/tocbot.css">
 
 <script>
-tocbot.init({ tocSelector: '.js-toc', contentSelector: '.main-content' });
+tocbot.init({ tocSelector: '.js-toc', contentSelector: '.main-content', disableTocScrollSync: true });
 </script>
