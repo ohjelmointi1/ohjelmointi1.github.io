@@ -27,18 +27,18 @@ a.toc-link {
 	transition: all 300ms ease-in-out
 }
 
-.is-collapsed {
+/*.is-collapsed {
 	max-height: 0
-}
+}*/
 
 .is-position-fixed {
 	position: fixed !important;
 	top: 0
 }
 
-.is-active-link {
+/*.is-active-link {
 	font-weight: 700
-}
+}*/
 
 .toc-link::before {
 	background-color: #EEE;
@@ -51,6 +51,6 @@ a.toc-link {
 	width: 2px
 }
 
-.is-active-link::before {
+/*.is-active-link::before {
 	background-color: #54BC4B
-}
+}*/
