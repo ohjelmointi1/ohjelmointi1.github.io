@@ -13,7 +13,7 @@
 
 .toc-list {
 	margin: 0;
-	padding-left: 10px
+	/*padding-left: 10px*/
 }
 
 a.toc-link {
@@ -40,7 +40,7 @@ a.toc-link {
 	font-weight: 700
 }*/
 
-.toc-link::before {
+/*.toc-link::before {
 	background-color: #EEE;
 	content: ' ';
 	display: inline-block;
@@ -49,7 +49,7 @@ a.toc-link {
 	margin-top: -1px;
 	position: absolute;
 	width: 2px
-}
+}*/
 
 /*.is-active-link::before {
 	background-color: #54BC4B
