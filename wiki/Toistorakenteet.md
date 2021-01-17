@@ -1,3 +1,11 @@
+<!--
+Tehtäväidea:
+
+<option></option> -listojen generointi! 
+* Esimerkkiä nettiauto.com:ista!
+* kaksi screenshottia + koodit
+-->
+
 [&larr; Takaisin etusivulle](/)
 
 <h1 class="js-toc-ignore">Toistorakenteet</h1>

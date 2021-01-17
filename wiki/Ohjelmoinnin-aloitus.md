@@ -179,6 +179,12 @@ Muuttujiin asetetaan arvoja sijoitusoperaattorilla (`=`):
 int leveys = 3; // luo uuden muuttujan ja asettaa siihen samalla arvon
 ```
 
+Muuttujan tyyppi (esim. `int`) kirjoitetaan ainoastaan muuttujan määrittelyyn. Myöhemmillä kerroilla tyyppiä ei toisteta, vaan uusi arvo asetetaan esim. seuraavasti:
+
+```java
+leveys = 4;
+```
+
 Muuttujia voidaan käyttää myöhemmin esimerkiksi laskutoimituksissa kirjoittamalla luvun tilalle muuttujan nimi:
 
 ```java
@@ -307,6 +313,15 @@ System.out.println(2_147_483_647L + 1);
 
 **Huom!** Kokonaislukujen ylivuoto ei niinkään liity Javaan, vaan yleisesti siihen, miten luvut esitetään tietokoneen muistissa ykkösten ja nollien avulla.
 
+### "Y2K38"-ongelma
+
+Vaikka kokonaislukujen pyörähtäminen ympäri voi tuntua epäolennaiselta ongelmalta, vaikuttaa se mm. tietokoneen kellon toimintaan. Tietojenkäsittelyssä aikaa mitataan usein sekunteina alkaen ajanhetkestä 1.1.1970, jolloin 32-bittisten [järjestelmien kello saattaa teknisestä toteutuksesta riippuen pyörähtää ympäri 19.1.2038](https://fi.wikipedia.org/wiki/Y2K38). Alla oleva animaatio havainnollistaa 32-bittisen etumerkillisen luvun käyttäytymistä kyseisenä päivänä:
+
+> ![Miten päiväys resetoituu 32-bittisellä etumerkillisellä luvulla esitettynä](assets/Year_2038_problem.gif)
+> 
+> *By Monaneko - Oma teos, Public Domain, [https://commons.wikimedia.org/w/index.php?curid=1711901](https://commons.wikimedia.org/w/index.php?curid=1711901)*
+
+Pystytkö vaihtamaan puhelimesi kellonajaksi yli 19.1.2038? [Se ei välttämättä onnistu](https://www.is.fi/taloussanomat/art-2000001783335.html) käytetyn lukutyypin rajallisuudesta johtuen.
 
 ## Javan tietotyyppejä: liukuluvut (double)
 
@@ -338,6 +353,7 @@ System.out.println(0.1 + 0.2); // syntyy pieni laskuvirhe!
 
 Liukulukujen laskuvirhe ei niinkään liity Javaan, vaan yleisesti siihen, miten liukuluvut esitetään tietokoneen muistissa rajallisella määrällä ykkösiä ja nollia. Kaikkia lukuja ei vain ole mahdollista esittää täydellisellä tarkkuudella. Vastaavasti kymmenjärjestelmässä ei voida tarkasti esittää desimaalina lukua `1/3`.
 
+
 ## Aritmeettiset operaatiot
 
 Javassa on käytössä normaalit matemaattiset laskuoperaatiot kaikille lukutyypeille:
@@ -352,7 +368,9 @@ Operaattori | Käyttötarkoitus
 
 Lähde: [https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html)
 
-Yllä olevista operaattoreista "erikoisin" on kenties jakojäännös `%`, jonka avulla saadaan selvitettyä kokonaislukujen jakolaskussa "yli jäävä osuus". Toinen huomionarvoinen operaatio on kokonaislukujen jakolasku, joka tuottaa aina vain kokonaislukuja.
+Yllä olevista operaattoreista "erikoisin" on kenties jakojäännös `%`, jonka avulla saadaan selvitettyä kokonaislukujen jakolaskussa "yli jäävä osuus". 
+
+Toinen huomionarvoinen operaatio on kokonaislukujen jakolasku, joka tuottaa aina vain kokonaislukuja. Kokonaislukujen jakolasku ei automaattisesti pyöristy lähimpään kokonaislukuun, vaan desimaaliosa vain katkeaa pois. Tämä voi aiheuttaa [vakavia ongelmia tietyillä toimialoilla](https://slate.com/technology/2019/10/round-floor-software-errors-stock-market-battlefield.html), kuten taloudessa, lääketieteessä tai ilmailussa.
 
 
 ### Laskuoperaatiot Javassa
