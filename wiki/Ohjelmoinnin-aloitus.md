@@ -138,13 +138,13 @@ Javassa on erilaisia tietovirtoja, joilla voidaan tulostaa esim. tekstiä ja luk
 `System.out` on oletustietovirta, johon voidaan tulostaa seuraavasti:
 
 ```java
-System.out.println("tulostettava teksti");
+System.out.println("tulostettava teksti"); // tekee rivinvaihdon loppuun
 ```
 
 `println` tulostaa annetun arvon ja lopuksi aina rivinvaihdon, eli seuraava tuloste tulostuu eri riville. `print` tekee saman, mutta ilman rivinvaihtoa tulosteen loppuun:
 
 ```java
-System.out.print("tulostettava teksti");
+System.out.print("tulostettava teksti"); // ei tee rivinvaihtoa loppuun
 ```
 
 `print`-metodia käytettäessä seuraava tuloste jatkuu samalle riville.
@@ -406,10 +406,11 @@ Kokonaislukujen jaollisuutta voidaan tutkia jakojäännöksen (`%`) avulla:
 Mistä tahansa kokonaisluvusta saadaan tarvittaessa tehtyä liukuluku helposti esimerkiksi kertomalla se luvulla `1.0`:
 
 ```java
-// a saadaan "muutettua" liukuluvuksi kertomalla se 1.0:lla.
-// Tällöin myös tulos c on liukuluku, eikä desimaaliosan
-// katkaisua tapahdu:
-(1.0 * a) / b == c
+double keskiarvo = (1.0 * summa) / maara; // ei katkaisua! 👍
+```
+
+```java
+double keskiarvo = summa / maara; // desimaaliosa katkeaa pois 👎
 ```
 
 ## Lukujen pyöristäminen: round, ceil ja floor
@@ -726,15 +727,6 @@ public class Kommentit {
     }
 }
 ```
-
-
-## Kertausta
-
-Mistä johtuu, että alla oleva luku näyttää olevan esitetty tarpeettoman suurella tarkkuudella?
-
-![Pyöristysvirhe](https://github.com/haagahelia/swd4tn032-TH_JJ/raw/master/muistiinpanot/assets/pyoristysvirhe.png)
-
-Liukulukujen toteutuksesta johtuen niillä laskettaessa esiintyy usein pieniä tarkkuusvirheitä. Tässä tapauksessa tulos lienee yritetty pyöristää kolmen desimaalin tarkkuuteen, mutta on syntynyt hyvin pieni laskuvirhe, jonka vuoksi desimaaliosan lopussa on `99999999999`.
 
 
 # Viope-harjoitukset
