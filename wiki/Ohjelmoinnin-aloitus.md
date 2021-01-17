@@ -273,28 +273,30 @@ Javassa kokonaisluvut ovat oletuksena tyyppiä `int` (integer). `int` on 32-bitt
 ```java
 int saunanLampotila = 80;
 int pakastimenLampotila = -19;
-int suomenVakiluku = 5518000;
+
+int suomenVakiluku = 5_518_000;
+int suurinInt = 2_147_483_647;
 ```
 
-Kun tarvitaan suurempia lukuja, voidaan käyttää `long`-tyyppisiä lukuja.
+Vaikka `int` tyyppi toimii hyvin erittäin monissa tarkoituksissa, ei sen suuruus riitä esittämään Suomen varakkaimman henkilön varallisuutta tai maailman väkilukua. Kun tarvitaan `int`-tyyppiä suurempia kokonaislukuja, voidaan käyttää `long`-tyyppiä.
 
-long on 64-bittinen kokonaisluku väliltä -9&nbsp;223&nbsp;372&nbsp;036&nbsp;854&nbsp;775&nbsp;808 – 9&nbsp;223&nbsp;372&nbsp;036&nbsp;854&nbsp;775&nbsp;807.
+`long` on 64-bittinen kokonaisluku väliltä -9&nbsp;223&nbsp;372&nbsp;036&nbsp;854&nbsp;775&nbsp;808 – 9&nbsp;223&nbsp;372&nbsp;036&nbsp;854&nbsp;775&nbsp;807.
 
 Luku voidaan määritellään long-tyyppiseksi kirjoittamalla sen perään L-kirjain: 
 
 ```java
-long maailmanVakiluku = 7838721501L;
-long suurinLuku = 987654321098765432L;
+long maailmanVakiluku = 7_838_721_501L;
+long suurinLong = 987_654_321_098_765_432L;
 ```
 
-Suurten lukujen hahmottaminen ilman välimerkkejä voi olla hankalaa. Java ei salli välilyöntejä numeroissa, mutta [alaviivan käyttö erottimena on sallittua](https://docs.oracle.com/javase/7/docs/technotes/guides/language/underscores-literals.html):
+Suurten lukujen hahmottaminen ilman välimerkkejä voi olla hankalaa. Java ei salli välilyöntejä numeroissa, mutta [alaviivan käyttö erottimena on sallittua](https://docs.oracle.com/javase/7/docs/technotes/guides/language/underscores-literals.html).
 
 ```java
-long maailmanVakiluku = 7_838_721_501L;
-long suurinLuku = 987_654_321_098_765_432L;
+long vaikeaHahmottaa = 987654321098765432L;
+long helpompiHahmottaa = 987_654_321_098_765_432L;
 ```
 
-Lisäksi on olemassa pienemmät lukutyypit `byte` ja `short`, joita tarvitaan harvemmin. Mikäli puolestaan tarvitaan `long`-tyyppiä suurempia lukuja tai `double`-tyyppiä tarkempia desimaaleja, voidaan käyttää [BigInteger](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigInteger.html)- tai [BigDecimal](https://docs.oracle.com/javase/7/docs/api/java/math/BigDecimal.html)-tyyppiä. 
+`int` ja `long`-tyyppien lisäksi on olemassa pienemmät lukutyypit `byte` ja `short`, joita tarvitaan harvoin. Mikäli puolestaan tarvitaan `long`-tyyppiä suurempia lukuja, voidaan käyttää [BigInteger](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigInteger.html)-luokkaa
 
 ## Kokonaislukujen "ylivuoto"
 
@@ -340,6 +342,9 @@ Double-tyypin tarkkuus desimaalilukuna on noin 15 numeroa, esimerkiksi `1234567.
 
 Lisäksi on olemassa myös epätarkempi `float`, jota käytetään nykyään lähinnä silloin, kun lukuja on valtavia määriä ja niiden tarkkuudesta voidaan tinkiä.
 
+Mikäli puolestaan tarvitaan `double`-tyyppiä tarkempia desimaaleja, voidaan käyttää [BigDecimal](https://docs.oracle.com/javase/7/docs/api/java/math/BigDecimal.html)-luokkaa.
+
+
 
 ## Laskuvirheet liukuluvuilla
 
@@ -351,8 +356,9 @@ Kokeile suorittaa seuraava yhteenlasku. Minkä tuloksen saat?
 System.out.println(0.1 + 0.2); // syntyy pieni laskuvirhe!
 ```
 
-Liukulukujen laskuvirhe ei niinkään liity Javaan, vaan yleisesti siihen, miten liukuluvut esitetään tietokoneen muistissa rajallisella määrällä ykkösiä ja nollia. Kaikkia lukuja ei vain ole mahdollista esittää täydellisellä tarkkuudella. Vastaavasti kymmenjärjestelmässä ei voida tarkasti esittää desimaalina lukua `1/3`.
+Liukulukujen laskuvirhe ei niinkään liity Javaan, vaan yleisesti siihen, miten liukuluvut esitetään tietokoneen muistissa rajallisella määrällä ykkösiä ja nollia. Kaikkia lukuja ei vain ole mahdollista esittää täydellisellä tarkkuudella. Vastaavasti kymmenjärjestelmässä ei voida tarkasti esittää desimaalina lukua `1/3`. 
 
+💸 Tarkkuus- ja laskuvirheiden vuoksi esimerkiksi rahaa ei tulisi käsitellä liukulukuina. Hyvä taustoitus aiheeseen vaihtoehtoisine ratkaisuineen löytyy mm. [tästä StackOverflow-vastauksesta](https://stackoverflow.com/a/3730040).
 
 ## Aritmeettiset operaatiot
 
@@ -559,7 +565,7 @@ Palauta lopuksi ratkaisusi Viopeen.
 Tämä tehtävä on lainattu [Helsingin yliopiston Agile Education Research -tutkimusryhmän ohjelmointikurssilta](https://2017-ohjelmointi.github.io/part1/#exercise-8-kolmen-luvun-keskiarvo) ja se on lisensoitu Creative Commons BY-NC-SA-lisenssillä.
 
 
-# Syötteen lukeminen näppäimistöltä
+# Syötteen lukeminen näppäimistöltä ⌨️
 
 Javassa on erilaisia tietovirtoja, kuten:
 

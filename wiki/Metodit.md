@@ -159,6 +159,8 @@ Terveiset metodista!
 
 Katso tämä esimerkki Java Visualizerissa: https://goo.gl/9E1E12 
 
+<iframe style="width: 100%; height: 480;" src="https://cscircles.cemc.uwaterloo.ca/java_visualize/iframe-embed.html?faking_cpp=false#data=%7B%22user_script%22%3A%22public%20class%20ToisenMetodinKutsuminen%20%7B%5Cn%20%20%20%5Cn%20%20%20public%20static%20void%20main(String%5B%5D%20args)%20%7B%5Cn%20%20%20%20%20%20System.out.println(%5C%22Kokeillaan%20metodia%3A%5C%22)%3B%5Cn%20%20%20%20%20%20tervehdi()%3B%5Cn%5Cn%20%20%20%20%20%20System.out.println(%5C%22Toimii!%20Kokeillaan%20viel%C3%A4%3A%5C%22)%3B%5Cn%20%20%20%20%20%20tervehdi()%3B%5Cn%20%20%20%20%20%20tervehdi()%3B%5Cn%20%20%20%20%20%20tervehdi()%3B%5Cn%20%20%20%7D%5Cn%5Cn%20%20%20public%20static%20void%20tervehdi()%20%7B%5Cn%20%20%20%20%20%20System.out.println(%5C%22Terveiset%20metodista!%5C%22)%3B%5Cn%20%20%20%7D%5Cn%5Cn%7D%22%2C%22options%22%3A%7B%22showStringsAsValues%22%3Atrue%2C%22showAllFields%22%3Afalse%7D%2C%22args%22%3A%5B%5D%2C%22stdin%22%3A%22%22%7D&cumulative=false&heapPrimitives=false&drawParentPointers=false&textReferences=false&showOnlyOutputs=false&py=3&curInstr=0&resizeContainer=true&highlightLines=true&rightStdout=true" frameborder="0" scrolling="no"></iframe>
+
 ## Metodien nimeäminen ja sisennykset
 
 Metodit nimetään siten, että ensimmäinen sana kirjoitetaan pienellä ja loput alkavat isolla alkukirjaimella. Tällaisesta kirjoitustavasta käytetään nimitystä **camelCase**. Tämän lisäksi, metodin sisällä koodi on sisennetty taas neljä merkkiä.
