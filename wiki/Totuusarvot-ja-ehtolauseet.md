@@ -278,7 +278,7 @@ If-ehtorakenteen jälkeisessä vapaaehtoisessa `else`-lohkossa oleva koodi suori
 int tunnit = nykyhetki.getHour(); // katso edellinen esimerkki
 
 if (tunnit >= 8 && tunnit < 16) {
-    System.out.println("Työskentele ahkerasti 🐑!");
+    System.out.println("Työskentele ahkerasti!");
 } else {
     // Tässä lohkossa oleva koodi suoritetaan, jos 
     // edellä ollut if-ehto ei toteutunut 

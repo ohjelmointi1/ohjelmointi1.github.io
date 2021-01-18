@@ -600,7 +600,7 @@ Helsingin Yliopiston ohjelmoinnin perusteet -kurssin video esittelee Scannerin k
 Kun Scanner on otettu käyttöön import-käskyllä, voidaan ohjelmaan luoda uusi syötteitä lukeva Scanner-olio. Oliot luodaan aina `new`-avainsanalla. `Scanner`-luokan tapauksessa oliota luotaessa pitää lisäksi määritellä, mistä tietovirrasta syötteet luetaan. Jotta scanneria voidaan luonnin jälkeen käyttää tietojen lukemiseen, täytyy se ottaa myös talteen `Scanner`-tyyppisen muuttujan:
 
 ```java
-// luodaan olio, joka lukee System.in-tietovirtaa:
+// luodaan Scanner-olio, joka lukee System.in-tietovirtaa:
 Scanner lukija = new Scanner(System.in);
 ```
 
@@ -610,6 +610,7 @@ Kokonainen rivi tekstiä voidaan lukea nextLine-nimisellä metodilla:
 
 ```java
 Scanner lukija = new Scanner(System.in);
+
 System.out.println("Kirjoita tekstiä: ");
 
 String teksti = lukija.nextLine();
@@ -707,9 +708,11 @@ String muotoiltu = kaksiDesimaalia.format(liukuluku);
 System.out.println(muotoiltu); // 123,46 <-- pyöristetty kahteen desimaaliin, erottimena pilkku
 ```
 
-Voit suorittaa yllä olevan koodin vaihe vaiheelta Java Visualizer-työkalun avulla:
+Voit suorittaa yllä olevan koodin vaihe vaiheelta Java Visualizer -työkalun avulla:
 
 <iframe style="width: 100%; height: 480px;" src="https://cscircles.cemc.uwaterloo.ca/java_visualize/iframe-embed.html?faking_cpp=false#data=%7B%22user_script%22%3A%22import%20java.text.DecimalFormat%3B%5Cn%5Cnpublic%20class%20LiukulukujenPyoristaminen%20%7B%5Cn%20%20%20%5Cn%20%20%20public%20static%20void%20main(String%5B%5D%20args)%20%7B%5Cn%20%20%20%20%20%20%2F%2F%20koodiin%20kirjoitetaan%20liukuluvut%20pisteell%C3%A4%20eroteltuna%3A%5Cn%20%20%20%20%20%20double%20liukuluku%20%3D%20123.456789%3B%5Cn%5Cn%20%20%20%20%20%20%2F%2F%20liukuluvut%20tulostetaan%20normaalisti%20pisteell%C3%A4%20eroteltuna%20ilman%20py%C3%B6ristyksi%C3%A4%3A%5Cn%20%20%20%20%20%20System.out.println(liukuluku)%3B%20%2F%2F%20tulostaa%20123.456789%5Cn%5Cn%20%20%20%20%20%20%2F%2F%20luodaan%20olio%2C%20joka%20muotoilee%20lukuja%20kahden%20desimaalin%20tarkkuudella%3A%5Cn%20%20%20%20%20%20DecimalFormat%20kaksiDesimaalia%20%3D%20new%20DecimalFormat(%5C%220.00%5C%22)%3B%5Cn%5Cn%20%20%20%20%20%20%2F%2F%20annetaan%20muotoiltava%20luku%20format-metodille%2C%20saadaan%20takaisin%20muotoiltu%20merkkijono%3A%5Cn%20%20%20%20%20%20String%20muotoiltu%20%3D%20kaksiDesimaalia.format(liukuluku)%3B%5Cn%5Cn%20%20%20%20%20%20%2F%2F%20tulostetaan%20lopulta%20muotoiltu%20merkkijono%3A%5Cn%20%20%20%20%20%20System.out.println(muotoiltu)%3B%20%2F%2F%20123%2C46%20%3C--%20py%C3%B6ristetty%20kahteen%20desimaaliin%2C%20erottimena%20pilkku%5Cn%20%20%20%7D%5Cn%7D%22%2C%22options%22%3A%7B%22showStringsAsValues%22%3Atrue%2C%22showAllFields%22%3Afalse%7D%2C%22args%22%3A%5B%5D%2C%22stdin%22%3A%22%22%7D&cumulative=false&heapPrimitives=false&drawParentPointers=false&textReferences=false&showOnlyOutputs=false&py=3&curInstr=0&resizeContainer=true&highlightLines=true&rightStdout=true" frameborder="0" scrolling="no"></iframe>
+
+Toisin kuin esimerkiksi Viopessa, Java Visualizer -työkalun asetuksissa desimaalierottimena on piste, eikä pilkku. 
 
 # Kommentit
 
