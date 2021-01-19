@@ -1,7 +1,16 @@
+[&larr; Takaisin etusivulle](/)
 
-Listat ovat tietorakenteita, joiden pituus kasvaa joustavasti, kun niihin lisätään uusia arvoja. Listoihin voidaan lisätä arvoja myös aiempien arvojen väliin ja listan väleistä voidaan poistaa arvoja. Listat ovat olioita ja niillä on metodeita, joiden avulla arvoja lisätään, poistetaan, etsitään jne.
 
-Yhdessä listassa voidaan varastoida ainoastaan yhdentyyppisiä arvoja, eikä varastoitavaa tyyppiä voida myöhemmin vaihtaa. Listoissa voidaan varastoida ainoastaan olioita, ei siis alkeistietotyyppejä kuten `boolean`, `int` ja `double`. Alkeistietotyypit voidaan kuitenkin esittää myös olioina kääreluokkien `Boolean`, `Integer` ja `Double` avulla.
+<h1 class="js-toc-ignore">Listat</h1>
+
+Tällä opetuskerralla tutustumme Javan kenties yleisimpään kokoelmaan: listoihin. Listat ovat tietorakenteita, joiden pituus kasvaa joustavasti, kun niihin lisätään uusia arvoja. Listoihin voidaan lisätä arvoja myös aiempien arvojen väliin ja listan väleistä voidaan poistaa arvoja. Listat ovat olioita ja niillä on metodeita, joiden avulla arvoja lisätään, poistetaan, etsitään jne.
+
+Yhdessä listassa voidaan varastoida ainoastaan yhdentyyppisiä arvoja, eikä varastoitavaa tyyppiä voida myöhemmin vaihtaa. Tämän lisäksi varastoitavien arvojen on oltava olioita, eli ei alkeistietotyyppejä kuten `boolean`, `int` tai `double`. Alkeistietotyyppien varastoimiseksi Javassa on olemassa valmiita **kääreluokkia**, joiden oliot pitävät vain sisällään tallessa yksittäisiää alkeistyyppisiä arvoja. Kääreluokat on nimetty kuten alkeistyypit, mutta niiden nimet alkavat isolla alkukirjaimella, esim: `Boolean`, `Integer` ja `Double`.
+
+
+**Sisällysluettelo**
+
+<div class="js-toc"></div>
 
 
 # ArrayList:in perusteet
@@ -313,3 +322,7 @@ kopio2.addAll(lista);
 ---
 
 Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
+
+<script src="/tocbot/tocbot.min.js"></script>
+<script src="/scripts.js"></script>
+<link rel="stylesheet" href="/tocbot/tocbot.css">

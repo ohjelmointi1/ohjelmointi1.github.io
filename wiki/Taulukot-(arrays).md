@@ -1,9 +1,19 @@
+[&larr; Takaisin etusivulle](/)
+
+
+<h1 class="js-toc-ignore">Taulukot</h1>
+
 Taulukot ovat varsin alkeellisia tietorakenteita, joihin voidaan varastoida useita saman typpisiä arvoja. Toisin kuin listojen, taulukon pituus on kiinteä, eli sitä ei voi lyhentää eikä kasvattaa. Samaan muuttujaan voidaan toki sijoittaa uusi, eri pituinen taulukko.
 
+
+**Sisällysluettelo**
+
+<div class="js-toc"></div>
+
+
+# Taulukot ja taulukkomuuttujat
+
 Taulukoita, kuten listoja ja kaikkia muitakin olioita, käytetään viittaustyyppisillä muuttujilla. Taulukkoa ei siis automaattisesti kopioida, kun sitä käytetään eri paikoista.
-
-
-## Taulukkomuuttujat
 
 Taulukkoja sisältävien muuttujien tyypiksi kirjoitetaan tallennettavan tyypin nimi ja sen jälkeen hakasulut, esim:
 
@@ -401,3 +411,7 @@ Lähde: https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html
 ---
 
 Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
+
+<script src="/tocbot/tocbot.min.js"></script>
+<script src="/scripts.js"></script>
+<link rel="stylesheet" href="/tocbot/tocbot.css">

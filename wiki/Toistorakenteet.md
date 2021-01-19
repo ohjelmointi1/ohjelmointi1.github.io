@@ -4,14 +4,8 @@
 
 Ehtorakenteiden tavoin toistorakenteilla voidaan vaikuttaa koodin suorituksen etenemiseen. Toistorakenteiden avulla tietyt koodirivit voidaan toistaa eri logiikoilla tai tarvittaessa jopa "ikuisesti". 
 
-Tällä opetusviikolla harjoittelemme pääasiassa koodin toistamista tietyn määrän kertoja sekä käymään läpi kokonaislukuja. Toistorakenteita hyödynnetään myöhemmin myös listojen ja taulukoiden yhteydessä, jolloin käymme läpi niissä olevia arvoja yksitellen.
+Tällä opetusviikolla harjoittelemme pääasiassa koodin toistamista tietyn määrän kertoja, toiston keskeyttämistä, sekä käymään läpi kokonaislukuja. Toistorakenteita hyödynnetään myöhemmin myös listojen ja taulukoiden yhteydessä, jolloin käymme läpi niissä olevia arvoja yksitellen.
 
-Tänään opettelemme
-
-* käyttämään while- ja for-toistorakenteita
-* toistamaan koodia tietyn määrän kertoja
-* toistamaan koodia kunnes tietty ehto toteutuu
-* käymään läpi olemassa olevia arvoja toiston avulla.
 
 **Sisällysluettelo**
 

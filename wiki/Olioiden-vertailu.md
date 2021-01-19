@@ -1,4 +1,16 @@
-## Olioiden vertaileminen
+[&larr; Takaisin etusivulle](/)
+
+
+<h1 class="js-toc-ignore">Olioiden vertaileminen</h1>
+
+Tällä oppitunnilla tutustumme tarkemmin olioiden yhtäsuuruuden ja suuruusjärjestyksen vertailemiseen.
+
+**Sisällysluettelo**
+
+<div class="js-toc"></div>
+
+
+# Olioiden vertaileminen
 
 Kuten merkkijonoja käsiteltäessä huomasimme, merkkijonojen vertailu `==`-operaattorilla vertailee olioviittauksia eikä merkkijonojen sisältöä:
 
@@ -342,3 +354,8 @@ public class OlioidenJarjestaminen {
 ---
 
 Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä. 
+
+
+<script src="/tocbot/tocbot.min.js"></script>
+<script src="/scripts.js"></script>
+<link rel="stylesheet" href="/tocbot/tocbot.css">

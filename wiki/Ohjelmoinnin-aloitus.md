@@ -687,7 +687,7 @@ Liukulukuja tulostettaessa tulostettavien desimaalien määrä vaihtelee ja desi
 import java.text.DecimalFormat;
 ```
 
-Sen jälkeen luodaan uusi `DecimalFormat`-olio, jolle kerrotaan, missä muodossa luvut halutaan tulostaa. `"0.00"` muotoilee luvun kahden desimaalin tarkkuudella käyttäen käyttöjärjestelmän desimaalierotinta, joka on asetuksista riippuen joko pilkku tai piste.
+Sen jälkeen luodaan uusi `DecimalFormat`-olio, jolle kerrotaan, missä muodossa luvut halutaan tulostaa. `"0.00"` muotoilee luvun aina kahden desimaalin tarkkuudella käyttäen käyttöjärjestelmän desimaalierotinta, joka on asetuksista riippuen joko pilkku tai piste.
 
 DecimalFormat-oliolla on `format`-metodi, joka muotoilee liukuluvun merkkijonoksi. Esimerkiksi:
 
@@ -713,6 +713,32 @@ Voit suorittaa yllä olevan koodin vaihe vaiheelta Java Visualizer -työkalun av
 <iframe style="width: 100%; height: 480px;" src="https://cscircles.cemc.uwaterloo.ca/java_visualize/iframe-embed.html?faking_cpp=false#data=%7B%22user_script%22%3A%22import%20java.text.DecimalFormat%3B%5Cn%5Cnpublic%20class%20LiukulukujenPyoristaminen%20%7B%5Cn%20%20%20%5Cn%20%20%20public%20static%20void%20main(String%5B%5D%20args)%20%7B%5Cn%20%20%20%20%20%20%2F%2F%20koodiin%20kirjoitetaan%20liukuluvut%20pisteell%C3%A4%20eroteltuna%3A%5Cn%20%20%20%20%20%20double%20liukuluku%20%3D%20123.456789%3B%5Cn%5Cn%20%20%20%20%20%20%2F%2F%20liukuluvut%20tulostetaan%20normaalisti%20pisteell%C3%A4%20eroteltuna%20ilman%20py%C3%B6ristyksi%C3%A4%3A%5Cn%20%20%20%20%20%20System.out.println(liukuluku)%3B%20%2F%2F%20tulostaa%20123.456789%5Cn%5Cn%20%20%20%20%20%20%2F%2F%20luodaan%20olio%2C%20joka%20muotoilee%20lukuja%20kahden%20desimaalin%20tarkkuudella%3A%5Cn%20%20%20%20%20%20DecimalFormat%20kaksiDesimaalia%20%3D%20new%20DecimalFormat(%5C%220.00%5C%22)%3B%5Cn%5Cn%20%20%20%20%20%20%2F%2F%20annetaan%20muotoiltava%20luku%20format-metodille%2C%20saadaan%20takaisin%20muotoiltu%20merkkijono%3A%5Cn%20%20%20%20%20%20String%20muotoiltu%20%3D%20kaksiDesimaalia.format(liukuluku)%3B%5Cn%5Cn%20%20%20%20%20%20%2F%2F%20tulostetaan%20lopulta%20muotoiltu%20merkkijono%3A%5Cn%20%20%20%20%20%20System.out.println(muotoiltu)%3B%20%2F%2F%20123%2C46%20%3C--%20py%C3%B6ristetty%20kahteen%20desimaaliin%2C%20erottimena%20pilkku%5Cn%20%20%20%7D%5Cn%7D%22%2C%22options%22%3A%7B%22showStringsAsValues%22%3Atrue%2C%22showAllFields%22%3Afalse%7D%2C%22args%22%3A%5B%5D%2C%22stdin%22%3A%22%22%7D&cumulative=false&heapPrimitives=false&drawParentPointers=false&textReferences=false&showOnlyOutputs=false&py=3&curInstr=0&resizeContainer=true&highlightLines=true&rightStdout=true" frameborder="0" scrolling="no"></iframe>
 
 Toisin kuin esimerkiksi Viopessa, Java Visualizer -työkalun asetuksissa desimaalierottimena on piste, eikä pilkku. 
+
+DecimalFormat-luokan tukemat mutoilusäännöt on dokumentoitu [Javan dokumentaatiossa](https://docs.oracle.com/javase/tutorial/i18n/format/decimalFormat.html). Tässä on esitettynä tiivistelmä tarpeellisimmista muotoilussa käytetyistä merkeistä:
+
+Symboli | Kuvaus
+--------|-------------
+0       | numero
+\#      | numero (nollaa ei näytetä)
+.       | desimaalierotin
+,       | ryhmittelyerotin (tuhannet, miljoonat...)
+
+Lähde: [https://docs.oracle.com/javase/tutorial/i18n/format/decimalFormat.html](https://docs.oracle.com/javase/tutorial/i18n/format/decimalFormat.html)
+
+`#` tarkoittaa numeroa, joka jää pois, mikäli se ei ole luvun merkitsevässä osassa. `0` puolestaan tarkoittaa numeroa joka näytetään aina, vaikka se olisi etu- tai loppunolla. 
+
+`.` tarkoittaa muotoilussa desimaalierotinta ja `,` tuhaterotinta. Näin ollen voimme esimerkiksi tehdä muotoilusäännön, joka muotoilee luvun käyttäen tuhat- ja desimaalierotinta korkeintaan kahden desimaalin tarkkuudella, mutta jättää mahdollisuuksien mukaan loppunollat pois:
+
+```java
+DecimalFormat euromuotoilu = new DecimalFormat("#,###.## €");
+```
+
+Numero  | Muotoiltuna ("#,###.## €") | Perustelu
+--------|----------------------------|------------
+1.00    | 1 €                        | "zero shows as absent"
+100.12  | 100,12 €                   |
+1000.123| 1 000,12 €                 | muotoilussa korkeintaan kaksi desimaalia
+1500.00 | 1 500 €                    | tuhaterotin tarkoittaa meillä välilyöntiä
 
 # Kommentit
 

@@ -1,10 +1,24 @@
+[&larr; Takaisin etusivulle](/)
+
+
+<h1 class="js-toc-ignore">Merkkijonot</h1>
+
+Merkkijonot ovat meille jo aikaisemmilta oppitunneita tuttua tekstidataa. Merkkijonot ovat kuitenkin muista "perustietotyypeistä" poiketen olioita, eli niillä on metodeja, joiden avulla merkkijonojen sisältöä voidaan käsitellä hyvin monipuolisesti. Metodien lisäksi olioihin liittyy myös sellainen erityispiirre, että olioiden vertailussa perinteiset yhtäsuuruusoperaatiot eivät riitä, vaan olioita vertaillaan metodien avulla. 
+
+Tällä oppitunnilla tutustumme merkkijonojen metodeihin ja merkkijonojen vertailuun.
+
+**Sisällysluettelo**
+
+<div class="js-toc"></div>
+
+
 # Merkkijonot
 
 Kuten olemme aiemmin todenneet, merkkijonot ovat tyyppiä `String`. String on **luokka** ja yksittäiset merkkijonot ovat **olioita**. Merkkijonot luodaan muista olioista poiketen ilman `new`-avainsanaa, kirjoittamalla merkkijonon sisältö suoraan lainausmerkkeihin: `"esimerkki"`.
 
 
 <!--
-Tehtäväidea: satunnaisen salasanan generointi
+Tehtäväidea: SATUNNAISEN SALASANAN GENEROINTI
 * for-looppi
 * subString tai charAt?
 
@@ -285,3 +299,7 @@ https://xkcd.com/1171/ This work is licensed under a Creative Commons Attributio
 ---
 
 Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
+
+<script src="/tocbot/tocbot.min.js"></script>
+<script src="/scripts.js"></script>
+<link rel="stylesheet" href="/tocbot/tocbot.css">

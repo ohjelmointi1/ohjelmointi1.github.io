@@ -1,6 +1,14 @@
+[&larr; Takaisin etusivulle](/)
+
+<h1 class="js-toc-ignore">Metodit</h1>
+
 Tämä dokumentti on tiivistelmä Helsingin yliopiston [Agile Education Research](https://www.helsinki.fi/en/researchgroups/data-driven-education) -tutkimusryhmän [MOOC-ohjelmointikurssin materiaalista](https://materiaalit.github.io/ohjelmointi-18/part2/). Tiivistelmä koostuu suorista lainauksista ja sitä on täydennetty Haaga-Helian ohjelmointikurssin sisällöllä. Lisenssi: [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi).
 
---- 
+
+**Sisällysluettelo**
+
+<div class="js-toc"></div>
+
 
 
 ## Mikä on metodi?
@@ -505,3 +513,8 @@ Tutustu interaktiiviseen esimerkkiin arvojen muuttumisesta ja muuttumattomuudest
 ---
 
 Tämä dokumentti on tiivistelmä Helsingin yliopiston [Agile Education Research](https://www.helsinki.fi/en/researchgroups/data-driven-education) -tutkimusryhmän [MOOC-ohjelmointikurssin materiaalista](https://materiaalit.github.io/ohjelmointi-18/part2/). Tiivistelmä koostuu suorista lainauksista ja sitä on täydennetty Haaga-Helian ohjelmointikurssin sisällöllä. Lisenssi: [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi).
+
+
+<script src="/tocbot/tocbot.min.js"></script>
+<script src="/scripts.js"></script>
+<link rel="stylesheet" href="/tocbot/tocbot.css">

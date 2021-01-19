@@ -1,8 +1,18 @@
-# Olio-ohjelmointi (Object-oriented programming)
+[&larr; Takaisin etusivulle](/)
+
+
+<h1 class="js-toc-ignore">Olio-ohjelmointi (Object-oriented programming)</h1>
 
 Olio-ohjelmointi on yleinen ohjelmointiparadigma, jota hyödynnetään lukuisissa ohjelmointikielissä. Myös Java on olio-ohjelmointikieli, vaikka emme toistaiseksi ole omissa ohjelmissamme soveltaneet juurikaan olio-ohjelmointia.
 
 Olio-ohjelmoinnin avulla voimme jäsentää ohjelmamme toiminnallisuuden ja ohjelmassa esiintyvän datan loogisiksi itsenäisiksi kokonaisuuksiksi, joiden avulla pystymme ratkaisemaan ongelmia. **Olio-ohjelmoinnissa on siis samalla kyse tiedon mallintamisesta että ratkaisujen mallintamisesta.** 
+
+
+**Sisällysluettelo**
+
+<div class="js-toc"></div>
+
+# Luokat ja oliot
 
 Eri luokilla ja olioilla on erilaisia rooleja ratkaistavissa ongelmissa. Osa luokista ja olioista esimerkiksi mallintaa dataa, toiset suorittavat logiikkaa ja muut huolehtivat vuorovaikutuksesta käyttäjän tai toisten järjestelmien kanssa. Siksi ei ole yhtä ainoaa tapaa mallintaa luokkia ja olioita.
 
@@ -73,6 +83,7 @@ int compareTo0(LocalDate otherDate) {
     return cmp;
 }
 ```
+
 **Luokan sisäistä toteutusta päivämäärien vertailemiseksi ei siis tarvitse tietää, jotta voimme hyödyntää sitä.**
 
 Vastaavasti, jos haluamme laskea päivämäärän esimerkiksi 31 päivää minkä tahansa päivämäärän jälkeen, joudumme ratkaisussamme käsittelemään eri pituisia kuukausia, karkausvuosia ja vuodenvaihteen yli meneviä aikavälejä. On erittäin loogista, että tällaiset usein tarvittavat operaatiot paketoidaan omaksi kokonaisuudeksi, eli luokaksi, joka tarjoaa yksinkertaisen rajapinnan monimutkaisten operaatioiden suorittamiseksi:
@@ -723,3 +734,7 @@ Jos yllä olevassa esimerkissä kutsutaan `asetaEmail`-metodia muuttujan `y1` ka
 ---
 
 Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
+
+<script src="/tocbot/tocbot.min.js"></script>
+<script src="/scripts.js"></script>
+<link rel="stylesheet" href="/tocbot/tocbot.css">

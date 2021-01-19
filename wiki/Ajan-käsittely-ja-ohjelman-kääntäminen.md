@@ -1,4 +1,17 @@
-## java.time.*
+[&larr; Takaisin etusivulle](/)
+
+<h1 class="js-toc-ignore">Ajan käsittely ja ohjelman kääntäminen</h1>
+
+Tällä oppitunnilla perehdymme Javan tapohin käsitellä aikaa. Aikaa käsitellään **olioiden** ja **luokkien** avulla, mikä toimii erinomaisena pohjustuksena seuraavalla viikolla käsiteltävään **olio-ohjelmointiaiheeseen**, jossa luomme itse vastaavia luokkia ja niiden olioita.
+
+Ajan käsittelyn lisäksi tutustumme siihen, miten Java-ohjelmia voidaan suorittaa Eclipsen ulkopuolella. Tähänastinen IDE-ympäristöön sidoksissa oleva suorittaminen soveltuu ainoastaan ohjelmistokehityksen yhteyteen, mutta ohjelmat on myös pakattavissa siten, että ne voidaan suorittaa miltä vain komentoriviltä.
+
+**Sisällysluettelo**
+
+<div class="js-toc"></div>
+
+
+# java.time.*
 
 Nykyaikainen Javan standardikirjasto (Java 8+) käsittelee aikaa johdonmukaisesti ja selkeästi. Aikaisemmissa versioissa ajan käsittely on ollut ajoittain sekavaa ja virhealtista. Kuukausien numerointi on esimerkiksi ajoittain alkanut nollasta, toisinaan yhdestä.
 
@@ -16,7 +29,7 @@ Javan vanhentuneilla luokilla kuukausi 12 tarkoittaa esimerkiksi seuraavan vuode
 Merkittävä osa nettilähteistä esittelee vanhentuneita tai "epävirallisia" tapoja ajan käsittelyyn, joten suosittelen käyttämään lähteitä, joissa hyödynnetään `java.time`-paketista löytyviä aikaluokkia.
 
 
-## `java.time`-paketin aikaluokkia
+# java.time-paketin aikaluokkia
 
 `java.time.LocalDate`
 
@@ -43,7 +56,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 ```
 
-### Nykyinen päivä ja kellonaika
+## Nykyinen päivä ja kellonaika
 
 ```java
 LocalDate nykyinenPaivamaara = LocalDate.now();
@@ -51,7 +64,7 @@ LocalDate nykyinenPaivamaara = LocalDate.now();
 LocalDateTime nykyinenPaivaJaKellonaika = LocalDateTime.now();
 ```
 
-### Arvojen hakeminen aikaolioilta
+## Arvojen hakeminen aikaolioilta
 
 `LocalDate` ja `LocalDateTime` ovat **olioita**, jotka pitävät sisällään runsaasti dataa ja logiikkaa. Näiltä olioilta voidaan pyytää erillisiä arvoja **metodikutsujen avulla**:
 
@@ -83,7 +96,7 @@ int kuukausi = nyt.getMonthValue();
 int paiva = nyt.getDayOfMonth();
 ```
 
-### Tietyn päivämäärän luominen
+## Tietyn päivämäärän luominen
 
 `LocalDateTime.now()` loi meille yllä nykyhetkeä vastaavan aikaolion. Metodeilla `of` voimme luoda tietyn ajanhetken käyttäen kokonaislukuja, tai `parse`-metodilla voimme lukea merkkijonomuotoisen päivämäärän päivämääräolioksi:
 
@@ -95,7 +108,7 @@ LocalDate paivaMerkkijonosta = LocalDate.parse("2021-12-24");
 
 Vastaavat `of`- ja `parse`-metodit löytyvät lukuisille muillekin aikaluokalle.
 
-### Kokonaisluvut vs. oliot
+## Kokonaisluvut vs. oliot
 
 Aikaa voidaan käsitellä sekä kokonaislukuina että olioina. Olioita käytettäessä saamme käyttöömme myös niihin liittyviä operaatioita, kuten vaikka tiedon siitä, onko kyseinen vuosi karkausvuosi:
 
@@ -113,7 +126,7 @@ int yearNumber = thisYear.getValue();
 Year anotherYear = Year.of(2021);
 ```
 
-### Ajan "laskeminen" ja vertailu
+# Ajan "laskeminen" ja vertailu
 
 Aikaolioiden avulla voimme laskea uusia ajankohtia `minus` ja `plus` -metodeilla. `LocalDate`-olioilla on esimerkiksi metodit päivien, kuukausien ja vuosien lisäämiseksi ja vähentämiseksi, jotka palauttavat aina uusia aikaolioita:
 
@@ -134,7 +147,7 @@ if (yesterday.isAfter(nextWeek)) {
 }
 ```
 
-### Ajanjaksot, Period-luokka
+## Ajanjaksot, Period-luokka
 
 Ajanjaksoja varten on olemassa esimerkiksi luokat `Period` ja `Duration`. Näiden avulla voidaan esimerkiksi selvittää, kuinka pitä jakso kahden eri ajanhetken välillä on:
 
@@ -159,7 +172,7 @@ int days = period.getDays();
 System.out.println(years + " v, " + months + " kk, " + days + " pv");
 ```
 
-### ChronoUnit
+## ChronoUnit
 
 `ChronoUnit` sisältää Javan aikayksiköt, joilla on myös hyödyllisiä metodeja. Esimerkiksi `ChronoUnit.DAYS` auttaa laskemaan montako päivää kahden ajanhetken välillä on, kun taas `ChronoUnit.MINUTES` auttaa laskemaan saman minuutteina:
 
@@ -170,7 +183,7 @@ LocalDate tanaan = LocalDate.now();
 long paiviaJouluun = ChronoUnit.DAYS.between(joulu, tanaan);
 ```
 
-### Ajan merkkijonomuutokset
+# Ajan merkkijonomuutokset
 
 Aikaa on usein tarve esittää merkkijonoina käyttäjille. Oletuksena Javan aikaluokat hyödyntävät ISO-standardin mukaisia esityksiä, jotka ovat helposti koneluettavissa, mutta eivät aivan vastaa arjessa usein käytettyjä esitysmuotoja.
 
@@ -201,7 +214,7 @@ DateTimeFormatter formaatti = DateTimeFormatter.ofPattern("d.M.yyyy");
 LocalDate pvm = LocalDate.parse("6.12.1917", formaatti);
 ```
 
-### Ajan muotoilumääreitä
+## Ajan muotoilumääreitä
 
 `DateTimeFormatter` tukee seuraavia merkkejä ajankohtien formaateissa:
 
@@ -228,11 +241,11 @@ Tarvitset todennäköisesti nämä luokat:
 * DateTimeFormatter (d.M.yyyy)
 * Period tai ChronoUnit.DAYS
 
-## Java-ohjelman kääntäminen ja suorittaminen komentoriviltä
+# Java-ohjelman kääntäminen ja suorittaminen komentoriviltä
 
 Muutetaan yllä olevaa ohjelmaa siten, että ohjelman voi käynnistää komentoriviltä, ja että päivämäärän voi antaa suoraan osana käynnistyskomentoa.
 
-### Luokan kääntäminen ja suorittaminen komentoriviltä
+## Luokan kääntäminen ja suorittaminen komentoriviltä
 
 ```
 ohjelmointi1\src> javac viikko4/aika/DateDiff.java
@@ -267,6 +280,11 @@ Huomaa, että lähdekoodia käännettäessä annetaan tiedoston polku ja tiedost
 
 Edellä esitetyt komennot tulee antaa Java-pakettien juurihakemistossa, eli esimerkkiprojektissa `src`-hakemistossa.
 -->
+
 ---
 
 Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
+
+<script src="/tocbot/tocbot.min.js"></script>
+<script src="/scripts.js"></script>
+<link rel="stylesheet" href="/tocbot/tocbot.css">

@@ -1,4 +1,18 @@
-# Poikkeukset (exceptions)
+
+[&larr; Takaisin etusivulle](/)
+
+<h1 class="js-toc-ignore">Poikkeukset (exceptions)</h1>
+
+Poikkeukset ovat ohjelman suorituksen aikana tapahtuvia tapahtumia, jotka aiheuttavat poikkeamia ohjelman normaaliin suoritusjärjestykseen. Huomaa, että Java-kääntäjän havaitsemat virheet ja varoitukset ovat aivan toinen asia.
+
+Tällä opetuskerralla tutustumme tarkemmin poikkeuksiin, niiden hyödyntämiseen sekä niihin varautumiseen.
+
+
+**Sisällysluettelo**
+
+<div class="js-toc"></div>
+
+# Poikkeukset käytännössä
 
 Poikkeukset ovat ohjelman suorituksen aikana tapahtuvia tapahtumia, jotka aiheuttavat poikkeamia ohjelman normaaliin suoritusjärjestykseen. *Java-kääntäjän havaitsemat virheet ja varoitukset ovat aivan toinen asia.*
 
@@ -30,7 +44,7 @@ at java.util.Scanner.nextInt(Unknown Source)
 at week1.ScannerExample.main(Example.java:11)
 ```
 
-## Poikkeuksiin varautuminen
+# Poikkeuksiin varautuminen
 
 Poikkeuksiin voidaan varautua kirjoittamalla poikkeuksia aiheuttava koodi `try`-lohkon sisään. `try`-lohkon jälkeen kirjoitetaan `catch`-lohko, jonka sisällä oleva koodi suoritetaan, mikäli `try`-lohkon suorituksessa törmättiin poikkeukseen. 
 
@@ -89,7 +103,7 @@ lukija.close();
 `ArrayIndexOutOfBoundsException` syntyy silloin, kun annettu kokonaisluku on taulukon indeksien ulkopuolella.
 
 
-## Try, throw ja catch
+# Try, throw ja catch
 
 ```java
 try {
@@ -120,7 +134,7 @@ System.out.println("System.out tulostetaan mustalla");
 Edistyneemmissä ohjelmissa eri tietovirrat voidaan myös ohjata eri sijainteihin, esimerkiksi `System.err` voidaan kirjoittaa tiedostoon myöhempää tutkimista varten ja `System.out` tulostaa ruudulle.
 
 
-## Poikkeusolion käyttäminen
+# Poikkeusolion käyttäminen
 
 Poikkeukset ovat olioita, joilla on oliometodeja. Poikkeuksiin liittyy aina tiedot mm. siitä, minkälainen virhe on sattunut ja missä. Tapahtunut poikkeus on aina saatavilla `catch`-lohkon sisällä paikallisena muuttujana:
 
@@ -138,7 +152,7 @@ try {
 }
 ```
 
-## Finally-lohko
+# Finally-lohko
 
 Try-catch –rakenteen lopuksi on mahdollista lisätä myös `finally`-lohko. `finally`-lohko suoritetaan aina lopuksi riippumatta siitä, tapahtuiko poikkeus vai ei. Koska `finally` lohko suoritetaan aina, se on hyvä paikka sijoittaa esimerkiksi resurssien sulkemisesta huolehtivat koodirivit:
 
@@ -159,7 +173,7 @@ try {
 }
 ```
 
-## Koodaustehtävä
+# Koodaustehtävä
 
 Kirjoita luokka `KysyUudestaan` ja lisää siihen main-metodi. Main-metodissa sinun tulee kysyä käyttäjältä kokonaislukutyyppistä syötettä. Jos käyttäjä antaa syötteen, joka ei ole kelvollinen kokonaisluku, ohjelmasi tulee kysyä syötettä uudelleen esimerkkisuorituksen mukaisesti. Kun käyttäjä syöttää kelvollisen kokonaisluvun, ohjelmasi tulee tulostaa annettu luku esimerkkisuorituksen mukaisesti.
 
@@ -171,9 +185,9 @@ Syötä kokonaisluku: 100
 Syötit luvun 100.
 ```
 
-## Virheiden paikantaminen
+# Virheiden paikantaminen
 
-### Suorituspino (stack)
+## Suorituspino (stack)
 
 Tietokoneen muistissa olevia aktiivisia metodikutsuja pidetään ns. pinossa. Ohjelmointiterminologiassa pino tarkoittaa tietorakennetta, johon uusin alkio lisätään aina ylimmäksi ja josta voidaan poistaa vain ylin alkio.
 
@@ -181,7 +195,8 @@ Kun metodista kutsutaan toista metodia, lisätään pinoon "kehys" kutsutun meto
 
 Kun metodi on suoritettu, poistetaan sitä varten luotu kehys ja suoritus palaa taas pinossa alaspäin siihen metodiin, josta suoritettua metodia kutsuttiin. Alempana pinossa olevat keskeneräiset metodien suoritukset odottavat, kunnes ylemmät pinokehykset on suoritettu.
 
-### Pinon lukeminen (stack trace, pinovedos)
+## Pinon lukeminen (stack trace, pinovedos)
+
 ```
 Exception in thread "main" java.util.InputMismatchException
 at java.util.Scanner.throwFor(Unknown Source)
@@ -204,13 +219,13 @@ Jos poikkeus päätyy pois omasta ohjelmastasi niin, ettei sitä napata missää
 }
 ```
 
-## Poikkeustyypit
+# Poikkeustyypit
 
-### Virheet / Errors
+## Virheet / Errors
 
 Ohjelman suoritusta estävät ulkoiset virhetilanteet, esim. muistin loppuminen. Error-tyyppiset virheet ovat varsin harvinaisia.
 
-### Ajonaikaiset virheet / Runtime exceptions
+## Ajonaikaiset virheet / Runtime exceptions
 
 Ajonaikaiset virheet ovat tyypillisesti ohjelmointivirheistä aiheutuvia virhetilanteita, jotka usein voitaisiin välttää ilman varsinaista poikkeustenhallintaa.
 
@@ -218,7 +233,7 @@ Esimerkkejä ajonaikaisista virheistä ovat `NullPointerException` ja `ArrayInde
 
 https://docs.oracle.com/javase/tutorial/essential/exceptions/catchOrDeclare.html
 
-### Tarkastetut poikkeukset / checked exceptions
+## Tarkastetut poikkeukset / checked exceptions
 
 Virheet, joihin ohjelmassa tulee varautua ja joista tulee selvitä. Java-kääntäjä varmistaa, että kaikkiin tarkistettuihin poikkeuksiin on varauduttu. Tarkastettuja poikkeuksia käytetään esimerkiksi tiedostojen käsittelyssä, jossa virheet ovat erittäin tyypillisiä.
 
@@ -233,7 +248,7 @@ public static List<String> readAllLines​(Path path) throws IOException {
 
 Tällaista metodia kutsuvaan metodiin on aina pakko kirjoittaa joko try/catch –lohko tai kutsuvan metodin otsikkoon on myös lisättävä tieto samasta poikkeuksesta. Jos metodi ei käsittele poikkeusta, vaan päästää sen kutsuketjussa ylöspäin, kutsutaan sitä "kuplimiseksi". Poikkeus siis "kuplii" metodista toiseen.
 
-### Poikkeusten dokumentoiminen
+# Poikkeusten dokumentoiminen
 
 Jos metodi heittää ajonaikaisen poikkeuksen, `throws`-määre voidaan lisätä, mutta se ei ole pakollinen. Vaikka `throws` ei ole pakollinen, se toimii hyvänä dokumentaationa metodin toiminnasta, esim. `Integer`-luokassa:
 
@@ -245,7 +260,7 @@ public static int parseInt​(String s) throws NumberFormatException {
 
 `NumberFormatException` ei ole tarkastettu poikkeus, joten sitä varten ei ole pakko lisätä poikkeuksenkäsittelyä, vaikka poikkeus onkin määritetty metodin otsikkoon.
 
-## Poikkeusten "heittäminen"
+# Poikkeusten "heittäminen"
 
 Poikkeuksia voidaan heittää `throw`-käskyllä. Poikkeukset ovat olioita, joten heitettävä poikkeus täytyy luoda `new`-avainsanalla kuten muutkin oliot.
 
@@ -279,7 +294,7 @@ Syötä luku väliltä 0-23: -1
 Exception in thread "main" java.lang.IllegalArgumentException
 ```
 
-## Omat poikkeusluokat (edistynyttä sisältöä)
+# Omat poikkeusluokat (edistynyttä sisältöä)
 
 Voit luoda omia poikkeusluokkia aivan kuten muitakin luokkia. Jotta luokkasi toimii poikkeusluokkana, sen täytyy "periä" jokin Javan poikkeusluokka:
 
@@ -298,7 +313,7 @@ public class InvalidEmailException extends RuntimeException {
 }
 ```
 
-### Edistynyttä sisältöä: Oman poikkeuksen heittäminen
+## Edistynyttä sisältöä: Oman poikkeuksen heittäminen
 
 `InvalidEmailException` heitetään, jos yhteystietoon ollaan asettamassa sähköpostiosoitteeksi tyhjää arvoa. Oikeassa sovelluksessa sähköpostiosoitteen muoto tarkastettaisiin esim. säännöllisellä lausekkeella.
 
@@ -320,3 +335,7 @@ public class Yhteystieto {
 ---
 
 Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä. 
+
+<script src="/tocbot/tocbot.min.js"></script>
+<script src="/scripts.js"></script>
+<link rel="stylesheet" href="/tocbot/tocbot.css">
