@@ -42,22 +42,28 @@ while (ehto) {
 Syntaksin puolesta `while` ja `if` ovat hyvin samankaltaiset:
 
 ```java
-while (ehto) {
-    // Toistetaan *niin kauan kuin* ehto on tosi
-}
-
 if (ehto) {
     // Suoritetaan *kerran*, jos ehto on tosi
 }
 ```
 
+```java
+while (ehto) {
+    // Toistetaan *niin kauan kuin* ehto on tosi
+}
+```
+
+Ehtorakenteesta poiketen toistorakenteessa tehdään tyypillisesti muutoksia, jotka vaikuttavat tarkistettavaan ehtoon. Näiden muutosten avulla toisto saadaan tyypillisesti päättymään, kun haluttu logiikka on saatu valmiiksi.
+
+
 ## Ehdon muuttaminen toistettavassa koodilohkossa
 
-Jotta toistoehto muuttuisi jossain vaiheessa epätodeksi, tehdään toistettavassa koodilohkossa tyypillisesti operaatioita, jotka vaikuttavat toistoehtoon. 
+Jotta toistoehto muuttuisi jossain vaiheessa epätodeksi, tehdään toistettavassa koodilohkossa tyypillisesti operaatioita, jotka vaikuttavat toistoehtoon. Operaatio on usein jonkin muuttujan arvon kasvattaminen.
 
-Koodia halutaan esimerkiksi usein suorittaa tietty määrä kertoja, jolloin käytetään laskuria, joka pitää kirjaa suorituskerroista. Tässä esimerkissä `luku`-muuttujaa käytetään rajoittamaan suorituskertoja siten, että ruudulle tulostetaan vuorollaan luvut 1, 2, 3, 4 ja 5:
+Kun koodia halutaan suorittaa tietty määrä kertoja, käytetään tyypillisesti muuttujaa, joka pitää kirjaa suorituskerroista. Tällaisesta muuttujasta käytetään myös termiä askeltaja. Seuraavassa esimerkissä `luku`-muuttujaa käytetään rajoittamaan suorituskertoja siten, että ruudulle tulostetaan vuorollaan luvut 1, 2, 3, 4 ja 5:
 
 ```java
+// https://2017-ohjelmointi.github.io/part2/, CC BY-NC-SA
 public static void main(String[] args) {
     // alustetaan laskuri
     int luku = 1;
@@ -70,12 +76,14 @@ public static void main(String[] args) {
 }
 ```
 
+Suosittelen katsomaan myös videolta selostuksen yllä olevan koodin toiminnasta:
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/us9GXUZ60ws" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Tämä esimerkki videoineen on lainattu Helsingin yliopiston Agile Education Research -tutkimusryhmän ohjelmointikurssilta ja se on lisensoitu Creative Commons BY-NC-SA-lisenssillä. [https://2017-ohjelmointi.github.io/part2/#section-40-toistolauseen-ehto-toiston-lopettajana](https://2017-ohjelmointi.github.io/part2/#section-40-toistolauseen-ehto-toiston-lopettajana)
 
 
-## While-toistokäskyn hyödyntäminen
+# While-toistokäskyn hyödyntäminen
 
 Tehdään oppitunnilla pieni Java-ohjelma, joka generoi HTML: `<select>`-elementin. Elementin idea on peräisin [nettiauto.com:in](https://www.nettiauto.com/) hakutyökalusta, jossa haettavan auton hintaa voidaan rajoittaa vastaavalla tavalla.
 
@@ -127,7 +135,7 @@ Yllä olevat HTML-valintaelementit muodostetaan [select](https://developer.mozil
 </select>
 ```
 
-Tässä tuntiesimerkissä kokeilemme itse generoida HTML-elementit Javan toistorakenteen avulla.
+Tässä tuntiesimerkissä kokeilemme itse generoida HTML-elementit Javan toistorakenteen avulla. Aikaisemmasta esimerkistä poiketen emme kasvatakaan lukua yhdellä, vaan 500:lla. Muuten koodi on hyvin samankaltainen. Lukujen muotoilussa hyödynnetään DecimalFormat-luokkaa siten, että muotoilussa on käytetty tuhaterotinta (`.`) ja ehdollisia numeroita (`#`): `#,### €`.
 
 
 # For-toistokäsky
@@ -135,25 +143,25 @@ Tässä tuntiesimerkissä kokeilemme itse generoida HTML-elementit Javan toistor
 While-toistokäskyn lisäksi on olemassa myös for-toistokäsky. For on tyypillinen esimerkiksi silloin, kun haluttu suoritusten määrä on jo alussa tiedossa. Tällöin laskurin alustaminen, kasvattaminen ja toistoehto saadaan kirjoitettua kompaktiin muotoon samojen sulkujen sisään:
 
 ```java
-for (alustus; ehto; kasvatus) {
+for (alustus; toistoehto; kasvatus) {
     // Tähän lohkoon kirjoitettu koodi 
     // Toistetaan, kunnes ehto == false
 }
 ```
 
-For-rakenteessa suoritetaan ensin alustus. Sen jälkeen tarkastetaan onko ehto tosi, ja jos on, suoritetaan koodilohko. Koodilohkon suorittamisen jälkeen suoritetaan aina kasvatusoperaatio, jonka jälkeen ehto tarkastetaan uudestaan.
+For-rakenteessa suoritetaan ensin alustus. Sen jälkeen tarkastetaan onko toistoehto tosi, ja jos on, suoritetaan koodilohko. Koodilohkon suorittamisen jälkeen suoritetaan aina kasvatusoperaatio, jonka jälkeen ehto tarkastetaan uudestaan.
 
 Jos haluamme esimerkiksi tulostaa luvut yhdestä viiteen, kuten edellä teimme `while`-toistokäskyn kanssa, se voisi tapahtua seuraavasti:
 
 Kirjoitetaan alustukseen `int luku = 1`:
 
 ```java
-for (int luku = 1; ehto; kasvatus) {
+for (int luku = 1; toistoehto; kasvatus) {
     System.out.println(luku);
 }
 ```
 
-Sen jälkeen määritellään, millä ehdolla toistoa jatketaan. Nyt haluamme toistaa koodia luvuille yhdestä viiteen:
+Sen jälkeen määritellään, millä ehdolla toistoa jatketaan. Nyt haluamme toistaa koodia luvuille yhdestä viiteen, eli `luku < 6`:
 
 ```java
 for (int luku = 1; luku < 6; kasvatus) {
@@ -161,7 +169,7 @@ for (int luku = 1; luku < 6; kasvatus) {
 }
 ```
 
-Jotta toisto etenee aina kierroksittain luvusta seuraavaan, täytyy `luku`-muuttujan arvoa kasvattaa:
+Jotta toisto etenee aina kierroksittain luvusta seuraavaan, täytyy `luku`-muuttujan arvoa kasvattaa joka kierroksen jälkeen yhdellä, eli `luku++`:
 
 ```java
 for (int luku = 1; luku < 6; luku++) {
@@ -194,17 +202,86 @@ Tämä esimerkki on lainattu Helsingin yliopiston Agile Education Research -tutk
 
 Molemmat oheisista esimerkeistä tulostavat ruudulle luvut 0, 1 ja 2. Ainoa ero on se, että while-esimerkissä muuttuja `i` on olemassa myös toistolauseen jälkeen.
 
+# For-toistokäskyn hyödyntäminen
+
+Toteutetaan vertailun vuoksi toistorakenne, joka muodostaa [nettiauto.com:in](https://www.nettiauto.com/) hakutyökalun mukaisen vuosiluvun valintaan käytettävän HTML-rakenteen. Aikaisemmasta esimerkistä poiketen tässä elementissä luvut ovat laskevassa järjestyksessä, ja suurin arvo vaihtuu aina kuluvan vuoden mukaan:
+
+<fieldset>
+    <legend>Vuosimalli</legend>
+    <select name="min">
+        <option>Minimi</option>
+        <option value="2022">2022</option>
+        <option value="2021">2021</option>
+        <option value="2020">2020</option>
+        <option value="2019">2019</option>
+        <option value="2018">2018</option>
+        <option value="2017">2017</option>
+        <option value="2016">2016</option>
+        <option value="2015">2015</option>
+        <option value="2014">2014</option>
+        <option value="2013">2013</option>
+        <option value="2012">2012</option>
+        <option value="2011">2011</option>
+        <option value="2010">2010</option>
+    </select> - 
+    <select name="max">
+        <option>Maksimi</option>
+        <option value="2022">2022</option>
+        <option value="2021">2021</option>
+        <option value="2020">2020</option>
+        <option value="2019">2019</option>
+        <option value="2018">2018</option>
+        <option value="2017">2017</option>
+        <option value="2016">2016</option>
+        <option value="2015">2015</option>
+        <option value="2014">2014</option>
+        <option value="2013">2013</option>
+        <option value="2012">2012</option>
+        <option value="2011">2011</option>
+        <option value="2010">2010</option>
+    </select>
+</fieldset>
+
+Yllä olevat HTML-valintaelementit muodostetaan [select](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select-) sekä [option](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option)-tagien avulla esimerkiksi seuraavasti:
+
+```html
+<select name="min">
+    <option>Minimi</option>
+    <option value="2022">2022</option>
+    <option value="2021">2021</option>
+    <!-- ... -->
+    <option value="2011">2011</option>
+    <option value="2010">2010</option>
+</select>
+```
+
+Toiston alustuksessa ei kannata käyttää kovakoodattua vuosilukua, vaan Javan valmiita `Year`- tai `LocalDate`-luokkia. Nykyisen vuosiluvun saat selville esimerkiksi seuraavalla koodilla:
+
+```java
+Year nykyinenVuosi = Year.now();
+int vuosiluku = nykyinenVuosi.getValue();
+```
+
+Javan valmiin `Year`-luokan käyttämiseksi joudut myös lisäämään luokkasi alkuun `import`-käskyn:
+
+```java
+import java.time.Year;
+```
+
+HTML-rakenteen pienimpänä vuosilukuna voit käyttää vuotta 1886, [jota pidetään nykyaikaisten autojen syntymävuotena](https://en.wikipedia.org/wiki/Car).
+
 # Toistolauseesta poistuminen eli (`break`)
 
 Varsin usein haluamme suorittaa koodia toistaiseksi, kunnes käyttäjä esimerkiksi antaa tietyn syötteen. Tällöin voi olla hyödyllistä tehdä "ikuinen silmukka" eli:
 
 ```java
+// ehto on kovakoodattu, eli se ei tule koskaan muuttumaan epätodeksi:
 while (true) {
     // "ikuisesti" toistettava koodi
 }
 ```
 
-Toistolauseesta voidaan poistua tarvittaessa kesken toistettavan lohkon suorituksen komennolla `break`. Komento `break` on tyypillisesti toistolauseen lohkon sisällä olevassa ehtolauseessa, jossa tarkastellaan, haluaako käyttäjä poistua toistolauseesta tai onko tapahtunut jokin muu toiston keskeyttävä tapahtuma.
+Yllä esitetystä toistorakenteesta voidaan poistua tarvittaessa kesken toistettavan lohkon suorituksen komennolla `break`. Komento `break` on tyypillisesti toistolauseen lohkon sisällä olevassa ehtolauseessa, jossa tarkastellaan, haluaako käyttäjä poistua toistolauseesta, tai onko tapahtunut jokin muu toiston keskeyttävä tapahtuma.
 
 ```java
 /* 
@@ -227,14 +304,30 @@ while (true) {
 System.out.println("kiitos ja kuulemiin.");
 ```
 
-## Tehtävä 1: sademäärien kysyminen toiston avulla
+# Tehtäviä tunnille
 
-Tuntitehtävä: kirjoitetaan ohjelma, joka kysyy päivittäisiä sademääriä ennalta tunnetun määrän yksi kerrallaan. Lopuksi tulostetaan lukumäärä, summa, minimi, maksimi sekä keskiarvo.
+## Sademäärien kysyminen toiston avulla
+
+Kirjoitetaan ohjelma, joka kysyy päivittäisiä sademääriä ennalta tunnetun määrän yksi kerrallaan. Lopuksi tulostetaan lukumäärä, summa, minimi, maksimi sekä keskiarvo.
 
 
-## Tehtävä 2: tuntemattoman ajanjakson sademäärien kysyminen
+## Tuntemattoman ajanjakson sademäärien kysyminen
 
-Tuntitehtävä: Muutetaan ohjelmaa niin, että päivien lukumäärä ei ole ennalta tunnettu, vaan negatiivinen sademäärä lopettaa kysymisen.
+Muutetaan ohjelmaa niin, että päivien lukumäärä ei ole ennalta tunnettu, vaan negatiivinen sademäärä lopettaa kysymisen.
+
+## Arvosana-asteikko
+
+Hyödynnetään kurssin etusivulla esitettyä `OsasuoritustenArviointi`-luokkaa ja lasketaan kaikille mahdollisille pistemäärille (0-25) niitä vastaavat koearvosanat. Tässä opimme samalla kutsumaan omassa projektissamme määritettyä metodia.
+
+## FizzBuzz
+
+FizzBuzz-tehtävä on ohjelmistokehittäjien työhaastatteluiden klassikko, jossa yllättävän ison osan haastatelluista kerrotaan epäonnistuvan. Tehtävä on ratkaistavissa tämän ja kahden aikaisemman oppituntimme perusteella.
+
+> The "Fizz-Buzz test" is an interview question designed to help filter out the 99.5% of programming job candidates who can't seem to program their way out of a wet paper bag. The text of the programming assignment is as follows:
+>
+> *"Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”."*
+>
+> [http://wiki.c2.com/?FizzBuzzTest](http://wiki.c2.com/?FizzBuzzTest)
 
 
 ---

@@ -90,46 +90,10 @@ boolean tosi5 = luku <= 1;
 boolean tosi6 = luku != 0;
 ```
 
-## Totuustaulut
-
-Totuusarvoja voidaan yhdistellä ja- sekä tai-operaatioilla. Näiden operaatioiden molempien osapuolien on oltava totuusarvoja tai lausekkeita, joiden tuloksena saadaan totuusarvo.
-
-### Ja
-
-Lausekkeen `a && b` arvoksi tulee `true` vain silloin, kun **molemmat arvoista** ovat `true`:
-
-| a     | b     | a &amp;&amp; b |
-|-------|-------|--------  |
-| true  | true  | true     |
-| true  | false | false    |
-| false | true  | false    |
-| false | false | false    |
-
-Yllä olevaa taulukko luetaan siten, että vasemmalla olevien `a`:n ja `b`:n kaikkien arvojen yhdistelmien perusteella on esitetty kyseisten arvojen ja-operaation tulos `a && b`.
-
-Esimerkki: jos kesäkuukausiksi lasketaan kesä, heinä ja elokuu, voidaan `onKesa`-muuttujan logiikassa hyödyntää `&&`-operaatiota:
+Vastaavasti tässä esimerkissä `taysiIkainen`-muuttujan arvo riippuu `ika`-muuttujan suuruudesta:
 
 ```java
-boolean onKesa = kuukausi >= 6 && kuukausi <= 8;
-```
-
-### Tai
-
-Lausekkeen `a || b` arvoksi tulee `true` aina, kun **vähintään toinen arvoista** on `true`:
-
-| a     | b     | a \|\| b |
-|-------|-------|----------|
-| true  | true  | true     |
-| true  | false | true     |
-| false | true  | true     |
-| false | false | false    |
-
-Yllä olevaa taulukko luetaan siten, että vasemmalla olevien `a`:n ja `b`:n kaikkien arvojen yhdistelmien perusteella on esitetty kyseisten arvojen tai-operaation tulos `a || b`.
-
-Esimerkki: jos talvikuukausiksi lasketaan tammi-, helmi-, marras- ja joulukuu, tarvitaan kesän logiikasta poiketen `||`-operaatiota:
-
-```java
-boolean onTalvi = kuukausi <= 2 || kuukausi >= 11;
+boolean taysiIkainen = ika >= 18;
 ```
 
 # If-ehtolause
@@ -156,11 +120,9 @@ if (taysiIkainen) {
 }
 ```
 
-If-lauseen sulkujen sisällä voi olla myös lauseke, joka suoritetaan (evaluoidaan), ja päätös tehdään saadun tuloksen mukaan.
+If-lauseen sulkujen sisällä voi olla myös lauseke, joka suoritetaan (evaluoidaan) ensin, ja päätös tehdään saadun tuloksen mukaan.
 
 ```java
-int ika = 21;
-
 if (ika >= 18) {
     // tähän lohkoon kirjoitettu koodi suoritetaan 
     // vain, jos vertailu sai arvon true
@@ -170,7 +132,7 @@ if (ika >= 18) {
 
 ## Vertailu "== true"
 
-Toisinaan ehtolauseen sisään kirjoitetaan kirjoitettavan arvon vertailu `true`-arvoon:
+Toisinaan ehtolauseen sisään saatetaan kirjoittaa jonkin arvon vertailu `true`-arvoon:
 
 ```java
 if (taysiIkainen == true) {
@@ -185,6 +147,51 @@ if (taysiIkainen) {
     // ...
 }
 ```
+
+# Ehtojen yhdistäminen
+
+Totuusarvoja voidaan yhdistellä ja- sekä tai-operaatioilla. Näiden operaatioiden molempien osapuolien on oltava totuusarvoja tai lausekkeita, joiden tuloksena saadaan totuusarvo.
+
+## Ja
+
+Ehdon "a ja b" (`a && b`) arvoksi tulee `true` vain silloin, kun **molemmat puolet** ovat tosia. 
+
+Esimerkiksi, jos kesäkuukausiksi lasketaan kesä, heinä ja elokuu, voidaan `onKesa`-muuttujan logiikassa hyödyntää `&&`-operaatiota:
+
+```java
+boolean onKesa = kuukausi >= 6 && kuukausi <= 8;
+```
+
+Ja-operaation tulos voidaan esittää kahden arvon yhdistelmien avulla taulukkona siten, että vasemmalla olevien `a`:n ja `b`:n kaikkien arvojen yhdistelmien perusteella esitetään kyseisten arvojen ja-operaation tulos `a && b`:
+
+| a     | b     | a &amp;&amp; b |
+|-------|-------|--------  |
+| true  | true  | true     |
+| true  | false | false    |
+| false | true  | false    |
+| false | false | false    |
+
+
+## Tai
+
+Ehdon "a tai b" (`a || b`) arvoksi tulee `true` aina, kun **vähintään toinen arvoista** on `true`:
+
+Esimerkiksi, jos talvikuukausiksi lasketaan tammi-, helmi-, marras- ja joulukuu, tarvitaan kesän logiikasta poiketen `||`-operaatiota:
+
+```java
+boolean onTalvi = kuukausi <= 2 || kuukausi >= 11;
+```
+
+Tai-operaation tulos voidaan esittää kahden arvon yhdistelmien avulla taulukkona siten, että vasemmalla olevien `a`:n ja `b`:n kaikkien arvojen yhdistelmien perusteella esitetään kyseisten arvojen tai-operaation tulos `a || b`:
+
+| a     | b     | a \|\| b |
+|-------|-------|----------|
+| true  | true  | true     |
+| true  | false | true     |
+| false | true  | true     |
+| false | false | false    |
+
+
 
 ## Ehtorakenteet (ja)
 
@@ -201,6 +208,7 @@ if (kello >= 10 && kello < 18) {
 ```
 
 Edellä oleva ehto toteutuu vain, jos `kello` on samaan aikaan sekä suurempi tai yhtä suuri kuin 10 ja pienempi kuin 18. 
+
 
 ## Ehtorakenteet (tai)
 
@@ -241,7 +249,7 @@ boolean vaikeaLukea=kello>=10&&kello<18; // vaikea lukea
 boolean helpompiLukea = (kello >= 10) && (kello < 18);  // hieman helpompi lukea
 ```
 
-### Oikean kellonajan käyttäminen 🕒
+## Oikean kellonajan käyttäminen Java-ohjelmassa 🕒
 
 Edellisissä esimerkeissä esitetty kellonajan "kovakoodaaminen" tai kysyminen käyttäjältä eivät vastaa tavanomaisen ohjelman oikeaa toimintalogiikkaa. Oikeaa kellonaikaa voidaan käyttää esimerkiksi seuraavalla tavalla Javan `LocalTime`-luokan avulla. 
 
