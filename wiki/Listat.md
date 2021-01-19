@@ -1,11 +1,19 @@
-Hyödynnä myös Helsingin yliopiston MOOC-kurssin materiaaleja: https://ohjelmointi-19.mooc.fi/osa-3/2-listat. 
 
 Listat ovat tietorakenteita, joiden pituus kasvaa joustavasti, kun niihin lisätään uusia arvoja. Listoihin voidaan lisätä arvoja myös aiempien arvojen väliin ja listan väleistä voidaan poistaa arvoja. Listat ovat olioita ja niillä on metodeita, joiden avulla arvoja lisätään, poistetaan, etsitään jne.
 
 Yhdessä listassa voidaan varastoida ainoastaan yhdentyyppisiä arvoja, eikä varastoitavaa tyyppiä voida myöhemmin vaihtaa. Listoissa voidaan varastoida ainoastaan olioita, ei siis alkeistietotyyppejä kuten `boolean`, `int` ja `double`. Alkeistietotyypit voidaan kuitenkin esittää myös olioina kääreluokkien `Boolean`, `Integer` ja `Double` avulla.
 
 
-## Listatyypit
+# ArrayList:in perusteet
+
+Seuraava [Helsingin yliopiston Ohjelmoinnin MOOC -kurssin](https://ohjelmointi-20.mooc.fi/osa-3/2-listat) video esittelee Javan ArrayList-tietorakenteen toimintaa ja käyttämistä:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-y67VJ68Izs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Hyödynnä myös Helsingin yliopiston MOOC-kurssin muita materiaaleja: [https://ohjelmointi-20.mooc.fi/osa-3/2-listat](https://ohjelmointi-20.mooc.fi/osa-3/2-listat). 
+
+
+# Listatyypit
 
 Javassa on useita eri listatyyppejä. Kaikki listat toimivat ulkoisesti samalla tavalla, vaikka niiden sisäiset toteutustavat vaihtelevat merkittävästi. `ArrayList` on sisäisesti toteutettu taulukon avulla, kun taas `LinkedList` on toteutettu linkittämällä listan alkiot toisiinsa "ketjuksi". Sopivin lista kuhunkin tarkoitukseen vaihtelee listan käyttötavasta riippuen, mutta pääsääntöisesti pärjäät hyvin käyttämällä aina `ArrayList`-listoja.
 

@@ -1,18 +1,12 @@
-<!--
-Tehtäväidea:
-
-<option></option> -listojen generointi! 
-* Esimerkkiä nettiauto.com:ista!
-* kaksi screenshottia + koodit
--->
-
 [&larr; Takaisin etusivulle](/)
 
 <h1 class="js-toc-ignore">Toistorakenteet</h1>
 
-Ehtorakenteiden tavoin toistorakenteilla voidaan vaikuttaa koodin suorituksen etenemiseen. Toistorakenteiden avulla tietyt koodirivit voidaan toistaa eri logiikoilla tai tarvittaessa jopa "ikuisesti".
+Ehtorakenteiden tavoin toistorakenteilla voidaan vaikuttaa koodin suorituksen etenemiseen. Toistorakenteiden avulla tietyt koodirivit voidaan toistaa eri logiikoilla tai tarvittaessa jopa "ikuisesti". 
 
-Opettelemme aiheeseen liittyen:
+Tällä opetusviikolla harjoittelemme pääasiassa koodin toistamista tietyn määrän kertoja sekä käymään läpi kokonaislukuja. Toistorakenteita hyödynnetään myöhemmin myös listojen ja taulukoiden yhteydessä, jolloin käymme läpi niissä olevia arvoja yksitellen.
+
+Tänään opettelemme
 
 * käyttämään while- ja for-toistorakenteita
 * toistamaan koodia tietyn määrän kertoja
@@ -25,8 +19,17 @@ Opettelemme aiheeseen liittyen:
 
 
 <!--
-Tehtäväidea: piste- ja arvosana-asteikon läpikäynti toistorakenteen avulla
-Mahdollisesti CSV-datan generointi?
+Tehtäväideat:
+
+* piste- ja arvosana-asteikon läpikäynti toistorakenteen avulla
+    - Mahdollisesti CSV-datan generointi?
+    - toisessa luokassa olevan metodin kutsuminen!
+
+* <option>-rakenteen generointi
+    - vuosiluku
+    - hinta
+    - esimerkki nettiauto.com:ista!
+
 -->
 
 # While-toistokäsky
@@ -40,7 +43,7 @@ while (ehto) {
 }
 ```
 
-## `while` ja `if`
+## while vs. if
 
 Syntaksin puolesta `while` ja `if` ovat hyvin samankaltaiset:
 
@@ -73,12 +76,67 @@ public static void main(String[] args) {
 }
 ```
 
-Yllä oleva esimerkki on lainattu Helsingin Yliopiston ohjelmointikurssilta ja se on lisensoitu Creative Commons BY-NC-SA-lisenssillä.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/us9GXUZ60ws" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Tutustu ohjelman suorituksen vaiheisiin osoitteessa: https://2017-ohjelmointi.github.io/part2/#section-40-toistolauseen-ehto-toiston-lopettajana
+Tämä esimerkki videoineen on lainattu Helsingin yliopiston Agile Education Research -tutkimusryhmän ohjelmointikurssilta ja se on lisensoitu Creative Commons BY-NC-SA-lisenssillä. [https://2017-ohjelmointi.github.io/part2/#section-40-toistolauseen-ehto-toiston-lopettajana](https://2017-ohjelmointi.github.io/part2/#section-40-toistolauseen-ehto-toiston-lopettajana)
 
 
-## For-toistokäsky
+## While-toistokäskyn hyödyntäminen
+
+Tehdään oppitunnilla pieni Java-ohjelma, joka generoi HTML: `<select>`-elementin. Elementin idea on peräisin [nettiauto.com:in](https://www.nettiauto.com/) hakutyökalusta, jossa haettavan auton hintaa voidaan rajoittaa vastaavalla tavalla.
+
+Tämän yksinkertaistetun esimerkin avulla voit valita hinnan ylä- ja alarajan 500 euron välein väliltä 0-5&nbsp;000 euroa:
+
+<fieldset>
+    <legend>Hinta</legend>
+    <select name="min">
+        <option>Minimi</option>
+        <option value="0">0 €</option>
+        <option value="500">500 €</option>
+        <option value="1000"> 1 000 €</option>
+        <option value="1500"> 1 500 €</option>
+        <option value="2000"> 2 000 €</option>
+        <option value="2500"> 2 500 €</option>
+        <option value="3000"> 3 000 €</option>
+        <option value="3500"> 3 500 €</option>
+        <option value="4000"> 4 000 €</option>
+        <option value="4500"> 4 500 €</option>
+        <option value="5000"> 5 000 €</option>
+    </select> - 
+    <select name="max">
+        <option>Maksimi</option>
+        <option value="0">0 €</option>
+        <option value="500">500 €</option>
+        <option value="1000"> 1 000 €</option>
+        <option value="1500"> 1 500 €</option>
+        <option value="2000"> 2 000 €</option>
+        <option value="2500"> 2 500 €</option>
+        <option value="3000"> 3 000 €</option>
+        <option value="3500"> 3 500 €</option>
+        <option value="4000"> 4 000 €</option>
+        <option value="4500"> 4 500 €</option>
+        <option value="5000"> 5 000 €</option>
+    </select>
+</fieldset>
+
+Yllä olevat HTML-valintaelementit muodostetaan [select](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select-) sekä [option](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option)-tagien avulla seuraavasti:
+
+```html
+<select name="min">
+    <option>Minimi</option>
+    <option value="0">0 €</option>
+    <option value="500">500 €</option>
+    <option value="1000"> 1 000 €</option>
+    <option value="1500"> 1 500 €</option>
+    <!-- ... -->
+    <option value="5000"> 5 000 €</option>
+</select>
+```
+
+Tässä tuntiesimerkissä kokeilemme itse generoida HTML-elementit Javan toistorakenteen avulla.
+
+
+# For-toistokäsky
 
 While-toistokäskyn lisäksi on olemassa myös for-toistokäsky. For on tyypillinen esimerkiksi silloin, kun haluttu suoritusten määrä on jo alussa tiedossa. Tällöin laskurin alustaminen, kasvattaminen ja toistoehto saadaan kirjoitettua kompaktiin muotoon samojen sulkujen sisään:
 
@@ -138,9 +196,9 @@ while (i < 3) { // toistoehto
 }
 ```
 
-Tämä esimerkki on lainattu Helsingin yliopiston Agile Education Research -tutkimusryhmän ohjelmointikurssilta ja se on lisensoitu Creative Commons BY-NC-SA-lisenssillä. https://2017-ohjelmointi.github.io/part6/#section-35-for-toistolause 
+Tämä esimerkki on lainattu Helsingin yliopiston Agile Education Research -tutkimusryhmän ohjelmointikurssilta ja se on lisensoitu Creative Commons BY-NC-SA-lisenssillä. [https://2017-ohjelmointi.github.io/part6/#section-35-for-toistolause](https://2017-ohjelmointi.github.io/part6/#section-35-for-toistolause)
 
-Molemmat oheisista esimerkeistä tulostavat ruudulle luvut 0, 1 ja 2. Ainoa ero on se, että oikeanpuoleisessa esimerkissä muuttuja i on olemassa myös toistolauseen jälkeen.
+Molemmat oheisista esimerkeistä tulostavat ruudulle luvut 0, 1 ja 2. Ainoa ero on se, että while-esimerkissä muuttuja `i` on olemassa myös toistolauseen jälkeen.
 
 # Toistolauseesta poistuminen eli (`break`)
 
@@ -188,3 +246,7 @@ Tuntitehtävä: Muutetaan ohjelmaa niin, että päivien lukumäärä ei ole enna
 ---
 
 Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
+
+<script src="/tocbot/tocbot.min.js"></script>
+<script src="/scripts.js"></script>
+<link rel="stylesheet" href="/tocbot/tocbot.css">
