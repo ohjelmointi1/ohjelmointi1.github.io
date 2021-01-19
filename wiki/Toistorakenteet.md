@@ -121,7 +121,7 @@ Tämän yksinkertaistetun esimerkin avulla voit valita hinnan ylä- ja alarajan 
     </select>
 </fieldset>
 
-Yllä olevat HTML-valintaelementit muodostetaan [select](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select-) sekä [option](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option)-tagien avulla seuraavasti:
+Yllä olevat HTML-valintaelementit muodostetaan [select](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select-) sekä [option](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option)-tagien avulla kutakuinkin seuraavasti:
 
 ```html
 <select name="min">
@@ -242,7 +242,7 @@ Toteutetaan vertailun vuoksi toistorakenne, joka muodostaa [nettiauto.com:in](ht
     </select>
 </fieldset>
 
-Yllä olevat HTML-valintaelementit muodostetaan [select](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select-) sekä [option](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option)-tagien avulla esimerkiksi seuraavasti:
+Yllä olevat HTML-valintaelementit muodostetaan [select](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select-) sekä [option](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option)-tagien avulla kutakuinkin seuraavasti:
 
 ```html
 <select name="min">
@@ -270,7 +270,7 @@ import java.time.Year;
 
 HTML-rakenteen pienimpänä vuosilukuna voit käyttää vuotta 1886, [jota pidetään nykyaikaisten autojen syntymävuotena](https://en.wikipedia.org/wiki/Car).
 
-# Toistolauseesta poistuminen eli (`break`)
+# Toistolauseesta poistuminen eli **break**
 
 Varsin usein haluamme suorittaa koodia toistaiseksi, kunnes käyttäjä esimerkiksi antaa tietyn syötteen. Tällöin voi olla hyödyllistä tehdä "ikuinen silmukka" eli:
 
