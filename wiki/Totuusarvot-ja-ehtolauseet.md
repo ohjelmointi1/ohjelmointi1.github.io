@@ -5,6 +5,8 @@
 
 Tällä tunnilla tutustumme Javan totuusarvoihin `true` ja `false` sekä niihin liittyvään logiikkaan. Opimme vertailemaan eri arvoja toisiinsa ja tekemään vertailun tulosten perusteella ehdollisesti suoritettavaa ohjelmalogiikkaa.
 
+Myöhemmin tällä kurssilla hyödynnämme totuusarvoja ja ehtoja toteuttaessamme toistorakenteita, joissa koodia toistetaan haluamiemme ehtojen mukaisesti.
+
 Katso myös: [Ehtolauseet ja vaihtoehtoinen toiminta, Ohjelmoinnin MOOC 2020](https://ohjelmointi-20.mooc.fi/osa-1/6-ehtolauseet).
 
 **Sisällysluettelo**

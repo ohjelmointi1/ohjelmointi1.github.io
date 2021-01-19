@@ -3,7 +3,7 @@
 
 <h1 class="js-toc-ignore">Merkkijonot</h1>
 
-Merkkijonot ovat meille jo aikaisemmilta oppitunneita tuttua tekstidataa. Merkkijonot ovat kuitenkin muista "perustietotyypeistä" poiketen olioita, eli niillä on metodeja, joiden avulla merkkijonojen sisältöä voidaan käsitellä hyvin monipuolisesti. Metodien lisäksi olioihin liittyy myös sellainen erityispiirre, että olioiden vertailussa perinteiset yhtäsuuruusoperaatiot eivät riitä, vaan olioita vertaillaan metodien avulla. 
+Merkkijonot ovat meille jo aikaisemmilta oppitunneita tuttua tekstidataa. Merkkijonot ovat muista "perustietotyypeistä" poiketen olioita, eli niillä on metodeja, joiden avulla merkkijonojen sisältöä voidaan käsitellä hyvin monipuolisesti. 
 
 Tällä oppitunnilla tutustumme merkkijonojen metodeihin ja merkkijonojen vertailuun.
 
@@ -12,28 +12,17 @@ Tällä oppitunnilla tutustumme merkkijonojen metodeihin ja merkkijonojen vertai
 <div class="js-toc"></div>
 
 
-# Merkkijonot
 
-Kuten olemme aiemmin todenneet, merkkijonot ovat tyyppiä `String`. String on **luokka** ja yksittäiset merkkijonot ovat **olioita**. Merkkijonot luodaan muista olioista poiketen ilman `new`-avainsanaa, kirjoittamalla merkkijonon sisältö suoraan lainausmerkkeihin: `"esimerkki"`.
+# String-luokka
+
+Kuten olemme aiemmin todenneet, merkkijonot ovat tyyppiä `String`. String on **luokka** ja yksittäiset merkkijonot ovat **olioita**. Merkkijonoja voidaan luoda kirjoittamalla sisältö suoraan lainausmerkkeihin `"esimerkki"` tai lukemalla niitä esimerkiksi Scannerin avulla: `lukija.nextLine()`.
+
+Koska merkkijonot ovat olioita, niitä ei voida vertailla vertailuoperaattorilla `==`. Vertailu `merkkijono1 == merkkijono2` ei vertaile merkkijonojen sisältämiä merkkejä, vaan sitä, ovatko molemmat merkkijonot **sama** merkkijono muistissa. Kaksi sisällöltään samanlaista merkkijonoa tuottavat siis pääsääntöisesti vertailussa epätosia arvoja.
+
+Vertailuoperaattorin sijaan merkkijonojen vertailu voidaan tehdä `String`-luokan metodeilla, joita käsittelemme seuraavaksi.
 
 
-<!--
-Tehtäväidea: SATUNNAISEN SALASANAN GENEROINTI
-* for-looppi
-* subString tai charAt?
-
-Tehtäväidea: Numeronyymit
-* https://www.hongkiat.com/blog/tech-numeronyms/
-* L10N, I18N, K8S
--->
-
-## String-luokka
-
-Koska merkkijonot ovat olioita, niihin liittyy seuraavat seikat:
-* **olioiden vertailu ei toimi odotetusti vertailuoperaattorilla** `==`
-* merkkijonoilla on **paljon hyödyllisiä metodeja**, joilla niitä voidaan käsitellä
-
-## Olioiden vertailu, `equals` ja `equalsIgnoreCase`
+## Olioiden vertailu: equals ja equalsIgnoreCase
 
 Olioita vertailtaessa yhtäsuuruusoperaatio `==` vertailee, onko kyseessä __sama olio__. Se ei siis vertaile olioiden sisältöä, eli tässä tapauksessa merkkijonon merkkejä. **Samansisältöiset merkkijonot ovat siis samoja ainoastaan silloin, kun vertaillaan tiettyä merkkijono-oliota itseensä.**
 
@@ -52,42 +41,39 @@ if (language.equalsIgnoreCase("java")) {
 ```
 
 
-### Merkkijonojen metodien käyttäminen
+## Merkkijonojen metodien käyttäminen
 
 Merkkijonojen metodit on määritetty Javan [String-luokassa](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html). 
 
-Merkkijonojen metodeja voidaan kutsua suoraan merkkijonolle:
+Merkkijonojen metodeja voidaan kutsua suoraan merkkijonolle tai muuttujien avulla:
 
 ```java
-int pituus = "Hello world".length();            // --> 11
-String iso = "Hello world".toUpperCase();       // --> "HELLO WORLD"
-String pieni = "Hello world".toLowerCase();     // --> "hello world"
+int pituus = "mikä on tämän merkkijonon pituus?".length();  // 33
+String isolla = "muuta tämä isoksi".toUpperCase();          // "MUUTA TÄMÄ ISOKSI"
+String pienella = "Muuta Tämä Pieneksi".toLowerCase();      // "muuta tämä pieneksi"
+String trimmattu = "  poista tyhjät alusta ja lopusta  ".trim(); // "poista tyhjät alusta ja lopusta"
+
+String tilinumero = "    fi3315723000500504  ".trim().toUpperCase(); // "FI3315723000500504"
 ```
 
-Vastaavasti metodeja voidaan kutsua muuttujien avulla:
-
-```java
-String text = "  Hello world  ";
-text = text.trim();	// trim() poistaa tyhjät merkit alusta ja lopusta: "Hello world"
-```
-
-Huomaa, että `trim()` ei muuta alkuperäistä merkkijonoa, vaan palauttaa uuden merkkijonon, joka asetetaan yllä talteen samaan muuttujaan.
+Huomaa, että mikään yllä olevista metodeista ei muuta alkuperäistä merkkijonoa, vaan ne palauttavat uuden merkkijonon. 
 
 
-### Muuttumattomuus (immutability)
+## Muuttumattomuus (immutability)
 
-Merkkijonot ovat muuttumattomia, eli kerran luotua **merkkijonoa ei voi muuttaa**. `String`-luokan metodit eivät koskaan muuta alkuperäistä merkkijonoa, vaan luovat niistä kopioita. Samaan muuttujaan voidaan toki sijoittaa uusia merkkijonoja:
+Merkkijonot ovat muuttumattomia, eli kerran luotua **merkkijonoa ei voi muuttaa**. `String`-luokan metodit eivät koskaan muuta alkuperäistä merkkijonoa, vaan luovat niistä kopioita. Uusi merkkijono voidaan tosin asettaa samaan muuttujaan, jolloin se korvaa vanhan arvon:
 
 ```java
 String text = "hello";
 text.toUpperCase();
+
 System.out.println(text);  // tulostaa "hello" (alkuperäinen merkkijono ei muuttunut)
 
-text = text.toUpperCase(); // otetaan uusi merkkijono talteen
+text = text.toUpperCase(); // otetaan uusi merkkijono talteen samaan muuttujaan
 System.out.println(text);  // tulostaa "HELLO"
 ```
 
-### Merkkijonon osajono
+## Merkkijonon osajonot
 
 Merkkijonosta halutaan usein lukea jokin tietty osa. Tämä onnistuu metodilla `substring`. `substring`-metodia voidaan käyttää kahdella tavalla: 
 
@@ -113,6 +99,7 @@ System.out.println("7 " + loppuosa);        // 7 veljestä
 ```
 
 Tämä esimerkki on lainattu Helsingin yliopiston Agile Education Research -tutkimusryhmän ohjelmointikurssilta ja se on lisensoitu Creative Commons BY-NC-SA-lisenssillä. https://2017-ohjelmointi.github.io/part5/#section-26-merkkijonon-osajono 
+
 
 # String-luokan metodeja
 
@@ -147,6 +134,7 @@ public class MerkkijonojenMetodit {
 
         System.out.println(isSecure); // true
 
+
         String email = "john.smith@example.com";
 
         int dotIndex = email.indexOf(".");
@@ -165,19 +153,24 @@ public class MerkkijonojenMetodit {
 Monet metodit, kuten `replace`, palauttavat uusia merkkijonoja. Metodin palauttamille merkkijonoille voidaan kutsua uusia metodeja suoraan ns. "ketjuttamalla":
 
 ```java
-public class StringReplaceJaKetjuttaminen {
+public class HymioidenMuuttaminenEmojiksi {
 
     public static void main(String[] args) {
-        // seuraava replace kutsutaan aina edellisen palauttamalle tulokselle
-        // (ketjuttaminen):
-        String numerot = "1 2 3 4".replace("1", "one").replace("2", "two").replace("3", "three").replace("4", "four");
 
-        System.out.println(numerot);
+        // Seuraava `replace` kutsutaan aina edellisen operaation palauttamalle
+        // merkkijonolle. Tätä kutsutaan "ketjuttamiseksi":
+        String teksti = "Hei :) Mitä kuuluu? :-P".replace(":)", "😄")
+                .replace(":-P", "😜")
+                .replace("xD", "😁")
+                .replace(":(", "😒");
+
+        System.out.println(teksti);
     }
 }
 ```
 
-Yllä olevassa esimerkissä `numerot`-muuttujaan asetetaan lopulta ketjun päätteeksi palautettu viimeinen merkkijono. 
+Yllä olevassa esimerkissä `replace`-metodi korvaa yksitellen eri hymiöitä ja palauttaa aina uuden merkkijonon. Lopuksi viimeisen `replace`-kutsun tulos sijoitetaan `teksti`-muuttujaan.
+
 
 # Yleiset erikoismerkit merkkijonoissa
 
@@ -192,16 +185,27 @@ Syntaksi       | Kuvaus
 \\"            | Insert a double quote character in the text at this point.
 \\\\           | Insert a backslash character in the text at this point.
 
+Rivinvaihtomerkin käyttäminen merkkijonossa:
+
 ```java
 System.out.println("Ensimmäinen rivi\nToinen rivi");
-System.out.println("Tekstiä \"lainausmerkeissä\".");
 ```
 
 ```
 Ensimmäinen rivi
 Toinen rivi
+```
+
+Lainausmerkkien käyttäminen merkkijonossa:
+
+```java
+System.out.println("Tekstiä \"lainausmerkeissä\".");
+```
+
+```
 Tekstiä "lainausmerkeissä".
 ```
+
 
 # Lukujen poimiminen merkkijonoista
 
@@ -219,7 +223,7 @@ int tekstiNumeroksi = Integer.parseInt(teksti);
 
 # Yksittäiset kirjaimet: char
 
-Javassa on erillinen `char`-tietotyyppi yksittäisiä merkkejä varten. Yksittäinen merkki aloitetaan ja lopetetaan heittomerkillä, esim. `'a'`. Yksittäiset merkit eivät ole olioita, eli niillä ei ole metodeja.
+Javassa on erillinen `char`-tietotyyppi yksittäisiä merkkejä varten. Yksittäinen merkki aloitetaan ja lopetetaan heittomerkillä, esim. `'a'`. Yksittäiset merkit eivät ole olioita, eli niillä ei ole metodeja. Niiden pituus on aina 1, eli kahta tai useampaa merkkiä ei voida esittää char-tyypillä.
 
 Merkkijonolta voidaan pyytää yksittäisiä merkkejä niiden indeksin perusteella. Tämä onnistuu metodilla `charAt(int indeksi)`, joka saa parametrina halutun merkin indeksin merkkijonossa. Muista, että merkkijonojen indeksien laskeminen alkaa aina nollasta, eli esimerkiksi neljäs merkki on indeksissä kolme.
 
@@ -234,7 +238,7 @@ System.out.println("Neljäs merkki: " + merkki);  // Neljäs merkki: a
 System.out.println("Eka merkki: " + kirja.charAt(0)); // Eka merkki: K
 ```
 
-Tämä esimerkki on lainattu Helsingin yliopiston Agile Education Research -tutkimusryhmän ohjelmointikurssilta ja se on lisensoitu Creative Commons BY-NC-SA-lisenssillä. https://2017-ohjelmointi.github.io/part5/#section-25-yksittainen-merkki-merkkijonosta 
+Tämä esimerkki on lainattu Helsingin yliopiston Agile Education Research -tutkimusryhmän ohjelmointikurssilta ja se on lisensoitu Creative Commons BY-NC-SA-lisenssillä. [https://2017-ohjelmointi.github.io/part5/#section-25-yksittainen-merkki-merkkijonosta](https://2017-ohjelmointi.github.io/part5/#section-25-yksittainen-merkki-merkkijonosta)
 
 
 # Edistynyttä sisältöä: säännölliset lausekkeet, regular expressions / regex
@@ -245,7 +249,8 @@ Tämä esimerkki on lainattu Helsingin yliopiston Agile Education Research -tutk
 
 *Lähde: Helsingin yliopiston Agile Education Research -tutkimusryhmän ohjelmointikurssi (Creative Commons BY-NC-SA)  https://materiaalit.github.io/ohjelmointi-s17/part10/#section-19-saannolliset-lausekkeet*
 
-## `"teksti".matches(String regex); // edistynyttä sisältöä`
+
+## "teksti".matches(String regex); // edistynyttä sisältöä
 
 `matches`-metodi vertaa merkkijonoa annettuun säännölliseen lausekkeeseen ja palauttaa `true` tai `false` riippuen siitä, vastaako merkkijono lauseketta. Säännölliset lausekkeet (regular expression) ovat merkkijonoja, jotka muodostavat "kuvion" (pattern), jota vasten merkkijonoja verrataan.
 
@@ -257,6 +262,7 @@ Regex                   | Esimerkki   | Selitys
 [0-9]{7}                | 1234567     | tasan 7 kpl numeroita
 [a-zåäö -]{4,10}        | abc-d       | Pieniä kirjaimia a-z, å, ä, ö, väli tai viiva. Yhteensä 4-10 kpl.
 [A-Z]{1,3}-[0-9]{1,3}   | ABC-123     | 1-3 isoa kirjainta, viiva ja 1-3 numeroa 
+
 
 ## Opiskelijanumeron tarkastaminen
 
@@ -295,6 +301,39 @@ Säännölliset lausekkeet ovat erittäin ilmaisuvoimainen tapa käsitellä merk
 [![Perl Problems](https://imgs.xkcd.com/comics/perl_problems.png)](https://xkcd.com/1171/)
 
 https://xkcd.com/1171/ This work is licensed under a Creative Commons Attribution-NonCommercial 2.5 License
+
+
+
+# Tunnille soveltuvia tehtäväideoita
+
+## Satunnaisen salasanan generointi
+
+Toteuta ohjelma, joka generoi satunnaisia vahvoja salasanoja hyödyntäen Javan [Random](https://docs.oracle.com/javase/8/docs/api/java/util/Random.html)-luokkaa sekä merkkijonoja. Satunnaislukuja voit luoda Random-satunnaislukugeneraattorilla esim. seuraavasti:
+
+```java
+Random satunnaisGeneraattori = new Random();
+int satunnainen = satunnaisGeneraattori.nextInt(maksimi); // 0 <= satunnainen && satunnainen < maksimi
+```
+
+Pidemmän salasanan arpomiseksi toista satunnaislogiikkaa toistorakenteessa. Lisäksi tarvitset luokkasi alussa seuraavan `import`-komennon:
+
+```java
+import java.util.Random;
+```
+
+## Numeronyymit
+
+> *"Numeronyms are used to abbreviate long words that would be too cumbersome to accurately type all the time. We can call an abbreviation a numeronym if it contains both letters and numbers."*
+>
+> Anna Monus, 2018. 10 Numeronyms Web Developers Should Know. [https://www.hongkiat.com/blog/tech-numeronyms/](https://www.hongkiat.com/blog/tech-numeronyms/)
+
+Kirjoitetaan ohjelma, joka lyhentää merkkijonot seuraavalla ohjelmistoalalla tutulla logiikalla. Sanasta säilytetään ensimmäinen ja viimeinen kirjain, ja niiden väli korvataan numerolla, joka kertoo välissä olleiden merkkien määrän:
+
+Esimerkki               | Lyhenne
+------------------------|---------
+internationalization    | i18n
+localization            | l10n
+kubernetes              | k8s
 
 ---
 
