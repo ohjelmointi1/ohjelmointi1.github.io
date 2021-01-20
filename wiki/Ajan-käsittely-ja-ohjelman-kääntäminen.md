@@ -118,13 +118,13 @@ Ajan merkkijonoesitykset noudattavat Javassa [ISO 8601 -standardia](https://en.w
 2021-01-20T18:01:08Z
 2021-01-20
 ```
-<center>
+
 
 [![ISO 8601](https://imgs.xkcd.com/comics/iso_8601.png)](https://xkcd.com/1179/)
 
 [XKCD, ISO 8601](https://xkcd.com/1179/). Creative Commons Attribution-NonCommercial 2.5
 
-</center>
+
 
 ## Kokonaisluvut vs. oliot
 
