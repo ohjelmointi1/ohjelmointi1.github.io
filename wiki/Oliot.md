@@ -22,13 +22,13 @@ Tällä opintojaksolla keskitymme aluksi luokkien ja olioiden hyödyntämiseen d
 
 ## Suositeltavaa luettavaa
 
-Johdatus olio-ohjelmointiin: https://ohjelmointi-19.mooc.fi/osa-4/2-johdatus-olio-ohjelmointiin
+Johdatus olio-ohjelmointiin: [https://ohjelmointi-19.mooc.fi/osa-4/2-johdatus-olio-ohjelmointiin](https://ohjelmointi-19.mooc.fi/osa-4/2-johdatus-olio-ohjelmointiin)
 
-Luokka ja olio: https://ohjelmointi-19.mooc.fi/osa-4/3-luokka-ja-olio
+Luokka ja olio: [https://ohjelmointi-19.mooc.fi/osa-4/3-luokka-ja-olio](https://ohjelmointi-19.mooc.fi/osa-4/3-luokka-ja-olio)
 
-## Tiedon mallintaminen
+## Tiedon mallintaminen olioiden avulla
 
-Olemme käyttäneet jo monenlaisia olioita omissa ohjelmissamme. Käsitellessämme esim. päivämääriä olemme käyttäneet `LocalDate`-luokkaa emmekä toisistaan irrallisia muuttujia:
+Olemme käyttäneet jo monenlaisia olioita omissa ohjelmissamme. Käsitellessämme esim. päivämääriä olemme käyttäneet `LocalDate`-luokkaa, emmekä toisistaan irrallisia muuttujia:
 
 ```java
 // Päivämäärät olioina, kätevää:
@@ -123,9 +123,10 @@ Tampere	    | 238245
 Vantaa	    | 233290
 ...         | ...
 
-Kuten päivämäärien kanssa, kaupunkien ja niiden väkilukujen käsitteleminen yksittäisillä muuttujilla olisi hankalaa. 
+Kuten päivämäärien kanssa, kaupunkien ja niiden väkilukujen käsitteleminen yksittäisillä muuttujilla olisi hankalaa:
 
 ```java
+// ei näin!
 String nimi1 = "Helsinki";
 int vakiluku1 = 653_867;
 
@@ -138,6 +139,7 @@ int vakiluku2 = 289_413;
 Kaupunkien ja väkilukujen esittäminen esimerkiksi listoina olisi myös epäluonnollista, koska nimet ja väkiluvut olisivat toisistaan irrallisia tietoja:
 
 ```java
+// ei näin!
 List<String> nimet = List.of("Helsinki", "Espoo");
 List<Integer> vakiluvut = List.of(653_867, 289_413);
 ```
@@ -145,6 +147,7 @@ List<Integer> vakiluvut = List.of(653_867, 289_413);
 Kun ongelmasta tunnistetaan reaalimaailman käsitteitä, voidaan niitä vastaavia uusia rakenteita luoda myös ohjelmiin. Tässä esimerkissä on selvästi kyse kaupungeista, joten voimme luoda uuden käsitteen "Kaupunki". Tätä käsitettä kutsutaan luokaksi ja kaikkia yksittäisiä kaupunkeja olioiksi:
 
 ```java
+// Kaupunki-käsite selkeyttää ohjelmaa ja kokoaa toisiinsa liittyvät tiedot yhteen 👍
 Kaupunki hki = new Kaupunki("Helsinki", 653_867);
 Kaupunki esp = new Kaupunki("Espoo", 289_413);
 ```
@@ -186,7 +189,7 @@ public class Kaupunki {
 
     String nimi = "";
     int vakiluku = 0;
-
+    double pintaAla = 0;
 }
 ```
 
@@ -230,6 +233,7 @@ public class Kaupunki {
 Tätä metodia voidaan käyttää nyt kaikkien `Kaupunki`-olioden kautta:
 
 ```java
+System.out.println(hki.laskeVaestontiheys());
 System.out.println(esp.laskeVaestontiheys());
 ```
 
@@ -244,6 +248,8 @@ public class Kaupunki {
     // muuttujia käytetään jatkossa vain metodien kautta:
     private String nimi;
     private int vakiluku;
+    private double pintaAla;
+
 
 }
 ```

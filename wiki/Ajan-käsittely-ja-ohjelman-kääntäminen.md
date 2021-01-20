@@ -108,6 +108,24 @@ LocalDate paivaMerkkijonosta = LocalDate.parse("2021-12-24");
 
 Vastaavat `of`- ja `parse`-metodit löytyvät lukuisille muillekin aikaluokalle.
 
+
+## Ajan merkkijonoesitykset
+
+Ajan merkkijonoesitykset noudattavat Javassa [ISO 8601 -standardia](https://en.wikipedia.org/wiki/ISO_8601). Eri aikaluokkien `parse`-metodit odottavat saavansa ajanhetken merkkijonona esim. seuraavissa muodoissa:
+
+```
+2021-01-20T18:01:08+00:00
+2021-01-20T18:01:08Z
+2021-01-20
+```
+<center>
+
+[![ISO 8601](https://imgs.xkcd.com/comics/iso_8601.png)](https://xkcd.com/1179/)
+
+[XKCD, ISO 8601](https://xkcd.com/1179/). Creative Commons Attribution-NonCommercial 2.5
+
+</center>
+
 ## Kokonaisluvut vs. oliot
 
 Aikaa voidaan käsitellä sekä kokonaislukuina että olioina. Olioita käytettäessä saamme käyttöömme myös niihin liittyviä operaatioita, kuten vaikka tiedon siitä, onko kyseinen vuosi karkausvuosi:

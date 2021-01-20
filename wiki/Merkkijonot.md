@@ -297,12 +297,13 @@ boolean match = "1234".matches("\\d+");
 
 Säännölliset lausekkeet ovat erittäin ilmaisuvoimainen tapa käsitellä merkkijonoja, mutta ne ovat usein vaikeasti luettavia ja testattavia. Onkin hyvin mahdollista, että käyttäessäsi säännöllisiä lausekkeita ratkaistaksesi ongelman kohtaat tukun uusia ongelmia.
 
+<center>
 
 [![Perl Problems](https://imgs.xkcd.com/comics/perl_problems.png)](https://xkcd.com/1171/)
 
-https://xkcd.com/1171/ This work is licensed under a Creative Commons Attribution-NonCommercial 2.5 License
+[XKCD, Perl Problems](https://xkcd.com/1171/). Creative Commons Attribution-NonCommercial 2.5
 
-
+</center>
 
 # Tunnille soveltuvia tehtäväideoita
 
@@ -320,6 +321,16 @@ Pidemmän salasanan arpomiseksi toista satunnaislogiikkaa toistorakenteessa. Lis
 ```java
 import java.util.Random;
 ```
+
+Vähemmän vakuuttava tapa satunnaisluvun generoimiseksi olisi esim. arpakuutio:
+
+<center>
+
+[![Random Number](https://imgs.xkcd.com/comics/random_number.png)](https://xkcd.com/221/)
+
+[XKCD, Random number](https://xkcd.com/221/). Creative Commons Attribution-NonCommercial 2.5
+
+</center>
 
 ## Numeronyymit
 

@@ -399,6 +399,35 @@ if (!onKesa) {
 }
 ```
 
+# Syventävää osaamista: ehdollinen lauseke 💪
+
+"Normaalien" if-else-rakenteiden lisäksi Javassa ja monissa muissa kielissä on ns. ehdollinen lauseke (ternary operator), jonka avulla voidaan laskea kompaktissa muodossa yksittäinen ehdollinen arvo. Tällaisen lausekkeen syntaksi seuraava:
+
+```java
+ehto ? arvoJosTosi : arvoJosEpatosi;
+```
+
+Jos haluamme esimerkiksi valita koodissa matkalipun hinnaksi 40 euroa (opiskelija) tai 60 euroa (normaali), voitaisiin se tehdä "perinteisellä" tavalla näin:
+
+```java
+// oletetaan, että `boolean opiskelija` on määritetty aiemmin
+int hinta;
+if (opiskelija) {
+    hinta = 40;
+} else {
+    hinta = 60;
+}
+```
+
+Ehdollisella lausekkeella koodi tulee kuitenkin merkittävästi suoraviivaisemmaksi:
+
+```java
+// oletetaan, että `boolean opiskelija` on määritetty aiemmin
+int hinta = opiskelija ? 40 : 60;
+```
+
+Voit halutessasi lukea aiheesta lisää esim. osoitteesta [https://www.baeldung.com/java-ternary-operator](https://www.baeldung.com/java-ternary-operator).
+
 # Syventävää osaamista: switch/case -rakenne 💪
 
 Edellä esitettyjen `if`-rakenteiden lisäksi on olemassa myös toinen vaihtoehto, `switch`, johon sinun kannattaa tutustua itsenäisesti esimerkiksi osoitteessa [https://www.educative.io/edpresso/how-to-use-switch-case-statement-in-java](https://www.educative.io/edpresso/how-to-use-switch-case-statement-in-java).
