@@ -12,23 +12,9 @@ Tällä opetusviikolla harjoittelemme pääasiassa koodin toistamista tietyn mä
 <div class="js-toc"></div>
 
 
-<!--
-Tehtäväideat:
+# While-toistorakenne
 
-* piste- ja arvosana-asteikon läpikäynti toistorakenteen avulla
-    - Mahdollisesti CSV-datan generointi?
-    - toisessa luokassa olevan metodin kutsuminen!
-
-* <option>-rakenteen generointi
-    - vuosiluku
-    - hinta
-    - esimerkki nettiauto.com:ista!
-
--->
-
-# While-toistokäsky
-
-While-toistokäsky on yksinkertaisin tapa toistaa koodia Javalla. `while`-avainsanan jälkeen annetaan ehto sekä koodilohko, jota toistetaan niin kauan, kuin ehto on tosi:
+While-toistorakenne on yksinkertaisin tapa toistaa koodia Javalla. `while`-avainsanan jälkeen annetaan ehto sekä koodilohko, jota toistetaan niin kauan, kuin ehto on tosi:
 
 ```java
 while (ehto) {
@@ -36,6 +22,13 @@ while (ehto) {
     // lopetetaan, kun ehto == false
 }
 ```
+
+Vuokaaviona while-toistorakenteen logiikka on seuraava:
+
+![While loop flow diagram](assets/While-loop-diagram.svg)
+
+Kuva: P. Kemp. While loop flow diagram. CC0. [Wikipedia](https://commons.wikimedia.org/w/index.php?curid=894438)
+
 
 ## while vs. if
 
@@ -53,7 +46,7 @@ while (ehto) {
 }
 ```
 
-Ehtorakenteesta poiketen toistorakenteessa tehdään tyypillisesti muutoksia, jotka vaikuttavat tarkistettavaan ehtoon. Näiden muutosten avulla toisto saadaan tyypillisesti päättymään, kun haluttu logiikka on saatu valmiiksi.
+Ehtorakenteesta poiketen toistorakenteessa toistettavassa lohkossa tehdään tyypillisesti muutoksia, jotka vaikuttavat tarkistettavaan ehtoon. Näiden muutosten avulla toisto saadaan tyypillisesti päättymään, kun haluttu logiikka on saatu valmiiksi.
 
 
 ## Ehdon muuttaminen toistettavassa koodilohkossa
@@ -76,7 +69,7 @@ public static void main(String[] args) {
 }
 ```
 
-Suosittelen katsomaan myös videolta selostuksen yllä olevan koodin toiminnasta:
+Voit katsoa myös videolta selostuksen yllä olevan koodin toiminnasta:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/us9GXUZ60ws" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -179,7 +172,7 @@ for (int luku = 1; luku < 6; luku++) {
 
 ## For- ja while-toistorakenteet
 
-Loogisesti samat toistorakenteet on mahdollista toteuttaa sekä while- että for-toistorakenteina. Rakenteeksi kannattaakin valita aina tapauskohtaisesti tarkoitukseen paremmin sopiva.
+Loogisesti samat toistorakenteet on mahdollista toteuttaa sekä while- että for-toistorakenteina. Rakenteeksi kannattaakin valita aina tapauskohtaisesti tarkoitukseen paremmin sopiva. Tyypillisesti for-toistorakenne on oivallinen tilanteissa, joissa käymme jonkin ennalta tunnetun luku- tai arvojoukon läpi. While-rakenteella on puolestaan luontevaa toteuttaa toistaiseksi toistettavaa logiikkaa, jonka toistojen määrä tai käsiteltävä arvojoukko ei ole ennalta tiedossa.
 
 ```java
 for (int i = 0; i < 3; i++) {
@@ -255,6 +248,13 @@ Yllä olevat HTML-valintaelementit muodostetaan [select](https://developer.mozil
 </select>
 ```
 
+For-toistorakenteeksi muutettuna läpikäytävät arvot ovat nyt vuosilukuja. Vuosilukujen alkuarvo on nyt esimerkiksi `int vuosi = 2022` ja toisto jatkuu niin kauan, kuin vuosi on vähintään 1886: `vuosi >= 1886`. Toistokertojen välissä ei tällä kertaa kasvateta, vaan vähennetään vuotta yhdellä `vuosi--`.
+
+Yllä pienimpänä vuosilukuna käytettiin vuotta 1886, [jota pidetään nykyaikaisten autojen syntymävuotena](https://en.wikipedia.org/wiki/Car), mutta lopetusehdossa voi hyvin olla mikä vain vuosiluku.
+
+
+## Oikean vuosiluvun käyttäminen
+
 Toiston alustuksessa ei kannata käyttää kovakoodattua vuosilukua, vaan Javan valmiita `Year`- tai `LocalDate`-luokkia. Nykyisen vuosiluvun saat selville esimerkiksi seuraavalla koodilla:
 
 ```java
@@ -262,13 +262,11 @@ Year nykyinenVuosi = Year.now();
 int vuosiluku = nykyinenVuosi.getValue();
 ```
 
-Javan valmiin `Year`-luokan käyttämiseksi joudut myös lisäämään luokkasi alkuun `import`-käskyn:
+`Year`-luokan käyttämiseksi joudut myös lisäämään luokkasi alkuun `import`-käskyn:
 
 ```java
 import java.time.Year;
 ```
-
-HTML-rakenteen pienimpänä vuosilukuna voit käyttää vuotta 1886, [jota pidetään nykyaikaisten autojen syntymävuotena](https://en.wikipedia.org/wiki/Car).
 
 # Toistolauseesta poistuminen eli **break**
 
@@ -292,32 +290,43 @@ Yllä esitetystä toistorakenteesta voidaan poistua tarvittaessa kesken toistett
 Scanner lukija = new Scanner(System.in);
 
 while (true) {
-  System.out.println("osaan ohjelmoida!");
+    System.out.println("osaan ohjelmoida!");
 
-  System.out.print("jatketaanko (ei lopettaa)? ");
-  String komento = lukija.nextLine();
-  if (komento.equals("ei")) {
-    break;
-  }
+    System.out.print("jatketaanko (ei lopettaa)? ");
+    String komento = lukija.nextLine();
+    if (komento.equals("ei")) {
+        break;
+    }
 }
 
 System.out.println("kiitos ja kuulemiin.");
 ```
 
+Tässä esimerkissä merkkijonoja vertaillaan `equals`-metodilla, jota käsittelemme tarkemmin seuraavalla oppitunnilla.
+
 # Tehtäviä tunnille
-
-## Sademäärien kysyminen toiston avulla
-
-Kirjoitetaan ohjelma, joka kysyy päivittäisiä sademääriä ennalta tunnetun määrän yksi kerrallaan. Lopuksi tulostetaan lukumäärä, summa, minimi, maksimi sekä keskiarvo.
-
-
-## Tuntemattoman ajanjakson sademäärien kysyminen
-
-Muutetaan ohjelmaa niin, että päivien lukumäärä ei ole ennalta tunnettu, vaan negatiivinen sademäärä lopettaa kysymisen.
 
 ## Arvosana-asteikko
 
-Hyödynnetään kurssin etusivulla esitettyä `OsasuoritustenArviointi`-luokkaa ja lasketaan kaikille mahdollisille pistemäärille (0-25) niitä vastaavat koearvosanat. Tässä opimme samalla kutsumaan omassa projektissamme määritettyä metodia.
+Tässä tehtävässä hyödynnämme kurssin etusivulla esitettyä `OsasuoritustenArviointi`-luokkaa ja laskemme kaikille mahdollisille pistemäärille (0-25) niitä vastaavat koearvosanat. Opimme samalla kutsumaan omassa projektissamme määritettyä metodia.
+
+**Metodin kutsuminen**
+
+Olemme aikaisemmin kutsuneet Javan valmiita metodeja, esim:
+
+```java
+double halvempi = Math.min(hinta1, hinta2);
+```
+
+Tässä `min` on **metodi**, joka sijaitsee `Math`-**luokassa**. `hinta1` ja `hinta2` ovat metodille annettavia **parametriarvoja**. `min` palauttaa tuloksena `double`-tyyppisen luvun, joka yllä olevalla rivillä asetetaan talteen `halvempi`-muuttujaan. Käyttääksemme tätä metodia meidän ei tarvitse tietää, miten sen koodi on sisäisesti toteutettu.
+
+Samalla logiikalla voimme kutsua omassa koodissamme olevaa metodia. Luokassa `OsasuoritustenArviointi` on metodi nimeltä `laskeArvosana`. Kyseinen metodi tarvitsee kaksi `int`-kokonaislukua: saadut pisteet ja maksimipisteet. Lopputuloksena metodi palauttaa liukuluvun väliltä 0-5, joka on annetuilla pisteillä saatava arvosana. Näillä tiedoilla osaamme kutsua metodia seuraavasti:
+
+```java
+double arvosana = OsasuoritustenArviointi.laskeArvosana(omatPisteet, maksimiPisteet);
+```
+
+Tehdään seuraavaksi toistorakenne, joka käy läpi kaikki mahdolliset pistemäärät ja tulostaa niitä vastaavat arvosanat kokeessa, jossa maksimipisteet ovat 25.
 
 ## FizzBuzz
 
@@ -329,6 +338,17 @@ FizzBuzz-tehtävä on ohjelmistokehittäjien työhaastatteluiden klassikko, joss
 >
 > [http://wiki.c2.com/?FizzBuzzTest](http://wiki.c2.com/?FizzBuzzTest)
 
+## Sademäärien kysyminen toiston avulla
+
+Kirjoitetaan ohjelma, joka kysyy päivittäisiä sademääriä ennalta tunnetun määrän yksi kerrallaan. Lopuksi tulostetaan lukumäärä, summa, minimi, maksimi sekä keskiarvo.
+
+
+## Tuntemattoman ajanjakson sademäärien kysyminen
+
+Muutetaan ohjelmaa niin, että päivien lukumäärä ei ole ennalta tunnettu, vaan negatiivinen sademäärä lopettaa kysymisen.
+
+
+
 
 ---
 
@@ -337,3 +357,4 @@ Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Crea
 <script src="/tocbot/tocbot.min.js"></script>
 <script src="/scripts.js"></script>
 <link rel="stylesheet" href="/tocbot/tocbot.css">
+

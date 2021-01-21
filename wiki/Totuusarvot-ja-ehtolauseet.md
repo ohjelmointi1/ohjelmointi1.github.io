@@ -339,6 +339,10 @@ Ohjelmissa on toisinaan tarpeen tehdä sisäkkäisiä ehtorakenteita. Tällöin 
 
 Tehtävässä ehtologiikka kannattaa ensin luonnostella kaavioksi, jossa lähdet liikkeelle yksinkertaisimmasta tapauksesta (jälkitarkastus) ja etenet vaihe kerrallaan päästömittauksen ja polttoainetyypin kyselyihin.
 
+[![A nested "If–Then–Else" flow diagram by Snubcube](assets/IF-THEN-ELSE-END_flowchart.png)](https://en.wikipedia.org/wiki/Conditional_(computer_programming))
+
+*Kuva: A nested "If–Then–Else" flow diagram by Snubcube. CC BY-SA 3.0. [Wikipedia](https://en.wikipedia.org/wiki/Conditional_(computer_programming)#/media/File:IF-THEN-ELSE-END_flowchart.svg)*
+
 <!--```java
 int hinta = 0;
 
