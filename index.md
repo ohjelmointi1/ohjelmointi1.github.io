@@ -40,7 +40,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
                 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko01/perusteet">📁 Oppitunnin esimerkkikoodit</a><br /><br />
                 <a href="https://web.microsoftstream.com/video/f8cafe9c-976c-4f00-9713-4a8adc8d34bd">📼 Kurssin yleiset asiat</a><br />
                 <a href="https://web.microsoftstream.com/video/00c2134a-6187-46d7-a7ac-da7218ff4a10">📼 Ensimmäisen Java-ohjelman kirjoittaminen ja lähetys Viopeen</a><br />
-                <a href="https://web.microsoftstream.com/video/e5771426-2a6d-4aa4-be5b-ecd7dbe03805">📼 Javan muuttujat ja lukujen tietotyypit</a><br />
+                <a href="https://web.microsoftstream.com/video/e5771426-2a6d-4aa4-be5b-ecd7dbe03805">📼 Javan muuttujat ja lukujen tietotyypit</a>
                 <!--<a href="src/viikko1/perusteet/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <strong>Oppitunnin videot:</strong><br />
@@ -59,6 +59,12 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
             <td>
                 <strong>Totuusarvot ja ehtolauseet</strong><br />
                 <a href="wiki/Totuusarvot-ja-ehtolauseet">📝 Muistiinpanot</a><br />
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko01/ehtorakenteet">📁 Oppitunnin esimerkkikoodit</a><br /><br />
+                <a href="https://web.microsoftstream.com/video/72835f81-cea0-45e8-b2fe-7deb472eb8fd">📼 Scanner ja DecimalFormat</a><br />
+                <a href="https://web.microsoftstream.com/video/c1d1f2cd-8d56-4a2c-81d1-7c27caf574bc">📼 Totuusarvot ja vertailuoperaatiot</a><br />
+                <a href="https://web.microsoftstream.com/video/d45036ec-153e-4685-b5cc-638ac608a657">📼 Kangaskassit-esimerkki (if-else if-else)</a><br />
+                <a href="https://web.microsoftstream.com/video/a0a57cc7-bfa1-46ae-b088-6a01b947d47a">📼 Kellonaikojen vertailu ja LocalTime</a><br />
+                <a href="https://web.microsoftstream.com/video/55c3e7f7-f3e3-4c83-b370-dee3635dea83">📼 Matkalippujen hinnat -esimerkki</a>
                 <!--<a href="src/viikko1/ehtolauseet/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <strong>Oppitunnin videot:</strong><br />
