@@ -3,7 +3,7 @@
 
 <h1 class="js-toc-ignore">Merkkijonot</h1>
 
-Merkkijonot ovat meille jo aikaisemmilta oppitunneita tuttua tekstidataa. Merkkijonot ovat muista "perustietotyypeistä" poiketen olioita, eli niillä on metodeja, joiden avulla merkkijonojen sisältöä voidaan käsitellä hyvin monipuolisesti. 
+Merkkijonot ovat meille jo aikaisemmilta oppitunneita tuttua tekstidataa. Merkkijonot ovat "alkeistietotyypeistä" poiketen olioita, eli niillä on metodeja, joiden avulla merkkijonojen sisältöä voidaan käsitellä hyvin monipuolisesti. 
 
 Tällä oppitunnilla tutustumme merkkijonojen metodeihin ja merkkijonojen vertailuun.
 
@@ -29,14 +29,16 @@ Olioita vertailtaessa yhtäsuuruusoperaatio `==` vertailee, onko kyseessä __sam
 Merkkijonoja vertaillaan siksi aina `equals`- ja `equalsIgnoreCase` –metodeilla, jotka vertailevat merkkijonojen sisältöjä. Molemmat vertailumetodit palauttavat aina totuusarvon `true` tai `false`.
 
 ```java
-String language = "JAVA";
+String vastaus = lukija.nextLine(); // "Kyllä"
 
-if (language.equals("java")) {
+// equals-metodi vertailee, ovatko merkkijonot sisällöltään samat:
+if (vastaus.equals("kyllä")) {
      // tätä lohkoa ei suoriteta, koska kirjainkoko ei täsmää
 }
 
-if (language.equalsIgnoreCase("java")) {
-     // tämä lohko suoritetaan, koska equalsIgnoreCase-metodi ei huomioi kirjainkokoa
+// equalsIgnoreCase-metodi ei huomioi kirjainkokoa:
+if (vastaus.equalsIgnoreCase("kyllä")) {
+     // tämä lohko suoritetaan!
 }
 ```
 
@@ -87,23 +89,20 @@ Parametriarvoilla `(5, 10)` saadaan siis merkit indekseistä **5, 6, 7, 8 ja 9**
 Koska substring-metodin paluuarvo on tyyppiä `String`, voidaan metodin paluuarvo ottaa talteen `String`-tyyppiseen muuttujaan:
 
 ```java
-String kirja = "Kalavale";
+String rekisterinumero = "AKU-313";
+// merkkinonon indeksit:  0123456
 
-System.out.println(kirja.substring(4));     // merkkijonon loppu alkaen indeksistä 4
-System.out.println(kirja.substring(2, 6));  // palauttaa merkit indekseistä 2, 3, 4 ja 5
+System.out.println(rekisterinumero.substring(0, 3));  // merkit indekseistä 0, 1, ja 2: "AKU"
+System.out.println(rekisterinumero.substring(4));     // merkkijonon loppu alkaen indeksistä 4: "313"
 
-String kirja2 = "8 veljestä";
-
-String loppuosa = kirja2.substring(2);
-System.out.println("7 " + loppuosa);        // 7 veljestä
+// viivan paikka kannattaa selvittää ohjelmallisesti, koska käytössä on eripituisia rekisterinumeroita:
+int viivanIndeksi = rekisterinumero.indexOf("-");
 ```
-
-Tämä esimerkki on lainattu Helsingin yliopiston Agile Education Research -tutkimusryhmän ohjelmointikurssilta ja se on lisensoitu Creative Commons BY-NC-SA-lisenssillä. https://2017-ohjelmointi.github.io/part5/#section-26-merkkijonon-osajono 
 
 
 # String-luokan metodeja
 
-Tutustu metodeihin tarkemmin täällä: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html
+Tutustu metodeihin tarkemmin täällä: [https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html)
 
 Tyyppi, nimi ja parametrit        | Kuvaus
 ----------------------------------| ------------
@@ -176,7 +175,7 @@ Yllä olevassa esimerkissä `replace`-metodi korvaa yksitellen eri hymiöitä ja
 
 Kaikkia erikoismerkkejä ei voida esittää sellaisenaan merkkijonoissa. Esimerkiksi lainausmerkki merkkijonon sisällä sekoittuisi merkkijonon päättävään lainausmerkkiin. Erikoismerkit täytyykin esittää erityisten kontrollimerkkien avulla.
 
-https://docs.oracle.com/javase/tutorial/java/data/characters.html
+[https://docs.oracle.com/javase/tutorial/java/data/characters.html](https://docs.oracle.com/javase/tutorial/java/data/characters.html)
 
 Syntaksi       | Kuvaus
 ---------------| ------
@@ -205,6 +204,12 @@ System.out.println("Tekstiä \"lainausmerkeissä\".");
 ```
 Tekstiä "lainausmerkeissä".
 ```
+
+Tapauksesta riippuen kenoviivoja joudutaan joskus laittamaan hyvin monia peräkkäin:
+
+[![Backslashes](https://imgs.xkcd.com/comics/backslashes.png)](https://xkcd.com/1638/)
+
+[XKCD, Backslashes](https://xkcd.com/1638/). Creative Commons Attribution-NonCommercial 2.5
 
 
 # Lukujen poimiminen merkkijonoista
@@ -247,7 +252,7 @@ Tämä esimerkki on lainattu Helsingin yliopiston Agile Education Research -tutk
 >
 > "Oikeellisuuden tarkistus säännöllisten lausekkeiden avulla tapahtuu ensin sopivan säännöllisen lausekkeen määrittelyn. Tämän jälkeen käytetään `String`-luokan metodia `matches`, joka tarkistaa vastaako merkkijono parametrina annettua säännöllistä lauseketta. Opiskelijanumeron tapauksessa sopiva säännöllinen lauseke on `01[0-9]{7}`"
 
-*Lähde: Helsingin yliopiston Agile Education Research -tutkimusryhmän ohjelmointikurssi (Creative Commons BY-NC-SA)  https://materiaalit.github.io/ohjelmointi-s17/part10/#section-19-saannolliset-lausekkeet*
+*Lähde: Helsingin yliopiston Agile Education Research -tutkimusryhmän ohjelmointikurssi (Creative Commons BY-NC-SA)  [https://materiaalit.github.io/ohjelmointi-s17/part10/#section-19-saannolliset-lausekkeet](https://materiaalit.github.io/ohjelmointi-s17/part10/#section-19-saannolliset-lausekkeet)*
 
 
 ## "teksti".matches(String regex); // edistynyttä sisältöä
@@ -287,7 +292,7 @@ if (numero.matches("a[0-9]{7}")) {
 
 ## Regex-sääntöjä
 
-Tutustu regex-sääntöihin osoitteessa: https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html
+Tutustu regex-sääntöihin osoitteessa: [https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)
 
 Huom! Kuten ylempänä on esitetty, merkkijonoissa kenoviiva `\` on erikoismerkki, jota ei voida käyttää sellaisenaan. Kenoviiva tulee esittää Javan merkkijonoissa aina kahtena kenoviivana `\\`. Regex-säännön `\d` eteen tulee siis Javassa laittaa "ylimääräinen" kenoviiva: 
 
