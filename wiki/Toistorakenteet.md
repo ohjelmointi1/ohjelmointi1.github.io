@@ -73,10 +73,10 @@ Voit katsoa myös videolta selostuksen yllä olevan koodin toiminnasta:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/us9GXUZ60ws" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Tämä esimerkki videoineen on lainattu Helsingin yliopiston Agile Education Research -tutkimusryhmän ohjelmointikurssilta ja se on lisensoitu Creative Commons BY-NC-SA-lisenssillä. [https://2017-ohjelmointi.github.io/part2/#section-40-toistolauseen-ehto-toiston-lopettajana](https://2017-ohjelmointi.github.io/part2/#section-40-toistolauseen-ehto-toiston-lopettajana)
+Tämä esimerkki videoineen on lainattu Helsingin yliopiston Agile Education Research -tutkimusryhmän ohjelmointikurssilta ja se on lisensoitu Creative Commons BY-NC-SA-lisenssillä. [https://2017-ohjelmointi.github.io/part2/#section-40-toistolauseen-ehto-toiston-lopettajana](https://2017-ohjelmointi.github.io/part2/#section-40-en-ehto-toiston-lopettajana)
 
 
-# While-toistokäskyn hyödyntäminen
+# While-toistorakenteen hyödyntäminen
 
 Tehdään oppitunnilla pieni Java-ohjelma, joka generoi HTML: `<select>`-elementin. Elementin idea on peräisin [nettiauto.com:in](https://www.nettiauto.com/) hakutyökalusta, jossa haettavan auton hintaa voidaan rajoittaa vastaavalla tavalla.
 
@@ -131,9 +131,9 @@ Yllä olevat HTML-valintaelementit muodostetaan [select](https://developer.mozil
 Tässä tuntiesimerkissä kokeilemme itse generoida HTML-elementit Javan toistorakenteen avulla. Aikaisemmasta esimerkistä poiketen emme kasvatakaan lukua yhdellä, vaan 500:lla. Muuten koodi on hyvin samankaltainen. Lukujen muotoilussa hyödynnetään DecimalFormat-luokkaa siten, että muotoilussa on käytetty tuhaterotinta (`.`) ja ehdollisia numeroita (`#`): `#,### €`.
 
 
-# For-toistokäsky
+# For-toistorakenne
 
-While-toistokäskyn lisäksi on olemassa myös for-toistokäsky. For on tyypillinen esimerkiksi silloin, kun haluttu suoritusten määrä on jo alussa tiedossa. Tällöin laskurin alustaminen, kasvattaminen ja toistoehto saadaan kirjoitettua kompaktiin muotoon samojen sulkujen sisään:
+While-toistorakenteen lisäksi on olemassa myös for-toistorakenne. For on tyypillinen esimerkiksi silloin, kun haluttu suoritusten määrä on jo alussa tiedossa. Tällöin laskurin alustaminen, kasvattaminen ja toistoehto saadaan kirjoitettua kompaktiin muotoon samojen sulkujen sisään:
 
 ```java
 for (alustus; toistoehto; kasvatus) {
@@ -144,7 +144,7 @@ for (alustus; toistoehto; kasvatus) {
 
 For-rakenteessa suoritetaan ensin alustus. Sen jälkeen tarkastetaan onko toistoehto tosi, ja jos on, suoritetaan koodilohko. Koodilohkon suorittamisen jälkeen suoritetaan aina kasvatusoperaatio, jonka jälkeen ehto tarkastetaan uudestaan.
 
-Jos haluamme esimerkiksi tulostaa luvut yhdestä viiteen, kuten edellä teimme `while`-toistokäskyn kanssa, se voisi tapahtua seuraavasti:
+Jos haluamme esimerkiksi tulostaa luvut yhdestä viiteen, kuten edellä teimme `while`-toistorakenteen kanssa, se voisi tapahtua seuraavasti:
 
 Kirjoitetaan alustukseen `int luku = 1`:
 
@@ -180,7 +180,7 @@ for (int i = 0; i < 3; i++) {
 }
 ```
 
-Sama while-toistokäskyllä:
+Sama while-toistorakenne:
 
 ```java
 int i = 0; // toistossa käytettävän muuttujan alustus 
@@ -193,9 +193,9 @@ while (i < 3) { // toistoehto
 
 Tämä esimerkki on lainattu Helsingin yliopiston Agile Education Research -tutkimusryhmän ohjelmointikurssilta ja se on lisensoitu Creative Commons BY-NC-SA-lisenssillä. [https://2017-ohjelmointi.github.io/part6/#section-35-for-toistolause](https://2017-ohjelmointi.github.io/part6/#section-35-for-toistolause)
 
-Molemmat oheisista esimerkeistä tulostavat ruudulle luvut 0, 1 ja 2. Ainoa ero on se, että while-esimerkissä muuttuja `i` on olemassa myös toistolauseen jälkeen.
+Molemmat oheisista esimerkeistä tulostavat ruudulle luvut 0, 1 ja 2. Ainoa ero on se, että while-esimerkissä muuttuja `i` on olemassa myös toistorakenteen jälkeen.
 
-# For-toistokäskyn hyödyntäminen
+# For-toistorakenteen hyödyntäminen
 
 Toteutetaan vertailun vuoksi toistorakenne, joka muodostaa [nettiauto.com:in](https://www.nettiauto.com/) hakutyökalun mukaisen vuosiluvun valintaan käytettävän HTML-rakenteen. Aikaisemmasta esimerkistä poiketen tässä elementissä luvut ovat laskevassa järjestyksessä, ja suurin arvo vaihtuu aina kuluvan vuoden mukaan:
 
@@ -268,7 +268,7 @@ int vuosiluku = nykyinenVuosi.getValue();
 import java.time.Year;
 ```
 
-# Toistolauseesta poistuminen eli **break**
+# Toistorakenteesta poistuminen eli **break**
 
 Varsin usein haluamme suorittaa koodia toistaiseksi, kunnes käyttäjä esimerkiksi antaa tietyn syötteen. Tällöin voi olla hyödyllistä tehdä "ikuinen silmukka" eli:
 
@@ -279,7 +279,7 @@ while (true) {
 }
 ```
 
-Yllä esitetystä toistorakenteesta voidaan poistua tarvittaessa kesken toistettavan lohkon suorituksen komennolla `break`. Komento `break` on tyypillisesti toistolauseen lohkon sisällä olevassa ehtolauseessa, jossa tarkastellaan, haluaako käyttäjä poistua toistolauseesta, tai onko tapahtunut jokin muu toiston keskeyttävä tapahtuma.
+Yllä esitetystä toistorakenteesta voidaan poistua tarvittaessa kesken toistettavan lohkon suorituksen komennolla `break`. Komento `break` on tyypillisesti toistorakenteen sisällä olevassa ehtolauseessa, jossa tarkastellaan, haluaako käyttäjä poistua toistorakenteesta, tai onko tapahtunut jokin muu toiston keskeyttävä tapahtuma.
 
 ```java
 /* 
