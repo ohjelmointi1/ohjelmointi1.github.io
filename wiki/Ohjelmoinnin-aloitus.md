@@ -471,7 +471,7 @@ Kahden luvun laskuoperaatioiden lisäksi Javassa on operaatiot yksittäisen luvu
 Operaattori | Kuvaus
 ------------|---------
 ++          | Kasvattaa arvoa yhdellä
---          | Vähentää arvoa yhdellä
+\-\-        | Vähentää arvoa yhdellä
 !           | Kääntää totuusarvon päinvastaiseksi
 
 [https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html)
