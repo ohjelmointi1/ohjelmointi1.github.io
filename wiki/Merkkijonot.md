@@ -90,13 +90,21 @@ Koska substring-metodin paluuarvo on tyyppiä `String`, voidaan metodin paluuarv
 
 ```java
 String rekisterinumero = "AKU-313";
-// merkkinonon indeksit:  0123456
+// indeksit:              0123456
 
-System.out.println(rekisterinumero.substring(0, 3));  // merkit indekseistä 0, 1, ja 2: "AKU"
-System.out.println(rekisterinumero.substring(4));     // merkkijonon loppu alkaen indeksistä 4: "313"
+System.out.println(rekisterinumero.substring(0, 3)); // merkit indekseistä 0, 1, ja 2: "AKU"
+System.out.println(rekisterinumero.substring(4));    // merkkijonon loppu alkaen indeksistä 4: "313"
+```
 
-// viivan paikka kannattaa selvittää ohjelmallisesti, koska käytössä on eripituisia rekisterinumeroita:
-int viivanIndeksi = rekisterinumero.indexOf("-");
+Yllä indeksi `3` on kovakoodattu, mikä aiheuttaa bugeja, kun rekisterinumerossa on alle kolme kirjainta. Viivan paikka kannattaakin selvittää ohjelmallisesti hyödyntämällä merkkijonojen `indexOf`-metodia:
+
+```java
+String rekisterinumero = "LOL-2";
+
+int viiva = rekisterinumero.indexOf("-");               // 3
+
+String alkuosa = rekisterinumero.substring(0, viiva);   // "AKU"
+String loppuosa = rekisterinumero.substring(viiva + 1); // "313"
 ```
 
 
@@ -106,20 +114,22 @@ Tutustu metodeihin tarkemmin täällä: [https://docs.oracle.com/en/java/javase/
 
 Tyyppi, nimi ja parametrit        | Kuvaus
 ----------------------------------| ------------
-`char charAt(int index)`          | Returns the char value at the specified index.
-`public boolean startsWith(String prefix)`  | Tests if this string starts with the specified prefix.
-`public boolean endsWith(String suffix)`    | Tests if this string ends with the specified suffix.
-`boolean contains(String s)`      | Returns true if and only if this string contains the specified sequence of char values.
-`int indexOf(String str)`         | Returns the index within this string of the first occurrence of the specified substring.
-`int length()`                    | Returns the length of this string.
-`boolean matches(String regex)`   | Tells whether or not this string matches the given regular expression.
-`String replace(CharSequence target, CharSequence replacement)` | Replaces each substring of this string that matches the literal target sequence with the specified literal replacement sequence.
-`String[] split(String regex)`    | Splits this string around matches of the given regular expression.
-`String substring(int beginIndex)`| Returns a string that is a substring of this string.
-`String substring(int beginIndex, int endIndex)` | Returns a string that is a substring of this string.
-`String toLowerCase()`            | Converts all of the characters in this String to lower case
-`String toUpperCase()`            | Converts all of the characters in this String to upper case
-`String trim()`                   | Returns a string whose value is this string, with any leading and trailing whitespace removed.
+`char charAt(int index)`          | Yksittäinen kirjain tietystä indeksistä
+`public boolean startsWith(String prefix)`  | Tarkistaa alkaako merkkijono täsmälleen annetuilla merkeillä
+`public boolean endsWith(String suffix)`    | Tarkistaa päättyykö merkkijono täsmälleen annettuihin merkkeihin
+`boolean contains(String s)`      | Tarkistaa onko annettu merkkijono osa tätä merkkijonoa
+`int indexOf(String str)`         | Antaa indeksin, josta osamerkkijono löytyy, **tai -1 jos ei löydy**
+`int length()`                    | Merkkijonon pituus
+`boolean matches(String regex)`   | Tarkistaa vastaako merkkijono annettua säännöllistä lauseketta
+`String replace(CharSequence target, CharSequence replacement)` | Korvaa kaikki ensimmäistä annettua osaa vastaavat kohdat jälkimmäisellä
+`String[] split(String regex)`    | Pilkkoo merkkijonon taulukoksi annetun säännöllisen lausekkeen kohdilta
+`String substring(int beginIndex)`| Palauttaa merkkijonon annetusta indeksistä loppuun
+`String substring(int beginIndex, int endIndex)` | Palauttaa merkkijonon annetusta alkuindeksistä (loppuindeksi - 1):een
+`String toLowerCase()`            | Muuttaa merkkijonon kaikki kirjaimet pieniksi
+`String toUpperCase()`            | Muuttaa merkkijonon kaikki kirjaimet ISOIKIS
+`String trim()`                   | Poistaa sekä alusta että lopusta kaikki tyhjät merkit
+
+Muista, että merkkijonojen metodit eivät koskaan muuta kyseistä merkkijonoa, vaan ne palauttavat uusia merkkijonoja.
 
 ## Esimerkkejä merkkijonojen metodeista
 
@@ -127,24 +137,36 @@ Tyyppi, nimi ja parametrit        | Kuvaus
 public class MerkkijonojenMetodit {
 
     public static void main(String[] args) {
-        String address = "https://www.example.com/";
-
-        boolean isSecure = address.startsWith("https://");
-
-        System.out.println(isSecure); // true
+        String osoite = "https://ohjelmointi1.github.io/";
+        String kurssikoodi = "swd4tn032-3099";
 
 
-        String email = "john.smith@example.com";
+        boolean onSuojattu = osoite.startsWith("https://");
+        System.out.println("Suojattu: " + onSuojattu);
 
-        int dotIndex = email.indexOf(".");
-        String firstName = email.substring(0, dotIndex);
-        System.out.println(firstName); // john
 
-        int atIndex = email.indexOf("@");
-        String lastName = email.substring(dotIndex + 1, atIndex);
-        System.out.println(lastName); // smith
+        int valiviiva = kurssikoodi.indexOf("-");
+        String opintojakso = kurssikoodi.substring(0, valiviiva);
+        System.out.println("Opintojakso: " + opintojakso.toUpperCase());
+
+
+        String toteutusnumero = kurssikoodi.substring(valiviiva + 1);
+        System.out.println("Toteutusnumero: " + toteutusnumero);
+
+
+        boolean ohjelmistotuotanto = kurssikoodi.toLowerCase().contains("swd");
+        System.out.println("Ohjelmistotuotanto: " + ohjelmistotuotanto);
     }
 }
+```
+
+Yllä oleva koodi tulostaa seuraavaa:
+
+```
+Suojattu: true
+Opintojakso: SWD4TN032
+Toteutusnumero: 3099
+Ohjelmistotuotanto: true
 ```
 
 ## Esimerkki metodikutsujen ketjuttamisesta
@@ -195,14 +217,22 @@ Ensimmäinen rivi
 Toinen rivi
 ```
 
-Lainausmerkkien käyttäminen merkkijonossa:
+Kenoviiva kirjoitetaan aina tuplana:
 
 ```java
-System.out.println("Tekstiä \"lainausmerkeissä\".");
+String polku = "C:\\Users\\Minä\\Documents\\"; // => C:\Users\Minä\Documents\
+```
+
+
+Lainausmerkkejä joudutaan käsittelemään usein merkkijonoissa, jotka sisältävät esimerkiksi HTML-elementtejä tai säännöllisiä lausekkeita:
+
+```java
+int hinta = 500;
+System.out.println("<option value=\"" + hinta + "\">" + hinta + " €</option>");
 ```
 
 ```
-Tekstiä "lainausmerkeissä".
+<option value="500">500 €</option>
 ```
 
 Tapauksesta riippuen kenoviivoja joudutaan joskus laittamaan hyvin monia peräkkäin:
@@ -305,6 +335,30 @@ Säännölliset lausekkeet ovat erittäin ilmaisuvoimainen tapa käsitellä merk
 [![Perl Problems](https://imgs.xkcd.com/comics/perl_problems.png)](https://xkcd.com/1171/)
 
 [XKCD, Perl Problems](https://xkcd.com/1171/). Creative Commons Attribution-NonCommercial 2.5
+
+
+# Edistynyttä sisältöä: Merkkijonojen muotoilu 
+
+Muodostettaessa merkkijonoja, joihin halutaan sijoittaa esimerkiksi muuttujissa olevia arvoja, lopputulos voi joskus olla varsin vaikeasti luettavaa:
+
+```java
+int hinta = 3500;
+String muotoiltu = "3 500 €";
+
+String html = "<option value=\"" + hinta + "\">" + muotoiltu + "</option>";
+```
+
+Arvojen sijoittamiseksi osaksi merkkijonoa onkin olemassa toinen lähestymistapa, jossa `String`-luokan `format`-metodille määritellään haluttu muoto ja tähän muotoon sijoitettavat arvot:
+
+```java
+int hinta = 3500;
+String muotoiltu = "3 500 €";
+
+String html = String.format("<option value=\"%d\">%s €</option>", hinta, muotoiltu);
+```
+
+Lisätietoja format-metodista sekä siinä käytettävistä muotoilumääreistä (`%s`, `%d`) löydät esim. osoitteesta [https://www.educative.io/edpresso/what-is-the-stringformat-method-in-java](https://www.educative.io/edpresso/what-is-the-stringformat-method-in-java).
+
 
 # Tunnille soveltuvia tehtäväideoita
 

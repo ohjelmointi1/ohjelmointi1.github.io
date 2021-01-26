@@ -86,6 +86,9 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
                 <strong>Toistorakenteet</strong><br />
                 <a href="wiki/Toistorakenteet">📝 Muistiinpanot</a><br />
                 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko02/toisto">📁 Oppitunnin esimerkkikoodit</a><br /><br />
+                <a href="https://web.microsoftstream.com/video/f2aa8a54-a86a-484e-a60d-0e80cde9a891">📼 Johdanto toistorakenteisiin ja while-rakenteen hyödyntäminen</a><br />
+                <a href="https://web.microsoftstream.com/video/aa745036-e5a0-489e-9bb3-85fcb84a4b55">📼 For-toistorakenne ja sen hyödyntäminen</a><br />
+                <a href="https://web.microsoftstream.com/video/c3e79c0e-02d9-40df-96ad-309c235fff35">📼 Break-avainsana, sademäärät ja arvosana-asteikko</a><br />
                 <!--<a href="src/viikko2/toistorakenteet/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <strong>Oppitunnin videot:</strong><br />

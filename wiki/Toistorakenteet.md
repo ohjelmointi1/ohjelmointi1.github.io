@@ -12,6 +12,16 @@ Tällä opetusviikolla harjoittelemme pääasiassa koodin toistamista tietyn mä
 <div class="js-toc"></div>
 
 
+# Johdanto toistorakenteisiin ja while-rakenteen hyödyntäminen
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/f2aa8a54-a86a-484e-a60d-0e80cde9a891?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Video vaatii tunnistautumisen HH-tunnuksellasi.
+
+[https://web.microsoftstream.com/video/f2aa8a54-a86a-484e-a60d-0e80cde9a891](https://web.microsoftstream.com/video/f2aa8a54-a86a-484e-a60d-0e80cde9a891)
+
+
+
 # While-toistorakenne
 
 While-toistorakenne on yksinkertaisin tapa toistaa koodia Javalla. `while`-avainsanan jälkeen annetaan ehto sekä koodilohko, jota toistetaan niin kauan, kuin ehto on tosi:
@@ -132,6 +142,15 @@ Tässä tuntiesimerkissä kokeilemme itse generoida HTML-elementit Javan toistor
 
 
 # For-toistorakenne
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/aa745036-e5a0-489e-9bb3-85fcb84a4b55?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Video vaatii tunnistautumisen HH-tunnuksellasi.
+
+[https://web.microsoftstream.com/video/aa745036-e5a0-489e-9bb3-85fcb84a4b55](https://web.microsoftstream.com/video/aa745036-e5a0-489e-9bb3-85fcb84a4b55)
+
+
+## Alustus, toistoehto ja kasvatus
 
 While-toistorakenteen lisäksi on olemassa myös for-toistorakenne. For on tyypillinen esimerkiksi silloin, kun haluttu suoritusten määrä on jo alussa tiedossa. Tällöin laskurin alustaminen, kasvattaminen ja toistoehto saadaan kirjoitettua kompaktiin muotoon samojen sulkujen sisään:
 
@@ -304,7 +323,34 @@ System.out.println("kiitos ja kuulemiin.");
 
 Tässä esimerkissä merkkijonoja vertaillaan `equals`-metodilla, jota käsittelemme tarkemmin seuraavalla oppitunnilla.
 
-# Tehtäviä tunnille
+# Oppitunnin soveltavat esimerkit
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/c3e79c0e-02d9-40df-96ad-309c235fff35?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Video vaatii tunnistautumisen HH-tunnuksellasi.
+
+[https://web.microsoftstream.com/video/c3e79c0e-02d9-40df-96ad-309c235fff35](https://web.microsoftstream.com/video/c3e79c0e-02d9-40df-96ad-309c235fff35)
+
+
+## FizzBuzz
+
+FizzBuzz-tehtävä on ohjelmistokehittäjien työhaastatteluiden klassikko, jossa yllättävän ison osan haastatelluista kerrotaan epäonnistuvan. Tehtävä on ratkaistavissa tämän ja kahden aikaisemman oppituntimme perusteella.
+
+> The "Fizz-Buzz test" is an interview question designed to help filter out the 99.5% of programming job candidates who can't seem to program their way out of a wet paper bag. The text of the programming assignment is as follows:
+>
+> *"Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”."*
+>
+> [http://wiki.c2.com/?FizzBuzzTest](http://wiki.c2.com/?FizzBuzzTest)
+
+## Sademäärien kysyminen toiston avulla
+
+Kirjoitetaan ohjelma, joka kysyy päivittäisiä sademääriä ennalta tunnetun määrän yksi kerrallaan. Lopuksi tulostetaan lukumäärä, summa, minimi, maksimi sekä keskiarvo.
+
+
+## Tuntemattoman ajanjakson sademäärien kysyminen
+
+Muutetaan ohjelmaa niin, että päivien lukumäärä ei ole ennalta tunnettu, vaan negatiivinen sademäärä lopettaa kysymisen.
+
 
 ## Arvosana-asteikko
 
@@ -327,27 +373,6 @@ double arvosana = OsasuoritustenArviointi.laskeArvosana(omatPisteet, maksimiPist
 ```
 
 Tehdään seuraavaksi toistorakenne, joka käy läpi kaikki mahdolliset pistemäärät ja tulostaa niitä vastaavat arvosanat kokeessa, jossa maksimipisteet ovat 25.
-
-## FizzBuzz
-
-FizzBuzz-tehtävä on ohjelmistokehittäjien työhaastatteluiden klassikko, jossa yllättävän ison osan haastatelluista kerrotaan epäonnistuvan. Tehtävä on ratkaistavissa tämän ja kahden aikaisemman oppituntimme perusteella.
-
-> The "Fizz-Buzz test" is an interview question designed to help filter out the 99.5% of programming job candidates who can't seem to program their way out of a wet paper bag. The text of the programming assignment is as follows:
->
-> *"Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”."*
->
-> [http://wiki.c2.com/?FizzBuzzTest](http://wiki.c2.com/?FizzBuzzTest)
-
-## Sademäärien kysyminen toiston avulla
-
-Kirjoitetaan ohjelma, joka kysyy päivittäisiä sademääriä ennalta tunnetun määrän yksi kerrallaan. Lopuksi tulostetaan lukumäärä, summa, minimi, maksimi sekä keskiarvo.
-
-
-## Tuntemattoman ajanjakson sademäärien kysyminen
-
-Muutetaan ohjelmaa niin, että päivien lukumäärä ei ole ennalta tunnettu, vaan negatiivinen sademäärä lopettaa kysymisen.
-
-
 
 
 ---
