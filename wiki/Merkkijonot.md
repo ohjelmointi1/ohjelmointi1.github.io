@@ -103,8 +103,8 @@ String rekisterinumero = "LOL-2";
 
 int viiva = rekisterinumero.indexOf("-");               // 3
 
-String alkuosa = rekisterinumero.substring(0, viiva);   // "AKU"
-String loppuosa = rekisterinumero.substring(viiva + 1); // "313"
+String alkuosa = rekisterinumero.substring(0, viiva);   // "LOL"
+String loppuosa = rekisterinumero.substring(viiva + 1); // "2"
 ```
 
 
@@ -220,7 +220,7 @@ Toinen rivi
 Kenoviiva kirjoitetaan aina tuplana:
 
 ```java
-String polku = "C:\\Users\\Minä\\Documents\\"; // => C:\Users\Minä\Documents\
+String polku = "C:\\Users\\Minä\\Documents\\"; // C:\Users\Minä\Documents\
 ```
 
 
@@ -228,18 +228,18 @@ Lainausmerkkejä joudutaan käsittelemään usein merkkijonoissa, jotka sisält�
 
 ```java
 int hinta = 500;
-System.out.println("<option value=\"" + hinta + "\">" + hinta + " €</option>");
+System.out.println("<span class=\"hinta\">" + hinta + " €</span>");
 ```
 
 ```
-<option value="500">500 €</option>
+<span class="hinta">500 €</span>
 ```
 
 Tapauksesta riippuen kenoviivoja joudutaan joskus laittamaan hyvin monia peräkkäin:
 
 [![Backslashes](https://imgs.xkcd.com/comics/backslashes.png)](https://xkcd.com/1638/)
 
-[XKCD, Backslashes](https://xkcd.com/1638/). Creative Commons Attribution-NonCommercial 2.5
+Kuva: [XKCD, Backslashes](https://xkcd.com/1638/). Creative Commons Attribution-NonCommercial 2.5
 
 
 # Lukujen poimiminen merkkijonoista
@@ -260,21 +260,17 @@ int tekstiNumeroksi = Integer.parseInt(teksti);
 
 Javassa on erillinen `char`-tietotyyppi yksittäisiä merkkejä varten. Yksittäinen merkki aloitetaan ja lopetetaan heittomerkillä, esim. `'a'`. Yksittäiset merkit eivät ole olioita, eli niillä ei ole metodeja. Niiden pituus on aina 1, eli kahta tai useampaa merkkiä ei voida esittää char-tyypillä.
 
-Merkkijonolta voidaan pyytää yksittäisiä merkkejä niiden indeksin perusteella. Tämä onnistuu metodilla `charAt(int indeksi)`, joka saa parametrina halutun merkin indeksin merkkijonossa. Muista, että merkkijonojen indeksien laskeminen alkaa aina nollasta, eli esimerkiksi neljäs merkki on indeksissä kolme.
+Merkkijonolta voidaan pyytää yksittäisiä merkkejä niiden indeksin perusteella. Tämä onnistuu metodilla `charAt(int indeksi)`, joka saa parametrina halutun merkin indeksin merkkijonossa. 
+
+Char-tietotyypin avulla voidaan tehdä alkeisoperaatioita, eli ikään kuin käsitellä niitä numeroina:
 
 ```java
-char kirjain = 'a';
-System.out.println(kirjain); // a
-
-String kirja = "Kalavale";
-
-char merkki = kirja.charAt(3);
-System.out.println("Neljäs merkki: " + merkki);  // Neljäs merkki: a
-System.out.println("Eka merkki: " + kirja.charAt(0)); // Eka merkki: K
+for (char kirjain = 'a'; kirjain <= 'z'; kirjain++) {
+    System.out.println(kirjain);
+}
 ```
 
-Tämä esimerkki on lainattu Helsingin yliopiston Agile Education Research -tutkimusryhmän ohjelmointikurssilta ja se on lisensoitu Creative Commons BY-NC-SA-lisenssillä. [https://2017-ohjelmointi.github.io/part5/#section-25-yksittainen-merkki-merkkijonosta](https://2017-ohjelmointi.github.io/part5/#section-25-yksittainen-merkki-merkkijonosta)
-
+Käytännössä `char`-tyyppiä tarvitaan melko harvoin, ja usein onkin käytännöllisempää käsitellä yhden merkin pituisia merkkijonoja.
 
 # Edistynyttä sisältöä: säännölliset lausekkeet, regular expressions / regex
 
@@ -334,7 +330,7 @@ Säännölliset lausekkeet ovat erittäin ilmaisuvoimainen tapa käsitellä merk
 
 [![Perl Problems](https://imgs.xkcd.com/comics/perl_problems.png)](https://xkcd.com/1171/)
 
-[XKCD, Perl Problems](https://xkcd.com/1171/). Creative Commons Attribution-NonCommercial 2.5
+Kuva: [XKCD, Perl Problems](https://xkcd.com/1171/). Creative Commons Attribution-NonCommercial 2.5
 
 
 # Edistynyttä sisältöä: Merkkijonojen muotoilu 
@@ -381,7 +377,7 @@ Vähemmän vakuuttava tapa satunnaisluvun generoimiseksi olisi esim. arpakuutio:
 
 [![Random Number](https://imgs.xkcd.com/comics/random_number.png)](https://xkcd.com/221/)
 
-[XKCD, Random number](https://xkcd.com/221/). Creative Commons Attribution-NonCommercial 2.5
+Kuva: [XKCD, Random number](https://xkcd.com/221/). Creative Commons Attribution-NonCommercial 2.5
 
 ## Numeronyymit
 

@@ -16,9 +16,7 @@ Tällä opetusviikolla harjoittelemme pääasiassa koodin toistamista tietyn mä
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/f2aa8a54-a86a-484e-a60d-0e80cde9a891?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Video vaatii tunnistautumisen HH-tunnuksellasi.
-
-[https://web.microsoftstream.com/video/f2aa8a54-a86a-484e-a60d-0e80cde9a891](https://web.microsoftstream.com/video/f2aa8a54-a86a-484e-a60d-0e80cde9a891)
+Video vaatii tunnistautumisen HH-tunnuksellasi. [Katso MS Streamissa.](https://web.microsoftstream.com/video/f2aa8a54-a86a-484e-a60d-0e80cde9a891)
 
 
 
@@ -145,9 +143,7 @@ Tässä tuntiesimerkissä kokeilemme itse generoida HTML-elementit Javan toistor
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/aa745036-e5a0-489e-9bb3-85fcb84a4b55?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Video vaatii tunnistautumisen HH-tunnuksellasi.
-
-[https://web.microsoftstream.com/video/aa745036-e5a0-489e-9bb3-85fcb84a4b55](https://web.microsoftstream.com/video/aa745036-e5a0-489e-9bb3-85fcb84a4b55)
+Video vaatii tunnistautumisen HH-tunnuksellasi. [Katso MS Streamissa.](https://web.microsoftstream.com/video/aa745036-e5a0-489e-9bb3-85fcb84a4b55)
 
 
 ## Alustus, toistoehto ja kasvatus
@@ -327,9 +323,7 @@ Tässä esimerkissä merkkijonoja vertaillaan `equals`-metodilla, jota käsittel
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/c3e79c0e-02d9-40df-96ad-309c235fff35?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Video vaatii tunnistautumisen HH-tunnuksellasi.
-
-[https://web.microsoftstream.com/video/c3e79c0e-02d9-40df-96ad-309c235fff35](https://web.microsoftstream.com/video/c3e79c0e-02d9-40df-96ad-309c235fff35)
+Video vaatii tunnistautumisen HH-tunnuksellasi. [Katso MS Streamissa.](https://web.microsoftstream.com/video/c3e79c0e-02d9-40df-96ad-309c235fff35)
 
 
 ## FizzBuzz
