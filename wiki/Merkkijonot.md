@@ -21,6 +21,11 @@ Koska merkkijonot ovat olioita, niitä ei voida vertailla vertailuoperaattorilla
 
 Vertailuoperaattorin sijaan merkkijonojen vertailu voidaan tehdä `String`-luokan metodeilla, joita käsittelemme seuraavaksi.
 
+## Oppitunnin videotallenne: Merkkijonojen vertailu, metodit ja Eclipsen debuggeri
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/8d6bbb56-51f0-48f5-8110-ccde31d19342?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+[Merkkijonojen vertailu, metodit ja Eclipsen debuggeri (MS Stream)](https://web.microsoftstream.com/video/8d6bbb56-51f0-48f5-8110-ccde31d19342)
 
 ## Olioiden vertailu: equals ja equalsIgnoreCase
 
@@ -64,6 +69,11 @@ String tilinumero = "    fi3315723000500504  ".trim().toUpperCase(); // "FI33157
 
 Huomaa, että mikään yllä olevista metodeista ei muuta alkuperäistä merkkijonoa, vaan ne palauttavat uuden merkkijonon. 
 
+## Oppitunnin videotallenne: String-luokan metodit: length, substring...
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/c1991f30-5797-45e7-8030-a24ecb751064?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+[String-luokan metodit: length, substring... (MS Stream)](https://web.microsoftstream.com/video/c1991f30-5797-45e7-8030-a24ecb751064)
 
 ## Muuttumattomuus (immutability)
 
@@ -111,6 +121,11 @@ String alkuosa = rekisterinumero.substring(0, viiva);   // "LOL"
 String loppuosa = rekisterinumero.substring(viiva + 1); // "2"
 ```
 
+## Oppitunnin videotallenne: Merkkijonojen muuttaminen, muuttumattomuus ja satunnaisen salasanan generointi
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/78f6744a-2dc0-4708-9aac-fcf0cdd49c12?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+[Merkkijonojen muuttaminen, muuttumattomuus ja satunnaisen salasanan generointi (MS Stream)](https://web.microsoftstream.com/video/78f6744a-2dc0-4708-9aac-fcf0cdd49c12)
 
 # String-luokan metodeja
 
@@ -130,7 +145,7 @@ Tyyppi, nimi ja parametrit        | Kuvaus
 `String substring(int beginIndex)`| Palauttaa merkkijonon annetusta indeksistä loppuun
 `String substring(int beginIndex, int endIndex)` | Palauttaa merkkijonon annetusta alkuindeksistä (loppuindeksi - 1):een
 `String toLowerCase()`            | Muuttaa merkkijonon kaikki kirjaimet pieniksi
-`String toUpperCase()`            | Muuttaa merkkijonon kaikki kirjaimet ISOIKIS
+`String toUpperCase()`            | Muuttaa merkkijonon kaikki kirjaimet ISOIKSI
 `String trim()`                   | Poistaa sekä alusta että lopusta kaikki tyhjät merkit
 
 Muista, että merkkijonojen metodit eivät koskaan muuta kyseistä merkkijonoa, vaan ne palauttavat uusia merkkijonoja.

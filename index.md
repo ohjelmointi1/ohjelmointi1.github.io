@@ -106,6 +106,12 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
                 <strong>Merkkijonot</strong><br />
                 <em>+ Debuggerin hyödyntäminen</em><br />
                 <a href="wiki/Merkkijonot">📝 Muistiinpanot</a><br />
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko02/merkkijonot">📁 Oppitunnin esimerkkikoodit</a><br /><br />
+                <a href="https://web.microsoftstream.com/video/8d6bbb56-51f0-48f5-8110-ccde31d19342">📼 Merkkijonojen vertailu, metodit ja Eclipsen debuggeri</a><br />
+                <a href="https://web.microsoftstream.com/video/c1991f30-5797-45e7-8030-a24ecb751064">📼 String-luokan metodit: length, substring...</a><br />
+                <a href="https://web.microsoftstream.com/video/78f6744a-2dc0-4708-9aac-fcf0cdd49c12">📼 Merkkijonojen muuttaminen, muuttumattomuus ja satunnaisen salasanan generointi</a><br />
+                <a href="https://web.microsoftstream.com/video/17a8d25e-47b0-41fe-9446-132aed27e871">📼 Syventävää: char-tietotyyppi, säännölliset lausekkeet ja palindromin tarkastaminen
+</a>
                 <!--<a href="src/viikko2/merkkijonot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <strong>Oppitunnin videot:</strong><br />
