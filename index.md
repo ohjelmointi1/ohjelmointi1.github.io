@@ -104,6 +104,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
             <td>27.1.</td>
             <td>
                 <strong>Merkkijonot</strong><br />
+                <em>+ Debuggerin hyödyntäminen</em><br />
                 <a href="wiki/Merkkijonot">📝 Muistiinpanot</a><br />
                 <!--<a href="src/viikko2/merkkijonot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
@@ -125,6 +126,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
             <td>1.2.</td>
             <td>
                 <strong>Listat</strong><br />
+                <em>+ Gitin käyttö tehtäväpohjien lataamiseksi</em><br />
                 <a href="wiki/Listat">📝 Muistiinpanot</a><br />
                 <!--<a href="src/viikko3/listat/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />

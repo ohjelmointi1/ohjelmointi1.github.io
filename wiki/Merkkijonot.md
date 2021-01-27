@@ -42,6 +42,10 @@ if (vastaus.equalsIgnoreCase("kyllä")) {
 }
 ```
 
+## Debuggerin käyttö ohjelman suorituksen tutkimiseksi
+
+Oppitunnilla käsiteltävä demo Eclipsen debuggerista.
+
 
 ## Merkkijonojen metodien käyttäminen
 
