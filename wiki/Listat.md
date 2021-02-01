@@ -3,9 +3,7 @@
 
 <h1 class="js-toc-ignore">Listat</h1>
 
-Tällä opetuskerralla tutustumme Javan kenties yleisimpään kokoelmaan: listoihin. Listat ovat tietorakenteita, joiden pituus kasvaa joustavasti, kun niihin lisätään uusia arvoja. Listoihin voidaan lisätä arvoja myös aiempien arvojen väliin ja listan väleistä voidaan poistaa arvoja. Listat ovat olioita ja niillä on metodeita, joiden avulla arvoja lisätään, poistetaan, etsitään jne.
-
-Yhdessä listassa voidaan varastoida ainoastaan yhdentyyppisiä arvoja, eikä varastoitavaa tyyppiä voida myöhemmin vaihtaa. Tämän lisäksi varastoitavien arvojen on oltava olioita, eli ei alkeistietotyyppejä kuten `boolean`, `int` tai `double`. Alkeistietotyyppien varastoimiseksi Javassa on olemassa valmiita **kääreluokkia**, joiden oliot pitävät vain sisällään tallessa yksittäisiää alkeistyyppisiä arvoja. Kääreluokat on nimetty kuten alkeistyypit, mutta niiden nimet alkavat isolla alkukirjaimella, esim: `Boolean`, `Integer` ja `Double`.
+Tällä viikolla tutustumme Javan kenties yleisimpään kokoelmaan: listoihin. Listat ovat tietorakenteita, joiden pituus kasvaa joustavasti, kun niihin lisätään uusia arvoja. Listoihin voidaan lisätä arvoja myös aiempien arvojen väliin ja listan väleistä voidaan poistaa arvoja. Listat ovat olioita ja niillä on metodeita, joiden avulla arvoja lisätään, poistetaan, etsitään jne.
 
 
 **Sisällysluettelo**
@@ -42,13 +40,13 @@ LinkedList<String> linkitettyLista = new LinkedList<String>();
 ```
 
 
-### Geneeriset tyypit
+## Geneeriset tyypit
 
 Listat ovat geneerisiä, eli niiden sisällön tyyppi voidaan määritellä itse. Edellä määritellyt listat säilyttävät merkkijonoja ja tämä `ArrayList` voi säilyttää kokonaislukuja:
 
 ```java
 // kulmasuluissa oleva tyypin nimi kertoo, mitä arvoja listalla säilytetään:
-ArrayList<Integer> numerot2 = new ArrayList<Integer>();
+ArrayList<Integer> numerot = new ArrayList<Integer>();
 ```
 
 Java osaa päätellä luotavan listan tyypin muuttujan tyypistä, joten voimme määritellä listan luonnissa tyypin tyhjäksi `<>`. Java päättelee tyypiksi `<String>`:
@@ -58,43 +56,34 @@ Java osaa päätellä luotavan listan tyypin muuttujan tyypistä, joten voimme m
 ArrayList<String> merkkijonot = new ArrayList<>();
 ```
 
-## Esimerkki
+Yhdessä listassa voidaan varastoida ainoastaan yhdentyyppisiä arvoja, eikä varastoitavaa tyyppiä voida myöhemmin vaihtaa.
+
+
+## Alkeistietotyypit ja kääreluokat
+
+Listoilla käsiteltävien arvojen on oltava olioita, eli ei aikaisemmilta viikoilta tuttuja alkeistietotyyppejä, kuten `boolean`, `int` tai `double`. 
+
+Alkeistietotyyppien varastoimiseksi Javassa on olemassa valmiita **kääreluokkia**, joiden oliot pitävät vain sisällään tallessa yksittäisiää alkeistyyppisiä arvoja. Kääreluokat on nimetty kuten alkeistyypit, mutta niiden nimet alkavat isolla alkukirjaimella, esim: `Boolean`, `Integer` ja `Double`. Kääreluokan avulla numerosi "kääritään" olion sisälle, jolloin myös numeroita voidaan käsitellä listoilla.
+
+Java huolehtii onneksi kääreluokkien käyttämisestä automaattisesti lähes jokaisessa operaatiossa. Sinun tulee ainoastaan määritellä listan tyypiksi käytettävä kääreluokka:
 
 ```java
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+ArrayList<Integer> kokonaisluvut = new ArrayList<>();
 
-public class Listaluokat {
+ArrayList<Double> liukuluvut = new ArrayList<>();
 
-    public static void main(String[] args) {
-        // Javassa on useita eri listatyyppejä:
-        ArrayList<String> taulukkoLista = new ArrayList<String>();
-        LinkedList<String> linkitettyLista = new LinkedList<String>();
-
-        // Listat ovat geneerisiä, eli niiden sisällön tyyppi voidaan määritellä itse.
-        // Edellä määritellyt listat säilyttävät merkkijonoja ja tämä ArrayList voi
-        // säilyttää kokonaislukuja:
-        ArrayList<Integer> numerot2 = new ArrayList<Integer>();
-
-        // Java osaa päätellä luotavan listan tyypin muuttujan tyypistä, joten
-        // voimme määritellä listan luonnissa tyypin tyhjäksi '<>' -> '<String>'
-        ArrayList<String> merkkijonot = new ArrayList<>();
-
-        // Kaikki listatyypit ovat yhteensopivia "List"-tyypin kanssa, joten muuttujan
-        // tyypiksi voidaan määritellä yleisesti List:
-        List<String> yleinenMerkkijonoLista = new ArrayList<>();
-
-        // Tällä kurssilla tulemme käyttämään lähinnä ArrayList-listoja!
-    }
-}
+ArrayList<Boolean> totuusarvot = new ArrayList<>();
 ```
 
-## Listaoperaatiot
 
-Listoja käytetään aina kutsumalla listan metodeja:
+# Listaoperaatiot
 
-### Listalle lisääminen
+Listoja käytetään aina kutsumalla listan metodeja. Seuraava oppituntitallenne käy läpi keskeiset listaoperaatiot, jotka on esitetty myös tekstimuodossa alempana.
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/f6bc6f3b-374d-4776-bb7c-981707c5f648?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+
+## Listalle lisääminen
 
 `add`-metodi lisää listalle uusia arvoja listan loppuun:
 
@@ -107,7 +96,7 @@ sanat.add("World");
 System.out.println(sanat); // [Hello, World]
 ```
 
-### Lisääminen tiettyyn indeksiin
+## Lisääminen tiettyyn indeksiin
 
 Listalle voidaan lisätä myös arvoja tiettyyn indeksiin. Tällöin `add`-metodille annetaan ensimmäiseksi parametriarvoksi haluttu indeksi. Seuraavien listalla olevien arvojen indeksit kasvavat yhdellä:
 
@@ -125,20 +114,9 @@ sanat.add(1, "Maailma");
 System.out.println(sanat); // [Terve, Maailma, Hello, World]
 ```
 
-### Listalla olevien arvojen lukumäärä
+## Listalta hakeminen
 
-```java
-List<String> sanat = new ArrayList<>();
-
-sanat.add("Hello");
-sanat.add("World");
-
-System.out.println(sanat.size()); // 2
-```
-
-### Listalta hakeminen
-
-Listalta voidaan hakea yksittäisiä arvoja `get`-metodin avulla. **Huomaa, että listojen indeksit alkavat aina nollasta!**
+Listalta voidaan hakea yksittäisiä arvoja `get`-metodin avulla. Muista, että listojen indeksit alkavat aina nollasta!
 
 ```java
 List<String> sanat = new ArrayList<>();
@@ -150,9 +128,9 @@ System.out.println(sanat.get(0)); // Hello
 System.out.println(sanat.get(1)); // World
 ```
 
-### Listalta poistaminen
+## Listalta poistaminen
 
-Listalta voidaan poistaa joko tietyn indeksin perusteella tai tiettyjä arvoja `remove`-metodin avulla. **Huomaa, että listojen indeksit alkavat aina nollasta!**
+Listalta voidaan poistaa joko tietyn indeksin perusteella tai tiettyjä arvoja `remove`-metodin avulla. Muista, että listojen indeksit alkavat aina nollasta!
 
 ```java
 List<String> sanat = new ArrayList<>();
@@ -170,7 +148,7 @@ sanat.remove("World");
 System.out.println(sanat); // [!]
 ```
 
-### Listan sisällön tutkiminen
+## Listan sisällön tutkiminen
 
 Listoilta voidaan etsiä alkioita kahdella metodilla:
 
@@ -190,12 +168,28 @@ System.out.println(nimet.indexOf("Maija")); // 1
 System.out.println(nimet.indexOf("Maikki")); // -1, eli ei löydy!
 ```
 
+## Listalla olevien arvojen lukumäärä
 
-### Listan arvojen läpikäynti (indeksillä)
+Listan koko selviää `size`-metodilla:
+
+```java
+List<String> sanat = new ArrayList<>();
+
+sanat.add("Hello");
+sanat.add("World");
+
+int pituus = sanat.size();
+System.out.println(pituus); // 2
+```
+
+Listan pituutta tarvitaan usein, kun halutaan käsitellä listan kaikkia arvoja niiden indeksien avulla.
+
+## Listan arvojen läpikäynti (indeksillä)
 
 * Listan sisältö on usein tarpeellista käydä läpi alusta loppuun
-* Tämä voidaan toteuttaa toistorakenteella, jossa lähdetään liikkeelle nollasta ja edetään viimeiseen indeksiin `sanat.size() – 1`
-* Toistorakenteen sisällä saadaan kulloinkin käsiteltävä arvo pyydettyä listalta käyttäen toistomuuttujaa: `get(i)`
+* Tämä voidaan toteuttaa toistorakenteella, jossa lähdetään liikkeelle nollasta ja edetään viimeiseen indeksiin
+* Koska indeksit alkavat nollasta, viimeinen indeksi on aina yhtä pienempi kuin listan pituus: `int vikaIdeksi = lista.size() – 1;`
+* Toistorakenteen sisällä listan arvot voidaan pyytää yksi kerrallaan get-metodin avulla: `lista.get(i)`
 
 
 ```java
@@ -220,8 +214,6 @@ public class ListanLapikayntiFor {
 
 ### Listan arvojen läpikäynti (for-each)
 
-Katso esim: https://stackoverflow.com/a/22114571
-
 For-each –silmukalla on mahdollista käydä kätevästi kaikki tietyn listan arvot läpi ilman, että pidämme itse kirjaa indeksistä ja haemme arvoja `get`-metodilla:
 
 ```java
@@ -244,23 +236,46 @@ public class ListanLapikayntiForEach {
 }
 ```
 
-### Listojen ja listamuuttujien yhteensopivuus
+Katso esim: [https://stackoverflow.com/a/22114571](https://stackoverflow.com/a/22114571)
 
-Kaikki listatyypit ovat yhteensopivia `List`-tyypin kanssa, joten **muuttujan tyypiksi voidaan määritellä yleisesti `List`**:
+
+## Oppituntitallenne: listan sisällön tutkiminen ja arvojen läpikäynti
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/65e4f154-7369-4165-bf0c-3e5ddc9a6569?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+
+# Listan luominen valmiilla arvoilla
+
+Toisinaan ohjelmassa on tarpeen luoda lista joillain valmiilla ennalta tunnetuilla arvoilla. Tällaisen listan luominen `new ArrayList<>()`-operaatiolla ja täyttäminen `add`-metodilla olisi kovin työlästä. Voit sen sijaan käyttää `List.of`-metodia, jolle voit antaa listan sisällön valmiina:
 
 ```java
-// List<String> -muuttujaan voidaan sijoittaa esim. LinkedList- ja ArrayList-listoja:
-List<String> merkkijonoLista = new ArrayList<>();
+List<String> viikonpaivat = List.of("ma", "ti", "ke", "to", "pe", "la", "su"); 
 ```
 
-Muista, että tarvitset sekä `List`-tyypille että ArrayList-tyypille import-komennot luokan alkuun:
+Muista myös lisätä luokan alkuun `import java.util.List;`.
+
+Huom! `List.of`-metodin palauttama lista ei ole tavallinen `ArrayList`, eli et voi muokata yllä esitettyä listaa enää sen luomisen jälkeen. Muut operaatiot, kuten arvojen haku, etsiminen ja läpikäynti, toimivat normaalisti.
+
+
+# Listamuuttujien yhteensopivuus
+
+Vaikka `ArrayList` ja `LinkedList` ovat toiminnallisesti täysin samanlaiset, et voi asettaa eri tyyppistä listaa toisen tyyppiseen muuttujaan. Poikkeuksen tähän sääntöön tekee kaikkien listojen yhteisen rajapinnan määrittelevä `List`-tyyppi, joka on yhteensopiva kaikkien listojen kanssa:
 
 ```java
-import java.util.ArrayList;
+List<String> nimet = new ArrayList<>();
+List<String> osoitteet = new LinkedList<>();
+List<String> kaupungit = List.of("Helsinki", "Porvoo");
+```
+
+Käyttämällä `List`-tyyppiä muuttujien tyyppinä ja myöhemmin metodien parametrien tyyppinä, vältät useita ongelmatilanteita mahdollisten epäyhteensopivien listojen kanssa.
+
+Muista, että tarvitset `List`-tyypille oman `import`-komennot luokan alkuun:
+
+```java
 import java.util.List;
 ```
 
-Jos muuttujan tyypiksi määriteltäisiin tarkasti `ArrayList<String>`, voisimme asettaa muuttujaan **ainoastaan** `ArrayList`-tyyppisen listan. Tällöin emme voisi käyttää esim. `List.of`-luontitapaa valmiin listan luomiseksi:
+<!--Jos muuttujan tyypiksi määriteltäisiin tarkasti `ArrayList<String>`, voisimme asettaa muuttujaan **ainoastaan** `ArrayList`-tyyppisen listan. Tällöin emme voisi käyttää esim. `List.of`-luontitapaa valmiin listan luomiseksi:
 
 ```java
 // VIRHE: Type mismatch: cannot convert from List<String> to ArrayList<String>
@@ -270,10 +285,11 @@ ArrayList<String> lista = List.of("sana", "toinen");
 // Toimii, koska List<String> on yhteensopiva kaikkien merkkijonolistojen kanssa:
 List<String> lista = List.of("sana", "toinen"); 
 ```
+-->
 
-### Listan järjestäminen
+# Listan järjestäminen
 
-Lista on mahdollista järjestää helposti alkioiden "luonnolliseen järjestykseen". `Collections`-apuluokalla on olemassa `sort`-niminen metodi, joka järjestää sille annetun listan:
+Lista on mahdollista järjestää eli helposti alkioiden "luonnolliseen järjestykseen". `Collections`-apuluokalla on olemassa `sort`-niminen metodi, joka järjestää sille annetun listan:
 
 ```java
 import java.util.ArrayList;
@@ -301,23 +317,45 @@ public class KaupunkienSorttaus {
 }
 ```
 
-**Huomaa, että merkkijonojen luonnollinen järjestys ei toimi odotetusti eri kokoisia kirjaimia vertaillessa.**
+Huomaa, että merkkijonojen luonnollinen järjestys ei toimi odotetusti eri kokoisia kirjaimia vertaillessa, koska vertailussa käytetään merkkien Unicode-arvoja.
 
 
-### Extra: Listan kopioiminen
+# Listan kopioiminen ja viittaustyyppiset muuttujat
+
+Seuraavalla oppituntitallenteella käsitellään listojen käsittelyä eri muuttujien kautta sekä listojen kopioimista uusien listojen luomista varten:
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/98536d7e-5621-4927-bc63-45299746dfa4?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
 
 ```java
-List<String> lista = new ArrayList<String>();
-lista.add("Terve");
-lista.add("Maailma");
+List<String> naiset = new ArrayList<>();
+naiset.add("Tuula");
+naiset.add("Anne");
 
-// Tapa 1: annetaan kopioitava lista parametrina luotaessa uutta ArrayList:iä
-List<String> kopio1 = new ArrayList<>(lista);
+List<String> miehet = new ArrayList<>();
+miehet.add("Juha");
+miehet.add("Timo");
 
-// Tapa 2: lisätään kaikki alkiot tyhjään listaan kutsumalla addAll-metodia
-List<String> kopio2 = new ArrayList<>();
-kopio2.addAll(lista);
+List<String> molemmat = new ArrayList<>(naiset);
+molemmat.addAll(miehet);
 ```
+
+
+# Tehtäväideoita tunnille
+
+## Nimigeneraattori
+
+Kirjoitetaan ohjelma, joka arpoo satunnaisia sanoja erilaisista ryhmistä ja muodostaa yritysten, bändien tai henkilöiden nimiä.
+
+Opittavat aiheet: listan muodostaminen, listan pituuden selvittäminen ja listalta haku.
+
+
+## HTML-valintarakenne
+
+Kirjoitetaan ohjelma, johon määritellään lista asioista, jotka esitetään toistorakenteella HTML-muodossa.
+
+Opittavat aiheet: listan muodostaminen, listan kaikkien arvojen läpikäynti.
+
 
 ---
 
