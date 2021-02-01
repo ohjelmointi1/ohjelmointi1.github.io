@@ -134,6 +134,14 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
                 <strong>Listat</strong><br />
                 <em>+ Gitin käyttö tehtäväpohjien lataamiseksi</em><br />
                 <a href="wiki/Listat">📝 Muistiinpanot</a><br />
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko03/listat">📁 Oppitunnin esimerkkikoodit</a><br /><br />
+                <a href="https://web.microsoftstream.com/video/05754f1f-06c2-4142-8423-7cbb22bff651">📼 Tehtäväpohjien kloonaaminen GitHubista</a><br />
+                <a href="https://web.microsoftstream.com/video/f6bc6f3b-374d-4776-bb7c-981707c5f648">📼 Listan luominen, arvojen lisääminen ja arvojen hakeminen</a><br />
+                <a href="https://web.microsoftstream.com/video/65e4f154-7369-4165-bf0c-3e5ddc9a6569">📼 Listan sisällön tutkiminen ja läpikäynti</a><br />
+                <a href="https://web.microsoftstream.com/video/98536d7e-5621-4927-bc63-45299746dfa4">📼 Listan luominen valmiilla arvoilla sekä viittaustyyppiset muuttujat</a><br /><br />
+                <em>Lisämateriaali (Ohjelmoinnin MOOC):</em><br />
+                <a href="https://ohjelmointi-19.mooc.fi/osa-3/2-listat" target="_blank">Listamuuttujan käyttö useamman arvon tallentamiseen</a><br />
+                <a href="https://github.com/swd1tn002/mooc.fi-2019-osa3/" target="_blank">Viope-tehtäväpohjat</a><br />
                 <!--<a href="src/viikko3/listat/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <em>Lisämateriaali (Ohjelmoinnin MOOC):</em><br />
