@@ -11,6 +11,13 @@ Tällä viikolla tutustumme Javan kenties yleisimpään kokoelmaan: listoihin. L
 <div class="js-toc"></div>
 
 
+# Tehtäväpohjien kloonaaminen GitHubista
+
+Tällä viikolla teemme Viopessa tehtäväkokonaisuuden, joka on lainattu [Helsingin yliopiston Ohjelmoinnin MOOC -kurssilta](https://ohjelmointi-20.mooc.fi/osa-3/2-listat). Tehtäväkokonaisuuden suoraviivaistamiseksi tehtäviin on saatavilla valmiit pohjat GitHubissa osoitteessa [https://github.com/swd1tn002/mooc.fi-2019-osa3/](https://github.com/swd1tn002/mooc.fi-2019-osa3/). Voit kopioida tehtäväpohjat itsellesi yksi kerrallaan Viope-tehtävän linkkien kautta, tai kopioida koko projektipohjan kerralla. Alla oleva video esittelee, miten projekti *kloonataan* GitHubista omaan Eclipseen:
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/05754f1f-06c2-4142-8423-7cbb22bff651?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+
 # ArrayList:in perusteet
 
 Seuraava [Helsingin yliopiston Ohjelmoinnin MOOC -kurssin](https://ohjelmointi-20.mooc.fi/osa-3/2-listat) video esittelee Javan ArrayList-tietorakenteen toimintaa ja käyttämistä:
@@ -20,7 +27,7 @@ Seuraava [Helsingin yliopiston Ohjelmoinnin MOOC -kurssin](https://ohjelmointi-2
 Hyödynnä myös Helsingin yliopiston MOOC-kurssin muita materiaaleja: [https://ohjelmointi-20.mooc.fi/osa-3/2-listat](https://ohjelmointi-20.mooc.fi/osa-3/2-listat). 
 
 
-# Listatyypit
+# Eri listatyypit: ArrayList vs. LinkedList
 
 Javassa on useita eri listatyyppejä. Kaikki listat toimivat ulkoisesti samalla tavalla, vaikka niiden sisäiset toteutustavat vaihtelevat merkittävästi. `ArrayList` on sisäisesti toteutettu taulukon avulla, kun taas `LinkedList` on toteutettu linkittämällä listan alkiot toisiinsa "ketjuksi". Sopivin lista kuhunkin tarkoitukseen vaihtelee listan käyttötavasta riippuen, mutta pääsääntöisesti pärjäät hyvin käyttämällä aina `ArrayList`-listoja.
 
