@@ -3,7 +3,7 @@
 
 <h1 class="js-toc-ignore">Taulukot</h1>
 
-Taulukot ovat varsin alkeellisia tietorakenteita, joihin voidaan varastoida useita saman typpisiä arvoja. Toisin kuin listojen, taulukon pituus on kiinteä, eli sitä ei voi lyhentää eikä kasvattaa. Samaan muuttujaan voidaan toki sijoittaa uusi, eri pituinen taulukko.
+Tällä kerralla tutustumme Javan taulukoihin. Taulukot ovat varsin alkeellisia tietorakenteita, joihin voidaan varastoida useita saman typpisiä arvoja. Toisin kuin listoilla, taulukon pituus on kiinteä, eli sitä ei voi lyhentää eikä kasvattaa. 
 
 
 **Sisällysluettelo**
@@ -12,8 +12,6 @@ Taulukot ovat varsin alkeellisia tietorakenteita, joihin voidaan varastoida usei
 
 
 # Taulukot ja taulukkomuuttujat
-
-Taulukoita, kuten listoja ja kaikkia muitakin olioita, käytetään viittaustyyppisillä muuttujilla. Taulukkoa ei siis automaattisesti kopioida, kun sitä käytetään eri paikoista.
 
 Taulukkoja sisältävien muuttujien tyypiksi kirjoitetaan tallennettavan tyypin nimi ja sen jälkeen hakasulut, esim:
 
@@ -28,7 +26,7 @@ Auto[] autot;
 
 Tässä vaiheessa kurssia pitäydymme Javan valmiissa tietotyypeissä kuten `String` emmekä vielä toteuta omia luokkia, kuten `Yhteystieto` tai `Auto`.
 
-## Taulukon luominen
+# Taulukon luominen
 
 Taulukot luodaan new-avainsanalla ja taulukon pituus määritellään hakasuluissa. Hakasulkujen sisään määritellään tällä syntaksilla taulukon pituus. 
 
@@ -39,9 +37,10 @@ String[] sanat = new String[10];    // 10 merkkijonoa
 int[] numerot = new int[15];        // 15 kokonaislukua
 ```
 
-## Taulukon alkioihin viittaaminen
 
-Taulukon alkioihin viitataan taulukon indeksien perusteella hakasulkujen avulla:
+# Taulukon alkioihin viittaaminen
+
+Taulukon alkioihin viitataan taulukon indeksien perusteella hakasulkujen avulla. Kuten listojen ja merkkijonojen tapauksessa, taulukoiden indeksit lasketaan seuraavasti:
 
 * ensimmäinen indeksi on 0
 * viimeinen on taulukon pituus - 1
@@ -53,7 +52,7 @@ Arvoja voidaan asettaa taulukkoon sijoitusoperaattorilla `=`. Tällöin sijoitus
 sanat[3] = "hello";
 ```
 
-Arvoja voidaan hakea taulukosta muuttujan ja indeksin avulla. Haettu arvo voidaan asettaa muuttujaan, tulostaa tai välittää eteenpäin aivan kuten muutkin samantyyppiset arvot.
+Arvoja voidaan hakea taulukosta vastaavasti muuttujan ja indeksin avulla. Haettu arvo voidaan asettaa toiseen muuttujaan, tulostaa tai välittää eteenpäin, aivan kuten muutkin samantyyppiset arvot:
 
 ```java
 // arvon hakeminen indeksistä 3:
@@ -86,9 +85,9 @@ int luku = luvut[2];
 Tämä esimerkki on lainattu Helsingin yliopiston Agile Education Research –tutkimusryhmän oppimateriaalista, joka on lisensoitu Creative Commons BY-NC-SA-lisenssillä. https://2017-ohjelmointi.github.io/part6/ 
 
 
-## Taulukon tyjät arvot
+# Taulukon tyjät arvot
 
-Koska taulukon pituus ei voi muuttua, on taulukossa heti luonnin jälkeen tarvittava määrä arvoja. Oletusarvo numerotaulukoilla on `0` ja oliotaulukoilla (esim. merkkijonotaulukot), oletusarvo on tyhjä viittaus eli `null`.
+Koska taulukon pituus ei voi muuttua, on taulukossa heti luonnin jälkeen tarvittava määrä paikkoja. Oletusarvo numerotaulukoilla on nolla `0` ja boolean-taulukoilla `false`. Oliotaulukoilla (esim. merkkijonotaulukot, oletusarvo on tyhjä viittaus, eli `null`.
 
 ```java
 // taulukko täytetään oletusarvoilla, eli nollilla:
@@ -100,7 +99,7 @@ String[] sanat = new String[4];
 // [null, null, null, null]
 ```
 
-## Taulukon luominen valmiilla arvoilla
+# Taulukon luominen valmiilla arvoilla
 
 Jos taulukkoon asetettavat alkuarvot ovat jo valmiiksi tiedossa, taulukko voidaan alustaa myös aaltosulkeiden avulla tietyille arvoille.
 
@@ -370,6 +369,15 @@ public class ArgsTaulukonTulostaminen {
         System.out.println(Arrays.toString(args));
     }
 }
+```
+
+# Viittaustyyppiset muuttujat ja taulukon kopiointi
+
+Huomaa, että taulukoita, kuten listoja ja kaikkia muitakin olioita, käytetään viittaustyyppisillä muuttujilla. Taulukkoa ei siis automaattisesti kopioida, kun sitä käytetään eri paikoista:
+
+```java
+String[] sanat = new String[10];
+String[] verbit = sanat; // ei kopioi taulukkoa!
 ```
 
 ## Syventävää tietoa: taulukon kopioiminen
