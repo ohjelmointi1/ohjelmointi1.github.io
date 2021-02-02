@@ -82,7 +82,7 @@ int luku = luvut[2];
 
 [Katso Java Visualizerissa!](https://goo.gl/Dmrxhz)
 
-Tämä esimerkki on lainattu Helsingin yliopiston Agile Education Research –tutkimusryhmän oppimateriaalista, joka on lisensoitu Creative Commons BY-NC-SA-lisenssillä. https://2017-ohjelmointi.github.io/part6/ 
+Tämä esimerkki on lainattu Helsingin yliopiston Agile Education Research –tutkimusryhmän oppimateriaalista, joka on lisensoitu Creative Commons BY-NC-SA-lisenssillä. [https://2017-ohjelmointi.github.io/part6/](https://2017-ohjelmointi.github.io/part6/)
 
 
 # Taulukon tyjät arvot
@@ -171,7 +171,7 @@ while (indeksi < luvut.length) {
 ```
 [Katso Java Visualizerissa!](https://goo.gl/XzEiAc)
 
-Tämän esimerkki on lainattu Helsingin yliopiston Agile Education Research –tutkimusryhmän oppimateriaalista, joka on lisensoitu Creative Commons BY-NC-SA-lisenssillä. https://2017-ohjelmointi.github.io/part6/ 
+Tämän esimerkki on lainattu Helsingin yliopiston Agile Education Research –tutkimusryhmän oppimateriaalista, joka on lisensoitu Creative Commons BY-NC-SA-lisenssillä. [https://2017-ohjelmointi.github.io/part6/](https://2017-ohjelmointi.github.io/part6/)
 
 # Taulukon hyödyntämistä
 
@@ -225,7 +225,7 @@ public class MerkkijononPilkkominen {
 
 ## For each –toistokäsky ja listojen sekä taulukoiden läpikäynti
 
-Taulukon kaikki alkiot voidaan käydä läpi for each -toistokäskyllä kuten listojen alkiot. https://www.google.com/search?q=for+each+loop+java+array
+Taulukon kaikki alkiot voidaan käydä läpi for each -toistokäskyllä kuten listojen alkiot. [https://www.google.com/search?q=for+each+loop+java+array](https://www.google.com/search?q=for+each+loop+java+array)
 
 
 ```java
@@ -414,7 +414,7 @@ Ote hyödyllisistä apumetodeista taulukoiden käyttöön:
 
 > Sorts the specified array into ascending order.
 
-Lähde: https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html
+Lähde: [https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html)
 
 ---
 
