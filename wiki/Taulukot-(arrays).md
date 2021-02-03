@@ -1,11 +1,13 @@
 [&larr; Takaisin etusivulle](/)
 
 
-<h1 class="js-toc-ignore">Taulukot</h1>
+<h1 class="js-toc-ignore">Taulukot (array)</h1>
 
 Tällä kerralla tutustumme Javan taulukoihin. Taulukot ovat varsin alkeellisia tietorakenteita, joihin voidaan varastoida useita saman typpisiä arvoja. Materiaalissa ja oppitunnilla oletetaan perustason osaamista listojen käytöstä.
 
 Toisin kuin listoilla, taulukon pituus on kiinteä, eli niitä ei voi lyhentää eikä kasvattaa. Taulukoilla ei myöskään ole metodeita eikä samanlaista luonnollista merkkijonoesitystä kuin listoilla. 
+
+Listoilla ja taulukoilla on myös lukuisia yhtäläisyyksiä, ja `ArrayList`-listat jopa käyttävät sisäisesti taulukoita tietojensa tallentamiseen nimensä mukaisesti.
 
 
 **Sisällysluettelo**
@@ -414,6 +416,17 @@ Ote hyödyllisistä apumetodeista taulukoiden käyttöön:
 > Sorts the specified array into ascending order.
 
 Lähde: [https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html)
+
+
+# Tehtäväideoita oppitunnille
+
+## Lottotarkistin
+
+Kirjoitetaan ohjelma, joka käyttää kahta kokonaislukutaulukkoa tarkistaakseen lottorivillä olevat oikeat numerot.
+
+## Sadetilasto
+
+Kirjoitetaan ohjelma, joka lukee Ilmatieteen laitoksen säätilastoa ja laskee sen perusteella sademäärän keskiarvon, minimin ja maksimin.
 
 ---
 
