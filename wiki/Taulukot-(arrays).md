@@ -14,6 +14,9 @@ Listoilla ja taulukoilla on myös lukuisia yhtäläisyyksiä, ja `ArrayList`-lis
 
 <div class="js-toc"></div>
 
+# Oppituntitallenne: taulukon luominen, käsitteleminen ja läpikäynti
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/99c9ef6f-d2eb-4180-8c1b-0cfef766cb10?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
 # Taulukot ja taulukkomuuttujat
 
@@ -203,7 +206,7 @@ String[] kelloOsat = kellonaika.split(":");
 System.out.println(Arrays.toString(kelloOsat)); // ["7", "9", "18"]
 ```
 
-## CSV-tiedostot (comma-separated values))
+## CSV-tiedostot (comma-separated values)
 
 Taulukkomuotoisen tiedon tallentamiseen yksinkertaisina tekstitiedostoina käytetään usein CSV-tiedostoja:
 
@@ -227,6 +230,16 @@ Vuosi	| Merkki	| Malli     | Pituus
 2000	| Mercury   | Cougar    | 2.38
 
 Koska CSV-tiedostot on helposti koneluettavia ja -kirjoitettavia, hyvin monet ohjelmat tukevat niitä tiedon tallennusmuotonaan. Myös CSV-tiedostojen käsittelyssä `split`-metodista on hyötyä, vaikkakin monimutkaisempia CSV-rakenteita kannattaa lukea erillisten kirjastojen avulla.
+
+
+## Säätilasto-oppituntitallenne
+
+Tunnilla kirjoitimme ohjelman, joka lukee Ilmatieteen laitoksen avointa csv-muotoista säädataa ja kertoo aineiston lämpimmän ja kylmimmän havainnon päivämäärineen.
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/fbbdf454-5222-43bb-840b-8579fdd47e13?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Voit tallentaa säädatan itsellesi csv-muodossa osoitteesta [https://www.ilmatieteenlaitos.fi/havaintojen-lataus](https://www.ilmatieteenlaitos.fi/havaintojen-lataus). Aineisto on lisensoitu lisenssillä [Creative Commons Nimeä 4.0](https://www.ilmatieteenlaitos.fi/avoin-data-lisenssi).
+
 
 
 ## For each –toistokäsky ja listojen sekä taulukoiden läpikäynti
@@ -422,11 +435,11 @@ Lähde: [https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html](https:
 
 ## Lottotarkistin
 
-Kirjoitetaan ohjelma, joka käyttää kahta kokonaislukutaulukkoa tarkistaakseen lottorivillä olevat oikeat numerot.
+Oppitunnilla kirjoitettiin ohjelma, joka käyttää useita taulukoita tarkistaakseen lottoriveillä olevat oikeat numerot.
 
-## Sadetilasto
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/613511d5-aa04-41ed-bc3b-d88c2fdd2f4e?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Kirjoitetaan ohjelma, joka lukee Ilmatieteen laitoksen säätilastoa ja laskee sen perusteella sademäärän keskiarvon, minimin ja maksimin.
+[Video: Lottotarkistin (sisäkkäiset toistorakenteet ja useita taulukoita)](https://web.microsoftstream.com/video/613511d5-aa04-41ed-bc3b-d88c2fdd2f4e)
 
 ---
 
