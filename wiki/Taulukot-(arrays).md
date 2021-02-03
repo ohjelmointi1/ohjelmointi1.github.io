@@ -3,7 +3,9 @@
 
 <h1 class="js-toc-ignore">Taulukot</h1>
 
-Tällä kerralla tutustumme Javan taulukoihin. Taulukot ovat varsin alkeellisia tietorakenteita, joihin voidaan varastoida useita saman typpisiä arvoja. Toisin kuin listoilla, taulukon pituus on kiinteä, eli sitä ei voi lyhentää eikä kasvattaa. 
+Tällä kerralla tutustumme Javan taulukoihin. Taulukot ovat varsin alkeellisia tietorakenteita, joihin voidaan varastoida useita saman typpisiä arvoja. Materiaalissa ja oppitunnilla oletetaan perustason osaamista listojen käytöstä.
+
+Toisin kuin listoilla, taulukon pituus on kiinteä, eli niitä ei voi lyhentää eikä kasvattaa. Taulukoilla ei myöskään ole metodeita eikä samanlaista luonnollista merkkijonoesitystä kuin listoilla. 
 
 
 **Sisällysluettelo**
@@ -19,7 +21,9 @@ Taulukkoja sisältävien muuttujien tyypiksi kirjoitetaan tallennettavan tyypin 
 int[] numerot;
 String[] sanat;
 double[] liukuluvut;
+boolean[] totuusarvot;
 
+// myöhemmin kurssilla:
 Yhteystieto[] yhteystiedot;
 Auto[] autot;
 ```
@@ -33,8 +37,8 @@ Taulukot luodaan new-avainsanalla ja taulukon pituus määritellään hakasuluis
 **Pituutta ei voi enää muuttaa taulukon luomisen jälkeen**.
 
 ```java
-String[] sanat = new String[10];    // 10 merkkijonoa
-int[] numerot = new int[15];        // 15 kokonaislukua
+String[] viikonpaivat = new String[7];  // 7 merkkijonoa
+int[] lottonumerot = new int[7];        // 7 numeroa
 ```
 
 
@@ -42,30 +46,32 @@ int[] numerot = new int[15];        // 15 kokonaislukua
 
 Taulukon alkioihin viitataan taulukon indeksien perusteella hakasulkujen avulla. Kuten listojen ja merkkijonojen tapauksessa, taulukoiden indeksit lasketaan seuraavasti:
 
-* ensimmäinen indeksi on 0
-* viimeinen on taulukon pituus - 1
+* ensimmäinen indeksi on `0`
+* viimeinen indeksi on `taulukon pituus - 1`
 
 Arvoja voidaan asettaa taulukkoon sijoitusoperaattorilla `=`. Tällöin sijoitusoperaattorin vasemmalle puolelle kirjoitetaan taulukon muuttuja ja haluttu indeksi:
 
 ```java
-// arvon "hello" asettaminen indeksiin 3:
-sanat[3] = "hello";
+viikonpaivat[0] = "maanantai";
+viikonpaivat[1] = "tiistai";
+// ...
+viikonpaivat[6] = "sunnuntai";
 ```
 
 Arvoja voidaan hakea taulukosta vastaavasti muuttujan ja indeksin avulla. Haettu arvo voidaan asettaa toiseen muuttujaan, tulostaa tai välittää eteenpäin, aivan kuten muutkin samantyyppiset arvot:
 
 ```java
 // arvon hakeminen indeksistä 3:
-String teksti = sanat[3];
+String torstai = viikonpaivat[3];
 
 // arvon hakeminen ja tulostaminen:
-System.out.println(sanat[3]);
+System.out.println(viikonpaivat[3]);
 
 // arvon hakeminen, muuttaminen isoksi ja tulostaminen:
-System.out.println(sanat[3].toUpperCase());
+System.out.println(viikonpaivat[3].toUpperCase());
 ```
 
-Tässä esimerkissä luodaan kolmepaikkainen kokonaislukutaulukko, jonka jälkeen taulukon indekseihin 0 ja 2 asetetaan arvot:
+Toisin kuin listoja, taulukkoa ei täydy täyttää alusta loppuun, vaan voit täyttää sen missä järjestyksessä tahansa. Tässä esimerkissä luodaan kolmepaikkainen kokonaislukutaulukko, jonka jälkeen taulukon indekseihin 0 ja 2 asetetaan arvot:
 
 ```java
 // Luodaan muuttuja ja taulukko:
@@ -87,16 +93,14 @@ Tämä esimerkki on lainattu Helsingin yliopiston Agile Education Research –tu
 
 # Taulukon tyjät arvot
 
-Koska taulukon pituus ei voi muuttua, on taulukossa heti luonnin jälkeen tarvittava määrä paikkoja. Oletusarvo numerotaulukoilla on nolla `0` ja boolean-taulukoilla `false`. Oliotaulukoilla (esim. merkkijonotaulukot, oletusarvo on tyhjä viittaus, eli `null`.
+Koska taulukon *pituus ei voi muuttua*, on taulukossa heti luonnin jälkeen tarvittava määrä paikkoja. Oletusarvo numerotaulukoilla on nolla `0` ja boolean-taulukoilla `false`. Oliotaulukoilla (esim. merkkijonotaulukot), oletusarvo on tyhjä viittaus, eli `null`.
 
 ```java
 // taulukko täytetään oletusarvoilla, eli nollilla:
-int[] luvut = new int[3];
-// [0, 0, 0]
+int[] luvut = new int[3];       // [0, 0, 0]
 
 // viittaustyyppisten taulukoiden oletusarvo on `null`:
-String[] sanat = new String[4];
-// [null, null, null, null]
+String[] sanat = new String[4]; // [null, null, null, null]
 ```
 
 # Taulukon luominen valmiilla arvoilla
@@ -106,38 +110,19 @@ Jos taulukkoon asetettavat alkuarvot ovat jo valmiiksi tiedossa, taulukko voidaa
 Tällöin taulukon pituutta ei ilmoiteta hakasuluissa, vaan pituus määräytyy alkuarvojen määrän mukaan, esim: 
 
 ```java
-int[] arvot = new int[] { 2, 7, 5, 6 };
-// [2, 7, 5, 6]
+int[] lottorivi = new int[] { 3, 9, 15, 16, 26, 29, 33 };
 ```
 
 Java osaa myös päätellä tässä tapauksessa taulukon tyypin, joten voimme kirjoittaa saman ilman `new int[]` -osaa:
 
 ```java
-int[] arvot = { 2, 7, 5, 6 };
-// [2, 7, 5, 6]
+int[] lottorivi = { 3, 9, 15, 16, 26, 29, 33 };
 ```
 
 Taulukoiden alustaminen valmiiksi tiedossa olevilla merkkijonoilla toimii samalla tavalla:
 
 ```java
-// alustaminen valmiilla arvoilla:
-int[] numerot1 = new int[] { 2, 7, 5, 6 };
-
-// alustaminen valmiilla arvoilla (Java päättelee tyypin):
-int[] numerot2 = { 2, 7, 5, 6 };
-
-// vastaavasti merkkijonoilla:
-String[] merkkijonot1 = new String[] { "Ferrari", "McLaren", "Sauber" };
-
-// Java päättelee tyypin:
-String[] merkkijonot2 = { "Ferrari", "McLaren", "Sauber" };
-
-// alustaminen yksi alkio kerrallaan:
-int[] numerot3 = new int[4]; // [0, 0, 0, 0]
-luvut1[0] = 2;               // [2, 0, 0, 0]
-luvut1[1] = 7;               // [2, 7, 0, 0]
-luvut1[2] = 5;               // [2, 7, 5, 0]
-luvut1[3] = 6;               // [2, 7, 5, 6]
+String[] viikonpaivat = { "Ma", "Ti", "Ke", "To", "Pe", "La", "Su" };
 ```
 
 ## Taulukon koko ja sen arvojen läpikäynti
@@ -152,7 +137,7 @@ int pituus = luvut.length;
 
 **Huomaa**, että kyseessä ei ole metodikutsu kuten listoilla, eli `taulukko.length()` ei toimi.
 
-Taulukon alkioiden läpikäynti voidaan toteuttaa esim. while- tai for-toistolauseen avulla:
+Taulukon alkioiden läpikäynti voidaan toteuttaa esim. `while`- tai `for`-toistorakenteen avulla:
 
 ```java
 int[] luvut = new int[4];
@@ -175,57 +160,76 @@ Tämän esimerkki on lainattu Helsingin yliopiston Agile Education Research –t
 
 # Taulukon hyödyntämistä
 
+Koska taulukot ovat jonkin verran listoja rajoittuneempi tietorakenne, voi olla, että päädyt itse luomaan taulukkoja harvemmin. Taulukot ovat kuitenkin hyödyllinen tietorakenne erityisesti silloin, kun tarvittava kokoelman koko on ennalta tiedossa. Myös Javan standardikirjastossa hyödynnetään taulukoita, eli vaikka et itse loisi omia taulukoita, tarvitset perustaidot taulukoiden hyödyntämisestä esimerkiksi pilkkoessasi merkkijonoja.
+
 ## Merkkijonon split-metodi
 
 Merkkijonoilla (String-luokka) on `split`-niminen metodi, jolla merkkijono voidaan pilkkoa osiin tietyn merkin tai osamerkkijonon kohdalta. Split palauttaa **merkkijonotaulukon**, jossa on alkuperäisen merkkijonon osat ilman pilkkomisessa käytettyjä merkkejä.
 
 ```java
-String teksti = "sana sanat sanoja";
+String teksti = "ma ti ke to pe la su";
 
 // pilkotaan välilyöntien kohdalta
-String[] sanat = teksti.split(" ");
+String[] paivat = teksti.split(" ");
 
-System.out.println(sanat.length);
+int pituus = paivat.length;
+System.out.println(pituus); // 7
 
-System.out.println(sanat[0]);
-System.out.println(sanat[1]);
-System.out.println(sanat[2]);
+System.out.println(paivat[0]); // ma
+System.out.println(paivat[1]); // ti
+System.out.println(paivat[2]); // ke
+
+System.out.println(paivat[pituus - 1]); // su
 ```
-
-[Katso Java Visualizerissa!](https://goo.gl/MQ4HW8)
 
 Pilkkominen voi olla hyödyllistä esimerkiksi koneellisesti luettavaksi tarkoitettujen esitysmuotojen, kuten päivämäärien tai CSV-tiedostojen, lukemisessa:
 
 ```java
-import java.util.Arrays;
+String ajanhetki = "2020-9-19T7:9:18";
 
-public class MerkkijononPilkkominen {
+String[] osat = ajanhetki.split("T");
 
-    // Huom! Käytä oikeassa projektissa ajan käsittelyyn Javan valmista 
-    // logiikkaa java.time-paketista!
-    public static void main(String[] args) {
-        String ajanhetki = "2020-9-19T7:9:18";
+System.out.println(osat[0]); // "2020-9-19"
+System.out.println(osat[1]); // "7:9:18"
 
-        String[] osat = ajanhetki.split("T");
+String paivamaara = osat[0];
+String[] pvmOsat = paivamaara.split("-");
+System.out.println(Arrays.toString(pvmOsat)); // ["2020", "9", "19"]
 
-        System.out.println(osat[0]); // "2020-9-19"
-        System.out.println(osat[1]); // "7:9:18"
-
-        String paivamaara = osat[0];
-        String[] pvmOsat = paivamaara.split("-");
-
-        String kellonaika = osat[1];
-        String[] kelloOsat = kellonaika.split(":");
-
-        System.out.println(Arrays.toString(pvmOsat)); // ["2020", "9", "19"]
-        System.out.println(Arrays.toString(kelloOsat)); // ["7", "9", "18"]
-    }
-}
+String kellonaika = osat[1];
+String[] kelloOsat = kellonaika.split(":");
+System.out.println(Arrays.toString(kelloOsat)); // ["7", "9", "18"]
 ```
+
+## CSV-tiedostot (comma-separated values))
+
+Taulukkomuotoisen tiedon tallentamiseen yksinkertaisina tekstitiedostoina käytetään usein CSV-tiedostoja:
+
+> *"CSV on toteutukseltaan tekstitiedosto, jonka taulukkorakenteen eri kentät on eroteltu toisistaan pilkuilla ja rivinvaihdoilla. Jos jokin kenttä sisältää erikoismerkkejä, kyseinen kenttä ympäröidään pystysuorilla lainausmerkeillä ("). Ensimmäisellä rivillä voi olla kenttien selitykset samassa muodossa kuin mitä itse tiedot ovat."*
+>
+> Wikipedia. CSV. https://fi.wikipedia.org/wiki/CSV
+
+[Wikipedian esimerkissä](https://fi.wikipedia.org/wiki/CSV) autojen tiedot on esitetty tallennettuna seuraavassa CSV-muodossa:
+
+```
+Vuosi,Merkki,Malli,Pituus
+1997,Ford,E350,2.34
+2000,Mercury,Cougar,2.38
+```
+
+[Sama data](https://fi.wikipedia.org/wiki/CSV) on esitettävissä myös taulukkomuodossa:
+
+Vuosi	| Merkki	| Malli     | Pituus
+--------|-----------|-----------|-------
+1997	| Ford      | E350      | 2.34
+2000	| Mercury   | Cougar    | 2.38
+
+Koska CSV-tiedostot on helposti koneluettavia ja -kirjoitettavia, hyvin monet ohjelmat tukevat niitä tiedon tallennusmuotonaan. Myös CSV-tiedostojen käsittelyssä `split`-metodista on hyötyä, vaikkakin monimutkaisempia CSV-rakenteita kannattaa lukea erillisten kirjastojen avulla.
+
 
 ## For each –toistokäsky ja listojen sekä taulukoiden läpikäynti
 
-Taulukon kaikki alkiot voidaan käydä läpi for each -toistokäskyllä kuten listojen alkiot. [https://www.google.com/search?q=for+each+loop+java+array](https://www.google.com/search?q=for+each+loop+java+array)
+Taulukon kaikki alkiot voidaan käydä läpi for each -toistokäskyllä, aivan kuten listojen alkiot. Kertaa tarvittaessa for each -rakenne (advanced for loop) lista-aiheen muistiinpanoista tai [Googlen avulla](https://www.google.com/search?q=for+each+loop+java+array).
 
 
 ```java
@@ -239,6 +243,8 @@ for (int luku : luvut) {
 
 ## Vertailu: taulukoiden ja listojen eroja
 
+Seuraavissa kahdessa esimerkkikoodissa luodaan merkkijonotaulukko sekä merkkijonolista, joihin molempiin asetetaan yksi arvo:
+
 ```java
 // Luodaan 10 merkkijonon pituinen taulukko:
 String[] taulukko = new String[10];
@@ -248,12 +254,8 @@ taulukko[0] = "taulukkoon";
 
 System.out.println(taulukko[0]);
 
-System.out.println(taulukko.length); // __10__
+System.out.println(taulukko.length); // 10
 ```
-
-Taulukon pituus on siis 10, vaikka olemme yllä lisänneet taulukkoon vain yhden arvon. Muut taulukon indeksit ovat vielä tyhjiä, mutta ne ovat olemassa.
-
-Vastaavasti listoilla:
 
 ```java
 // Luodaan tyhjä merkkijonolista:
@@ -264,11 +266,10 @@ lista.add("listalle");
 
 System.out.println(lista.get(0));
 
-System.out.println(lista.size()); // __1__
+System.out.println(lista.size()); // 1
 ```
 
-Listan pituus kasvaa dynaamisesti, joten yllä olevan listan pituus on yksi.
-
+Listojen ja taulukoiden toiminta on monilta osin samankaltaista. Taulukon pituus on kuitenkin muuttumaton, joten sen pituus on 10, vaikka sinne onkin lisätty vasta yksi merkkijono. Muut taulukon indeksit ovat vielä tyhjiä (`null`). Listan pituus kasvaa dynaamisesti, joten esimerkissä listan pituus on 1.
 
 Taulukot                                            | Listat
 ----------------------------------------------------|--------------------------
@@ -324,35 +325,58 @@ System.out.println(tekstina); // tulostaa [a, a, j, v]
 
 ## Viittaustyyppiset muuttujat käytännössä
 
+Taulukoita käytetään Javassa viittaustyyppisillä muuttujilla, aivan kuten listoja, merkkijonoja ja muita olioita. Tämä tarkoittaa käytännössä sitä, että kun taulukko asetetaan muuttujaan tai välitetään parametrina toisaalle, taulukkoa *ei kopioida*, vaan *samaan taulukkoon viitataan useammasta paikasta*:
+
 ```java
-import java.util.Arrays;
-
-public class ViittaustyyppisetMuuttujat {
-
-    public static void main(String[] args) {
-
-        String[] nimet = { "Johan", "Ludvig", "Runeberg" };
-        String merkkijono = Arrays.toString(nimet);
-        System.out.println(merkkijono);
-
-        String etunimi = nimet[0]; // "Johan"
-        String toinenNimi = nimet[1]; // "Ludvig"
-        String sukunimi = nimet[2]; // "Runeberg"
-
-        // EI KOPIOI TAULUKKOA, VAAN VIITTAA SAMAAN TAULUKKOON:
-        String[] lyhennetty = nimet;
-
-        lyhennetty[0] = etunimi.substring(0, 1); // "J"
-        lyhennetty[1] = toinenNimi.substring(0, 1); // "L"
-
-        // Lyhennetty taulukko sisältää muuttuneet merkkijonot
-        System.out.println(Arrays.toString(lyhennetty));
-
-        // Myös alkuperäisen muuttujan kautta sisältö on muuttunut
-        System.out.println(Arrays.toString(nimet));
-    }
-}
+String[] sanat = new String[10];
+String[] verbit = sanat; // ei kopioi taulukkoa
 ```
+
+Ilmiötä havainnollistetaan seuraavassa koodiesimerkissä, jossa `nimet` ja `lyhennetty` ovat täsmälleen sama taulukko:
+
+```java
+String[] nimet = { "Johan", "Ludvig", "Runeberg" };
+String merkkijono = Arrays.toString(nimet);
+System.out.println(merkkijono);
+
+String etunimi = nimet[0]; // "Johan"
+String toinenNimi = nimet[1]; // "Ludvig"
+String sukunimi = nimet[2]; // "Runeberg"
+
+// EI KOPIOI TAULUKKOA, VAAN VIITTAA SAMAAN TAULUKKOON:
+String[] lyhennetty = nimet;
+
+lyhennetty[0] = etunimi.substring(0, 1); // "J"
+lyhennetty[1] = toinenNimi.substring(0, 1); // "L"
+
+// Lyhennetty taulukko sisältää muuttuneet merkkijonot
+System.out.println(Arrays.toString(lyhennetty));
+
+// Myös alkuperäisen muuttujan kautta sisältö on muuttunut
+System.out.println(Arrays.toString(nimet));
+```
+
+Voit tutustua koodin suoritukseen vaiheittain [Java Visualizer -työkalulla](https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.Arrays%3B%0A%0Apublic+class+RuneberginLyhentaminen+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++String%5B%5D+nimet+%3D+%7B+%22Johan%22,+%22Ludvig%22,+%22Runeberg%22+%7D%3B%0A++++++String+merkkijono+%3D+Arrays.toString(nimet)%3B%0A++++++System.out.println(merkkijono)%3B%0A%0A++++++String+etunimi+%3D+nimet%5B0%5D%3B+//+%22Johan%22%0A++++++String+toinenNimi+%3D+nimet%5B1%5D%3B+//+%22Ludvig%22%0A++++++String+sukunimi+%3D+nimet%5B2%5D%3B+//+%22Runeberg%22%0A%0A++++++//+EI+KOPIOI+TAULUKKOA,+VAAN+VIITTAA+SAMAAN+TAULUKKOON%3A%0A++++++String%5B%5D+lyhennetty+%3D+nimet%3B%0A%0A++++++lyhennetty%5B0%5D+%3D+etunimi.substring(0,+1)%3B+//+%22J%22%0A++++++lyhennetty%5B1%5D+%3D+toinenNimi.substring(0,+1)%3B+//+%22L%22%0A%0A++++++//+Lyhennetty+taulukko+sis%C3%A4lt%C3%A4%C3%A4+muuttuneet+merkkijonot%0A++++++System.out.println(Arrays.toString(lyhennetty))%3B%0A%0A++++++//+My%C3%B6s+alkuper%C3%A4isen+muuttujan+kautta+sis%C3%A4lt%C3%B6+on+muuttunut%0A++++++System.out.println(Arrays.toString(nimet))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0):
+
+<iframe style="width: 100%; height: 480px;" src="https://cscircles.cemc.uwaterloo.ca/java_visualize/iframe-embed.html?faking_cpp=false#data=%7B%22user_script%22%3A%22import%20java.util.Arrays%3B%5Cn%5Cnpublic%20class%20RuneberginLyhentaminen%20%7B%5Cn%20%20%20public%20static%20void%20main(String%5B%5D%20args)%20%7B%5Cn%20%20%20%20%20%20String%5B%5D%20nimet%20%3D%20%7B%20%5C%22Johan%5C%22%2C%20%5C%22Ludvig%5C%22%2C%20%5C%22Runeberg%5C%22%20%7D%3B%5Cn%20%20%20%20%20%20String%20merkkijono%20%3D%20Arrays.toString(nimet)%3B%5Cn%20%20%20%20%20%20System.out.println(merkkijono)%3B%5Cn%5Cn%20%20%20%20%20%20String%20etunimi%20%3D%20nimet%5B0%5D%3B%20%2F%2F%20%5C%22Johan%5C%22%5Cn%20%20%20%20%20%20String%20toinenNimi%20%3D%20nimet%5B1%5D%3B%20%2F%2F%20%5C%22Ludvig%5C%22%5Cn%20%20%20%20%20%20String%20sukunimi%20%3D%20nimet%5B2%5D%3B%20%2F%2F%20%5C%22Runeberg%5C%22%5Cn%5Cn%20%20%20%20%20%20%2F%2F%20EI%20KOPIOI%20TAULUKKOA%2C%20VAAN%20VIITTAA%20SAMAAN%20TAULUKKOON%3A%5Cn%20%20%20%20%20%20String%5B%5D%20lyhennetty%20%3D%20nimet%3B%5Cn%5Cn%20%20%20%20%20%20lyhennetty%5B0%5D%20%3D%20etunimi.substring(0%2C%201)%3B%20%2F%2F%20%5C%22J%5C%22%5Cn%20%20%20%20%20%20lyhennetty%5B1%5D%20%3D%20toinenNimi.substring(0%2C%201)%3B%20%2F%2F%20%5C%22L%5C%22%5Cn%5Cn%20%20%20%20%20%20%2F%2F%20Lyhennetty%20taulukko%20sis%C3%A4lt%C3%A4%C3%A4%20muuttuneet%20merkkijonot%5Cn%20%20%20%20%20%20System.out.println(Arrays.toString(lyhennetty))%3B%5Cn%5Cn%20%20%20%20%20%20%2F%2F%20My%C3%B6s%20alkuper%C3%A4isen%20muuttujan%20kautta%20sis%C3%A4lt%C3%B6%20on%20muuttunut%5Cn%20%20%20%20%20%20System.out.println(Arrays.toString(nimet))%3B%5Cn%20%20%20%7D%5Cn%7D%22%2C%22options%22%3A%7B%22showStringsAsValues%22%3Atrue%2C%22showAllFields%22%3Afalse%7D%2C%22args%22%3A%5B%5D%2C%22stdin%22%3A%22%22%7D&cumulative=false&heapPrimitives=false&drawParentPointers=false&textReferences=false&showOnlyOutputs=false&py=3&curInstr=0&resizeContainer=true&highlightLines=true&rightStdout=true" frameborder="0" scrolling="no"></iframe>
+
+## Syventävää tietoa: taulukon kopioiminen
+
+Taulukkoa ei ole mahdollista lyhentää tai pidentää, mutta siitä voidaan luoda eri pituinen kopio:
+
+* jos kopio on alkuperäistä taulukkoa lyhyempi, jää arvoja pois
+* jos kopio on alkuperäistä pidempi, täytetään loppuosa oletusarvoilla (`null`, `0` jne).
+
+Monet operaatiot, kuten taulukon järjestäminen, muuttavat alkuperäistä taulukkoa pysyvästi. Usein alkuperäinen data halutaan pitää muuttumattomana, jolloin operaatioita tehdään taulukon kopiolle.
+
+```java
+String[] kirjaimet = new String[] { "j", "a", "v", "a" };
+
+String[] kopio = Arrays.copyOf(kirjaimet, kirjaimet.length);
+
+String[] alkuosa = Arrays.copyOf(kirjaimet, 2); // [j, a]
+```
+
 
 ## Syventävää tietoa: main-metodin args-taulukko
 
@@ -371,31 +395,6 @@ public class ArgsTaulukonTulostaminen {
 }
 ```
 
-# Viittaustyyppiset muuttujat ja taulukon kopiointi
-
-Huomaa, että taulukoita, kuten listoja ja kaikkia muitakin olioita, käytetään viittaustyyppisillä muuttujilla. Taulukkoa ei siis automaattisesti kopioida, kun sitä käytetään eri paikoista:
-
-```java
-String[] sanat = new String[10];
-String[] verbit = sanat; // ei kopioi taulukkoa!
-```
-
-## Syventävää tietoa: taulukon kopioiminen
-
-Taulukkoa ei ole mahdollista lyhentää tai pidentää, mutta siitä voidaan luoda eri pituinen kopio:
-
-* jos kopio on alkuperäistä taulukkoa lyhyempi, jää arvoja pois
-* jos kopio on alkuperäistä pidempi, täytetään loppuosa oletusarvoilla (`null`, `0` jne).
-
-Monet operaatiot, kuten taulukon järjestäminen, muuttavat alkuperäistä taulukkoa pysyvästi. Usein alkuperäinen data halutaan pitää muuttumattomana, jolloin operaatioita tehdään taulukon kopiolle.
-
-```java
-String[] kirjaimet = new String[] { "j", "a", "v", "a" };
-
-String[] kopio = Arrays.copyOf(kirjaimet, kirjaimet.length);
-
-String[] alkuosa = Arrays.copyOf(kirjaimet, 2); // [j, a]
-```
 
 ## Yhteenveto: Arrays-apuluokka
 
