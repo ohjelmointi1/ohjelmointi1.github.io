@@ -93,7 +93,7 @@ int luku = luvut[2];
 Tämä esimerkki on lainattu Helsingin yliopiston Agile Education Research –tutkimusryhmän oppimateriaalista, joka on lisensoitu Creative Commons BY-NC-SA-lisenssillä. [https://2017-ohjelmointi.github.io/part6/](https://2017-ohjelmointi.github.io/part6/)
 
 
-# Taulukon tyjät arvot
+# Taulukon tyhjät arvot
 
 Koska taulukon *pituus ei voi muuttua*, on taulukossa heti luonnin jälkeen tarvittava määrä paikkoja. Oletusarvo numerotaulukoilla on nolla `0` ja boolean-taulukoilla `false`. Oliotaulukoilla (esim. merkkijonotaulukot), oletusarvo on tyhjä viittaus, eli `null`.
 
