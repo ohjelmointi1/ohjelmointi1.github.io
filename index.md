@@ -165,6 +165,10 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
                 <strong>Taulukot</strong><br />
                 <a href="wiki/Taulukot-(arrays)">📝 Muistiinpanot</a><br />
                 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko03/taulukot">📁 Oppitunnin esimerkkikoodit</a><br /><br />
+                <a href="https://web.microsoftstream.com/video/f1b95fef-5e30-489c-8067-fdf324e8a5b2">📼 Taulukot-oppitunnin aloitus</a><br />
+                <a href="https://web.microsoftstream.com/video/99c9ef6f-d2eb-4180-8c1b-0cfef766cb10">📼 Taulukon luominen, käsitteleminen ja läpikäynti</a><br />
+                <a href="https://web.microsoftstream.com/video/613511d5-aa04-41ed-bc3b-d88c2fdd2f4e">📼 Lottotarkistin (sisäkkäiset toistorakenteet ja useita taulukoita)</a><br />
+                <a href="https://web.microsoftstream.com/video/fbbdf454-5222-43bb-840b-8579fdd47e13">📼 Säätilasto-esimerkki (csv-datan käsittely)</a><br />
                 <!--<a href="src/viikko3/taulukot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <a href="https://cscircles.cemc.uwaterloo.ca/java_visualize/">🔗 Java Visualizer -työkalu</a><br />
                 <a href="https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.Arrays%3B%0A%0Apublic+class+Kaupunkitaulukko+%7B%0A%0A++++public+static+void+main(String%5B%5D+args)+%7B%0A%0A++++++++String%5B%5D+kaupungit+%3D+%7B+%22Rauma%22,+%22Helsinki%22,+%22Espoo%22,+%22Vantaa%22,+%22Turku%22+%7D%3B%0A%0A++++++++System.out.println(%22Alkuper%C3%A4inen%3A%22)%3B%0A++++++++System.out.println(Arrays.toString(kaupungit))%3B%0A%0A++++++++System.out.println()%3B%0A%0A++++++++String%5B%5D+kaupungitSort+%3D+Arrays.copyOf(kaupungit,+kaupungit.length)%3B%0A%0A++++++++Arrays.sort(kaupungitSort)%3B%0A%0A++++++++System.out.println(%22Sorttauksen+j%C3%A4lkeen%3A%22)%3B%0A++++++++System.out.println(Arrays.toString(kaupungit))%3B%0A++++++++System.out.println(Arrays.toString(kaupungitSort))%3B%0A%0A++++%7D%0A%7D%0A&mode=display&curInstr=0">🔗 Kaupungit-esimerkki Visualizerissa (taulukon kopioiminen)</a><br />
