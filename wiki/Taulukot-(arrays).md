@@ -314,13 +314,13 @@ import java.util.Arrays; // alkuun tämä
 ```
 
 ```java
-String[] kirjaimet = new String[] { "j", "a", "v", "a" };
+String[] nimet = { "Superman", "Batman", "Chuck Norris" };
 
-Arrays.sort(kirjaimet);
+Arrays.sort(nimet);
 
-String tekstina = Arrays.toString(kirjaimet);
+String merkkijonoksi = Arrays.toString(nimet);
 
-System.out.println(tekstina); // tulostaa [a, a, j, v]
+System.out.println(merkkijonoksi); // [Batman, Chuck Norris, Superman]
 ```
 
 ## Viittaustyyppiset muuttujat käytännössä
