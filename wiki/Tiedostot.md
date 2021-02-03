@@ -88,26 +88,26 @@ Rivi 2
 
 ## CSV-tiedostot (comma-separated values))
 
-Taulukkomuotoisen tiedon tallentamiseen yksinkertaisina tekstitiedostoina käytetään usein CSV-tiedostoja. 
+Taulukkomuotoisen tiedon tallentamiseen yksinkertaisina tekstitiedostoina käytetään usein CSV-tiedostoja:
 
-> CSV on toteutukseltaan tekstitiedosto, jonka taulukkorakenteen eri kentät on eroteltu toisistaan pilkuilla ja rivinvaihdoilla. Jos jokin kenttä sisältää erikoismerkkejä, kyseinen kenttä ympäröidään pystysuorilla lainausmerkeillä ("). Ensimmäisellä rivillä voi olla kenttien selitykset samassa muodossa kuin mitä itse tiedot ovat.
+> *"CSV on toteutukseltaan tekstitiedosto, jonka taulukkorakenteen eri kentät on eroteltu toisistaan pilkuilla ja rivinvaihdoilla. Jos jokin kenttä sisältää erikoismerkkejä, kyseinen kenttä ympäröidään pystysuorilla lainausmerkeillä ("). Ensimmäisellä rivillä voi olla kenttien selitykset samassa muodossa kuin mitä itse tiedot ovat."*
 >
-> Wikipedia, https://fi.wikipedia.org/wiki/CSV
+> Wikipedia. CSV. https://fi.wikipedia.org/wiki/CSV
 
 [Wikipedian esimerkissä](https://fi.wikipedia.org/wiki/CSV) autojen tiedot on esitetty tallennettuna seuraavassa CSV-muodossa:
 
 ```
 Vuosi,Merkki,Malli,Pituus
-1997,Ford,E350,"2,34"
-2000,Mercury,Cougar,"2,38"
+1997,Ford,E350,2.34
+2000,Mercury,Cougar,2.38
 ```
 
 [Sama data](https://fi.wikipedia.org/wiki/CSV) on esitettävissä myös taulukkomuodossa:
 
 Vuosi	| Merkki	| Malli     | Pituus
 --------|-----------|-----------|-------
-1997	| Ford      | E350      | 2,34
-2000	| Mercury   | Cougar    | 2,38
+1997	| Ford      | E350      | 2.34
+2000	| Mercury   | Cougar    | 2.38
 
 Koska CSV-tiedostot on helposti koneluettavia ja -kirjoitettavia, hyvin monet ohjelmat tukevat niitä tiedon tallennusmuotonaan.
 
