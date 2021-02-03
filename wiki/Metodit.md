@@ -1,8 +1,14 @@
 [&larr; Takaisin etusivulle](/)
 
-<h1 class="js-toc-ignore">Metodit</h1>
+<h1 class="js-toc-ignore">(Staattiset) metodit</h1>
 
-Tämä dokumentti on tiivistelmä Helsingin yliopiston [Agile Education Research](https://www.helsinki.fi/en/researchgroups/data-driven-education) -tutkimusryhmän [MOOC-ohjelmointikurssin materiaalista](https://materiaalit.github.io/ohjelmointi-18/part2/). Tiivistelmä koostuu suorista lainauksista ja sitä on täydennetty Haaga-Helian ohjelmointikurssin sisällöllä. Lisenssi: [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi).
+Olemme käyttäneet ohjelmointikurssilla aikaisempien aiheiden yhteydessä lukuisia valmiita metodeja. Metodit ovat olleet luonteva osa ongelmanratkaisua, vaikka emme ole toistaiseksi kiinnittäneet niihin suurta huomiota tai toteuttaneet omia metodeja `main`-metodia lukuun ottamatta.
+
+Tällä kertaa perehdymme tarkemmin omien **staattisten metodien** toteuttamiseen ja kutsumiseen sekä siihen, miten voimme välittää arvoja metodista toiseen ja takaisin. Emme vielä harjoittele olio-ohjelmoinnin käytäntöjä, joten palaamme asiaan oliometodien osalta myöhemmin olio-ohjelmoinnin yhteydessä.
+
+Syitä oman ohjelman jakamiseksi useisiin metodeihin on lukuisia. Ensinnäkin metodien avulla voidaan vähentää toisteisuutta, jos samoja operaatioita tehdään useita kertoja tai useissa eri kohdissa koodia. Toiseksi metodien avulla voidaan vähentää kompleksisuutta, eli pilkkoa iso monimutkainen kokonaisuus pienemmiksi, helpommin ymmärrettäviksi paloiksi. Myöhemmin kurssilla olio-ohjelmoinnin yhteydessä metodien merkitys kasvaa entisestään, kun metodeista tulee oliokohtaisia.
+
+Tämä oppimateriaali pohjautuu Helsingin yliopiston [Agile Education Research](https://www.helsinki.fi/en/researchgroups/data-driven-education) -tutkimusryhmän [MOOC-ohjelmointikurssin materiaaliin](https://materiaalit.github.io/ohjelmointi-18/part2/), jota suositellaan myös tälle ohjelmointikurssille. Lisenssi: [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi).
 
 
 **Sisällysluettelo**
@@ -10,42 +16,52 @@ Tämä dokumentti on tiivistelmä Helsingin yliopiston [Agile Education Research
 <div class="js-toc"></div>
 
 
+# Metodien käsitteet ja metodikutsut
 
-## Mikä on metodi?
+## Parametriarvot
 
-Teknisesti ottaen metodi tarkoittaa nimettyä lauseista koostuvaa joukkoa, jota voi kutsua muualta ohjelmakoodista nimen perusteella. Yksi hyvin yleinen käyttämämme metodi on `println`:
-
-```java
-System.out.println("Hello world");
-```
-
-`println`-metodin toteutus pitää sisällään koodirivit, jotka tarvitaan sille annetun arvon tulostamiseksi. Metodin sisäinen toteutus -- eli joukko suoritettavia lauseita -- on tässä tapauksessa Java-ohjelmointikielen piilottama.
-
-
-## Metodikutsun vaikutus ohjelman suoritukseen
-
-Metodin suorituksen jälkeen palataan takaisin kohtaan, missä ennen metodikutsua oltiin menossa, ja ohjelman suoritus jatkuu tästä. 
-
-Olemme tottuneet näkemään metodikutsun yhteydessä aina pisteen, esim. `lukija.nextLine()`. Tässä metodin nimi onkin pisteen oikeanpuoleinen osa, eli `nextLine()`. Pisteen vasemmanpuoleinen osa, eli tässä `lukija` kertoo kenen metodista on kyse.
-
-Metodikutsun lopussa on aina sulut. Metodista riippuen sulkujen sisälle laitetaan arvoja tai sulut jätetään tyhjäksi.
-
-## Metodin palauttama data, eli **paluuarvot**
-
-Olemme nähneet kurssin aikana sekä metodeja, jotka eivät palauta lainkaan arvoja että metodeja, jotka tuottavat tuloksenaan jonkin arvon:
+Metodin kutsumisessa olemme hyödyntäneet **parametriarvoja**, joiden avulla olemme välittäneet tietoa omasta koodistamme Javan standardikirjastossa toteutetuille koodiriveille:
 
 ```java
-// parseInt palauttaa int-tyyppisen arvon:
-int luku = Integer.parseInt("1234");
-
-// println ei palauta arvoa, joten se on void-tyyppinen:
-System.out.println("Tämä metodi ei palauta arvoa");
+int tulos = Math.min(parametriarvo1, parametriarvo2);
 ```
 
-Metodin koodista voidaan siis välittää arvoja takaisin metodia kutsuneelle koodille. Tämä tehdään `return`-avainsanalla, johon palaamme myöhemmin.
+Toiset metodit eivät tarvitse lainkaan ulkopuolisia arvoja toimiakseen. Näiden metodien kutsussa ei välitetä arvoja:
 
+```java
+LocalDate tanaan = LocalDate.now();
+```
 
-## Metodille annettava data, eli **parametriarvot**
+## Paluuarvot
+
+Vastaavasti olemme vastaanottaneet **paluuarvoja**, eli dataa, jonka metodi palauttaa sen suorituksen päätyttyä:
+
+```java
+int paluuarvo = Integer.parseInt("42");
+```
+
+Yllä olevissa koodiesimerkeissä Javan `Math`-luokassa sijaitseva `min` on metodi, jolle välitetään kaksi parametriarvoa, ja joka palauttaa suorituksensa jälkeen takaisin paluuarvon.
+
+Kaikki metodit eivät välttämättä tarvitse parametriarvoja tai palauta paluuarvoja. Esimerkiksi `System.out.println` **ei palauta** paluuarvoa, vaan se pelkästään tulostaa saamansa parametriarvon konsoliin:
+
+```java
+System.out.println("println-metodi ei palauta arvoa");
+```
+
+# Ohjelman suorituksen eteneminen metodikutsuissa
+
+Ohjelman suorituksen edetessä metodikutsuun, siirtyy suoritus suoritettavalta riviltä toisaalle. Kesken jäänyt metodi ja kaikki siinä paikallisesti olevat muuttujat jävät edelleen muistiin niin sanottuun kutsupinoon:
+
+> *"Java-lähdekoodin suoritusympäristö pitää kirjaa suoritettavasta metodista kutsupinossa. Kutsupino sisältää kehyksiä, joista jokainen sisältää tiedon kyseisen metodin sisäisistä muuttujista sekä niiden arvoista. Kun metodia kutsutaan, kutsupinoon luodaan uusi kehys, joka sisältää metodin sisältämät muuttujat. Kun metodin suoritus loppuu, metodiin liittyvä kehys poistetaan kutsupinosta, jolloin suoritusta jatketaan kutsupinon edeltävästä metodista."*
+>
+> *"Kutsupino tarkoittaa metodien kutsumisen muodostamaa pinoa — juuri suoritettevana oleva metodi on aina pinon päällimmäisenä, ja metodin suorituksen päättyessä palataan pinossa seuraavana olevaan metodiin."*
+>
+> [Agile Education Research, 2019](https://www.helsinki.fi/en/researchgroups/data-driven-education). [Ohjelman pilkkominen osiin: metodit](https://ohjelmointi-19.mooc.fi/osa-2/3-metodit). [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi)
+
+Metodit kutsuvat hyvin usein yhtä tai useampaa muuta metodia, joten kutsupino koostuu tyypillisesti lukuisista keskeneräisistä "kehyksistä".
+
+<!--
+# Metodille annettava data, eli **parametriarvot**
 
 Metodit tarvitsevat usein metodia kutsuvalta koodilta arvoja, joiden perusteella ne suorittavat toimintansa. Esimerkiksi `println` tarvitsee tulostettavan datan ja `parseInt` tarvitsee merkkijonon, jonka se tulkitsee numeroksi. Metodille välitettäviä arvoja kutsutaan **parametriarvoiksi**, ja ne kirjoitetaan metodikutsussa metodin nimen jälkeen tuleviin sulkuihin:
 
@@ -69,15 +85,9 @@ Scanner lukija = new Scanner(System.in);
 int i = lukija.nextInt();
 String s = lukija.nextLine();
 ```
+-->
 
-# Omien metodien määrittely
-
-Javan valmiiden metodien käytön lisäksi ohjelmoija voi luonnollisesti myös itse kirjoittaa uusia metodeja. Metodit edesauttavat uudelleenkäytettävän ja ymmärrettävän koodin kirjoittamista ja mahdollistavat monipuolisempien sovellusten toteuttamisen. Ohjelman suorituksen ei enää tarvitse edetä yhdessä koodilohkossa ylhäältä alas, vaan suoritus voi edetä monipuolisemmin useita erilaisia reittejä.
-
-Kuten käytännössä kaikki koodi, myös metodit kirjoitetaan luokan sisään eli luokan määrittelyssä esiteltyjen aaltosulkujen väliin. Metodeja ei voida määritellä sisäkkäin, eli kaikki metodit ovat luokan sisällä samalla tasolla peräkkäin. Metodien järjestyksellä ei ole Javan kannalta merkitystä.
-
-
-## Main-metodi
+# Metodin otsikko ja avainsanat
 
 Olemme kurssilla tähän asti määritellyt lukuisia kertoja main-metodin:
 
@@ -93,280 +103,296 @@ Metodin otsikko koostuu tässä tapauksessa seuraavista avainsanoista:
 * `static` – staattinen eli luokkametodi, joka ei kuulu millekään yksittäiselle oliolle
 * `void` – metodi ei palauta mitään arvoa
 * `main` – metodin nimi, main-nimisellä metodilla on erityinen rooli ohjelman käynnistyksessä
-* `String[] args` – yksi parametrimuuttuja: merkkijonotaulukko, jonka nimi on args
+* `String[] args` – yksi parametrimuuttuja: merkkijonotaulukko, jonka nimi on `args`
 
-Metodin otsikon jälkeen kirjoitetaan aina aaltosulut `{   }`, joiden sisään kirjoitetaan metodin runko.
+Metodin otsikon jälkeen kirjoitetaan aina aaltosulut `{   }`, joiden sisään kirjoitetaan metodin runko, kuten olemme aikaisemmissa harjoituksissa tehneet.
 
-Muistiinpanojen seuraavat osat käsittelevät näiden merkitystä sekä sitä, mitä muita mahdollisia arvoja voimme käyttää näiden lisäksi.
+`static`-avainsana liittyy käyttämäämme staattiseen ohjelmointityyliin, jossa emme vielä mallinna ohjelmaa olioiden avulla. Toistaiseksi kaikki kirjoittamamme metodit kirjoitetaan staattisiksi, eli luokkametodeiksi, mutta käsittelemme tätä tarkemmin siirtyessämme myöhemmillä viikoilla olio-ohjelmointiin.
 
-Main-metodimme lisäksi voisimme hyvin määritellä luokkaamme kaksi muutakin metodia: `sayHello` ja `sayGoodbye`:
+`void`-avainsana tarkoittaa, että metodi ei palauta mitään arvoa. Tällaista metodia kutsuttaessa sen tulosta ei voida esim. asettaa muuttujaan tai muilla tavoin hyödyntää.
+
+Sulkujen sisällä esiintyvä `String[] args` on metodin parametrimuuttuja, johon palaamme alempana tässä materiaalissa.
+
+## Ensimmäinen oma metodi
+
+Kuten `main`-metodi, myös muut metodit kirjoitetaan luokan sisään, eli lähdekooditiedoston uloimpien aaltosulkujen väliin. Metodeja ei voida määritellä sisäkkäin, eli kaikki metodit ovat luokan sisällä samalla tasolla peräkkäin. Metodien keskenäisellä järjestyksellä ei ole Javan kannalta merkitystä.
+
+Yksinkertaisimmillaan metodi ei tarvitse lainkaan parametriarvoja eikä se palauta paluuarvoa. Tällöin siis sen otsikossa sulut ovat tyhjät `()` ja paluuarvon tyyppinä on `void` (tyhjä). Metodin nimen voit itse valita, kunhan se noudattaa Javan nimeämissääntöjä. Main-metodia mukaillen voisimme siis kirjoittaa seuraavan oman metodin:
 
 ```java
-public class Esimerkki {
+public static void tulostaKellonaika() {
+    LocalTime kellonaika = LocalTime.now();
+    System.out.println("Kello on " + kellonaika);
+}
+```
+
+Yllä oleva metodi ei ota lainkaan parametriarvoja tai palauta uutta arvoa, mutta se voisi olla silti hyödyllinen ohjelmassa, jossa on tarpeen tulostaa kellonaikaa eri kohdissa.
+
+Tätä metodia kutsuttaessa saman luokan sisällä kirjoitetaan yksinkertaisesti metodin nimi `tulostaKellonaika` ja tyhjät sulut:
+
+```java
+tulostaKellonaika();
+```
+
+Vastaavasti voisimme kirjoittaa esimerkiksi `tulostaPaivamaara`-metodin ja kutsua näitä molempia `main`-metodista:
+
+```java
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class Metodit {
 
     public static void main(String[] args) {
-        sayHello();
-        sayGoodbye();
+        tulostaPaivamaara();
+        tulostaKellonaika();
     }
 
-    public static void sayHello() {
-        System.out.println("Hello!");
+    public static void tulostaPaivamaara() {
+        LocalDate tanaan = LocalDate.now();
+        System.out.println("Päivämäärä on " + tanaan);
     }
 
-    public static void sayGoodbye() {
-        System.out.println("Goodbye!");
+    public static void tulostaKellonaika() {
+        LocalTime kellonaika = LocalTime.now();
+        System.out.println("Kello on " + kellonaika);
     }
 }
 ```
 
-Kumpikaan näistä metodeista ei saa parametriarvoja eikä palauta parametriarvoja, joten niiden vuorovaikutus main-metodin kanssa on vielä vähäistä.
+Kumpikaan edellä määritellyistä omista metodeista ei vastaanota parametriarvoja eikä palauta parametriarvoja, joten niiden vuorovaikutus main-metodin kanssa on vielä vähäistä.
 
+Voit tutustua metodien suoritusjärjestykseen [Java Visualizer -visualisoinnin](https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.time.LocalDate%3B%0Aimport+java.time.LocalTime%3B%0A%0Apublic+class+Metodit+%7B%0A%0A++++public+static+void+main(String%5B%5D+args)+%7B%0A++++++++tulostaPaivamaara()%3B%0A++++++++tulostaKellonaika()%3B%0A++++%7D%0A%0A++++public+static+void+tulostaPaivamaara()+%7B%0A++++++++LocalDate+tanaan+%3D+LocalDate.now()%3B%0A++++++++System.out.println(%22P%C3%A4iv%C3%A4m%C3%A4%C3%A4r%C3%A4+on+%22+%2B+tanaan)%3B%0A++++%7D%0A%0A++++public+static+void+tulostaKellonaika()+%7B%0A++++++++LocalTime+kellonaika+%3D+LocalTime.now()%3B%0A++++++++System.out.println(%22Kello+on+%22+%2B+kellonaika)%3B%0A++++%7D%0A%7D&mode=display&curInstr=0) avustuksella:
 
-## Metodien rakenne
+<iframe style="width: 100%; height: 480;" src="https://cscircles.cemc.uwaterloo.ca/java_visualize/iframe-embed.html?faking_cpp=false#data=%7B%22user_script%22%3A%22import%20java.time.LocalDate%3B%5Cnimport%20java.time.LocalTime%3B%5Cn%5Cnpublic%20class%20Metodit%20%7B%5Cn%5Cn%20%20%20%20public%20static%20void%20main(String%5B%5D%20args)%20%7B%5Cn%20%20%20%20%20%20%20%20tulostaPaivamaara()%3B%5Cn%20%20%20%20%20%20%20%20tulostaKellonaika()%3B%5Cn%20%20%20%20%7D%5Cn%5Cn%20%20%20%20public%20static%20void%20tulostaPaivamaara()%20%7B%5Cn%20%20%20%20%20%20%20%20LocalDate%20tanaan%20%3D%20LocalDate.now()%3B%5Cn%20%20%20%20%20%20%20%20System.out.println(%5C%22P%C3%A4iv%C3%A4m%C3%A4%C3%A4r%C3%A4%20on%20%5C%22%20%2B%20tanaan)%3B%5Cn%20%20%20%20%7D%5Cn%5Cn%20%20%20%20public%20static%20void%20tulostaKellonaika()%20%7B%5Cn%20%20%20%20%20%20%20%20LocalTime%20kellonaika%20%3D%20LocalTime.now()%3B%5Cn%20%20%20%20%20%20%20%20System.out.println(%5C%22Kello%20on%20%5C%22%20%2B%20kellonaika)%3B%5Cn%20%20%20%20%7D%5Cn%7D%22%2C%22options%22%3A%7B%22showStringsAsValues%22%3Atrue%2C%22showAllFields%22%3Afalse%7D%2C%22args%22%3A%5B%5D%2C%22stdin%22%3A%22%22%7D&cumulative=false&heapPrimitives=false&drawParentPointers=false&textReferences=false&showOnlyOutputs=false&py=3&curInstr=0&resizeContainer=true&highlightLines=true&rightStdout=true" frameborder="0" scrolling="no"></iframe>
 
-Metodimäärittelyn ensimmäisellä rivillä on metodin nimi. Nimen vasemmalla puolella tässä vaiheessa määreet `public static void`:
+# Metodien nimeäminen ja sisennykset
 
-```java
-public static void tervehdi() {
-    System.out.println("Terveiset metodista!");
-}
-```
-
-Metodin nimen sisältävän rivin alla on aaltosulkeilla `{  }` erotettu koodilohko, jonka sisälle kirjoitetaan metodin koodi, eli ne komennot, jotka metodia kutsuttaessa suoritetaan. Metodin nimen voit itse valita, kunhan se noudattaa Javan nimeämissääntöjä.
-
-## Metodien kutsuminen
-
-Itsekirjoitetun metodin kutsu on helppoa, kirjoitetaan metodin nimi ja perään sulut ja puolipiste.
-
-Seuraavassa main-metodi eli pääohjelma kutsuu tervehdi-metodia yhteensä neljä kertaa.
-
-```java
-public static void main(String[] args) {
-    System.out.println("Kokeillaan metodia:");
-    tervehdi();
-
-    System.out.println("Toimii! Kokeillaan vielä:");
-    tervehdi();
-    tervehdi();
-    tervehdi();
-}
-
-public static void tervehdi() {
-    System.out.println("Terveiset metodista!");
-}
-```
-
-```
-Kokeillaan metodia:
-Terveiset metodista!
-Toimii! Kokeillaan vielä:
-Terveiset metodista!
-Terveiset metodista!
-Terveiset metodista!
-```
-
-Katso tämä esimerkki Java Visualizerissa: [https://goo.gl/9E1E12](https://goo.gl/9E1E12)
-
-<iframe style="width: 100%; height: 480px;" src="https://cscircles.cemc.uwaterloo.ca/java_visualize/iframe-embed.html?faking_cpp=false#data=%7B%22user_script%22%3A%22public%20class%20ToisenMetodinKutsuminen%20%7B%5Cn%20%20%20%5Cn%20%20%20public%20static%20void%20main(String%5B%5D%20args)%20%7B%5Cn%20%20%20%20%20%20System.out.println(%5C%22Kokeillaan%20metodia%3A%5C%22)%3B%5Cn%20%20%20%20%20%20tervehdi()%3B%5Cn%5Cn%20%20%20%20%20%20System.out.println(%5C%22Toimii!%20Kokeillaan%20viel%C3%A4%3A%5C%22)%3B%5Cn%20%20%20%20%20%20tervehdi()%3B%5Cn%20%20%20%20%20%20tervehdi()%3B%5Cn%20%20%20%20%20%20tervehdi()%3B%5Cn%20%20%20%7D%5Cn%5Cn%20%20%20public%20static%20void%20tervehdi()%20%7B%5Cn%20%20%20%20%20%20System.out.println(%5C%22Terveiset%20metodista!%5C%22)%3B%5Cn%20%20%20%7D%5Cn%5Cn%7D%22%2C%22options%22%3A%7B%22showStringsAsValues%22%3Atrue%2C%22showAllFields%22%3Afalse%7D%2C%22args%22%3A%5B%5D%2C%22stdin%22%3A%22%22%7D&cumulative=false&heapPrimitives=false&drawParentPointers=false&textReferences=false&showOnlyOutputs=false&py=3&curInstr=0&resizeContainer=true&highlightLines=true&rightStdout=true" frameborder="0" scrolling="no"></iframe>
-
-## Metodien nimeäminen ja sisennykset
-
-Metodit nimetään siten, että ensimmäinen sana kirjoitetaan pienellä ja loput alkavat isolla alkukirjaimella. Tällaisesta kirjoitustavasta käytetään nimitystä **camelCase**. Tämän lisäksi, metodin sisällä koodi on sisennetty taas neljä merkkiä.
-
-Käytännöt metodien nimeämiselle ja sisentämiselle vaihtelevat eri ohjelmointikielten välillä.
+> *"Metodit nimetään siten, että ensimmäinen sana kirjoitetaan pienellä ja loput alkavat isolla alkukirjaimella, tälläisestä kirjoitustavasta käytetään nimitystä camelCase. Tämän lisäksi, metodin sisällä koodi on sisennetty taas neljä merkkiä."*
+>
+> [Agile Education Research, 2019](https://www.helsinki.fi/en/researchgroups/data-driven-education). [Ohjelman pilkkominen osiin: metodit](https://ohjelmointi-19.mooc.fi/osa-2/3-metodit). [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi)
 
 ```java
 // OK:
-public static void tamaMetodiSanooMur() { 
-    System.out.println("mur"); 
+public static void tulostaPaivamaara() {
+    LocalDate tanaan = LocalDate.now();
+    System.out.println("Päivämäärä on " + tanaan);
 }
 
 // ei ok:
-public static void Tama_metodi_sanoo_mur ( ) { 
-System.out.println("mur"); 
+public static void tulosta_paivamaara() {
+LocalDate tanaan = LocalDate.now();
+System.out.println("Päivämäärä on " + tanaan);
 }
 ```
 
-## Parametriarvot ja paluuarvot
+Käytännöt metodien nimeämiselle ja sisentämiselle vaihtelevat eri ohjelmointikielten välillä.
 
-Metodille suluissa annettua syötettä kutsutaan metodin parametriksi -- metodin parametreilla annetaan metodeille tarkempaa tietoa odotetusta suorituksesta. Esimerkiksi tulostuslauseelle kerrotaan parametrin avulla mitä pitäisi tulostaa.
+# Parametriarvot ja paluuarvot
+
+> *"Metodille suluissa annettua syötettä kutsutaan metodin parametriksi — metodin parametreilla annetaan metodeille tarkempaa tietoa odotetusta suorituksesta; esimerkiksi tulostuslauseelle kerrotaan parametrin avulla mitä pitäisi tulostaa."*
+>
+> [Agile Education Research, 2019](https://www.helsinki.fi/en/researchgroups/data-driven-education). [Ohjelman pilkkominen osiin: metodit](https://ohjelmointi-19.mooc.fi/osa-2/3-metodit). [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi)
+
+Metodin sisällä parametriarvot ovat käytettävissä otsikon sulkujen sisälle määriteltyjen **parametrimuuttujien** avulla. Parametrimuuttujat ovat käytännössä kuin mitkä tahansa metodin paikalliset muuttujat, mutta niihin asetetaan arvot automaattisesti metodikutsun yhteydessä:
 
 ```java
-// Ensin kutsutaan scannerin metodia lukija.nextLine.
-// Metodi palauttaa paluuarvonaan käyttäjän syöttämän merkkijonon, joka asetetaan talteen muuttujaan. 
-String syote = lukija.nextLine();
-
-// Seuraavaksi kutsutaan metodia Integer.parseInt. Metodikutsun parametrina annetaan
-// merkkijono, jonka edellisen metodin kutsu palautti. parseInt-metodin paluuarvo
-// puolestaan on annettua merkkijonoa vastaava kokonaisluku. 
-// Lopuksi parseInt-metodin palauttama arvo asetetaan talteen uuteen muuttujaan.
-int luku = Integer.parseInt(syote);
+public static void tulostaOtsikko(String otsikko) {
+    System.out.println("<h1>" + otsikko + "</h1>");
+}
 ```
 
-Paluuarvoa voidaan heti käyttää myös parametrina:
+Yllä esitellyn `tulostaOtsikko`-metodin kutsussa täytyy nyt antaa jokin merkkijono, joka asetetaan automaattisesti metodin `otsikko`-muuttujaan:
 
 ```java
-// Ensin kutsutaan sisempänä olevaa metodia lukija.nextLine.
-// Metodi palauttaa paluuarvonaan käyttäjän syöttämän merkkijonon. 
-// Seuraavaksi kutsutaan metodia Integer.parseInt. 
-// Metodikutsun parametrina välitetään merkkijono, jonka nextLine-metodin kutsu palautti. 
-Metodin paluuarvona on merkkijonoa vastaava kokonaisluku, joka asetetaan talteen uuteen muuttujaan.
-int luku = Integer.parseInt(lukija.nextLine());
-```
-
-## Parametrimuuttujat ja parametriarvot omissa metodeissa
-
-**Parametrit** ovat siis **metodille annettavia arvoja**, joita käytetään metodin suorituksessa. Metodin **parametrimuuttujat** määritellään metodin ylimmällä rivillä metodin nimen jälkeen olevien sulkujen sisällä.
-
-Kun metodia kutsutaan, sen **parametrimuuttujiin** asetetaan annetut arvot. Metodin sisällä annettu **arvo on käytettävissä parametrimuuttujan kautta**.
-
-
-### Esimerkki: AgenttiTervehdys
-
-```java
-public class AgenttiTervehdys {
+public class Parametrimuuttuja {
 
     public static void main(String[] args) {
-        // metodikutsussa on annettava arvot, jotka vastaavat metodiin määriteltyjä parametreja
-        tervehdi("James", "Bond");
-        tervehdi("Gracie", "Hart");
+        String nimi = "Ohjelmointi 1 - Metodit";
+        tulostaOtsikko(nimi);
     }
 
-    // 'etu' ja 'suku' ovat String-muuttujia, joita kutsutaan parametrimuuttujiksi
-    public static void tervehdi(String etu, String suku) {
-        System.out.println("Nimeni on " + suku +             ", " + etu + " " + suku);
+    public static void tulostaOtsikko(String otsikko) {
+        System.out.println("<h1>" + otsikko + "</h1>");
     }
 }
 ```
-Katso tämä esimerkki Java Visualizerissa: https://goo.gl/cahGq1
 
-### Esimerkki: tilaston tulostaminen
+Huomaa, että sekä `main`-metodin sisällä määritelty `nimi` että `tulostaOtsikko`-metodissa määritelty `otsikko` ovat paikallisia muuttujia, eivätkä ne näy metodien ulkopuolelle. Metodikutsussa käytetään myös eri nimistä muuttujaa kuin metodin otsikossa. Muuttujien nimillä ei ole lainkaan merkitystä, koska metodikutsussa välitetään ainoastaan arvo, eli itse merkkijono.
 
-Seuraavassa esimerkissä haluamme tulostaa toistuvasti otsikoita "## Otsikko ##"-syntaksilla. Otsikkojen tulostaminen on siirretty omaan metodiinsa, jotta samaa koodia ei tarvitse toistaa moneen kertaan ja jotta mahdolliset muutokset otsikon tyyliin voidaan tehdä vain yhteen kohtaan ohjelmassa:
+
+# Metodin paluuarvot ja return-käsky
+
+> *"Metodin määrittelyssä kerrotaan palauttaako metodi arvon. Jos metodi palauttaa arvon, tulee metodimäärittelyn yhteydessä kertoa palautettavan arvon tyyppi. Muulloin määrittelyssä käytetään avainsanaa void. Tähän mennessä tekemämme metodit ovat määritelty avainsanaa void käyttäen eli eivät ole palauttaneet arvoa."*
+> 
+> *"Konkreettinen arvon palautus tapahtuu komennolla `return`, jota seuraa palautettava arvo (tai muuttujan tai lauseke, jonka arvo palautetaan)."*
+>
+> [Agile Education Research, 2019](https://www.helsinki.fi/en/researchgroups/data-driven-education). [Ohjelman pilkkominen osiin: metodit](https://ohjelmointi-19.mooc.fi/osa-2/3-metodit). [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi)
+
+Seuraava metodi palauttaa aina saman merkkijonon, joka sisältää aakkosten kirjaimet yhtenä merkkijonona:
 
 ```java
-public class KoodinPilkkominenOsiinVoidMetodeilla {
+public static String annaPienetKirjaimet() {
+    return "abcdefghijklmnopqrstuvwxyzåäö";
+}
+```
+
+Pienet kirjaimet saadaan nyt pyydettyä tältä metodilta metodikutsun avulla. Metodin palauttama merkkijono voidaan ottaa talteen esimerkiksi uuteen muuttujaan:
+
+```java
+String pienet = annaPienetKirjaimet();
+```
+
+Metodit kutsuvat hyvin usein toisiaan. Jos haluaisimme toteuttaa lisäksi `annaIsotKirjaimet`-metodin, meidän kannattaisi hyvin todennäköisesti hyödyntää yllä esiteltyä metodia tämän uuden metodin sisällä:
+
+```java
+public static String annaIsotKirjaimet() {
+    String pienet = annaPienetKirjaimet();
+    return pienet.toUpperCase();
+}
+```
+
+Muutaman merkkijonoja palauttavan apumetodin sekä niitä kutsuvan `annaSatunnainenMerkki`-metodin avulla voisimme toteuttaa esimerkiksi satunnaisen salasanan generoivan ohjelmaluokan:
+
+```java
+import java.util.Random;
+
+// Huom! Tämä esimerkki on suorituskykynsä puolesta heikko
+public class Salasanat {
 
     public static void main(String[] args) {
-        // Määritellään metodi, joka tulostaa tekstin ja laittaa ympärille "##"-merkit
-        tulostaOtsikko("Tammikuun sademäärät");
-        tulostaTilasto(10, 15, 6);
-
-        System.out.println();
-
-        // metodikutussa voi olla ihan eri nimiset muuttujat kuin metodin otsikossa:
-        // vrt. "helmikuunOtsikko" ja "otsikko"
-        String helmikuunOtsikko = "Helmikuun sademäärät";
-        tulostaOtsikko(helmikuunOtsikko);
-        tulostaTilasto(11, 18, 9);
+        String salasana = generoiSalasana();
+        System.out.println("Satunnainen salasanasi on " + salasana);
     }
 
-    private static void tulostaOtsikko(String otsikko) {
-        // Tässä metodissa ei ole edes pääsyä main-metodin muuttujiin!
-        System.out.println("## " + otsikko + " ##");
+    public static String generoiSalasana() {
+        String salasana = "";
+        while (salasana.length() < 60) {
+            salasana += annaSatunnainenMerkki();
+        }
+        return salasana;
     }
 
-    // Tälle metodille annetaan aina KOLME parametriarvoa
-    private static void tulostaTilasto(int keskiarvo, int suurin, int pienin) {
-        System.out.println("Keskiarvo: " + keskiarvo);
-        System.out.println("Suurin: " + suurin);
-        System.out.println("Pienin: " + pienin);
+    public static String annaSatunnainenMerkki() {
+        Random random = new Random();
+        String merkit = annaPienetKirjaimet() + annaIsotKirjaimet() + annaNumerot() + annaErikoismerkit();
+
+        int indeksi = random.nextInt(merkit.length());
+        return merkit.substring(indeksi, indeksi + 1);
+    }
+
+    public static String annaErikoismerkit() {
+        return "!#¤%&/()=?";
+    }
+
+    private static String annaNumerot() {
+        return "0123456789";
+    }
+
+    public static String annaIsotKirjaimet() {
+        String pienet = annaPienetKirjaimet();
+        return pienet.toUpperCase();
+    }
+
+    public static String annaPienetKirjaimet() {
+        return "abcdefghijklmnopqrstuvwxyzåäö";
     }
 }
 ```
-[Tutustu koodin suoritukseen Visualizerissa](https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+KoodinPilkkominenOsiinVoidMetodeilla+%7B%0A%0A++++public+static+void+main(String%5B%5D+args)+%7B%0A++++++++//+M%C3%A4%C3%A4ritell%C3%A4%C3%A4n+metodi,+joka+tulostaa+tekstin+ja+laittaa+ymp%C3%A4rille+%22%23%23%22-merkit%0A++++++++tulostaOtsikko(%22Tammikuun+sadem%C3%A4%C3%A4r%C3%A4t%22)%3B%0A++++++++tulostaTilasto(10,+15,+6)%3B%0A%0A++++++++System.out.println()%3B%0A%0A++++++++//+metodikutussa+voi+olla+ihan+eri+nimiset+muuttujat+kuin+metodin+otsikossa%0A++++++++String+helmikuunOtsikko+%3D+%22Helmikuun+sadem%C3%A4%C3%A4r%C3%A4t%22%3B%0A++++++++tulostaOtsikko(helmikuunOtsikko)%3B%0A++++++++tulostaTilasto(11,+18,+9)%3B%0A++++%7D%0A%0A++++private+static+void+tulostaOtsikko(String+otsikko)+%7B%0A++++++++//+T%C3%A4ss%C3%A4+metodissa+ei+ole+edes+p%C3%A4%C3%A4sy%C3%A4+main-metodin+muuttujiin!%0A++++++++System.out.println(%22%23%23+%22+%2B+otsikko+%2B+%22+%23%23%22)%3B%0A++++%7D%0A%0A++++//+T%C3%A4lle+metodille+annetaan+aina+KOLME+parametriarvoa%0A++++private+static+void+tulostaTilasto(int+keskiarvo,+int+suurin,+int+pienin)+%7B%0A++++++++System.out.println(%22Keskiarvo%3A+%22+%2B+keskiarvo)%3B%0A++++++++System.out.println(%22Suurin%3A+%22+%2B+suurin)%3B%0A++++++++System.out.println(%22Pienin%3A+%22+%2B+pienin)%3B%0A++++%7D%0A%7D&mode=display&curInstr=0)
+
+Yllä olevassa esimerkissä kaikki omat metodit palauttavat merkkijonoja, mutta millään niistä ei ole parametriarvoja. Metodit on toteutettu hyvin yksinkertaisiksi, mutta suorituskykynäkökulmasta tässä ratkaisussa olisi vielä kehitettävää.
+
+Jos metodin paluuarvoksi on määritetty jotain muuta kuin `void`, sen on **aina pakko palauttaa arvo**.
 
 
-## Metodin paluuarvot ja return-käsky
+## Parametrimuuttujat ja paikalliset muuttujat
 
-Jos metodi palauttaa arvon, tulee metodin määrittelyn yhteydessä kertoa palautettavan arvon tyyppi. Muulloin määrittelyssä käytetään avainsanaa `void`. `void` metodit eivät koskaan voi palauttaa arvoja.
+> *"Metodille voidaan määritellä useita parametreja. Tällöin metodin kutsussa parametrit annetaan samassa järjestyksessä."*
+>
+> > [Agile Education Research, 2019](https://www.helsinki.fi/en/researchgroups/data-driven-education). [Ohjelman pilkkominen osiin: metodit](https://ohjelmointi-19.mooc.fi/osa-2/3-metodit). [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi)
 
-Konkreettinen arvon palautus tapahtuu komennolla `return`, jota seuraa palautettava arvo (tai muuttujan tai lauseke, jonka arvo palautetaan).
+Alla olevassa esimerkkimetodissa on kaksi `double`-tyyppistä parametrimuuttujaa:
 
-Jos metodille määritellään paluuarvon tyyppi, on sen **pakko** palauttaa arvo.
+```java
+/** Laskee alennuksen, kun halvempi tuote myydään puoleen hintaan. */
+public static double laskeAlennus(double hinta1, double hinta2) {
+    double halvempi = Math.min(hinta1, hinta2);
+
+    return halvempi * 0.5;
+}
+```
+
+Tämän metodin kutsussa tulee antaa metodin parametrimuuttujien mukaisesti aina kaksi liukulukua, esim. `laskeAlennus(a, b)`:
 
 ```java
 public static void main(String[] args) {
-    // metodin suorituksen jälkeen sen palauttama arvo voidaan ottaa talteen:
-    int luku = palautetaanAinaKymppi();
+    double a = 123.4;
+    double b = 234.5;
 
-    System.out.println("metodi palautti: " + luku);
-}
+    double alennus = laskeAlennus(a, b);
 
-public static int palautetaanAinaKymppi() {
-    // return-käsky palauttaa sen jälkeen olevan arvon:
-    return 10;
-}
-```
+    double loppusumma = a + b - alennus;
 
-## Monta parametriarvoa ja muuttujat metodin sisällä
-
-Metodille voidaan määritellä useita parametreja. Tällöin metodin kutsussa parametrit annetaan samassa järjestyksessä. Muuttujien määrittely muissa metodeissa tapahtuu aivan kuten main-metodissa. 
-
-Seuraava metodi laskee parametrina saamiensa lukujen keskiarvon. Keskiarvon laskemisessa käytetään apumuuttujia `summa` ja `ka`. Nämä **paikalliset muuttujat**, aivan kuten parametrimuuttujat `luku1`, `luku2` ja `luku3`, ovat voimassa ainoastaan metodin sisällä.
-
-```java
-public static double keskiarvo(int luku1, int luku2, int luku3) {
-
-    int summa = luku1 + luku2 + luku3;
-    double ka = summa / 3.0;
-
-    return ka;
+    System.out.println("Hinta on yhteensä " + loppusumma);
 }
 ```
 
-**Huomaa että metodin sisäiset muuttujat summa ja ka eivät näy metodin ulkopuolelle. Sama koskee myös parametrimuttujia luku1, luku2 ja luku3.**
+Huomaa, että samoja liukulukuja käsitellään sekä `main`-metodissa että `laskeAlennus`-metodissa. Niillä kuitenkin eri metodeissa eri muuttujanimet (`a`, `b`, `hinta1` ja `hinta2`). Paikallisilla muuttujien nimillä ei ole mitään merkitystä metodin ulkopuolella.
 
-Tulos voidaan palauttaa myös suoraan ilman sen tallentamista väliaikaiseen muuttujaan. Tämä onkin usein varsin tyypillistä:
+# Metodien näkyvyys, eli mistä metodia voidaan kutsua
+
+Tämän materiaalin esimerkeissä kaikki metodit on määritelty **julkisiksi**, eli näkyvyydellä `public`. Näkyvyys on tapana määritellä aina mahdollisimman yksityiseksi, eli oikeassa ohjelmassa olisimme määritelleet suurimman osan metodeista **yksityiseksi**, eli `private`. Julkisia metodeita voidaan kutsua mistä vain muista luokista, kun taas muiden näkyvyyksien kohdalla kutsuminen onnistuu vain rajoitetuista luokista:
+
+Näkyvyys        | Selitys
+----------------|-------------
+`public`        | Metodi on käytettävissä kaikkialta
+`private`       | Metodi on käytettävissä ainoastaan saman luokan sisältä
+`protected`     | Metodi on käytettävissä saman luokan ja paketin sisältä, sekä aliluokista
+*(tyhjä)*       | Käytettävissä saman luokan ja paketin sisältä. **Melko harvoin käytetty.**
+
+Seuraavat neljä metodia on määritelty kukin eri näkyvyydellä:
 
 ```java
-// sama kuin yllä, mutta ilman väliaikaisia  muuttujia "summa" ja "ka"
-public static double keskiarvo(int luku1, int luku2, int luku3) {
-    return (luku1 + luku2 + luku3) / 3.0;
+public String julkinen() {
+    return "käytettävissä missä tahansa";
+}
+
+private String yksityinen() {
+    return "käytettävissä vain tästä luokasta";
+}
+
+protected String suojattu() {
+    return "käytettävissä mm. aliluokista";
+}
+
+String oletusnakyvyys() {
+    return "en suosittele tällaista näkyvyyttä";
 }
 ```
 
-## Muuttujien näkyvyys ja nimeäminen
+## Toisessa luokassa määriteltyjen metodien kutsuminen
 
-Metodin parametrimuuttujien nimillä ei ole vaikutusta metodin ulkopuolelle. Metodikutsuissa voidaan käyttää aivan eri nimisiä muuttujia, esim:
+Samassa luokassa määritellyn metodin kutsuminen oli yllä helppoa: kirjoitetaan vain metodin nimi, sulut ja tarvittaessa parametriarvot. Toisessa luokassa olevaa staattista metodia kutsutaan **luokan nimen avulla**:
 
 ```java
-public static void main(String[] args) {
-    int a = 10;
-    int b = 14;
-    int c = 42;
-
-    // metodikutsussa on muuttujat a, b ja c, metodin parametrimuuttujat ovat luku1, luku2 ja luku3
-    double kesk = keskiarvo(a, b, c);
-
-    // ...
-}
-
-public static double keskiarvo(int luku1, int luku2, int luku3) {
-
-    int summa = luku1 + luku2 + luku3;
-    double ka = summa / 3.0;
-
-    return ka;
-}
+Metodit.tulostaPaivamaara();
+Metodit.tulostaKellonaika();
 ```
 
-## Muissa luokissa määriteltyjen metodien kutsuminen
-
-Samassa luokassa olevan metodin kutsuminen oli helppoa: kirjoitetaan vain metodin nimi, sulut ja tarvittaessa parametriarvot.
-
-Toisessa luokassa olevaa metodia kutsutaan **joko luokan tai olion kautta** riippuen siitä, onko kyseessä ns. staattinen luokkametodi vai oliometodi:
+Sama paluuarvon kanssa:
 
 ```java
-String teksti = "Merkkijonot ovat olioita";
+String satunnainenSalasana = Salasanat.generoiSalasana();
+```
 
-// toLowerCase on oliokohtainen, eli sitä kutsutaan esimerkiksi muuttujan kautta:
-String pienella = teksti.toLowerCase();
+Omia metodejasi kutsutaan siis aivan samalla tavalla kuin Javan valmiita metodeja:
 
-// Math-luokan min-metodi ei kuulu oliolle, eli sitä kutsutaan suoraan luokan nimellä:
+```java
 int pienin = Math.min(12, 15);
 ```
 
+**Huom!** Mikäli kutsuttavan metodin luokka sijaitsee eri **paketissa** kuin kutsuva luokka, joudut lisäämään tiedoston alkuun myös `import`-komennon.
+
+<!--
 ### Esimerkki luokkien välisistä metodikutsuista
 
 Ohjelman suoritus käynnistyy `Nimirekisteri`-luokan `main`-metodissa, josta kutsutaan `NimenLyhentaja`-luokan `lyhenna`-metodia:
@@ -405,32 +431,6 @@ public class NimenLyhentaja {
 }
 ```
 
-## Metodien näkyvyys, eli mistä metodia voidaan kutsua
-
-Näkyvyys        | Selitys
-----------------|-------------
-public          | Metodi on käytettävissä kaikkialta
-private         | Metodi on käytettävissä ainoastaan saman luokan sisältä
-protected       | Metodi on käytettävissä saman luokan ja paketin sisältä, sekä aliluokista
-(tyhjä)         | **Hyvin harvoin käytetty.** Käytettävissä saman luokan ja paketin sisältä. 
-
-```java
-public String julkinen() {
-    return "käytettävissä missä tahansa";
-}
-
-private String yksityinen() {
-    return "käytettävissä vain tästä luokasta";
-}
-
-protected String suojattu() {
-    return "käytettävissä mm. aliluokista";
-}
-
-String oletusnakyvyys() {
-    return "en suosittele tällaista näkyvyyttä";
-}
-```
 
 ## Vilkaisu olio-ohjelmointiin: luokkametodit ja oliometodit
 
@@ -509,11 +509,15 @@ public static int pienin(List<Integer> arvot) {
 ```
 
 Tutustu interaktiiviseen esimerkkiin arvojen muuttumisesta ja muuttumattomuudesta [Java Visualizer-palvelussa](https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+PassByValue+%7B%0A+++%0A+++static+void+reset(int+x)+%7B%0A++++++x+%3D+0%3B%0A+++%7D%0A+++%0A+++static+void+reset(int%5B%5D+x)+%7B%0A++++++for+(int+i+%3A+x)+%0A+++++++++i+%3D+0%3B%0A+++%7D%0A+++%0A+++static+void+reallyReset(int%5B%5D+x)+%7B%0A++++++for+(int+i%3D0%3B+i%3Cx.length%3B+i%2B%2B)%0A+++++++++x%5Bi%5D+%3D+0%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int+a+%3D+3%3B%0A++++++int%5B%5D+arr+%3D+%7B5,+10,+15%7D%3B%0A++++++%0A++++++reset(a)%3B+//+this+won't+work%0A++++++System.out.println(a)%3B%0A++++++%0A++++++reset(arr)%3B+//+this+won't+work%0A++++++System.out.println(java.util.Arrays.toString(arr))%3B%0A++++++%0A++++++reallyReset(arr)%3B+//+this+works!%0A++++++System.out.println(java.util.Arrays.toString(arr))%3B%0A+++%7D%0A+++%0A%7D&mode=display&curInstr=0)!
+-->
 
 ---
 
-Tämä dokumentti on tiivistelmä Helsingin yliopiston [Agile Education Research](https://www.helsinki.fi/en/researchgroups/data-driven-education) -tutkimusryhmän [MOOC-ohjelmointikurssin materiaalista](https://materiaalit.github.io/ohjelmointi-18/part2/). Tiivistelmä koostuu suorista lainauksista ja sitä on täydennetty Haaga-Helian ohjelmointikurssin sisällöllä. Lisenssi: [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi).
+Tämä oppimateriaali pohjautuu Helsingin yliopiston [Agile Education Research](https://www.helsinki.fi/en/researchgroups/data-driven-education) -tutkimusryhmän [MOOC-ohjelmointikurssin materiaaliin](https://materiaalit.github.io/ohjelmointi-18/part2/).
 
+Materiaalin on muokannut Haaga-Helian ohjelmointikurssin mukaiseksi Teemu Havulinna.
+
+Lisenssi: [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi).
 
 <script src="/tocbot/tocbot.min.js"></script>
 <script src="/scripts.js"></script>
