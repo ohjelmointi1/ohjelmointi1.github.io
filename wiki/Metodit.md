@@ -18,12 +18,16 @@ Tämä oppimateriaali pohjautuu Helsingin yliopiston [Agile Education Research](
 
 # Metodien käsitteet ja metodikutsut
 
+Olemme tähän mennessä hyödyntäneet Javan standardikirjaston staattisia metodeja mm. `Integer`, `Double`, `Math`, `Arrays` ja `Collections` -luokista. Metodikutsuissa on esiintynyt tyypillisesti luokan nimi, metodin nimi ja sulut, joiden sisälle on määritelty metodille annettava data. Olemme puolestaan hyödyntäneet metodien palauttamia arvoja sijoittamalla niitä esimerkiksi uusiin muuttujiin. Käsittelemme seuraavissa kappaleissa näitä käsitteitä ja niihin liittyviä esimerkkejä.
+
 ## Parametriarvot
 
 Metodin kutsumisessa olemme hyödyntäneet **parametriarvoja**, joiden avulla olemme välittäneet tietoa omasta koodistamme Javan standardikirjastossa toteutetuille koodiriveille:
 
 ```java
-int tulos = Math.min(parametriarvo1, parametriarvo2);
+int pienempi = Math.min(42, 24);
+
+int numero = Integer.parseInt("42");
 ```
 
 Toiset metodit eivät tarvitse lainkaan ulkopuolisia arvoja toimiakseen. Näiden metodien kutsussa ei välitetä arvoja:
@@ -87,9 +91,9 @@ String s = lukija.nextLine();
 ```
 -->
 
-# Metodin otsikko ja avainsanat
+# Metodin määrittely
 
-Olemme kurssilla tähän asti määritellyt lukuisia kertoja main-metodin:
+Olemme kurssilla tähän asti määritelleet lukuisia kertoja main-metodin:
 
 ```java
 public static void main(String[] args) {
@@ -113,7 +117,7 @@ Metodin otsikon jälkeen kirjoitetaan aina aaltosulut `{   }`, joiden sisään k
 
 Sulkujen sisällä esiintyvä `String[] args` on metodin parametrimuuttuja, johon palaamme alempana tässä materiaalissa.
 
-## Ensimmäinen oma metodi
+## Muut omat metodit
 
 Kuten `main`-metodi, myös muut metodit kirjoitetaan luokan sisään, eli lähdekooditiedoston uloimpien aaltosulkujen väliin. Metodeja ei voida määritellä sisäkkäin, eli kaikki metodit ovat luokan sisällä samalla tasolla peräkkäin. Metodien keskenäisellä järjestyksellä ei ole Javan kannalta merkitystä.
 
@@ -165,7 +169,7 @@ Voit tutustua metodien suoritusjärjestykseen [Java Visualizer -visualisoinnin](
 
 <iframe style="width: 100%; height: 480;" src="https://cscircles.cemc.uwaterloo.ca/java_visualize/iframe-embed.html?faking_cpp=false#data=%7B%22user_script%22%3A%22import%20java.time.LocalDate%3B%5Cnimport%20java.time.LocalTime%3B%5Cn%5Cnpublic%20class%20Metodit%20%7B%5Cn%5Cn%20%20%20%20public%20static%20void%20main(String%5B%5D%20args)%20%7B%5Cn%20%20%20%20%20%20%20%20tulostaPaivamaara()%3B%5Cn%20%20%20%20%20%20%20%20tulostaKellonaika()%3B%5Cn%20%20%20%20%7D%5Cn%5Cn%20%20%20%20public%20static%20void%20tulostaPaivamaara()%20%7B%5Cn%20%20%20%20%20%20%20%20LocalDate%20tanaan%20%3D%20LocalDate.now()%3B%5Cn%20%20%20%20%20%20%20%20System.out.println(%5C%22P%C3%A4iv%C3%A4m%C3%A4%C3%A4r%C3%A4%20on%20%5C%22%20%2B%20tanaan)%3B%5Cn%20%20%20%20%7D%5Cn%5Cn%20%20%20%20public%20static%20void%20tulostaKellonaika()%20%7B%5Cn%20%20%20%20%20%20%20%20LocalTime%20kellonaika%20%3D%20LocalTime.now()%3B%5Cn%20%20%20%20%20%20%20%20System.out.println(%5C%22Kello%20on%20%5C%22%20%2B%20kellonaika)%3B%5Cn%20%20%20%20%7D%5Cn%7D%22%2C%22options%22%3A%7B%22showStringsAsValues%22%3Atrue%2C%22showAllFields%22%3Afalse%7D%2C%22args%22%3A%5B%5D%2C%22stdin%22%3A%22%22%7D&cumulative=false&heapPrimitives=false&drawParentPointers=false&textReferences=false&showOnlyOutputs=false&py=3&curInstr=0&resizeContainer=true&highlightLines=true&rightStdout=true" frameborder="0" scrolling="no"></iframe>
 
-# Metodien nimeäminen ja sisennykset
+## Metodien nimeäminen ja sisennykset
 
 > *"Metodit nimetään siten, että ensimmäinen sana kirjoitetaan pienellä ja loput alkavat isolla alkukirjaimella, tälläisestä kirjoitustavasta käytetään nimitystä camelCase. Tämän lisäksi, metodin sisällä koodi on sisennetty taas neljä merkkiä."*
 >
@@ -179,21 +183,25 @@ public static void tulostaPaivamaara() {
 }
 
 // ei ok:
-public static void tulosta_paivamaara() {
+public static void Tulosta_paivamaara() {
 LocalDate tanaan = LocalDate.now();
 System.out.println("Päivämäärä on " + tanaan);
 }
 ```
 
-Käytännöt metodien nimeämiselle ja sisentämiselle vaihtelevat eri ohjelmointikielten välillä.
+Yhtenäinen nimeämistyyli helpottaa sekä koodin ymmärtämistä että kirjoittamista. Käytännöt metodien nimeämiselle ja sisentämiselle vaihtelevat eri ohjelmointikielten välillä, mutta jokaisessa kielessä on omat parhaat käytäntönsä.
 
-# Parametriarvot ja paluuarvot
+# Metodin parametrit
 
 > *"Metodille suluissa annettua syötettä kutsutaan metodin parametriksi — metodin parametreilla annetaan metodeille tarkempaa tietoa odotetusta suorituksesta; esimerkiksi tulostuslauseelle kerrotaan parametrin avulla mitä pitäisi tulostaa."*
 >
 > [Agile Education Research, 2019](https://www.helsinki.fi/en/researchgroups/data-driven-education). [Ohjelman pilkkominen osiin: metodit](https://ohjelmointi-19.mooc.fi/osa-2/3-metodit). [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi)
 
-Metodin sisällä parametriarvot ovat käytettävissä otsikon sulkujen sisälle määriteltyjen **parametrimuuttujien** avulla. Parametrimuuttujat ovat käytännössä kuin mitkä tahansa metodin paikalliset muuttujat, mutta niihin asetetaan arvot automaattisesti metodikutsun yhteydessä:
+Metodin sisällä sille annetut parametriarvot ovat käytettävissä otsikon sulkujen sisälle määriteltyjen **parametrimuuttujien** avulla. Parametrimuuttujat ovat käytännössä kuin mitkä tahansa metodin paikalliset muuttujat, mutta niihin asetetaan arvot automaattisesti metodikutsun yhteydessä:
+
+```java
+tulostaOtsikko("Ohjelmointi 1 - Metodit"); // teksti välitetään metodille parametrina
+```
 
 ```java
 public static void tulostaOtsikko(String otsikko) {
@@ -201,7 +209,7 @@ public static void tulostaOtsikko(String otsikko) {
 }
 ```
 
-Yllä esitellyn `tulostaOtsikko`-metodin kutsussa täytyy nyt antaa jokin merkkijono, joka asetetaan automaattisesti metodin `otsikko`-muuttujaan:
+Yllä olevan metodin kutsun on luonnollisesti oltava jonkun toisen metodin sisällä. Seuraavassa pienessä luokassa `main`-metodista kutsutaan `tulostaOtsikko`-metodia:
 
 ```java
 public class Parametrimuuttuja {
@@ -217,7 +225,7 @@ public class Parametrimuuttuja {
 }
 ```
 
-Huomaa, että sekä `main`-metodin sisällä määritelty `nimi` että `tulostaOtsikko`-metodissa määritelty `otsikko` ovat paikallisia muuttujia, eivätkä ne näy metodien ulkopuolelle. Metodikutsussa käytetään myös eri nimistä muuttujaa kuin metodin otsikossa. Muuttujien nimillä ei ole lainkaan merkitystä, koska metodikutsussa välitetään ainoastaan arvo, eli itse merkkijono.
+Huomaa, että sekä `main`-metodin sisällä määritelty `nimi` että `tulostaOtsikko`-metodissa määritelty `otsikko` ovat paikallisia muuttujia, eivätkä ne näy metodien ulkopuolelle. Metodikutsussa käytetään siis esimerkissä eri nimistä muuttujaa kuin metodin otsikossa. Muuttujien nimillä ei ole lainkaan merkitystä, koska metodikutsussa välitetään ainoastaan arvo, eli itse merkkijono.
 
 
 # Metodin paluuarvot ja return-käsky
@@ -340,7 +348,7 @@ Huomaa, että samoja liukulukuja käsitellään sekä `main`-metodissa että `la
 
 # Metodien näkyvyys, eli mistä metodia voidaan kutsua
 
-Tämän materiaalin esimerkeissä kaikki metodit on määritelty **julkisiksi**, eli näkyvyydellä `public`. Näkyvyys on tapana määritellä aina mahdollisimman yksityiseksi, eli oikeassa ohjelmassa olisimme määritelleet suurimman osan metodeista **yksityiseksi**, eli `private`. Julkisia metodeita voidaan kutsua mistä vain muista luokista, kun taas muiden näkyvyyksien kohdalla kutsuminen onnistuu vain rajoitetuista luokista:
+Tämän materiaalin esimerkeissä kaikki metodit on määritelty **julkisiksi**, eli näkyvyydellä `public`. Näkyvyys on tapana määritellä aina mahdollisimman yksityiseksi, eli oikeassa ohjelmassa olisimme määritelleet suurimman osan metodeista **yksityiseksi**(`private`). Julkisia metodeita voidaan kutsua mistä vain muista luokista, kun taas muiden näkyvyyksien kohdalla kutsuminen onnistuu vain rajoitetuista luokista:
 
 Näkyvyys        | Selitys
 ----------------|-------------
@@ -369,7 +377,7 @@ String oletusnakyvyys() {
 }
 ```
 
-## Toisessa luokassa määriteltyjen metodien kutsuminen
+# Toisessa luokassa määriteltyjen metodien kutsuminen
 
 Samassa luokassa määritellyn metodin kutsuminen oli yllä helppoa: kirjoitetaan vain metodin nimi, sulut ja tarvittaessa parametriarvot. Toisessa luokassa olevaa staattista metodia kutsutaan **luokan nimen avulla**:
 
@@ -390,7 +398,7 @@ Omia metodejasi kutsutaan siis aivan samalla tavalla kuin Javan valmiita metodej
 int pienin = Math.min(12, 15);
 ```
 
-**Huom!** Mikäli kutsuttavan metodin luokka sijaitsee eri **paketissa** kuin kutsuva luokka, joudut lisäämään tiedoston alkuun myös `import`-komennon.
+**Huom!** Mikäli kutsuttavan metodin luokka sijaitsee eri **paketissa** kuin kutsuva luokka, joudut lisäämään tiedoston alkuun myös `import`-komennon. Ylempänä oppimateriaalissa käsitelty metodin näkyvyys vaikuttaa siihen, mistä muista luokista kyseistä metodia voidaan kutsua.
 
 <!--
 ### Esimerkki luokkien välisistä metodikutsuista
