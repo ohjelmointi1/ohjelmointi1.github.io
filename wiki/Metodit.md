@@ -316,7 +316,7 @@ Jos metodin paluuarvoksi on määritetty jotain muuta kuin `void`, sen on **aina
 
 > *"Metodille voidaan määritellä useita parametreja. Tällöin metodin kutsussa parametrit annetaan samassa järjestyksessä."*
 >
-> > [Agile Education Research, 2019](https://www.helsinki.fi/en/researchgroups/data-driven-education). [Ohjelman pilkkominen osiin: metodit](https://ohjelmointi-19.mooc.fi/osa-2/3-metodit). [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi)
+> [Agile Education Research, 2019](https://www.helsinki.fi/en/researchgroups/data-driven-education). [Ohjelman pilkkominen osiin: metodit](https://ohjelmointi-19.mooc.fi/osa-2/3-metodit). [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi)
 
 Alla olevassa esimerkkimetodissa on kaksi `double`-tyyppistä parametrimuuttujaa:
 
