@@ -382,6 +382,7 @@ String oletusnakyvyys() {
 }
 ```
 
+
 # Toisessa luokassa määriteltyjen metodien kutsuminen
 
 Samassa luokassa määritellyn metodin kutsuminen oli yllä helppoa: kirjoitetaan vain metodin nimi, sulut ja tarvittaessa parametriarvot. Toisessa luokassa olevaa staattista metodia kutsutaan **luokan nimen avulla**:
@@ -404,6 +405,11 @@ int pienin = Math.min(12, 15);
 ```
 
 **Huom!** Mikäli kutsuttavan metodin luokka sijaitsee eri **paketissa** kuin kutsuva luokka, joudut lisäämään tiedoston alkuun myös `import`-komennon. Ylempänä oppimateriaalissa käsitelty metodin näkyvyys vaikuttaa siihen, mistä muista luokista kyseistä metodia voidaan kutsua.
+
+
+# Minkälainen on hyvä metodi?
+
+Nyt kun osaamme kutsua ja määritellä omia metodeja, on aiheellista pohtia myös metodien laatunäkökulmaa. Pääsääntöisesti kunkin metodin tulisi tehdä vain yksi asia, ja tämän asian tulisi käydä selvästi ilmi metodin nimestä. Java-ohjelmointiin liittyen on monia hyviä käytäntöjä joista monet on julkaistu mm. kirjassa ["Clean Code: A Handbook of Agile Software Craftsmanship" (Martin, R)](https://haaga-helia.finna.fi/Search/Results?lookfor=clean+code&type=AllFields). Kirjan oppeja käsitellään tiivistetysti esimerkiksi artikkelissa ["Clean Coding in Java" (baeldung.com)](https://www.baeldung.com/java-clean-code).
 
 <!--
 ### Esimerkki luokkien välisistä metodikutsuista
