@@ -36,6 +36,9 @@ Toiset metodit eivät tarvitse lainkaan ulkopuolisia arvoja toimiakseen. Näiden
 LocalDate tanaan = LocalDate.now();
 ```
 
+Vaikka metodille ei välitettäisi arvoja, kirjoitetaan silti metodikutsuun tyhjät sulut.
+
+
 ## Paluuarvot
 
 Vastaavasti olemme vastaanottaneet **paluuarvoja**, eli dataa, jonka metodi palauttaa sen suorituksen päätyttyä:
@@ -51,6 +54,8 @@ Kaikki metodit eivät välttämättä tarvitse parametriarvoja tai palauta paluu
 ```java
 System.out.println("println-metodi ei palauta arvoa");
 ```
+
+Metodit, jotka eivät palauta arvoja, merkitäänn myöhemmin **void**-avainsanalla.
 
 # Ohjelman suorituksen eteneminen metodikutsuissa
 
@@ -167,7 +172,7 @@ Kumpikaan edellä määritellyistä omista metodeista ei vastaanota parametriarv
 
 Voit tutustua metodien suoritusjärjestykseen [Java Visualizer -visualisoinnin](https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.time.LocalDate%3B%0Aimport+java.time.LocalTime%3B%0A%0Apublic+class+Metodit+%7B%0A%0A++++public+static+void+main(String%5B%5D+args)+%7B%0A++++++++tulostaPaivamaara()%3B%0A++++++++tulostaKellonaika()%3B%0A++++%7D%0A%0A++++public+static+void+tulostaPaivamaara()+%7B%0A++++++++LocalDate+tanaan+%3D+LocalDate.now()%3B%0A++++++++System.out.println(%22P%C3%A4iv%C3%A4m%C3%A4%C3%A4r%C3%A4+on+%22+%2B+tanaan)%3B%0A++++%7D%0A%0A++++public+static+void+tulostaKellonaika()+%7B%0A++++++++LocalTime+kellonaika+%3D+LocalTime.now()%3B%0A++++++++System.out.println(%22Kello+on+%22+%2B+kellonaika)%3B%0A++++%7D%0A%7D&mode=display&curInstr=0) avustuksella:
 
-<iframe style="width: 100%; height: 480;" src="https://cscircles.cemc.uwaterloo.ca/java_visualize/iframe-embed.html?faking_cpp=false#data=%7B%22user_script%22%3A%22import%20java.time.LocalDate%3B%5Cnimport%20java.time.LocalTime%3B%5Cn%5Cnpublic%20class%20Metodit%20%7B%5Cn%5Cn%20%20%20%20public%20static%20void%20main(String%5B%5D%20args)%20%7B%5Cn%20%20%20%20%20%20%20%20tulostaPaivamaara()%3B%5Cn%20%20%20%20%20%20%20%20tulostaKellonaika()%3B%5Cn%20%20%20%20%7D%5Cn%5Cn%20%20%20%20public%20static%20void%20tulostaPaivamaara()%20%7B%5Cn%20%20%20%20%20%20%20%20LocalDate%20tanaan%20%3D%20LocalDate.now()%3B%5Cn%20%20%20%20%20%20%20%20System.out.println(%5C%22P%C3%A4iv%C3%A4m%C3%A4%C3%A4r%C3%A4%20on%20%5C%22%20%2B%20tanaan)%3B%5Cn%20%20%20%20%7D%5Cn%5Cn%20%20%20%20public%20static%20void%20tulostaKellonaika()%20%7B%5Cn%20%20%20%20%20%20%20%20LocalTime%20kellonaika%20%3D%20LocalTime.now()%3B%5Cn%20%20%20%20%20%20%20%20System.out.println(%5C%22Kello%20on%20%5C%22%20%2B%20kellonaika)%3B%5Cn%20%20%20%20%7D%5Cn%7D%22%2C%22options%22%3A%7B%22showStringsAsValues%22%3Atrue%2C%22showAllFields%22%3Afalse%7D%2C%22args%22%3A%5B%5D%2C%22stdin%22%3A%22%22%7D&cumulative=false&heapPrimitives=false&drawParentPointers=false&textReferences=false&showOnlyOutputs=false&py=3&curInstr=0&resizeContainer=true&highlightLines=true&rightStdout=true" frameborder="0" scrolling="no"></iframe>
+<iframe style="width: 100%; height: 480px;" src="https://cscircles.cemc.uwaterloo.ca/java_visualize/iframe-embed.html?faking_cpp=false#data=%7B%22user_script%22%3A%22import%20java.time.LocalDate%3B%5Cnimport%20java.time.LocalTime%3B%5Cn%5Cnpublic%20class%20Metodit%20%7B%5Cn%5Cn%20%20%20%20public%20static%20void%20main(String%5B%5D%20args)%20%7B%5Cn%20%20%20%20%20%20%20%20tulostaPaivamaara()%3B%5Cn%20%20%20%20%20%20%20%20tulostaKellonaika()%3B%5Cn%20%20%20%20%7D%5Cn%5Cn%20%20%20%20public%20static%20void%20tulostaPaivamaara()%20%7B%5Cn%20%20%20%20%20%20%20%20LocalDate%20tanaan%20%3D%20LocalDate.now()%3B%5Cn%20%20%20%20%20%20%20%20System.out.println(%5C%22P%C3%A4iv%C3%A4m%C3%A4%C3%A4r%C3%A4%20on%20%5C%22%20%2B%20tanaan)%3B%5Cn%20%20%20%20%7D%5Cn%5Cn%20%20%20%20public%20static%20void%20tulostaKellonaika()%20%7B%5Cn%20%20%20%20%20%20%20%20LocalTime%20kellonaika%20%3D%20LocalTime.now()%3B%5Cn%20%20%20%20%20%20%20%20System.out.println(%5C%22Kello%20on%20%5C%22%20%2B%20kellonaika)%3B%5Cn%20%20%20%20%7D%5Cn%7D%22%2C%22options%22%3A%7B%22showStringsAsValues%22%3Atrue%2C%22showAllFields%22%3Afalse%7D%2C%22args%22%3A%5B%5D%2C%22stdin%22%3A%22%22%7D&cumulative=false&heapPrimitives=false&drawParentPointers=false&textReferences=false&showOnlyOutputs=false&py=3&curInstr=0&resizeContainer=true&highlightLines=true&rightStdout=true" frameborder="0" scrolling="no"></iframe>
 
 ## Metodien nimeäminen ja sisennykset
 
@@ -289,7 +294,7 @@ public class Salasanat {
     }
 
     public static String annaErikoismerkit() {
-        return "!#¤%&/()=?";
+        return "<>,;.:-!\"#¤$%&/\\()[]";
     }
 
     private static String annaNumerot() {
