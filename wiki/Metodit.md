@@ -353,7 +353,7 @@ Huomaa, että samoja liukulukuja käsitellään sekä `main`-metodissa että `la
 
 # Metodien näkyvyys, eli mistä metodia voidaan kutsua
 
-Tämän materiaalin esimerkeissä kaikki metodit on määritelty **julkisiksi**, eli näkyvyydellä `public`. Näkyvyys on tapana määritellä aina mahdollisimman yksityiseksi, eli oikeassa ohjelmassa olisimme määritelleet suurimman osan metodeista **yksityiseksi**(`private`). Julkisia metodeita voidaan kutsua mistä vain muista luokista, kun taas muiden näkyvyyksien kohdalla kutsuminen onnistuu vain rajoitetuista luokista:
+Tämän materiaalin esimerkeissä kaikki metodit on määritelty **julkisiksi**, eli näkyvyydellä `public`. Näkyvyys on tapana määritellä aina mahdollisimman yksityiseksi, eli oikeassa ohjelmassa olisimme määritelleet suurimman osan metodeista **yksityiseksi** (`private`). Julkisia metodeita voidaan kutsua mistä vain muista luokista, kun taas muiden näkyvyyksien kohdalla kutsuminen onnistuu vain rajoitetuista luokista:
 
 Näkyvyys        | Selitys
 ----------------|-------------
