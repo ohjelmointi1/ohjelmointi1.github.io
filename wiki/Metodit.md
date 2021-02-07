@@ -297,7 +297,7 @@ public class Salasanat {
         return "<>,;.:-!\"#¤$%&/\\()[]";
     }
 
-    private static String annaNumerot() {
+    public static String annaNumerot() {
         return "0123456789";
     }
 
