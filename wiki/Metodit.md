@@ -365,19 +365,19 @@ Näkyvyys        | Selitys
 Seuraavat neljä metodia on määritelty kukin eri näkyvyydellä:
 
 ```java
-public String julkinen() {
+public static String julkinen() {
     return "käytettävissä missä tahansa";
 }
 
-private String yksityinen() {
+private static String yksityinen() {
     return "käytettävissä vain tästä luokasta";
 }
 
-protected String suojattu() {
+protected static String suojattu() {
     return "käytettävissä mm. aliluokista";
 }
 
-String oletusnakyvyys() {
+static String oletusnakyvyys() {
     return "en suosittele tällaista näkyvyyttä";
 }
 ```
