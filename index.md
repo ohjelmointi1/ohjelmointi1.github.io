@@ -192,6 +192,9 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
             <td>
                 <strong>Staattiset luokkametodit, parametrit ja paluuarvot</strong><br />
                 <a href="wiki/Metodit">📝 Muistiinpanot</a><br />
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko04/metodit/">📁 Oppitunnin esimerkkikoodit</a><br /><br />
+                <a href="https://web.microsoftstream.com/video/0281b7d0-6e35-494b-bfbe-a5033920d80b">📼 Metodien käsitteet, kutsuminen ja määrittely</a><br />
+                <a href="https://web.microsoftstream.com/video/d3effef4-3f42-4be2-8692-12f4ba4f9c53">📼 Parametrien välittäminen, ohjelman pilkkominen ja metodikutsut toisista luokista</a><br />
                 <!--<a href="src/viikko4/metodit/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <strong>Oppitunnin videot:</strong><br />

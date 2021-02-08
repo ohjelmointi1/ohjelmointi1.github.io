@@ -16,6 +16,12 @@ Tämä oppimateriaali pohjautuu Helsingin yliopiston [Agile Education Research](
 <div class="js-toc"></div>
 
 
+# Oppituntitallenne: Metodien käsitteet, kutsuminen ja määrittely
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/0281b7d0-6e35-494b-bfbe-a5033920d80b?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Katso myös [MS Streamissa](https://web.microsoftstream.com/video/0281b7d0-6e35-494b-bfbe-a5033920d80b).
+
 # Metodien käsitteet ja metodikutsut
 
 Olemme tähän mennessä hyödyntäneet Javan standardikirjaston staattisia metodeja mm. `Integer`, `Double`, `Math`, `Arrays` ja `Collections` -luokista. Metodikutsuissa on esiintynyt tyypillisesti luokan nimi, metodin nimi ja sulut, joiden sisälle on määritelty metodille annettava data. Olemme puolestaan hyödyntäneet metodien palauttamia arvoja sijoittamalla niitä esimerkiksi uusiin muuttujiin. Käsittelemme seuraavissa kappaleissa näitä käsitteitä ja niihin liittyviä esimerkkejä.
@@ -231,6 +237,13 @@ public class Parametrimuuttuja {
 ```
 
 Huomaa, että sekä `main`-metodin sisällä määritelty `nimi` että `tulostaOtsikko`-metodissa määritelty `otsikko` ovat paikallisia muuttujia, eivätkä ne näy metodien ulkopuolelle. Metodikutsussa käytetään siis esimerkissä eri nimistä muuttujaa kuin metodin otsikossa. Muuttujien nimillä ei ole lainkaan merkitystä, koska metodikutsussa välitetään ainoastaan arvo, eli itse merkkijono.
+
+
+# Oppituntitallenne: Parametrien välittäminen, ohjelman pilkkominen ja metodikutsut toisista luokista
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/d3effef4-3f42-4be2-8692-12f4ba4f9c53?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Katso myös [MS Streamissa](https://web.microsoftstream.com/video/d3effef4-3f42-4be2-8692-12f4ba4f9c53).
 
 
 # Metodin paluuarvot ja return-käsky
@@ -544,7 +557,7 @@ Kirjoitetaan ohjelma, joka suosittelee käyttäjän pituuden mukaan sauvoja ja s
 
 > *"From all the hard drives I have bought, they never seem to be as large as the advertised size; from 320 GB down to 290 GB, from 500 GB down to 450 GB, etc. Is there a technical reason for this?"*
 >
-> Sam152. Why are hard drives never as large as advertised? https://superuser.com/q/504
+> Sam152. Why are hard drives never as large as advertised? [https://superuser.com/q/504](https://superuser.com/q/504)
 
 Kirjoitetaan metodi, joka laskee kovalevyn koon muutettuna GB- järjestelmästä GiB-järjestelmään.
 
