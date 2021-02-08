@@ -55,7 +55,7 @@ Kaikki metodit eivät välttämättä tarvitse parametriarvoja tai palauta paluu
 System.out.println("println-metodi ei palauta arvoa");
 ```
 
-Metodit, jotka eivät palauta arvoja, merkitäänn myöhemmin **void**-avainsanalla.
+Metodit, jotka eivät palauta arvoja, merkitään myöhemmin **void**-avainsanalla.
 
 # Ohjelman suorituksen eteneminen metodikutsuissa
 
@@ -529,6 +529,24 @@ public static int pienin(List<Integer> arvot) {
 
 Tutustu interaktiiviseen esimerkkiin arvojen muuttumisesta ja muuttumattomuudesta [Java Visualizer-palvelussa](https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+PassByValue+%7B%0A+++%0A+++static+void+reset(int+x)+%7B%0A++++++x+%3D+0%3B%0A+++%7D%0A+++%0A+++static+void+reset(int%5B%5D+x)+%7B%0A++++++for+(int+i+%3A+x)+%0A+++++++++i+%3D+0%3B%0A+++%7D%0A+++%0A+++static+void+reallyReset(int%5B%5D+x)+%7B%0A++++++for+(int+i%3D0%3B+i%3Cx.length%3B+i%2B%2B)%0A+++++++++x%5Bi%5D+%3D+0%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int+a+%3D+3%3B%0A++++++int%5B%5D+arr+%3D+%7B5,+10,+15%7D%3B%0A++++++%0A++++++reset(a)%3B+//+this+won't+work%0A++++++System.out.println(a)%3B%0A++++++%0A++++++reset(arr)%3B+//+this+won't+work%0A++++++System.out.println(java.util.Arrays.toString(arr))%3B%0A++++++%0A++++++reallyReset(arr)%3B+//+this+works!%0A++++++System.out.println(java.util.Arrays.toString(arr))%3B%0A+++%7D%0A+++%0A%7D&mode=display&curInstr=0)!
 -->
+
+# Tehtäväideoita tunnille
+
+## Suksien ja sauvojen pituuslaskuri
+
+Perinteisen hiihtotyylin sauvojen ohjepituus on [85 % hiihtäjän pituudesta](https://www.intersport.fi/fi/laji/hiihto/hiihtovinkit/hiihtosauvojen-pituusopas/). Mitta-asteikossa sauvat ilmoitetaan 5 cm pituusvälein. 
+
+Suksien suosituspituus on 40 cm enemmän kuin sauvojen pituuden.
+
+Kirjoitetaan ohjelma, joka suosittelee käyttäjän pituuden mukaan sauvoja ja suksia siten, että niiden pituus on laskettu edellä mainituilla kaavoilla ja pyöristetty lähimpään 5 cm jaolliseen pituuteen.
+
+## Kovalevyn puuttuvat megatavut
+
+> *"From all the hard drives I have bought, they never seem to be as large as the advertised size; from 320 GB down to 290 GB, from 500 GB down to 450 GB, etc. Is there a technical reason for this?"*
+>
+> Sam152. Why are hard drives never as large as advertised? https://superuser.com/q/504
+
+Kirjoitetaan metodi, joka laskee kovalevyn koon muutettuna GB- järjestelmästä GiB-järjestelmään.
 
 ---
 
