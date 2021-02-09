@@ -214,7 +214,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
                 <strong>Ajan käsitteleminen Javassa<br />
                 Ohjelman paketointi ja suorittaminen Eclipsen ulkopuolella<br />
                 Komentoriviparametrit</strong><br />
-                <a href="wiki/Ajan-käsittely-ja-ohjelman-kääntäminen">📝 Muistiinpanot</a><br />
+                <a href="wiki/Ajan-kasittely-ja-ohjelman-kaantaminen">📝 Muistiinpanot</a><br />
                 <!--<a href="src/viikko4/aika/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <strong>Oppitunnin videot:</strong><br />
