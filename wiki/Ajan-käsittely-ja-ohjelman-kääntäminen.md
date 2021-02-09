@@ -15,15 +15,20 @@ Ajan käsittelyn lisäksi tutustumme siihen, miten Java-ohjelmia voidaan suoritt
 
 Nykyaikainen Javan standardikirjasto (Java 8+) käsittelee aikaa johdonmukaisesti ja selkeästi. Aikaisemmissa versioissa ajan käsittely on ollut ajoittain sekavaa ja virhealtista. Kuukausien numerointi on esimerkiksi ajoittain alkanut nollasta, toisinaan yhdestä.
 
-Javan vanhentuneilla luokilla kuukausi 12 tarkoittaa esimerkiksi seuraavan vuoden tammikuuta: 
+Javan vanhentuneilla luokilla kuukausien indeksit alkavat toisinaan nollasta, ja yli 11 menevät kuukaudet vuotavat seuraavan vuoden puolelle: 
 
-```diff
-- // vanhentunut tapa:
-- // 💥 2020, 12, 24 tarkoittaa 24. TAMMIKUUTA 2021 💥
-- Date eiOikeastiJoulu = new Date(2020, 12, 24);
+<pre class="highlight" style="border: solid red 2px">
+<code>// vanhentunut tapa:
+Date eiOikeastiJoulu = new Date(2021, 12, 24);
 
-+ // nykyinen tapa (oikein):
-+ LocalDate joulu = LocalDate.of(2020, 12, 24);
+// 💥 2021, 12, 24 tarkoittaa 24. TAMMIKUUTA 2022 💥</code>
+</pre>
+
+Nykyisillä `java.time`-paketin aikaluokilla kuukausien indeksit alkavat yhdestä ja luokkien käyttäminen on monin tavoin johdonmukaisempaa:
+
+```java
+// nykyinen tapa (oikein):
+LocalDate joulu = LocalDate.of(2021, 12, 24);
 ```
 
 Merkittävä osa nettilähteistä esittelee vanhentuneita tai "epävirallisia" tapoja ajan käsittelyyn, joten suosittelen käyttämään lähteitä, joissa hyödynnetään `java.time`-paketista löytyviä aikaluokkia.
@@ -119,6 +124,7 @@ Ajan merkkijonoesitykset noudattavat Javassa [ISO 8601 -standardia](https://en.w
 2021-01-20
 ```
 
+Standardin päivämäärän ja kellonajan kirjoitusasun lisäksi on olemassa lukuisia paikallisia tapoja ilmoittaa päiviä ja aikoja, mikä tekee ajan käsittelystä toisinaan hankalaa:
 
 [![ISO 8601](https://imgs.xkcd.com/comics/iso_8601.png)](https://xkcd.com/1179/)
 
@@ -141,7 +147,7 @@ boolean isLeapYear = thisYear.isLeap();
 int yearNumber = thisYear.getValue();
 
 // Vuosi 2030 oliona:
-Year anotherYear = Year.of(2021);
+Year anotherYear = Year.of(2030);
 ```
 
 # Ajan "laskeminen" ja vertailu
@@ -161,6 +167,10 @@ if (yesterday.isBefore(nextWeek)) {
 }
 
 if (yesterday.isAfter(nextWeek)) {
+    // suoritetaan jos tosi
+}
+
+if (oneDay.equals(otherDay)) {
     // suoritetaan jos tosi
 }
 ```
@@ -248,7 +258,8 @@ s           | Sekunti   | 45
 
 \* Samaa merkkiä voidaan toistaa, jolloin esim. päivä (dd), kuukausi (MM), tunti (HH) ja minuutti (mm) saadaan aina kahden numeron pituisena. Tarvittaessa luvun edessä esitetään tällöin nolla.
 
-## Koodaustehtävä oppitunnille
+
+## Ideoita oppitunnille
 
 Kirjoita ohjelma, joka pyytää käyttäjältä päivämäärän muodossa `pp.kk.vvvv`, ja kertoo kuinka pitkä aika kuluvan päivän ja annetun päivän välillä on.
 
@@ -259,27 +270,72 @@ Tarvitset todennäköisesti nämä luokat:
 * DateTimeFormatter (d.M.yyyy)
 * Period tai ChronoUnit.DAYS
 
+
+
 # Java-ohjelman kääntäminen ja suorittaminen komentoriviltä
 
-Muutetaan yllä olevaa ohjelmaa siten, että ohjelman voi käynnistää komentoriviltä, ja että päivämäärän voi antaa suoraan osana käynnistyskomentoa.
+Tämän viikon viimeisenä aiheena perehdymme siihen, miten Java-ohjelmia voidaan suorittaa Eclipsen ulkopuolella. Tähänastinen IDE-ympäristöön sidoksissa oleva suorittaminen soveltuu ainoastaan ohjelmistokehityksen yhteyteen, mutta ohjelmat on myös pakattavissa siten, että ne voidaan suorittaa miltä vain komentoriviltä.
 
-## Luokan kääntäminen ja suorittaminen komentoriviltä
+Jos toteuttaisimme ohjelmallemme graafisen käyttöliittymän, sen suorittaminen olisi entistä suoraviivaisempaa. Toistaiseksi kuitenkin työskentelemme tekstikäyttöliittymän asettamissa rajoissa.
+
+
+## Lähdekoodin kääntäminen tavukoodiksi
+
+Ennen kun Java-koodia voidaan suorittaa, se täytyy kääntää. Kääntäminen tapahtuu Eclipsessä automaattisesti taustalla, mutta Eclipsen ulkopuolella kääntämisen voi tehdä itse `javac`-komennolla. Kääntämiseen liittyy monia hyviä puolia, joista yksi hyvin konkreettinen on ohjelman tarkistaminen virheiden varalta jo ennen sen suorittamista:
+
+> *"Ohjelman suorittaminen on helppoa, mutta pinnan alla tapahtuu paljon. Kun ohjelma halutaan suorittaa, lähdekoodi käännetään ensin Java-ohjelmointikielen tavukoodiksi. Tämä kääntäminen tapahtuu Javan omalla kääntäjällä, joka on myös ohjelma. Tämän jälkeen ohjelma käynnistetään, eli siinä olevat käskyt suoritetaan yksi kerrallaan Java-kielistä tavukoodia ymmärtävän Java-tulkin toimesta."*
+>
+> *"Tämä käännösprosessi vaikuttaa siihen, miten ja milloin ohjelmien virheet ilmenevät. Kun ohjelma käännetään ennen suoritusta, kääntämiseen käytettävä ohjelma voi etsiä ohjelmasta virheitä. Tämä vaikuttaa myös ohjelmoinnissa käytetyn ohjelmointiympäristön tarjoamiin vinkkeihin, jolloin ohjelmoija voi saada palautetta ohjelmassa olevista virheistä heti."*
+>
+> *"Käytössämme oleva ohjelmointiympäristö kääntää ja suorittaa ohjelman yhdellä napinpainalluksella. Ohjelmointiympäristö kääntää ohjelmaa kuitenkin jatkuvasti, jolloin se pystyy ilmoittamaan virheistä."*
+>
+> [Agile Education Research, 2020](https://www.helsinki.fi/en/researchgroups/data-driven-education). [Tulostaminen](https://ohjelmointi-20.mooc.fi/osa-1/2-tulostaminen). [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi)
+
+Käytännössä kääntäminen tapahtuu esimerkiksi PowerShell-komentorivillä `javac`-komennolla:
 
 ```
-ohjelmointi1\src> javac viikko4/aika/DateDiff.java
-
-ohjelmointi1\src> java viikko4.aika.DateDiff 24.12.2021
-
-99 päivää jouluun on
+> javac viikko02\merkkijonot\Salasana.java
 ```
 
-Ohjelma voidaan myös paketoida jar-paketiksi ja ajaa `jar`-vivulla:
+Komentoa suoritettaessa sinun tulee olla projektin lähdekoodien juurihakemistossa, eli esim. `workspace\ohjelmointi1\src\`. `javac`-komennolle annetaan parametrina käännettävän lähdekooditiedoston polku. Polun voi antaa Windows-ympäristössä joko kenoviivoilla `\` tai kauttaviivoilla `/` eroteltuna. 
+
+Kääntämisen jälkeen tiedostojärjestelmään ilmestyy `.java`-tiedoston rinnalle käännetty `.class`-tiedosto. Tätä tiedostoa voidaan käyttää `java`-komennon kanssa ohjelman suorittamiseksi.
+
+## Käännetyn ohjelman suorittaminen
+
+Käännetyn ohjelmaluokan suorittaminen tapahtuu `java`-komennolla:
 
 ```
-> java -jar datediff.jar 24.12.2021
+> java viikko02.merkkijonot.Salasana
 
-99 päivää jouluun on
+Satunnainen salasana: \)W.#OF#8EotJq3w[l5PjV%T4URs%;KS9a.fWJu#SeFe"gZ!EqAig(i
 ```
+
+Vaikka komento näyttää hyvin samanlaiselta kuin aikaisempi `javac`-komento, sille ei anneta tiedoston polkua, vaan Java-luokan nimi paketteineen. Koska kyseessä on luokan nimi, sen perään ei kirjoiteta tiedostopäätettä.
+
+
+## Ohjelman paketoiminen ja paketoidun ohjelman suorittaminen
+
+Yksittäisten käännettyjen tiedostojen kääntäminen ja käsitteleminen erillisten hakemistojen avulla useista luokista koostuvien ohjelmien yhteydessä on epäkäytännöllistä. Tämän vuoksi [ohjelmia voidaan myös paketoida](https://happycoding.io/tutorials/java/exporting-jars#eclipse) **jar**-tiedostoiksi (Java Archive). Eclipsen export-toiminnon avulla voit pakata projektisi **jar**-paketiksi, joka sisältää kaikki ohjelmasi tarvitsemat luokat.
+
+Kun ohjelma on paketoitu, se voidaan suorittaa `java`-komennolla ja `jar`-vivulla seuraavasti:
+
+```
+> java -jar salasanageneraattori.jar
+
+Satunnainen salasana: \)W.#OF#8EotJq3w[l5PjV%T4URs%;KS9a.fWJu#SeFe"gZ!EqAig(i
+```
+
+## Windows-komentorivien merkistöongelmat
+
+Mikäli käytät Windowsin komentoriviä tai PowerShell:iä, voit törmätä ongelmiin ääkkösten ja erikoismerkkien kanssa. Tämä johtuu siitä, että Windows käyttää oletuksena paikallisia merkistöjä, eikä universaalia UTF-8:aa. Voit vaihtaa komentorivin tai PowerShellin käyttämän merkistön UTF-8:ksi seuraavalla komennolla:
+
+```
+> chcp 65001
+```
+
+Vaihdettuasi merkistön kokeile suorittaa komentoja uudelleen. Lue tarvittaessa lisävinkkejä [StackOverflow](https://superuser.com/questions/269818/change-default-code-page-of-windows-console-to-utf-8):sta.
+
 <!--
 
 Oppitunnilla käytettiin aikaisemmin kirjoitettua esimerkkiohjelmaa `viikko3/listat/th/KaupungitVerkosta.java`, joka käännettiin `javac`-komennolla komentorivillä class-tiedostoksi:
