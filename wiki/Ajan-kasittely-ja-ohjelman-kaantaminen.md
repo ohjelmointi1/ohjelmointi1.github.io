@@ -52,7 +52,7 @@ Merkittävä osa nettilähteistä esittelee vanhentuneita tai "epävirallisia" t
 
 "A date-time with a time-zone in the ISO-8601 calendar system, such as 2007-12-03T10:15:30+01:00 Europe/Paris."
 
-Lähde: https://docs.oracle.com/javase/8/docs/api/java/time/
+Lähde: [https://docs.oracle.com/javase/8/docs/api/java/time/](https://docs.oracle.com/javase/8/docs/api/java/time/)
 
 Aikaluokkia käytettäessä niiden import-komennot lisätään luokan alkuun:
 
