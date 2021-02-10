@@ -282,7 +282,7 @@ Jos toteuttaisimme ohjelmallemme graafisen käyttöliittymän, sen suorittaminen
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/8648dc7e-4195-4bea-b872-86dcd22c76af?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-[Ohjelman kääntäminen, paketointi ja suorittaminen]()
+[Ohjelman kääntäminen, paketointi ja suorittaminen](https://web.microsoftstream.com/video/8648dc7e-4195-4bea-b872-86dcd22c76af)
 
 ## Lähdekoodin kääntäminen tavukoodiksi
 
