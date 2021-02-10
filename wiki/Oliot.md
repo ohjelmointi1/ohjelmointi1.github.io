@@ -528,7 +528,7 @@ public void setVakiluku(int vakiluku) {
 }
 ```
 
-Lue lisää gettereistä ja settereistä: https://www.w3schools.com/java/java_encapsulation.asp
+Lue lisää gettereistä ja settereistä: [https://www.w3schools.com/java/java_encapsulation.asp](https://www.w3schools.com/java/java_encapsulation.asp)
 
 
 # Null-viittaukset
@@ -623,7 +623,7 @@ JSON-tiedostomuodossa ohjelmamme data voisi olla esimerkiksi tämän esimerkin k
   "puhelin": "306-422-3408"
 }]
 ```
-JSON esimerkki: https://mockaroo.com/
+JSON esimerkki: [https://mockaroo.com/](https://mockaroo.com/)
 
 Data koostuu selvästi keskenään rakenteellisesti samanlaisista tietoalkioista, joilla on yksilölliset arvot, kuten nimi ja email. Huomaa, että henkilölle "Moses" ei ole asetettu sähköpostiosoitetta, mutta sillä on silti olemassa "muuttuja" sähköpostin tallentamiseksi. **Puuttuvaa arvoa ei voida jättää tyhjäksi, vaan siihen on asetettu null-viittaus.**
 
