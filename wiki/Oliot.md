@@ -1,22 +1,22 @@
 [&larr; Takaisin etusivulle](/)
 
-
 <h1 class="js-toc-ignore">Olio-ohjelmointi (Object-oriented programming)</h1>
 
 Olio-ohjelmointi on yleinen ohjelmointiparadigma, jota hyödynnetään lukuisissa ohjelmointikielissä. Myös Java on olio-ohjelmointikieli, vaikka emme toistaiseksi ole omissa ohjelmissamme soveltaneet juurikaan olio-ohjelmointia.
 
-Olio-ohjelmoinnin avulla voimme jäsentää ohjelmamme toiminnallisuuden ja ohjelmassa esiintyvän datan loogisiksi itsenäisiksi kokonaisuuksiksi, joiden avulla pystymme ratkaisemaan ongelmia. **Olio-ohjelmoinnissa on siis samalla kyse tiedon mallintamisesta että ratkaisujen mallintamisesta.** 
+Olio-ohjelmoinnin avulla voimme jäsentää ohjelmamme toiminnallisuuden ja ohjelmassa esiintyvän datan loogisiksi itsenäisiksi kokonaisuuksiksi, joiden avulla pystymme ratkaisemaan ongelmia. **Olio-ohjelmoinnissa on siis samalla kyse tiedon mallintamisesta että logiikan mallintamisesta.** 
 
 
 **Sisällysluettelo**
 
 <div class="js-toc"></div>
 
+
 # Luokat ja oliot
 
-Eri luokilla ja olioilla on erilaisia rooleja ratkaistavissa ongelmissa. Osa luokista ja olioista esimerkiksi mallintaa dataa, toiset suorittavat logiikkaa ja muut huolehtivat vuorovaikutuksesta käyttäjän tai toisten järjestelmien kanssa. Siksi ei ole yhtä ainoaa tapaa mallintaa luokkia ja olioita.
+Eri luokilla ja olioilla on erilaisia rooleja ratkaistavissa ongelmissa. Osa luokista ja olioista esimerkiksi mallintaa **dataa**, toiset suorittavat **logiikkaa** ja muut huolehtivat **vuorovaikutuksesta** käyttäjän tai toisten järjestelmien kanssa. Siksi ei ole yhtä ainoaa tapaa mallintaa luokkia ja olioita.
 
-Olioiden ja luokkien käyttötapa riippuu monista seikoista. Jos pankkisovelluksessa käytetään olioita tilien mallintamiseen, tehdään tästä luokasta kenties miljoonia olioita. Samassa sovelluksessa voi olla myös luokkia, joista luodaan vain yksi olio, kuten tilinumeroiden oikeellisuuden tarkastaja. Vaikka molemmat käsitteet toteutetaan olio-ohjelmoinnilla, tilit mallintavat dataa ja tilinumeroiden tarkastaja logiikkaa.
+Olioiden ja luokkien käyttötapa riippuu monista seikoista. Jos pankkisovelluksessa käytetään olioita tilien mallintamiseen, tehdään tästä luokasta kenties miljoonia olioita. Samassa sovelluksessa voi olla myös luokkia, kuten tilinumeroiden oikeellisuuden tarkastaja, joista luodaan vain yksi olio. Vaikka sekä tilit että tilinumeroiden tarkistajat toteutetaan olio-ohjelmoinnilla, tilit mallintavat dataa ja tilinumeroiden tarkastaja logiikkaa.
 
 Tällä opintojaksolla keskitymme aluksi luokkien ja olioiden hyödyntämiseen datan mallintamisessa, eli teemme luokkia, jotka vastaavat joitain reaalimaailman käsitteitä. Jatkokurssilla olio-ohjelmointia sovelletaan esimerkiksi olioina, joiden tarkoitus on toimia vuorovaikutuksessa tietokannan ja verkkoselainten kanssa.
 
@@ -26,16 +26,19 @@ Johdatus olio-ohjelmointiin: [https://ohjelmointi-19.mooc.fi/osa-4/2-johdatus-ol
 
 Luokka ja olio: [https://ohjelmointi-19.mooc.fi/osa-4/3-luokka-ja-olio](https://ohjelmointi-19.mooc.fi/osa-4/3-luokka-ja-olio)
 
-## Tiedon mallintaminen olioiden avulla
+# Tiedon mallintaminen olioiden avulla
 
-Olemme käyttäneet jo monenlaisia olioita omissa ohjelmissamme. Käsitellessämme esim. päivämääriä olemme käyttäneet `LocalDate`-luokkaa, emmekä toisistaan irrallisia muuttujia:
+Olemme käyttäneet jo monenlaisia olioita omissa ohjelmissamme. Käsitellessämme esim. päivämääriä olemme käyttäneet `LocalDate`-luokkaa:
 
 ```java
 // Päivämäärät olioina, kätevää:
-LocalDate olio1 = LocalDate.of(2020, 1, 1);
-LocalDate olio2 = LocalDate.of(2030, 12, 31);
+LocalDate ensimmainen = LocalDate.of(2020, 1, 1);
+LocalDate viimeinen = LocalDate.of(2030, 12, 31);
+```
 
+`LocalDate` ratkaisee ongelman, jossa huonossa tapauksessa käsittelisimme päivämäärään liittyviä arvoja toisistaan erillisillä muuttujilla:
 
+```java
 // Päivämäärät primitiiveinä, epäkäytännöllistä:
 int vuosi1 = 2020;
 int kuukausi1 = 1;
@@ -46,7 +49,7 @@ int kuukausi2 = 12;
 int paiva2 = 31;
 ```
 
-Jokainen LocalDate-olio pitääkin sisällään juuri nämä kolme muuttujaa, mutta ne ovat kaikki tallessa yhdessä paikassa. JSON-tietomuodon avulla olio voitaisiin esittää tällaisessa muodossa:
+Jokainen `LocalDate`-olio pitää sisällään juuri edellä esitetyt kolme kokonaislukua, mutta ne ovat kaikki tallessa yhdessä paikassa "olion sisällä". JSON-tietomuodon avulla olio voitaisiin esittää tällaisessa muodossa:
 
 ```javascript
 {
@@ -56,19 +59,21 @@ Jokainen LocalDate-olio pitääkin sisällään juuri nämä kolme muuttujaa, mu
 }
 ```
 
-Kun tieto on mallinnettu olioina, voimme hyödyntää olioiden operaatioita, eli **metodeja**, erilaisten operaatioiden suorittamiseksi. `LocalDate`-luokan operaatioita ovat toistaiseksi olleet päivämäärien vertailu sekä päivämäärävälin pituuden laskeminen:
+Kun tieto on mallinnettu olioina, voimme hyödyntää myös olioiden operaatioita, eli **metodeja**, erilaisten operaatioiden suorittamiseksi. `LocalDate`-luokan operaatioita ovat toistaiseksi olleet päivämäärien vertailu, aikaan liittyvät laskutoimitukset sekä aikavälin pituuden laskeminen:
 
 ```java
-LocalDate olio1 = LocalDate.of(2020, 1, 1);
-LocalDate olio2 = LocalDate.of(2030, 12, 31);
+LocalDate ensimmainen = LocalDate.of(2020, 1, 1);
+LocalDate viimeinen = LocalDate.of(2030, 12, 31);
 
 // olioilla on metodeja, joiden avulla voimme suorittaa erilaisia operaatioita:
-if (olio1.isBefore(olio2)) {
+if (ensimmainen.isBefore(viimeinen)) {
     System.out.println("Päivämäärä 1 on ennen päivämäärää 2!");
 }
 ```
 
-Päivämäärän vertailussa `LocalDate`-luokka piilottaa sisäänsä varsinaisen vertailussa suoritettavan logiikan, jota ei nyt tarvitse toistaa missään `LocalDate`-luokan ulkopuolella. Logiikka on kuitenkin käytettävissä kaikkialta luokan tarjoaman `isBefore`-oliometodin avulla, jolloin emme itse joudu toteuttamaan vastaavaa luokan sisään toteutettua vertailua: 
+Päivämäärän vertailussa `LocalDate`-luokka piilottaa sisäänsä varsinaisen vertailussa suoritettavan logiikan, jota ei nyt tarvitse toistaa missään `LocalDate`-luokan ulkopuolella. Logiikka on kuitenkin käytettävissä kaikkialta luokan tarjoaman `isBefore`-oliometodin avulla, jolloin emme itse joudu toteuttamaan varsinaista koodia vertailun tekemiseksi.
+
+Javan lähdekoodissa `LocalDate`-olioiden vertailu on toteutettu käytännössä seuraavalla tavalla:
 
 ```java
 /* Copyright (c) 2012, 2018, Oracle and/or its affiliates. All rights reserved. */
@@ -84,7 +89,9 @@ int compareTo0(LocalDate otherDate) {
 }
 ```
 
-**Luokan sisäistä toteutusta päivämäärien vertailemiseksi ei siis tarvitse tietää, jotta voimme hyödyntää sitä.**
+Lähde: [LocalDate.java](https://hg.openjdk.java.net/jdk8/jdk8/jdk/file/687fd7c7986d/src/share/classes/java/time/LocalDate.java#l1866)
+
+Luokan sisäistä toteutusta päivämäärien vertailemiseksi ei onneksi tarvitse tietää, jotta voimme hyödyntää sitä omassa koodissamme.
 
 Vastaavasti, jos haluamme laskea päivämäärän esimerkiksi 31 päivää minkä tahansa päivämäärän jälkeen, joudumme ratkaisussamme käsittelemään eri pituisia kuukausia, karkausvuosia ja vuodenvaihteen yli meneviä aikavälejä. On erittäin loogista, että tällaiset usein tarvittavat operaatiot paketoidaan omaksi kokonaisuudeksi, eli luokaksi, joka tarjoaa yksinkertaisen rajapinnan monimutkaisten operaatioiden suorittamiseksi:
 
@@ -95,20 +102,20 @@ LocalDate uusiOlio = olio1.plusDays(31);
 Teknisten yksityiskohtien piilottamista ja operaatioiden käsitteellistämistä kutsutaan **abstraktoinniksi**, ja se on yksi olio-ohjelmoinnin peruspilareista.
 
 
-## Luokka ja olio
+# Keskeiset käsitteet: luokka ja olio
 
-`LocalDate`-luokka määrittelee kaikille sen olioille yhteiset ominaisuudet ja yhteiset toiminnallisuudet. Voimme kutsua samoja metodeja mille tahansa päivämääräolioille. Jokainen erillinen päivämäärä on kuitenkin toisistaan riippumaton, mutta rakenteeltaan samanlainen. Yhdestä luokasta voidaan luoda rajoittamattoman määrän olioita.
+Lähdekoodin tasolla jokaista luokkaa kohden on tyypillisesti oma lähdekooditiedostonsa. Luokat toimivat Javassa arvojen tyyppeinä, eli niiden nimet esiintyvät mm. muuttujien nimissä sekä metodien parametri- ja paluuarvojen typpeinä. Yhdestä luokasta voidaan luoda rajoittamattoman määrän olioita, jotka ovat toisistaan riippumattomia, mutta joilla on samat metodit ja muut ominaisuudet.
 
-Käyttäessämme olioita omassa koodissamme, **käytämme luokan nimeä muuttujan tyyppinä**. **Muuttujiin asetetaan arvoja, jotka ovat olioita**. Meille tuttu tietotyyppi `String` on luokka ja yksittäiset merkkijonot ovat sen olioita. Kaikilla merkkijonoilla on samat metodit, mutta eri sisältöiset merkkijono-oliot palauttavat metodeja kutsuttaessa eri arvoja. Ne ovat siis oliokohtaisia eli **oliometodeja**:
+Esimerkiksi `LocalDate`-luokka määrittelee kaikille sen olioille yhteiset ominaisuudet ja yhteiset toiminnallisuudet. Voimme siis kutsua samoja metodeja mille tahansa päivämääräolioille. Jokainen erillinen päivämäärä on kuitenkin toisistaan riippumaton, mutta rakenteeltaan samanlainen. 
+
+Seuraavassa esimerkkikoodissa **käytämme luokkien nimiä muuttujien tyyppeinä**. **Muuttujiin asetetaan arvoja, jotka ovat olioita**:
 
 ```java
-String olio1 = "Eka merkkijono-olio";
-String olio2 = "Toinen merkkijono-olio";
-
-// samat metodit, mutta yksilölliset paluuarvot
-int pituus1 = olio1.length();
-int pituus2 = olio2.length();
+Scanner lukija = new Scanner(System.in);
+DecimalFormat muotoilija = new DecimalFormat("0.00");
 ```
+
+Oliot luodaan tavallisesti kuten yllä, eli `new`-avainsanalla. Joillain tietyillä luokilla luonti on toteutettu ulkoisesti esimerkiksi `now()`-metodin avulla.
 
 
 ## Datan mallintaminen luokalla
@@ -132,8 +139,6 @@ int vakiluku1 = 653_867;
 
 String nimi2 = "Espoo";
 int vakiluku2 = 289_413;
-
-//...
 ```
 
 Kaupunkien ja väkilukujen esittäminen esimerkiksi listoina olisi myös epäluonnollista, koska nimet ja väkiluvut olisivat toisistaan irrallisia tietoja:
@@ -144,7 +149,7 @@ List<String> nimet = List.of("Helsinki", "Espoo");
 List<Integer> vakiluvut = List.of(653_867, 289_413);
 ```
 
-Kun ongelmasta tunnistetaan reaalimaailman käsitteitä, voidaan niitä vastaavia uusia rakenteita luoda myös ohjelmiin. Tässä esimerkissä on selvästi kyse kaupungeista, joten voimme luoda uuden käsitteen "Kaupunki". Tätä käsitettä kutsutaan luokaksi ja kaikkia yksittäisiä kaupunkeja olioiksi:
+Kun ongelmasta tunnistetaan reaalimaailman käsitteitä, voidaan niitä vastaavia uusia rakenteita luoda myös ohjelmiin. Tässä esimerkissä on selvästi kyse kaupungeista, joten voimme luoda uuden käsitteen: **kaupunki**. Tätä käsitettä kutsutaan luokaksi ja kaikkia yksittäisiä kaupunkeja olioiksi:
 
 ```java
 // Kaupunki-käsite selkeyttää ohjelmaa ja kokoaa toisiinsa liittyvät tiedot yhteen 👍
@@ -163,9 +168,9 @@ if (hki.onSuurempiKuin(esp)) {
 }
 ```
 
-## Oman luokan määrittely
+# Oman luokan määrittely
 
-Kukin luokka määritellään pääsääntöisesti omaan tiedostoonsa, jonka nimi on sama kuin luokan nimi ja pääte on ".java", aivan kuten tähänkin asti. Luokan nimi kirjoitetaan siten, että kaikki sanat ovat yhdessä ja sanoissa on isot alkukirjaimet (CamelCase). Luokan määrittely alkaa avainsanoilla `public` ja `class`. Kaupunki-luokan tiedosto näyttää aluksi seuraavalta:
+Kukin luokka määritellään pääsääntöisesti omaan tiedostoonsa, jonka nimi on sama kuin luokan nimi ja pääte on ".java", aivan kuten tähänkin asti. Luokan nimi kirjoitetaan siten, että kaikki sanat ovat yhdessä ja sanoissa on isot alkukirjaimet (CamelCase). Luokan määrittely avainsanoilla `public` ja `class`. Kaupunki-luokan tiedosto näyttää aluksi seuraavalta:
 
 ```java
 // Kaupunki.java
@@ -174,14 +179,18 @@ public class Kaupunki {
 }
 ```
 
-Huomaa, että tämän luokan on tarkoitus mallintaa käsitteitä eikä esim. toimia omana ohjelmanaan. **Luokkaan ei siis haluta tehdä esimerkiksi `main`-metodia, joka kuuluisi erilliseen ohjelmaluokkaan.** Ohjelman selkeän rakenteen vuoksi on erittäin tärkeää pilkkoa eri tarkoituksia palvelevat kokonaisuudet eri luokkiin. Main-metodiluokan tarkoitus on tarjota vuorovaikutus käyttäjän ja ohjelman välille, kun taas `Kaupunki`-luokan tarkoitus on esittää yksittäisiä tietoalkioita. Ohjelman pilkkomiseksi on olemassa erilaisia malleja, kuten ["separation of concerns"](https://www.google.com/search?q=separation+of+concerns) ja ["data, context and interaction"](https://www.google.com/search?q=data+context+and+interaction).
+Huomaa, että tämän luokan on tarkoitus mallintaa käsitteitä eikä esim. toimia omana ohjelmanaan. Tällaiseen luokkaan **ei siis** kirjoiteta `main`-metodia, joka kuuluisi erilliseen **ohjelmaluokkaan**. Ohjelman selkeän rakenteen vuoksi on erittäin tärkeää pilkkoa eri tarkoituksia palvelevat kokonaisuudet eri luokkiin. Ohjelmaluokan tarkoitus on tarjota vuorovaikutus käyttäjän ja ohjelman välille, kun taas `Kaupunki`-luokan tarkoitus on esittää yksittäisiä tietoalkioita. 
+
+Ohjelman pilkkomiseksi on olemassa erilaisia malleja, kuten ["separation of concerns"](https://www.google.com/search?q=separation+of+concerns) ja ["data, context and interaction"](https://www.google.com/search?q=data+context+and+interaction), joita noudatamme ohjelmointikursseilla, mutta emme perehdy tarkemmin niiden teoriaan.
 
 
-### Oliomuuttujat
+# Oliomuuttujat
 
-Edellä olemme todenneet tarpeen tallentaa jokaiselle Kaupunki-oliolle oma nimi ja väkiluku. Näitä varten tarvitaan siis muuttujat. Tähän asti muuttujat on aina määritelty paikallisiksi muuttujiksi, jotka ovat voimassa vain tietyn metodin suorituksen ajan. Nyt haluamme kuitenkin tehdä **oliokohtaisia muuttujia**, eli **oliomuuttujia**, jotka ovat pysyviä, ja joiden **arvot säilyvät myös metodien suoritusten välissä**.
+Edellä olemme todenneet tarpeen tallentaa jokaiselle Kaupunki-oliolle oman nimen ja väkiluvun. Näitä varten tarvitaan siis muuttujat. Tähän asti muuttujat on aina määritelty paikallisiksi muuttujiksi, jotka ovat voimassa vain tietyn metodin sisällä ja vain yhden metodikutsun ajan.
 
-Olioiden pysyvät muuttujat määritellään luokan runkoon metodien ulkopuolelle:
+Nyt haluamme kuitenkin tehdä **oliokohtaisia muuttujia**, eli **oliomuuttujia**, jotka ovat pysyviä, ja joiden **arvot säilyvät myös metodien suoritusten välissä**.
+
+Tällaiset olioiden pysyvät muuttujat määritellään luokan runkoon metodien ulkopuolelle:
 
 ```java
 // Kaupunki.java
@@ -213,9 +222,19 @@ System.out.println(esp.nimi);
 System.out.println(esp.vakiluku);
 ```
 
-### Oliometodit
+Huom! Tulemme myöhemmin oppimateriaalissa rajaamaan muuttujien näkyvyyttä, jolloin niiden käyttäminen ei onnistu luokan ulkopuolelta. Toistaiseksi muuttujat voidaan kuitenkin pitää oletusnäkyvyydellä.
 
-Luokalle voidaan nyt määritellä esimerkiksi oliokohtainen metodi, eli oliometodi, joka laskee väkiluvun ja pinta-alan perusteella kaupungin väestöntiheyden. Oliot voivat käyttää omia muuttujiaan erityisen `this`-viittauksen kautta:
+# Oliometodit
+
+Luokalle voidaan myös määritellä oliokohtaisia metodeja, jotka esimerkiksi laskevat väkiluvun ja pinta-alan perusteella kaupungin väestöntiheyden. Oliokohtaisiin metodeihin ei kirjoiteta `static`-avainsanaa ja ne ovat käytettävissä ainoastaan tietyn olion kontekstissa:
+
+```java
+public double laskeVaestontiheys() {
+    return this.vakiluku / this.pintaAla;
+}
+```
+
+Huomaa yllä muuttujien nimien edessä oleva `this`-viittaus. Oliot voivat viitata itseensä, eli esimerkiksi käyttää omia metodejaan ja muuttujiaan `this`-viittauksen avulla.
 
 ```java
 public class Kaupunki {
@@ -230,16 +249,17 @@ public class Kaupunki {
 }
 ```
 
-Tätä metodia voidaan käyttää nyt kaikkien `Kaupunki`-olioden kautta:
+Tätä `laskeVaestontiheys`-metodia voidaan käyttää nyt kaikkien `Kaupunki`-olioden kautta:
 
 ```java
 System.out.println(hki.laskeVaestontiheys());
 System.out.println(esp.laskeVaestontiheys());
 ```
 
-### Private-oliomuuttujat
 
-Haluamme pääsääntöisesti sulkea muuttujat luokan sisään siten, että niitä voidaan käyttää ainoastaan luokan omilla metodeilla. Tätä varten oliomuuttujille määritellään käytännössä aina näkyvyys `private`:
+## Private-oliomuuttujat
+
+Edellisissä esimerkeissä määrittelimme oliomuuttujat ilman näkyvyyttä, kuten `public` tai `private`. Haluamme pääsääntöisesti sulkea muuttujat luokan sisään siten, että niitä voidaan käyttää ainoastaan luokan omilla metodeilla. Tätä varten oliomuuttujille määritellään käytännössä aina näkyvyys `private`:
 
 ```java
 // Kaupunki.java
@@ -249,31 +269,38 @@ public class Kaupunki {
     private String nimi;
     private int vakiluku;
     private double pintaAla;
-
-
 }
 ```
+
+Kun muuttujat ovat yksityisiä, niitä voidaan käyttää ainoastaan saman luokan sisältä. Tarvittaessa muuttujien käsittelemiseksi luodaan omat metodinsa, joiden näkyvyys voidaan asettaa julkiseksi. Näihin metodeihin palataan myöhemmin tässä oppimateriaalissa.
 
 **Keskeisiä seikkoja oliomuuttujista:**
 
 * Oliomuuttujat ovat **yksittäisille olioille kuuluvia muuttujia**.
 * Oliomuuttujat **määritellään luokassa kaikkein ylimpänä**, ennen metodeja ja muita osia.
 * Kaikilla saman luokan olioilla on **samat muuttujat, mutta omilla arvoillaan**.
-* Oliomuuttujien arvot säilyvät olion koko olemassaolon ajan, toisin kuin metodien sisällä käytetyt paikalliset muuttujat.
+* Oliomuuttujien arvot **säilyvät olion koko olemassaolon ajan**, toisin kuin metodien sisällä käytetyt paikalliset muuttujat.
 * Oliomuuttujien näkyvyyttä voidaan rajoittaa aivan kuten metodien. Pääsääntöisesti ne ovat `private`.
 
 
-### Olioiden luominen
+# Olioiden luominen
 
 Olioita luodaan `new`-avainsanalla. Joissain tapauksissa olemme luoneet olioita muillakin tavoilla, esim. `LocalDate.now()`, mutta myös näissä tapauksissa varsinainen olion luominen tapahtuu kulissien takana `new`-avainsanalla.
 
-Avainsanan jälkeen kirjoitetaan olion luokan nimi ja sulut. Sulkujen sisään kirjoitamme parametriarvot kuten metodikutsujen kanssa:
+`new`-avainsanan jälkeen kirjoitetaan olion luokan nimi ja sulut. Sulkujen sisään kirjoitamme parametriarvot, aivan kuten metodikutsujen kanssa:
 
 ```java
 Kaupunki uusiOlio = new Kaupunki("Helsinki", 653_867);
 ```
 
-Edellä oleva luontikäsky käsitellään Java-luokassa **konstruktorin** avulla. Konstruktori on ikään kuin metodi, jota kutsutaan automaattisesti olioita luotaessa. Konstruktorin nimi on sama kuin luokan nimi, eli tässä tapauksessa `Kaupunki`. Sen näkyvyys on tyypillisesti `public`. Luotu olio voidaan ottaa talteen muuttujaan esimerkin mukaisesti sijoitusoperaattorilla.
+Edellä oleva luontikäsky käsitellään Java-luokassa **konstruktorin** avulla. Konstruktori on ikään kuin metodi, jota kutsutaan automaattisesti olioita luotaessa. Luokan lähdekoodissa konstruktorin nimi on sama kuin luokan nimi, eli tässä tapauksessa `Kaupunki`, ja sen näkyvyys on tyypillisesti `public`:
+
+```java
+// konstruktorin nimi on aina sama kuin luokan nimi!
+public Kaupunki(String nimi, int vakiluku) {
+    
+}
+```
 
 Konstruktorin parametrimuuttujat määritellään kuten metodeissa. Nimet voivat olla samat kuin oliomuuttujien nimet, mutta tällöin vaaditaan erityistä huolellisuutta sen suhteen, mitä arvoja kulloinkin käytetään. **Luokassa voi siis olla samannimisiä paikallisia- ja oliomuuttujia**.
 
@@ -292,8 +319,14 @@ public class Kaupunki {
 }
 ```
 
+Luontikäskyssä konstruktoria kutsutaan automaattisesti ja luotu olio voidaan ottaa esimerkiksi talteen muuttujaan:
 
-### Arvojen asettaminen oliomuuttujiin
+```java
+Kaupunki hki = new Kaupunki("Helsinki", 653_867);
+```
+
+
+## Arvojen asettaminen oliomuuttujiin
 
 Oliot voivat käyttää omia muuttujiaan erityisen `this`-viittauksen kautta. Käytettäessä olion omaa `nimi`-muuttujaa, kirjoitamme `this.nimi`. Muuttujaan voitaisiin siis olion omassa konstruktorissa tai metodissa asettaa arvo seuraavasti:
 
@@ -306,14 +339,11 @@ Annettu nimi ei kuitenkaan ole "kovakoodattu" luokan sisään, vaan haluamme luo
 ```java
 public Kaupunki(String nimi, int vakiluku) {
     // annettu nimi ja vakiluku halutaan talteen olion omiin muuttujiin!
+    this.nimi = nimi;
 }
 ```
 
-Parametrina annettu paikallinen ja väliaikainen arvo `nimi` voidaan asettaa pysyvään talteen olion oliomuuttujaan sijoittamalla se näin: 
-
-```java
-this.nimi = nimi; // vasemmalla oliomuuttuja, oikealla paikallinen muuttuja
-```
+Huomaa, että `this.nimi` ja `nimi` ovat eri muuttujat. `this.nimi` on pysyvä oliomuuttuja, kun taas `nimi` on paikallinen parametrimuuttuja.
 
 Kokonaisuutena olion muuttujat ja niiden alustaminen voisivat tapahtua seuraavasti:
 
@@ -333,7 +363,9 @@ public class Kaupunki {
 }
 ```
 
-**`this` viittaa konstruktorin ja metodien sisällä aina siihen olioon, jonka operaatiota ollaan suorittamassa.**
+## This
+
+`this` viittaa konstruktorin ja metodien sisällä aina siihen olioon, jonka operaatiota ollaan suorittamassa.
 
 ```java
 System.out.println("Minun nimeni on " + this.nimi + "!");
@@ -351,26 +383,35 @@ On kuitenkin oikean lopputuloksen kannalta turvallisempaa käyttää `this`-viit
 **Keskeisiä seikkoja olioiden alustamisesta:**
 
 * Olioiden kaikki muuttujat ovat oletuksena aluksi tyhjiä.
-* Niihin voidaan asettaa alkuarvot konstruktorin avulla.
+* Oliomuuttujiin voidaan asettaa alkuarvot konstruktorin avulla.
 * Konstruktori on ikään kuin metodi, jota kutsutaan automaattisesti olioita luotaessa.
 * Konstruktorin nimi on sama kuin luokan nimi ja näkyvyys usein `public`.
 
 
-### Oliometodit
+# Oliometodit
 
 Olemme kirjoittaneet kurssilla toistaiseksi staattisia metodeja. Staattisten metodien otsikossa esiintyy avainsana `static` ja metodeja kutsutaan luokan nimen avulla, esim: `double suurin = Math.max(1.0, 2.0);`.
 
 **Staattiset metodit eivät ole oliokohtaisia, joten niissä ei voida hyödyntää oliomuuttujia**.
 
-Kun haluamme määritellä oliometodeja, jätämme pois `static`-avainsanan. Tällöin metodia ei voida kutsua luokan nimen kautta, vaan sitä kutsutaan jollekin tietylle oliolle. Esimerkiksi `String`-luokan `length()` on oliokohtainen metodi. Merkkijonoluokalla ei ole yleistä pituutta joka voitaisiin laskea yleisellä tasolla `String.length();`, vaan pituus liittyy aina johonkin tiettyyn merkkijonoon: `etunimi.length();`.
+Kun haluamme määritellä oliometodeja, jätämme metodin otsikosta pois `static`-avainsanan. Tällöin metodia ei voida enää kutsua luokan nimen kautta, vaan sitä kutsutaan jollekin **tietylle oliolle**. Esimerkiksi `String`-luokan `length()` on oliokohtainen metodi, jonka suorittamiseksi tarvitaan jokin tietty merkkijono-olio:
 
-Jos haluaisimme esimerkiksi toteuttaa yllä esitellyn `onSuurempiKuin`-metodin, joka palauttaa `true`, jos se kaupunki jonka metodia kutsutaan on suurempi kuin toinen, voidaan se toteuttaa seuraavasti:
+```java
+int pituus = etunimi.length();
+```
+
+Merkkijonoluokalla `String` ei ole yleistä pituutta joka voitaisiin laskea yleisellä tasolla `String.length();`, vaan pituus liittyy aina johonkin tiettyyn merkkijonoon: `etunimi.length();`.
+
+## Oliometodin toteuttaminen
+
+Jos haluaisimme esimerkiksi toteuttaa ylempänä materiaalissa esitellyn `onSuurempiKuin`-metodin, joka palauttaa `true`, jos se kaupunki jonka metodia kutsutaan on suurempi kuin toinen, voidaan se toteuttaa seuraavasti:
 
 ```java
 public boolean onSuurempiKuin(Kaupunki toinen) {
     return this.vakiluku > toinen.vakiluku;
 }
 ```
+
 Tätä metodia kutsuttaisiin olion kautta, eli esim. näin:
 
 ```java
@@ -407,14 +448,13 @@ public class Kaupunki {
 }
 ```
 
-### toString()-metodi ja sen korvaaminen: @Override
+# toString()-metodi ja sen korvaaminen: @Override
 
-Jokaisella luokalla on olemassa `toString`-niminen metodi, jota kutsutaan **automaattisesti**, kun olioista muodostetaan merkkijonoja esimerkiksi tulostamista varten.
+Jokaisella luokalla on olemassa valmis `toString`-niminen metodi, jota kutsutaan **automaattisesti**, kun olioista muodostetaan merkkijonoja esimerkiksi tulostamista varten. Oletuksena kyseinen metodi muodostaa omista olioistasi kuitenkin varsin vaikeaselkoisen merkkijonon:
 
-Jos et kirjoita omaan luokkaasi `toString`-metodia, muodostaa Java olioistasi melko vaikeaselkoisen merkkijonon, esim:
-`Kaupunki@1db9742`.
+    Kaupunki@1db9742
 
-Voit kirjoittaa luokallesi oman merkkijonoesityksen ohittamalla Javan valmiin `toString`-metodin (`@Override`). `toString` ei saa ottaa parametreja ja sen täytyy aina palauttaa merkkijono:
+Vastaavanlaisia merkkijonoesityksiä näimme aikaisemmin yrittäessämme tulostaa taulukoita. Voit kirjoittaa luokallesi oman selkeän merkkijonoesityksen ohittamalla Javan valmiin `toString`-metodin. `toString`-metodi ei saa ottaa parametreja ja sen täytyy aina palauttaa merkkijono:
 
 ```java
 @Override
@@ -423,7 +463,7 @@ public String toString() {
 }
 ```
 
-Kaupunki-luokan `toString`-metodissa voidaan käyttää `this`-viittausta ja muodostaa merkkijono esimerkiksi seuraavasti:
+Metodin yläpuolelle kirjoitettu **annotaatio** `@Override` kertoo Java-kääntäjälle, että metodi korvaa jonkin toisen metodin. `toString`-metodissa voidaan käyttää `this`-viittausta kuten missä tahansa metodissa. Voimme muodostaa kaupunkeja varten merkkijonoesityksen esimerkiksi seuraavasti:
 
 ```java
 @Override
@@ -445,8 +485,7 @@ System.out.println(merkkijono); // Helsinki (653867)
 System.out.println(hki); // Helsinki (653867)
 ```
 
-
-## Koodin jakaminen luokkiin: ohjelmaluokka
+# Koodin jakaminen luokkiin: ohjelmaluokka
 
 Eri luokilla on hyvin erilaiset roolit ohjelmassa. Joidenkin luokkien rooli on mallintaa dataa, kun taas joidenkin tarjota erilaisia operaatioita. Ohjelman eri osien roolien ymmärtämiseksi on tärkeää että emme sekoita yhteen luokkaan ristiriitaisia tai päällekkäisiä rooleja. `Kaupunki`-luokan tarkoitus on mallintaa lopullisessa ohjelmassa olevia satoja tietueita, eikä se liity ohjelman käyttöliittymään tai käynnistämiseen.
 
@@ -467,7 +506,7 @@ public class KaupunkiOhjelma {
 ```
 
 
-## Getterit ja setterit
+# Getterit ja setterit
 
 Koska oliomuuttujat on asetettu yksityisiksi, niitä ei voida suoraan käyttää luokan ulkopuolelta. Mikäli ohjelmassa on tarve käyttää nimeä tai väkilukua luokan ulkopuolelta, luokkaan määritellään näille muuttujille omat "getterit ja setterit", eli metodit, joilla voidaan kysyä nykyinen arvo tai asettaa uusi arvo:
 
@@ -492,7 +531,7 @@ public void setVakiluku(int vakiluku) {
 Lue lisää gettereistä ja settereistä: https://www.w3schools.com/java/java_encapsulation.asp
 
 
-## Null-viittaukset
+# Null-viittaukset
 
 Javassa on erityinen arvo nimeltä `null`, joka on käytännössä tyhjä viittaus. Jos viittaustyyppistä muuttujaa ei ole asetettu viittaamaan mihinkään, siinä on tällöin arvo `null`. `null`-viittausten kanssa tulee olla tarkkana, koska ne saattavat aiheuttaa bugeja ja ohjelman kaatumista:
 
@@ -516,7 +555,8 @@ Tili t = new Tili();
 System.out.println(t.getTiliNumero()); // Tulostaa null, koska tilinumeroa ei ole asetettu!
 ```
 
-### NullPointerException
+## NullPointerException
+
 `NullPointerException` on ajonaikainen poikkeus, joka on seurausta siitä, että tyhjää arvoa (`null`) käytetään kuin se olisi olio. **Aina kun on mahdollista, että jokin arvo on alustamatta, eli `null`, tulee se tarkastaa ennen arvon käyttämistä.**
 
 ```java
@@ -527,7 +567,7 @@ System.out.println(numero.toUpperCase()); // kaatuu NullPointerException-poikkeu
 **Tämän Tili-esimerkin tapauksessa olisi hyvä idea toteuttaa konstruktori, jonka avulla tilinumero olisi pakko antaa heti oliota luotaessa.**
 
 
-### Null-arvon tarkastaminen
+## Null-arvon tarkastaminen
 
 Yllä oleva ongelma `toUpperCase()`-metodikutsun kutsumisessa `null`-arvolle voidaan välttää esim. seuraavasti:
 
@@ -541,9 +581,8 @@ if (numero == null) {
 }
 ```
 
-----
 
-## Synonyymejä
+# Synonyymejä
 
 * **Oliot, objektit, ilmentymät, instanssit**
 
@@ -551,7 +590,7 @@ if (numero == null) {
     
     Kontekstista ja lähteestä riippuen käytetään joskus eri termejä.
 
-* **Oliomuuttujat, instanssimuuttujat, ilmentymämuuttujat, jäsenmuuttujat, kentät, attribuutit**
+* **Oliomuuttujat, attribuutit, instanssimuuttujat, ilmentymämuuttujat, jäsenmuuttujat, kentät**
 
     Luokassa määritellyille olioiden muuttujille on myös lukuisia nimiä. 
 
@@ -559,7 +598,7 @@ if (numero == null) {
 
 ---
 
-## Esimerkki: yhteystiedot
+# Yhteystieto-esimerkki
 
 Kuvitteellisessa sovelluksessa käsitellään yhteystietoja, joihin kuuluvat henkilön nimi, puhelinnumero ja sähköpostiosoite. Tietty nimi, numero ja e-mail liittyvät aina yhteen henkilöön, ja ohjelmassa käsitellään lukuisten henkilöiden yhteystietoja.
 
@@ -603,7 +642,7 @@ Yhteystieto matti = new Yhteystieto("Matti", "matti@example.com", "04055512345")
 Yhteystieto maija = new Yhteystieto("Maija", "maija@example.com", "05055598765");
 ```
 
-### Yhteystieto-luokan toteutus
+## Yhteystieto-luokan toteutus
 
 ```java
 
@@ -630,7 +669,7 @@ Yhteystieto matti = new Yhteystieto("Matti Meikäläinen", "matti@example.com", 
 Yhteystieto maija = new Yhteystieto("Maija Meikäläinen", "maija@example.com", "05055598765");
 ```
 
-### Oliomuuttujien käyttäminen
+## Oliomuuttujien käyttäminen
 
 ```java
 public class Yhteystieto {
@@ -657,7 +696,7 @@ public class Yhteystieto {
 }
 ```
 
-### Oliometodin kutsuminen
+#" Oliometodin kutsuminen
 
 Oliometodeita kutsutaan viittauksen, eli esim. muuttujan kautta. Metodi suoritetaan "sille oliolle", jonka kautta sitä kutsutaan. Parametriarvot annetaan kuten staattisia metodeita kutsuttaessa:
 
@@ -695,7 +734,7 @@ class Yhteystieto {
 
 ---
 
-### Datan kapselointi (encapsulation)
+# Datan kapselointi (encapsulation)
 
 Olioiden attribuuttien muuttamista halutaan hyvin usein rajoittaa:
 
@@ -724,7 +763,7 @@ class Yhteystieto {
 Esimerkin säännöllinen lauseke sähköpostin tarkastamiseksi ei ole täydellinen, mutta se on riittävän yksinkertainen tähän esimerkkiin.
 
 
-## Viittauksen kopioiminen != olion kopioiminen
+# Viittauksen kopioiminen != olion kopioiminen
 
 Olioita ei voi kopioida sijoittamalla niitä uusiin muuttujiin. Tällöin viitataan vain samaan olioon usealla eri muuttujalla:
 
