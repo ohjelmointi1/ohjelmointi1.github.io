@@ -259,18 +259,6 @@ s           | Sekunti   | 45
 \* Samaa merkkiä voidaan toistaa, jolloin esim. päivä (dd), kuukausi (MM), tunti (HH) ja minuutti (mm) saadaan aina kahden numeron pituisena. Tarvittaessa luvun edessä esitetään tällöin nolla.
 
 
-## Ideoita oppitunnille
-
-Kirjoita ohjelma, joka pyytää käyttäjältä päivämäärän muodossa `pp.kk.vvvv`, ja kertoo kuinka pitkä aika kuluvan päivän ja annetun päivän välillä on.
-
-Tarvitset todennäköisesti nämä luokat:
-
-* Scanner
-* LocalDate
-* DateTimeFormatter (d.M.yyyy)
-* Period tai ChronoUnit.DAYS
-
-
 
 # Java-ohjelman kääntäminen ja suorittaminen komentoriviltä
 
@@ -336,26 +324,32 @@ Mikäli käytät Windowsin komentoriviä tai PowerShell:iä, voit törmätä ong
 
 Vaihdettuasi merkistön kokeile suorittaa komentoja uudelleen. Lue tarvittaessa lisävinkkejä [StackOverflow](https://superuser.com/questions/269818/change-default-code-page-of-windows-console-to-utf-8):sta.
 
-<!--
 
-Oppitunnilla käytettiin aikaisemmin kirjoitettua esimerkkiohjelmaa `viikko3/listat/th/KaupungitVerkosta.java`, joka käännettiin `javac`-komennolla komentorivillä class-tiedostoksi:
+# Tehtäväideoita oppitunnille
 
-```
-$ javac viikko3/listat/th/KaupungitVerkosta.java
-```
+## Joululaskuri
 
-Edellä käytetty komento kääntää Java-lähdekoodit suoritettavaksi tavukoodiksi `viikko3/listat/th/KaupungitVerkosta.class`-tiedostoon. Tämä tiedosto voidaan suorittaa `java`-komennolla seuraavasti:
+Kirjoitetaan ohjelma, joka laskee kuinka monta yötä on jouluun. Ohjelma voi tarkistaa myös tapauksen, jossa joulu on jo mennyt, jolloin lasketaan päivät seuraavan vuoden jouluun.
 
-```shell
-$ java viikko3.listat.th.KaupungitVerkosta
-```
+## Pyhäpäivälaskuri
 
-Huomaa, että lähdekoodia käännettäessä annetaan tiedoston polku ja tiedostopääte (.java). Vaikka käännettäessä ja suoritettessa molemmissa esiintyy pakettien ja luokan nimet, on eri komennoissa niillä eri merkitys. Ohjelmaa suoritettaessa kyse ei ole enää tiedoston polusta ja nimestä, vaan Java-paketeista ja Java-luokan nimestä. Tämän vuoksi myöskään `java`-komennolle ei anneta tiedostopäätettä.
+Kirjoitetaan ohjelma, joka selvittää juhannuksen sekä muut ajankohdaltaan vaihtelevat juhlapyhät tiettynä vuonna. Toteutetaan ohjelma siten, että muodostettu aineisto voidaan tuoda Google Calendar -sovellukseen import-toiminnolla.
 
-Edellä esitetyt komennot tulee antaa Java-pakettien juurihakemistossa, eli esimerkkiprojektissa `src`-hakemistossa.
--->
+* [Suomen juhlapäivät (Wikipedia)](https://fi.wikipedia.org/wiki/Suomen_juhlap%C3%A4iv%C3%A4t)
+* [Pääsiäisen laskeminen (Wikipedia)](https://fi.wikipedia.org/wiki/P%C3%A4%C3%A4si%C3%A4isen_laskeminen)
 
----
+## Ikälaskuri
+
+Kirjoita ohjelma, joka pyytää käyttäjältä päivämäärän muodossa `pp.kk.vvvv`, ja kertoo kuinka pitkä aika kuluvan päivän ja annetun päivän välillä on.
+
+Tarvitset todennäköisesti nämä luokat:
+
+* Scanner
+* LocalDate
+* DateTimeFormatter (d.M.yyyy)
+* Period tai ChronoUnit.DAYS
+
+
 
 Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
 
