@@ -215,6 +215,10 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
                 Ohjelman paketointi ja suorittaminen Eclipsen ulkopuolella<br />
                 Komentoriviparametrit</strong><br />
                 <a href="wiki/Ajan-kasittely-ja-ohjelman-kaantaminen">📝 Muistiinpanot</a><br />
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko04/aika/">📁 Oppitunnin esimerkkikoodit</a><br /><br />
+                <a href="https://web.microsoftstream.com/video/848a270b-1d74-4493-8d13-17db6b3a656a">📼 Javan aikaluokat ja niiden käyttäminen</a><br />
+                <a href="https://web.microsoftstream.com/video/b6e65db2-c071-4db4-aee9-62d7f6e34066">📼 Aikaan liittyvä ohjelmalogiikka: myöhästymismaksut ja juhlapyhät</a><br />
+                <a href="https://web.microsoftstream.com/video/8648dc7e-4195-4bea-b872-86dcd22c76af">📼 ohjelman kääntäminen, paketointi ja suorittaminen</a><br />
                 <!--<a href="src/viikko4/aika/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <strong>Oppitunnin videot:</strong><br />

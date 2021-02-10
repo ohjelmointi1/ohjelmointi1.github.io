@@ -11,6 +11,12 @@ Ajan käsittelyn lisäksi tutustumme siihen, miten Java-ohjelmia voidaan suoritt
 <div class="js-toc"></div>
 
 
+# Video: Javan aikaluokat ja niiden käyttäminen
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/848a270b-1d74-4493-8d13-17db6b3a656a?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+[MS Stream: Javan aikaluokat ja niiden käyttäminen](https://web.microsoftstream.com/video/848a270b-1d74-4493-8d13-17db6b3a656a)
+
 # java.time.*
 
 Nykyaikainen Javan standardikirjasto (Java 8+) käsittelee aikaa johdonmukaisesti ja selkeästi. Aikaisemmissa versioissa ajan käsittely on ollut ajoittain sekavaa ja virhealtista. Kuukausien numerointi on esimerkiksi ajoittain alkanut nollasta, toisinaan yhdestä.
@@ -211,6 +217,12 @@ LocalDate tanaan = LocalDate.now();
 long paiviaJouluun = ChronoUnit.DAYS.between(joulu, tanaan);
 ```
 
+# Oppituntitallenne: Aikaan liittyvä ohjelmalogiikka, myöhästymismaksut ja juhlapyhät
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/b6e65db2-c071-4db4-aee9-62d7f6e34066?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+[Aikaan liittyvä ohjelmalogiikka: myöhästymismaksut ja juhlapyhät](https://web.microsoftstream.com/video/b6e65db2-c071-4db4-aee9-62d7f6e34066)
+
 # Ajan merkkijonomuutokset
 
 Aikaa on usein tarve esittää merkkijonoina käyttäjille. Oletuksena Javan aikaluokat hyödyntävät ISO-standardin mukaisia esityksiä, jotka ovat helposti koneluettavissa, mutta eivät aivan vastaa arjessa usein käytettyjä esitysmuotoja.
@@ -266,6 +278,11 @@ Tämän viikon viimeisenä aiheena perehdymme siihen, miten Java-ohjelmia voidaa
 
 Jos toteuttaisimme ohjelmallemme graafisen käyttöliittymän, sen suorittaminen olisi entistä suoraviivaisempaa. Toistaiseksi kuitenkin työskentelemme tekstikäyttöliittymän asettamissa rajoissa.
 
+## Oppituntitallenne: ohjelman kääntäminen, paketointi ja suorittaminen
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/8648dc7e-4195-4bea-b872-86dcd22c76af?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+[Ohjelman kääntäminen, paketointi ja suorittaminen]()
 
 ## Lähdekoodin kääntäminen tavukoodiksi
 
