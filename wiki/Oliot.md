@@ -96,7 +96,7 @@ Luokan sisäistä toteutusta päivämäärien vertailemiseksi ei onneksi tarvits
 Vastaavasti, jos haluamme laskea päivämäärän esimerkiksi 31 päivää minkä tahansa päivämäärän jälkeen, joudumme ratkaisussamme käsittelemään eri pituisia kuukausia, karkausvuosia ja vuodenvaihteen yli meneviä aikavälejä. On erittäin loogista, että tällaiset usein tarvittavat operaatiot paketoidaan omaksi kokonaisuudeksi, eli luokaksi, joka tarjoaa yksinkertaisen rajapinnan monimutkaisten operaatioiden suorittamiseksi:
 
 ```java
-LocalDate uusiOlio = olio1.plusDays(31);
+LocalDate uusiPvm = pvm.plusDays(31);
 ```
 
 Teknisten yksityiskohtien piilottamista ja operaatioiden käsitteellistämistä kutsutaan **abstraktoinniksi**, ja se on yksi olio-ohjelmoinnin peruspilareista.
@@ -163,9 +163,16 @@ Voimme myös toteuttaa luokkiin operaatioita, jotka abstraktoivat suoritettavia 
 Kaupunki hki = new Kaupunki("Helsinki", 653_867);
 Kaupunki esp = new Kaupunki("Espoo", 289_413);
 
-if (hki.onSuurempiKuin(esp)) {
+if (hki.vakilukuSuurempiKuin(esp) == true) {
     System.out.println("Vertailu tehtiin olion metodilla!");
 }
+```
+
+Yllä olevassa esimerkissä `vakilukuSuurempiKuin`-metodi palauttaa totuusarvon, jota tätä arvoa ei välttämättä tarvitse enää vertailla `true`-arvoon:
+
+```diff
+- if (hki.vakilukuSuurempiKuin(esp) == true) {
++ if (hki.vakilukuSuurempiKuin(esp)) {
 ```
 
 # Oman luokan määrittely
@@ -404,10 +411,10 @@ Merkkijonoluokalla `String` ei ole yleistä pituutta joka voitaisiin laskea ylei
 
 ## Oliometodin toteuttaminen
 
-Jos haluaisimme esimerkiksi toteuttaa ylempänä materiaalissa esitellyn `onSuurempiKuin`-metodin, joka palauttaa `true`, jos se kaupunki jonka metodia kutsutaan on suurempi kuin toinen, voidaan se toteuttaa seuraavasti:
+Jos haluaisimme esimerkiksi toteuttaa ylempänä materiaalissa esitellyn `vakilukuSuurempiKuin`-metodin, joka palauttaa `true`, jos se kaupunki jonka metodia kutsutaan on suurempi kuin toinen, voidaan se toteuttaa seuraavasti:
 
 ```java
-public boolean onSuurempiKuin(Kaupunki toinen) {
+public boolean vakilukuSuurempiKuin(Kaupunki toinen) {
     return this.vakiluku > toinen.vakiluku;
 }
 ```
@@ -418,7 +425,7 @@ Tätä metodia kutsuttaisiin olion kautta, eli esim. näin:
 Kaupunki hki = new Kaupunki("Helsinki", 653_867);
 Kaupunki esp = new Kaupunki("Espoo", 289_413);
 
-if (hki.onSuurempiKuin(esp)) {
+if (hki.vakilukuSuurempiKuin(esp)) {
     System.out.println("Eka kaupunki on suurempi");
 }
 ```
@@ -441,7 +448,7 @@ public class Kaupunki {
 
     }
 
-    public boolean onSuurempiKuin(Kaupunki toinen) {
+    public boolean vakilukuSuurempiKuin(Kaupunki toinen) {
         return this.vakiluku > toinen.vakiluku;
     }
 
@@ -498,7 +505,7 @@ public class KaupunkiOhjelma {
         Kaupunki hki = new Kaupunki("Helsinki", 653_867);
         Kaupunki esp = new Kaupunki("Espoo", 289_413);
 
-        if (hki.onSuurempiKuin(esp)) {
+        if (hki.vakilukuSuurempiKuin(esp)) {
             System.out.println("Eka kaupunki on suurempi");
         }
     }
@@ -550,28 +557,35 @@ public class Tili {
 }
 ```
 
+Vaikka luokassa ei ole konstruktoria, siitä voidaan silti luoda olioita. Tällöin olion luontikäskyssä jätetään konstruktoriparametrit antamatta:
+
 ```java
 Tili t = new Tili();
 System.out.println(t.getTiliNumero()); // Tulostaa null, koska tilinumeroa ei ole asetettu!
 ```
+
+Koska `tilinumero`-muuttujaa ei aseteta muuttujaa määriteltäessä eikä konstruktorissa, on se yllä olevassa esimerkissä tyhjä, eli `null`.
 
 ## NullPointerException
 
 `NullPointerException` on ajonaikainen poikkeus, joka on seurausta siitä, että tyhjää arvoa (`null`) käytetään kuin se olisi olio. **Aina kun on mahdollista, että jokin arvo on alustamatta, eli `null`, tulee se tarkastaa ennen arvon käyttämistä.**
 
 ```java
-String numero = t.getTiliNumero();
+Tili t = new Tili();
+String numero = t.getTiliNumero(); // tilinumeroa ei ole asetettu, joten se on null
+
 System.out.println(numero.toUpperCase()); // kaatuu NullPointerException-poikkeukseen, jos tilinumeroa ei ole asetettu
 ```
 
 **Tämän Tili-esimerkin tapauksessa olisi hyvä idea toteuttaa konstruktori, jonka avulla tilinumero olisi pakko antaa heti oliota luotaessa.**
 
 
-## Null-arvon tarkastaminen
+## Null-arvon tarkistaminen
 
 Yllä oleva ongelma `toUpperCase()`-metodikutsun kutsumisessa `null`-arvolle voidaan välttää esim. seuraavasti:
 
 ```java
+Tili t = new Tili();
 String numero = t.getTiliNumero();
 
 if (numero == null) {
@@ -630,22 +644,13 @@ Data koostuu selvästi keskenään rakenteellisesti samanlaisista tietoalkioista
 Tietojen tallentaminen erillisissä muuttujissa olisi hankalaa ja virhealtista. Sen sijaan määritellään luokka `Yhteystieto` ja jokaista henkilöä varten luodaan olio eli ilmentymä tästä luokasta:
 
 ```java
-String nimi1 = "Matti";
-String email1 = "matti@example.com";
-String puhelin1 = "04055512345";
-
-String nimi2 = "Maija";
-String email2 = "maija@example.com";
-String puhelin2 = "05055598765";
-
-Yhteystieto matti = new Yhteystieto("Matti", "matti@example.com", "04055512345");
-Yhteystieto maija = new Yhteystieto("Maija", "maija@example.com", "05055598765");
+Yhteystieto lindsey = new Yhteystieto("Lindsey", "ldrillingcourt0@so-net.ne.jp", "132-414-7730");
+Yhteystieto zilvia = new Yhteystieto("Zilvia", "zzamboniari1@dell.com", "445-276-2785");
 ```
 
 ## Yhteystieto-luokan toteutus
 
 ```java
-
 public class Yhteystieto {
     private String nimi;
     private String email;
@@ -658,15 +663,13 @@ public class Yhteystieto {
         this.puhelin = puhelin;
     }
 }
-
 ```
 
 Kun luokkaan on määritetty konstruktori, luokan olioita luotaessa annetaan parametreina samat arvot, kuin konstruktoriin on määritelty:
 
 ```java
-Yhteystieto matti = new Yhteystieto("Matti Meikäläinen", "matti@example.com", "04055512345");
-
-Yhteystieto maija = new Yhteystieto("Maija Meikäläinen", "maija@example.com", "05055598765");
+Yhteystieto lindsey = new Yhteystieto("Lindsey", "ldrillingcourt0@so-net.ne.jp", "132-414-7730");
+Yhteystieto zilvia = new Yhteystieto("Zilvia", "zzamboniari1@dell.com", "445-276-2785");
 ```
 
 ## Oliomuuttujien käyttäminen
@@ -696,7 +699,7 @@ public class Yhteystieto {
 }
 ```
 
-#" Oliometodin kutsuminen
+## Oliometodin kutsuminen
 
 Oliometodeita kutsutaan viittauksen, eli esim. muuttujan kautta. Metodi suoritetaan "sille oliolle", jonka kautta sitä kutsutaan. Parametriarvot annetaan kuten staattisia metodeita kutsuttaessa:
 
@@ -716,14 +719,14 @@ matti.asetaEmail("uusi@example.com");
 matti.tulostaNimi();
 ```
 
-### toString()-metodi ja sen ohittaminen: @Override
+## toString()-metodi ja sen ohittaminen: @Override
 
-Katso kuvaus toString-metodin toteuttamisesta ylempää tästä dokumentista.
+Katso kuvaus `toString`-metodin toteuttamisesta ylempää tästä dokumentista. Yhteystieto-luokan merkkijonoesityksessä voisimme käyttää esimerkiksi nimeä ja sähköpostiosoitetta seuraavasti:
 
 ```java
 class Yhteystieto {
 
-    // muuttujat, konstruktori ja muut metodit...
+    // ...muuttujat, konstruktori ja muut metodit...
 
     @Override
     public String toString() {
@@ -732,7 +735,23 @@ class Yhteystieto {
 }
 ```
 
----
+Nyt oliota tulostettaessa saamme hieman loogisemman merkkijonoesityksen:
+
+```java
+Yhteystieto lindsey = new Yhteystieto("Lindsey", "ldrillingcourt0@so-net.ne.jp", "132-414-7730");
+
+System.out.println(lindsey); // "Lindsey (ldrillingcourt0@so-net.ne.jp)"
+```
+
+# Oliot listoilla ja listoja olioissa
+
+Aiheen toisella oppitunnilla käsittelemme omien luokkiemme käyttämistä listoilla, sekä listojen määrittelemistä olioiden oliomuuttujiksi.
+
+```java
+List<Kaupunki> uusimaa = new ArrayList<Kaupunki>();
+List<Yhteystieto> kontaktit = new ArrayList<Yhteystieto>();
+```
+
 
 # Datan kapselointi (encapsulation)
 
