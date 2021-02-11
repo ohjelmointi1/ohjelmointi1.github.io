@@ -248,9 +248,30 @@ Yllä käytettyjen muuttujien tyyppi on `String`, eli niihin voidaan asettaa ain
 Muuttuja voidaan myös määritellä "vakioksi", jolloin siihen asetettavaa arvoa ei voida enää korvata toisella arvolla. Tämä tehdään lisäämällä sana `final` muuttujan määrittelyn alkuun:
 
 ```java
-final int PAIVIA_VIIKOSSA = 7;
+public static void main(String[] args) {
+    final int LAINA_AIKA = 28;
+}
 ```
+
 Vakiot kirjoitetaan pääasiassa isoilla kirjaimilla kuten yllä. Tässä tapauksessa muuttujan määrittely vakioksi voi olla perusteltua, koska päivien määrä viikossa ei saa muuttua ohjelman suorituksen aikana.
+
+## Staattiset vakiot (edistynyttä sisältöä)
+
+Jos samaa vakiota on tarpeellista käyttää saman luokan sisällä useissa metodeissa tai vaihtoehtoisesti useista luokista, ne voidaan määritellä myös `main`-metodin ulkopuolelle. Tällöin niiden eteen tulee kirjoittaa avainsana `static`:
+
+```java
+public class Myohastymismaksut {
+    static final int LAINA_AIKA = 28;
+    static final double MYOHASTYMISMAKSU_PV = 0.2;
+    static final int MYOHASTYMISMAKSU_MAX = 6;
+
+    public static void main(String[] args) {
+        // staattiset vakiot ovat käytettävissä täällä!
+    }
+}
+```
+
+Palaamme `static`-avainsanaan ja useiden metodien kirjoittamiseen tarkemmin myöhemmin tällä kurssilla.
 
 ## Muuttujien nimeäminen
 
