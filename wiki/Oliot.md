@@ -4,7 +4,7 @@
 
 Olio-ohjelmointi on yleinen ohjelmointiparadigma, jota hyödynnetään lukuisissa ohjelmointikielissä. Myös Java on olio-ohjelmointikieli, vaikka emme toistaiseksi ole omissa ohjelmissamme soveltaneet juurikaan olio-ohjelmointia.
 
-Olio-ohjelmoinnin avulla voimme jäsentää ohjelmamme toiminnallisuuden ja ohjelmassa esiintyvän datan loogisiksi itsenäisiksi kokonaisuuksiksi, joiden avulla pystymme ratkaisemaan ongelmia. **Olio-ohjelmoinnissa on siis samalla kyse tiedon mallintamisesta että logiikan mallintamisesta.** 
+Olio-ohjelmoinnin avulla voimme jäsentää ohjelmamme toiminnallisuuden ja ohjelmassa esiintyvän datan loogisiksi itsenäisiksi kokonaisuuksiksi, joiden avulla pystymme ratkaisemaan ongelmia. **Olio-ohjelmoinnissa on siis samalla kyse sekä datan mallintamisesta, että logiikan mallintamisesta.** 
 
 
 **Sisällysluettelo**
@@ -104,7 +104,7 @@ Teknisten yksityiskohtien piilottamista ja operaatioiden käsitteellistämistä 
 
 # Keskeiset käsitteet: luokka ja olio
 
-Lähdekoodin tasolla jokaista luokkaa kohden on tyypillisesti oma lähdekooditiedostonsa. Luokat toimivat Javassa arvojen tyyppeinä, eli niiden nimet esiintyvät mm. muuttujien nimissä sekä metodien parametri- ja paluuarvojen typpeinä. Yhdestä luokasta voidaan luoda rajoittamattoman määrän olioita, jotka ovat toisistaan riippumattomia, mutta joilla on samat metodit ja muut ominaisuudet.
+Lähdekoodin tasolla jokaista luokkaa kohden on tyypillisesti oma lähdekooditiedostonsa. Luokat toimivat Javassa arvojen tyyppeinä, eli niiden nimet esiintyvät mm. muuttujien nimissä sekä metodien parametri- ja paluuarvojen tyyppeinä. Yhdestä luokasta voidaan luoda rajoittamattoman määrän olioita, jotka ovat toisistaan riippumattomia, mutta joilla on samat metodit ja muut ominaisuudet.
 
 Esimerkiksi `LocalDate`-luokka määrittelee kaikille sen olioille yhteiset ominaisuudet ja yhteiset toiminnallisuudet. Voimme siis kutsua samoja metodeja mille tahansa päivämääräolioille. Jokainen erillinen päivämäärä on kuitenkin toisistaan riippumaton, mutta rakenteeltaan samanlainen. 
 
@@ -256,7 +256,7 @@ public class Kaupunki {
 }
 ```
 
-Tätä `laskeVaestontiheys`-metodia voidaan käyttää nyt kaikkien `Kaupunki`-olioden kautta:
+Tätä `laskeVaestontiheys`-metodia voidaan käyttää nyt kaikkien `Kaupunki`-olioiden kautta:
 
 ```java
 System.out.println(hki.laskeVaestontiheys());
@@ -300,7 +300,7 @@ Olioita luodaan `new`-avainsanalla. Joissain tapauksissa olemme luoneet olioita 
 Kaupunki uusiOlio = new Kaupunki("Helsinki", 653_867);
 ```
 
-Edellä oleva luontikäsky käsitellään Java-luokassa **konstruktorin** avulla. Konstruktori on ikään kuin metodi, jota kutsutaan automaattisesti olioita luotaessa. Luokan lähdekoodissa konstruktorin nimi on sama kuin luokan nimi, eli tässä tapauksessa `Kaupunki`, ja sen näkyvyys on tyypillisesti `public`:
+Edellä oleva luontikäsky käsitellään Java-luokassa **konstruktorin** avulla. Konstruktori on ikään kuin metodi, jota kutsutaan automaattisesti olioita luotaessa. Luokan lähdekoodissa konstruktorin nimi on sama kuin luokan nimi, eli tässä tapauksessa `Kaupunki`, ja sen näkyvyys on tyypillisesti julkinen, eli `public`:
 
 ```java
 // konstruktorin nimi on aina sama kuin luokan nimi!
@@ -494,7 +494,7 @@ System.out.println(hki); // Helsinki (653867)
 
 # Koodin jakaminen luokkiin: ohjelmaluokka
 
-Eri luokilla on hyvin erilaiset roolit ohjelmassa. Joidenkin luokkien rooli on mallintaa dataa, kun taas joidenkin tarjota erilaisia operaatioita. Ohjelman eri osien roolien ymmärtämiseksi on tärkeää että emme sekoita yhteen luokkaan ristiriitaisia tai päällekkäisiä rooleja. `Kaupunki`-luokan tarkoitus on mallintaa lopullisessa ohjelmassa olevia satoja tietueita, eikä se liity ohjelman käyttöliittymään tai käynnistämiseen.
+Eri luokilla on hyvin erilaiset roolit ohjelmassa. Joidenkin luokkien rooli on mallintaa dataa, kun taas joidenkin tarjota erilaisia operaatioita. Ohjelman eri osien roolien ymmärtämiseksi on tärkeää, että emme sekoita yhteen luokkaan ristiriitaisia tai päällekkäisiä rooleja. `Kaupunki`-luokan tarkoitus on mallintaa lopullisessa ohjelmassa olevia satoja tietueita, eikä se liity ohjelman käyttöliittymään tai käynnistämiseen.
 
 Olisikin luokan tarkoituksen näkökulmasta ristiriitaista, että `Kaupunki`-luokkaa käytettäisiin myös ns. pääohjelmana, joka käynnistää käyttöliittymän tai tekee muita suoritukseen liittyviä operaatioita. Tätä varten on hyvä tehdä oma luokkansa, jolla voidaan käyttää `Kaupunki`-olioita esim. seuraavasti:
 
