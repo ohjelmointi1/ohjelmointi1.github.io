@@ -237,7 +237,33 @@ System.out.println(esp.vakiluku);
 
 Huom! Tulemme myöhemmin oppimateriaalissa rajaamaan muuttujien näkyvyyttä, jolloin niiden käyttäminen ei onnistu luokan ulkopuolelta. Toistaiseksi muuttujat voidaan kuitenkin pitää oletusnäkyvyydellä.
 
+
 # Oliometodit
+
+Olemme kirjoittaneet kurssilla toistaiseksi staattisia metodeja. Staattisten metodien otsikossa esiintyy avainsana `static` ja metodeja kutsutaan luokan nimen avulla, esim: `double suurin = Math.max(1.0, 2.0);`.
+
+**Staattiset metodit eivät ole oliokohtaisia, joten niissä ei voida hyödyntää oliomuuttujia**.
+
+Kun haluamme määritellä oliometodeja, jätämme metodin otsikosta pois `static`-avainsanan. Tällöin metodia ei voida enää kutsua luokan nimen kautta, vaan sitä kutsutaan jollekin **tietylle oliolle**. Esimerkiksi `String`-luokan `length()` on oliokohtainen metodi, jonka suorittamiseksi tarvitaan jokin tietty merkkijono-olio:
+
+```java
+int pituus = etunimi.length();
+```
+
+Merkkijonoluokalla `String` ei ole yleistä pituutta joka voitaisiin laskea yleisellä tasolla `String.length();`, vaan pituus liittyy aina johonkin tiettyyn merkkijonoon: `etunimi.length();`.
+
+Tutustutaan seuraavaksi siihen, miten voimme toteuttaa omalle luokallemme uuden metodin, joka laskee yksittäisen kaupungin väestöntiheyden sen väkiluvun ja pinta-alan avulla:
+
+```java
+Kaupunki helsinki = new Kaupunki();
+helsinki.nimi = "Helsinki";
+helsinki.vakiluku = 653_867;
+helsinki.pintaAla = 214.25;
+
+System.out.println(helsinki.laskeVaestontiheys());
+```
+
+## Oliometodin toteuttaminen
 
 Luokalle voidaan myös määritellä oliokohtaisia metodeja, jotka esimerkiksi laskevat väkiluvun ja pinta-alan perusteella kaupungin väestöntiheyden. Oliokohtaisiin metodeihin ei kirjoiteta `static`-avainsanaa ja ne ovat käytettävissä ainoastaan tietyn olion kontekstissa:
 
@@ -269,6 +295,47 @@ System.out.println(hki.laskeVaestontiheys());
 System.out.println(esp.laskeVaestontiheys());
 ```
 
+## Olio parametrimuuttujassa
+
+Jos haluaisimme esimerkiksi toteuttaa ylempänä materiaalissa esitellyn `vakilukuSuurempiKuin`-metodin, joka palauttaa `true`, jos se kaupunki jonka metodia kutsutaan on suurempi kuin toinen, voidaan se toteuttaa seuraavasti:
+
+```java
+public boolean vakilukuSuurempiKuin(Kaupunki toinen) {
+    return this.vakiluku > toinen.vakiluku;
+}
+```
+
+Metodin otsikko on tuttu aikaisemmilta oppitunneilta. Metodi palauttaa totuusarvon (`boolean`) ja se saa parametrinaan `Kaupunki`-olion, jota käytetään `toinen`-muuttujan kautta. Metodin sisällä se olio, jonka kautta metodia kutsuttiin on käytettävissä erityisen `this`-muuttujan kautta: `this.vakiluku`.
+
+Parametrina saadun olion väkiluku saadaan käyttöön `toinen`-muuttujan avulla, eli `toinen.vakiluku`. Itse vertailu on tavallinen "suurempi kuin" vertailuoperaatio, jonka paluuarvo palautetaan metodista.
+
+Tätä metodia kutsutaan aina jonkin olion kautta, eli esim. näin:
+
+```java
+if (hki.vakilukuSuurempiKuin(esp)) {
+    System.out.println("Eka kaupunki on suurempi");
+}
+```
+
+Tämän metodin lisäämisen jälkeen luokka näyttää tältä:
+
+```java
+public class Kaupunki {
+
+
+    String nimi;
+    int vakiluku;
+    double pintaAla;
+
+    public double laskeVaestontiheys() {
+        return this.vakiluku / this.pintaAla;
+    }
+
+    public boolean vakilukuSuurempiKuin(Kaupunki toinen) {
+        return this.vakiluku > toinen.vakiluku;
+    }
+}
+```
 
 ## Private-oliomuuttujat
 
@@ -401,65 +468,6 @@ On kuitenkin oikean lopputuloksen kannalta turvallisempaa käyttää `this`-viit
 * Konstruktorin nimi on sama kuin luokan nimi ja näkyvyys usein `public`.
 
 
-# Oliometodit
-
-Olemme kirjoittaneet kurssilla toistaiseksi staattisia metodeja. Staattisten metodien otsikossa esiintyy avainsana `static` ja metodeja kutsutaan luokan nimen avulla, esim: `double suurin = Math.max(1.0, 2.0);`.
-
-**Staattiset metodit eivät ole oliokohtaisia, joten niissä ei voida hyödyntää oliomuuttujia**.
-
-Kun haluamme määritellä oliometodeja, jätämme metodin otsikosta pois `static`-avainsanan. Tällöin metodia ei voida enää kutsua luokan nimen kautta, vaan sitä kutsutaan jollekin **tietylle oliolle**. Esimerkiksi `String`-luokan `length()` on oliokohtainen metodi, jonka suorittamiseksi tarvitaan jokin tietty merkkijono-olio:
-
-```java
-int pituus = etunimi.length();
-```
-
-Merkkijonoluokalla `String` ei ole yleistä pituutta joka voitaisiin laskea yleisellä tasolla `String.length();`, vaan pituus liittyy aina johonkin tiettyyn merkkijonoon: `etunimi.length();`.
-
-## Oliometodin toteuttaminen
-
-Jos haluaisimme esimerkiksi toteuttaa ylempänä materiaalissa esitellyn `vakilukuSuurempiKuin`-metodin, joka palauttaa `true`, jos se kaupunki jonka metodia kutsutaan on suurempi kuin toinen, voidaan se toteuttaa seuraavasti:
-
-```java
-public boolean vakilukuSuurempiKuin(Kaupunki toinen) {
-    return this.vakiluku > toinen.vakiluku;
-}
-```
-
-Tätä metodia kutsuttaisiin olion kautta, eli esim. näin:
-
-```java
-Kaupunki hki = new Kaupunki("Helsinki", 653_867);
-Kaupunki esp = new Kaupunki("Espoo", 289_413);
-
-if (hki.vakilukuSuurempiKuin(esp)) {
-    System.out.println("Eka kaupunki on suurempi");
-}
-```
-
-Metodin otsikko on tuttu aikaisemmilta oppitunneilta. Metodi palauttaa totuusarvon (`boolean`) ja se saa parametrinaan `Kaupunki`-olion, jota käytetään `toinen`-muuttujan kautta. Metodin sisällä se olio, jonka kautta metodia kutsuttiin on käytettävissä erityisen `this`-muuttujan kautta: `this.vakiluku`.
-
-Parametrina saadun olion väkiluku saadaan käyttöön `toinen`-muuttujan avulla, eli `toinen.vakiluku`. Itse vertailu on tavallinen "suurempi kuin" vertailuoperaatio, jonka paluuarvo palautetaan metodista.
-
-```java
-// Kaupunki.java
-
-public class Kaupunki {
-
-    private String nimi;
-    private int vakiluku;
-
-    public Kaupunki(String nimi, int vakiluku) {
-        this.nimi = nimi;
-        this.vakiluku = vakiluku;
-
-    }
-
-    public boolean vakilukuSuurempiKuin(Kaupunki toinen) {
-        return this.vakiluku > toinen.vakiluku;
-    }
-
-}
-```
 
 # toString()-metodi ja sen korvaaminen: @Override
 
