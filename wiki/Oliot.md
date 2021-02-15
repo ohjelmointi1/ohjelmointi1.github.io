@@ -40,13 +40,19 @@ LocalDate viimeinen = LocalDate.of(2030, 12, 31);
 
 ```java
 // Päivämäärät primitiiveinä, epäkäytännöllistä:
-int vuosi1 = 2020;
-int kuukausi1 = 1;
-int paiva1 = 1;
+int vuosi1 = 2021;
+int kuukausi1 = 2;
+int paiva1 = 15;
 
 int vuosi2 = 2030;
 int kuukausi2 = 12;
 int paiva2 = 31;
+
+// taulukkona, epäkäytännöllistä:
+int[] paivamaara = { 2021, 2, 15 };
+
+// merkkijonona, epäkäytännöllistä:
+String pvm = "2021-02-15";
 ```
 
 Jokainen `LocalDate`-olio pitää sisällään juuri edellä esitetyt kolme kokonaislukua, mutta ne ovat kaikki tallessa yhdessä paikassa "olion sisällä". JSON-tietomuodon avulla olio voitaisiin esittää tällaisessa muodossa:
