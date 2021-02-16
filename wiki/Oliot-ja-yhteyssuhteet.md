@@ -1,54 +1,14 @@
-# Oliot listoilla ja listoja olioissa
+[&larr; Takaisin etusivulle](/)
 
-Aiheen toisella oppitunnilla käsittelemme omien luokkiemme käyttämistä listoilla, sekä listojen määrittelemistä olioiden oliomuuttujiksi.
+<h1 class="js-toc-ignore">Olio-ohjelmointi: luokkien väliset yhteyssuhteet</h1>
 
-```java
-List<Kaupunki> uusimaa = new ArrayList<Kaupunki>();
-List<Yhteystieto> kontaktit = new ArrayList<Yhteystieto>();
-```
+Aiheen toisella oppitunnilla jatkamme olio-ohjelmoinnin käsittelyä ja toteutamme luokkia, jotka hyödyntävät muita toteuttamiamme luokkia. Käsittelemme lisäksi omien luokkiemme käyttämistä listoilla, sekä listojen määrittelemistä olioiden oliomuuttujiksi.
 
 
-# Datan kapselointi (encapsulation)
+**Sisällysluettelo**
 
-Olioiden attribuuttien muuttamista halutaan hyvin usein rajoittaa:
+<div class="js-toc"></div>
 
-* `Yhteystieto`-luokan sähköpostiosoitteeksi ei haluta hyväksyä muita kuin valideja sähköpostiosoitteita
-* `Tili`-luokan saldon muuttaminen luokan ulkopuolelta halutaan estää
-
-**Ratkaisu:** olion attribuutit merkitään yksityisiksi (private) ja arvoja käytetään vain metodien kautta!
-
-Esim. sähköpostiosoitteen muoto voidaan tällöin tarkastaa metodissa ennen kuin se laitetaan talteen:
-
-```java
-class Yhteystieto {
-    private String email;
-
-    public boolean asetaEmail(String e) {
-        if (e.matches(".+@.+\\..+")) {
-            this.email = e;
-            return true;
-        } else {
-            return false;
-        }
-    }
-}
-```
-
-Esimerkin säännöllinen lauseke sähköpostin tarkastamiseksi ei ole täydellinen, mutta se on riittävän yksinkertainen tähän esimerkkiin.
-
-
-# Viittauksen kopioiminen != olion kopioiminen
-
-Olioita ei voi kopioida sijoittamalla niitä uusiin muuttujiin. Tällöin viitataan vain samaan olioon usealla eri muuttujalla:
-
-```java
-Yhteystieto y1 = new Yhteystieto("Adam", "050123", "adam@example.com");
-
-// ei kopioi, vaan viittaa samaan olioon:
-Yhteystieto y2 = y1;
-```
-
-Jos yllä olevassa esimerkissä kutsutaan `asetaEmail`-metodia muuttujan `y1` kautta, muuttuu sähköpostiosoite myös `y2`:ssa. Tämä johtuu siitä, että **olemme luoneet vain yhden olion, johon viitataan kahdella muuttujalla**.
 
 # Yhteystieto-esimerkki
 
@@ -181,9 +141,102 @@ Yhteystieto lindsey = new Yhteystieto("Lindsey", "ldrillingcourt0@so-net.ne.jp",
 System.out.println(lindsey); // "Lindsey (ldrillingcourt0@so-net.ne.jp)"
 ```
 
+# Datan kapselointi (encapsulation)
+
+Olioiden attribuuttien muuttamista halutaan hyvin usein rajoittaa:
+
+* `Yhteystieto`-luokan sähköpostiosoitteeksi ei haluta hyväksyä muita kuin valideja sähköpostiosoitteita
+* `Tili`-luokan saldon muuttaminen luokan ulkopuolelta halutaan estää
+* `Henkilotieto`-luokan syntymäpäiväksi halutaan sallia vain menneisyyteen sijoittuvia päivämääriä
+
+**Ratkaisu:** olion attribuutit merkitään yksityisiksi (private) ja arvoja käytetään vain metodien kautta!
+
+Esim. sähköpostiosoitteen muoto voidaan tällöin tarkastaa metodissa ennen kuin se laitetaan talteen:
+
+```java
+class Yhteystieto {
+    private String email;
+
+    public boolean asetaEmail(String e) {
+        if (e.matches(".+@.+\\..+")) {
+            this.email = e;
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+```
+
+Esimerkin säännöllinen lauseke sähköpostin tarkastamiseksi ei ole täydellinen, mutta se on riittävän yksinkertainen tähän esimerkkiin.
 
 
-# AddressBook ja Contact -esimerkkiohjelma
+# Luokkien väliset yhteyssuhteet
+
+Olio-ohjelmointiparadigman mukaisissa ohjelmissa luokilla on erityyppisiä yhteyksiä toisiinsa. Sekä yhteyksien määrä, esimerkiksi yhdestä yhteen tai yhdestä moneen, että yhteyden luonne vaihtelevat tapauskohtaisesti.
+
+> *"Association in Java is a connection or relation between two separate classes that are set up through their objects. Association relationship indicates how objects know each other and how they are using each other’s functionality. It can be one-to-one, one-to-many, many-to-one and many-to-many."*
+>
+> Choudary, A. 2019. What is Association in Java and why do you need it? [edureka.co](https://www.edureka.co/blog/association-in-java/)
+
+Esimerkkejä erilaisista yhteyssuhteista on lukuisia, ja tutustut niihin tarkemmin mm. tietokantakurssilla. Tämän kurssin näkökulmasta voimme esimerkiksi ajatella yhteyssuhdetta `Henkilotieto`- ja `LocalDate`-luokkien välille siten, että `Henkilotieto` pitää sisällään tiedon yksittäisen henkilön syntymäajasta. `Henkilotieto`-oliot voivat käyttää tätä syntymäaikaa sisäisesti esimerkiksi henkilön iän laskemiseksi.
+
+
+## Tuntiesimerkki: Henkilotieto-luokka
+
+Toteutamme tunnilla Henkilotieto-luokan siten, että tästä luokasta on yhteys `LocalDate`-luokkaan. Lisäksi toteutamme `laskeIka`-nimisen metodin, joka hyödyntää syntymäaikaa iän laskemiseksi. Lopulta toteutamme myös `onTaysiIkainen`-metodin, joka kutsuu saman olion `laskeIka`-metodia.
+
+
+# Oliot listoilla ja listoja olioissa
+
+Omien luokkiemme käyttäminen listoilla ei eroa Javan valmiiden luokkien käyttämisestä, jota olemme jo harjoitelleetkin esimerkiksi String-luokan kanssa:
+
+```java
+List<String> nimet = new ArrayList<>();
+
+List<Kaupunki> kaupungit = new ArrayList<>();
+List<Yhteystieto> kontaktit = new ArrayList<>();
+List<Henkilotieto> henkilotiedot = new ArrayList<>();
+```
+
+Listan tyyppi määritellään, kuten aiemmin, muuttujan tyypin yhteydessä (`List<Kaupunki>`). Listan luontikäskyssä kulmasulut voidaan jättää tyhjiksi, mikäli rivillä on selvää, minkä tyyppistä listaa ollaan luomassa:
+
+```diff
++ List<Kaupunki> kaupungit = new ArrayList<>();
+- List<Kaupunki> kaupungit = new ArrayList<Kaupunki>();
+```
+
+## Tuntiesimerkki: olioita listoilla ja listoja olioissa
+
+Listat, kuten muutkin Javan kokoelmat, ovat itse asiassa olioita. Listamuuttujien määritteleminen oliomuuttujaksi ei käytännössä eroa mitenkään muiden tyyppisistä muuttujista.
+
+Vastaavasti kuin aikaisemmin määrittelimme `Henkilotieto`-luokalle yksittäisen päivämääräolion `LocalDate`-luokan avulla, voimme määritellä siihen useita `Henkilotieto`-olioita sisältävän listan kyseisen henkilön lapsista.
+
+
+# Viittauksen kopioiminen != olion kopioiminen
+
+Kuten olemme kurssilla listojen yhteydessä huomanneet, olioita ei voi kopioida sijoittamalla niitä uusiin muuttujiin. Jos asetamme olion uuteen muuttujaan, kopioimme ainoastaan viittauksen. Tällöin samaan olioon viitataan vain usealla eri muuttujalla:
+
+```java
+Yhteystieto y1 = new Yhteystieto("Adam", "050123", "adam@example.com");
+Yhteystieto y2 = y1; // ei kopioi, vaan viittaa samaan olioon
+
+y1.asetaEmail("mr.adam@example.com");
+
+System.out.println(y1);
+System.out.println(y2); // email on muuttunut myös tässä!
+```
+
+Jos yllä olevassa esimerkissä kutsutaan `asetaEmail`-metodia muuttujan `y1` kautta, muuttuu sähköpostiosoite myös `y2`:ssa. Tämä johtuu siitä, että **olemme luoneet vain yhden olion, johon viitataan kahdella muuttujalla**. 
+
+Olioiden kopioimiseksi ei ole yksittäistä yleistä tapaa, vaan mahdolliset kopiot täytyy luoda tilanteesta riippuen eri tavoilla. 
+
+## Tuntiesimerkki: olion muuttaminen, kun olio on jo toisen olion listalla
+
+Toteutetaan tunnilla pääohjelmaluokka, jossa luodaan hierarkia `Henkilotieto`-olioita. Tutkitaan mitä käy, kun muutamme eri olioiden sisältämiä tietoja.
+
+
+# Mahdollinen tuntiharjoitus: AddressBook ja Contact
 
 ## Contact
 
