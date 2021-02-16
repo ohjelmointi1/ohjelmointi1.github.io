@@ -237,6 +237,16 @@ System.out.println(esp.vakiluku);
 
 Huom! Tulemme myöhemmin oppimateriaalissa rajaamaan muuttujien näkyvyyttä, jolloin niiden käyttäminen ei onnistu luokan ulkopuolelta. Toistaiseksi muuttujat voidaan kuitenkin pitää oletusnäkyvyydellä.
 
+## Keskeisiä seikkoja oliomuuttujista
+
+Oliomuuttujat määritellään luokan rungossa kaikkein ylimpänä, ennen metodeja ja konstruktoreja.
+
+Oliomuuttujat ovat luokassa määriteltyjä, mutta oliokohtaisia. Kaikilla saman luokan olioilla on siis samat muuttujat, mutta omilla arvoillaan. Oliomuuttujien arvot **säilyvät olion koko olemassaolon ajan**, toisin kuin metodien sisällä käytetyt paikalliset muuttujat.
+
+Olioita luotaessa kaikkien oliomuuttujien arvot ovat oletusarvoja `0`, `false` ja `null`, ellei muuttujiin erikseen aseteta muita arvoja.
+
+Oliomuuttujien näkyvyyttä voidaan rajoittaa aivan kuten metodien. Pääsääntöisesti ne ovat `private`, mutta palaamme tähän asiaan alempana.
+
 
 # Oliometodit
 
@@ -295,7 +305,7 @@ System.out.println(hki.laskeVaestontiheys());
 System.out.println(esp.laskeVaestontiheys());
 ```
 
-## Olio parametrimuuttujassa
+## Toinen olio parametrina
 
 Jos haluaisimme esimerkiksi toteuttaa ylempänä materiaalissa esitellyn `vakilukuSuurempiKuin`-metodin, joka palauttaa `true`, jos se kaupunki jonka metodia kutsutaan on suurempi kuin toinen, voidaan se toteuttaa seuraavasti:
 
@@ -322,7 +332,6 @@ Tämän metodin lisäämisen jälkeen luokka näyttää tältä:
 ```java
 public class Kaupunki {
 
-
     String nimi;
     int vakiluku;
     double pintaAla;
@@ -337,31 +346,6 @@ public class Kaupunki {
 }
 ```
 
-## Private-oliomuuttujat
-
-Edellisissä esimerkeissä määrittelimme oliomuuttujat ilman näkyvyyttä, kuten `public` tai `private`. Haluamme pääsääntöisesti sulkea muuttujat luokan sisään siten, että niitä voidaan käyttää ainoastaan luokan omilla metodeilla. Tätä varten oliomuuttujille määritellään käytännössä aina näkyvyys `private`:
-
-```java
-// Kaupunki.java
-public class Kaupunki {
-
-    // muuttujia käytetään jatkossa vain metodien kautta:
-    private String nimi;
-    private int vakiluku;
-    private double pintaAla;
-}
-```
-
-Kun muuttujat ovat yksityisiä, niitä voidaan käyttää ainoastaan saman luokan sisältä. Tarvittaessa muuttujien käsittelemiseksi luodaan omat metodinsa, joiden näkyvyys voidaan asettaa julkiseksi. Näihin metodeihin palataan myöhemmin tässä oppimateriaalissa.
-
-**Keskeisiä seikkoja oliomuuttujista:**
-
-* Oliomuuttujat ovat **yksittäisille olioille kuuluvia muuttujia**.
-* Oliomuuttujat **määritellään luokassa kaikkein ylimpänä**, ennen metodeja ja muita osia.
-* Kaikilla saman luokan olioilla on **samat muuttujat, mutta omilla arvoillaan**.
-* Oliomuuttujien arvot **säilyvät olion koko olemassaolon ajan**, toisin kuin metodien sisällä käytetyt paikalliset muuttujat.
-* Oliomuuttujien näkyvyyttä voidaan rajoittaa aivan kuten metodien. Pääsääntöisesti ne ovat `private`.
-
 
 # Olioiden luominen
 
@@ -373,7 +357,11 @@ Olioita luodaan `new`-avainsanalla. Joissain tapauksissa olemme luoneet olioita 
 Kaupunki uusiOlio = new Kaupunki("Helsinki", 653_867);
 ```
 
-Edellä oleva luontikäsky käsitellään Java-luokassa **konstruktorin** avulla. Konstruktori on ikään kuin metodi, jota kutsutaan automaattisesti olioita luotaessa. Luokan lähdekoodissa konstruktorin nimi on sama kuin luokan nimi, eli tässä tapauksessa `Kaupunki`, ja sen näkyvyys on tyypillisesti julkinen, eli `public`:
+Edellä oleva luontikäsky käsitellään Java-luokassa **konstruktorin** avulla. Konstruktori on ikään kuin metodi, jota kutsutaan automaattisesti olioita luotaessa. 
+
+## Konstruktorin määritteleminen
+
+Luokan lähdekoodissa konstruktorin nimi on sama kuin luokan nimi, eli tässä tapauksessa `Kaupunki`. Konstruktori näkyvyys on tyypillisesti julkinen, eli `public`:
 
 ```java
 // konstruktorin nimi on aina sama kuin luokan nimi!
@@ -381,6 +369,8 @@ public Kaupunki(String nimi, int vakiluku) {
     
 }
 ```
+
+Konstruktori kirjoitetaan tyypillisesti luokan runkoon oliomuuttujien alle, ennen metodeja.
 
 Konstruktorin parametrimuuttujat määritellään kuten metodeissa. Nimet voivat olla samat kuin oliomuuttujien nimet, mutta tällöin vaaditaan erityistä huolellisuutta sen suhteen, mitä arvoja kulloinkin käytetään. **Luokassa voi siis olla samannimisiä paikallisia- ja oliomuuttujia**.
 
@@ -404,7 +394,6 @@ Luontikäskyssä konstruktoria kutsutaan automaattisesti ja luotu olio voidaan o
 ```java
 Kaupunki hki = new Kaupunki("Helsinki", 653_867);
 ```
-
 
 ## Arvojen asettaminen oliomuuttujiin
 
@@ -462,11 +451,28 @@ On kuitenkin oikean lopputuloksen kannalta turvallisempaa käyttää `this`-viit
 
 **Keskeisiä seikkoja olioiden alustamisesta:**
 
-* Olioiden kaikki muuttujat ovat oletuksena aluksi tyhjiä.
+* Olioiden kaikkien muuttujien arvot ovat alussa muuttujan tyypin mukaisia oletusarvoja (`0`, `false`, `null`).
 * Oliomuuttujiin voidaan asettaa alkuarvot konstruktorin avulla.
 * Konstruktori on ikään kuin metodi, jota kutsutaan automaattisesti olioita luotaessa.
 * Konstruktorin nimi on sama kuin luokan nimi ja näkyvyys usein `public`.
 
+
+## Private-oliomuuttujat
+
+Ensimmäisissä esimerkeissä määrittelimme oliomuuttujat ilman näkyvyyttä, kuten `public` tai `private`. Haluamme pääsääntöisesti sulkea muuttujat luokan sisään siten, että niitä voidaan käyttää ainoastaan luokan omilla metodeilla. Tätä varten oliomuuttujille määritellään käytännössä aina näkyvyys `private`:
+
+```java
+// Kaupunki.java
+public class Kaupunki {
+
+    // muuttujia käytetään jatkossa vain metodien ja konstruktorin kautta:
+    private String nimi;
+    private int vakiluku;
+    private double pintaAla;
+}
+```
+
+Kun muuttujat ovat yksityisiä, niitä voidaan käyttää ainoastaan saman luokan sisältä. Tarvittaessa muuttujien käsittelemiseksi luodaan omat metodinsa (**get** ja **set**), joiden näkyvyys voidaan asettaa julkiseksi. Näihin metodeihin palataan myöhemmin tässä oppimateriaalissa.
 
 
 # toString()-metodi ja sen korvaaminen: @Override
