@@ -274,7 +274,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
                 <strong>Olio-ohjelmointi jatkuu:<br/>
                 Luokkien yhteyssuhteet<br/>
                 Olioita listoilla ja listoja olioissa</strong><br/> 
-                <a href="wiki/osoitekirja_projekti">📝 Tunnin esimerkin lyhyt kuvaus</a><br />
+                <a href="wiki/Oliot-ja-yhteyssuhteet">📝 Tunnin esimerkin lyhyt kuvaus</a><br />
                 <!--<a href="src/viikko5/oliot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br/>
                 <strong>Oppitunnin videot:</strong><br />
