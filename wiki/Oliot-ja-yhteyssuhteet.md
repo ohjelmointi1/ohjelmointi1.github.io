@@ -406,7 +406,7 @@ Olioiden kopioimiseksi ei ole yksittäistä yleistä tapaa, vaan mahdolliset kop
 Toteutetaan tunnilla pääohjelmaluokka, jossa luodaan hierarkia `Henkilotieto`-olioita. Tutkitaan mitä käy, kun muutamme eri olioiden sisältämiä tietoja.
 
 
-# Mahdollinen tuntiharjoitus: AddressBook ja Contact
+<!--# Mahdollinen tuntiharjoitus: AddressBook ja Contact
 
 ## Contact
 
@@ -429,7 +429,7 @@ Toteutetaan tunnilla pääohjelmaluokka, jossa luodaan hierarkia `Henkilotieto`-
 * Osoitekirjan tulostaminen nimien mukaisessa aakkosjärjestyksessä
 * Yhteystietojen vertailu (`Contact.equals`)
 * Osoitekirjaan lisääminen vain, jos sama yhteystieto ei ole vielä osoitekirjassa (`List.contains`)
-
+-->
 
 ---
 
