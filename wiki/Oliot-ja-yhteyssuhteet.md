@@ -50,6 +50,10 @@ Tietojen tallentaminen erillisissä muuttujissa olisi hankalaa ja virhealtista. 
 ```java
 Yhteystieto lindsey = new Yhteystieto("Lindsey", "ldrillingcourt0@so-net.ne.jp", "132-414-7730");
 Yhteystieto zilvia = new Yhteystieto("Zilvia", "zzamboniari1@dell.com", "445-276-2785");
+
+List<Yhteystieto> yhteystiedot = new ArrayList<>();
+yhteystiedot.add(lindsey);
+yhteystiedot.add(zilvia);
 ```
 
 ## Yhteystieto-luokan toteutus
