@@ -9,6 +9,12 @@ Aiheen toisella oppitunnilla jatkamme olio-ohjelmoinnin käsittelyä ja toteutam
 
 <div class="js-toc"></div>
 
+# Oppiptuntitallenne: Luokan määrittely ja olioiden käsittely listoilla
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/d8040740-8c23-4948-a840-b40b6a32f8dc?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+[MS Stream: Luokan määrittely ja olioiden käsittely listoilla](https://web.microsoftstream.com/video/d8040740-8c23-4948-a840-b40b6a32f8dc)
+
 
 # Yhteystieto-esimerkki
 
@@ -181,11 +187,50 @@ Olio-ohjelmointiparadigman mukaisissa ohjelmissa luokilla on erityyppisiä yhtey
 
 Esimerkkejä erilaisista yhteyssuhteista on lukuisia, ja tutustut niihin tarkemmin mm. tietokantakurssilla. Tämän kurssin näkökulmasta voimme esimerkiksi ajatella yhteyssuhdetta `Henkilotieto`- ja `LocalDate`-luokkien välille siten, että `Henkilotieto` pitää sisällään tiedon yksittäisen henkilön syntymäajasta. `Henkilotieto`-oliot voivat käyttää tätä syntymäaikaa sisäisesti esimerkiksi henkilön iän laskemiseksi.
 
+## Oppituntitallenne: Luokkien väliset yhteyssuhteet
 
-## Tuntiesimerkki: Henkilotieto-luokka
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/b6aa4193-13dd-4261-bcb9-49c71aff5f52?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Toteutamme tunnilla Henkilotieto-luokan siten, että tästä luokasta on yhteys `LocalDate`-luokkaan. Lisäksi toteutamme `laskeIka`-nimisen metodin, joka hyödyntää syntymäaikaa iän laskemiseksi. Lopulta toteutamme myös `onTaysiIkainen`-metodin, joka kutsuu saman olion `laskeIka`-metodia.
+[MS Stream: Luokkien väliset yhteyssuhteet](https://web.microsoftstream.com/video/b6aa4193-13dd-4261-bcb9-49c71aff5f52)
 
+
+Toteutimme tunnilla Henkilotieto-luokan siten, että tästä luokasta on yhteys `LocalDate`-luokkaan. Lisäksi toteutimme `laskeIka`-nimisen metodin, joka hyödyntää syntymäaikaa iän laskemiseksi. Lopulta toteutimme myös `onTaysiIkainen`-metodin, joka kutsuu saman olion `laskeIka`-metodia:
+
+```java
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Henkilotieto {
+
+    private String nimi;
+    private LocalDate syntymapaiva;
+
+    public Henkilotieto(String nimi, int paiva, int kuukausi, int vuosi) {
+        this.nimi = nimi;
+        this.syntymapaiva = LocalDate.of(vuosi, kuukausi, paiva);
+    }
+
+    public String getNimi() {
+        return this.nimi;
+    }
+
+    public boolean onTaysiIkainen() {
+        int ika = this.laskeIka();
+        return ika >= 18;
+    }
+
+    public int laskeIka() {
+        return (int) ChronoUnit.YEARS.between(this.syntymapaiva, LocalDate.now());
+    }
+
+    @Override
+    public String toString() {
+        return this.nimi + ", " + this.laskeIka() + " v";
+    }
+}
+```
 
 # Oliot listoilla ja listoja olioissa
 
@@ -206,12 +251,133 @@ Listan tyyppi määritellään, kuten aiemmin, muuttujan tyypin yhteydessä (`Li
 - List<Kaupunki> kaupungit = new ArrayList<Kaupunki>();
 ```
 
-## Tuntiesimerkki: olioita listoilla ja listoja olioissa
+## Oppituntitallenne: olioita listoilla ja listoja olioissa
 
-Listat, kuten muutkin Javan kokoelmat, ovat itse asiassa olioita. Listamuuttujien määritteleminen oliomuuttujaksi ei käytännössä eroa mitenkään muiden tyyppisistä muuttujista.
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/09b3a526-88f5-4b5a-a507-d8f53b452a5a?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Vastaavasti kuin aikaisemmin määrittelimme `Henkilotieto`-luokalle yksittäisen päivämääräolion `LocalDate`-luokan avulla, voimme määritellä siihen useita `Henkilotieto`-olioita sisältävän listan kyseisen henkilön lapsista.
+[MS Stream: Oliot listoilla ja listat olioilla](https://web.microsoftstream.com/video/09b3a526-88f5-4b5a-a507-d8f53b452a5a)
 
+
+Listat, kuten muutkin Javan kokoelmat, ovat itse asiassa olioita. Listamuuttujien määritteleminen oliomuuttujaksi ei käytännössä eroa mitenkään muiden tyyppisistä muuttujista:
+
+```java
+public class Henkilotieto {
+
+    private List<Henkilotieto> lapset;
+
+}
+```
+
+Vastaavasti kuin aikaisemmin määrittelimme `Henkilotieto`-luokalle yksittäisen päivämääräolion `LocalDate`-luokan avulla, voimme määritellä siihen useita `Henkilotieto`-olioita sisältävän listan kyseisen henkilön lapsista:
+
+```java
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Henkilotieto {
+
+    private String nimi;
+    private LocalDate syntymapaiva;
+    private List<Henkilotieto> lapset = new ArrayList<>(); // voitaisiin kirjoittaa myös konstruktoriin
+
+    public Henkilotieto(String nimi, int paiva, int kuukausi, int vuosi) {
+        this.nimi = nimi;
+        this.syntymapaiva = LocalDate.of(vuosi, kuukausi, paiva);
+    }
+
+    public String getNimi() {
+        return this.nimi;
+    }
+
+    public void lisaaLapsi(Henkilotieto lapsi) {
+        this.lapset.add(lapsi);
+    }
+
+    public int getSyntymaVuosi() {
+        return syntymapaiva.getYear();
+    }
+
+    public void setSyntymaAika(int paiva, int kuukausi, int vuosi) {
+        LocalDate syntyma = LocalDate.of(vuosi, kuukausi, paiva);
+        if (!syntyma.isAfter(LocalDate.now())) {
+            this.syntymapaiva = syntyma;
+        } else {
+            // TODO: Heitä poikkeus?
+        }
+    }
+
+    public boolean onTaysiIkainen() {
+        int ika = this.laskeIka();
+        return ika >= 18;
+    }
+
+    public int laskeIka() {
+        return (int) ChronoUnit.YEARS.between(this.syntymapaiva, LocalDate.now());
+    }
+
+    @Override
+    public String toString() {
+        String nimiJaIka = this.nimi + ", " + this.laskeIka() + " v";
+        if (this.lapset.isEmpty()) {
+            return nimiJaIka;
+        } else {
+            return nimiJaIka + ", " + this.lapset.size() + " lasta:\n" + this.muodostaLapsiLista();
+        }
+    }
+
+    private String muodostaLapsiLista() {
+        String lapsiLista = "";
+        for (Henkilotieto lapsi : this.lapset) {
+            String lapsenNimi = lapsi.getNimi();
+            lapsiLista += "- " + lapsenNimi + "\n";
+        }
+        return lapsiLista;
+    }
+}
+```
+
+## Yksityiset apumetodit
+
+Kuten tunnilla esitetyssä esimerkissä, luokkiin toteutetaan usein yksityisiä "apumetodeja", joiden avulla isommat kokonaisuudet saadaan pilkottua helpommin ymmärrettäviksi pienemmiksi kokonaisuuksiksi. Tästä on esimerkkinä yksityinen `muodostaLapsiLista`-metodi, joka on `toString`-metodin apumetodi.
+
+Luokan kokeilemiseksi toteutimme oppitunnilla ohjelmaluokan:
+
+```java
+public class HenkilotietoOhjelma {
+
+    public static void main(String[] args) {
+
+        Henkilotieto aiti = new Henkilotieto("Cecilia Smith", 1, 6, 1975);
+
+        Henkilotieto adam = new Henkilotieto("Adam Smith", 2, 3, 2000);
+        Henkilotieto bob = new Henkilotieto("Bob Smith", 4, 5, 2003);
+
+        aiti.lisaaLapsi(adam);
+        aiti.lisaaLapsi(bob);
+
+        System.out.println(aiti);
+
+        System.out.println(adam);
+
+        System.out.println(bob);
+    }
+}
+```
+
+Ohjelmaluokan tuloste:
+
+```
+Cecilia Smith, 45 v, 2 lasta:
+- Adam Smith
+- Bob Smith
+
+
+Adam Smith, 20 v
+
+Bob Smith, 17 v
+```
 
 # Viittauksen kopioiminen != olion kopioiminen
 
