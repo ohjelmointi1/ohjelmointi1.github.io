@@ -401,9 +401,6 @@ Jos yllä olevassa esimerkissä kutsutaan `asetaEmail`-metodia muuttujan `y1` ka
 
 Olioiden kopioimiseksi ei ole yksittäistä yleistä tapaa, vaan mahdolliset kopiot täytyy luoda tilanteesta riippuen eri tavoilla. 
 
-## Tuntiesimerkki: olion muuttaminen, kun olio on jo toisen olion listalla
-
-Toteutetaan tunnilla pääohjelmaluokka, jossa luodaan hierarkia `Henkilotieto`-olioita. Tutkitaan mitä käy, kun muutamme eri olioiden sisältämiä tietoja.
 
 
 <!--# Mahdollinen tuntiharjoitus: AddressBook ja Contact
