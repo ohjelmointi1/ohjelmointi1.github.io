@@ -20,6 +20,12 @@ Olioiden ja luokkien käyttötapa riippuu monista seikoista. Jos pankkisovelluks
 
 Tällä opintojaksolla keskitymme aluksi luokkien ja olioiden hyödyntämiseen datan mallintamisessa, eli teemme luokkia, jotka vastaavat joitain reaalimaailman käsitteitä. Jatkokurssilla olio-ohjelmointia sovelletaan esimerkiksi olioina, joiden tarkoitus on toimia vuorovaikutuksessa tietokannan ja verkkoselainten kanssa.
 
+## Oppituntitallenne: olio-ohjelmoinnin käsitteet, oliomuuttujat ja metodit
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/624e03b5-d220-4da5-a7a7-954bc7b07e37?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+[MS Stream: Olio-ohjelmoinnin käsitteet, oliomuuttujat ja metodit](https://web.microsoftstream.com/video/624e03b5-d220-4da5-a7a7-954bc7b07e37)
+
 ## Suositeltavaa luettavaa
 
 Johdatus olio-ohjelmointiin: [https://ohjelmointi-19.mooc.fi/osa-4/2-johdatus-olio-ohjelmointiin](https://ohjelmointi-19.mooc.fi/osa-4/2-johdatus-olio-ohjelmointiin)
@@ -359,6 +365,13 @@ Kaupunki uusiOlio = new Kaupunki("Helsinki", 653_867);
 
 Edellä oleva luontikäsky käsitellään Java-luokassa **konstruktorin** avulla. Konstruktori on ikään kuin metodi, jota kutsutaan automaattisesti olioita luotaessa. 
 
+## Oppituntitallenne: konstruktori, getterit, setterit ja toString
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/0bd21fd4-a6ef-4497-9547-44766ba0a81b?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+[MS Stream: Konstruktori, getterit, setterit ja toString](https://web.microsoftstream.com/video/0bd21fd4-a6ef-4497-9547-44766ba0a81b)
+
+
 ## Konstruktorin määritteleminen
 
 Luokan lähdekoodissa konstruktorin nimi on sama kuin luokan nimi, eli tässä tapauksessa `Kaupunki`. Konstruktori näkyvyys on tyypillisesti julkinen, eli `public`:
@@ -585,6 +598,13 @@ System.out.println(t.getTiliNumero()); // Tulostaa null, koska tilinumeroa ei ol
 ```
 
 Koska `tilinumero`-muuttujaa ei aseteta muuttujaa määriteltäessä eikä konstruktorissa, on se yllä olevassa esimerkissä tyhjä, eli `null`.
+
+## Oppituntitallenne: Null-arvot, NullPointerException ja koodin generointi
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/0008bece-15ff-47b9-a163-7c7663d787b3?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+[MS Stream: Null-arvot, NullPointerException ja koodin generointi](https://web.microsoftstream.com/video/0008bece-15ff-47b9-a163-7c7663d787b3)
+
 
 ## NullPointerException
 

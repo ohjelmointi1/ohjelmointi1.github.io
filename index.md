@@ -245,9 +245,9 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
                 Oliometodit ja -muuttujat<br /></strong>
                 <a href="wiki/Oliot">📝 Muistiinpanot</a><br />
                 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko05/">📁 Oppitunnin esimerkkikoodit</a><br /><br />
-                <a href="https://web.microsoftstream.com/video/624e03b5-d220-4da5-a7a7-954bc7b07e37">📼 Oppituntitallenne 1</a><br />
-                <a href="https://web.microsoftstream.com/video/0bd21fd4-a6ef-4497-9547-44766ba0a81b">📼 Oppituntitallenne 2</a><br />
-                <a href="https://web.microsoftstream.com/video/0008bece-15ff-47b9-a163-7c7663d787b3">📼 Oppituntitallenne 3</a><br />
+                <a href="https://web.microsoftstream.com/video/624e03b5-d220-4da5-a7a7-954bc7b07e37">📼 Olio-ohjelmoinnin käsitteet, oliomuuttujat ja metodit</a><br />
+                <a href="https://web.microsoftstream.com/video/0bd21fd4-a6ef-4497-9547-44766ba0a81b">📼 Konstruktori, getterit, setterit ja toString</a><br />
+                <a href="https://web.microsoftstream.com/video/0008bece-15ff-47b9-a163-7c7663d787b3">📼 Null-arvot, NullPointerException ja koodin generointi</a><br />
                 <!--<a href="src/viikko5/oliot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <strong>Oppitunnin videot:</strong><br />
