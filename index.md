@@ -276,6 +276,9 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
                 Olioita listoilla ja listoja olioissa</strong><br/> 
                 <a href="wiki/Oliot-ja-yhteyssuhteet">📝 Muistiinpanot</a><br />
                 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko05/oliot/">📁 Oppitunnin esimerkkikoodit</a><br /><br />
+                <a href="https://web.microsoftstream.com/video/d8040740-8c23-4948-a840-b40b6a32f8dc">📼 Oppituntitallenne 1</a><br />
+                <a href="https://web.microsoftstream.com/video/b6aa4193-13dd-4261-bcb9-49c71aff5f52">📼 Oppituntitallenne 2</a><br />
+                <a href="https://web.microsoftstream.com/video/09b3a526-88f5-4b5a-a507-d8f53b452a5a">📼 Oppituntitallenne 3</a><br />
                 <!--<a href="src/viikko5/oliot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br/>
                 <strong>Oppitunnin videot:</strong><br />
