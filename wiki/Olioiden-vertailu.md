@@ -183,6 +183,9 @@ for (int i = 0, s = size(); i < s; i++) {
 }
 ```
 
+Lähde: [GitHub.com](https://github.com/AdoptOpenJDK/openjdk-jdk12u/blob/master/src/java.base/share/classes/java/util/ImmutableCollections.java#L169)
+
+
 Toteuttamamme `equals`-metodi toimii siis nyt yhdessä `contains`-metodin sekä `indexOf`-metodin kanssa ja leipä löytyy listalta. Jos emme olisi toteuttaneet omaa `equals`-metodia, edellä esitetty koodi ei toimisi, koska kyseessä on kaksi eri oliota.
 
 
