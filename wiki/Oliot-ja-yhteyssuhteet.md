@@ -299,19 +299,6 @@ public class Henkilotieto {
         this.lapset.add(lapsi);
     }
 
-    public int getSyntymaVuosi() {
-        return syntymapaiva.getYear();
-    }
-
-    public void setSyntymaAika(int paiva, int kuukausi, int vuosi) {
-        LocalDate syntyma = LocalDate.of(vuosi, kuukausi, paiva);
-        if (!syntyma.isAfter(LocalDate.now())) {
-            this.syntymapaiva = syntyma;
-        } else {
-            // TODO: Heitä poikkeus?
-        }
-    }
-
     public boolean onTaysiIkainen() {
         int ika = this.laskeIka();
         return ika >= 18;
