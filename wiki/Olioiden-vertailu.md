@@ -73,7 +73,7 @@ Toisin kuin `String`-luokan kanssa, `equals`-metodi tuottaa nyt `false`, vaikka 
 Jos haluamme että omien `Tuote`-olioiden vertailu `maito1.equals(maito2)` vertailee olioiden sisältöä, voimme toteuttaa oman `equals`-metodin!
 
 
-## Oman `equals`-metodin toteuttaminen
+## Oman equals-metodin toteuttaminen
 
 Edellä esitetty `maito1.equals(maito2)`-vertailu ei toimi, koska `equals`-metodi vertailee oletuksena olioita samalla tavalla kuin `==`. Voimme kuitenkin määritellä aivan oman tapamme vertailla `Tuote`-olioita määrittelemällä oman `equals`-metodin:
 
@@ -250,7 +250,7 @@ Nimet oli helppoa laittaa järjestykseen `Collections.sort`-metodin avulla!
 [Comparable-tyypin dokumentaatiosta](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Comparable.html) löydämme listan kaikista standardikirjaston luokista, jotka ovat järjestettävissä (kohta All Known Implementing Classes). `Collections.sort` osaa siis asetella merkkijonojen lisäksi liki 200 muutakin tyyppiä oikeaan järjestykseen automaattisesti.
 
 
-## `compareTo`-metodi
+## compareTo-metodi
 
 Kaikkiin `Comparable`-luokkiin on tehty valmiiksi `compareTo`-niminen metodi, jonka avulla voidaan vertailla kahden olion keskenäistä järjestystä. `Collections.sort` kutsuu sisäisesti jokaisen merkkijonon  `compareTo`-metodia ja järjestää arvot vertailujen tulosten mukaan.
 
@@ -317,7 +317,7 @@ Tämä johtuu siitä, että **luokkamme ei ole yhteensopiva `Comparable`-tyypin 
 Onneksi olioiden vertailemiseksi voimme määritellä myös vaihtoehtoisia vertailuoperaatioita.
 
 
-## Vaihtoehtoiset vertailuoperaatiot `Collections.sort`-metodilla
+## Vaihtoehtoiset vertailuoperaatiot Collections.sort-metodilla
 
 Merkkijonojen vertailu `compareTo`-metodilla ei huomioi luonnostaan oikein eri kirjainkokoja tai eri kielissä olevia paikallisia merkkejä (ä, ö, å):
 
