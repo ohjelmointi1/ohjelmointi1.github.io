@@ -183,7 +183,7 @@ for (int i = 0, s = size(); i < s; i++) {
 }
 ```
 
-Lähde: [GitHub.com](https://github.com/AdoptOpenJDK/openjdk-jdk12u/blob/master/src/java.base/share/classes/java/util/ImmutableCollections.java#L169)
+Lähde: [AdoptOpenJDK. GitHub.com](https://github.com/AdoptOpenJDK/openjdk-jdk12u/blob/master/src/java.base/share/classes/java/util/ImmutableCollections.java#L169)
 
 
 Toteuttamamme `equals`-metodi toimii siis nyt yhdessä `contains`-metodin sekä `indexOf`-metodin kanssa ja leipä löytyy listalta. Jos emme olisi toteuttaneet omaa `equals`-metodia, edellä esitetty koodi ei toimisi, koska kyseessä on kaksi eri oliota.
@@ -342,14 +342,14 @@ System.out.println(nesteet); // oikea aakkosjärjestys: [bensa, ketsuppi, Limu, 
 
 Yllä `Collections.sort`-metodille annetaan toisena parametrina `String::compareToIgnoreCase`, joka on ns. **metodiviittaus**. Metodiviittauksessa esiintyy ensin luokan nimi, sitten kaksi kaksoispistettä `::` ja lopuksi metodin nimi. Huomaa, että metodia **ei suoriteta** omassa koodissa, vaan se annetaan parametrina. **Siksi metodin nimen jälkeen ei kirjoiteta sulkuja** `()`.
 
-Metodiviittauksen avulla `sort` käyttää vertailemiseen antamaamme metodia oletuksena olevaa `compareTo`-metodia. Lue lisää osoitteesta: https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html
+Metodiviittauksen avulla `sort` käyttää vertailemiseen antamaamme metodia oletuksena olevaa `compareTo`-metodia. Lue lisää osoitteesta: [https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html](https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html)
 
 
 ## Listan järjesteleminen omilla luokilla (edistynyttä sisältöä 🌶️)
 
 Vaikka oma `Tuote`-luokkamme ei ollut sellaisenaan yhteensopiva `Collections.sort`-metodin kanssa, voimme ohittaa tämän ongelman antamalla listan lisäksi vertailuoperaation.
 
-Tutustu Javan `Comparator.comparing`-metodiin, jonka avulla voit määritellä vertailijan kutsumaan mitä tahansa oman luokkasi metodia olioiden järjestämiseksi: https://www.baeldung.com/java-8-comparator-comparing. Tällä kurssilla sinun kannattaa lukea artikkelista kohta [3.1. Key Selector Variant](https://www.baeldung.com/java-8-comparator-comparing#1-key-selector-variant) ja sitä aikaisemmat, mutta ei välttämättä tätä kohtaa pidemmälle.
+Tutustu Javan `Comparator.comparing`-metodiin, jonka avulla voit määritellä vertailijan kutsumaan mitä tahansa oman luokkasi metodia olioiden järjestämiseksi: [https://www.baeldung.com/java-8-comparator-comparing](https://www.baeldung.com/java-8-comparator-comparing). Tällä kurssilla sinun kannattaa lukea artikkelista kohta [3.1. Key Selector Variant](https://www.baeldung.com/java-8-comparator-comparing#1-key-selector-variant) ja sitä aikaisemmat, mutta ei välttämättä tätä kohtaa pidemmälle.
 
 `Comparator.comparing`-metodille voidaan antaa metodiviittaus mihin tahansa metodiin, jolloin `sort` käyttää vertailussa juuri tuon metodin palauttamia arvoja. Voisimme sen avulla esimerkiksi järjestää merkkijonot pituusjärjestykseen vertailemalla merkkijonojen pituuksia, jotka selviävät `length()`-metodin avulla: `Comparator.comparing(String::length)`:
 
