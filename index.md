@@ -279,6 +279,10 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
                 <a href="https://web.microsoftstream.com/video/d8040740-8c23-4948-a840-b40b6a32f8dc">📼 Luokan määrittely ja olioiden käsittely listoilla</a><br />
                 <a href="https://web.microsoftstream.com/video/b6aa4193-13dd-4261-bcb9-49c71aff5f52">📼 Luokkien väliset yhteyssuhteet</a><br />
                 <a href="https://web.microsoftstream.com/video/09b3a526-88f5-4b5a-a507-d8f53b452a5a">📼 Oliot listoilla ja listat olioilla</a><br />
+                <br />
+                <em>Lisämateriaali (Viope-vinkkejä):</em><br />
+                <a href="https://video.haaga-helia.fi/media/Luokat+ja+oliot+osa+7+++kokoojamuuttuja/0_8k2wjem9">📼 Kokoojamuuttujan hyödyntäminen Playlist-tehtävän kaltaisessa ongelmassa</a><br />
+                <a href="https://video.haaga-helia.fi/media/Oliot+listallaA+pituuksien+summan+laskeminen/0_c16cldiu">📼 Pelaajat listalla / "olioiden summan laskeminen"</a><br />
                 <!--<a href="src/viikko5/oliot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br/>
                 <strong>Oppitunnin videot:</strong><br />
@@ -302,6 +306,10 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
             <td>
                 <strong>Olioiden vertailu ja järjestäminen</strong><br/> 
                 <a href="wiki/Olioiden-vertailu">📝 Muistiinpanot</a><br />
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko06/">📁 Oppitunnin esimerkkikoodit</a><br /><br />
+                <a href="https://web.microsoftstream.com/video/5900cbc8-bdf8-4398-9d36-5d54890eaad9">📼 Olioiden vertailu: equals-metodi</a><br />
+                <a href="https://web.microsoftstream.com/video/e0f9ab75-4957-4286-9170-913cf835d1e8">📼 Olion tyypin selvittäminen ja tyyppimuunnokset</a><br />
+                <a href="https://web.microsoftstream.com/video/5ac62905-079c-4bcd-9fd5-470c1974518c">📼 Olioiden järjestäminen ja compareTo-metodi</a><br />
                 <!--<a href="src/viikko6/oliot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br/>
                 <strong>Oppitunnin videot:</strong><br />
