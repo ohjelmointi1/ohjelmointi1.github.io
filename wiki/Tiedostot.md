@@ -25,7 +25,7 @@ Suorituskykyhaasteiden vuoksi tiedostoja käsitellään usein erilaisten puskuri
 Vastaavia haasteita ja ratkaisuja hyödynnetään myös mm. tietoliikenneyhteyksissä.
 
 
-## java.nio.file.Files
+# java.nio.file.Files
 
 Jos kirjoitettavaa tai luettavaa on kohtuullinen määrä, ei puskureita ole välttämätöntä käyttää. Tiedosto voidaan kirjoittaa kerralla esimerkiksi listasta merkkijonoja tai tiedosto voidaan lukea listaksi merkkijonoja. Yksinkertainen standardikirjaston luokka tiedostojen lukemiseen ja kirjoittamiseen on [java.nio.file.Files](https://docs.oracle.com/javase/9/docs/api/java/nio/file/Files.html).
 
@@ -38,7 +38,7 @@ import java.io.IOException; // poikkeusluokka virhetilanteita varten
 import java.nio.charset.StandardCharsets; // merkistöluokka, jossa yleisimmät merkistöt
 ```
 
-## Tiedoston lukeminen
+# Tiedoston lukeminen
 
 Tiedostoja käsiteltäessä on aina mahdollisuus siihen, että lukeminen epäonnistuu. Tiedostonkäsittelyssä yleinen `IOException`-poikkeus on sen vuoksi ns. tarkastettu poikkeus, eli siihen täytyy aina varautua try/catch-rakenteella:
 
@@ -60,7 +60,7 @@ try {
 }
 ```
 
-## Tiedostojen kirjoittaminen
+# Tiedostojen kirjoittaminen
 
 ```java
 Path tiedostonPolku = Paths.get("kirjoitettava_tiedosto.txt");
@@ -86,7 +86,7 @@ Rivi 1
 Rivi 2
 ```
 
-## CSV-tiedostot (comma-separated values))
+# CSV-tiedostot (comma-separated values))
 
 Taulukkomuotoisen tiedon tallentamiseen yksinkertaisina tekstitiedostoina käytetään usein CSV-tiedostoja:
 
@@ -232,7 +232,7 @@ List<String> rivit = Files.readAllLines(tiedostonPolku, StandardCharsets.UTF_8);
 Files.write(tiedostonPolku, rivit, StandardCharsets.UTF_8);
 ```
 
-### Koodaustehtävä
+## Koodaustehtävä
 
 Kirjoita ohjelma `WordCount`, joka kysyy käyttäjältä tiedoston nimeä ja tulostaa kyseisessä tiedostossa olevien rivien, sanojen ja merkkien määrän. **Luettavan tiedoston on oltava Java-projektin juuressa.**
 
