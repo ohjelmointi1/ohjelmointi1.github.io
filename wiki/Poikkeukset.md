@@ -3,14 +3,19 @@
 
 <h1 class="js-toc-ignore">Poikkeukset (exceptions)</h1>
 
-Poikkeukset ovat ohjelman suorituksen aikana tapahtuvia tapahtumia, jotka aiheuttavat poikkeamia ohjelman normaaliin suoritusjärjestykseen. Huomaa, että Java-kääntäjän havaitsemat virheet ja varoitukset ovat aivan toinen asia.
+Poikkeukset ovat ohjelman suorituksen aikana tapahtuvia tapahtumia, jotka aiheuttavat poikkeamia ohjelman normaaliin suoritusjärjestykseen. Vaikka ensikokemukset poikkeuksista ovat usein kielteisiä, ne ovat erittäin hyödyllinen työkalu erilaisten vikatilanteiden käsittelemiseksi ohjelmissa. 
+
+Ilman poikkeustenkäsittelyä ohjelma tyypillisesti "kaatuu", kun ohjelmassa tapahtuu jotain normaalista suorituksesta poikkeavaa, kuten yritetään käyttää listan olematonta indeksiä. Poikkeuksiin voidaan varautua, jolloin niiden sattuessa voidaan esimerkiksi yrittää uudelleen tai tulostaa virheilmoitus kaatamatta koko ohjelmaa.
 
 Tällä opetuskerralla tutustumme tarkemmin poikkeuksiin, niiden hyödyntämiseen sekä niihin varautumiseen.
+
+Huomaa, että Java-kääntäjän antamat virheet sekä varoitukset eivät liity poikkeuksiin, vaan ovat kokonaan eri asia. Poikkeukset tapahtuvat ohjelman suorituksen aikana, kun taas kääntäjä tekee työnsä ennen kuin ohjelma käynnistetään.
 
 
 **Sisällysluettelo**
 
 <div class="js-toc"></div>
+
 
 # Poikkeukset käytännössä
 
@@ -18,53 +23,54 @@ Poikkeukset ovat ohjelman suorituksen aikana tapahtuvia tapahtumia, jotka aiheut
 
 Olette törmänneet tällä kurssilla poikkeuksiin mm. seuraavanlaisissa tilanteissa:
 
-* Käyttäjä syöttää väärin muotoillun luvun
-* Taulukosta, listasta tai merkkijonosta haetaan arvoa virheellisellä indeksillä
-* Metodia kutsutaan null-viittauksen kautta
+* käyttäjä syöttää väärin muotoillun luvun
+* taulukosta, listasta tai merkkijonosta haetaan arvoa virheellisellä indeksillä
+* metodia kutsutaan null-viittauksen kautta.
 
 Muita tyypillisiä tilanteita poikkeuksille ovat mm:
 
-* Luettavaa tiedostoa ei löydy levyltä
-* Kirjoitettavaan tiedostoon ei ole kirjoitusoikeutta
-* Tietoliikenneyhteyden muodostaminen epäonnistuu
+* luettavaa tiedostoa ei löydy levyltä
+* kirjoitettavaan tiedostoon ei ole kirjoitusoikeutta
+* tietoliikenneyhteyden muodostaminen epäonnistuu.
 
 
-Ilman poikkeustenkäsittelyä ohjelma tyypillisesti "kaatuu", kun ohjelmassa tapahtuu jotain normaalista suorituksesta poikkeavaa, kuten yritetään käyttää listan olematonta indeksiä. Poikkeuksiin voidaan varautua, jolloin niiden sattuessa voidaan esimerkiksi yrittää uudelleen tai tulostaa virheilmoitus kaatamatta koko ohjelmaa.
+Esimerkki poikkeuksen aiheuttamasta virheilmoituksesta
 
-https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html
-
-## Esimerkki poikkeuksen aiheuttamasta virheilmoituksesta
-
-```
-Exception in thread "main" java.util.InputMismatchException
+<pre class="highlight" style="border: solid red 2px; color: red;">
+<code>Exception in thread "main" java.util.InputMismatchException
 at java.util.Scanner.throwFor(Unknown Source)
 at java.util.Scanner.next(Unknown Source)
 at java.util.Scanner.nextInt(Unknown Source)
 at java.util.Scanner.nextInt(Unknown Source)
-at week1.ScannerExample.main(Example.java:11)
-```
+at week1.ScannerExample.main(Example.java:11)</code>
+</pre>
+
+Voit tutustua poikkeuksiin tämän oppimateriaalin lisäksi [Oraclen oppimateriaalin avulla](https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html)
+
 
 # Poikkeuksiin varautuminen
 
-Poikkeuksiin voidaan varautua kirjoittamalla poikkeuksia aiheuttava koodi `try`-lohkon sisään. `try`-lohkon jälkeen kirjoitetaan `catch`-lohko, jonka sisällä oleva koodi suoritetaan, mikäli `try`-lohkon suorituksessa törmättiin poikkeukseen. 
+Poikkeuksiin voidaan varautua kirjoittamalla poikkeuksia aiheuttava koodi `try`-lohkon sisään. `try`-lohkon jälkeen kirjoitetaan `catch`-lohko, jonka sisällä oleva koodi suoritetaan, mikäli `try`-lohkon suorituksessa törmättiin `catch`-lohkoon märiteltyyn poikkeustyyppiin. 
 
 Try/catch-rakenteen perusmuoto on siis seuraava:
 
 ```java
 try {
   // Koodi, jossa mahdollisesti tapahtuu virhe
-} catch (Exception e) {
+} catch (Exception poikkeus) {
   // Koodi, joka suoritetaan, mikäli virhe tapahtui
 }
 ```
 
-Mikäli haluamme koodissamme varautua tilanteeseen, jossa kokonaisluvun sijasta käyttäjä on syöttänyt muita merkkejä, voisimme tehdä seuraavan try/catch-rakenteen:
+Yllä esitetyssä esimerkissä on varauduttu `Exception`-tyyppiseen poikkeukseen. `Exception` on Javassa poikkeusten yhteinen yläluokka, joten käytännössä tämä koodi varautuu kaikkiin mahdollisiin poikkeuksiin. Samojen sulkujen sisällä esiintyy myös muuttujanimi `poikkeus`. Poikkeukset ovat sisimmältään olioita, ja `Exception poikkeus` on muuttujan määrittely. Palaamme tämän muuttujan hyödyntämiseen myöhemmin.
+
+Mikäli haluamme koodissamme varautua nimenomaan tilanteeseen, jossa kokonaisluvun sijasta käyttäjä on syöttänyt muita merkkejä, voisimme varautua `try/catch`-rakenteella erityisesti `NumberFormatException`-poikkeukseen:
 
 ```java
 try {
   int number = Integer.parseInt(syote);
   // ...
-} catch (NumberFormatException e) {
+} catch (NumberFormatException poikkeus) {
   System.out.println("Syöte ei ole kokonaisluku!");
 }
 ```
@@ -73,7 +79,7 @@ try {
 
 ## Eri tyyppisiin poikkeuksiin varautuminen
 
-Virheen sattuessa `try`-lohkon sisällä lohkon suoritus keskeytyy välittömästi. Suoritus siirtyy sen `catch`-lohkon alkuun, joka on määritetty käsittelemään tämä poikkeustyyppi. Jos `try`-lohkossa sattuu poikkeus, jota vastaavaa `catch`-lohkoa ei ole, poikkeusta ei käsitellä lainkaan.
+Virheen sattuessa `try`-lohkon sisällä lohkon suoritus keskeytyy välittömästi. Suoritus siirtyy sen `catch`-lohkon alkuun, joka on määritetty käsittelemään tämä poikkeustyyppi. Jos `try`-lohkossa sattuu poikkeus, jota vastaavaa `catch`-lohkoa ei ole, poikkeusta ei käsitellä lainkaan, joten ohjelma saattaa kaatua.
 
 **Kysymys:** Millä syötteillä päädyt viereisessä esimerkkikoodissa oleviin catch-lohkoihin?
 
@@ -139,7 +145,6 @@ Edistyneemmissä ohjelmissa eri tietovirrat voidaan myös ohjata eri sijainteihi
 Poikkeukset ovat olioita, joilla on oliometodeja. Poikkeuksiin liittyy aina tiedot mm. siitä, minkälainen virhe on sattunut ja missä. Tapahtunut poikkeus on aina saatavilla `catch`-lohkon sisällä paikallisena muuttujana:
 
 ```java
-Usein nimetty lyhyesti "e"
 try {
     int number = Integer.parseInt(syote);
     // ...
@@ -147,10 +152,13 @@ try {
 } catch (NumberFormatException poikkeus) { // Catch-lohkon 'poikkeus' on muuttuja!
 
     // poikkeus.getMessage() palauttaa selkokielisen virheilmoituksen.
-    System.err.println(poikkeus.getMessage()); 
+    String virheviesti = poikkeus.getMessage();
 
+    System.err.println(virheviesti); 
 }
 ```
+
+Tässä esimerkissä muuttujan nimeksi on annettu `poikkeus`, mutta usein muuttujan nimenä nähdään esimerkiksi `e` (exception), `npe` (NullPointerException) tai vastaavia lyhenteitä.
 
 # Finally-lohko
 
@@ -187,6 +195,9 @@ Syötit luvun 100.
 
 # Virheiden paikantaminen
 
+Poikkeusoliot sisältävät paljon hyödyllistä tietoa siitä, minkälainen virhe tapahtui ja mitkä olivat virhettä edeltäneet vaiheet. Virheilmoituksen lukeminen onkin tärkeä taito ongelmien ratkaisemiseksi. Omissa ohjelmissamme virheet ovat vielä ohjelmien pienen koon vuoksi helposti löydettävissä, mutta isojen ohjelmistojen kohdalla virheiden paikantaminen voi olla hyvin vaikeaa. Virheiden paikantamista käsitellään tarkemmin esimerkiksi teknologiayritys Twilion blogikirjoituksessa [How to read and understand a Java Stacktrace](https://www.twilio.com/blog/how-to-read-and-understand-a-java-stacktrace).
+
+
 ## Suorituspino (stack)
 
 Tietokoneen muistissa olevia aktiivisia metodikutsuja pidetään ns. pinossa. Ohjelmointiterminologiassa pino tarkoittaa tietorakennetta, johon uusin alkio lisätään aina ylimmäksi ja josta voidaan poistaa vain ylin alkio.
@@ -197,14 +208,14 @@ Kun metodi on suoritettu, poistetaan sitä varten luotu kehys ja suoritus palaa 
 
 ## Pinon lukeminen (stack trace, pinovedos)
 
-```
-Exception in thread "main" java.util.InputMismatchException
+<pre class="highlight" style="border: solid red 2px; color: red;">
+<code>Exception in thread "main" java.util.InputMismatchException
 at java.util.Scanner.throwFor(Unknown Source)
 at java.util.Scanner.next(Unknown Source)
 at java.util.Scanner.nextInt(Unknown Source)
 at java.util.Scanner.nextInt(Unknown Source)
-at week1.ScannerExample.main(Example.java:11)
-```
+at week1.ScannerExample.main(Example.java:11)</code>
+</pre>
 
 Pinovedosta luetaan aina alhaalta ylöspäin. Yllä olevasta pinovedoksesta näet, että metodikutsut lähtivät liikkeelle alimmasta kehyksestä eli Example.java-tiedoston riviltä 11. Sieltä edettiin Javan Scanner-luokkaan, joka kutsui itse muutamaa omaa metodiaan. Lopulta aiheutui virhe `InputMismatchException`, joka näkyy pinovedoksessa ylimpänä.
 
@@ -221,21 +232,27 @@ Jos poikkeus päätyy pois omasta ohjelmastasi niin, ettei sitä napata missää
 
 # Poikkeustyypit
 
+Javassa on useita eri tyyppisiä poikkeuksia. Virheiden tyyppejä käsitellään tarkemmin artikkelissa [Types of Exceptions in Java
+](https://stackify.com/types-of-exceptions-java/) (Sagar Arora, 2018. stackify.com). Tärkeimmät tyypit ovat seuraavaksi käsiteltävät virheet, ajonaikaiset poikkeukset sekä tarkastetut poikkeukset.
+
+
 ## Virheet / Errors
 
-Ohjelman suoritusta estävät ulkoiset virhetilanteet, esim. muistin loppuminen. Error-tyyppiset virheet ovat varsin harvinaisia.
+Ohjelman suoritusta estävät ulkoiset virhetilanteet, esim. muistin loppuminen. Error-tyyppiset virheet ovat varsin harvinaisia ja niihin varautuminen ajonaikaisesti on haastavaa.
 
-## Ajonaikaiset virheet / Runtime exceptions
 
-Ajonaikaiset virheet ovat tyypillisesti ohjelmointivirheistä aiheutuvia virhetilanteita, jotka usein voitaisiin välttää ilman varsinaista poikkeustenhallintaa.
+## Ajonaikaiset poikkeukset / Runtime exceptions
 
-Esimerkkejä ajonaikaisista virheistä ovat `NullPointerException` ja `ArrayIndexOutOfBoundsException`, jotka molemmat olisi vältettävissä tekemällä tarkastuksia ennen metodikutsuja. Virhe voidaan siis välttää tarkastamalla ensin, onko arvo `null` tai onko taulukon pituus riittävä
+Ajonaikaiset virheet ovat tyypillisesti ohjelmointivirheistä aiheutuvia virhetilanteita, jotka usein voitaisiin välttää ilman varsinaista poikkeustenhallintaa. Erilaisia ajonaikaisia poikkeustyyppejä on valtavasti, mutta yleisiä ovat esimerkiksi `NullPointerException`, `ArrayIndexOutOfBoundsException` ja `IllegalArgumentException` ([oracle.com](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html)).
 
-https://docs.oracle.com/javase/tutorial/essential/exceptions/catchOrDeclare.html
+Monet ajonaikaiset poikkeukset ovat vältettävissä tekemällä tarkastuksia ennen metodikutsuja. Virhe voidaan siis välttää tarkastamalla ensin, onko arvo `null` tai onko taulukon pituus riittävä.
+
 
 ## Tarkastetut poikkeukset / checked exceptions
 
-Virheet, joihin ohjelmassa tulee varautua ja joista tulee selvitä. Java-kääntäjä varmistaa, että kaikkiin tarkistettuihin poikkeuksiin on varauduttu. Tarkastettuja poikkeuksia käytetään esimerkiksi tiedostojen käsittelyssä, jossa virheet ovat erittäin tyypillisiä.
+Tarkastetut poikkeukset ovat poikkeuksia, joihin ohjelmassa on pakko varautua ja joista tulee selvitä. Java-kääntäjä varmistaa, että kaikkiin tarkistettuihin poikkeuksiin on varauduttu. Tarkastettuja poikkeuksia käytetään esimerkiksi tiedostojen käsittelyssä, jossa virheet ovat erittäin tyypillisiä. Toisin kuin ajonaikaisia poikkeuksia, tarkastettuja poikkeuksia ei usein voida välttää tarkistamalla esiehtoja.
+
+Tyypillisiä tarkastettua poikkeuksia ovat mm. `IOException` ja `SQLException` ([oracle.com](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Exception.html)).
 
 Jos metodi heittää tarkastetun poikkeuksen, täytyy sen otsikkoon lisätä `throws`-määre, esim:
 
@@ -247,6 +264,9 @@ public static List<String> readAllLines​(Path path) throws IOException {
 ```
 
 Tällaista metodia kutsuvaan metodiin on aina pakko kirjoittaa joko try/catch –lohko tai kutsuvan metodin otsikkoon on myös lisättävä tieto samasta poikkeuksesta. Jos metodi ei käsittele poikkeusta, vaan päästää sen kutsuketjussa ylöspäin, kutsutaan sitä "kuplimiseksi". Poikkeus siis "kuplii" metodista toiseen.
+
+Perehdymme tarkastettujen poikkeusten käsittelyyn tarkemmin seuraavalla oppitunnilla, jolla luemme ja kirjoitamme tiedostoja.
+
 
 # Poikkeusten dokumentoiminen
 
@@ -260,11 +280,16 @@ public static int parseInt​(String s) throws NumberFormatException {
 
 `NumberFormatException` ei ole tarkastettu poikkeus, joten sitä varten ei ole pakko lisätä poikkeuksenkäsittelyä, vaikka poikkeus onkin määritetty metodin otsikkoon.
 
+
 # Poikkeusten "heittäminen"
 
-Poikkeuksia voidaan heittää `throw`-käskyllä. Poikkeukset ovat olioita, joten heitettävä poikkeus täytyy luoda `new`-avainsanalla kuten muutkin oliot.
+Poikkeukset ovat olioita, joten poikkeus voidaan luoda `new`-avainsanalla kuten muutkin oliot. Tässä esimerkissä valmistelemme poikkeuksen, joka kertoo että metodille annettu merkkijono ei saa olla tyhjä:
 
-Kun poikkeus heitetään, siirtyy ohjelman suoritus välittömästi joko saman rakenteen `catch`-lohkoon tai suorituspinossa edelliseen metodiin.
+```java
+IllegalArgumentException poikkeus = new IllegalArgumentException("Nimi ei saa olla tyhjä");
+```
+
+Poikkeuksia voidaan heittää `throw`-käskyllä. Throw-käskyn jälkeen kirjoitetaan heitettävä poikkeus:
 
 ```java
 public void setNimi(String nimi) {
@@ -279,7 +304,8 @@ public void setNimi(String nimi) {
 }
 ```
 
-Sijoitusoperaatiota `this.nimi = nimi` olisi voitu kirjoittaa `else`-lohkoon, mutta se olisi ollut turhaa, koska tälle riville ei koskaan päädytä jos `if`-ehto on tosi.
+Kun poikkeus heitetään, siirtyy ohjelman suoritus välittömästi joko saman rakenteen `catch`-lohkoon tai suorituspinossa edelliseen metodiin. Yllä olevassa koodissa esiintyvä sijoitusoperaatio `this.nimi = nimi` olisi voitu kirjoittaa `else`-lohkoon, mutta se olisi ollut turhaa, koska kyseiselle riville ei koskaan päädytä, mikäli nimi on tyhjä.
+
 
 ## Koodaustehtävä
 
