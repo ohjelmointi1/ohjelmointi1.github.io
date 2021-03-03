@@ -34,7 +34,7 @@ Muita tyypillisiä tilanteita poikkeuksille ovat mm:
 * tietoliikenneyhteyden muodostaminen epäonnistuu.
 
 
-Esimerkki poikkeuksen aiheuttamasta virheilmoituksesta
+Esimerkki poikkeuksen aiheuttamasta virheilmoituksesta:
 
 <pre class="highlight" style="border: solid red 2px; color: red;">
 <code>Exception in thread "main" java.util.InputMismatchException
@@ -45,7 +45,7 @@ at java.util.Scanner.nextInt(Unknown Source)
 at week1.ScannerExample.main(Example.java:11)</code>
 </pre>
 
-Voit tutustua poikkeuksiin tämän oppimateriaalin lisäksi [Oraclen oppimateriaalin avulla](https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html)
+Voit tutustua poikkeuksiin tämän oppimateriaalin lisäksi esimerkiksi [Oraclen oppimateriaalin avulla](https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html).
 
 
 # Poikkeuksiin varautuminen
@@ -328,10 +328,10 @@ Voit luoda omia poikkeusluokkia aivan kuten muitakin luokkia. Jotta luokkasi toi
 * `java.lang.RuntimeException` ajonaikainen poikkeus
 
 ```java
-public class InvalidEmailException extends RuntimeException {
+public class VirheellinenEmailPoikkeus extends RuntimeException {
 
     // Oman poikkeusluokan konstruktori:
-    public InvalidEmailException(String email) {
+    public VirheellinenEmailPoikkeus(String email) {
 
         // Kutsutaan perityn luokan konstruktoria:
         super(email + " is not a valid email address!");
@@ -341,7 +341,7 @@ public class InvalidEmailException extends RuntimeException {
 
 ## Edistynyttä sisältöä: Oman poikkeuksen heittäminen
 
-`InvalidEmailException` heitetään, jos yhteystietoon ollaan asettamassa sähköpostiosoitteeksi tyhjää arvoa. Oikeassa sovelluksessa sähköpostiosoitteen muoto tarkastettaisiin esim. säännöllisellä lausekkeella.
+`VirheellinenEmailPoikkeus` heitetään, jos yhteystietoon ollaan asettamassa sähköpostiosoitteeksi tyhjää arvoa. Oikeassa sovelluksessa sähköpostiosoitteen muoto tarkastettaisiin esim. säännöllisellä lausekkeella.
 
 ```java
 public class Yhteystieto {
@@ -351,7 +351,7 @@ public class Yhteystieto {
     
     public void setEmail(String email) {
         if (email == null || "".equals(email)) {
-            throw new InvalidEmailException(email);
+            throw new VirheellinenEmailPoikkeus(email);
         }
         this.email = email;
     }

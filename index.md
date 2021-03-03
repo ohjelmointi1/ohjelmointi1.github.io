@@ -329,6 +329,10 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
             <td>
                 <strong>Poikkeukset</strong><br />
                 <a href="wiki/Poikkeukset">📝 Muistiinpanot</a><br />
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko06/poikkeukset">📁 Oppitunnin esimerkkikoodit</a><br /><br />
+                <a href="https://web.microsoftstream.com/video/63ec3ae4-3b02-43b5-9903-45bf34c52c92">📼 Poikkeukset ja niihin varautuminen</a><br />
+                <a href="https://web.microsoftstream.com/video/64f44c7d-b7ec-4d3c-9448-5aeb87cec819">📼 Virheiden paikantaminen, poikkeustyypit ja finally-lohko</a><br />
+                <a href="https://web.microsoftstream.com/video/7ac99180-b044-4638-a360-12dded0e32d7">📼 Poikkeusten heittäminen</a><br />
                 <!--<a href="src/viikko6/poikkeukset/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br/>
                 <strong>Oppitunnin videot:</strong><br />
