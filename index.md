@@ -376,15 +376,15 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
             <td>Ke</td>
             <td>10.3.</td>
             <td>
-                <strong>Kurssin aiheiden sovaltaminen</strong><br />
-                <a href="wiki/Soveltavat-esimerkit">📝 Materiaali ja videot</a><br />
+                <strong>Kurssin aiheiden soveltaminen</strong><br />
+                <a href="wiki/Soveltavat-esimerkit">📝 Materiaali, videot ja lähdekoodit</a><br />
             </td>
         </tr>
         <tr>
             <td>Ma</td>
             <td>15.3.</td>
             <td>
-                <strong>Kurssin sisällön kertaus tai harjoituskoe</strong><br />
+                <strong>Kurssin sisällön kertaus</strong><br />
                 <!--<a href="src/viikko8/kertaus/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br/>
                 <strong>Oppitunnin videot:</strong><br />

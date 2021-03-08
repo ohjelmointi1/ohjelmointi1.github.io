@@ -6,7 +6,7 @@
 
 Tässä esimerkissä toteutamme henkilötunnuksen tarkistimen, joka tarkistaa sille annetun henkilötunnuksen oikeellisuuden ja kertoo sitä vastaavan henkilön iän ja sukupuolen. Esimerkissä sovellamme säännöllisiä lausekkeita, käsittelemme merkkijonoja, toteutamme ehtorakenteita ja jaamme koodia metodeihin.
 
-Videon esimerkkikoodi on nähtävissä kokonaisuudessaan [GitHubissa](https://github.com/ohjelmointi1/swd4tn032-3009/blob/master/src/viikko8/kertaus/Henkilotunnus.java).
+📁 Videon esimerkkikoodi on nähtävissä kokonaisuudessaan [GitHubissa](https://github.com/ohjelmointi1/swd4tn032-3009/blob/master/src/viikko8/kertaus/Henkilotunnus.java).
 
 Videolla käytetään seuraavia sivustoja, joihin voit tutustua videon katsomisen ohella:
 
@@ -24,7 +24,7 @@ Voit katsoa videon myös [MS Stream -palvelussa](https://web.microsoftstream.com
 
 Tässä esimerkissä kertaamme luokkien ja olioiden käyttämistä kuvitteellisen polkupyöräkaupan luokkien toteuttamiseksi. 
 
-Videon esimerkkikoodit on nähtävissä kokonaisuudessaan [GitHubissa](https://github.com/ohjelmointi1/swd4tn032-3009/tree/master/src/viikko8/kertaus).
+📁 Videon esimerkkikoodit on nähtävissä kokonaisuudessaan [GitHubissa](https://github.com/ohjelmointi1/swd4tn032-3009/tree/master/src/viikko8/kertaus).
 
 Videolla käytetään seuraavia sivustoja, joihin voit tutustua videon katsomisen ohella:
 
