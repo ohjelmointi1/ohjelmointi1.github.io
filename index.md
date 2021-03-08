@@ -356,6 +356,10 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
             <td>
                 <strong>Tekstitiedostojen lukeminen ja tallentaminen</strong><br />
                 <a href="wiki/Tiedostot">📝 Muistiinpanot</a><br />
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko07/tiedostot">📁 Oppitunnin esimerkkikoodit</a><br /><br />
+                <a href="https://web.microsoftstream.com/video/e8bd93e6-c0e2-477f-8716-a8aa820098f9">📼 Tiedoston lukeminen ja poikkeusten käsittely</a><br />
+                <a href="https://web.microsoftstream.com/video/1f04b290-b302-476d-94ff-3abd2cf44e55">📼 Tiedoston kirjoittaminen, CSV-tiedostot ja Kalenteri-esimerkki</a><br />
+                <a href="https://web.microsoftstream.com/video/54005f94-5609-45b2-9b96-9a6795655a6a">📼 CSV-käsittelyn refaktorointi</a><br />
                 <!--<a href="src/viikko7/tiedostot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br/>
                 <strong>Oppitunnin videot:</strong><br />
