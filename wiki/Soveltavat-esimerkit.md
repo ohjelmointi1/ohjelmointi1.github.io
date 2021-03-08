@@ -30,3 +30,8 @@ Videolla käytetään seuraavia sivustoja, joihin voit tutustua videon katsomise
 
 Voit katsoa videon myös [MS Stream -palvelussa](https://web.microsoftstream.com/video/e547ee47-b4ac-4182-8a1c-bdcfe3ef060a).
 
+
+---
+
+
+Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
