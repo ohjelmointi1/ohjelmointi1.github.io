@@ -40,25 +40,45 @@ import java.nio.charset.StandardCharsets; // merkistöluokka, jossa yleisimmät 
 
 # Tiedoston lukeminen
 
-Tiedostoja käsiteltäessä on aina mahdollisuus siihen, että lukeminen epäonnistuu. Tiedostonkäsittelyssä yleinen `IOException`-poikkeus on sen vuoksi ns. tarkastettu poikkeus, eli siihen täytyy aina varautua try/catch-rakenteella:
+Tiedostoja käsiteltäessä on aina mahdollisuus siihen, että lukeminen epäonnistuu. Tiedostonkäsittelyssä yleinen `IOException`-poikkeus on sen vuoksi ns. tarkastettu poikkeus, eli siihen täytyy aina varautua joko try/catch-rakenteella tai heittämällä poikkeus edelleen metodista:
 
 ```java
-Path tiedostonPolku = Paths.get("luettava_tiedosto.txt");
+public static void main(String[] args) {
+    Path tiedostonPolku = Paths.get("luettava_tiedosto.txt");
 
-try {
-    // readAllLines palauttaa kaikki rivit List<String>-listana. Tiedoston polun
-    // lisäksi metodille kannattaa määritellä tiedoston merkistökoodaus (UTF-8):
+    try {
+        // readAllLines palauttaa kaikki rivit List<String>-listana. Tiedoston polun
+        // lisäksi metodille kannattaa määritellä tiedoston merkistökoodaus (UTF-8):
+        List<String> rivit = Files.readAllLines(tiedostonPolku, StandardCharsets.UTF_8);
+
+        System.out.println("Tiedostosta luettiin rivit:");
+        for (String rivi : rivit) {
+            System.out.println(rivi);
+        }
+
+    } catch (IOException e) {
+        System.out.println(e);
+    }
+}
+```
+
+Jos poikkeustenkäsittelyä ei haluta tehdä tässä metodissa, voidaan se määritellä heittämään poikkeus edelleen lisäämällä metodin otsikkoon `throws IOException`:
+
+```java
+public static void main(String[] args) throws IOException {
+    Path tiedostonPolku = Paths.get("luettava_tiedosto.txt");
+
     List<String> rivit = Files.readAllLines(tiedostonPolku, StandardCharsets.UTF_8);
 
     System.out.println("Tiedostosta luettiin rivit:");
     for (String rivi : rivit) {
         System.out.println(rivi);
     }
-
-} catch (IOException e) {
-    System.out.println(e);
 }
 ```
+
+Tätä ratkaisua ei kuitenkaan suositella, koska käsittelemätön poikkeus kaataa ohjelman hallitsemattomasti.
+
 
 # Tiedostojen kirjoittaminen
 
@@ -86,7 +106,7 @@ Rivi 1
 Rivi 2
 ```
 
-# CSV-tiedostot (comma-separated values))
+# CSV-tiedostot (comma-separated values)
 
 Taulukkomuotoisen tiedon tallentamiseen yksinkertaisina tekstitiedostoina käytetään usein CSV-tiedostoja:
 
