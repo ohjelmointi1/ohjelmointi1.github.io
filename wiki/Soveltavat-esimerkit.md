@@ -9,7 +9,7 @@ Videon esimerkkikoodi on nähtävissä kokonaisuudessaan [GitHubissa](https://gi
 Videolla käytetään seuraavia sivustoja, joihin voit tutustua videon katsomisen ohella:
 
 * Henkilötunnus kertoo sinusta. [https://www.tuomas.salste.net/doc/tunnus/hetu.html](https://www.tuomas.salste.net/doc/tunnus/hetu.html)
-* Henkilötunnus – ihmisten koodaaja. [https://www.tuomas.salste.net/doc/tunnus/henkilotunnus.html]
+* Henkilötunnus – ihmisten koodaaja. [https://www.tuomas.salste.net/doc/tunnus/henkilotunnus.html](https://www.tuomas.salste.net/doc/tunnus/henkilotunnus.html)
 * Henkilötunnus. [https://stat.fi/meta/kas/hetu.html](https://stat.fi/meta/kas/hetu.html)
 * Henkilötunnusgeneraattori. [http://www.lintukoto.net/muut/henkilotunnus/](http://www.lintukoto.net/muut/henkilotunnus/)
 * Regular Expressions 101. [https://regex101.com/](https://regex101.com/)
