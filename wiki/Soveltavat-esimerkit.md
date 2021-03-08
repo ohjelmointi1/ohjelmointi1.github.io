@@ -1,3 +1,5 @@
+[&larr; Takaisin etusivulle](/)
+
 # Esimerkki 1: henkilötunnuksen tarkastaminen
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/7c65bed8-7724-4ee9-94eb-3b715c8ad630?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>

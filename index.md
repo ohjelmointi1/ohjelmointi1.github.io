@@ -376,7 +376,8 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
             <td>Ke</td>
             <td>10.3.</td>
             <td>
-                <strong>Kurssin aiheiden soveltaminen pikkuprojektissa</strong>
+                <strong>Kurssin aiheiden sovaltaminen</strong><br />
+                <a href="wiki/Soveltavat-esimerkit">📝 Materiaali ja videot</a><br />
             </td>
         </tr>
         <tr>
