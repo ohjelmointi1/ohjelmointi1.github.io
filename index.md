@@ -387,6 +387,9 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
                 <strong>Kurssin sisällön kertaus</strong><br />
                 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko08/kertaus">📁 Oppitunnin esimerkkikoodit</a><br /><br />
                 <a href="https://student.home.haaga-helia.fi/group/pakki/opintojaksopalaute">💬 Opintojaksopalaute</a><br />
+                <br />
+                <a href="https://web.microsoftstream.com/video/888c147b-ae59-4212-8c6f-4a34da9e333a">📼 Kertaustunti, osa 1</a><br />
+                <a href="https://web.microsoftstream.com/video/5b4727d5-f196-4aec-98e3-dcdbd16b46a9">📼 Kertaustunti, osa 2</a><br />
                 <!--<a href="src/viikko8/kertaus/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br/>
                 <strong>Oppitunnin videot:</strong><br />
@@ -399,8 +402,11 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
             <td>17.3.</td>
             <td>
                 <strong>Kurssin loppukoe klo 9-11:30</strong><br />
-                Liity Viopessa kokeeseen <a href="https://vw4.viope.com/"><strong>SWD4TN032 Ohjelmointi 1 koe 17.3.2021</strong></a><br /><br />
-                <a href="https://student.home.haaga-helia.fi/group/pakki/opintojaksopalaute">Opintojaksopalaute</a><br />
+                Liity Viopessa kokeeseen <a href="https://vw4.viope.com/">SWD4TN032 Ohjelmointi 1 koe 17.3.2021</a>
+                <br /><br />
+                Kokeessa kommunikointi sekä Viopen ulkopuolisten sivujen ja muiden materiaalien käyttäminen on kielletty. Saat kuitenkin tutkia Eclipsessä olevia aikaisempia lähdekoodejasi kokeen aikana.
+                <br /><br />
+                <a href="https://student.home.haaga-helia.fi/group/pakki/opintojaksopalaute">💬 Opintojaksopalaute</a><br />
                 Viope-viikkotehtävien DL klo 9.
             </td>
         </tr>
