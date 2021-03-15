@@ -385,6 +385,8 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
             <td>15.3.</td>
             <td>
                 <strong>Kurssin sisällön kertaus</strong><br />
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko08/kertaus">📁 Oppitunnin esimerkkikoodit</a><br /><br />
+                <a href="https://student.home.haaga-helia.fi/group/pakki/opintojaksopalaute">💬 Opintojaksopalaute</a><br />
                 <!--<a href="src/viikko8/kertaus/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br/>
                 <strong>Oppitunnin videot:</strong><br />
@@ -396,8 +398,10 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
             <td>Ke</td>
             <td>17.3.</td>
             <td>
-                <strong>Kurssin loppukoe</strong><br />
-                <strong>Viope-tehtävien DL klo 9.</strong>
+                <strong>Kurssin loppukoe klo 9-11:30</strong><br />
+                Liity Viopessa kokeeseen <a href="https://vw4.viope.com/"><strong>SWD4TN032 Ohjelmointi 1 koe 17.3.2021</strong></a><br /><br />
+                <a href="https://student.home.haaga-helia.fi/group/pakki/opintojaksopalaute">Opintojaksopalaute</a><br />
+                Viope-viikkotehtävien DL klo 9.
             </td>
         </tr>
     </tbody>
