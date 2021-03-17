@@ -464,7 +464,7 @@ Tällä  kurssilla opetellaan Java-kielen syntaksia, mutta erityisesti pyrimme o
 
     * arvostellaan asteikolla 0-5
 
-Arviointilogiikka on esitetty alla myös Java-ohjelmakoodina. Tehtävien ja kokeen maksimipisteet ovat suuntaa-antavat kunnes kaikki tehtävät on julkaistu.
+Arviointilogiikka on esitetty alla myös Java-ohjelmakoodina.
 
 ```java
 package arviointi;
@@ -473,7 +473,9 @@ import static arviointi.OsasuoritustenArviointi.*;
 
 public class KurssinArviointi {
 
-    private static int viopeMaksimi = 58; // normaalitehtävien maksimipisteet (ilman bonuksia)
+    // Tehtävien ja kokeen maksimipisteet ovat suuntaa-antavia.
+
+    private static int viopeMaksimi = 65; // normaalitehtävien maksimipisteet (+6 bonusta)
     private static int kokeenMaksimi = 25;
 
     public static int laskeLoppuarvosana(int tehtavienPisteet, int kokeenPisteet) {
