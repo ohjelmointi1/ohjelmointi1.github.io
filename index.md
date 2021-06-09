@@ -1,8 +1,8 @@
 # Tervetuloa koodaamaan!
 
-Tervetuloa Haaga-Helian ohjelmointi 1 -opintojaksolle! Tämä sivusto toimii toteutuksen swd4tn032-3012 kotisivuna, materiaalipankkina sekä lähdekoodien jakelukanavana.
+Tervetuloa Haaga-Helian ohjelmointi 1 -opintojaksolle! Tämä sivusto toimii toteutuksen swd4tn032-3015 kotisivuna, materiaalipankkina sekä lähdekoodien jakelukanavana.
 
-Kurssin opettajana toimii Teemu Havulinna (*etunimi.sukunimi@haaga-helia.fi*). Kurssi järjestetään etätyösuosituksen mukaisesti etäopetuksena. 
+Kurssin opettajana toimii Teemu Havulinna (*etunimi.sukunimi@haaga-helia.fi*).
 
 ## Oppitunnit
 
@@ -35,7 +35,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
                 Kurssin järjestelyt ja osallistumisen vahvistaminen<br />
                 Eclipse-sovelluskehitin<br />
                 Perustietotyypit</strong><br />
-                <a href="https://vw4.viope.com/login?org=hh">🔗 Viope-rekisteröityminen</a> (valitse <em>Ohjelmointi 1-3012 ⛄</em>)<br />
+                <a href="https://vw4.viope.com/login?org=hh">🔗 Viope-rekisteröityminen</a> (valitse <em>Ohjelmointi 1-3015 ⭐</em>)<br />
                 <a href="wiki/Ohjelmoinnin-aloitus">📝 Muistiinpanot</a><br /><br />
                 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko01/perusteet">📁 Oppitunnin esimerkkikoodit</a><br /><br />
                 <a href="https://web.microsoftstream.com/video/f8cafe9c-976c-4f00-9713-4a8adc8d34bd">📼 Kurssin yleiset asiat</a><br />
@@ -526,7 +526,7 @@ Saat käyttää myös muita työkaluja, mutta niihin ei voida tarjota käyttötu
 
 Kurssin harjoitustehtävien tehtävänannot löytyvät Viope-järjestelmästä, jonne tehtävät myös palautetaan, ja joka tarkistaa tehtävät automaattisesti. 
 
-Rekisteröidy Viopeen osoitteessa [https://vw4.viope.com/login?org=hh](https://vw4.viope.com/login?org=hh). Huomaa, että rekisteröitymisosoitteessa on oltava parametri `?org=hh`, jotta pääset käsiksi Haaga-Helian kurssitarjontaan. Rekisteröityessäsi valitse tämä toteutus `Ohjelmointi 1-3012 ⛄`.
+Rekisteröidy Viopeen osoitteessa [https://vw4.viope.com/login?org=hh](https://vw4.viope.com/login?org=hh). Huomaa, että rekisteröitymisosoitteessa on oltava parametri `?org=hh`, jotta pääset käsiksi Haaga-Helian kurssitarjontaan. Rekisteröityessäsi valitse tämä toteutus `Ohjelmointi 1-3015 ⭐`.
 
 **Teknisistä syistä johtuen Viopeen palautettavista lähdekoodeista täytyy aina poistaa mahdolliset package -lauseet luokan yläpuolelta.** Viope on myös muilla tavoin erittäin tarkka ohjelmien oikeellisuudesta, mikä saattaa aiheuttaa ensimmäisillä viikoilla hämmennystä. Tyypillisiä Viope-virhetilanteita ja niiden ratkaisuja on dokumentoitu [erilliselle sivulle](wiki/Viope), jota päivitetään kurssin edetessä.
 
