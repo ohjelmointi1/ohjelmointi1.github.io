@@ -29,7 +29,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
     <tbody>
         <tr>
             <td>Ma</td>
-            <td>18.1.</td>
+            <td>23.8.</td>
             <td>
                 <strong>
                 Kurssin järjestelyt ja osallistumisen vahvistaminen<br />
@@ -55,7 +55,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
         </tr>
         <tr>
             <td>Ke</td>
-            <td>20.1.</td>
+            <td>25.8.</td>
             <td>
                 <strong>Totuusarvot ja ehtolauseet</strong><br />
                 <a href="wiki/Totuusarvot-ja-ehtolauseet">📝 Muistiinpanot</a><br />
@@ -81,7 +81,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
         </tr>
         <tr>
             <td>Ma</td>
-            <td>25.1.</td>
+            <td>30.8.</td>
             <td>
                 <strong>Toistorakenteet</strong><br />
                 <a href="wiki/Toistorakenteet">📝 Muistiinpanot</a><br />
@@ -101,7 +101,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
         </tr>
         <tr>
             <td>Ke</td>
-            <td>27.1.</td>
+            <td>1.9.</td>
             <td>
                 <strong>Merkkijonot</strong><br />
                 <em>+ Debuggerin hyödyntäminen</em><br />
@@ -129,7 +129,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
         </tr>
         <tr>
             <td>Ma</td>
-            <td>1.2.</td>
+            <td>6.9.</td>
             <td>
                 <strong>Listat</strong><br />
                 <em>+ Gitin käyttö tehtäväpohjien lataamiseksi</em><br />
@@ -160,7 +160,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
         </tr>
         <tr>
             <td>Ke</td>
-            <td>3.2.</td>
+            <td>8.9.</td>
             <td>
                 <strong>Taulukot</strong><br />
                 <a href="wiki/Taulukot-(arrays)">📝 Muistiinpanot</a><br />
@@ -188,7 +188,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
         </tr>
         <tr>
             <td>Ma</td>
-            <td>8.2.</td>
+            <td>14.9.</td>
             <td>
                 <strong>Staattiset luokkametodit, parametrit ja paluuarvot</strong><br />
                 <a href="wiki/Metodit">📝 Muistiinpanot</a><br />
@@ -209,7 +209,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
         </tr>
         <tr>
             <td>Ke</td>
-            <td>10.2.</td>
+            <td>15.9.</td>
             <td>
                 <strong>Ajan käsitteleminen Javassa<br />
                 Ohjelman paketointi ja suorittaminen Eclipsen ulkopuolella<br />
@@ -237,7 +237,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
         </tr>
         <tr>
             <td>Ma</td>
-            <td>15.2.</td>
+            <td>20.9.</td>
             <td>
                 <strong>
                 Olio-ohjelmoinnin alkeet<br />
@@ -269,7 +269,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
         </tr>
         <tr>
             <td>Ke</td>
-            <td>17.2.</td>
+            <td>22.9.</td>
             <td>
                 <strong>Olio-ohjelmointi jatkuu:<br/>
                 Luokkien yhteyssuhteet<br/>
@@ -302,7 +302,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
         </tr>
         <tr>
             <td>Ma</td>
-            <td>1.3.</td>
+            <td>27.9.</td>
             <td>
                 <strong>Olioiden vertailu ja järjestäminen</strong><br/> 
                 <a href="wiki/Olioiden-vertailu">📝 Muistiinpanot</a><br />
@@ -325,7 +325,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
         </tr>
         <tr>
             <td>Ke</td>
-            <td>3.3.</td>
+            <td>29.9.</td>
             <td>
                 <strong>Poikkeukset</strong><br />
                 <a href="wiki/Poikkeukset">📝 Muistiinpanot</a><br />
@@ -352,7 +352,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
         </tr>
         <tr>
             <td>Ma</td>
-            <td>8.3.</td>
+            <td>4.10.</td>
             <td>
                 <strong>Tekstitiedostojen lukeminen ja tallentaminen</strong><br />
                 <a href="wiki/Tiedostot">📝 Muistiinpanot</a><br />
@@ -374,7 +374,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
         </tr>
         <tr>
             <td>Ke</td>
-            <td>10.3.</td>
+            <td>6.10.</td>
             <td>
                 <strong>Kurssin aiheiden soveltaminen</strong><br />
                 <a href="wiki/Soveltavat-esimerkit">📝 Materiaali, videot ja lähdekoodit</a><br />
@@ -382,7 +382,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
         </tr>
         <tr>
             <td>Ma</td>
-            <td>15.3.</td>
+            <td>11.10.</td>
             <td>
                 <strong>Kurssin sisällön kertaus</strong><br />
                 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko08/kertaus">📁 Oppitunnin esimerkkikoodit</a><br /><br />
@@ -399,14 +399,14 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
         </tr>
         <tr>
             <td>Ke</td>
-            <td>17.3.</td>
+            <td>13.10.</td>
             <td>
-                <strong>Kurssin loppukoe klo 9-11:30</strong><br />
-                Liity Viopessa kokeeseen <a href="https://vw4.viope.com/">SWD4TN032 Ohjelmointi 1 koe 17.3.2021</a>
+                <strong>Kurssin loppukoe</strong><br />
+                <!--Liity Viopessa kokeeseen <a href="https://vw4.viope.com/">SWD4TN032 Ohjelmointi 1 koe 17.3.2021</a>
                 <br /><br />
                 Kokeessa kommunikointi sekä Viopen ulkopuolisten sivujen ja muiden materiaalien käyttäminen on kielletty. Saat kuitenkin tutkia Eclipsessä olevia aikaisempia lähdekoodejasi kokeen aikana.
                 <br /><br />
-                <a href="https://student.home.haaga-helia.fi/group/pakki/opintojaksopalaute">💬 Opintojaksopalaute</a><br />
+                <a href="https://student.home.haaga-helia.fi/group/pakki/opintojaksopalaute">💬 Opintojaksopalaute</a><br />-->
                 Viope-viikkotehtävien DL klo 9.
             </td>
         </tr>
@@ -518,7 +518,7 @@ public class OsasuoritustenArviointi {
 
 **Java ja Eclipse IDE**
 
-Tarvitset Java-ohjelmien kehittämiseksi ja suorittamiseksi [Java JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html):n (vähintään versio 9). Lähdekooditiedostojen editointiin ja ohjelmien suorittamiseen käytämme tällä kurssilla Eclipse-kehitysympäristöä, jonka voit ladata itsellesi [täältä](https://www.eclipse.org/downloads/packages/). Ole tarkkana ja valitse versio **Eclipse IDE for Enterprise Java Developers**.
+Tarvitset Java-ohjelmien kehittämiseksi ja suorittamiseksi [Java JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html):n (vähintään versio 11). Lähdekooditiedostojen editointiin ja ohjelmien suorittamiseen käytämme tällä kurssilla Eclipse-kehitysympäristöä, jonka voit ladata itsellesi [täältä](https://www.eclipse.org/downloads/packages/). Ole tarkkana ja valitse versio **Eclipse IDE for Enterprise Java Developers**.
 
 Saat käyttää myös muita työkaluja, mutta niihin ei voida tarjota käyttötukea.
 
