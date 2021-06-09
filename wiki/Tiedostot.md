@@ -238,7 +238,7 @@ Nykypäivänä suositellaan käytettäväksi UTF-8 -nimistä merkistöä, joka s
 
 ![Share of web pages with different character encoding](https://upload.wikimedia.org/wikipedia/commons/c/c4/Utf8webgrowth.svg)
 
-By Chris55 - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=51421096
+By Chris55 - Own work, CC BY-SA 4.0, [https://commons.wikimedia.org/w/index.php?curid=51421096](https://commons.wikimedia.org/w/index.php?curid=51421096)
 
 Jotta ohjelmasi toimisi luotettavasti eri suoritusympäristöissä, kannattaa aina tiedostoja luettaessa ja kirjoitettaessa määritellä käytettävä merkistökoodaus:
 
@@ -265,7 +265,6 @@ Tiedostossa on:
 2 riviä
 8 sanaa
 55 merkkiä
-esimerkkisuoritus
 ```
 
 Yllä olevassa esimerkkisuorituksessa luettiin seuraava tekstitiedosto *loremipsum.txt*:
