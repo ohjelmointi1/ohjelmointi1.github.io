@@ -188,7 +188,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
         </tr>
         <tr>
             <td>Ma</td>
-            <td>14.9.</td>
+            <td>13.9.</td>
             <td>
                 <strong>Staattiset luokkametodit, parametrit ja paluuarvot</strong><br />
                 <a href="wiki/Metodit">📝 Muistiinpanot</a><br />
@@ -294,11 +294,6 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
                 <a href="https://video.haaga-helia.fi/media/Luokat+ja+oliot+osa+7+++kokoojamuuttuja/0_8k2wjem9">📼 Kokoojamuuttujan hyödyntäminen Playlist-tehtävän kaltaisessa ongelmassa</a><br />
                 <a href="https://video.haaga-helia.fi/media/Oliot+listallaA+pituuksien+summan+laskeminen/0_c16cldiu">📼 Pelaajat listalla / "olioiden summan laskeminen"</a><br />-->
             </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><em>Talviloma</em></td>
         </tr>
         <tr>
             <td>Ma</td>
