@@ -6,17 +6,17 @@ Kurssin opettajana toimii Teemu Havulinna (*etunimi.sukunimi@haaga-helia.fi*).
 
 ## Oppitunnit
 
-Kurssin opetus järjestetään lukujärjestyksen mukaisesti MS Teamsissa kahdesti viikossa:
+Kurssin opetus järjestetään yhdistelmämallilla, eikä osallistuminen kurssille edellytä läsnäoloa yhteisissä tilaisuuksissa. Kaikki kurssin oppitunnit on julkaistu itse- ja etäopiskelua varten videomuodossa näillä sivuilla. 
+
+Ohjattua opetusta järjestetään kahdesti viikossa:
 
 * maanantaisin klo 8:15-10:45
-* keskiviikkoisin klo 9-11:45 
+* keskiviikkoisin klo 9-11:45
 
-Osa oppitunneista tallennetaan myöhempää katselua varten. Lisäksi käytettävissänne on valikoituja tallenteita aikaisemmilta ohjelmointikursseilta sekä tekstimuotoiset muistiinpanot kultakin oppitunnilta.
+Opetusta järjestetään mahdollisuuksien mukaan kampuksella luokassa 5015. Seuraa kurssin Teams-kanavaa oppituntien tarkempian sisältöjen ja toteutustapojen osalta!
 
 
 ## Aikataulu
-
-Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin oppituntiin lisätään MS Teamsiin noin päivää ennen kyseistä oppituntia.
 
 <table>
     <thead>
@@ -35,7 +35,7 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
                 Kurssin järjestelyt ja osallistumisen vahvistaminen<br />
                 Eclipse-sovelluskehitin<br />
                 Perustietotyypit</strong><br />
-                <a href="https://vw4.viope.com/login?org=hh">🔗 Viope-rekisteröityminen</a> (valitse <em>Ohjelmointi 1-3015 ⭐</em>)<br />
+                <a href="https://vw4.viope.com/login?org=hh">🔗 Viope</a> (valitse <em>Ohjelmointi 1-3015 ⭐</em>)<br />
                 <a href="wiki/Ohjelmoinnin-aloitus">📝 Muistiinpanot</a><br /><br />
                 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko01/perusteet">📁 Oppitunnin esimerkkikoodit</a><br /><br />
                 <a href="https://web.microsoftstream.com/video/f8cafe9c-976c-4f00-9713-4a8adc8d34bd">📼 Kurssin yleiset asiat</a><br />
@@ -165,7 +165,6 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
                 <strong>Taulukot</strong><br />
                 <a href="wiki/Taulukot-(arrays)">📝 Muistiinpanot</a><br />
                 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko03/taulukot">📁 Oppitunnin esimerkkikoodit</a><br /><br />
-                <a href="https://web.microsoftstream.com/video/f1b95fef-5e30-489c-8067-fdf324e8a5b2">📼 Taulukot-oppitunnin aloitus</a><br />
                 <a href="https://web.microsoftstream.com/video/99c9ef6f-d2eb-4180-8c1b-0cfef766cb10">📼 Taulukon luominen, käsitteleminen ja läpikäynti</a><br />
                 <a href="https://web.microsoftstream.com/video/613511d5-aa04-41ed-bc3b-d88c2fdd2f4e">📼 Lottotarkistin (sisäkkäiset toistorakenteet ja useita taulukoita)</a><br />
                 <a href="https://web.microsoftstream.com/video/fbbdf454-5222-43bb-840b-8579fdd47e13">📼 Säätilasto-esimerkki (csv-datan käsittely)</a><br />
@@ -383,8 +382,10 @@ Huom! Aikatauluun voidaan tehdä muutoksia kurssin edetessä. Linkki kuhunkin op
                 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko08/kertaus">📁 Oppitunnin esimerkkikoodit</a><br /><br />
                 <a href="https://student.home.haaga-helia.fi/group/pakki/opintojaksopalaute">💬 Opintojaksopalaute</a><br />
                 <br />
-                <a href="https://web.microsoftstream.com/video/888c147b-ae59-4212-8c6f-4a34da9e333a">📼 Kertaustunti, osa 1</a><br />
-                <a href="https://web.microsoftstream.com/video/5b4727d5-f196-4aec-98e3-dcdbd16b46a9">📼 Kertaustunti, osa 2</a><br />
+                <a href="https://web.microsoftstream.com/video/888c147b-ae59-4212-8c6f-4a34da9e333a">📼 Kertaustunti, osa 1 (lottorivien generointi)</a><br />
+                <a href="https://web.microsoftstream.com/video/5b4727d5-f196-4aec-98e3-dcdbd16b46a9">📼 Kertaustunti, osa 2 (lottorivien tarkistus)</a><br />
+                <a href="https://web.microsoftstream.com/video/37b9d9b4-01d1-4c1e-aeaa-8ce52e82abf0">📼 Kertaustunti, osa 3 (kalenteri-tehtävä)</a><br />
+                <a href="https://web.microsoftstream.com/video/67715ce1-53a9-442a-bba2-136e14d461c8">📼 Kertaustunti, osa 4 (suuret kaupungit -tehtävä)</a><br />
                 <!--<a href="src/viikko8/kertaus/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br/>
                 <strong>Oppitunnin videot:</strong><br />
@@ -454,8 +455,6 @@ Tällä  kurssilla opetellaan Java-kielen syntaksia, mutta erityisesti pyrimme o
 2. Kurssikoe (50 % loppuarvosanasta)
 
     * sisältää harjoitustehtävien kaltaisia ohjelmointitehtäviä
-
-    * suoritetaan Viope-järjestelmässä
 
     * arvostellaan asteikolla 0-5
 
