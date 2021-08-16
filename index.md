@@ -13,7 +13,7 @@ Ohjattua opetusta järjestetään kahdesti viikossa:
 * maanantaisin klo 8:15-10:45
 * keskiviikkoisin klo 9-11:45
 
-Opetusta järjestetään mahdollisuuksien mukaan kampuksella luokassa 5015. Seuraa kurssin Teams-kanavaa oppituntien tarkempian sisältöjen ja toteutustapojen osalta!
+Opetusta järjestetään mahdollisuuksien mukaan kampuksella luokassa 5015. Seuraa kurssin Teams-kanavaa oppituntien tarkempien sisältöjen ja toteutustapojen osalta!
 
 
 ## Aikataulu
