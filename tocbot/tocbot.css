@@ -36,3 +36,7 @@ iframe {
     resize: both;
     padding: 0 10px 10px 0;
 }
+
+.popOutLink {
+    vertical-align: top;
+}
