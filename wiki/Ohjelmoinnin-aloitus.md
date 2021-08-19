@@ -9,6 +9,28 @@ Tällä oppitunnilla tutustumme Java-lähdekooditiedostojen rakenteeseen sekä k
 
 <div class="js-toc"></div>
 
+# Oppitunnin videot
+
+Videoiden katsominen edellyttää liittymistä kurssin Teams-ryhmään ja kirjautumista MS Stream -palveluun Haaga-Helian käyttäjätunnuksellasi.
+
+## [Kurssin yleiset asiat](https://web.microsoftstream.com/video/f8cafe9c-976c-4f00-9713-4a8adc8d34bd) *10:54*
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/f8cafe9c-976c-4f00-9713-4a8adc8d34bd?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+
+## [Ensimmäisen Java-ohjelman kirjoittaminen ja lähetys Viopeen](https://web.microsoftstream.com/video/00c2134a-6187-46d7-a7ac-da7218ff4a10) *41:46*
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/00c2134a-6187-46d7-a7ac-da7218ff4a10?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Videon lähdekoodit: [https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko01/perusteet](https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko01/perusteet)
+
+## [Javan muuttujat ja lukujen tietotyypit](https://web.microsoftstream.com/video/e5771426-2a6d-4aa4-be5b-ecd7dbe03805) *1:03:33*
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/e5771426-2a6d-4aa4-be5b-ecd7dbe03805?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Videon lähdekoodit: [https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko01/perusteet](https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko01/perusteet)
+
+
 # Java-lähdekooditiedostot
 
 Java-ohjelmat koostuvat aina **luokista** (class). Tyypillisesti kukin luokka tallennetaan omaan `.java`-päätteiseen tiedostoonsa. Tiedoston sisällä ohjelmakoodi kirjoitetaan ns. luokan sisään:

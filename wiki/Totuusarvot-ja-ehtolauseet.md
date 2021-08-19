@@ -14,6 +14,37 @@ Katso myös: [Ehtolauseet ja vaihtoehtoinen toiminta, Ohjelmoinnin MOOC 2020](ht
 <div class="js-toc"></div>
 
 
+# Oppitunnin videot
+
+Videoiden katsominen edellyttää liittymistä kurssin Teams-ryhmään ja kirjautumista MS Stream -palveluun Haaga-Helian käyttäjätunnuksellasi.
+
+Videoiden lähdekoodit löydät [GitHub-palvelusta](https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko01/ehtorakenteet).
+
+## [Scanner ja DecimalFormat](https://web.microsoftstream.com/video/72835f81-cea0-45e8-b2fe-7deb472eb8fd) *37:23*
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/72835f81-cea0-45e8-b2fe-7deb472eb8fd?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+
+## [Totuusarvot ja vertailuoperaatiot](https://web.microsoftstream.com/video/c1d1f2cd-8d56-4a2c-81d1-7c27caf574bc) *30:04*
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/c1d1f2cd-8d56-4a2c-81d1-7c27caf574bc?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+
+## [Kangaskassit-esimerkki (if-else if-else)](https://web.microsoftstream.com/video/d45036ec-153e-4685-b5cc-638ac608a657) *23:41*
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/d45036ec-153e-4685-b5cc-638ac608a657?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+
+## [Kellonaikojen vertailu ja LocalTime](https://web.microsoftstream.com/video/a0a57cc7-bfa1-46ae-b088-6a01b947d47a) *7:43*
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/a0a57cc7-bfa1-46ae-b088-6a01b947d47a?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+
+## [Matkalippujen hinnat -esimerkki](https://web.microsoftstream.com/video/55c3e7f7-f3e3-4c83-b370-dee3635dea83) *20:54*
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/55c3e7f7-f3e3-4c83-b370-dee3635dea83?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+
 # Totuusarvot (boolean)
 
 Javassa on kaksi totuusarvoa: `true` ja `false`, jotka ovat tyypiltään `boolean`:
