@@ -22,7 +22,7 @@ function addVideoPopOutLinks() {
     videoFrames.forEach(frame => {
         let url = frame.src;
         let popOutLink = document.createElement('a');
-        popOutLink.class = 'popOutLink';
+        popOutLink.className = 'popOutLink';
         popOutLink.innerHTML = '🗗';
         popOutLink.title = 'Avaa uudessa ikkunassa';
         popOutLink.href = url;
