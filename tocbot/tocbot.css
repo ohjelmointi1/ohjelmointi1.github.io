@@ -40,3 +40,10 @@ iframe {
 .popOutLink {
     vertical-align: top;
 }
+
+#content h2 em {
+	font-size: 0.75em;
+	color: #bbb;
+	padding-left: 7px;
+	font-style: normal;
+}

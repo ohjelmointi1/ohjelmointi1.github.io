@@ -9,6 +9,30 @@ Tällä oppitunnilla tutustumme tarkemmin olioiden yhtäsuuruuden ja suuruusjär
 
 <div class="js-toc"></div>
 
+# Oppitunnin videot
+
+Videoiden katsominen edellyttää kirjautumista MS Stream -palveluun Haaga-Helian käyttäjätunnuksellasi ja liittymistä kurssin Teams-ryhmään.
+
+## [Olioiden vertailu: equals-metodi](https://web.microsoftstream.com/video/5900cbc8-bdf8-4398-9d36-5d54890eaad9) *38:34*
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/5900cbc8-bdf8-4398-9d36-5d54890eaad9?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+[Videolla esiintyvät lähdekoodit](https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko06/)
+
+
+## [Olion tyypin selvittäminen ja tyyppimuunnokset](https://web.microsoftstream.com/video/e0f9ab75-4957-4286-9170-913cf835d1e8) *15:55*
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/e0f9ab75-4957-4286-9170-913cf835d1e8?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+[Videolla esiintyvät lähdekoodit](https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko06/)
+
+
+## [Olioiden järjestäminen ja compareTo-metodi](https://web.microsoftstream.com/video/5ac62905-079c-4bcd-9fd5-470c1974518c) *37:11*
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/5ac62905-079c-4bcd-9fd5-470c1974518c?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+[Videolla esiintyvät lähdekoodit](https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko06/)
+
 
 # Olioiden vertaileminen
 

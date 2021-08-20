@@ -16,6 +16,30 @@ Huomaa, että Java-kääntäjän antamat virheet sekä varoitukset eivät liity 
 
 <div class="js-toc"></div>
 
+# Oppitunnin videot
+
+Videoiden katsominen edellyttää kirjautumista MS Stream -palveluun Haaga-Helian käyttäjätunnuksellasi ja liittymistä kurssin Teams-ryhmään.
+
+## [Poikkeukset ja niihin varautuminen](https://web.microsoftstream.com/video/63ec3ae4-3b02-43b5-9903-45bf34c52c92) *47:05*
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/63ec3ae4-3b02-43b5-9903-45bf34c52c92?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+[Videolla esiintyvät lähdekoodit](https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko06/poikkeukset)
+
+
+## [Virheiden paikantaminen, poikkeustyypit ja finally-lohko](https://web.microsoftstream.com/video/64f44c7d-b7ec-4d3c-9448-5aeb87cec819) *39:20*
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/64f44c7d-b7ec-4d3c-9448-5aeb87cec819?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+[Videolla esiintyvät lähdekoodit](https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko06/poikkeukset)
+
+
+## [Poikkeusten heittäminen](https://web.microsoftstream.com/video/7ac99180-b044-4638-a360-12dded0e32d7) *25:20*
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/7ac99180-b044-4638-a360-12dded0e32d7?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+[Videolla esiintyvät lähdekoodit](https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko06/poikkeukset)
+
 
 # Poikkeukset käytännössä
 

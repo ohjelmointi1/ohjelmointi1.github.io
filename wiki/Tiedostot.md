@@ -10,6 +10,31 @@ Tällä oppitunnilla tutustumme Javan `java.nio.files`-pakettiin, joka tarjoaa m
 <div class="js-toc"></div>
 
 
+# Oppitunnin videot
+
+Videoiden katsominen edellyttää kirjautumista MS Stream -palveluun Haaga-Helian käyttäjätunnuksellasi ja liittymistä kurssin Teams-ryhmään.
+
+## [Tiedoston lukeminen ja poikkeusten käsittely](https://web.microsoftstream.com/video/e8bd93e6-c0e2-477f-8716-a8aa820098f9) *48:09*
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/e8bd93e6-c0e2-477f-8716-a8aa820098f9?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+[Videolla esiintyvät lähdekoodit](https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko07/tiedostot)
+
+
+## [Tiedoston kirjoittaminen, CSV-tiedostot ja Kalenteri-esimerkki](https://web.microsoftstream.com/video/1f04b290-b302-476d-94ff-3abd2cf44e55) *54:22*
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/1f04b290-b302-476d-94ff-3abd2cf44e55?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+[Videolla esiintyvät lähdekoodit](https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko07/tiedostot)
+
+
+## [CSV-käsittelyn refaktorointi](https://web.microsoftstream.com/video/54005f94-5609-45b2-9b96-9a6795655a6a) *7:43*
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/54005f94-5609-45b2-9b96-9a6795655a6a?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+[Videolla esiintyvät lähdekoodit](https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko07/tiedostot)
+
+
 # Tiedostojen lukeminen ja kirjoittaminen
 
 Suurten tiedostojen käsittely ohjelmallisesti saattaa aiheuttaa merkittäviä suorituskykyhaasteita:
