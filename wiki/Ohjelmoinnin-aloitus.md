@@ -17,18 +17,29 @@ Videoiden katsominen edellyttää liittymistä kurssin Teams-ryhmään ja kirjau
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/f8cafe9c-976c-4f00-9713-4a8adc8d34bd?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+Tällä videolla tutustumme kurssin sisältöön ja arviointiin sekä kurssilla käytettäviin ohjelmiin ja web-palveluihin.
+
+* [Viope](https://hh.viope.com/)
+* [Javan lataussivu (JDK)](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* [Eclipsen lataussivu](https://www.eclipse.org/downloads/packages/)
+
 
 ## [Ensimmäisen Java-ohjelman kirjoittaminen ja lähetys Viopeen](https://web.microsoftstream.com/video/00c2134a-6187-46d7-a7ac-da7218ff4a10) *41:46*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/00c2134a-6187-46d7-a7ac-da7218ff4a10?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Videon lähdekoodit: [https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko01/perusteet](https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko01/perusteet)
+Tällä videolla tutustumme Java-lähdekooditiedostojen sisältöön ja editointiin Eclipse-koodieditorilla. Luomme uuden projektin, jota käytetään kurssilla jatkossa oppitunneilla ja viikkoharjoitusten koodaamiseen. Lähetämme ensimmäisen tehtävän ratkaisun Viopeen ja tutustumme tyypillisimpiin virhetilanteisiin, joiden vuoksi Viope ei välttämättä hyväksy lähettämääsi ratkaisua.
+
+[Videon lähdekoodit](https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko01/perusteet)
+
 
 ## [Javan muuttujat ja lukujen tietotyypit](https://web.microsoftstream.com/video/e5771426-2a6d-4aa4-be5b-ecd7dbe03805) *1:03:33*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/e5771426-2a6d-4aa4-be5b-ecd7dbe03805?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Videon lähdekoodit: [https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko01/perusteet](https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko01/perusteet)
+Tällä videolla tutustumme Javan tietotyyppeihin, niiden ominaisuuksiin sekä rajoitteisiin. Opimme valitsemaan oikean lukutyypin `int`, `long` ja `double` vaihtoehdoista käyttötarpeen mukaan ja käyttämään eri tyyppisiä muuttujia. Muokkaamme myös Eclipsen asetuksia siten, että lähdekooditiedostoissa esiintyvät erikoismerkit ja ääkköset näkyvät oikein.
+
+[Videon lähdekoodit](https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko01/perusteet)
 
 
 # Java-lähdekooditiedostot

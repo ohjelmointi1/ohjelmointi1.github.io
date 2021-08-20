@@ -35,7 +35,7 @@ Opetusta järjestetään mahdollisuuksien mukaan kampuksella luokassa 5015. Seur
                 Kurssin järjestelyt ja osallistumisen vahvistaminen<br />
                 Eclipse-sovelluskehitin<br />
                 Perustietotyypit</strong><br />
-                <a href="https://vw4.viope.com/login?org=hh">🔗 Viope</a> (valitse <em>Ohjelmointi 1-3015 ⭐</em>)<br />
+                <a href="https://hh.viope.com/">🔗 Viope</a> (valitse <em>Ohjelmointi 1-3015 ⭐</em>)<br />
                 <a href="wiki/Ohjelmoinnin-aloitus">📝 Muistiinpanot</a><br /><br />
                 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko01/perusteet">📁 Oppitunnin esimerkkikoodit</a><br /><br />
                 <a href="https://web.microsoftstream.com/video/f8cafe9c-976c-4f00-9713-4a8adc8d34bd">📼 Kurssin yleiset asiat</a><br />
@@ -398,7 +398,7 @@ Opetusta järjestetään mahdollisuuksien mukaan kampuksella luokassa 5015. Seur
             <td>13.10.</td>
             <td>
                 <strong>Kurssin loppukoe</strong><br />
-                <!--Liity Viopessa kokeeseen <a href="https://vw4.viope.com/">SWD4TN032 Ohjelmointi 1 koe 17.3.2021</a>
+                <!--Liity Viopessa kokeeseen <a href="https://hh.viope.com/">SWD4TN032 Ohjelmointi 1 koe 17.3.2021</a>
                 <br /><br />
                 Kokeessa kommunikointi sekä Viopen ulkopuolisten sivujen ja muiden materiaalien käyttäminen on kielletty. Saat kuitenkin tutkia Eclipsessä olevia aikaisempia lähdekoodejasi kokeen aikana.
                 <br /><br />
@@ -520,7 +520,7 @@ Saat käyttää myös muita työkaluja, mutta niihin ei voida tarjota käyttötu
 
 Kurssin harjoitustehtävien tehtävänannot löytyvät Viope-järjestelmästä, jonne tehtävät myös palautetaan, ja joka tarkistaa tehtävät automaattisesti. 
 
-Rekisteröidy Viopeen osoitteessa [https://vw4.viope.com/login?org=hh](https://vw4.viope.com/login?org=hh). Huomaa, että rekisteröitymisosoitteessa on oltava parametri `?org=hh`, jotta pääset käsiksi Haaga-Helian kurssitarjontaan. Rekisteröityessäsi valitse tämä toteutus `Ohjelmointi 1-3015 ⭐`.
+Rekisteröidy Viopeen osoitteessa [https://hh.viope.com/](https://hh.viope.com/). Rekisteröityessäsi valitse tämä toteutus (**Ohjelmointi 1-3015 ⭐**).
 
 **Teknisistä syistä johtuen Viopeen palautettavista lähdekoodeista täytyy aina poistaa mahdolliset package -lauseet luokan yläpuolelta.** Viope on myös muilla tavoin erittäin tarkka ohjelmien oikeellisuudesta, mikä saattaa aiheuttaa ensimmäisillä viikoilla hämmennystä. Tyypillisiä Viope-virhetilanteita ja niiden ratkaisuja on dokumentoitu [erilliselle sivulle](wiki/Viope), jota päivitetään kurssin edetessä.
 
