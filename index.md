@@ -510,13 +510,13 @@ public class OsasuoritustenArviointi {
 
 ## Kurssin työkalut
 
-**Java ja Eclipse IDE**
+### Java ja Eclipse IDE
 
 Tarvitset Java-ohjelmien kehittämiseksi ja suorittamiseksi [Java JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html):n (vähintään versio 11). Lähdekooditiedostojen editointiin ja ohjelmien suorittamiseen käytämme tällä kurssilla Eclipse-kehitysympäristöä, jonka voit ladata itsellesi [täältä](https://www.eclipse.org/downloads/packages/). Ole tarkkana ja valitse versio **Eclipse IDE for Enterprise Java Developers**.
 
 Saat käyttää myös muita työkaluja, mutta niihin ei voida tarjota käyttötukea.
 
-**Viope**
+### Viope
 
 Kurssin harjoitustehtävien tehtävänannot löytyvät Viope-järjestelmästä, jonne tehtävät myös palautetaan, ja joka tarkistaa tehtävät automaattisesti. 
 
@@ -524,7 +524,7 @@ Rekisteröidy Viopeen osoitteessa [https://hh.viope.com/](https://hh.viope.com/)
 
 **Teknisistä syistä johtuen Viopeen palautettavista lähdekoodeista täytyy aina poistaa mahdolliset package -lauseet luokan yläpuolelta.** Viope on myös muilla tavoin erittäin tarkka ohjelmien oikeellisuudesta, mikä saattaa aiheuttaa ensimmäisillä viikoilla hämmennystä. Tyypillisiä Viope-virhetilanteita ja niiden ratkaisuja on dokumentoitu [erilliselle sivulle](wiki/Viope), jota päivitetään kurssin edetessä.
 
-**Teams**
+### Teams
 
 Tällä kurssilla käytetään viestintään ja oppitunteihin Microsoftin Teams -palvelua. Jos jäät jumiin koodisi kanssa tai et ymmärrä materiaaleja tai tehtävänantoja, kysy rohkeasti vinkkejä Teamsissa oppitunnin aikana ja käytä Teamsin chattia oppituntien ulkopuolella. Todennäköisesti samaa ongelmaa pohtii kanssasi myös moni muu, joten kysymykset ovat erittäin tervetulleita.
 
@@ -536,7 +536,7 @@ Teams on saatavilla puhelimien sovelluskaupoista sekä työpöytäsovelluksena, 
 * Web-käyttöliittymä: [https://teams.microsoft.com/](https://teams.microsoft.com/)
 * Lataussivu: [https://teams.microsoft.com/downloads](https://teams.microsoft.com/downloads)
 
-**GitHub**
+### GitHub
 
 Kurssin tehtäväpohjien ja malliratkaisujen jakelussa hyödynnetään ohjelmistokehityksen alalla erittäin vakiintunutta Git-versionhallintaa ja GitHub-palvelua. Voit kloonata itsellesi tämän projektin repositorion ylälaidassa olevien painikkeiden avulla. Kurssin edetessä projektiin lisätään uusia tiedostoja, jotka voit myös päivittää itsellesi Git:in avulla.
 
