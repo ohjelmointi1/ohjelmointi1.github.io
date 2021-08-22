@@ -513,7 +513,7 @@ public class OsasuoritustenArviointi {
 
 ### Java ja Eclipse IDE
 
-Tarvitset Java-ohjelmien kehittämiseksi ja suorittamiseksi [Java JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html):n (vähintään versio 11). Lähdekooditiedostojen editointiin ja ohjelmien suorittamiseen käytämme tällä kurssilla Eclipse-kehitysympäristöä, jonka voit ladata itsellesi [täältä](https://www.eclipse.org/downloads/packages/). Ole tarkkana ja valitse versio **Eclipse IDE for Enterprise Java Developers**.
+Tarvitset Java-ohjelmien kehittämiseksi ja suorittamiseksi [Java JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html):n (vähintään versio 11). Lähdekooditiedostojen editointiin ja ohjelmien suorittamiseen käytämme tällä kurssilla Eclipse-kehitysympäristöä, jonka voit ladata itsellesi [täältä](https://www.eclipse.org/downloads/packages/). Ole tarkkana ja valitse versio **Eclipse IDE for Enterprise Java and Web Developers**.
 
 Saat käyttää myös muita työkaluja, mutta niihin ei voida tarjota käyttötukea.
 
