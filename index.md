@@ -37,7 +37,7 @@ Opetusta järjestetään mahdollisuuksien mukaan kampuksella luokassa 5015. Seur
                 Eclipse-sovelluskehitin<br />
                 Perustietotyypit</strong><br />
                 <a href="https://hh.viope.com/">🔗 Viope</a> (valitse <em>Ohjelmointi 1-3015 ⭐</em>)<br />
-                <a href="wiki/Ohjelmoinnin-aloitus">📝 Oppimateriaali</a><br /><br />
+                <a href="wiki/Ohjelmoinnin-aloitus">📝 Oppimateriaali</a><br />
                 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3015/tree/main/src/viikko01/perusteet">📁 Oppitunnin esimerkkikoodit</a><br /><br />
                 <a href="https://web.microsoftstream.com/video/f8cafe9c-976c-4f00-9713-4a8adc8d34bd">📼 Kurssin yleiset asiat</a><br />
                 <a href="https://web.microsoftstream.com/video/00c2134a-6187-46d7-a7ac-da7218ff4a10">📼 Ensimmäisen Java-ohjelman kirjoittaminen ja lähetys Viopeen</a><br />
