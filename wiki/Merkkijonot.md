@@ -47,9 +47,6 @@ if (vastaus.equalsIgnoreCase("kyllä")) {
 }
 ```
 
-## Debuggerin käyttö ohjelman suorituksen tutkimiseksi
-
-Oppitunnilla käsiteltävä demo Eclipsen debuggerista.
 
 
 ## Merkkijonojen metodien käyttäminen
@@ -69,11 +66,13 @@ String tilinumero = "    fi3315723000500504  ".trim().toUpperCase(); // "FI33157
 
 Huomaa, että mikään yllä olevista metodeista ei muuta alkuperäistä merkkijonoa, vaan ne palauttavat uuden merkkijonon. 
 
+
 ## Oppitunnin videotallenne: String-luokan metodit: length, substring...
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/c1991f30-5797-45e7-8030-a24ecb751064?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
 [String-luokan metodit: length, substring... (MS Stream)](https://web.microsoftstream.com/video/c1991f30-5797-45e7-8030-a24ecb751064)
+
 
 ## Muuttumattomuus (immutability)
 
