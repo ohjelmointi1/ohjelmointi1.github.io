@@ -42,6 +42,17 @@ Tällä videolla tutustumme Javan tietotyyppeihin, niiden ominaisuuksiin sekä r
 [Videon lähdekoodit](https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko01/perusteet)
 
 
+## [Scanner ja DecimalFormat](https://web.microsoftstream.com/video/72835f81-cea0-45e8-b2fe-7deb472eb8fd) *37:23*
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/72835f81-cea0-45e8-b2fe-7deb472eb8fd?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Tällä videolla katsomme, miten käyttäjän teksti- ja numeromuotoisia syötteitä voidaan lukea ja käsitellä Javan **Scanner**-työkalun avulla. Tutustumme lisäksi **DecimalFormat**-työkaluun, jonka avulla voimme määritellä liukulukujen tulostuksessa käytettävän tarkkuuden. 
+
+Lähdekoodit: [SyotteidenLukeminen.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/perusteet/SyotteidenLukeminen.java), 
+[NumeroidenLukeminen.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/perusteet/NumeroidenLukeminen.java)
+
+
+
 # Java-lähdekooditiedostot
 
 Java-ohjelmat koostuvat aina **luokista** (class). Tyypillisesti kukin luokka tallennetaan omaan `.java`-päätteiseen tiedostoonsa. Tiedoston sisällä ohjelmakoodi kirjoitetaan ns. luokan sisään:

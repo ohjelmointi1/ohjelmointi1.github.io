@@ -18,31 +18,58 @@ Katso myös: [Ehtolauseet ja vaihtoehtoinen toiminta, Ohjelmoinnin MOOC 2020](ht
 
 Videoiden katsominen edellyttää liittymistä kurssin Teams-ryhmään ja kirjautumista MS Stream -palveluun Haaga-Helian käyttäjätunnuksellasi.
 
-Videoiden lähdekoodit löydät [GitHub-palvelusta](https://github.com/ohjelmointi1/ohjelmointi1-3012/tree/main/src/viikko01/ehtorakenteet).
+<!-- todo: poista eka video -->
 
 ## [Scanner ja DecimalFormat](https://web.microsoftstream.com/video/72835f81-cea0-45e8-b2fe-7deb472eb8fd) *37:23*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/72835f81-cea0-45e8-b2fe-7deb472eb8fd?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+Tällä videolla katsomme, miten käyttäjän teksti- ja numeromuotoisia syötteitä voidaan lukea ja käsitellä Javan **Scanner**-työkalun avulla. Tutustumme lisäksi **DecimalFormat**-työkaluun, jonka avulla voimme määritellä liukulukujen tulostuksessa käytettävän tarkkuuden. Tähän videoon liittyvä teoriaosuus löytyy [ensimmäisen oppitunnin oppimateriaalista](wiki/Ohjelmoinnin-aloitus).
+
+Lähdekoodit: [SyotteidenLukeminen.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/perusteet/SyotteidenLukeminen.java), 
+[NumeroidenLukeminen.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/perusteet/NumeroidenLukeminen.java)
 
 ## [Totuusarvot ja vertailuoperaatiot](https://web.microsoftstream.com/video/c1d1f2cd-8d56-4a2c-81d1-7c27caf574bc) *30:04*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/c1d1f2cd-8d56-4a2c-81d1-7c27caf574bc?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+Tällä videolla perehdymme Javan totuusarvioihin sekä erilaisiin vertailuoperaatioihin, joiden tuloksina syntyy totuusarvoja. Määrittelemme totuusarvoja varten `boolean`-muuttujia ja teemme yksinkertaisen `if`-ehtolauseen. 
+
+Lähdekoodit: 
+[Totuusarvot.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/ehtorakenteet/Totuusarvot.java), 
+[ArvojenVertailu.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/ehtorakenteet/ArvojenVertailu.java),
+[Kasino.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/ehtorakenteet/Kasino.java),
+[EdullisempiPuoleenHintaan.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/ehtorakenteet/EdullisempiPuoleenHintaan.java),
+[EdullisempiPuoleenHintaan2.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/ehtorakenteet/EdullisempiPuoleenHintaan2.java)
 
 ## [Kangaskassit-esimerkki (if-else if-else)](https://web.microsoftstream.com/video/d45036ec-153e-4685-b5cc-638ac608a657) *23:41*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/d45036ec-153e-4685-b5cc-638ac608a657?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Tällä videolla sovellamme totuusarvoja ja ehtolauseita monimutkaisemmassa esimerkissä. Vertailtavalle arvolle määritellään useita toisistaan riippuvia ehtoja. Tehtävän idea perustuu [Ilta-Sanomien artikkeliin](https://www.is.fi/taloussanomat/art-2000006283077.html).
+
+Lähdekoodit: 
+[Kangaskassit.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/ehtorakenteet/Kangaskassit.java)
 
 
 ## [Kellonaikojen vertailu ja LocalTime](https://web.microsoftstream.com/video/a0a57cc7-bfa1-46ae-b088-6a01b947d47a) *7:43*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/a0a57cc7-bfa1-46ae-b088-6a01b947d47a?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+Tällä videolla tutustumme siihen, miten voit ohjelmassasi hyödyntää tietokoneen käyttöjärjestelmän kellonaikaa luodessasi ajasta riippuvaista ohjelmalogiikkaa. Videolla käsitellään Viope-tehtävää 2.2 (Tervehdykset).
+
+Lähdekoodit: 
+[Tervehdykset.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/ehtorakenteet/Tervehdykset.java)
+
 
 ## [Matkalippujen hinnat -esimerkki](https://web.microsoftstream.com/video/55c3e7f7-f3e3-4c83-b370-dee3635dea83) *20:54*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/55c3e7f7-f3e3-4c83-b370-dee3635dea83?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Tällä videolla käsittelemme esimerkkiä, jossa on peräkkäisiä ehtorakenteita. Videolla koodattava esimerkkiohjelma selvittää [HSL:n lippuhinnaston](https://www.hsl.fi/liput-ja-hinnat) ja mahdollisten opiskelija-alennusten perusteella, kannattaako käyttäjän ostaa julkisen liikenteen kausilippu vai kertalippuja.
+
+Lähdekoodit: 
+[MatkalippujenHinnat.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/ehtorakenteet/MatkalippujenHinnat.java)
 
 
 # Totuusarvot (boolean)
