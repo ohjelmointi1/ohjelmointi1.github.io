@@ -539,6 +539,8 @@ Teams on saatavilla puhelimien sovelluskaupoista sekä työpöytäsovelluksena, 
 
 ### GitHub
 
-Kurssin tehtäväpohjien ja malliratkaisujen jakelussa hyödynnetään ohjelmistokehityksen alalla erittäin vakiintunutta Git-versionhallintaa ja GitHub-palvelua. Voit kloonata itsellesi tämän projektin repositorion ylälaidassa olevien painikkeiden avulla. Kurssin edetessä projektiin lisätään uusia tiedostoja, jotka voit myös päivittää itsellesi Git:in avulla.
+Kurssin tehtäväpohjien ja malliratkaisujen jakelussa hyödynnetään ohjelmistokehityksen alalla erittäin vakiintunutta Git-versionhallintaa ja GitHub-palvelua. Voit tutustua kurssin esimerkkikoodeihin osoitteessa [https://github.com/ohjelmointi1/ohjelmointi1-3015](https://github.com/ohjelmointi1/ohjelmointi1-3015). Halutessasi voit myös "kloonata" esimerkit omaan Eclipseesi seuraavalla osoitteella (file &rarr; import &rarr; projects from Git):
+
+    https://github.com/ohjelmointi1/ohjelmointi1-3015.git
 
 Gitin käytön opetteluun voit käyttää esimerkiksi Helsingin yliopiston erinomaista "Tietokone Työvälineenä"-kurssin Git-materiaalia: [https://tkt-lapio.github.io/git/](https://tkt-lapio.github.io/git/). Vaikka Git tuntuisi aluksi vaikealta tai ahdistavalta, sinun ei tarvitse opetella kaikkea kerralla, vaan tee vain sen verran mistä on sinulle välitöntä hyötyä. Voit hyvin suorittaa tämän kurssin myös perehtymättä erikseen Gittiin.
