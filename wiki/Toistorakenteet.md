@@ -12,11 +12,13 @@ Tällä opetusviikolla harjoittelemme pääasiassa koodin toistamista tietyn mä
 <div class="js-toc"></div>
 
 
-# Johdanto toistorakenteisiin ja while-rakenteen hyödyntäminen
+# [Johdanto toistorakenteisiin ja while-rakenteen hyödyntäminen](https://web.microsoftstream.com/video/f2aa8a54-a86a-484e-a60d-0e80cde9a891) *42:49*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/f2aa8a54-a86a-484e-a60d-0e80cde9a891?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Video vaatii tunnistautumisen HH-tunnuksellasi. [Katso MS Streamissa.](https://web.microsoftstream.com/video/f2aa8a54-a86a-484e-a60d-0e80cde9a891)
+Tällä videolla perehdymme koodin toistamiseen ja while-toistorakenteeseen. Käymme läpi käsitteet *alustus*, *toistoehto* ja *kasvatus*. Videon jälkimmäisessä esimerkissä sovellamme toistoa käymällä arvoja läpi ensin 500:n ja lopuksi 1000:n arvon välein. Tutustumme myös hieman edistyneempään muotoiluun DecimalFormat-työkalulla.
+
+Videon lähdekoodit: [WhileToisto.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko02/toisto/WhileToisto.java), [HinnanValintaHTML.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko02/toisto/HinnanValintaHTML.java).
 
 
 
@@ -139,12 +141,13 @@ Yllä olevat HTML-valintaelementit muodostetaan [select](https://developer.mozil
 Tässä tuntiesimerkissä kokeilemme itse generoida HTML-elementit Javan toistorakenteen avulla. Aikaisemmasta esimerkistä poiketen emme kasvatakaan lukua yhdellä, vaan 500:lla. Muuten koodi on hyvin samankaltainen. Lukujen muotoilussa hyödynnetään DecimalFormat-luokkaa siten, että muotoilussa on käytetty tuhaterotinta (`.`) ja ehdollisia numeroita (`#`): `#,### €`.
 
 
-# For-toistorakenne
+# [For-toistorakenne](https://web.microsoftstream.com/video/aa745036-e5a0-489e-9bb3-85fcb84a4b55) *23:25*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/aa745036-e5a0-489e-9bb3-85fcb84a4b55?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Video vaatii tunnistautumisen HH-tunnuksellasi. [Katso MS Streamissa.](https://web.microsoftstream.com/video/aa745036-e5a0-489e-9bb3-85fcb84a4b55)
+Tällä videolla perehdymme for-toistorakenteeseen ja sen eroihin verrattuna while-rakenteeseen. Sovellamme toistorakennetta tehdäksemme vuosilukuja alaspäin läpikäyvän algoritmin. Perehdymme nykyisen vuosiluvun selvittämiseen ohjelmallisesti Javan Year-luokan avulla.
 
+Videon lähdekoodit: [ForToisto.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko02/toisto/ForToisto.java), [VuosiluvunValinta.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko02/toisto/VuosiluvunValintaHTML.java)
 
 ## Alustus, toistoehto ja kasvatus
 
@@ -319,12 +322,22 @@ System.out.println("kiitos ja kuulemiin.");
 
 Tässä esimerkissä merkkijonoja vertaillaan `equals`-metodilla, jota käsittelemme tarkemmin seuraavalla oppitunnilla.
 
-# Oppitunnin soveltavat esimerkit
+# [Oppitunnin soveltavat esimerkit](https://web.microsoftstream.com/video/c3e79c0e-02d9-40df-96ad-309c235fff35) *50:15*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/c3e79c0e-02d9-40df-96ad-309c235fff35?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Video vaatii tunnistautumisen HH-tunnuksellasi. [Katso MS Streamissa.](https://web.microsoftstream.com/video/c3e79c0e-02d9-40df-96ad-309c235fff35)
+Tällä videolla perehdymme erilaisiin muuttujien rooleihin ja eri tapoihin hyödyntää muuttujia osana ohjelmallista ongelmanratkaisua. Opettelemme keskeyttämään toiston heti tietyn ehdon toteuduttua `break`-avainsanalla.
 
+Videon toisessa esimerkissä käsittelemme ohjelmointipiireissä klassikoksi muodostunutta FizzBuzz-esimerkkiä, joka kertaa ja syventää myös kurssilla käsiteltyjä ehtorakenteita sekä laskuoperaatioita.
+
+Viimeisessä esimerkissä toteutamme Java-luokan, josta kutsutaan toisessa luokassa olevaa koodia. Lopputuloksena saamme ohjelman, joka laskee kurssin loppuarvosanan osasuoritusten arvosanojen perusteella.
+
+Videon lähdekoodit:
+
+* [Sademaarat.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko02/toisto/Sademaarat.java)
+* [FizzBuzz.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko02/toisto/FizzBuzz.java)
+* [ArvosanaAsteikko.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko02/toisto/ArvosanaAsteikko.java)
+* [OsasuoritustenArviointi.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/arviointi/OsasuoritustenArviointi.java)
 
 ## FizzBuzz
 

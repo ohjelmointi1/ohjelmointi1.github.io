@@ -41,6 +41,7 @@ iframe {
     vertical-align: top;
 }
 
+#content h1 em,
 #content h2 em {
 	font-size: 0.75em;
 	color: #bbb;
