@@ -11,16 +11,19 @@ Tällä viikolla tutustumme Javan kenties yleisimpään kokoelmaan: listoihin. L
 <div class="js-toc"></div>
 
 
-# Tehtäväpohjien kloonaaminen GitHubista
+# Tehtäväpohjien kloonaaminen GitHubista *9:48*
 
-Tällä viikolla teemme Viopessa tehtäväkokonaisuuden, joka on lainattu [Helsingin yliopiston Ohjelmoinnin MOOC -kurssilta](https://ohjelmointi-20.mooc.fi/osa-3/2-listat). Tehtäväkokonaisuuden suoraviivaistamiseksi tehtäviin on saatavilla valmiit pohjat GitHubissa osoitteessa [https://github.com/swd1tn002/mooc.fi-2019-osa3/](https://github.com/swd1tn002/mooc.fi-2019-osa3/). Voit kopioida tehtäväpohjat itsellesi yksi kerrallaan Viope-tehtävän linkkien kautta, tai kopioida koko projektipohjan kerralla. Alla oleva video esittelee, miten projekti *kloonataan* GitHubista omaan Eclipseen:
+Tällä viikolla teemme Viopessa tehtäväkokonaisuuden, joka on lainattu [Helsingin yliopiston Ohjelmoinnin MOOC -kurssilta](https://ohjelmointi-20.mooc.fi/osa-3/2-listat). Tehtäväkokonaisuuden suoraviivaistamiseksi tehtäviin on saatavilla valmiit pohjat GitHubissa osoitteessa [https://github.com/swd1tn002/mooc.fi-2019-osa3/](https://github.com/swd1tn002/mooc.fi-2019-osa3/). 
+
+Voit kopioida tehtäväpohjat itsellesi yksi kerrallaan Viope-tehtävän linkkien kautta, tai kopioida koko projektipohjan kerralla. Alla oleva video esittelee, miten projekti *kloonataan* GitHubista omaan Eclipseen:
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/05754f1f-06c2-4142-8423-7cbb22bff651?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+Huom! Tehdessäsi tehtäväpohjiin liittyviä tehtäviä Viopessa, varmista tehtävän nimen ja muokattavan luokan perusteella, että käsittelet oikeaa tehtäväpohjaa. Tehtävien numerointi poikkeaa hieman toisistaan Viopessa ja GitHubissa.
 
 # ArrayList:in perusteet
 
-Seuraava [Helsingin yliopiston Ohjelmoinnin MOOC -kurssin](https://ohjelmointi-20.mooc.fi/osa-3/2-listat) video esittelee Javan ArrayList-tietorakenteen toimintaa ja käyttämistä:
+Seuraava valinnainen [Helsingin yliopiston Ohjelmoinnin MOOC -kurssin video](https://ohjelmointi-20.mooc.fi/osa-3/2-listat) esittelee Javan ArrayList-tietorakenteen toimintaa ja käyttämistä:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-y67VJ68Izs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -87,8 +90,11 @@ ArrayList<Boolean> totuusarvot = new ArrayList<>();
 
 Listoja käytetään aina kutsumalla listan metodeja. Seuraava oppituntitallenne käy läpi keskeiset listaoperaatiot, jotka on esitetty myös tekstimuodossa alempana.
 
+## [Video: Listan luominen, arvojen lisääminen ja arvojen hakeminen](https://web.microsoftstream.com/video/f6bc6f3b-374d-4776-bb7c-981707c5f648) *25:00*
+
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/f6bc6f3b-374d-4776-bb7c-981707c5f648?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+Tällä videolla opettelemme luomaan listan, asettamaan sinne arvoja ja hakemaan arvoja haluamistamme kohdista. Valmis lähdekooditiedosto löytyy GitHubista: [Hiihtojoukkue.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko03/listat/Hiihtojoukkue.java)
 
 ## Listalle lisääminen
 
@@ -246,10 +252,11 @@ public class ListanLapikayntiForEach {
 Katso esim: [https://stackoverflow.com/a/22114571](https://stackoverflow.com/a/22114571)
 
 
-## Oppituntitallenne: listan sisällön tutkiminen ja arvojen läpikäynti
+## [Oppituntitallenne: listan sisällön tutkiminen ja arvojen läpikäynti](https://web.microsoftstream.com/video/65e4f154-7369-4165-bf0c-3e5ddc9a6569) *42:48*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/65e4f154-7369-4165-bf0c-3e5ddc9a6569?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+Tällä videolla opettelemme pyytämään listalle alkioita käyttäjältä ([ListanKysyminenKayttajalta.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko03/listat/ListanKysyminenKayttajalta.java)). Kun perustapaus on hallussa, sovellamme logiikkaa muodostaaksemme HTML-valintarakenteen käyttäjän syöttämien automerkkien nimien perusteella ([Automerkit.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko03/listat/Automerkit.java)).
 
 # Listan luominen valmiilla arvoilla
 
@@ -327,25 +334,17 @@ public class KaupunkienSorttaus {
 Huomaa, että merkkijonojen luonnollinen järjestys ei toimi odotetusti eri kokoisia kirjaimia vertaillessa, koska vertailussa käytetään merkkien Unicode-arvoja.
 
 
-# Listan kopioiminen ja viittaustyyppiset muuttujat
+## [Listan kopioiminen ja viittaustyyppiset muuttujat](https://web.microsoftstream.com/video/98536d7e-5621-4927-bc63-45299746dfa4) *32:17*
 
 Seuraavalla oppituntitallenteella käsitellään listojen käsittelyä eri muuttujien kautta sekä listojen kopioimista uusien listojen luomista varten:
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/98536d7e-5621-4927-bc63-45299746dfa4?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+Tällä videolla tutustumme ensin listojen luomiseen valmiiksi määritellyillä arvoilla ([ListanLuominenValmiillaArvoilla.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko03/listat/ListanLuominenValmiillaArvoilla.java)). 
 
-```java
-List<String> naiset = new ArrayList<>();
-naiset.add("Tuula");
-naiset.add("Anne");
+Seuraavaksi perehdymme siihen, miksi alkeistietotyypit kuten `int`, `double` ja `boolean` eivät sovellu listojen tyypeiksi, ja miten asia voidaan kiertää ns. kääreluokkien avulla ([NumerotListoilla.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko03/listat/NumerotListoilla.java)).
 
-List<String> miehet = new ArrayList<>();
-miehet.add("Juha");
-miehet.add("Timo");
-
-List<String> molemmat = new ArrayList<>(naiset);
-molemmat.addAll(miehet);
-```
+Lopuksi tarkastelemme konkreettisesti miten listat käyttäytyvät, mikäli viittaamme samaan listaan usean muuttujan kautta ([ViittaustyyppisetMuuttujat.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko03/listat/ViittaustyyppisetMuuttujat.java)).
 
 
 # Tehtäväideoita tunnille
