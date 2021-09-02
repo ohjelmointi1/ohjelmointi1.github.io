@@ -252,7 +252,7 @@ public class ListanLapikayntiForEach {
 Katso esim: [https://stackoverflow.com/a/22114571](https://stackoverflow.com/a/22114571)
 
 
-## [Oppituntitallenne: listan sisällön tutkiminen ja arvojen läpikäynti](https://web.microsoftstream.com/video/65e4f154-7369-4165-bf0c-3e5ddc9a6569) *42:48*
+## [Video: listan sisällön tutkiminen ja arvojen läpikäynti](https://web.microsoftstream.com/video/65e4f154-7369-4165-bf0c-3e5ddc9a6569) *42:48*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/65e4f154-7369-4165-bf0c-3e5ddc9a6569?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
