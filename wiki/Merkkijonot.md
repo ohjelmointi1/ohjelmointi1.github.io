@@ -21,11 +21,12 @@ Koska merkkijonot ovat olioita, niitä ei voida vertailla vertailuoperaattorilla
 
 Vertailuoperaattorin sijaan merkkijonojen vertailu voidaan tehdä `String`-luokan metodeilla, joita käsittelemme seuraavaksi.
 
-## Oppitunnin videotallenne: Merkkijonojen vertailu, metodit ja Eclipsen debuggeri
+## [Oppitunnin videotallenne: Merkkijonojen vertailu, metodit ja Eclipsen debuggeri](https://web.microsoftstream.com/video/8d6bbb56-51f0-48f5-8110-ccde31d19342) *23:51*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/8d6bbb56-51f0-48f5-8110-ccde31d19342?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-[Merkkijonojen vertailu, metodit ja Eclipsen debuggeri (MS Stream)](https://web.microsoftstream.com/video/8d6bbb56-51f0-48f5-8110-ccde31d19342)
+Tällä videolla käsitellään merkkijonojen vertailua sekä vertailuoperaattorilla (`==`) että `equals`-metodilla. Opettelemme myös tutustumaan ohjelman vaiheittaisiin suoritukseen Eclipsen debug-työkalun avulla. Videolla editoitava tiedosto löytyy GitHubista: [Puujalkavitsi.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko02/merkkijonot/Puujalkavitsi.java)
+
 
 ## Olioiden vertailu: equals ja equalsIgnoreCase
 
@@ -67,12 +68,11 @@ String tilinumero = "    fi3315723000500504  ".trim().toUpperCase(); // "FI33157
 Huomaa, että mikään yllä olevista metodeista ei muuta alkuperäistä merkkijonoa, vaan ne palauttavat uuden merkkijonon. 
 
 
-## Oppitunnin videotallenne: String-luokan metodit: length, substring...
+## [Videotallenne: String-luokan metodit: length, substring...](https://web.microsoftstream.com/video/c1991f30-5797-45e7-8030-a24ecb751064) *20:11*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/c1991f30-5797-45e7-8030-a24ecb751064?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-[String-luokan metodit: length, substring... (MS Stream)](https://web.microsoftstream.com/video/c1991f30-5797-45e7-8030-a24ecb751064)
-
+Tällä videolla käsittelemme merkkijonojen indeksejä, pilkkomista, yhdistelyä sekä pituuksia. Videolla käsiteltävä tiedosto löytyy GitHubista: [Numeronyymit.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko02/merkkijonot/Numeronyymit.java)
 
 ## Muuttumattomuus (immutability)
 
@@ -120,11 +120,11 @@ String alkuosa = rekisterinumero.substring(0, viiva);   // "LOL"
 String loppuosa = rekisterinumero.substring(viiva + 1); // "2"
 ```
 
-## Oppitunnin videotallenne: Merkkijonojen muuttaminen, muuttumattomuus ja satunnaisen salasanan generointi
+## [Videotallenne: Merkkijonojen muuttaminen, muuttumattomuus ja satunnaisen salasanan generointi](https://web.microsoftstream.com/video/78f6744a-2dc0-4708-9aac-fcf0cdd49c12) *20:28*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/78f6744a-2dc0-4708-9aac-fcf0cdd49c12?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-[Merkkijonojen muuttaminen, muuttumattomuus ja satunnaisen salasanan generointi (MS Stream)](https://web.microsoftstream.com/video/78f6744a-2dc0-4708-9aac-fcf0cdd49c12)
+Tällä videolla sovellamme merkkijonojen käsittelyä yhdessä toistorakenteen kanssa, ja luomme satunnaisia salasanoja generoivan [Salasana.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko02/merkkijonot/Salasana.java)-luokan.
 
 # String-luokan metodeja
 
