@@ -14,9 +14,18 @@ Listoilla ja taulukoilla on myös lukuisia yhtäläisyyksiä, ja `ArrayList`-lis
 
 <div class="js-toc"></div>
 
-# Oppituntitallenne: taulukon luominen, käsitteleminen ja läpikäynti
+# [Video: taulukon luominen, käsitteleminen ja läpikäynti](https://web.microsoftstream.com/video/99c9ef6f-d2eb-4180-8c1b-0cfef766cb10) *40:29*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/99c9ef6f-d2eb-4180-8c1b-0cfef766cb10?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Tällä videolla käsittelemme taulukoiden luomista sekä vertailemme niiden käyttämistä listojen käyttämiseen. Tutustumme taulukoiden luomiseen sekä tyhjinä että valmiilla arvoilla täytettyinä.
+
+Videolla käsiteltävät lähdekooditiedostot:
+
+* [TaulukonLuominen.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko03/taulukot/TaulukonLuominen.java)
+* [TaulukkoValmiillaArvoilla.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko03/taulukot/TaulukkoValmiillaArvoilla.java)
+* [LottonumeroidenKysyminen.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko03/taulukot/LottonumeroidenKysyminen.java)
+
 
 # Taulukot ja taulukkomuuttujat
 
@@ -232,13 +241,15 @@ Vuosi	| Merkki	| Malli     | Pituus
 Koska CSV-tiedostot on helposti koneluettavia ja -kirjoitettavia, hyvin monet ohjelmat tukevat niitä tiedon tallennusmuotonaan. Myös CSV-tiedostojen käsittelyssä `split`-metodista on hyötyä, vaikkakin monimutkaisempia CSV-rakenteita kannattaa lukea erillisten kirjastojen avulla.
 
 
-## Säätilasto-oppituntitallenne
+## [Säätilasto-esimerkki (csv-datan käsittely)](https://web.microsoftstream.com/video/fbbdf454-5222-43bb-840b-8579fdd47e13) *44:17*
 
 Tunnilla kirjoitimme ohjelman, joka lukee Ilmatieteen laitoksen avointa csv-muotoista säädataa ja kertoo aineiston lämpimmän ja kylmimmän havainnon päivämäärineen.
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/fbbdf454-5222-43bb-840b-8579fdd47e13?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Voit tallentaa säädatan itsellesi csv-muodossa osoitteesta [https://www.ilmatieteenlaitos.fi/havaintojen-lataus](https://www.ilmatieteenlaitos.fi/havaintojen-lataus). Aineisto on lisensoitu lisenssillä [Creative Commons Nimeä 4.0](https://www.ilmatieteenlaitos.fi/avoin-data-lisenssi).
+Videolla esiintyvä lähdekooditiedosto löytyy GitHubista: [LampotilaTilasto.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko03/taulukot/LampotilaTilasto.java)
+
+Voit tallentaa videolla esiintyvän säädatan itsellesi csv-muodossa osoitteesta [https://www.ilmatieteenlaitos.fi/havaintojen-lataus](https://www.ilmatieteenlaitos.fi/havaintojen-lataus). Aineisto on lisensoitu [Creative Commons Nimeä 4.0](https://www.ilmatieteenlaitos.fi/avoin-data-lisenssi) -lisenssillä.
 
 
 
@@ -431,15 +442,13 @@ Ote hyödyllisistä apumetodeista taulukoiden käyttöön:
 Lähde: [https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html)
 
 
-# Tehtäväideoita oppitunnille
-
-## Lottotarkistin
-
-Oppitunnilla kirjoitettiin ohjelma, joka käyttää useita taulukoita tarkistaakseen lottoriveillä olevat oikeat numerot.
+## [Video: Lottotarkistin (sisäkkäiset toistorakenteet ja useita taulukoita)](https://web.microsoftstream.com/video/613511d5-aa04-41ed-bc3b-d88c2fdd2f4e) *33:49*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/613511d5-aa04-41ed-bc3b-d88c2fdd2f4e?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-[Video: Lottotarkistin (sisäkkäiset toistorakenteet ja useita taulukoita)](https://web.microsoftstream.com/video/613511d5-aa04-41ed-bc3b-d88c2fdd2f4e)
+Tällä videolla jatketaan aikaisemmalla videolla aloitettua lottoesimerkkiä ja kehitetään ohjelma, joka tarkistaa käyttäjän syöttämältä lottoriviltä siinä olevat oikeat numerot. Esimerkissä hyödynnetään useita taulukoita sekä sisäkkäisiä toistorakenteita. Lisäksi tustustumme Javan enhanced for loop -toistolauseeseen, jonka avulla taulukon arvot saadaan käytyä läpi suoraviivaisesti.
+
+Lähdekoodit: [Lottotarkistin.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko03/taulukot/Lottotarkistin.java).
 
 ---
 
