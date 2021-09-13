@@ -22,9 +22,9 @@ Tämä oppimateriaali pohjautuu Helsingin yliopiston [Agile Education Research](
 
 Videolla esiintyvät lähdekoodit:
 
-* [MetodienSuoritusJarjestys.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko04/metodit/)MetodienSuoritusJarjestys.java
-* [AjankohdanTulostaminen.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko04/metodit/)AjankohdanTulostaminen.java
-* [ParametrienValittaminen.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko04/metodit/)ParametrienValittaminen.java
+* [MetodienSuoritusJarjestys.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko04/metodit/MetodienSuoritusJarjestys.java)
+* [AjankohdanTulostaminen.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko04/metodit/AjankohdanTulostaminen.java)
+* [ParametrienValittaminen.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko04/metodit/ParametrienValittaminen.java)
 * [HinnanValintaHTML.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko02/toisto/HinnanValintaHTML.java)
 
 # Metodien käsitteet ja metodikutsut
@@ -252,8 +252,8 @@ Videolla hyödynnetään [Java Visualizer](https://cscircles.cemc.uwaterloo.ca/j
 
 Videolla esiintyvät lähdekoodit:
 
-* [ParametrienValittaminen.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko04/metodit/)ParametrienValittaminen.java
-* [HiihtovarusteidenPituudet.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko04/metodit/)HiihtovarusteidenPituudet.java
+* [ParametrienValittaminen.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko04/metodit/ParametrienValittaminen.java)
+* [HiihtovarusteidenPituudet.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko04/metodit/HiihtovarusteidenPituudet.java)
 * [Pyoristykset.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko04/metodit/Pyoristykset.java)
 
 # Metodin paluuarvot ja return-käsky
