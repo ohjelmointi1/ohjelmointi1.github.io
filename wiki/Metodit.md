@@ -16,11 +16,16 @@ Tämä oppimateriaali pohjautuu Helsingin yliopiston [Agile Education Research](
 <div class="js-toc"></div>
 
 
-# Oppituntitallenne: Metodien käsitteet, kutsuminen ja määrittely
+# [Video: Metodien käsitteet, kutsuminen ja määrittely](https://web.microsoftstream.com/video/0281b7d0-6e35-494b-bfbe-a5033920d80b) *50:53*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/0281b7d0-6e35-494b-bfbe-a5033920d80b?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Katso myös [MS Streamissa](https://web.microsoftstream.com/video/0281b7d0-6e35-494b-bfbe-a5033920d80b).
+Videolla esiintyvät lähdekoodit:
+
+* [MetodienSuoritusJarjestys.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko04/metodit/)MetodienSuoritusJarjestys.java
+* [AjankohdanTulostaminen.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko04/metodit/)AjankohdanTulostaminen.java
+* [ParametrienValittaminen.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko04/metodit/)ParametrienValittaminen.java
+* [HinnanValintaHTML.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko02/toisto/HinnanValintaHTML.java)
 
 # Metodien käsitteet ja metodikutsut
 
@@ -239,12 +244,17 @@ public class Parametrimuuttuja {
 Huomaa, että sekä `main`-metodin sisällä määritelty `nimi` että `tulostaOtsikko`-metodissa määritelty `otsikko` ovat paikallisia muuttujia, eivätkä ne näy metodien ulkopuolelle. Metodikutsussa käytetään siis esimerkissä eri nimistä muuttujaa kuin metodin otsikossa. Muuttujien nimillä ei ole lainkaan merkitystä, koska metodikutsussa välitetään ainoastaan arvo, eli itse merkkijono.
 
 
-# Oppituntitallenne: Parametrien välittäminen, ohjelman pilkkominen ja metodikutsut toisista luokista
+# [Video: Parametrien välittäminen, ohjelman pilkkominen ja metodikutsut toisista luokista](https://web.microsoftstream.com/video/d3effef4-3f42-4be2-8692-12f4ba4f9c53) *39:01*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/d3effef4-3f42-4be2-8692-12f4ba4f9c53?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Katso myös [MS Streamissa](https://web.microsoftstream.com/video/d3effef4-3f42-4be2-8692-12f4ba4f9c53).
+Videolla hyödynnetään [Java Visualizer](https://cscircles.cemc.uwaterloo.ca/java_visualize/) -palvelua lähdekoodin suorituksen havainnollistamiseksi.
 
+Videolla esiintyvät lähdekoodit:
+
+* [ParametrienValittaminen.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko04/metodit/)ParametrienValittaminen.java
+* [HiihtovarusteidenPituudet.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko04/metodit/)HiihtovarusteidenPituudet.java
+* [Pyoristykset.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko04/metodit/Pyoristykset.java)
 
 # Metodin paluuarvot ja return-käsky
 
