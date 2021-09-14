@@ -198,7 +198,7 @@ Esimerkkejä erilaisista yhteyssuhteista on lukuisia, ja tutustut niihin tarkemm
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/b6aa4193-13dd-4261-bcb9-49c71aff5f52?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Videolla esiintyvät lähdekoodit: [Henkilotieto.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko05/oliot/henkilotiedot/Henkilotieto.java) ja [HenkilotietoOhjelma.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko05/oliot/henkilotiedot/HenkilotietoOhjelma.java)
+*Videolla esiintyvät lähdekoodit: [Henkilotieto.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko05/oliot/henkilotiedot/Henkilotieto.java) ja [HenkilotietoOhjelma.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko05/oliot/henkilotiedot/HenkilotietoOhjelma.java).*
 
 
 
