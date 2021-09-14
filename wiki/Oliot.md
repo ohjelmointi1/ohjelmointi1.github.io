@@ -20,11 +20,15 @@ Olioiden ja luokkien käyttötapa riippuu monista seikoista. Jos pankkisovelluks
 
 Tällä opintojaksolla keskitymme aluksi luokkien ja olioiden hyödyntämiseen datan mallintamisessa, eli teemme luokkia, jotka vastaavat joitain reaalimaailman käsitteitä. Jatkokurssilla olio-ohjelmointia sovelletaan esimerkiksi olioina, joiden tarkoitus on toimia vuorovaikutuksessa tietokannan ja verkkoselainten kanssa.
 
-## Oppituntitallenne: olio-ohjelmoinnin käsitteet, oliomuuttujat ja metodit
+## [Video: olio-ohjelmoinnin käsitteet, oliomuuttujat ja metodit](https://web.microsoftstream.com/video/624e03b5-d220-4da5-a7a7-954bc7b07e37) *49:07*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/624e03b5-d220-4da5-a7a7-954bc7b07e37?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-[MS Stream: Olio-ohjelmoinnin käsitteet, oliomuuttujat ja metodit](https://web.microsoftstream.com/video/624e03b5-d220-4da5-a7a7-954bc7b07e37)
+Videon lähdekoodit:
+
+* [AikaIlmanAikaluokkia.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko05/AikaIlmanAikaluokkia.java)
+* [Kaupunki.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko05/oliot/kaupungitV1/Kaupunki.java)
+* [KaupunkiOhjelma.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko05/oliot/kaupungitV1/KaupunkiOhjelma.java)
 
 ## Suositeltavaa luettavaa
 
@@ -365,12 +369,15 @@ Kaupunki uusiOlio = new Kaupunki("Helsinki", 653_867);
 
 Edellä oleva luontikäsky käsitellään Java-luokassa **konstruktorin** avulla. Konstruktori on ikään kuin metodi, jota kutsutaan automaattisesti olioita luotaessa. 
 
-## Oppituntitallenne: konstruktori, getterit, setterit ja toString
+## [Video: konstruktori, getterit, setterit ja toString](https://web.microsoftstream.com/video/0bd21fd4-a6ef-4497-9547-44766ba0a81b) *43:00*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/0bd21fd4-a6ef-4497-9547-44766ba0a81b?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-[MS Stream: Konstruktori, getterit, setterit ja toString](https://web.microsoftstream.com/video/0bd21fd4-a6ef-4497-9547-44766ba0a81b)
+Videon lähdekoodit:
 
+* [KaupunkiOhjelma.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko05/oliot/kaupungitV1/KaupunkiOhjelma.java)
+* [Kaupunki.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko05/oliot/kaupungitV2/Kaupunki.java)
+* [KaupunginLuominenJaTulostaminen.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko05/oliot/kaupungitV2/KaupunginLuominenJaTulostaminen.java)
 
 ## Konstruktorin määritteleminen
 
@@ -599,12 +606,14 @@ System.out.println(t.getTiliNumero()); // Tulostaa null, koska tilinumeroa ei ol
 
 Koska `tilinumero`-muuttujaa ei aseteta muuttujaa määriteltäessä eikä konstruktorissa, on se yllä olevassa esimerkissä tyhjä, eli `null`.
 
-## Oppituntitallenne: Null-arvot, NullPointerException ja koodin generointi
+## [Video: Null-arvot, NullPointerException ja koodin generointi](https://web.microsoftstream.com/video/0008bece-15ff-47b9-a163-7c7663d787b3) *23:02*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/0008bece-15ff-47b9-a163-7c7663d787b3?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-[MS Stream: Null-arvot, NullPointerException ja koodin generointi](https://web.microsoftstream.com/video/0008bece-15ff-47b9-a163-7c7663d787b3)
+Videolla esiityvät lähdekoodit:
 
+* [NullEsimerkki.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko05/oliot/yhteystieto/NullEsimerkki.java)
+* [Yhteystieto.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko05/oliot/yhteystieto/Yhteystieto.java)
 
 ## NullPointerException
 

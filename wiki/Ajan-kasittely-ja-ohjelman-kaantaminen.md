@@ -375,7 +375,7 @@ Tarvitset todennäköisesti nämä luokat:
 * DateTimeFormatter (d.M.yyyy)
 * Period tai ChronoUnit.DAYS
 
-
+----
 
 Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
 
