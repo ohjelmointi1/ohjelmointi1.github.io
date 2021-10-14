@@ -470,7 +470,7 @@ public class KurssinArviointi {
 
     // Tehtävien ja kokeen maksimipisteet ovat suuntaa-antavia.
 
-    private static int viopeMaksimi = 65; // normaalitehtävien maksimipisteet (+6 bonusta)
+    private static int viopeMaksimi = 64; // normaalitehtävien maksimipisteet (ei bonustehtäviä)
     private static int kokeenMaksimi = 25;
 
     public static int laskeLoppuarvosana(int tehtavienPisteet, int kokeenPisteet) {
