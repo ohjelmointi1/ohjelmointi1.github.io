@@ -126,6 +126,35 @@ String loppuosa = rekisterinumero.substring(viiva + 1); // "2"
 
 Tällä videolla sovellamme merkkijonojen käsittelyä yhdessä toistorakenteen kanssa, ja luomme satunnaisia salasanoja generoivan [Salasana.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko02/merkkijonot/Salasana.java)-luokan.
 
+
+## Moniriviset merkkijonot (text blocks)
+
+Javan uusimmissa versioissa on mahdollista määritellä kätevästi monirivisiä merkkijonoja kolmen lainausmerkin `"""` avulla:
+
+```java
+String ostoslista = """
+    Ostoslista:
+    - maitoa
+    - leipää
+    - juustoa
+    - kahvia""";
+
+System.out.println(ostoslista);
+```
+
+Java osaa jättää huomiotta monirivisten merkkijonojen sisennykset, joten yllä oleva esimerkkikoodi tulostaa ostoslistan seuraavasti:
+
+```
+Ostoslista:
+- maitoa
+- leipää
+- juustoa
+- kahvia
+```
+
+Javan vanhemmilla versioilla voit kirjoittaa vain yksirivisiä merkkijonoja, joissa rivinvaihdot on merkitty `\n`-rivinvaihtomerkeillä (esitellään tällä sivulla alempana).
+
+
 # String-luokan metodeja
 
 Tutustu metodeihin tarkemmin täällä: [https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html)
