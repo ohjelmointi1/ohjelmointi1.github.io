@@ -90,7 +90,7 @@ Koronatilanteen salliessa opetusta tarjotaan helmikuusta alkaen myös luokassa 5
         </tr>
         <tr>
             <td>Ma</td>
-            <td>31.1..</td>
+            <td>31.1.</td>
             <td>
                 <strong>Listat</strong><br />
                 <em>+ Gitin käyttö tehtäväpohjien lataamiseksi</em><br />
@@ -184,12 +184,12 @@ Koronatilanteen salliessa opetusta tarjotaan helmikuusta alkaen myös luokassa 5
         <tr>
             <td>Ma</td>
             <td>21.2.</td>
-            <td></td>
+            <td><em>Ei oppituntia</em></td>
         </tr>
         <tr>
             <td>Ke</td>
             <td>23.2.</td>
-            <td></td>
+            <td><em>Ei oppituntia</em></td>
         </tr>
         <tr>
             <td>Ma</td>
