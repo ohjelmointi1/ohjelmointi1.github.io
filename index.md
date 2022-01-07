@@ -36,7 +36,7 @@ Koronatilanteen salliessa opetusta tarjotaan helmikuusta alkaen myös luokassa 5
                 Kurssin järjestelyt ja osallistumisen vahvistaminen<br />
                 Eclipse-sovelluskehitin<br />
                 Perustietotyypit</strong><br />
-                <a href="https://hh.viope.com/">🔗 Viope</a> (valitse Ohjelmointi 1-3018 ✔️)<br />
+                <a href="https://hh.viope.com/">🔗 Viope</a> (valitse Ohjelmointi 1-3018 👍)<br />
                 <a href="wiki/Ohjelmoinnin-aloitus">📝 Oppimateriaali</a><br />
                 <!--<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko01/perusteet">📁 Oppitunnin esimerkkikoodit</a><br />-->
                 <br />
@@ -381,7 +381,7 @@ Saat käyttää myös muita työkaluja, mutta niihin ei voida tarjota käyttötu
 
 Kurssin harjoitustehtävien tehtävänannot löytyvät Viope-järjestelmästä, jonne tehtävät myös palautetaan. Viope tarkistaa tehtävät automaattisesti ja pitää kirjaa tehtäväpisteistä.
 
-Rekisteröidy Viopeen osoitteessa [https://hh.viope.com/](https://hh.viope.com/). Rekisteröityessäsi valitse tämä toteutus (*Ohjelmointi 1-3018* ✔️). Mikäli sinulla on jo Viope-tunnukset, kirjaudu sisään tunnuksillasi ja liity etusivulla kurssille *Ohjelmointi 1-3018* ✔️.
+Rekisteröidy Viopeen osoitteessa [https://hh.viope.com/](https://hh.viope.com/). Rekisteröityessäsi valitse tämä toteutus (*Ohjelmointi 1-3018* 👍). Mikäli sinulla on jo Viope-tunnukset, kirjaudu sisään tunnuksillasi ja liity etusivulla kurssille *Ohjelmointi 1-3018* 👍.
 
 **Teknisistä syistä johtuen Viopeen palautettavista lähdekoodeista täytyy aina poistaa mahdolliset package -lauseet luokan yläpuolelta.** Viope on myös muilla tavoin erittäin tarkka ohjelmien oikeellisuudesta, mikä saattaa aiheuttaa ensimmäisillä viikoilla hämmennystä. Tyypillisiä Viope-virhetilanteita ja niiden ratkaisuja on dokumentoitu [erilliselle sivulle](wiki/Viope), jota päivitetään kurssin edetessä.
 
