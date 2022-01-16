@@ -45,7 +45,7 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
                 Perustietotyypit</strong><br />
                 <a href="https://hh.viope.com/">🔗 Viope</a> (valitse Ohjelmointi 1-3018 👍)<br />
                 <a href="wiki/Ohjelmoinnin-aloitus">📝 Oppimateriaali</a><br />
-                <!--<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko01/perusteet">📁 Oppitunnin esimerkkikoodit</a><br />-->
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko01/perusteet">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <a href="https://web.microsoftstream.com/video/f8cafe9c-976c-4f00-9713-4a8adc8d34bd">📼 Kurssin yleiset asiat</a><br />
                 <a href="https://web.microsoftstream.com/video/00c2134a-6187-46d7-a7ac-da7218ff4a10">📼 Ensimmäisen Java-ohjelman kirjoittaminen ja lähetys Viopeen</a><br />
@@ -58,7 +58,7 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
             <td>
                 <strong>Totuusarvot ja ehtolauseet</strong><br />
                 <a href="wiki/Totuusarvot-ja-ehtolauseet">📝 Oppimateriaali</a><br />
-                <!--<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko01/ehtorakenteet">📁 Oppitunnin esimerkkikoodit</a><br />-->
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko01/ehtorakenteet">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <a href="https://web.microsoftstream.com/video/72835f81-cea0-45e8-b2fe-7deb472eb8fd">📼 Scanner ja DecimalFormat</a><br />
                 <a href="https://web.microsoftstream.com/video/c1d1f2cd-8d56-4a2c-81d1-7c27caf574bc">📼 Totuusarvot ja vertailuoperaatiot</a><br />
@@ -73,7 +73,7 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
             <td>
                 <strong>Toistorakenteet</strong><br />
                 <a href="wiki/Toistorakenteet">📝 Oppimateriaali</a><br />
-                <!--<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko02/toisto">📁 Oppitunnin esimerkkikoodit</a><br />-->
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko02/toisto">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <a href="https://web.microsoftstream.com/video/f2aa8a54-a86a-484e-a60d-0e80cde9a891">📼 Johdanto toistorakenteisiin ja while-rakenteen hyödyntäminen</a><br />
                 <a href="https://web.microsoftstream.com/video/aa745036-e5a0-489e-9bb3-85fcb84a4b55">📼 For-toistorakenne ja sen hyödyntäminen</a><br />
@@ -87,7 +87,7 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
                 <strong>Merkkijonot</strong><br />
                 <em>+ Debuggerin hyödyntäminen</em><br />
                 <a href="wiki/Merkkijonot">📝 Oppimateriaali</a><br />
-                <!--<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko02/merkkijonot">📁 Oppitunnin esimerkkikoodit</a><br />-->
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko02/merkkijonot">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <a href="https://web.microsoftstream.com/video/8d6bbb56-51f0-48f5-8110-ccde31d19342">📼 Merkkijonojen vertailu, metodit ja Eclipsen debuggeri</a><br />
                 <a href="https://web.microsoftstream.com/video/c1991f30-5797-45e7-8030-a24ecb751064">📼 String-luokan metodit: length, substring...</a><br />
@@ -102,7 +102,7 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
                 <strong>Listat</strong><br />
                 <em>+ Gitin käyttö tehtäväpohjien lataamiseksi</em><br />
                 <a href="wiki/Listat">📝 Oppimateriaali</a><br />
-                <!--<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko03/listat">📁 Oppitunnin esimerkkikoodit</a><br />-->
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko03/listat">📁 Oppitunnin esimerkkikoodit</a><br />
                 <a href="https://github.com/swd1tn002/mooc.fi-2019-osa3/" target="_blank">📁 Viope-tehtäväpohjat</a><br />
                 <br />
                 <a href="https://web.microsoftstream.com/video/05754f1f-06c2-4142-8423-7cbb22bff651">📼 Tehtäväpohjien kloonaaminen GitHubista</a><br />
@@ -119,7 +119,7 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
             <td>
                 <strong>Taulukot</strong><br />
                 <a href="wiki/Taulukot-(arrays)">📝 Oppimateriaali</a><br />
-                <!--<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko03/taulukot">📁 Oppitunnin esimerkkikoodit</a><br />-->
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko03/taulukot">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <a href="https://web.microsoftstream.com/video/99c9ef6f-d2eb-4180-8c1b-0cfef766cb10">📼 Taulukon luominen, käsitteleminen ja läpikäynti</a><br />
                 <a href="https://web.microsoftstream.com/video/613511d5-aa04-41ed-bc3b-d88c2fdd2f4e">📼 Lottotarkistin (sisäkkäiset toistorakenteet ja useita taulukoita)</a><br />
@@ -132,7 +132,7 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
             <td>
                 <strong>Staattiset luokkametodit, parametrit ja paluuarvot</strong><br />
                 <a href="wiki/Metodit">📝 Oppimateriaali</a><br />
-                <!--<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko04/metodit/">📁 Oppitunnin esimerkkikoodit</a><br />-->
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko04/metodit/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <a href="https://web.microsoftstream.com/video/0281b7d0-6e35-494b-bfbe-a5033920d80b">📼 Metodien käsitteet, kutsuminen ja määrittely</a><br />
                 <a href="https://web.microsoftstream.com/video/d3effef4-3f42-4be2-8692-12f4ba4f9c53">📼 Parametrien välittäminen, ohjelman pilkkominen ja metodikutsut toisista luokista</a>
@@ -146,7 +146,7 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
                 Ohjelman paketointi ja suorittaminen Eclipsen ulkopuolella<br />
                 Komentoriviparametrit</strong><br />
                 <a href="wiki/Ajan-kasittely-ja-ohjelman-kaantaminen">📝 Oppimateriaali</a><br />
-                <!--<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko04/aika/">📁 Oppitunnin esimerkkikoodit</a><br />-->
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko04/aika/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <a href="https://web.microsoftstream.com/video/848a270b-1d74-4493-8d13-17db6b3a656a">📼 Javan aikaluokat ja niiden käyttäminen</a><br />
                 <a href="https://web.microsoftstream.com/video/b6e65db2-c071-4db4-aee9-62d7f6e34066">📼 Aikaan liittyvä ohjelmalogiikka: myöhästymismaksut ja juhlapyhät</a><br />
@@ -162,7 +162,7 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
                 Käsitteet luokka ja olio<br />
                 Oliometodit ja -muuttujat<br /></strong>
                 <a href="wiki/Oliot">📝 Oppimateriaali</a><br />
-                <!--<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko05/">📁 Oppitunnin esimerkkikoodit</a><br />-->
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko05/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <a href="https://web.microsoftstream.com/video/624e03b5-d220-4da5-a7a7-954bc7b07e37">📼 Olio-ohjelmoinnin käsitteet, oliomuuttujat ja metodit</a><br />
                 <a href="https://web.microsoftstream.com/video/0bd21fd4-a6ef-4497-9547-44766ba0a81b">📼 Konstruktori, getterit, setterit ja toString</a><br />
@@ -177,7 +177,7 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
                 Luokkien yhteyssuhteet<br/>
                 Olioita listoilla ja listoja olioissa</strong><br/> 
                 <a href="wiki/Oliot-ja-yhteyssuhteet">📝 Oppimateriaali</a><br />
-                <!--<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko05/oliot/">📁 Oppitunnin esimerkkikoodit</a><br />-->
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko05/oliot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <a href="https://web.microsoftstream.com/video/d8040740-8c23-4948-a840-b40b6a32f8dc">📼 Luokan määrittely ja olioiden käsittely listoilla</a><br />
                 <a href="https://web.microsoftstream.com/video/b6aa4193-13dd-4261-bcb9-49c71aff5f52">📼 Luokkien väliset yhteyssuhteet</a><br />
@@ -204,7 +204,7 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
             <td>
                 <strong>Olioiden vertailu ja järjestäminen</strong><br/> 
                 <a href="wiki/Olioiden-vertailu">📝 Oppimateriaali</a><br />
-                <!--<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko06/">📁 Oppitunnin esimerkkikoodit</a><br />-->
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko06/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <a href="https://web.microsoftstream.com/video/5900cbc8-bdf8-4398-9d36-5d54890eaad9">📼 Olioiden vertailu: equals-metodi</a><br />
                 <a href="https://web.microsoftstream.com/video/e0f9ab75-4957-4286-9170-913cf835d1e8">📼 Olion tyypin selvittäminen ja tyyppimuunnokset</a><br />
@@ -217,7 +217,7 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
             <td>
                 <strong>Poikkeukset</strong><br />
                 <a href="wiki/Poikkeukset">📝 Oppimateriaali</a><br />
-                <!--<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko06/poikkeukset">📁 Oppitunnin esimerkkikoodit</a><br />-->
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko06/poikkeukset">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <a href="https://web.microsoftstream.com/video/63ec3ae4-3b02-43b5-9903-45bf34c52c92">📼 Poikkeukset ja niihin varautuminen</a><br />
                 <a href="https://web.microsoftstream.com/video/64f44c7d-b7ec-4d3c-9448-5aeb87cec819">📼 Virheiden paikantaminen, poikkeustyypit ja finally-lohko</a><br />
@@ -230,7 +230,7 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
             <td>
                 <strong>Tekstitiedostojen lukeminen ja tallentaminen</strong><br />
                 <a href="wiki/Tiedostot">📝 Oppimateriaali</a><br />
-                <!--<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko07/tiedostot">📁 Oppitunnin esimerkkikoodit</a><br />-->
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko07/tiedostot">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
                 <a href="https://web.microsoftstream.com/video/e8bd93e6-c0e2-477f-8716-a8aa820098f9">📼 Tiedoston lukeminen ja poikkeusten käsittely</a><br />
                 <a href="https://web.microsoftstream.com/video/1f04b290-b302-476d-94ff-3abd2cf44e55">📼 Tiedoston kirjoittaminen, CSV-tiedostot ja Kalenteri-esimerkki</a><br />
@@ -250,7 +250,7 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
             <td>14.3.</td>
             <td>
                 <strong>Kurssin sisällön kertaus</strong><br />
-                <!--<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko08/kertaus">📁 Oppitunnin esimerkkikoodit</a><br />--><br />
+                <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko08/kertaus">📁 Oppitunnin esimerkkikoodit</a><br /><br />
                 <a href="https://student.home.haaga-helia.fi/group/pakki/opintojaksopalaute">💬 Opintojaksopalaute</a><br />
                 <br />
                 <a href="https://web.microsoftstream.com/video/888c147b-ae59-4212-8c6f-4a34da9e333a">📼 Kertaustunti, osa 1 (lottorivien generointi)</a><br />
