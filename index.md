@@ -17,6 +17,13 @@ Ohjattua opetusta järjestetään kahdesti viikossa:
 Koronatilanteen salliessa opetusta tarjotaan helmikuusta alkaen myös luokassa 5015. Seuraa kurssin Teams-kanavaa oppituntien tarkempien sisältöjen ja toteutustapojen osalta!
 
 
+## Kurssin osallistumisen vahvistaminen
+
+Kurssin osallistumisen vahvistaminen edellyttää kurssin Teamsiin sekä Viopeen liittymistä ja ohjelmointitehtävien aktiivista suorittamista ensimmäisten kahden viikon kuluessa. Tehtäviin on saatavissa vinkkejä ja tukea kurssin Teams-kanavalla sekä oppitunneilla.
+
+Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, että työskentely kurssin parissa lähtee kaikilla hyvin käyntiin.
+
+
 ## Aikataulu
 
 <table>
@@ -373,7 +380,9 @@ public class OsasuoritustenArviointi {
 
 ### Java ja Eclipse IDE
 
-Tarvitset Java-ohjelmien kehittämiseksi ja suorittamiseksi [Java JDK](https://www.oracle.com/java/technologies/downloads/):n (vähintään versio 11). Lähdekooditiedostojen editointiin ja ohjelmien suorittamiseen käytämme tällä kurssilla Eclipse-kehitysympäristöä, jonka voit ladata itsellesi [täältä](https://www.eclipse.org/downloads/packages/). Valitse versio **Eclipse IDE for Enterprise Java and Web Developers**, jotta sama Eclipse toimii myös jatkokursseilla.
+Tarvitset Java-ohjelmien kehittämiseksi ja suorittamiseksi [Java JDK](https://www.oracle.com/java/technologies/downloads/):n (vähintään versio 11). 
+
+Lähdekooditiedostojen editointiin ja ohjelmien suorittamiseen käytämme tällä kurssilla Eclipse-kehitysympäristöä, jonka voit ladata itsellesi [täältä](https://www.eclipse.org/downloads/packages/). Valitse versio **Eclipse IDE for Enterprise Java and Web Developers**, jotta sama Eclipse toimii myös jatkokursseilla.
 
 Saat käyttää myös muita työkaluja, mutta niihin ei voida tarjota käyttötukea.
 
