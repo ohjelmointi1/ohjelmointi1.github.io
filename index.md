@@ -19,7 +19,7 @@ Koronatilanteen salliessa opetusta tarjotaan helmikuusta alkaen myös luokassa 5
 
 ## Kurssin osallistumisen vahvistaminen
 
-Kurssin osallistumisen vahvistaminen edellyttää kurssin Teamsiin sekä Viopeen liittymistä ja ohjelmointitehtävien aktiivista suorittamista ensimmäisten kahden viikon kuluessa. Tehtäviin on saatavissa vinkkejä ja tukea kurssin Teams-kanavalla sekä oppitunneilla.
+Kurssin osallistumisen vahvistaminen edellyttää kurssin Teamsiin sekä Viopeen liittymistä ja ohjelmointitehtävien aktiivista suorittamista ensimmäisten kahden viikon aikana. Tehtäviin on saatavissa vinkkejä ja tukea kurssin Teams-kanavalla sekä oppitunneilla.
 
 Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, että työskentely kurssin parissa lähtee kaikilla hyvin käyntiin.
 
