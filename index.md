@@ -376,6 +376,28 @@ public class OsasuoritustenArviointi {
 }
 ```
 
+## Kurssin työmäärä
+
+Opintojakso kestää 8 viikkoa ja on laajuudeltaan 5 opintopistettä, joten sen [laskennallinen työmäärä on noin 135 tuntia](https://www.haaga-helia.fi/fi/ects-jarjestelma-ja-tutkintotodistuksen-liite-eli-diploma-supplement). Viikkoa kohden työmäärä vastaa laskennallisesti jopa 17 tuntia, joten varaa kurssin suorittamiseen runsaasti aikaa joka viikko.
+
+```java
+public class KurssinTyomaara {
+
+    public static void main(String[] args) {
+        int kestoViikkoina = 8;
+        int opintopisteita = 5;
+        int tyomaaraPerPiste = 27;
+
+        int kokonaistyomaara = opintopisteita * tyomaaraPerPiste;
+        System.out.println(kokonaistyomaara); // 135 tuntia
+
+        double tyomaaraPerViikko = 1.0 * kokonaistyomaara / kestoViikkoina;
+        System.out.println(tyomaaraPerViikko); // 16.875 tuntia per viikko
+    }
+}
+```
+
+
 ## Kurssin työkalut
 
 ### Java ja Eclipse IDE
