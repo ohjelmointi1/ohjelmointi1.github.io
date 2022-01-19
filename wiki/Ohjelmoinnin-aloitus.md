@@ -172,6 +172,16 @@ Nähdäksesi tarkemman virheilmoituksen Viopessa, avaa näkyville Java-kääntä
 
 Painike on Viopessa hieman hankala ymmärtää klikattavaksi sen tyylistä johtuen. Kääntäjän viesti kertoo missä kohdassa koodiasi virhe on.
 
+
+### java.util.NoSuchElementException
+
+![NoSuchElementException](assets/NoSuchElementException.jpg)
+
+Mikäli ohjelmasi vaikuttaa toimivan Eclipsessä moitteetta, mutta saat Viopessa virheen `java.util.NoSuchElementException`, varmista, että ohjelmasi ei jää odottamaan lisää syötteitä käyttäjältä.
+
+Mikäli ohjelma pyytää syötettä vielä sen jälkeen, kun Viope on antanut sille kaikki esimerkkisuorituksessa annetut syötteet, syntyy tämä `NoSuchElementException`. Kuvassa virheilmoitus kertoo `nextInt`-kutsusta rivillä 17, joka kaatoi ohjelman, koska kaikki syötteet oli jo luettu.
+
+
 [Tyypillisiä virhetilanteita ja niiden ratkaisuja on dokumentoitu erilliselle sivulle.](/wiki/Viope)
 
 

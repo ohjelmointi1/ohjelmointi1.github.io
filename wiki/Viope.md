@@ -31,3 +31,12 @@ Painike on Viopessa hieman hankala ymmärtää klikattavaksi sen tyylistä johtu
 
 
 <a href="https://video.haaga-helia.fi/media/K%C3%A4%C3%A4nt%C3%A4j%C3%A4n+virheilmoitukset+Viopessa/0_tpfd5pfd">Video: Kääntäjän virheilmoitukset Viopessa.</a>
+
+
+## java.util.NoSuchElementException
+
+![NoSuchElementException](assets/NoSuchElementException.jpg)
+
+Mikäli ohjelmasi vaikuttaa toimivan Eclipsessä moitteetta, mutta saat Viopessa virheen `java.util.NoSuchElementException`, varmista, että ohjelmasi ei jää odottamaan lisää syötteitä käyttäjältä.
+
+Mikäli ohjelma pyytää syötettä vielä sen jälkeen, kun Viope on antanut sille kaikki esimerkkisuorituksessa annetut syötteet, syntyy tämä `NoSuchElementException`. Kuvassa virheilmoitus kertoo `nextInt`-kutsusta rivillä 17, joka kaatoi ohjelman, koska kaikki syötteet oli jo luettu.
