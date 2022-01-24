@@ -435,3 +435,6 @@ Kurssin tehtäväpohjien ja malliratkaisujen jakelussa hyödynnetään ohjelmist
     https://github.com/ohjelmointi1/ohjelmointi1-3018.git
 
 Gitin käytön opetteluun voit käyttää esimerkiksi Helsingin yliopiston erinomaista "Tietokone Työvälineenä"-kurssin Git-materiaalia: [https://tkt-lapio.github.io/git/](https://tkt-lapio.github.io/git/). Vaikka Git tuntuisi aluksi vaikealta tai ahdistavalta, sinun ei tarvitse opetella kaikkea kerralla, vaan tee vain sen verran mistä on sinulle välitöntä hyötyä. Voit hyvin suorittaa tämän kurssin myös perehtymättä erikseen Gittiin.
+
+
+<script src="/scripts.js"></script>

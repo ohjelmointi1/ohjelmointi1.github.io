@@ -1,9 +1,11 @@
-tocbot.init({
-    tocSelector: '.js-toc',
-    contentSelector: '.main-content',
-    disableTocScrollSync: true,
-    headingSelector: 'h1'
-});
+if (window.tocbot) {
+    tocbot.init({
+        tocSelector: '.js-toc',
+        contentSelector: '.main-content',
+        disableTocScrollSync: true,
+        headingSelector: 'h1'
+    });
+}
 
 function openPopUp(url) {
     window.open(url, 'videoPopUp', `toolbar=no,
