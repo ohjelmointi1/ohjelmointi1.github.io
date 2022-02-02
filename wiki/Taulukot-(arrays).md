@@ -439,8 +439,11 @@ Ote hyödyllisistä apumetodeista taulukoiden käyttöön:
 
 > Sorts the specified array into ascending order.
 
-Lähde: [https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html)
+**Arrays.asList(array)**
 
+> Returns a fixed-size list backed by the specified array. (Changes to the returned list "write through" to the array.) This method acts as bridge between array-based and collection-based APIs, in combination with Collection.toArray().
+
+Lähde: [https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html)
 
 ## [Video: Lottotarkistin (sisäkkäiset toistorakenteet ja useita taulukoita)](https://web.microsoftstream.com/video/613511d5-aa04-41ed-bc3b-d88c2fdd2f4e) *33:49*
 
