@@ -19,22 +19,20 @@ Ajan käsittelyn lisäksi tutustumme siihen, miten Java-ohjelmia voidaan suoritt
 
 # java.time.*
 
-Nykyaikainen Javan standardikirjasto (Java 8+) käsittelee aikaa johdonmukaisesti ja selkeästi. Aikaisemmissa versioissa ajan käsittely on ollut ajoittain sekavaa ja virhealtista. Kuukausien numerointi on esimerkiksi ajoittain alkanut nollasta, toisinaan yhdestä.
+Nykyaikainen Javan standardikirjasto (Java 8+) käsittelee aikaa johdonmukaisesti ja selkeästi. Aikaisemmissa versioissa ajan käsittely on ollut ajoittain sekavaa ja virhealtista.
 
-Javan vanhentuneilla luokilla kuukausien indeksit alkavat toisinaan nollasta, ja yli 11 menevät kuukaudet vuotavat seuraavan vuoden puolelle: 
+Javan vanhentuneilla luokilla kuukausien indeksit alkavat toisinaan nollasta. Seuraavassa esimerkissä vanha `Date`-luokka käsittelee kuukaudet numeroilla 0-11, joten kuukausi 12 vuotaa seuraavan vuoden puolelle:
 
 <pre class="highlight" style="border: solid red 2px">
-<code>// vanhentunut tapa:
-Date eiOikeastiJoulu = new Date(2021, 12, 24);
-
-// 💥 2021, 12, 24 tarkoittaa 24. TAMMIKUUTA 2022 💥</code>
+<code>// 💥 2022, 12, 24 tarkoittaa 24. TAMMIKUUTA 2023 💥</code>
+Date eiOikeastiJoulu = new Date(2022, 12, 24); // Date-luokkaa ei kannata enää käyttää
 </pre>
 
 Nykyisillä `java.time`-paketin aikaluokilla kuukausien indeksit alkavat yhdestä ja luokkien käyttäminen on monin tavoin johdonmukaisempaa:
 
 ```java
 // nykyinen tapa (oikein):
-LocalDate joulu = LocalDate.of(2021, 12, 24);
+LocalDate joulu = LocalDate.of(2022, 12, 24);
 ```
 
 Merkittävä osa nettilähteistä esittelee vanhentuneita tai "epävirallisia" tapoja ajan käsittelyyn, joten suosittelen käyttämään lähteitä, joissa hyödynnetään `java.time`-paketista löytyviä aikaluokkia.
@@ -112,29 +110,12 @@ int paiva = nyt.getDayOfMonth();
 `LocalDateTime.now()` loi meille yllä nykyhetkeä vastaavan aikaolion. Metodeilla `of` voimme luoda tietyn ajanhetken käyttäen kokonaislukuja, tai `parse`-metodilla voimme lukea merkkijonomuotoisen päivämäärän päivämääräolioksi:
 
 ```java
-LocalDate paivaKokonaisluvuista = LocalDate.of(2021, 12, 24);
+LocalDate paivaKokonaisluvuista = LocalDate.of(2022, 12, 24);
 
-LocalDate paivaMerkkijonosta = LocalDate.parse("2021-12-24");
+LocalDate paivaMerkkijonosta = LocalDate.parse("2022-12-24");
 ```
 
 Vastaavat `of`- ja `parse`-metodit löytyvät lukuisille muillekin aikaluokalle.
-
-
-## Ajan merkkijonoesitykset
-
-Ajan merkkijonoesitykset noudattavat Javassa [ISO 8601 -standardia](https://en.wikipedia.org/wiki/ISO_8601). Eri aikaluokkien `parse`-metodit odottavat saavansa ajanhetken merkkijonona esim. seuraavissa muodoissa:
-
-```
-2021-01-20T18:01:08+00:00
-2021-01-20T18:01:08Z
-2021-01-20
-```
-
-Standardin päivämäärän ja kellonajan kirjoitusasun lisäksi on olemassa lukuisia paikallisia tapoja ilmoittaa päiviä ja aikoja, mikä tekee ajan käsittelystä toisinaan hankalaa:
-
-[![ISO 8601](https://imgs.xkcd.com/comics/iso_8601.png)](https://xkcd.com/1179/)
-
-[XKCD, ISO 8601](https://xkcd.com/1179/). Creative Commons Attribution-NonCommercial 2.5
 
 
 
@@ -211,7 +192,7 @@ System.out.println(years + " v, " + months + " kk, " + days + " pv");
 `ChronoUnit` sisältää Javan aikayksiköt, joilla on myös hyödyllisiä metodeja. Esimerkiksi `ChronoUnit.DAYS` auttaa laskemaan montako päivää kahden ajanhetken välillä on, kun taas `ChronoUnit.MINUTES` auttaa laskemaan saman minuutteina:
 
 ```java
-LocalDate joulu = LocalDate.of(2021, 24, 12);
+LocalDate joulu = LocalDate.of(2022, 24, 12);
 LocalDate tanaan = LocalDate.now();
 
 long paiviaJouluun = ChronoUnit.DAYS.between(joulu, tanaan);
@@ -228,7 +209,24 @@ Videolla esiintyvät lähdekoodit:
 * [Tauko.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko04/aika/Tauko.java)
 
 
-# Ajan merkkijonomuutokset
+# Ajan merkkijonoesitykset
+
+Ajan merkkijonoesitykset noudattavat Javassa [ISO 8601 -standardia](https://en.wikipedia.org/wiki/ISO_8601). Eri aikaluokkien `parse`-metodit odottavat saavansa ajanhetken merkkijonona esim. seuraavissa muodoissa:
+
+```
+2022-01-20T18:01:08+00:00
+2022-01-20T18:01:08Z
+2022-01-20
+```
+
+Standardin päivämäärän ja kellonajan kirjoitusasun lisäksi on olemassa lukuisia paikallisia tapoja ilmoittaa päiviä ja aikoja, mikä tekee ajan käsittelystä toisinaan hankalaa:
+
+[![ISO 8601](https://imgs.xkcd.com/comics/iso_8601.png)](https://xkcd.com/1179/)
+
+[XKCD, ISO 8601](https://xkcd.com/1179/). Creative Commons Attribution-NonCommercial 2.5
+
+
+## Ajan merkkijonomuutokset
 
 Aikaa on usein tarve esittää merkkijonoina käyttäjille. Oletuksena Javan aikaluokat hyödyntävät ISO-standardin mukaisia esityksiä, jotka ovat helposti koneluettavissa, mutta eivät aivan vastaa arjessa usein käytettyjä esitysmuotoja.
 
