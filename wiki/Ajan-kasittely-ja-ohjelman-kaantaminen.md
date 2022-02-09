@@ -226,7 +226,7 @@ Standardin päivämäärän ja kellonajan kirjoitusasun lisäksi on olemassa luk
 [XKCD, ISO 8601](https://xkcd.com/1179/). Creative Commons Attribution-NonCommercial 2.5
 
 
-## Ajan merkkijonomuutokset
+## Ajan merkkijonomuunnokset
 
 Aikaa on usein tarve esittää merkkijonoina käyttäjille. Oletuksena Javan aikaluokat hyödyntävät ISO-standardin mukaisia esityksiä, jotka ovat helposti koneluettavissa, mutta eivät aivan vastaa arjessa usein käytettyjä esitysmuotoja.
 
@@ -244,7 +244,7 @@ DateTimeFormatter formaatti = DateTimeFormatter.ofPattern("d.M.yyyy");
 
 LocalDate tanaan = LocalDate.now();
 
-// Päivämäärän näyttäminen merkkijonona:
+// Päivämäärän muuttaminen merkkijonoksi edellä määrätyssä muodossa:
 String pvm = tanaan.format(formaatti);
 ```
 
@@ -253,7 +253,7 @@ String pvm = tanaan.format(formaatti);
 ```java
 DateTimeFormatter formaatti = DateTimeFormatter.ofPattern("d.M.yyyy");
 
-// Suomalaisen päivämäärän parsiminen LocalDate-olioksi:
+// Kotimaisen päivämäärän parsiminen LocalDate-olioksi:
 LocalDate pvm = LocalDate.parse("6.12.1917", formaatti);
 ```
 
