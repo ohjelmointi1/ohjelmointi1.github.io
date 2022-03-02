@@ -332,15 +332,15 @@ Käytännössä `char`-tyyppiä tarvitaan melko harvoin, ja usein onkin käytän
 
 `matches`-metodi vertaa merkkijonoa annettuun säännölliseen lausekkeeseen ja palauttaa `true` tai `false` riippuen siitä, vastaako merkkijono lauseketta. Säännölliset lausekkeet (regular expression) ovat merkkijonoja, jotka muodostavat "kuvion" (pattern), jota vasten merkkijonoja verrataan.
 
-Valikoituja esimerkkejä selityksineen:
+Muutamia esimerkkejä selityksineen:
 
 Regex                   | Esimerkki   | Selitys
 ------------------------| ------------| --------
 [0-9]+                  | 1234567890  | 1-n kpl numeroita
 [0-9]{7}                | 1234567     | tasan 7 kpl numeroita
-[a-zåäö -]{4,10}        | abc-d       | Pieniä kirjaimia a-z, å, ä, ö, väli tai viiva. Yhteensä 4-10 kpl.
+[a-zåäö]{4,10}          | abcdåäö     | Pieniä kirjaimia a-z, å, ä. Yhteensä 4-10 kpl.
 [A-Z]{1,3}-[0-9]{1,3}   | ABC-123     | 1-3 isoa kirjainta, viiva ja 1-3 numeroa 
-
+.                       | x           | mikä tahansa merkki (paitsi rivinvaihto)
 
 ## Opiskelijanumeron tarkastaminen
 
