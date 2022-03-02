@@ -336,11 +336,14 @@ Muutamia esimerkkejä selityksineen:
 
 Regex                   | Esimerkki   | Selitys
 ------------------------| ------------| --------
-[0-9]+                  | 1234567890  | 1-n kpl numeroita
-[0-9]{7}                | 1234567     | tasan 7 kpl numeroita
-[a-zåäö]{4,10}          | abcdåäö     | Pieniä kirjaimia a-z, å, ä. Yhteensä 4-10 kpl.
-[A-Z]{1,3}-[0-9]{1,3}   | ABC-123     | 1-3 isoa kirjainta, viiva ja 1-3 numeroa 
-.                       | x           | mikä tahansa merkki (paitsi rivinvaihto)
+[0-9]+                  | `12345678`  | 1-n kpl numeroita
+[0-9]{7}                | `1234567`   | tasan 7 kpl numeroita
+[a-zåäö]{4,10}          | `abcdåäö`   | Pieniä kirjaimia a-z, å, ä. Yhteensä 4-10 kpl.
+[A-Z]{1,3}-[0-9]{1,3}   | `ABC-123`   | 1-3 isoa kirjainta, viiva ja 1-3 numeroa 
+[+-]?\d+,?\d*           | `1,2` `34` `+5,6` `-7,89` | luku, jonka alussa saattaa olla etumerkki, ja jossa voi olla myös välissä pilkku <sup><a href="https://stackoverflow.com/q/12117024">lähde</a></sup>
+.                       | `x` `y` `9` | mikä tahansa merkki (paitsi rivinvaihto)
+
+Säännöllinen lauseke kannattaa suunnitella ja testata jo ennen sen käyttämistä Java-ohjelmassa. Säännöllisten lausekkeiden kokeilemiseksi ja testaamiseksi on erilaisia verkkopalveluita, kuten [regex101.com](https://regex101.com/), joka näyttää myös sivun oikeassa laidassa selostuksen kirjoittamasi lausekkeen sisällöstä.
 
 ## Opiskelijanumeron tarkastaminen
 
