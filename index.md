@@ -1,20 +1,20 @@
 
 <h1>Tervetuloa koodaamaan!</h1>
 
-Tervetuloa Haaga-Helian ohjelmointi 1 -opintojaksolle! Tämä sivusto toimii toteutuksen swd4tn032-3018 kotisivuna, materiaalipankkina sekä lähdekoodien jakelukanavana.
+Tervetuloa Haaga-Helian ohjelmointi 1 -opintojaksolle! Tämä sivusto toimii toteutuksen SOF005AS2A-3004 kotisivuna, materiaalipankkina sekä lähdekoodien jakelukanavana.
 
-Kurssin opettajana toimii Teemu Havulinna (*etunimi.sukunimi@haaga-helia.fi*).
+Kurssin opettajina toimivat Teemu Havulinna ja X Y (*etunimi.sukunimi@haaga-helia.fi*).
 
 ## Oppitunnit
 
-Kurssin opetus järjestetään Haaga-Helian linjausten mukaisesti, lähtökohtaisesti etänä MS Teamsissa. Osallistuminen kurssille ei edellytä läsnäoloa yhteisissä tilaisuuksissa, vaan voit halutessasi opiskella täysin itsenäisesti videoiden ja tekstimateriaalin avulla.
+Osallistuminen kurssille ei edellytä läsnäoloa yhteisissä tilaisuuksissa, vaan voit halutessasi opiskella itsenäisesti videoiden ja tekstimateriaalin avulla.
 
 Ohjattua opetusta järjestetään kahdesti viikossa:
 
-* maanantaisin klo 8:15-10:45
-* keskiviikkoisin klo 8:15-10:45
+* maanantaisin klo 14:00 - 16:45
+* torstaisin klo 14:00 - 16:45
 
-Koronatilanteen salliessa opetusta tarjotaan helmikuusta alkaen myös luokassa 5015. Seuraa kurssin Teams-kanavaa oppituntien tarkempien sisältöjen ja toteutustapojen osalta!
+Seuraa kurssin Teams-kanavaa oppituntien tarkempien sisältöjen ja toteutustapojen osalta!
 
 
 ## Kurssin osallistumisen vahvistaminen
@@ -22,6 +22,12 @@ Koronatilanteen salliessa opetusta tarjotaan helmikuusta alkaen myös luokassa 5
 Kurssin osallistumisen vahvistaminen edellyttää kurssin Teamsiin sekä Viopeen liittymistä ja ohjelmointitehtävien aktiivista suorittamista ensimmäisten kahden viikon aikana. Tehtäviin on saatavissa vinkkejä ja tukea kurssin Teams-kanavalla sekä oppitunneilla.
 
 Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, että työskentely kurssin parissa lähtee kaikilla hyvin käyntiin.
+
+Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista enää osallistumisen vahvistamisen jälkeen:
+
+> *"Opettaja poistaa opetuksen alussa toteutukselta opiskelijat, jotka eivät osallistu ensimmäiseen opetuskertaan tai ilmoita poissaolostaan. Opiskelijoita ei enää myöhemmin poisteta toteutukselta, vaan kaikille annetaan arvosana hylätty-kiitettävä."*
+>
+> *[https://mynet.haaga-helia.fi/group/pakki/toteutukselle-ilmoittautuminen](https://mynet.haaga-helia.fi/group/pakki/toteutukselle-ilmoittautuminen)*
 
 
 ## Aikataulu
@@ -36,8 +42,8 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
     </thead>
     <tbody>
         <tr>
-            <td>Ma</td>
-            <td>17.1.</td>
+            <td>Ti</td>
+            <td>23.8.</td>
             <td>
                 <strong>
                 Kurssin järjestelyt ja osallistumisen vahvistaminen<br />
@@ -53,8 +59,8 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
             </td>
         </tr>
         <tr>
-            <td>Ke</td>
-            <td>19.1.</td>
+            <td>To</td>
+            <td>25.8.</td>
             <td>
                 <strong>Totuusarvot ja ehtolauseet</strong><br />
                 <a href="wiki/Totuusarvot-ja-ehtolauseet">📝 Oppimateriaali</a><br />
@@ -68,8 +74,8 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
             </td>
         </tr>
         <tr>
-            <td>Ma</td>
-            <td>24.1.</td>
+            <td>Ti</td>
+            <td>30.8.</td>
             <td>
                 <strong>Toistorakenteet</strong><br />
                 <a href="wiki/Toistorakenteet">📝 Oppimateriaali</a><br />
@@ -81,8 +87,8 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
             </td>
         </tr>
         <tr>
-            <td>Ke</td>
-            <td>26.1.</td>
+            <td>To</td>
+            <td>1.9.</td>
             <td>
                 <strong>Merkkijonot</strong><br />
                 <em>+ Debuggerin hyödyntäminen</em><br />
@@ -96,8 +102,8 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
             </td>
         </tr>
         <tr>
-            <td>Ma</td>
-            <td>31.1.</td>
+            <td>Ti</td>
+            <td>6.9.</td>
             <td>
                 <strong>Listat</strong><br />
                 <em>+ Gitin käyttö tehtäväpohjien lataamiseksi</em><br />
@@ -114,8 +120,8 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
             </td>
         </tr>
         <tr>
-            <td>Ke</td>
-            <td>2.2.</td>
+            <td>To</td>
+            <td>8.9.</td>
             <td>
                 <strong>Taulukot</strong><br />
                 <a href="wiki/Taulukot-(arrays)">📝 Oppimateriaali</a><br />
@@ -127,8 +133,8 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
             </td>
         </tr>
         <tr>
-            <td>Ma</td>
-            <td>7.2.</td>
+            <td>Ti</td>
+            <td>13.9.</td>
             <td>
                 <strong>Staattiset luokkametodit, parametrit ja paluuarvot</strong><br />
                 <a href="wiki/Metodit">📝 Oppimateriaali</a><br />
@@ -139,8 +145,8 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
             </td>
         </tr>
         <tr>
-            <td>Ke</td>
-            <td>9.2.</td>
+            <td>To</td>
+            <td>15.9.</td>
             <td>
                 <strong>Ajan käsitteleminen Javassa<br />
                 Ohjelman paketointi ja suorittaminen Eclipsen ulkopuolella<br />
@@ -154,8 +160,8 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
             </td>
         </tr>
         <tr>
-            <td>Ma</td>
-            <td>14.2.</td>
+            <td>Ti</td>
+            <td>20.9.</td>
             <td>
                 <strong>
                 Olio-ohjelmoinnin alkeet<br />
@@ -170,8 +176,8 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
             </td>
         </tr>
         <tr>
-            <td>Ke</td>
-            <td>16.2.</td>
+            <td>To</td>
+            <td>22.9.</td>
             <td>
                 <strong>Olio-ohjelmointi jatkuu:<br/>
                 Luokkien yhteyssuhteet<br/>
@@ -189,18 +195,8 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
             </td>
         </tr>
         <tr>
-            <td>Ma</td>
-            <td>21.2.</td>
-            <td><em>Ei oppituntia</em></td>
-        </tr>
-        <tr>
-            <td>Ke</td>
-            <td>23.2.</td>
-            <td><em>Ei oppituntia</em></td>
-        </tr>
-        <tr>
-            <td>Ma</td>
-            <td>28.2.</td>
+            <td>Ti</td>
+            <td>27.9.</td>
             <td>
                 <strong>Olioiden vertailu ja järjestäminen</strong><br/> 
                 <a href="wiki/Olioiden-vertailu">📝 Oppimateriaali</a><br />
@@ -212,8 +208,8 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
             </td>
         </tr>
         <tr>
-            <td>Ke</td>
-            <td>2.3.</td>
+            <td>To</td>
+            <td>29.9.</td>
             <td>
                 <strong>Poikkeukset</strong><br />
                 <a href="wiki/Poikkeukset">📝 Oppimateriaali</a><br />
@@ -225,8 +221,8 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
             </td>
         </tr>
         <tr>
-            <td>Ma</td>
-            <td>7.3.</td>
+            <td>Ti</td>
+            <td>4.10.</td>
             <td>
                 <strong>Tekstitiedostojen lukeminen ja tallentaminen</strong><br />
                 <a href="wiki/Tiedostot">📝 Oppimateriaali</a><br />
@@ -238,16 +234,16 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
             </td>
         </tr>
         <tr>
-            <td>Ke</td>
-            <td>9.3.</td>
+            <td>To</td>
+            <td>6.10.</td>
             <td>
                 <strong>Kurssin aiheiden soveltaminen</strong><br />
                 <a href="wiki/Soveltavat-esimerkit">📝 Materiaali, videot ja lähdekoodit</a><br />
             </td>
         </tr>
         <tr>
-            <td>Ma</td>
-            <td>14.3.</td>
+            <td>Ti</td>
+            <td>11.10.</td>
             <td>
                 <strong>Kurssin sisällön kertaus</strong><br />
                 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko08/kertaus">📁 Oppitunnin esimerkkikoodit</a><br /><br />
@@ -260,8 +256,8 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
             </td>
         </tr>
         <tr>
-            <td>Ke</td>
-            <td>16.3.</td>
+            <td>To</td>
+            <td>13.10.</td>
             <td>
                 <strong>Kurssin loppukoe</strong><br />
                 <!--Liity Viopessa kokeeseen <a href="https://hh.viope.com/">SWD4TN032 Ohjelmointi 1 koe 17.3.2021</a>
@@ -269,7 +265,7 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
                 Kokeessa kommunikointi sekä Viopen ulkopuolisten sivujen ja muiden materiaalien käyttäminen on kielletty. Saat kuitenkin tutkia Eclipsessä olevia aikaisempia lähdekoodejasi kokeen aikana.
                 <br /><br />-->
                 <a href="https://student.home.haaga-helia.fi/group/pakki/opintojaksopalaute">💬 Opintojaksopalaute</a><br />
-                Viope-viikkotehtävien DL klo 9.
+                Viope-viikkotehtävien DL.
             </td>
         </tr>
     </tbody>
@@ -280,7 +276,7 @@ Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, ett�
 
 Tunneilla opetellaan ohjelmoinnin perusteita sekä hyviä ohjelmointikäytäntöjä ja käydään läpi esimerkkejä. Lisäksi opiskelijat ohjelmoivat tuntitehtäviä ja saavat niihin ohjausta. Kurssin suorittamiseksi sinun tulee palauttaa hyväksytysti automaattisesti arvioitavia harjoitustehtäviä Viope-järjestelmään sekä suorittaa kurssin lopuksi järjestettävä koe. Koe sisältää harjoitustehtävien kaltaisia ohjelmointitehtäviä ja se tehdään tietokoneella.
 
-[Opintojaksokuvaus](https://opinto-opas.haaga-helia.fi/course_unit/SWD4TN032)
+[Opintojaksokuvaus](https://opinto-opas.haaga-helia.fi/course_unit/SOF005AS2A)
 
 ## Kehitys ohjelmistokehittäjänä
 
@@ -412,7 +408,7 @@ Saat käyttää myös muita työkaluja, mutta niihin ei voida tarjota käyttötu
 
 Kurssin harjoitustehtävien tehtävänannot löytyvät Viope-järjestelmästä, jonne tehtävät myös palautetaan. Viope tarkistaa tehtävät automaattisesti ja pitää kirjaa tehtäväpisteistä.
 
-Rekisteröidy Viopeen osoitteessa [https://hh.viope.com/](https://hh.viope.com/). Rekisteröityessäsi valitse tämä toteutus (*Ohjelmointi 1-3018* 👍). Mikäli sinulla on jo Viope-tunnukset, kirjaudu sisään tunnuksillasi ja liity etusivulla kurssille *Ohjelmointi 1-3018* 👍.
+Rekisteröidy Viopeen osoitteessa [https://hh.viope.com/](https://hh.viope.com/). Rekisteröityessäsi valitse tämä toteutus nimeltä "Ohjelmointi 1 (3004 🚀)". Mikäli sinulla on jo Viope-tunnukset, kirjaudu sisään tunnuksillasi ja liity etusivulla kurssille "Ohjelmointi 1 (3004 🚀)".
 
 **Teknisistä syistä johtuen Viopeen palautettavista lähdekoodeista täytyy aina poistaa mahdolliset package -lauseet luokan yläpuolelta.** Viope on myös muilla tavoin erittäin tarkka ohjelmien oikeellisuudesta, mikä saattaa aiheuttaa ensimmäisillä viikoilla hämmennystä. Tyypillisiä Viope-virhetilanteita ja niiden ratkaisuja on dokumentoitu [erilliselle sivulle](wiki/Viope), jota päivitetään kurssin edetessä.
 
@@ -424,7 +420,7 @@ Teamsissa voi myös esittää toivomuksia kurssin kehittämiseksi jo kurssin aik
 
 Teams on saatavilla puhelimien sovelluskaupoista sekä työpöytäsovelluksena, tai voit käyttää sitä selaimen web-käyttöliittymässä ilman asennuksia. Kirjautuminen Teamsiin tapahtuu Haaga-Helian `@myy.haaga-helia.fi`-tunnuksella.
 
-* [Teams Quick Start -ohje (pdf)](https://download.microsoft.com/download/D/9/F/D9FE8B9E-22F5-47BF-A1AB-09539C41FCD0/Teams%20QS.pdf)
+* [Teams Quick Start -ohje (pdf)](https://go.microsoft.com/fwlink/?linkid=2131456)
 * Web-käyttöliittymä: [https://teams.microsoft.com/](https://teams.microsoft.com/)
 * Lataussivu: [https://teams.microsoft.com/downloads](https://teams.microsoft.com/downloads)
 
