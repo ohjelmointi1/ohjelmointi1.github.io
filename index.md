@@ -433,4 +433,10 @@ Kurssin tehtäväpohjien ja malliratkaisujen jakelussa hyödynnetään ohjelmist
 Gitin käytön opetteluun voit käyttää esimerkiksi Helsingin yliopiston erinomaista "Tietokone Työvälineenä"-kurssin Git-materiaalia: [https://tkt-lapio.github.io/git/](https://tkt-lapio.github.io/git/). Vaikka Git tuntuisi aluksi vaikealta tai ahdistavalta, sinun ei tarvitse opetella kaikkea kerralla, vaan tee vain sen verran mistä on sinulle välitöntä hyötyä. Voit hyvin suorittaa tämän kurssin myös perehtymättä erikseen Gittiin.
 
 
+## Tämän oppimateriaalin lisenssi
+
+Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä. Oppimateriaalissa on hyödynnetty myös lukuisia muita lähteitä, jotka on mainittu eri aiheiden yhteydessä.
+
+Sivuston lähdekoodit löydät osoitteesta [https://github.com/ohjelmointi1/ohjelmointi1.github.io](https://github.com/ohjelmointi1/ohjelmointi1.github.io).
+
 <script src="/scripts.js"></script>
