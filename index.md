@@ -11,7 +11,7 @@ Osallistuminen kurssille ei edellytä läsnäoloa yhteisissä tilaisuuksissa, va
 
 Ohjattua opetusta järjestetään kahdesti viikossa:
 
-* maanantaisin klo 14:00 - 16:45
+* tiistaisin klo 14:00 - 16:45
 * torstaisin klo 14:00 - 16:45
 
 Seuraa kurssin Teams-kanavaa oppituntien tarkempien sisältöjen ja toteutustapojen osalta!
