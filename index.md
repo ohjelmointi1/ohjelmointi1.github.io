@@ -49,7 +49,7 @@ Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista en
                 Kurssin järjestelyt ja osallistumisen vahvistaminen<br />
                 Eclipse-sovelluskehitin<br />
                 Perustietotyypit</strong><br />
-                <a href="https://hh.viope.com/">🔗 Viope</a> (valitse Ohjelmointi 1-3018 👍)<br />
+                <a href="https://hh.viope.com/">🔗 Viope</a> (valitse "Ohjelmointi 1 (3004 🚀)")<br />
                 <a href="wiki/Ohjelmoinnin-aloitus">📝 Oppimateriaali</a><br />
                 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko01/perusteet">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
