@@ -3,7 +3,7 @@
 
 Tervetuloa Haaga-Helian ohjelmointi 1 -opintojaksolle! Tämä sivusto toimii toteutuksen SOF005AS2A-3004 kotisivuna, materiaalipankkina sekä lähdekoodien jakelukanavana.
 
-Kurssin opettajina toimivat Teemu Havulinna ja X Y (*etunimi.sukunimi@haaga-helia.fi*).
+Kurssin opettajina toimivat Teemu Havulinna ja Heikki Raatikainen (*etunimi.sukunimi@haaga-helia.fi*).
 
 ## Oppitunnit
 
