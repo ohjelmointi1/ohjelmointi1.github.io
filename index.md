@@ -105,6 +105,7 @@ Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista en
             <td>Ti</td>
             <td>6.9.</td>
             <td>
+                <strong>📣 Huom! Itsenäistä opiskelua, ei oppituntia.</strong><br /><br />
                 <strong>Listat</strong><br />
                 <em>+ Gitin käyttö tehtäväpohjien lataamiseksi</em><br />
                 <a href="wiki/Listat">📝 Oppimateriaali</a><br />
