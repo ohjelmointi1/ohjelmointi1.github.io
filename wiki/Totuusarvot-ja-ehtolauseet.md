@@ -461,7 +461,7 @@ if (!onKesa) {
 }
 ```
 
-# Syventävää osaamista: ehdollinen lauseke 💪
+# Syventävää osaamista: ehdollinen lauseke 🌶
 
 "Normaalien" if-else-rakenteiden lisäksi Javassa ja monissa muissa kielissä on ns. ehdollinen lauseke (ternary operator), jonka avulla voidaan laskea kompaktissa muodossa yksittäinen ehdollinen arvo. Tällaisen lausekkeen syntaksi seuraava:
 
@@ -490,7 +490,7 @@ int hinta = opiskelija ? 40 : 60;
 
 Voit halutessasi lukea aiheesta lisää esim. osoitteesta [https://www.baeldung.com/java-ternary-operator](https://www.baeldung.com/java-ternary-operator).
 
-# Syventävää osaamista: switch/case -rakenne 💪
+# Syventävää osaamista: switch/case -rakenne 🌶
 
 Edellä esitettyjen `if`-rakenteiden lisäksi on olemassa myös toinen vaihtoehto, `switch`, johon sinun kannattaa tutustua itsenäisesti esimerkiksi osoitteessa [https://www.educative.io/edpresso/how-to-use-switch-case-statement-in-java](https://www.educative.io/edpresso/how-to-use-switch-case-statement-in-java).
 
