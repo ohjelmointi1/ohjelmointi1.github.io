@@ -340,7 +340,7 @@ Satunnainen salasana: \)W.#OF#8EotJq3w[l5PjV%T4URs%;KS9a.fWJu#SeFe"gZ!EqAig(i
 
 ## Windows-komentorivien merkistöongelmat
 
-Mikäli käytät Windowsin komentoriviä tai PowerShell:iä, voit törmätä ongelmiin ääkkösten ja erikoismerkkien kanssa. Tämä johtuu siitä, että Windows käyttää oletuksena paikallisia merkistöjä, eikä universaalia UTF-8:aa. Voit vaihtaa komentorivin tai PowerShellin käyttämän merkistön UTF-8:ksi seuraavalla komennolla:
+Mikäli käytät Windowsin komentoriviä tai PowerShell:iä, voit törmätä ongelmiin ääkkösten ja erikoismerkkien kanssa. Tämä johtuu siitä, että Windowsin komentorivi (cmd.exe) käyttää oletuksena paikallisia merkistöjä, eikä universaalia UTF-8:aa. Voit vaihtaa komentorivin tai PowerShellin käyttämän merkistön UTF-8:ksi seuraavalla komennolla:
 
 ```
 > chcp 65001
