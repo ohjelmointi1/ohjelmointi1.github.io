@@ -32,9 +32,9 @@ Videon lähdekoodit:
 
 ## Suositeltavaa luettavaa
 
-Johdatus olio-ohjelmointiin: [https://ohjelmointi-19.mooc.fi/osa-4/2-johdatus-olio-ohjelmointiin](https://ohjelmointi-19.mooc.fi/osa-4/2-johdatus-olio-ohjelmointiin)
+Johdatus olio-ohjelmointiin: [https://ohjelmointi-20.mooc.fi/osa-4/1-johdatus-olio-ohjelmointiin](https://ohjelmointi-20.mooc.fi/osa-4/1-johdatus-olio-ohjelmointiin)
 
-Luokka ja olio: [https://ohjelmointi-19.mooc.fi/osa-4/3-luokka-ja-olio](https://ohjelmointi-19.mooc.fi/osa-4/3-luokka-ja-olio)
+Katsaus olio-ohjelmointiin: [https://ohjelmointi-20.mooc.fi/osa-5/1-katsaus-olio-ohjelmointiin](https://ohjelmointi-20.mooc.fi/osa-5/1-katsaus-olio-ohjelmointiin)
 
 # Tiedon mallintaminen olioiden avulla
 
