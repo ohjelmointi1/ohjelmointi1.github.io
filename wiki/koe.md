@@ -51,6 +51,8 @@ Kokeessa saa käyttää kurssin omia oppimateriaaleja sekä kurssin aikana kirjo
 
 Kaikki viestintä ja keskusteleminen on kokeen aikana kiellettyä.
 
+Koodieditorin normaalien avustustoimintojen, kuten `content assist` ja `quick fix` käyttäminen on kokeessa sallittua. Et kuitenkaan saa käyttää koodieditorin mahdollisia **tekoälytoimintoja**, kuten GitHub copilot.
+
 Ohjelmasi ei saa vilpillisesti harhauttaa tehtävän tarkastimia siten, että se tuottaa oikean vastauksen tehtävässä käytettäville testisyötteille toteuttamatta tehtävänannossa kuvailtua logiikkaa. Tällaiset ratkaisut hylätään, ja tahalliseksi katsottava vilppi voi johtaa myös koko kokeen hylkäykseen.
 
 
