@@ -96,10 +96,12 @@ Toisin kuin `String`-luokan kanssa, `equals`-metodi tuottaa nyt `false`, vaikka 
 
 Jos haluamme että omien `Tuote`-olioiden vertailu `maito1.equals(maito2)` vertailee olioiden sisältöä, voimme toteuttaa oman `equals`-metodin!
 
+💡 *Omaa equals-metodia käsitellään tarkemmin [Helsingin yliopiston MOOC-kurssilla](https://ohjelmointi-20.mooc.fi/osa-8/3-olioiden-samankaltaisuus), jossa voit perehtyä olioiden samankaltaisuuden vertailuun tarkemmin.*
 
-## Oman equals-metodin toteuttaminen
 
-Edellä esitetty `maito1.equals(maito2)`-vertailu ei toimi, koska `equals`-metodi vertailee oletuksena olioita samalla tavalla kuin `==`. Voimme kuitenkin määritellä aivan oman tapamme vertailla `Tuote`-olioita määrittelemällä oman `equals`-metodin:
+## Oman equals-metodin toteuttaminen (edistynyttä sisältöä 🌶️)
+
+Edellä esitetty `maito1.equals(maito2)`-vertailu ei toimi, koska `equals`-metodi vertailee oletuksena olioita samalla tavalla kuin `==`. Voimme kuitenkin määritellä aivan oman tapamme vertailla `Tuote`-olioita määrittelemällä oman `equals`-metodin, joka tarkastaa esimerkiksi tässä tapauksessa onko tuotteella sama nimi kuin toisella tuotteella.
 
 ```java
 public class Tuote {
@@ -115,8 +117,8 @@ public class Tuote {
 
     @Override
     public boolean equals(Object toinen) {
-        // Vertaillaan olioiden merkkijonoesityksiä. Jos ovat samat, myös oliot tulkitaan samoiksi:
-        return this.toString().equals(toinen.toString());
+        // TODO: palaute true tai false riippuen Tuotteen nimestä
+        return false;
     }
 
     @Override
@@ -126,63 +128,79 @@ public class Tuote {
 }
 ```
 
-Nyt vertailu `equals`-metodilla tuottaa odotetun tuloksen:
+Huomaa, että `equals`-metodi ylikirjoittaa Javan standardikirjaston metodin, minkä vuoksi sen otsikon on oltava täsmälleen samanlainen kuin standardikirjastossa: `public boolean equals(Object toinen)`. Metodin on siis oltava julkinen oliometodi (ei static), joka palauttaa totuusarvon ja saa parametrinaan minkä tahansa toisen olion.
 
-```java
-Tuote maito1 = new Tuote("Maito");
-Tuote maito2 = new Tuote("Maito");
+Metodeja korvattaessa on hyvä käytäntö lisätä metodin ylle `@Override`-**annotaatio**, joka toimii sekä dokumentaationa metodin korvaamisesta että Java-kääntäjän ohjeena varmistaa, että metodi korvattiin onnistuneesti. Tämä annotaatio on meille tuttu aikaisemmilta oppitunneilta myös `toString`-metodin yhteydestä.
 
-System.out.println(maito1.equals(maito2)); // true
-```
-
-Huomaa, että metodi ylikirjoittaa Javan standardikirjaston metodin, minkä vuoksi sen otsikon on oltava täsmälleen samanlainen kuin standardikirjastossa: `public boolean equals(Object toinen)`. Metodin on siis oltava julkinen oliometodi (ei static), joka palauttaa totuusarvon ja saa parametrinaan minkä tahansa toisen olion.
-
-<!--Metodeja korvattaessa on hyvä käytäntö lisätä metodin ylle `@Override`-**annotaatio**, joka toimii sekä dokumentaationa metodin korvaamisesta että Java-kääntäjän ohjeena varmistaa että metodi korvattiin oikein. Tämä annotaatio on meille tuttu aikaisemmilta oppitunneilta `toString`-metodin yhteydestä.-->
-
-Olioiden vertailu vertailemalla niiden merkkijonoesityksiä ei ole paras mahdollinen tapa vertailla olioiden samankaltaisuutta. Voit halutessasi perehtyä seuraavaan kohtaan, jossa kerrotaan tarkemmin eri tyyppisten olioiden vertailemisesta.
-
-
-# Olion vertailu mihin tahansa muuhun olioon (edistynyttä sisältöä 🌶️)
-
-Tuote-luokassa `equals`-metodi on nyt toteutettu siten, että siellä vertaillaan tietyn `Tuote`-olion ja annetun toisen olion merkkijonoesityksiä. Huomaa, että metodille annettu `Object toinen` olio ei välttämättä ole toinen `Tuote`-olio, vaan se voi olla mitä tahansa tyyppiä:
+Huomaa, että metodille annettu `Object toinen` olio ei välttämättä ole toinen `Tuote`-olio, vaan se voi olla mikä tahansa olio:
 
 ```java
 @Override
 public boolean equals(Object toinen) {
-    // Vertaillaan olioiden merkkijonoesityksiä. Jos ovat samat, myös oliot tulkitaan samoiksi:
-    return this.toString().equals(toinen.toString());
-}
-```
-
-Jos haluamme toteuttaa vertailun paremmin, voisimme tutkia metodille annetun olion tyyppiä, ja palauttaa `false` aina, kun vertailtava olio ei ole `Tuote`:
-
-```java
-if (!(toinen instanceof Tuote)) {
+    // TODO: palaute true tai false riippuen Tuotteen nimestä
     return false;
 }
 ```
 
-Jos metodi pääsee ohi tästä ehdosta, tiedämme varmuudella, että myös vertailtava olio on `Tuote`. Emme voi kuitenkaan suoraan käsitellä saatua oliota tuotteena tai asettaa sitä muuttujaan, koska Java-kääntäjä ei salli `Object`-tyyppisessä muuttujassa olevan arvon käsittelyä `Tuote`-oliona. Koska tässä tapauksessa tiedämme kuitenkin varmuudella, että toinen olio on `Tuote`, voimme tehdä ns. tyyppimuunnoksen:
+### Tyyppimuunnos ja instanceof
+
+Mikäli olion tyypistä ei voida olla varmoja, niiden tyyppi voidaan tarkastaa Javassa `instanceof`-operaatiolla:
+
+```java
+if (toinen instanceof Tuote) {
+    // TODO: palaute true tai false riippuen Tuotteen nimestä
+    return false;
+}
+```
+
+Mikäli yllä `toinen instanceof Tuote` tuottaa arvon `true`, tiedämme varmuudella, että annettu vertailtava olio on myös `Tuote`.
+
+Emme voi kuitenkaan suoraan käsitellä saatua oliota tuotteena tai asettaa sitä muuttujaan, koska Java-kääntäjän näkökulmasta olio on yhä `Object`-tyyppiä eikä `Tuote`. Tiedämme kuitenkin varmuudella, että toinen olio on `Tuote`, joten voimme tehdä ns. tyyppimuunnoksen:
 
 ```java
 Tuote toinenTuote = (Tuote) toinen;
 ```
+
+💡 Tyyppimuunnos ei oikeasti muuta käsiteltävää oliota toisen tyyppiseksi. Se on vain keino kertoa Java-kääntäjälle, että kyseistä arvoa tulee käsitellä tietyn tyyppisenä.
 
 Nyt kun sekä `this` että `toinenTuote` ovat `Tuote`-olioita, voimme vertailla niiden sisältöä toisiinsa:
 
 ```java
 @Override
 public boolean equals(Object toinen) {
-    if (!(toinen instanceof Tuote)) {
+    if (toinen instanceof Tuote) {
+        Tuote toinenTuote = (Tuote) toinen;
+        return this.nimi.equalsIgnoreCase(toinenTuote.nimi);
+
+    } else {
+        // ei ollut Tuote-olio, joten palautetaan false
         return false;
+
     }
-    Tuote toinenTuote = (Tuote) toinen;
-    return this.nimi.equalsIgnoreCase(toinenTuote.nimi);
 }
 ```
 
-Tätä aihetta käsitellään tarkemmin [Helsingin yliopiston MOOC-kurssilla](https://ohjelmointi-20.mooc.fi/osa-8/3-olioiden-samankaltaisuus), jossa voit perehtyä olioiden samankaltaisuuden vertailuun tarkemmin.
+```java
+Tuote maito1 = new Tuote("Maito");
+Tuote maito2 = new Tuote("Maito");
+Tuote kauramaito = new Tuote("Kauramaito");
 
+System.out.println(maito1.equals(maito2));      // true
+System.out.println(maito1.equals(kauramaito));  // false
+```
+
+Oman luokkamme `equals` toimii nyt aivan kuten Javan valmiiden luokkien metodit, joten sitä voidaan kutsua itse kuten yllä. Se toimii myös automaattisesti Javan valmiiden metodien yhteydessä, kuten seuraavassa kappaleessa "Mihin tarvitsemme olioiden vertailua?" todetaan.
+
+
+💡 [Javan uusimmissa versioissa](https://docs.oracle.com/en/java/javase/15/language/pattern-matching-instanceof-operator.html) `instanceof`-operaatiota on jatkokehitetty siten, että tarkastuksen jälkeen voidaan suoraan määritellä muuttuja, johon automaattisesti sijoitetaan tarkastettu olio, mikäli se läpäisi tarkastuksen. Näin edellä kirjoitettu koodi voidaan kirjoittaa ilman erillistä tyyppimuunnosta:
+
+```java
+if (toinen instanceof Tuote t) {
+    return this.nimi.equalsIgnoreCase(t.nimi);
+}
+```
+
+Yllä `t`-muuttuja viittaa samaan olioon kuin `toinen`, mutta muuttujan tyyppi on `Tuote` eikä `Object`. Näin `t.nimi` toimii suoraan if-lohkon sisällä ilman erillisiä tyyppimuunnoksia.
 
 # Mihin tarvitsemme olioiden vertailua?
 
