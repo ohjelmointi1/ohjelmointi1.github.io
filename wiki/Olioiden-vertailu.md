@@ -202,6 +202,8 @@ if (toinen instanceof Tuote t) {
 
 Yllä `t`-muuttuja viittaa samaan olioon kuin `toinen`, mutta muuttujan tyyppi on `Tuote` eikä `Object`. Näin `t.nimi` toimii suoraan if-lohkon sisällä ilman erillisiä tyyppimuunnoksia.
 
+⚠ Huom! Yllä esitetty uudempi syntaksi ei välttämättä toimi Viopen Java-versiossa.
+
 # Mihin tarvitsemme olioiden vertailua?
 
 Olioiden vertailulle ja `equals`-metodille on Javan standardikirjastossa paljon muutakin käyttöä kuin kahden muuttujan arvojen vertailu. `equals`-metodia hyödynnetään mm. etsiessä olioita listoilta:
