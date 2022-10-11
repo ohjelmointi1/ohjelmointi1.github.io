@@ -261,6 +261,7 @@ Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista en
             <td>13.10.</td>
             <td>
                 <strong>Kurssin loppukoe</strong><br />
+                Koe järjestetään kampuksella normaalissa luokassamme ja sen voi tehdä oman valinnan mukaan joko omalla tai luokan koneella.<br />
                 <a href="/wiki/koe">Ohjeita kokeeseen liittyen</a><br />
                 <!--Liity Viopessa kokeeseen <a href="https://hh.viope.com/">SWD4TN032 Ohjelmointi 1 koe 17.3.2021</a>
                 <br /><br />
