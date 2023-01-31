@@ -1,12 +1,12 @@
 
 <h1>Tervetuloa koodaamaan!</h1>
 
-Tervetuloa Haaga-Helian ohjelmointi 1 -opintojaksolle! Tämä sivusto toimii kurssin kotisivuna, materiaalipankkina sekä lähdekoodien jakelukanavana.
+Tervetuloa ohjelmointi 1 -opintojaksolle! Tältä sivulta löydät kurssin oppituntien muistiinpanot, videotallenteet ja koodiesimerkit.
 
 
 ## Kurssin aiheet ja materiaalit
 
-### Eclipse-sovelluskehitin ja perustietotyypit
+### <a href="wiki/Ohjelmoinnin-aloitus">Eclipse-sovelluskehitin ja perustietotyypit</a>
 
 <a href="https://hh.viope.com/">🔗 Viope</a><br />
 <a href="wiki/Ohjelmoinnin-aloitus">📝 Oppimateriaali</a><br />
@@ -17,7 +17,7 @@ Tervetuloa Haaga-Helian ohjelmointi 1 -opintojaksolle! Tämä sivusto toimii kur
 <a href="https://web.microsoftstream.com/video/e5771426-2a6d-4aa4-be5b-ecd7dbe03805">📼 Javan muuttujat ja lukujen tietotyypit</a>
 
 
-### Totuusarvot ja ehtolauseet
+### <a href="wiki/Totuusarvot-ja-ehtolauseet">Totuusarvot ja ehtolauseet</a>
 
 <a href="wiki/Totuusarvot-ja-ehtolauseet">📝 Oppimateriaali</a><br />
 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko01/ehtorakenteet">📁 Oppitunnin esimerkkikoodit</a>
@@ -29,7 +29,7 @@ Tervetuloa Haaga-Helian ohjelmointi 1 -opintojaksolle! Tämä sivusto toimii kur
 <a href="https://web.microsoftstream.com/video/55c3e7f7-f3e3-4c83-b370-dee3635dea83">📼 Matkalippujen hinnat -esimerkki</a>
 
 
-### Toistorakenteet
+### <a href="wiki/Toistorakenteet">Toistorakenteet</a>
 
 <a href="wiki/Toistorakenteet">📝 Oppimateriaali</a><br />
 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko02/toisto">📁 Oppitunnin esimerkkikoodit</a>
@@ -39,7 +39,7 @@ Tervetuloa Haaga-Helian ohjelmointi 1 -opintojaksolle! Tämä sivusto toimii kur
 <a href="https://web.microsoftstream.com/video/c3e79c0e-02d9-40df-96ad-309c235fff35">📼 Break-avainsana, sademäärät ja arvosana-asteikko</a>
 
 
-### Merkkijonot ja debuggerin hyödyntäminen
+### <a href="wiki/Merkkijonot">Merkkijonot ja debuggerin hyödyntäminen</a>
 
 <a href="wiki/Merkkijonot">📝 Oppimateriaali</a><br />
 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko02/merkkijonot">📁 Oppitunnin esimerkkikoodit</a>
@@ -50,9 +50,9 @@ Tervetuloa Haaga-Helian ohjelmointi 1 -opintojaksolle! Tämä sivusto toimii kur
 <a href="https://web.microsoftstream.com/video/17a8d25e-47b0-41fe-9446-132aed27e871">📼 Syventävää: char-tietotyyppi, säännölliset lausekkeet ja palindromin tarkastaminen</a>
 
 
-### Listat
+### <a href="wiki/Listat">Listat</a>
 
-+ Gitin käyttö tehtäväpohjien lataamiseksi
+Sekä Gitin käyttö tehtäväpohjien lataamiseksi.
 
 <a href="wiki/Listat">📝 Oppimateriaali</a><br />
 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko03/listat">📁 Oppitunnin esimerkkikoodit</a>
@@ -67,7 +67,7 @@ Tervetuloa Haaga-Helian ohjelmointi 1 -opintojaksolle! Tämä sivusto toimii kur
 <a href="https://ohjelmointi-19.mooc.fi/osa-3/2-listat" target="_blank">Listamuuttujan käyttö useamman arvon tallentamiseen</a>
 
 
-### Taulukot
+### <a href="wiki/Taulukot-(arrays)">Taulukot</a>
 
 <a href="wiki/Taulukot-(arrays)">📝 Oppimateriaali</a><br />
 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko03/taulukot">📁 Oppitunnin esimerkkikoodit</a>
@@ -77,7 +77,7 @@ Tervetuloa Haaga-Helian ohjelmointi 1 -opintojaksolle! Tämä sivusto toimii kur
 <a href="https://web.microsoftstream.com/video/fbbdf454-5222-43bb-840b-8579fdd47e13">📼 Säätilasto-esimerkki (csv-datan käsittely)</a>
 
 
-### Staattiset luokkametodit, parametrit ja paluuarvot
+### <a href="wiki/Metodit">Staattiset luokkametodit, parametrit ja paluuarvot</a>
 
 <a href="wiki/Metodit">📝 Oppimateriaali</a><br />
 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko04/metodit/">📁 Oppitunnin esimerkkikoodit</a>
@@ -86,7 +86,7 @@ Tervetuloa Haaga-Helian ohjelmointi 1 -opintojaksolle! Tämä sivusto toimii kur
 <a href="https://web.microsoftstream.com/video/d3effef4-3f42-4be2-8692-12f4ba4f9c53">📼 Parametrien välittäminen, ohjelman pilkkominen ja metodikutsut toisista luokista</a>
 
 
-### Ajan käsitteleminen Javassa, ohjelman paketointi ja komentoriviparametrit
+### <a href="wiki/Ajan-kasittely-ja-ohjelman-kaantaminen">Ajan käsitteleminen Javassa, ohjelman kääntäminen ja komentoriviparametrit</a>
 
 <a href="wiki/Ajan-kasittely-ja-ohjelman-kaantaminen">📝 Oppimateriaali</a><br />
 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko04/aika/">📁 Oppitunnin esimerkkikoodit</a>
@@ -96,7 +96,7 @@ Tervetuloa Haaga-Helian ohjelmointi 1 -opintojaksolle! Tämä sivusto toimii kur
 <a href="https://web.microsoftstream.com/video/8648dc7e-4195-4bea-b872-86dcd22c76af">📼 Ohjelman kääntäminen, paketointi ja suorittaminen</a>
 
 
-### Olio-ohjelmoinnin alkeet
+### <a href="wiki/Oliot">Olio-ohjelmoinnin alkeet</a>
 
 Käsitteet luokka ja olio<br />
 Oliometodit ja -muuttujat
@@ -109,7 +109,7 @@ Oliometodit ja -muuttujat
 <a href="https://web.microsoftstream.com/video/0008bece-15ff-47b9-a163-7c7663d787b3">📼 Null-arvot, NullPointerException ja koodin generointi</a>
 
 
-### Olio-ohjelmointi jatkuu: luokkien yhteyssuhteet
+### <a href="wiki/Oliot-ja-yhteyssuhteet">Olio-ohjelmointi jatkuu: luokkien yhteyssuhteet</a>
 
 Olioita listoilla ja listoja olioissa
 
@@ -125,7 +125,7 @@ Olioita listoilla ja listoja olioissa
 <a href="https://video.haaga-helia.fi/media/Oliot+listallaA+pituuksien+summan+laskeminen/0_c16cldiu">📼 Pelaajat listalla / "olioiden summan laskeminen"</a>
 
 
-### Olioiden vertailu ja järjestäminen
+### <a href="wiki/Olioiden-vertailu">Olioiden vertailu ja järjestäminen</a>
 
 <a href="wiki/Olioiden-vertailu">📝 Oppimateriaali</a><br />
 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko06/">📁 Oppitunnin esimerkkikoodit</a>
@@ -135,7 +135,7 @@ Olioita listoilla ja listoja olioissa
 <a href="https://web.microsoftstream.com/video/5ac62905-079c-4bcd-9fd5-470c1974518c">📼 Olioiden järjestäminen ja compareTo-metodi</a>
 
 
-### Poikkeukset
+### <a href="wiki/Poikkeukset">Poikkeukset</a>
 
 <a href="wiki/Poikkeukset">📝 Oppimateriaali</a><br />
 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko06/poikkeukset">📁 Oppitunnin esimerkkikoodit</a>
@@ -145,7 +145,7 @@ Olioita listoilla ja listoja olioissa
 <a href="https://web.microsoftstream.com/video/7ac99180-b044-4638-a360-12dded0e32d7">📼 Poikkeusten heittäminen</a>
 
 
-### Tekstitiedostojen lukeminen ja tallentaminen
+### <a href="wiki/Tiedostot">Tekstitiedostojen lukeminen ja tallentaminen</a>
 
 <a href="wiki/Tiedostot">📝 Oppimateriaali</a><br />
 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko07/tiedostot">📁 Oppitunnin esimerkkikoodit</a>
@@ -155,7 +155,7 @@ Olioita listoilla ja listoja olioissa
 <a href="https://web.microsoftstream.com/video/54005f94-5609-45b2-9b96-9a6795655a6a">📼 CSV-käsittelyn refaktorointi</a>
 
 
-### Kurssin aiheiden soveltaminen
+### <a href="wiki/Soveltavat-esimerkit">Kurssin aiheiden soveltaminen</a>
 
 <a href="wiki/Soveltavat-esimerkit">📝 Materiaali, videot ja lähdekoodit</a>
 
@@ -197,82 +197,6 @@ Tällä  kurssilla opetellaan Java-kielen syntaksia, mutta erityisesti pyrimme o
   * Opimme hyödyntämään ammattimaisen ohjelmistokehittäjien työkaluja kuten kehitysympäristöä, versionhallintaa ja yksikkötestausta (opettelu jatkuu Ohjelmointi 2:lla)
 
 
-## Kurssin arviointi
-
-1. Automaattisesti arvioitavat Viope-tehtävät (50 % loppuarvosanasta)
-
-   * tehtäviä saa tehdä pareittain, mutta molempien on osallistuttava aktiivisesti työskentelyyn ja palautettava oma ratkaisu Viopeen
-
-   * vähintään 40 % tehtävistä on oltava tehty kurssikokeeseen mennessä
-
-   * arvostellaan asteikolla 0-5 (40 % - 100 % tehtävistä)
-
-   * Viopessa on tarjolla myös syventäviä ja kertaavia bonustehtäviä, joiden tekeminen kasvattaa pistekertymään, mutta joiden tekemättä jättäminen ei laske arvosanaa
-
-   * Viopessa on automaattinen plagioinnin tunnistus, joten ethän kopioi muiden vastauksia!
-
-   * **kaikkien Viope-tehtävien DL on kurssikokeen alku**
-
-
-2. Kurssikoe (50 % loppuarvosanasta)
-
-    * sisältää harjoitustehtävien kaltaisia ohjelmointitehtäviä
-
-    * arvostellaan asteikolla 0-5
-
-    * tarkempia ohjeita kokeeseen liittyen löydät [erilliseltä sivulta](./wiki/koe)
-
-Arviointilogiikka on esitetty alla myös Java-ohjelmakoodina.
-
-
-```java
-package arviointi;
-
-import static arviointi.OsasuoritustenArviointi.*;
-
-public class KurssinArviointi {
-
-    // Huom! Tehtävien ja kokeen maksimipisteet ovat suuntaa-antavia.
-
-    private static int viopeMaksimi = 64; // normaalitehtävien maksimipisteet (ei bonustehtäviä)
-    private static int kokeenMaksimi = 25;
-
-    public static int laskeLoppuarvosana(int tehtavienPisteet, int kokeenPisteet) {
-        double viopeArvosana = laskeArvosana(tehtavienPisteet, viopeMaksimi);
-        double kokeenArvosana = laskeArvosana(kokeenPisteet, kokeenMaksimi);
-
-        if (viopeArvosana > 0 && kokeenArvosana > 0) {
-            double keskiarvo = (viopeArvosana + kokeenArvosana) / 2;
-            return (int) Math.round(keskiarvo);
-        } else {
-            return 0;
-        }
-    }
-}
-```
-
-```java
-package arviointi;
-
-public class OsasuoritustenArviointi {
-
-    public static double laskeArvosana(int omatPisteet, int maksimiPisteet) {
-        // hyväksyttyyn arvosanaan vaaditaan 40 % pisteistä
-        double minimiPisteet = maksimiPisteet * 0.4;
-
-        if (omatPisteet < minimiPisteet) {
-            return 0;
-        } else {
-            // minimipisteillä saa arvosanan 1, maksimipisteillä arvosanan 5
-            double arvosana = 1 + 4 * (omatPisteet - minimiPisteet) / (maksimiPisteet - minimiPisteet);
-
-            // arvosana voi olla korkeintaan 5 bonuspisteet huomioiden
-            return Math.min(5, arvosana);
-        }
-    }
-}
-```
-
 ## Kurssin työmäärä
 
 Opintojakso kestää 8 viikkoa ja on laajuudeltaan 5 opintopistettä, joten sen [laskennallinen työmäärä on noin 135 tuntia](https://www.haaga-helia.fi/fi/ects-jarjestelma-ja-tutkintotodistuksen-liite-eli-diploma-supplement). Viikkoa kohden työmäärä vastaa laskennallisesti jopa 17 tuntia, joten varaa kurssin suorittamiseen runsaasti aikaa joka viikko.
@@ -299,11 +223,12 @@ public class KurssinTyomaara {
 
 ### Java ja Eclipse IDE
 
-Tarvitset Java-ohjelmien kehittämiseksi ja suorittamiseksi [Java JDK](https://www.oracle.com/java/technologies/downloads/):n (vähintään versio 11).
+Tarvitset Java-ohjelmien kehittämiseksi ja suorittamiseksi [Java JDK](https://www.oracle.com/java/technologies/downloads/):n.
 
-Lähdekooditiedostojen editointiin ja ohjelmien suorittamiseen käytämme tällä kurssilla Eclipse-kehitysympäristöä, jonka voit ladata itsellesi [täältä](https://www.eclipse.org/downloads/packages/). Valitse versio **Eclipse IDE for Enterprise Java and Web Developers**, jotta sama Eclipse toimii myös jatkokursseilla.
+Lähdekooditiedostojen editointiin ja ohjelmien suorittamiseen käytämme tällä kurssilla Eclipse-kehitysympäristöä, jonka voit ladata itsellesi [eclipse.org-sivustolta](https://www.eclipse.org/downloads/packages/). Valitse versio **Eclipse IDE for Enterprise Java and Web Developers**, jotta sama Eclipse toimii myös jatkokursseilla.
 
 Saat käyttää myös muita työkaluja, mutta niihin ei voida tarjota käyttötukea.
+
 
 ### Viope
 
@@ -312,18 +237,6 @@ Kurssin harjoitustehtävien tehtävänannot löytyvät Viope-järjestelmästä, 
 Rekisteröidy Viopeen osoitteessa [https://hh.viope.com/](https://hh.viope.com/). Rekisteröityessäsi valitse toteutus oman toteutuskoodisi perusteella. Mikäli sinulla on jo Viope-tunnukset, kirjaudu sisään olemassa olevilla tunnuksillasi.
 
 **Teknisistä syistä johtuen Viopeen palautettavista lähdekoodeista täytyy aina poistaa mahdolliset package -lauseet luokan yläpuolelta.** Viope on myös muilla tavoin erittäin tarkka ohjelmien oikeellisuudesta, mikä saattaa aiheuttaa ensimmäisillä viikoilla hämmennystä. Tyypillisiä Viope-virhetilanteita ja niiden ratkaisuja on dokumentoitu [erilliselle sivulle](wiki/Viope), jota päivitetään kurssin edetessä.
-
-### Teams
-
-Tällä kurssilla käytetään viestintään ja oppitunteihin Microsoftin Teams -palvelua. Jos jäät jumiin koodisi kanssa tai et ymmärrä materiaaleja tai tehtävänantoja, kysy rohkeasti vinkkejä Teamsissa oppitunnin aikana ja käytä Teamsin chattia oppituntien ulkopuolella. Todennäköisesti samaa ongelmaa pohtii kanssasi myös moni muu, joten kysymykset ovat erittäin tervetulleita.
-
-Teamsissa voi myös esittää toivomuksia kurssin kehittämiseksi jo kurssin aikana yksityisviesteinä opettajalle tai yhteisillä kanavilla. Tämä kurssi ei ole "valmis", vaan sitä kehitetään kurssin etenemisen mukaan.
-
-Teams on saatavilla puhelimien sovelluskaupoista sekä työpöytäsovelluksena, tai voit käyttää sitä selaimen web-käyttöliittymässä ilman asennuksia. Kirjautuminen Teamsiin tapahtuu Haaga-Helian `@myy.haaga-helia.fi`-tunnuksella.
-
-* [Teams Quick Start -ohje (pdf)](https://go.microsoft.com/fwlink/?linkid=2131456)
-* Web-käyttöliittymä: [https://teams.microsoft.com/](https://teams.microsoft.com/)
-* Lataussivu: [https://teams.microsoft.com/downloads](https://teams.microsoft.com/downloads)
 
 
 ### GitHub
