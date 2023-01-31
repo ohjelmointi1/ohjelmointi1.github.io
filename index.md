@@ -1,33 +1,7 @@
 
 <h1>Tervetuloa koodaamaan!</h1>
 
-Tervetuloa Haaga-Helian ohjelmointi 1 -opintojaksolle! Tämä sivusto toimii toteutuksen SOF005AS2A-3004 kotisivuna, materiaalipankkina sekä lähdekoodien jakelukanavana.
-
-Kurssin opettajina toimivat Teemu Havulinna ja Heikki Raatikainen (*etunimi.sukunimi@haaga-helia.fi*).
-
-## Oppitunnit
-
-Osallistuminen kurssille ei edellytä läsnäoloa yhteisissä tilaisuuksissa, vaan voit halutessasi opiskella itsenäisesti videoiden ja tekstimateriaalin avulla.
-
-Ohjattua opetusta järjestetään kahdesti viikossa:
-
-* tiistaisin klo 14:00 - 16:45
-* torstaisin klo 14:00 - 16:45
-
-Seuraa kurssin Teams-kanavaa oppituntien tarkempien sisältöjen ja toteutustapojen osalta!
-
-
-## Kurssin osallistumisen vahvistaminen
-
-Kurssin osallistumisen vahvistaminen edellyttää kurssin Teamsiin sekä Viopeen liittymistä ja ohjelmointitehtävien aktiivista suorittamista ensimmäisten kahden viikon aikana. Tehtäviin on saatavissa vinkkejä ja tukea kurssin Teams-kanavalla sekä oppitunneilla.
-
-Menettelyn ei ole tarkoitus karsia ketään pois kurssilta, vaan varmistaa, että työskentely kurssin parissa lähtee kaikilla hyvin käyntiin.
-
-Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista enää osallistumisen vahvistamisen jälkeen:
-
-> *"Opettaja poistaa opetuksen alussa toteutukselta opiskelijat, jotka eivät osallistu ensimmäiseen opetuskertaan tai ilmoita poissaolostaan. Opiskelijoita ei enää myöhemmin poisteta toteutukselta, vaan kaikille annetaan arvosana hylätty-kiitettävä."*
->
-> *[https://mynet.haaga-helia.fi/group/pakki/toteutukselle-ilmoittautuminen](https://mynet.haaga-helia.fi/group/pakki/toteutukselle-ilmoittautuminen)*
+Tervetuloa Haaga-Helian ohjelmointi 1 -opintojaksolle! Tämä sivusto toimii kurssin kotisivuna, materiaalipankkina sekä lähdekoodien jakelukanavana.
 
 
 ## Aikataulu
@@ -35,21 +9,17 @@ Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista en
 <table>
     <thead>
         <tr>
-            <th>&nbsp;</th>
-            <th>PVM</th>
             <th>Aiheet ja linkit</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>Ti</td>
-            <td>23.8.</td>
             <td>
                 <strong>
                 Kurssin järjestelyt ja osallistumisen vahvistaminen<br />
                 Eclipse-sovelluskehitin<br />
                 Perustietotyypit</strong><br />
-                <a href="https://hh.viope.com/">🔗 Viope</a> (valitse "Ohjelmointi 1 (3004 🚀)")<br />
+                <a href="https://hh.viope.com/">🔗 Viope</a><br />
                 <a href="wiki/Ohjelmoinnin-aloitus">📝 Oppimateriaali</a><br />
                 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko01/perusteet">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
@@ -59,8 +29,6 @@ Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista en
             </td>
         </tr>
         <tr>
-            <td>To</td>
-            <td>25.8.</td>
             <td>
                 <strong>Totuusarvot ja ehtolauseet</strong><br />
                 <a href="wiki/Totuusarvot-ja-ehtolauseet">📝 Oppimateriaali</a><br />
@@ -74,8 +42,6 @@ Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista en
             </td>
         </tr>
         <tr>
-            <td>Ti</td>
-            <td>30.8.</td>
             <td>
                 <strong>Toistorakenteet</strong><br />
                 <a href="wiki/Toistorakenteet">📝 Oppimateriaali</a><br />
@@ -87,8 +53,6 @@ Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista en
             </td>
         </tr>
         <tr>
-            <td>To</td>
-            <td>1.9.</td>
             <td>
                 <strong>Merkkijonot</strong><br />
                 <em>+ Debuggerin hyödyntäminen</em><br />
@@ -102,8 +66,6 @@ Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista en
             </td>
         </tr>
         <tr>
-            <td>Ti</td>
-            <td>6.9.</td>
             <td>
                 <strong>📣 Huom! Itsenäistä opiskelua, ei oppituntia.</strong><br /><br />
                 <strong>Listat</strong><br />
@@ -121,8 +83,6 @@ Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista en
             </td>
         </tr>
         <tr>
-            <td>To</td>
-            <td>8.9.</td>
             <td>
                 <strong>Taulukot</strong><br />
                 <a href="wiki/Taulukot-(arrays)">📝 Oppimateriaali</a><br />
@@ -134,8 +94,6 @@ Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista en
             </td>
         </tr>
         <tr>
-            <td>Ti</td>
-            <td>13.9.</td>
             <td>
                 <strong>Staattiset luokkametodit, parametrit ja paluuarvot</strong><br />
                 <a href="wiki/Metodit">📝 Oppimateriaali</a><br />
@@ -146,8 +104,6 @@ Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista en
             </td>
         </tr>
         <tr>
-            <td>To</td>
-            <td>15.9.</td>
             <td>
                 <strong>Ajan käsitteleminen Javassa<br />
                 Ohjelman paketointi ja suorittaminen Eclipsen ulkopuolella<br />
@@ -161,8 +117,6 @@ Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista en
             </td>
         </tr>
         <tr>
-            <td>Ti</td>
-            <td>20.9.</td>
             <td>
                 <strong>
                 Olio-ohjelmoinnin alkeet<br />
@@ -177,12 +131,10 @@ Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista en
             </td>
         </tr>
         <tr>
-            <td>To</td>
-            <td>22.9.</td>
             <td>
                 <strong>Olio-ohjelmointi jatkuu:<br/>
                 Luokkien yhteyssuhteet<br/>
-                Olioita listoilla ja listoja olioissa</strong><br/> 
+                Olioita listoilla ja listoja olioissa</strong><br/>
                 <a href="wiki/Oliot-ja-yhteyssuhteet">📝 Oppimateriaali</a><br />
                 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko05/oliot/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
@@ -196,10 +148,8 @@ Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista en
             </td>
         </tr>
         <tr>
-            <td>Ti</td>
-            <td>27.9.</td>
             <td>
-                <strong>Olioiden vertailu ja järjestäminen</strong><br/> 
+                <strong>Olioiden vertailu ja järjestäminen</strong><br/>
                 <a href="wiki/Olioiden-vertailu">📝 Oppimateriaali</a><br />
                 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko06/">📁 Oppitunnin esimerkkikoodit</a><br />
                 <br />
@@ -209,8 +159,6 @@ Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista en
             </td>
         </tr>
         <tr>
-            <td>To</td>
-            <td>29.9.</td>
             <td>
                 <strong>Poikkeukset</strong><br />
                 <a href="wiki/Poikkeukset">📝 Oppimateriaali</a><br />
@@ -222,8 +170,6 @@ Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista en
             </td>
         </tr>
         <tr>
-            <td>Ti</td>
-            <td>4.10.</td>
             <td>
                 <strong>Tekstitiedostojen lukeminen ja tallentaminen</strong><br />
                 <a href="wiki/Tiedostot">📝 Oppimateriaali</a><br />
@@ -235,16 +181,12 @@ Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista en
             </td>
         </tr>
         <tr>
-            <td>To</td>
-            <td>6.10.</td>
             <td>
                 <strong>Kurssin aiheiden soveltaminen</strong><br />
                 <a href="wiki/Soveltavat-esimerkit">📝 Materiaali, videot ja lähdekoodit</a><br />
             </td>
         </tr>
         <tr>
-            <td>Ti</td>
-            <td>11.10.</td>
             <td>
                 <strong>Kurssin sisällön kertaus</strong><br />
                 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko08/kertaus">📁 Oppitunnin esimerkkikoodit</a><br /><br />
@@ -254,21 +196,6 @@ Kurssin keskeyttäminen ei ole Haaga-Helian linjauksia noudattaen mahdollista en
                 <a href="https://web.microsoftstream.com/video/5b4727d5-f196-4aec-98e3-dcdbd16b46a9">📼 Kertaustunti, osa 2 (lottorivien tarkistus)</a><br />
                 <a href="https://web.microsoftstream.com/video/37b9d9b4-01d1-4c1e-aeaa-8ce52e82abf0">📼 Kertaustunti, osa 3 (kalenteri-tehtävä)</a><br />
                 <a href="https://web.microsoftstream.com/video/67715ce1-53a9-442a-bba2-136e14d461c8">📼 Kertaustunti, osa 4 (suuret kaupungit -tehtävä)</a>
-            </td>
-        </tr>
-        <tr>
-            <td>To</td>
-            <td>13.10.</td>
-            <td>
-                <strong>Kurssin loppukoe</strong><br />
-                Koe järjestetään kampuksella normaalissa luokassamme ja sen voi tehdä oman valinnan mukaan joko omalla tai luokan koneella.<br />
-                <a href="/wiki/koe">Ohjeita kokeeseen liittyen</a><br />
-                <!--Liity Viopessa kokeeseen <a href="https://hh.viope.com/">SWD4TN032 Ohjelmointi 1 koe 17.3.2021</a>
-                <br /><br />
-                Kokeessa kommunikointi sekä Viopen ulkopuolisten sivujen ja muiden materiaalien käyttäminen on kielletty. Saat kuitenkin tutkia Eclipsessä olevia aikaisempia lähdekoodejasi kokeen aikana.
-                <br /><br />-->
-                <a href="https://student.home.haaga-helia.fi/group/pakki/opintojaksopalaute">💬 Opintojaksopalaute</a><br />
-                Viope-viikkotehtävien DL.
             </td>
         </tr>
     </tbody>
@@ -403,7 +330,7 @@ public class KurssinTyomaara {
 
 ### Java ja Eclipse IDE
 
-Tarvitset Java-ohjelmien kehittämiseksi ja suorittamiseksi [Java JDK](https://www.oracle.com/java/technologies/downloads/):n (vähintään versio 11). 
+Tarvitset Java-ohjelmien kehittämiseksi ja suorittamiseksi [Java JDK](https://www.oracle.com/java/technologies/downloads/):n (vähintään versio 11).
 
 Lähdekooditiedostojen editointiin ja ohjelmien suorittamiseen käytämme tällä kurssilla Eclipse-kehitysympäristöä, jonka voit ladata itsellesi [täältä](https://www.eclipse.org/downloads/packages/). Valitse versio **Eclipse IDE for Enterprise Java and Web Developers**, jotta sama Eclipse toimii myös jatkokursseilla.
 
@@ -413,7 +340,7 @@ Saat käyttää myös muita työkaluja, mutta niihin ei voida tarjota käyttötu
 
 Kurssin harjoitustehtävien tehtävänannot löytyvät Viope-järjestelmästä, jonne tehtävät myös palautetaan. Viope tarkistaa tehtävät automaattisesti ja pitää kirjaa tehtäväpisteistä.
 
-Rekisteröidy Viopeen osoitteessa [https://hh.viope.com/](https://hh.viope.com/). Rekisteröityessäsi valitse tämä toteutus nimeltä "Ohjelmointi 1 (3004 🚀)". Mikäli sinulla on jo Viope-tunnukset, kirjaudu sisään tunnuksillasi ja liity etusivulla kurssille "Ohjelmointi 1 (3004 🚀)".
+Rekisteröidy Viopeen osoitteessa [https://hh.viope.com/](https://hh.viope.com/). Rekisteröityessäsi valitse toteutus oman toteutuskoodisi perusteella. Mikäli sinulla on jo Viope-tunnukset, kirjaudu sisään olemassa olevilla tunnuksillasi.
 
 **Teknisistä syistä johtuen Viopeen palautettavista lähdekoodeista täytyy aina poistaa mahdolliset package -lauseet luokan yläpuolelta.** Viope on myös muilla tavoin erittäin tarkka ohjelmien oikeellisuudesta, mikä saattaa aiheuttaa ensimmäisillä viikoilla hämmennystä. Tyypillisiä Viope-virhetilanteita ja niiden ratkaisuja on dokumentoitu [erilliselle sivulle](wiki/Viope), jota päivitetään kurssin edetessä.
 
@@ -428,6 +355,7 @@ Teams on saatavilla puhelimien sovelluskaupoista sekä työpöytäsovelluksena, 
 * [Teams Quick Start -ohje (pdf)](https://go.microsoft.com/fwlink/?linkid=2131456)
 * Web-käyttöliittymä: [https://teams.microsoft.com/](https://teams.microsoft.com/)
 * Lataussivu: [https://teams.microsoft.com/downloads](https://teams.microsoft.com/downloads)
+
 
 ### GitHub
 
