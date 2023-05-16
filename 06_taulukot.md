@@ -1,18 +1,20 @@
-[&larr; Takaisin etusivulle](/)
+---
+title: Taulukot
+layout: default
+nav_order: 6
+---
 
-
-<h1 class="js-toc-ignore">Taulukot (array)</h1>
+# Taulukot
 
 Tällä kerralla tutustumme Javan taulukoihin. Taulukot ovat varsin alkeellisia tietorakenteita, joihin voidaan varastoida useita saman typpisiä arvoja. Materiaalissa ja oppitunnilla oletetaan perustason osaamista listojen käytöstä.
 
-Toisin kuin listoilla, taulukon pituus on kiinteä, eli niitä ei voi lyhentää eikä kasvattaa. Taulukoilla ei myöskään ole metodeita eikä samanlaista luonnollista merkkijonoesitystä kuin listoilla. 
+Toisin kuin listoilla, taulukon pituus on kiinteä, eli niitä ei voi lyhentää eikä kasvattaa. Taulukoilla ei myöskään ole metodeita eikä samanlaista luonnollista merkkijonoesitystä kuin listoilla.
 
 Listoilla ja taulukoilla on myös lukuisia yhtäläisyyksiä, ja `ArrayList`-listat jopa käyttävät sisäisesti taulukoita tietojensa tallentamiseen nimensä mukaisesti.
 
 
-**Sisällysluettelo**
-
-<div class="js-toc"></div>
+* Sisällysluettelo
+{:toc}
 
 # [Video: taulukon luominen, käsitteleminen ja läpikäynti](https://web.microsoftstream.com/video/99c9ef6f-d2eb-4180-8c1b-0cfef766cb10) *40:29*
 
@@ -46,7 +48,7 @@ Tässä vaiheessa kurssia pitäydymme Javan valmiissa tietotyypeissä kuten `Str
 
 # Taulukon luominen
 
-Taulukot luodaan new-avainsanalla ja taulukon pituus määritellään hakasuluissa. Hakasulkujen sisään määritellään tällä syntaksilla taulukon pituus. 
+Taulukot luodaan new-avainsanalla ja taulukon pituus määritellään hakasuluissa. Hakasulkujen sisään määritellään tällä syntaksilla taulukon pituus.
 
 **Pituutta ei voi enää muuttaa taulukon luomisen jälkeen**.
 
@@ -121,7 +123,7 @@ String[] sanat = new String[4]; // [null, null, null, null]
 
 Jos taulukkoon asetettavat alkuarvot ovat jo valmiiksi tiedossa, taulukko voidaan alustaa myös aaltosulkeiden avulla tietyille arvoille.
 
-Tällöin taulukon pituutta ei ilmoiteta hakasuluissa, vaan pituus määräytyy alkuarvojen määrän mukaan, esim: 
+Tällöin taulukon pituutta ei ilmoiteta hakasuluissa, vaan pituus määräytyy alkuarvojen määrän mukaan, esim:
 
 ```java
 int[] lottorivi = new int[] { 3, 9, 15, 16, 26, 29, 33 };
@@ -147,7 +149,7 @@ Taulukon koon saa selville taulukkoon liittyvän muuttujan `length` avulla. `len
 int[] luvut = new int[3];
 
 int pituus = luvut.length;
-``` 
+```
 
 **Huomaa**, että kyseessä ei ole metodikutsu kuten listoilla, eli `taulukko.length()` ei toimi.
 
@@ -327,7 +329,7 @@ String[] kirjaimet = new String[] { "j", "a", "v", "a" };
 
 Arrays.sort(kirjaimet);
 
-// tulostaa hämmentävän merkkijonon: 
+// tulostaa hämmentävän merkkijonon:
 System.out.println(kirjaimet); // [Ljava.lang.String;@106d69c
 ```
 
@@ -453,10 +455,6 @@ Tällä videolla jatketaan aikaisemmalla videolla aloitettua lottoesimerkkiä ja
 
 Lähdekoodit: [Lottotarkistin.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko03/taulukot/Lottotarkistin.java).
 
----
 
-Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
 
-<script src="/tocbot/tocbot.min.js"></script>
-<script src="/scripts.js"></script>
-<link rel="stylesheet" href="/tocbot/tocbot.css">
+

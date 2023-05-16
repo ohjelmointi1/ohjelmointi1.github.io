@@ -1,14 +1,17 @@
-[&larr; Takaisin etusivulle](/)
+---
+title: Ajan käsittely ja ohjelman kääntäminen
+layout: default
+nav_order: 8
+---
 
-<h1 class="js-toc-ignore">Ajan käsittely ja ohjelman kääntäminen</h1>
+# Ajan käsittely ja ohjelman kääntäminen
 
 Tällä oppitunnilla perehdymme Javan tapohin käsitellä aikaa. Aikaa käsitellään **olioiden** ja **luokkien** avulla, mikä toimii erinomaisena pohjustuksena seuraavalla viikolla käsiteltävään **olio-ohjelmointiaiheeseen**, jossa luomme itse vastaavia luokkia ja niiden olioita.
 
 Ajan käsittelyn lisäksi tutustumme siihen, miten Java-ohjelmia voidaan suorittaa Eclipsen ulkopuolella. Tähänastinen IDE-ympäristöön sidoksissa oleva suorittaminen soveltuu ainoastaan ohjelmistokehityksen yhteyteen, mutta ohjelmat on myös pakattavissa siten, että ne voidaan suorittaa miltä vain komentoriviltä.
 
-**Sisällysluettelo**
-
-<div class="js-toc"></div>
+* Sisällysluettelo
+{:toc}
 
 
 # [Video: Javan aikaluokat ja niiden käyttäminen](https://web.microsoftstream.com/video/848a270b-1d74-4493-8d13-17db6b3a656a) *15:05*
@@ -21,12 +24,14 @@ Ajan käsittelyn lisäksi tutustumme siihen, miten Java-ohjelmia voidaan suoritt
 
 Nykyaikainen Javan standardikirjasto (Java 8+) käsittelee aikaa johdonmukaisesti ja selkeästi. Aikaisemmissa versioissa ajan käsittely on ollut ajoittain sekavaa ja virhealtista.
 
-Javan vanhentuneilla luokilla kuukausien indeksit alkavat toisinaan nollasta. Seuraavassa esimerkissä vanha `Date`-luokka käsittelee kuukaudet numeroilla 0-11, joten kuukausi 12 vuotaa seuraavan vuoden puolelle:
 
-<pre class="highlight" style="border: solid red 2px">
-<code>// 💥 2022, 12, 24 tarkoittaa 24. TAMMIKUUTA 2023 💥</code>
-Date eiOikeastiJoulu = new Date(2022, 12, 24); // Date-luokkaa ei kannata enää käyttää
-</pre>
+{: .warning }
+> Javan vanhentuneilla luokilla kuukausien indeksit alkavat toisinaan nollasta. Seuraavassa esimerkissä vanha `Date`-luokka käsittelee kuukaudet numeroilla 0-11, joten kuukausi 12 vuotaa seuraavan vuoden puolelle:
+>
+> ```java
+> // 💥 2022, 12, 24 tarkoittaa 24. TAMMIKUUTA 2023 💥
+> Date eiOikeastiJoulu = new Date(2022, 12, 24);
+> ```
 
 Nykyisillä `java.time`-paketin aikaluokilla kuukausien indeksit alkavat yhdestä ja luokkien käyttäminen on monin tavoin johdonmukaisempaa:
 
@@ -167,7 +172,7 @@ if (oneDay.equals(otherDay)) {
 Ajanjaksoja varten on olemassa esimerkiksi luokat `Period` ja `Duration`. Näiden avulla voidaan esimerkiksi selvittää, kuinka pitä jakso kahden eri ajanhetken välillä on:
 
 ```java
-import java.time.Period; // luokan alkuun 
+import java.time.Period; // luokan alkuun
 ```
 
 ```java
@@ -233,7 +238,7 @@ Aikaa on usein tarve esittää merkkijonoina käyttäjille. Oletuksena Javan aik
 Ajankohtia voidaan muotoilla hieman kuten desimaalilukuja, `DateTimeFormatter`-luokan avulla (vrt. DecimalFormat-luokka):
 
 ```java
-import java.time.format.DateTimeFormatter; // luokan alkuun 
+import java.time.format.DateTimeFormatter; // luokan alkuun
 ```
 
 `DateTimeFormatter`-oliolle annetaan käytettävä muoto merkkijonona, jonka jälkeen se muotoilee aikaoliota annettuun muotoon `format`-metodilla:
@@ -309,7 +314,7 @@ Käytännössä kääntäminen tapahtuu esimerkiksi PowerShell-komentorivillä `
 > javac viikko02\merkkijonot\Salasana.java
 ```
 
-Komentoa suoritettaessa sinun tulee olla projektin lähdekoodien juurihakemistossa, eli esim. `workspace\ohjelmointi1\src\`. `javac`-komennolle annetaan parametrina käännettävän lähdekooditiedoston polku. Polun voi antaa Windows-ympäristössä joko kenoviivoilla `\` tai kauttaviivoilla `/` eroteltuna. 
+Komentoa suoritettaessa sinun tulee olla projektin lähdekoodien juurihakemistossa, eli esim. `workspace\ohjelmointi1\src\`. `javac`-komennolle annetaan parametrina käännettävän lähdekooditiedoston polku. Polun voi antaa Windows-ympäristössä joko kenoviivoilla `\` tai kauttaviivoilla `/` eroteltuna.
 
 Kääntämisen jälkeen tiedostojärjestelmään ilmestyy `.java`-tiedoston rinnalle käännetty `.class`-tiedosto. Tätä tiedostoa voidaan käyttää `java`-komennon kanssa ohjelman suorittamiseksi.
 
@@ -373,10 +378,6 @@ Tarvitset todennäköisesti nämä luokat:
 * DateTimeFormatter (d.M.yyyy)
 * Period tai ChronoUnit.DAYS
 
-----
+-
 
-Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
 
-<script src="/tocbot/tocbot.min.js"></script>
-<script src="/scripts.js"></script>
-<link rel="stylesheet" href="/tocbot/tocbot.css">

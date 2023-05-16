@@ -1,15 +1,18 @@
-[&larr; Takaisin etusivulle](/)
+---
+title: Toistorakenteet
+layout: default
+nav_order: 3
+---
 
-<h1 class="js-toc-ignore">Toistorakenteet</h1>
+# Toistorakenteet
 
-Ehtorakenteiden tavoin toistorakenteilla voidaan vaikuttaa koodin suorituksen etenemiseen. Toistorakenteiden avulla tietyt koodirivit voidaan toistaa eri logiikoilla tai tarvittaessa jopa "ikuisesti". 
+Ehtorakenteiden tavoin toistorakenteilla voidaan vaikuttaa koodin suorituksen etenemiseen. Toistorakenteiden avulla tietyt koodirivit voidaan toistaa eri logiikoilla tai tarvittaessa jopa "ikuisesti".
 
 Tällä opetusviikolla harjoittelemme pääasiassa koodin toistamista tietyn määrän kertoja, toiston keskeyttämistä, sekä käymään läpi kokonaislukuja. Toistorakenteita hyödynnetään myöhemmin myös listojen ja taulukoiden yhteydessä, jolloin käymme läpi niissä olevia arvoja yksitellen.
 
 
-**Sisällysluettelo**
-
-<div class="js-toc"></div>
+* Sisällysluettelo
+{:toc}
 
 
 # [Johdanto toistorakenteisiin ja while-rakenteen hyödyntäminen](https://web.microsoftstream.com/video/f2aa8a54-a86a-484e-a60d-0e80cde9a891) *42:49*
@@ -28,14 +31,14 @@ While-toistorakenne on yksinkertaisin tapa toistaa koodia Javalla. `while`-avain
 
 ```java
 while (ehto) {
-    // Toistetaan, jos ehto == true ja 
+    // Toistetaan, jos ehto == true ja
     // lopetetaan, kun ehto == false
 }
 ```
 
 Vuokaaviona while-toistorakenteen logiikka on seuraava:
 
-![While loop flow diagram](assets/While-loop-diagram.svg)
+![While loop flow diagram](/assets/While-loop-diagram.svg)
 
 Kuva: P. Kemp. While loop flow diagram. CC0. [Wikipedia](https://commons.wikimedia.org/w/index.php?curid=894438)
 
@@ -107,7 +110,7 @@ Tämän yksinkertaistetun esimerkin avulla voit valita hinnan ylä- ja alarajan 
         <option value="4000"> 4 000 €</option>
         <option value="4500"> 4 500 €</option>
         <option value="5000"> 5 000 €</option>
-    </select> - 
+    </select> -
     <select name="max">
         <option>Maksimi</option>
         <option value="0">0 €</option>
@@ -155,7 +158,7 @@ While-toistorakenteen lisäksi on olemassa myös for-toistorakenne. For on tyypi
 
 ```java
 for (alustus; toistoehto; kasvatus) {
-    // Tähän lohkoon kirjoitettu koodi 
+    // Tähän lohkoon kirjoitettu koodi
     // Toistetaan, kunnes ehto == false
 }
 ```
@@ -194,17 +197,17 @@ Loogisesti samat toistorakenteet on mahdollista toteuttaa sekä while- että for
 
 ```java
 for (int i = 0; i < 3; i++) {
-    System.out.println(i); 
+    System.out.println(i);
 }
 ```
 
 Sama while-toistorakenne:
 
 ```java
-int i = 0; // toistossa käytettävän muuttujan alustus 
+int i = 0; // toistossa käytettävän muuttujan alustus
 
-while (i < 3) { // toistoehto 
-    System.out.println(i); 
+while (i < 3) { // toistoehto
+    System.out.println(i);
     i++; // muuttujan päivitys
 }
 ```
@@ -234,7 +237,7 @@ Toteutetaan vertailun vuoksi toistorakenne, joka muodostaa [nettiauto.com:in](ht
         <option value="2012">2012</option>
         <option value="2011">2011</option>
         <option value="2010">2010</option>
-    </select> - 
+    </select> -
     <select name="max">
         <option>Maksimi</option>
         <option value="2022">2022</option>
@@ -286,7 +289,7 @@ int vuosiluku = nykyinenVuosi.getValue();
 import java.time.Year;
 ```
 
-# Toistorakenteesta poistuminen eli **break**
+# Toistorakenteesta poistuminen eli `break`
 
 Varsin usein haluamme suorittaa koodia toistaiseksi, kunnes käyttäjä esimerkiksi antaa tietyn syötteen. Tällöin voi olla hyödyllistä tehdä "ikuinen silmukka" eli:
 
@@ -300,10 +303,10 @@ while (true) {
 Yllä esitetystä toistorakenteesta voidaan poistua tarvittaessa kesken toistettavan lohkon suorituksen komennolla `break`. Komento `break` on tyypillisesti toistorakenteen sisällä olevassa ehtolauseessa, jossa tarkastellaan, haluaako käyttäjä poistua toistorakenteesta, tai onko tapahtunut jokin muu toiston keskeyttävä tapahtuma.
 
 ```java
-/* 
+/*
  * Tämä esimerkki on lainattu Helsingin yliopiston Agile Education Research -tutkimusryhmän
- * ohjelmointikurssilta ja se on lisensoitu Creative Commons BY-NC-SA-lisenssillä. 
- * https://2017-ohjelmointi.github.io/part2/#section-47-toistolauseesta-poistuminen 
+ * ohjelmointikurssilta ja se on lisensoitu Creative Commons BY-NC-SA-lisenssillä.
+ * https://2017-ohjelmointi.github.io/part2/#section-47-toistolauseesta-poistuminen
  */
 Scanner lukija = new Scanner(System.in);
 
@@ -382,11 +385,8 @@ double arvosana = OsasuoritustenArviointi.laskeArvosana(omatPisteet, maksimiPist
 Tehdään seuraavaksi toistorakenne, joka käy läpi kaikki mahdolliset pistemäärät ja tulostaa niitä vastaavat arvosanat kokeessa, jossa maksimipisteet ovat 25.
 
 
----
 
-Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
 
-<script src="/tocbot/tocbot.min.js"></script>
-<script src="/scripts.js"></script>
-<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+
 

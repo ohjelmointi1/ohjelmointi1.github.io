@@ -1,9 +1,12 @@
+---
+title: Poikkeukset
+layout: default
+nav_order: 12
+---
 
-[&larr; Takaisin etusivulle](/)
+# Poikkeukset (exceptions)
 
-<h1 class="js-toc-ignore">Poikkeukset (exceptions)</h1>
-
-Poikkeukset ovat ohjelman suorituksen aikana tapahtuvia tapahtumia, jotka aiheuttavat poikkeamia ohjelman normaaliin suoritusjärjestykseen. Vaikka ensikokemukset poikkeuksista ovat usein kielteisiä, ne ovat erittäin hyödyllinen työkalu erilaisten vikatilanteiden käsittelemiseksi ohjelmissa. 
+Poikkeukset ovat ohjelman suorituksen aikana tapahtuvia tapahtumia, jotka aiheuttavat poikkeamia ohjelman normaaliin suoritusjärjestykseen. Vaikka ensikokemukset poikkeuksista ovat usein kielteisiä, ne ovat erittäin hyödyllinen työkalu erilaisten vikatilanteiden käsittelemiseksi ohjelmissa.
 
 Ilman poikkeustenkäsittelyä ohjelma tyypillisesti "kaatuu", kun ohjelmassa tapahtuu jotain normaalista suorituksesta poikkeavaa, kuten yritetään käyttää listan olematonta indeksiä. Poikkeuksiin voidaan varautua, jolloin niiden sattuessa voidaan esimerkiksi yrittää uudelleen tai tulostaa virheilmoitus kaatamatta koko ohjelmaa.
 
@@ -12,9 +15,8 @@ Tällä opetuskerralla tutustumme tarkemmin poikkeuksiin, niiden hyödyntämisee
 Huomaa, että Java-kääntäjän antamat virheet sekä varoitukset eivät liity poikkeuksiin, vaan ovat kokonaan eri asia. Poikkeukset tapahtuvat ohjelman suorituksen aikana, kun taas kääntäjä tekee työnsä ennen kuin ohjelma käynnistetään.
 
 
-**Sisällysluettelo**
-
-<div class="js-toc"></div>
+* Sisällysluettelo
+{:toc}
 
 # Oppitunnin videot
 
@@ -60,21 +62,21 @@ Muita tyypillisiä tilanteita poikkeuksille ovat mm:
 
 Esimerkki poikkeuksen aiheuttamasta virheilmoituksesta:
 
-<pre class="highlight" style="border: solid red 2px; color: red;">
-<code>Exception in thread "main" java.util.InputMismatchException
+```
+Exception in thread "main" java.util.InputMismatchException
 at java.util.Scanner.throwFor(Unknown Source)
 at java.util.Scanner.next(Unknown Source)
 at java.util.Scanner.nextInt(Unknown Source)
 at java.util.Scanner.nextInt(Unknown Source)
-at week1.ScannerExample.main(Example.java:11)</code>
-</pre>
+at week1.ScannerExample.main(Example.java:11)
+```
 
 Voit tutustua poikkeuksiin tämän oppimateriaalin lisäksi esimerkiksi [Oraclen oppimateriaalin avulla](https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html).
 
 
 # Poikkeuksiin varautuminen
 
-Poikkeuksiin voidaan varautua kirjoittamalla poikkeuksia aiheuttava koodi `try`-lohkon sisään. `try`-lohkon jälkeen kirjoitetaan `catch`-lohko, jonka sisällä oleva koodi suoritetaan, mikäli `try`-lohkon suorituksessa törmättiin `catch`-lohkoon märiteltyyn poikkeustyyppiin. 
+Poikkeuksiin voidaan varautua kirjoittamalla poikkeuksia aiheuttava koodi `try`-lohkon sisään. `try`-lohkon jälkeen kirjoitetaan `catch`-lohko, jonka sisällä oleva koodi suoritetaan, mikäli `try`-lohkon suorituksessa törmättiin `catch`-lohkoon märiteltyyn poikkeustyyppiin.
 
 Try/catch-rakenteen perusmuoto on siis seuraava:
 
@@ -178,7 +180,7 @@ try {
     // poikkeus.getMessage() palauttaa selkokielisen virheilmoituksen.
     String virheviesti = poikkeus.getMessage();
 
-    System.err.println(virheviesti); 
+    System.err.println(virheviesti);
 }
 ```
 
@@ -232,14 +234,14 @@ Kun metodi on suoritettu, poistetaan sitä varten luotu kehys ja suoritus palaa 
 
 ## Pinon lukeminen (stack trace, pinovedos)
 
-<pre class="highlight" style="border: solid red 2px; color: red;">
-<code>Exception in thread "main" java.util.InputMismatchException
+```
+Exception in thread "main" java.util.InputMismatchException
 at java.util.Scanner.throwFor(Unknown Source)
 at java.util.Scanner.next(Unknown Source)
 at java.util.Scanner.nextInt(Unknown Source)
 at java.util.Scanner.nextInt(Unknown Source)
-at week1.ScannerExample.main(Example.java:11)</code>
-</pre>
+at week1.ScannerExample.main(Example.java:11)
+```
 
 Pinovedosta luetaan aina alhaalta ylöspäin. Yllä olevasta pinovedoksesta näet, että metodikutsut lähtivät liikkeelle alimmasta kehyksestä eli Example.java-tiedoston riviltä 11. Sieltä edettiin Javan Scanner-luokkaan, joka kutsui itse muutamaa omaa metodiaan. Lopulta aiheutui virhe `InputMismatchException`, joka näkyy pinovedoksessa ylimpänä.
 
@@ -333,11 +335,11 @@ Kun poikkeus heitetään, siirtyy ohjelman suoritus välittömästi joko saman r
 
 ## Koodaustehtävä
 
-Kirjoita ohjelma `ArvonTarkastus`, joka kysyy käyttäjältä yhden luvun. Ohjelmasi tulee luvun kysymisen jälkeen tarkastaa, että luku on vähintään 0 ja korkeintaan 23. Mikäli annettu luku X on sallittu, tulee ohjelmasi tulostaa teksti "Luku X on sallittu." ja ohjelman suorituksen pitää päättyä. 
+Kirjoita ohjelma `ArvonTarkastus`, joka kysyy käyttäjältä yhden luvun. Ohjelmasi tulee luvun kysymisen jälkeen tarkastaa, että luku on vähintään 0 ja korkeintaan 23. Mikäli annettu luku X on sallittu, tulee ohjelmasi tulostaa teksti "Luku X on sallittu." ja ohjelman suorituksen pitää päättyä.
 
-Mikäli luku ei ole sallittu, tulee ohjelmasi heittää Javan valmis `IllegalArgumentException`-poikkeus, minkä jälkeen ohjelmasi "kaatuu". Voit antaa poikkeukselle konstruktoriparametrina minkä tahansa virheilmoituksen tai jättää merkkijonon antamatta. 
+Mikäli luku ei ole sallittu, tulee ohjelmasi heittää Javan valmis `IllegalArgumentException`-poikkeus, minkä jälkeen ohjelmasi "kaatuu". Voit antaa poikkeukselle konstruktoriparametrina minkä tahansa virheilmoituksen tai jättää merkkijonon antamatta.
 
-Huom: koska `IllegalArgumentException` sijaitsee `java.lang`-paketissa, sitä ei tarvitse erikseen ottaa käyttöön import-käskyllä. 
+Huom: koska `IllegalArgumentException` sijaitsee `java.lang`-paketissa, sitä ei tarvitse erikseen ottaa käyttöön import-käskyllä.
 
 ```
 Syötä luku väliltä 0-23: -1
@@ -372,7 +374,7 @@ public class Yhteystieto {
 
     private String nimi;
     private String email;
-    
+
     public void setEmail(String email) {
         if (email == null || "".equals(email)) {
             throw new VirheellinenEmailPoikkeus(email);
@@ -382,10 +384,6 @@ public class Yhteystieto {
 }
 ```
 
----
 
-Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä. 
 
-<script src="/tocbot/tocbot.min.js"></script>
-<script src="/scripts.js"></script>
-<link rel="stylesheet" href="/tocbot/tocbot.css">
+

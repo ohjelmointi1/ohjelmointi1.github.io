@@ -1,6 +1,12 @@
-[&larr; Takaisin etusivulle](/)
+---
+title: Soveltavat esimerkit
+layout: default
+nav_order: 14
+---
 
-# Esimerkki 1: henkilötunnuksen tarkastaminen
+# Soveltavat esimerkit
+
+## Esimerkki 1: henkilötunnuksen tarkastaminen
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/7c65bed8-7724-4ee9-94eb-3b715c8ad630?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
@@ -18,11 +24,11 @@ Videolla käytetään seuraavia sivustoja, joihin voit tutustua videon katsomise
 
 Voit katsoa videon myös [MS Stream -palvelussa](https://web.microsoftstream.com/video/7c65bed8-7724-4ee9-94eb-3b715c8ad630).
 
-# Esimerkki 2: verkkokaupan luokat ja oliot
+## Esimerkki 2: verkkokaupan luokat ja oliot
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/e547ee47-b4ac-4182-8a1c-bdcfe3ef060a?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Tässä esimerkissä kertaamme luokkien ja olioiden käyttämistä kuvitteellisen polkupyöräkaupan luokkien toteuttamiseksi. 
+Tässä esimerkissä kertaamme luokkien ja olioiden käyttämistä kuvitteellisen polkupyöräkaupan luokkien toteuttamiseksi.
 
 📁 Videon esimerkkikoodit on nähtävissä kokonaisuudessaan [GitHubissa](https://github.com/ohjelmointi1/swd4tn032-3009/tree/master/src/viikko8/kertaus).
 
@@ -31,9 +37,3 @@ Videolla käytetään seuraavia sivustoja, joihin voit tutustua videon katsomise
 * Bikester. [https://www.bikester.fi/](https://www.bikester.fi/)
 
 Voit katsoa videon myös [MS Stream -palvelussa](https://web.microsoftstream.com/video/e547ee47-b4ac-4182-8a1c-bdcfe3ef060a).
-
-
----
-
-
-Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.

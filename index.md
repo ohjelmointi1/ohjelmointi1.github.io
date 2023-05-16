@@ -1,19 +1,15 @@
+---
+title: Tervetuloa koodaamaan!
+layout: default
+nav_order: 0
+---
 
-<h1>Tervetuloa koodaamaan!</h1>
+# Tervetuloa koodaamaan!
 
 Tervetuloa ohjelmointi 1 -opintojaksolle! Tältä sivulta löydät kurssin oppituntien muistiinpanot, videotallenteet ja koodiesimerkit.
 
-<style type="text/css">
-#content h3 {
-  font-weight: bold;
-}
-#content h3 a {
-  text-decoration: underline;
-  color: #159957;
-}
-</style>
 
-### 1. <a href="wiki/Ohjelmoinnin-aloitus">Eclipse-sovelluskehitin ja perustietotyypit</a>
+### 1. [Eclipse-sovelluskehitin ja perustietotyypit](./ohjelmoinnin-aloitus)
 
 <a href="https://hh.viope.com/">🔗 Viope</a><br />
 <a href="wiki/Ohjelmoinnin-aloitus">📝 Oppimateriaali</a><br />
@@ -24,7 +20,7 @@ Tervetuloa ohjelmointi 1 -opintojaksolle! Tältä sivulta löydät kurssin oppit
 <a href="https://web.microsoftstream.com/video/e5771426-2a6d-4aa4-be5b-ecd7dbe03805">📼 Javan muuttujat ja lukujen tietotyypit</a>
 
 
-### 2. <a href="wiki/Totuusarvot-ja-ehtolauseet">Totuusarvot ja ehtolauseet</a>
+### 2. [Totuusarvot ja ehtolauseet](./totuusarvot-ja-ehtolauseet)
 
 <a href="wiki/Totuusarvot-ja-ehtolauseet">📝 Oppimateriaali</a><br />
 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko01/ehtorakenteet">📁 Oppitunnin esimerkkikoodit</a>
@@ -36,7 +32,7 @@ Tervetuloa ohjelmointi 1 -opintojaksolle! Tältä sivulta löydät kurssin oppit
 <a href="https://web.microsoftstream.com/video/55c3e7f7-f3e3-4c83-b370-dee3635dea83">📼 Matkalippujen hinnat -esimerkki</a>
 
 
-### 3. <a href="wiki/Toistorakenteet">Toistorakenteet</a>
+### 3. [Toistorakenteet](./toistorakenteet)
 
 <a href="wiki/Toistorakenteet">📝 Oppimateriaali</a><br />
 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko02/toisto">📁 Oppitunnin esimerkkikoodit</a>
@@ -46,7 +42,7 @@ Tervetuloa ohjelmointi 1 -opintojaksolle! Tältä sivulta löydät kurssin oppit
 <a href="https://web.microsoftstream.com/video/c3e79c0e-02d9-40df-96ad-309c235fff35">📼 Break-avainsana, sademäärät ja arvosana-asteikko</a>
 
 
-### 4. <a href="wiki/Merkkijonot">Merkkijonot ja debuggerin hyödyntäminen</a>
+### 4. [Merkkijonot ja debuggerin hyödyntäminen](./merkkijonot)
 
 <a href="wiki/Merkkijonot">📝 Oppimateriaali</a><br />
 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko02/merkkijonot">📁 Oppitunnin esimerkkikoodit</a>
@@ -57,7 +53,7 @@ Tervetuloa ohjelmointi 1 -opintojaksolle! Tältä sivulta löydät kurssin oppit
 <a href="https://web.microsoftstream.com/video/17a8d25e-47b0-41fe-9446-132aed27e871">📼 Syventävää: char-tietotyyppi, säännölliset lausekkeet ja palindromin tarkastaminen</a>
 
 
-### 5. <a href="wiki/Listat">Listat</a>
+### 5. [Listat](./listat)
 
 Sekä Gitin käyttö tehtäväpohjien lataamiseksi.
 
@@ -74,7 +70,7 @@ Sekä Gitin käyttö tehtäväpohjien lataamiseksi.
 <a href="https://ohjelmointi-19.mooc.fi/osa-3/2-listat" target="_blank">Listamuuttujan käyttö useamman arvon tallentamiseen</a>
 
 
-### 6. <a href="wiki/Taulukot-(arrays)">Taulukot</a>
+### 6. [Taulukot](./taulukot)
 
 <a href="wiki/Taulukot-(arrays)">📝 Oppimateriaali</a><br />
 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko03/taulukot">📁 Oppitunnin esimerkkikoodit</a>
@@ -84,7 +80,7 @@ Sekä Gitin käyttö tehtäväpohjien lataamiseksi.
 <a href="https://web.microsoftstream.com/video/fbbdf454-5222-43bb-840b-8579fdd47e13">📼 Säätilasto-esimerkki (csv-datan käsittely)</a>
 
 
-### 7. <a href="wiki/Metodit">Staattiset luokkametodit, parametrit ja paluuarvot</a>
+### 7. [Staattiset luokkametodit, parametrit ja paluuarvot](./metodit)
 
 <a href="wiki/Metodit">📝 Oppimateriaali</a><br />
 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko04/metodit/">📁 Oppitunnin esimerkkikoodit</a>
@@ -93,7 +89,7 @@ Sekä Gitin käyttö tehtäväpohjien lataamiseksi.
 <a href="https://web.microsoftstream.com/video/d3effef4-3f42-4be2-8692-12f4ba4f9c53">📼 Parametrien välittäminen, ohjelman pilkkominen ja metodikutsut toisista luokista</a>
 
 
-### 8. <a href="wiki/Ajan-kasittely-ja-ohjelman-kaantaminen">Ajan käsitteleminen Javassa, ohjelman kääntäminen ja komentoriviparametrit</a>
+### 8. [Ajan käsitteleminen Javassa, ohjelkääntäminen ja komentoriviparametrit](./ajan-kasittely-ja-ohjelman-kaantaminen)
 
 <a href="wiki/Ajan-kasittely-ja-ohjelman-kaantaminen">📝 Oppimateriaali</a><br />
 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko04/aika/">📁 Oppitunnin esimerkkikoodit</a>
@@ -103,7 +99,7 @@ Sekä Gitin käyttö tehtäväpohjien lataamiseksi.
 <a href="https://web.microsoftstream.com/video/8648dc7e-4195-4bea-b872-86dcd22c76af">📼 Ohjelman kääntäminen, paketointi ja suorittaminen</a>
 
 
-### 9. <a href="wiki/Oliot">Olio-ohjelmoinnin alkeet</a>
+### 9. [Olio-ohjelmoinnin alkeet](./oliot)
 
 Käsitteet luokka ja olio<br />
 Oliometodit ja -muuttujat
@@ -116,7 +112,7 @@ Oliometodit ja -muuttujat
 <a href="https://web.microsoftstream.com/video/0008bece-15ff-47b9-a163-7c7663d787b3">📼 Null-arvot, NullPointerException ja koodin generointi</a>
 
 
-### 10. <a href="wiki/Oliot-ja-yhteyssuhteet">Olio-ohjelmointi jatkuu: luokkien yhteyssuhteet</a>
+### 10. [Olio-ohjelmointi jatkuu: luokkien yhteyssuhteet](./oliot-ja-yhteyssuhteet)
 
 Olioita listoilla ja listoja olioissa
 
@@ -132,7 +128,7 @@ Olioita listoilla ja listoja olioissa
 <a href="https://video.haaga-helia.fi/media/Oliot+listallaA+pituuksien+summan+laskeminen/0_c16cldiu">📼 Pelaajat listalla / "olioiden summan laskeminen"</a>
 
 
-### 11. <a href="wiki/Olioiden-vertailu">Olioiden vertailu ja järjestäminen</a>
+### 11. [Olioiden vertailu ja järjestäminen](./olioiden-vertailu)
 
 <a href="wiki/Olioiden-vertailu">📝 Oppimateriaali</a><br />
 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko06/">📁 Oppitunnin esimerkkikoodit</a>
@@ -142,7 +138,7 @@ Olioita listoilla ja listoja olioissa
 <a href="https://web.microsoftstream.com/video/5ac62905-079c-4bcd-9fd5-470c1974518c">📼 Olioiden järjestäminen ja compareTo-metodi</a>
 
 
-### 12. <a href="wiki/Poikkeukset">Poikkeukset</a>
+### 12. [Poikkeukset](./poikkeukset)
 
 <a href="wiki/Poikkeukset">📝 Oppimateriaali</a><br />
 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko06/poikkeukset">📁 Oppitunnin esimerkkikoodit</a>
@@ -152,7 +148,7 @@ Olioita listoilla ja listoja olioissa
 <a href="https://web.microsoftstream.com/video/7ac99180-b044-4638-a360-12dded0e32d7">📼 Poikkeusten heittäminen</a>
 
 
-### 13. <a href="wiki/Tiedostot">Tekstitiedostojen lukeminen ja tallentaminen</a>
+### 13. [Tekstitiedostojen lukeminen ja tallentaminen](./tiedostot)
 
 <a href="wiki/Tiedostot">📝 Oppimateriaali</a><br />
 <a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko07/tiedostot">📁 Oppitunnin esimerkkikoodit</a>
@@ -162,7 +158,7 @@ Olioita listoilla ja listoja olioissa
 <a href="https://web.microsoftstream.com/video/54005f94-5609-45b2-9b96-9a6795655a6a">📼 CSV-käsittelyn refaktorointi</a>
 
 
-### 14. <a href="wiki/Soveltavat-esimerkit">Kurssin aiheiden soveltaminen</a>
+### 14. [Kurssin aiheiden soveltaminen](./soveltavat-esimerkit)
 
 <a href="wiki/Soveltavat-esimerkit">📝 Materiaali, videot ja lähdekoodit</a>
 
@@ -261,4 +257,4 @@ Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Crea
 
 Sivuston lähdekoodit löydät osoitteesta [https://github.com/ohjelmointi1/ohjelmointi1.github.io](https://github.com/ohjelmointi1/ohjelmointi1.github.io).
 
-<script src="/scripts.js"></script>
+Sivuston sivupohjana käytetään [Just the Docs](https://github.com/just-the-docs/just-the-docs) -nimistä teemaa, joka on lisensoitu [MIT-lisenssillä](https://github.com/just-the-docs/just-the-docs/blob/main/LICENSE.txt).

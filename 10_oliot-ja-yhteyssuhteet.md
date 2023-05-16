@@ -1,13 +1,16 @@
-[&larr; Takaisin etusivulle](/)
+---
+title: Luokkien väliset yhteyssuhteet
+layout: default
+nav_order: 10
+---
 
-<h1 class="js-toc-ignore">Olio-ohjelmointi: luokkien väliset yhteyssuhteet</h1>
+# Olio-ohjelmointi: luokkien väliset yhteyssuhteet
 
 Aiheen toisella oppitunnilla jatkamme olio-ohjelmoinnin käsittelyä ja toteutamme luokkia, jotka hyödyntävät muita toteuttamiamme luokkia. Käsittelemme lisäksi omien luokkiemme käyttämistä listoilla, sekä listojen määrittelemistä olioiden oliomuuttujiksi.
 
 
-**Sisällysluettelo**
-
-<div class="js-toc"></div>
+* Sisällysluettelo
+{:toc}
 
 # [Video: luokan määrittely ja olioiden käsittely listoilla](https://web.microsoftstream.com/video/d8040740-8c23-4948-a840-b40b6a32f8dc) *30:27*
 
@@ -389,9 +392,9 @@ System.out.println(y1);
 System.out.println(y2); // email on muuttunut myös tässä!
 ```
 
-Jos yllä olevassa esimerkissä kutsutaan `asetaEmail`-metodia muuttujan `y1` kautta, muuttuu sähköpostiosoite myös `y2`:ssa. Tämä johtuu siitä, että **olemme luoneet vain yhden olion, johon viitataan kahdella muuttujalla**. 
+Jos yllä olevassa esimerkissä kutsutaan `asetaEmail`-metodia muuttujan `y1` kautta, muuttuu sähköpostiosoite myös `y2`:ssa. Tämä johtuu siitä, että **olemme luoneet vain yhden olion, johon viitataan kahdella muuttujalla**.
 
-Olioiden kopioimiseksi ei ole yksittäistä yleistä tapaa, vaan mahdolliset kopiot täytyy luoda tilanteesta riippuen eri tavoilla. 
+Olioiden kopioimiseksi ei ole yksittäistä yleistä tapaa, vaan mahdolliset kopiot täytyy luoda tilanteesta riippuen eri tavoilla.
 
 
 
@@ -425,6 +428,5 @@ Olioiden kopioimiseksi ei ole yksittäistä yleistä tapaa, vaan mahdolliset kop
 
 Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
 
-<script src="/tocbot/tocbot.min.js"></script>
-<script src="/scripts.js"></script>
-<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+

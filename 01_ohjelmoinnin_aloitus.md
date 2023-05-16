@@ -1,13 +1,15 @@
-[&larr; Takaisin etusivulle](/)
+---
+title: Ohjelmoinnin aloitus
+layout: default
+nav_order: 1
+---
 
-
-<h1 class="js-toc-ignore">Ohjelmoinnin aloitus</h1>
+# Ohjelmoinnin aloitus
 
 Tällä oppitunnilla tutustumme Java-lähdekooditiedostojen rakenteeseen sekä koodin kirjoittamiseen ja suorittamiseen Eclipse-sovelluskehittimessä. Käsittelemme numeerisia sekä tekstimuotoisia tietotyyppejä ja teemme yksinkertaista vuorovaikutusta käyttäjän kanssa tulosteiden ja syötteiden avulla. Lopuksi tunnilla opittuja asioita harjoitellaan Viope-järjestelmässä olevien tehtävien avulla.
 
-**Sisällysluettelo**
-
-<div class="js-toc"></div>
+* Sisällysluettelo
+{:toc}
 
 # Oppitunnin videot
 
@@ -46,9 +48,9 @@ Tällä videolla tutustumme Javan tietotyyppeihin, niiden ominaisuuksiin sekä r
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/72835f81-cea0-45e8-b2fe-7deb472eb8fd?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Tällä videolla katsomme, miten käyttäjän teksti- ja numeromuotoisia syötteitä voidaan lukea ja käsitellä Javan **Scanner**-työkalun avulla. Tutustumme lisäksi **DecimalFormat**-työkaluun, jonka avulla voimme määritellä liukulukujen tulostuksessa käytettävän tarkkuuden. 
+Tällä videolla katsomme, miten käyttäjän teksti- ja numeromuotoisia syötteitä voidaan lukea ja käsitellä Javan **Scanner**-työkalun avulla. Tutustumme lisäksi **DecimalFormat**-työkaluun, jonka avulla voimme määritellä liukulukujen tulostuksessa käytettävän tarkkuuden.
 
-Lähdekoodit: [SyotteidenLukeminen.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/perusteet/SyotteidenLukeminen.java), 
+Lähdekoodit: [SyotteidenLukeminen.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/perusteet/SyotteidenLukeminen.java),
 [NumeroidenLukeminen.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/perusteet/NumeroidenLukeminen.java)
 
 
@@ -95,7 +97,7 @@ Yllä oleva esimerkkikoodi voidaan tallentaa ja suorittaa Eclipsessä esimerkiks
 
 Java on **käännettävä ohjelmointikieli**. Käytännössä se tarkoittaa sitä, että ohjelmoija kirjoittaa lähdekoodin "ihmisen ymmärrettävään muotoon", eli Java-kielisinä komentoina ja rakenteina, kuten yllä.
 
-Tämän jälkeen Java-koodi **käännetään tavukoodiksi**, joka on eräänlainen välimuoto ihmisen ja tietokoneen ymmärtämien kielten välillä. Lopulta käännetty **tavukoodi** voidaan suorittaa Javan **virtuaalikoneella** (JVM), joka tulkkaa käskyt kunkin käyttöjärjestelmän mukaisiksi konekielisiksi komennoiksi. 
+Tämän jälkeen Java-koodi **käännetään tavukoodiksi**, joka on eräänlainen välimuoto ihmisen ja tietokoneen ymmärtämien kielten välillä. Lopulta käännetty **tavukoodi** voidaan suorittaa Javan **virtuaalikoneella** (JVM), joka tulkkaa käskyt kunkin käyttöjärjestelmän mukaisiksi konekielisiksi komennoiksi.
 
 Java-ohjelmistopakettia tarjotaan usein erilaisina versioina riippuen siitä, oletko aikeissa vain suorittaa Java-koodia vai oletko myös kehittämässä uutta koodia. Tällä kurssilla tarvitsemme erityisesti JDK-version (Java SE Development Kit), joka sisältää työkalut ohjelmien kääntämiseksi.
 
@@ -130,7 +132,7 @@ Eclipsen käyttöliittymään ilmestyvät punaiset ja keltaiset virheet ja varoi
     * Luo työtila haluamaasi hakemistoon (kampuksen koneilla esim. M-asemalle)
     * Sulje Eclipsen mahdollisesti näyttämä "Welcome"-ruutu yläkulman rastista.
 1. Luo itsellesi uusi Java-projekti: (`File 🡪 New 🡪 Java project`)
-1. Lisää projektiin uusi Java-luokka nimeltä TerveMaailma (`File 🡪 New 🡪 Class`) 
+1. Lisää projektiin uusi Java-luokka nimeltä TerveMaailma (`File 🡪 New 🡪 Class`)
     * Voit halutessasi valita luokalle myös paketin (package), joka helpottaa lähdekooditiedostojen hallitsemista jakamalla ne erillisiin kansioihin.
     * Huomaa, että Eclipse nimeää tiedoston automaattisesti luokan nimiseksi.
 1. Lisää luokkaan main-metodi, jonka sisällä tulostakaa merkkijono `"Terve maailma!"`
@@ -168,14 +170,14 @@ Jos luokassa on syntaksivirhe, ei kääntäjä pysty kääntämään ratkaisuasi
 
 Nähdäksesi tarkemman virheilmoituksen Viopessa, avaa näkyville Java-kääntäjän antama virhe klikkaamalla "Kääntäjän viesti"-painiketta:
 
-![Viopen kääntäjän viesti](assets/viope_ohjelmasi_ei_kaantynyt.png)
+![Viopen kääntäjän viesti](/assets/viope_ohjelmasi_ei_kaantynyt.png)
 
 Painike on Viopessa hieman hankala ymmärtää klikattavaksi sen tyylistä johtuen. Kääntäjän viesti kertoo missä kohdassa koodiasi virhe on.
 
 
 ### java.util.NoSuchElementException
 
-![NoSuchElementException](assets/NoSuchElementException.jpg)
+![NoSuchElementException](/assets/NoSuchElementException.jpg)
 
 Mikäli ohjelmasi vaikuttaa toimivan Eclipsessä moitteetta, mutta saat Viopessa virheen `java.util.NoSuchElementException`, varmista, että ohjelmasi ei jää odottamaan lisää syötteitä käyttäjältä.
 
@@ -219,7 +221,7 @@ System.out.println(1 * 3); // 3
 
 # Muuttujat
 
-Ohjelmissa käytettäviä arvoja, esimerkiksi numeroita (`int`) tai merkkijonoja (`String`), voidaan pitää tallessa muuttujissa. 
+Ohjelmissa käytettäviä arvoja, esimerkiksi numeroita (`int`) tai merkkijonoja (`String`), voidaan pitää tallessa muuttujissa.
 
 Javassa muuttujilla on aina ennalta määritettävä tyyppi, joka määrää sen, minkä tyyppisiä arvoja kyseiseen muuttujaan voidaan asettaa, esim:
 
@@ -357,7 +359,7 @@ Vaikka `int` tyyppi toimii hyvin erittäin monissa tarkoituksissa, ei sen suuruu
 
 `long` on 64-bittinen kokonaisluku väliltä -9&nbsp;223&nbsp;372&nbsp;036&nbsp;854&nbsp;775&nbsp;808 – 9&nbsp;223&nbsp;372&nbsp;036&nbsp;854&nbsp;775&nbsp;807.
 
-Luku voidaan määritellään long-tyyppiseksi kirjoittamalla sen perään L-kirjain: 
+Luku voidaan määritellään long-tyyppiseksi kirjoittamalla sen perään L-kirjain:
 
 ```java
 long maailmanVakiluku = 7_838_721_501L;
@@ -394,8 +396,8 @@ System.out.println(2_147_483_647L + 1);
 
 Vaikka kokonaislukujen pyörähtäminen ympäri voi tuntua epäolennaiselta ongelmalta, vaikuttaa se mm. tietokoneen kellon toimintaan. Tietojenkäsittelyssä aikaa mitataan usein sekunteina alkaen ajanhetkestä 1.1.1970, jolloin 32-bittisten [järjestelmien kello saattaa teknisestä toteutuksesta riippuen pyörähtää ympäri 19.1.2038](https://fi.wikipedia.org/wiki/Y2K38). Alla oleva animaatio havainnollistaa 32-bittisen etumerkillisen luvun käyttäytymistä kyseisenä päivänä:
 
-> ![Miten päiväys resetoituu 32-bittisellä etumerkillisellä luvulla esitettynä](assets/Year_2038_problem.gif)
-> 
+> ![Miten päiväys resetoituu 32-bittisellä etumerkillisellä luvulla esitettynä](/assets/Year_2038_problem.gif)
+>
 > *By Monaneko - Oma teos, Public Domain, [https://commons.wikimedia.org/w/index.php?curid=1711901](https://commons.wikimedia.org/w/index.php?curid=1711901)*
 
 Pystytkö vaihtamaan puhelimesi kellonajaksi yli 19.1.2038? [Se ei välttämättä onnistu](https://www.is.fi/taloussanomat/art-2000001783335.html) käytetyn lukutyypin rajallisuudesta johtuen.
@@ -431,7 +433,7 @@ Kokeile suorittaa seuraava yhteenlasku. Minkä tuloksen saat?
 System.out.println(0.1 + 0.2); // syntyy pieni laskuvirhe!
 ```
 
-Liukulukujen laskuvirhe ei niinkään liity Javaan, vaan yleisesti siihen, miten liukuluvut esitetään tietokoneen muistissa rajallisella määrällä ykkösiä ja nollia. Kaikkia lukuja ei vain ole mahdollista esittää täydellisellä tarkkuudella. Vastaavasti kymmenjärjestelmässä ei voida tarkasti esittää desimaalina lukua `1/3`. 
+Liukulukujen laskuvirhe ei niinkään liity Javaan, vaan yleisesti siihen, miten liukuluvut esitetään tietokoneen muistissa rajallisella määrällä ykkösiä ja nollia. Kaikkia lukuja ei vain ole mahdollista esittää täydellisellä tarkkuudella. Vastaavasti kymmenjärjestelmässä ei voida tarkasti esittää desimaalina lukua `1/3`.
 
 💸 Tarkkuus- ja laskuvirheiden vuoksi esimerkiksi rahaa ei tulisi käsitellä liukulukuina. Hyvä taustoitus aiheeseen vaihtoehtoisine ratkaisuineen löytyy mm. [tästä StackOverflow-vastauksesta](https://stackoverflow.com/a/3730040).
 
@@ -449,7 +451,7 @@ Operaattori | Käyttötarkoitus
 
 Lähde: [https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html)
 
-Yllä olevista operaattoreista "erikoisin" on kenties jakojäännös `%`, jonka avulla saadaan selvitettyä kokonaislukujen jakolaskussa "yli jäävä osuus". 
+Yllä olevista operaattoreista "erikoisin" on kenties jakojäännös `%`, jonka avulla saadaan selvitettyä kokonaislukujen jakolaskussa "yli jäävä osuus".
 
 Toinen huomionarvoinen operaatio on kokonaislukujen jakolasku, joka tuottaa aina vain kokonaislukuja. Kokonaislukujen jakolasku ei automaattisesti pyöristy lähimpään kokonaislukuun, vaan desimaaliosa vain katkeaa pois. Tämä voi aiheuttaa [vakavia ongelmia tietyillä toimialoilla](https://slate.com/technology/2019/10/round-floor-software-errors-stock-market-battlefield.html), kuten taloudessa, lääketieteessä tai ilmailussa.
 
@@ -503,15 +505,15 @@ Javan `Math`-luokasta löytyy lukuisia erilaisia metodeja, joiden avulla voidaan
 double a = Math.floor(6.8);
 
 // Pyöristys aina ylöspäin: 7.0
-double b = Math.ceil(6.1); 
+double b = Math.ceil(6.1);
 
 // "Normaali" pyöristys lähimpään tasalukuun: 6.0
-double c = Math.round(5.5); 
+double c = Math.round(5.5);
 ```
 
 Math.ceil:
 
-> Returns the smallest (closest to negative infinity) double value that is greater than or equal to the argument and is equal to a mathematical integer. 
+> Returns the smallest (closest to negative infinity) double value that is greater than or equal to the argument and is equal to a mathematical integer.
 >
 > [https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Math.html#ceil(double)](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Math.html#ceil(double))
 
@@ -598,7 +600,7 @@ numero /= 7;  // numero = numero / 7
 System.out.println(numero);
 ```
 
-Yllä olevan esimerkkikoodin tulos on 4, koska: 
+Yllä olevan esimerkkikoodin tulos on 4, koska:
 
 ```
 (6 + 5) * 3 / 7 = 4.714
@@ -611,7 +613,7 @@ Koska jakolaskun molemmat osapuolet ovat kokonaislukuja, desimaaliosa leikkautuu
 
 Tässä harjoituksessa on tarkoituksena soveltaa edellä esitettyjä lasku sääntöjä kokonaislukujen ja liukulukujen yhteydessä.
 
-Alla esitetyssä luokassa on kolme muuttujaa, joiden arvot tulostetaan ruudulle. Muokkaa ohjelmaa siten, että ohjelma laskee ja tulostaa myös muuttujien keskiarvon `7.333333333333333`. 
+Alla esitetyssä luokassa on kolme muuttujaa, joiden arvot tulostetaan ruudulle. Muokkaa ohjelmaa siten, että ohjelma laskee ja tulostaa myös muuttujien keskiarvon `7.333333333333333`.
 
 Keskiarvoa ei saa pyöristää tai muulla tavoin muotoilla. On myös suositeltavaa käyttää apumuuttujia, kuten `int summa` ja `double keskiarvo`.
 
@@ -679,7 +681,7 @@ Kun Scanner on otettu käyttöön import-käskyllä, voidaan ohjelmaan luoda uus
 Scanner lukija = new Scanner(System.in);
 ```
 
-Kun Scanner-olio on luotu ja se on tallessa muuttujassa, voidaan sen avulla lukea mm. tekstiä ja numeroita.  
+Kun Scanner-olio on luotu ja se on tallessa muuttujassa, voidaan sen avulla lukea mm. tekstiä ja numeroita.
 
 Kokonainen rivi tekstiä voidaan lukea nextLine-nimisellä metodilla:
 
@@ -730,7 +732,7 @@ double liukuluku = lukija.nextDouble();
 
 Tässä harjoituksessa sovelletaan yllä käsiteltyjä asioita String-tyyppisten muuttujien sekä Scanner-olion käyttämisen osalta.
 
-Luo uusi luokka `HeiEtunimi`. Toteuta luokkaan `main`-metodi, jossa kysytään ensin käyttäjän etunimi ja sen jälkeen tervehditään käyttäjää nimeltä. 
+Luo uusi luokka `HeiEtunimi`. Toteuta luokkaan `main`-metodi, jossa kysytään ensin käyttäjän etunimi ja sen jälkeen tervehditään käyttäjää nimeltä.
 
 Esimerkki ohjelman suorituksesta:
 
@@ -787,7 +789,7 @@ Voit suorittaa yllä olevan koodin vaihe vaiheelta Java Visualizer -työkalun av
 
 <iframe style="width: 100%; height: 480px;" src="https://cscircles.cemc.uwaterloo.ca/java_visualize/iframe-embed.html?faking_cpp=false#data=%7B%22user_script%22%3A%22import%20java.text.DecimalFormat%3B%5Cn%5Cnpublic%20class%20LiukulukujenPyoristaminen%20%7B%5Cn%20%20%20%5Cn%20%20%20public%20static%20void%20main(String%5B%5D%20args)%20%7B%5Cn%20%20%20%20%20%20%2F%2F%20koodiin%20kirjoitetaan%20liukuluvut%20pisteell%C3%A4%20eroteltuna%3A%5Cn%20%20%20%20%20%20double%20liukuluku%20%3D%20123.456789%3B%5Cn%5Cn%20%20%20%20%20%20%2F%2F%20liukuluvut%20tulostetaan%20normaalisti%20pisteell%C3%A4%20eroteltuna%20ilman%20py%C3%B6ristyksi%C3%A4%3A%5Cn%20%20%20%20%20%20System.out.println(liukuluku)%3B%20%2F%2F%20tulostaa%20123.456789%5Cn%5Cn%20%20%20%20%20%20%2F%2F%20luodaan%20olio%2C%20joka%20muotoilee%20lukuja%20kahden%20desimaalin%20tarkkuudella%3A%5Cn%20%20%20%20%20%20DecimalFormat%20kaksiDesimaalia%20%3D%20new%20DecimalFormat(%5C%220.00%5C%22)%3B%5Cn%5Cn%20%20%20%20%20%20%2F%2F%20annetaan%20muotoiltava%20luku%20format-metodille%2C%20saadaan%20takaisin%20muotoiltu%20merkkijono%3A%5Cn%20%20%20%20%20%20String%20muotoiltu%20%3D%20kaksiDesimaalia.format(liukuluku)%3B%5Cn%5Cn%20%20%20%20%20%20%2F%2F%20tulostetaan%20lopulta%20muotoiltu%20merkkijono%3A%5Cn%20%20%20%20%20%20System.out.println(muotoiltu)%3B%20%2F%2F%20123%2C46%20%3C--%20py%C3%B6ristetty%20kahteen%20desimaaliin%2C%20erottimena%20pilkku%5Cn%20%20%20%7D%5Cn%7D%22%2C%22options%22%3A%7B%22showStringsAsValues%22%3Atrue%2C%22showAllFields%22%3Afalse%7D%2C%22args%22%3A%5B%5D%2C%22stdin%22%3A%22%22%7D&cumulative=false&heapPrimitives=false&drawParentPointers=false&textReferences=false&showOnlyOutputs=false&py=3&curInstr=0&resizeContainer=true&highlightLines=true&rightStdout=true" frameborder="0" scrolling="no"></iframe>
 
-Toisin kuin esimerkiksi Viopessa, Java Visualizer -työkalun asetuksissa desimaalierottimena on piste, eikä pilkku. 
+Toisin kuin esimerkiksi Viopessa, Java Visualizer -työkalun asetuksissa desimaalierottimena on piste, eikä pilkku.
 
 DecimalFormat-luokan tukemat mutoilusäännöt on dokumentoitu [Javan dokumentaatiossa](https://docs.oracle.com/javase/tutorial/i18n/format/decimalFormat.html). Tässä on esitettynä tiivistelmä tarpeellisimmista muotoilussa käytetyistä merkeistä:
 
@@ -800,7 +802,7 @@ Symboli | Kuvaus
 
 Lähde: [https://docs.oracle.com/javase/tutorial/i18n/format/decimalFormat.html](https://docs.oracle.com/javase/tutorial/i18n/format/decimalFormat.html)
 
-`#` tarkoittaa numeroa, joka jää pois, mikäli se ei ole luvun merkitsevässä osassa. `0` puolestaan tarkoittaa numeroa joka näytetään aina, vaikka se olisi etu- tai loppunolla. 
+`#` tarkoittaa numeroa, joka jää pois, mikäli se ei ole luvun merkitsevässä osassa. `0` puolestaan tarkoittaa numeroa joka näytetään aina, vaikka se olisi etu- tai loppunolla.
 
 `.` tarkoittaa muotoilussa desimaalierotinta ja `,` tuhaterotinta. Näin ollen voimme esimerkiksi tehdä muotoilusäännön, joka muotoilee luvun käyttäen tuhat- ja desimaalierotinta korkeintaan kahden desimaalin tarkkuudella, mutta jättää mahdollisuuksien mukaan loppunollat pois:
 
@@ -821,7 +823,7 @@ Javassa on kolme eri kommenttityyliä. `/**`-alkuiset moniriviset kommentit toim
 
 ```java
 /**
- * Luokan ja julkisten metodien "viralliset" dokumentaatiokommentit 
+ * Luokan ja julkisten metodien "viralliset" dokumentaatiokommentit
  * kirjoitetaan dokumentoitavan luokan tai metodin eteen.
  *
  * @see https://google.github.io/styleguide/javaguide.html#s7-javadoc
@@ -852,11 +854,7 @@ Kun kohtaatte ongelmia tehtävissä, pyytäkää apua ja vinkkejä kurssin Teams
 **Muistathan, että teknisistä syistä johtuen Viopeen palautettavista ratkaistuista täytyy poistaa mahdolliset `package`-rivit luokan yläpuolelta.**
 
 
----
-
-Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
 
 
-<script src="/tocbot/tocbot.min.js"></script>
-<script src="/scripts.js"></script>
-<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+

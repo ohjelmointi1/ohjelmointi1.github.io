@@ -1,19 +1,21 @@
-[&larr; Takaisin etusivulle](/)
+---
+title: Listat
+layout: default
+nav_order: 5
+---
 
-
-<h1 class="js-toc-ignore">Listat</h1>
+# Listat
 
 Tällä viikolla tutustumme Javan kenties yleisimpään kokoelmaan: listoihin. Listat ovat tietorakenteita, joiden pituus kasvaa joustavasti, kun niihin lisätään uusia arvoja. Listoihin voidaan lisätä arvoja myös aiempien arvojen väliin ja listan väleistä voidaan poistaa arvoja. Listat ovat olioita ja niillä on metodeita, joiden avulla arvoja lisätään, poistetaan, etsitään jne.
 
 
-**Sisällysluettelo**
-
-<div class="js-toc"></div>
+* Sisällysluettelo
+{:toc}
 
 
 # Tehtäväpohjien kloonaaminen GitHubista *9:48*
 
-Tällä viikolla teemme Viopessa tehtäväkokonaisuuden, joka on lainattu [Helsingin yliopiston Ohjelmoinnin MOOC -kurssilta](https://ohjelmointi-20.mooc.fi/osa-3/2-listat). Tehtäväkokonaisuuden suoraviivaistamiseksi tehtäviin on saatavilla valmiit pohjat GitHubissa osoitteessa [https://github.com/swd1tn002/mooc.fi-2019-osa3/](https://github.com/swd1tn002/mooc.fi-2019-osa3/). 
+Tällä viikolla teemme Viopessa tehtäväkokonaisuuden, joka on lainattu [Helsingin yliopiston Ohjelmoinnin MOOC -kurssilta](https://ohjelmointi-20.mooc.fi/osa-3/2-listat). Tehtäväkokonaisuuden suoraviivaistamiseksi tehtäviin on saatavilla valmiit pohjat GitHubissa osoitteessa [https://github.com/swd1tn002/mooc.fi-2019-osa3/](https://github.com/swd1tn002/mooc.fi-2019-osa3/).
 
 Voit kopioida tehtäväpohjat itsellesi yksi kerrallaan Viope-tehtävän linkkien kautta, tai kopioida koko projektipohjan kerralla. Alla oleva video esittelee, miten projekti *kloonataan* GitHubista omaan Eclipseen:
 
@@ -27,7 +29,7 @@ Seuraava valinnainen [Helsingin yliopiston Ohjelmoinnin MOOC -kurssin video](htt
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-y67VJ68Izs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Hyödynnä myös Helsingin yliopiston MOOC-kurssin muita materiaaleja: [https://ohjelmointi-20.mooc.fi/osa-3/2-listat](https://ohjelmointi-20.mooc.fi/osa-3/2-listat). 
+Hyödynnä myös Helsingin yliopiston MOOC-kurssin muita materiaaleja: [https://ohjelmointi-20.mooc.fi/osa-3/2-listat](https://ohjelmointi-20.mooc.fi/osa-3/2-listat).
 
 
 # Eri listatyypit: ArrayList vs. LinkedList
@@ -71,7 +73,7 @@ Yhdessä listassa voidaan varastoida ainoastaan yhdentyyppisiä arvoja, eikä va
 
 ## Alkeistietotyypit ja kääreluokat
 
-Listoilla käsiteltävien arvojen on oltava olioita, eli ei aikaisemmilta viikoilta tuttuja alkeistietotyyppejä, kuten `boolean`, `int` tai `double`. 
+Listoilla käsiteltävien arvojen on oltava olioita, eli ei aikaisemmilta viikoilta tuttuja alkeistietotyyppejä, kuten `boolean`, `int` tai `double`.
 
 Alkeistietotyyppien varastoimiseksi Javassa on olemassa valmiita **kääreluokkia**, joiden oliot pitävät vain sisällään tallessa yksittäisiää alkeistyyppisiä arvoja. Kääreluokat on nimetty kuten alkeistyypit, mutta niiden nimet alkavat isolla alkukirjaimella, esim: `Boolean`, `Integer` ja `Double`. Kääreluokan avulla numerosi "kääritään" olion sisälle, jolloin myös numeroita voidaan käsitellä listoilla.
 
@@ -263,7 +265,7 @@ Tällä videolla opettelemme pyytämään listalle alkioita käyttäjältä ([Li
 Toisinaan ohjelmassa on tarpeen luoda lista joillain valmiilla ennalta tunnetuilla arvoilla. Tällaisen listan luominen `new ArrayList<>()`-operaatiolla ja täyttäminen `add`-metodilla olisi kovin työlästä. Voit sen sijaan käyttää `List.of`-metodia, jolle voit antaa listan sisällön valmiina:
 
 ```java
-List<String> viikonpaivat = List.of("ma", "ti", "ke", "to", "pe", "la", "su"); 
+List<String> viikonpaivat = List.of("ma", "ti", "ke", "to", "pe", "la", "su");
 ```
 
 Muista myös lisätä luokan alkuun `import java.util.List;`.
@@ -293,11 +295,11 @@ import java.util.List;
 
 ```java
 // VIRHE: Type mismatch: cannot convert from List<String> to ArrayList<String>
-ArrayList<String> lista = List.of("sana", "toinen"); 
+ArrayList<String> lista = List.of("sana", "toinen");
 ```
 ```java
 // Toimii, koska List<String> on yhteensopiva kaikkien merkkijonolistojen kanssa:
-List<String> lista = List.of("sana", "toinen"); 
+List<String> lista = List.of("sana", "toinen");
 ```
 -->
 
@@ -340,7 +342,7 @@ Seuraavalla oppituntitallenteella käsitellään listojen käsittelyä eri muutt
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/98536d7e-5621-4927-bc63-45299746dfa4?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Tällä videolla tutustumme ensin listojen luomiseen valmiiksi määritellyillä arvoilla ([ListanLuominenValmiillaArvoilla.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko03/listat/ListanLuominenValmiillaArvoilla.java)). 
+Tällä videolla tutustumme ensin listojen luomiseen valmiiksi määritellyillä arvoilla ([ListanLuominenValmiillaArvoilla.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko03/listat/ListanLuominenValmiillaArvoilla.java)).
 
 Seuraavaksi perehdymme siihen, miksi alkeistietotyypit kuten `int`, `double` ja `boolean` eivät sovellu listojen tyypeiksi, ja miten asia voidaan kiertää ns. kääreluokkien avulla ([NumerotListoilla.java](https://github.com/ohjelmointi1/ohjelmointi1-3015/blob/main/src/viikko03/listat/NumerotListoilla.java)).
 
@@ -361,12 +363,3 @@ Opittavat aiheet: listan muodostaminen, listan pituuden selvittäminen ja listal
 Kirjoitetaan ohjelma, johon määritellään lista asioista, jotka esitetään toistorakenteella HTML-muodossa.
 
 Opittavat aiheet: listan muodostaminen, listan kaikkien arvojen läpikäynti.
-
-
----
-
-Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
-
-<script src="/tocbot/tocbot.min.js"></script>
-<script src="/scripts.js"></script>
-<link rel="stylesheet" href="/tocbot/tocbot.css">

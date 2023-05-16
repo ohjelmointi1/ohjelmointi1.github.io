@@ -1,15 +1,17 @@
-[&larr; Takaisin etusivulle](/)
+---
+title: Merkkijonot
+layout: default
+nav_order: 4
+---
 
+# Merkkijonot
 
-<h1 class="js-toc-ignore">Merkkijonot</h1>
-
-Merkkijonot ovat meille jo aikaisemmilta oppitunneita tuttua tekstidataa. Merkkijonot ovat "alkeistietotyypeistä" poiketen olioita, eli niillä on metodeja, joiden avulla merkkijonojen sisältöä voidaan käsitellä hyvin monipuolisesti. 
+Merkkijonot ovat meille jo aikaisemmilta oppitunneita tuttua tekstidataa. Merkkijonot ovat "alkeistietotyypeistä" poiketen olioita, eli niillä on metodeja, joiden avulla merkkijonojen sisältöä voidaan käsitellä hyvin monipuolisesti.
 
 Tällä oppitunnilla tutustumme merkkijonojen metodeihin ja merkkijonojen vertailuun.
 
-**Sisällysluettelo**
-
-<div class="js-toc"></div>
+* Sisällysluettelo
+{:toc}
 
 
 
@@ -52,7 +54,7 @@ if (vastaus.equalsIgnoreCase("kyllä")) {
 
 ## Merkkijonojen metodien käyttäminen
 
-Merkkijonojen metodit on määritetty Javan [String-luokassa](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html). 
+Merkkijonojen metodit on määritetty Javan [String-luokassa](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html).
 
 Merkkijonojen metodeja voidaan kutsua suoraan merkkijonolle tai muuttujien avulla:
 
@@ -65,7 +67,7 @@ String trimmattu = "  poista tyhjät alusta ja lopusta  ".trim(); // "poista tyh
 String tilinumero = "    fi3315723000500504  ".trim().toUpperCase(); // "FI3315723000500504"
 ```
 
-Huomaa, että mikään yllä olevista metodeista ei muuta alkuperäistä merkkijonoa, vaan ne palauttavat uuden merkkijonon. 
+Huomaa, että mikään yllä olevista metodeista ei muuta alkuperäistä merkkijonoa, vaan ne palauttavat uuden merkkijonon.
 
 
 ## [Videotallenne: String-luokan metodit: length, substring...](https://web.microsoftstream.com/video/c1991f30-5797-45e7-8030-a24ecb751064) *20:11*
@@ -90,12 +92,12 @@ System.out.println(text);  // tulostaa "HELLO"
 
 ## Merkkijonon osajonot
 
-Merkkijonosta halutaan usein lukea jokin tietty osa. Tämä onnistuu metodilla `substring`. `substring`-metodia voidaan käyttää kahdella tavalla: 
+Merkkijonosta halutaan usein lukea jokin tietty osa. Tämä onnistuu metodilla `substring`. `substring`-metodia voidaan käyttää kahdella tavalla:
 
 1. yksiparametrisena palauttamaan merkkijonon loppuosa: `"abcd".substring(2)`
 1. kaksiparametrisena palauttamaan parametrien määrittelemä osajono merkkijonosta: `"abcd".substring(1, 3)`
 
-**Merkkijonojen indeksit alkavat aina nollasta!** Substring-metodin ensimmäinen parametri tarkoittaa ensimmäistä indeksiä, joka otetaan mukaan osamerkkijonoon, kun taas toinen parametri on ensimmäinen uuden merkkijonon ulkopuolelle jäävä indeksi. 
+**Merkkijonojen indeksit alkavat aina nollasta!** Substring-metodin ensimmäinen parametri tarkoittaa ensimmäistä indeksiä, joka otetaan mukaan osamerkkijonoon, kun taas toinen parametri on ensimmäinen uuden merkkijonon ulkopuolelle jäävä indeksi.
 
 Parametriarvoilla `(5, 10)` saadaan siis merkit indekseistä **5, 6, 7, 8 ja 9**.
 
@@ -307,7 +309,7 @@ int tekstiNumeroksi = Integer.parseInt(teksti);
 
 Javassa on erillinen `char`-tietotyyppi yksittäisiä merkkejä varten. Yksittäinen merkki aloitetaan ja lopetetaan heittomerkillä, esim. `'a'`. Yksittäiset merkit eivät ole olioita, eli niillä ei ole metodeja. Niiden pituus on aina 1, eli kahta tai useampaa merkkiä ei voida esittää char-tyypillä.
 
-Merkkijonolta voidaan pyytää yksittäisiä merkkejä niiden indeksin perusteella. Tämä onnistuu metodilla `charAt(int indeksi)`, joka saa parametrina halutun merkin indeksin merkkijonossa. 
+Merkkijonolta voidaan pyytää yksittäisiä merkkejä niiden indeksin perusteella. Tämä onnistuu metodilla `charAt(int indeksi)`, joka saa parametrina halutun merkin indeksin merkkijonossa.
 
 Char-tietotyypin avulla voidaan tehdä alkeisoperaatioita, eli ikään kuin käsitellä niitä numeroina:
 
@@ -339,7 +341,7 @@ Regex                   | Esimerkki   | Selitys
 [0-9]+                  | `12345678`  | 1-n kpl numeroita
 [0-9]{7}                | `1234567`   | tasan 7 kpl numeroita
 [a-zåäö]{4,10}          | `abcdåäö`   | Pieniä kirjaimia a-z, å, ä. Yhteensä 4-10 kpl.
-[A-Z]{1,3}-[0-9]{1,3}   | `ABC-123`   | 1-3 isoa kirjainta, viiva ja 1-3 numeroa 
+[A-Z]{1,3}-[0-9]{1,3}   | `ABC-123`   | 1-3 isoa kirjainta, viiva ja 1-3 numeroa
 [+-]?\d+,?\d*           | `1,2` `34` `+5,6` `-7,89` | luku, jonka alussa saattaa olla etumerkki, ja jossa voi olla myös välissä pilkku <sup><a href="https://stackoverflow.com/q/12117024">lähde</a></sup>
 .                       | `x` `y` `9` | mikä tahansa merkki (paitsi rivinvaihto)
 
@@ -351,7 +353,7 @@ Haaga-Helian opiskelijanumeron tapauksessa sopiva säännöllinen lauseke on `"a
 
 ```java
 /* Tämä esimerkki on sovellettu Helsingin yliopiston Agile Education Research -tutkimusryhmän
- * ohjelmointikurssilta ja se on lisensoitu Creative Commons BY-NC-SA-lisenssillä. 
+ * ohjelmointikurssilta ja se on lisensoitu Creative Commons BY-NC-SA-lisenssillä.
  * https://materiaalit.github.io/ohjelmointi-s17/part10/#section-19-saannolliset-lausekkeet */
 
 Scanner lukija = new Scanner(System.in);
@@ -370,7 +372,7 @@ if (numero.matches("a[0-9]{7}")) {
 
 Tutustu regex-sääntöihin osoitteessa: [https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)
 
-Huom! Kuten ylempänä on esitetty, merkkijonoissa kenoviiva `\` on erikoismerkki, jota ei voida käyttää sellaisenaan. Kenoviiva tulee esittää Javan merkkijonoissa aina kahtena kenoviivana `\\`. Regex-säännön `\d` eteen tulee siis Javassa laittaa "ylimääräinen" kenoviiva: 
+Huom! Kuten ylempänä on esitetty, merkkijonoissa kenoviiva `\` on erikoismerkki, jota ei voida käyttää sellaisenaan. Kenoviiva tulee esittää Javan merkkijonoissa aina kahtena kenoviivana `\\`. Regex-säännön `\d` eteen tulee siis Javassa laittaa "ylimääräinen" kenoviiva:
 
 ```java
 boolean match = "1234".matches("\\d+");
@@ -383,7 +385,7 @@ Säännölliset lausekkeet ovat erittäin ilmaisuvoimainen tapa käsitellä merk
 Kuva: [XKCD, Perl Problems](https://xkcd.com/1171/). Creative Commons Attribution-NonCommercial 2.5
 
 
-# Edistynyttä sisältöä: Merkkijonojen muotoilu 
+# Edistynyttä sisältöä: Merkkijonojen muotoilu
 
 Muodostettaessa merkkijonoja, joihin halutaan sijoittaa esimerkiksi muuttujissa olevia arvoja, lopputulos voi joskus olla varsin vaikeasti luettavaa:
 
@@ -443,10 +445,6 @@ internationalization    | i18n
 localization            | l10n
 kubernetes              | k8s
 
----
 
-Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
 
-<script src="/tocbot/tocbot.min.js"></script>
-<script src="/scripts.js"></script>
-<link rel="stylesheet" href="/tocbot/tocbot.css">
+

@@ -60,11 +60,11 @@ Ohjelmasi ei saa vilpillisesti harhauttaa tehtävän tarkastimia siten, että se
 
 Kokeen manuaalisen arvioinnin jälkeen näet saamasi pisteet Viopen kohdasta "Oma nurkka" (my corner). Tämä on ainoa paikka, jossa näkyy manuaalisessa arvioinnissa annetut varsinaiset pisteet:
 
-![oma nurkka](./assets/oma-nurkka.png)
+![oma nurkka](/assets/oma-nurkka.png)
 
 Niissä tehtävissä, joissa manuaalinen arviointi poikkeaa Viopen automaattisesta arvioinnista, löydät opettajan kommentin tehtäväsivun alaosasta:
 
-![opettajan kommentti sivun alaosassa](./assets/opettajan-kommentti.png)
+![opettajan kommentti sivun alaosassa](/assets/opettajan-kommentti.png)
 
 <style type="text/css">
 #content img {

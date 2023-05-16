@@ -1,13 +1,15 @@
-[&larr; Takaisin etusivulle](/)
+---
+title: Tiedostot
+layout: default
+nav_order: 13
+---
 
-
-<h1 class="js-toc-ignore">Tiedostot</h1>
+# Tiedostot
 
 Tällä oppitunnilla tutustumme Javan `java.nio.files`-pakettiin, joka tarjoaa meille suoraviivaisen tavan lukea ja kirjoittaa tekstitiedostoja. Tiedostojen lukemisen ja kirjoittamisen yhteydessä pääsemme myös harjoittelemaan merkkijonojen käsittelyä sekä poikkeuksia, joita saattaa syntyä, mikäli tiedosto-operaatiossa tapahtuu virheitä.
 
-**Sisällysluettelo**
-
-<div class="js-toc"></div>
+* Sisällysluettelo
+{:toc}
 
 
 # Oppitunnin videot
@@ -216,7 +218,7 @@ public class CarCsvReader {
 
         /*
          * Vaihtoehtoinen tapa listan läpikäyntiin ja arvojen tulostamiseen:
-         * 
+         *
          * Listan forEach-metodille voidaan antaa operaatio, joka suoritetaan listan
          * jokaiselle arvolle. Tässä suoritettavaksi operaatioksi annetaan
          * metodiviittaus println-metodiin:
@@ -301,10 +303,6 @@ consectetur adipiscing elit.
 *loremipsum.txt*
 
 
----
 
-Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä. 
 
-<script src="/tocbot/tocbot.min.js"></script>
-<script src="/scripts.js"></script>
-<link rel="stylesheet" href="/tocbot/tocbot.css">
+

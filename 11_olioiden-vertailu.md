@@ -1,13 +1,15 @@
-[&larr; Takaisin etusivulle](/)
+---
+title: Olioiden vertaileminen
+layout: default
+nav_order: 11
+---
 
-
-<h1 class="js-toc-ignore">Olioiden vertaileminen</h1>
+# Olioiden vertaileminen
 
 Tällä oppitunnilla tutustumme tarkemmin olioiden yhtäsuuruuden ja suuruusjärjestyksen vertailemiseen. Kuten merkkijonoja käsitellessämme huomasimme, olioiden vertailu `==`-operaatiolla vertailee, ovatko kaksi oliota **samat** eikä olioiden sisältöä. Tämän oppitunnin aikana toteutamme omia vertailumetodeja, jotka toimivat myös Javan valmiiden metodien kanssa.
 
-**Sisällysluettelo**
-
-<div class="js-toc"></div>
+* Sisällysluettelo
+{:toc}
 
 # Oppitunnin videot
 
@@ -290,9 +292,9 @@ System.out.println(nimet); // [Aatami, Arja, Maija, Matti]
 Nimet oli helppoa laittaa järjestykseen `Collections.sort`-metodin avulla!
 
 
-## Miten Java järjesti oliot? 
+## Miten Java järjesti oliot?
 
-`Collections.sort` osasi järjestää merkkijonot kasvavaan järjestykseen, koska `String`-luokka on yhteensopiva `Comparable`-tyypin kanssa. Kaikki `Comparable`-oliot osaavat vertailla omaa järjestystään suhteessa toiseen saman luokan olioon. 
+`Collections.sort` osasi järjestää merkkijonot kasvavaan järjestykseen, koska `String`-luokka on yhteensopiva `Comparable`-tyypin kanssa. Kaikki `Comparable`-oliot osaavat vertailla omaa järjestystään suhteessa toiseen saman luokan olioon.
 
 [Comparable-tyypin dokumentaatiosta](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Comparable.html) löydämme listan kaikista standardikirjaston luokista, jotka ovat järjestettävissä (kohta All Known Implementing Classes). `Collections.sort` osaa siis asetella merkkijonojen lisäksi liki 200 muutakin tyyppiä oikeaan järjestykseen automaattisesti.
 
@@ -470,11 +472,7 @@ public class OlioidenJarjestaminen {
 }
 ```-->
 
----
-
-Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä. 
 
 
-<script src="/tocbot/tocbot.min.js"></script>
-<script src="/scripts.js"></script>
-<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+

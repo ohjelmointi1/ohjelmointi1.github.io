@@ -1,15 +1,18 @@
-[&larr; Takaisin etusivulle](/)
+---
+title: Olio-ohjelmointi
+layout: default
+nav_order: 9
+---
 
-<h1 class="js-toc-ignore">Olio-ohjelmointi (Object-oriented programming)</h1>
+# Olio-ohjelmointi (Object-oriented programming)
 
 Olio-ohjelmointi on yleinen ohjelmointiparadigma, jota hyödynnetään lukuisissa ohjelmointikielissä. Myös Java on olio-ohjelmointikieli, vaikka emme toistaiseksi ole omissa ohjelmissamme soveltaneet juurikaan olio-ohjelmointia.
 
-Olio-ohjelmoinnin avulla voimme jäsentää ohjelmamme toiminnallisuuden ja ohjelmassa esiintyvän datan loogisiksi itsenäisiksi kokonaisuuksiksi, joiden avulla pystymme ratkaisemaan ongelmia. **Olio-ohjelmoinnissa on siis samalla kyse sekä datan mallintamisesta, että logiikan mallintamisesta.** 
+Olio-ohjelmoinnin avulla voimme jäsentää ohjelmamme toiminnallisuuden ja ohjelmassa esiintyvän datan loogisiksi itsenäisiksi kokonaisuuksiksi, joiden avulla pystymme ratkaisemaan ongelmia. **Olio-ohjelmoinnissa on siis samalla kyse sekä datan mallintamisesta, että logiikan mallintamisesta.**
 
 
-**Sisällysluettelo**
-
-<div class="js-toc"></div>
+* Sisällysluettelo
+{:toc}
 
 
 # Luokat ja oliot
@@ -122,7 +125,7 @@ Teknisten yksityiskohtien piilottamista ja operaatioiden käsitteellistämistä 
 
 Lähdekoodin tasolla jokaista luokkaa kohden on tyypillisesti oma lähdekooditiedostonsa. Luokat toimivat Javassa arvojen tyyppeinä, eli niiden nimet esiintyvät mm. muuttujien nimissä sekä metodien parametri- ja paluuarvojen tyyppeinä. Yhdestä luokasta voidaan luoda rajoittamattoman määrän olioita, jotka ovat toisistaan riippumattomia, mutta joilla on samat metodit ja muut ominaisuudet.
 
-Esimerkiksi `LocalDate`-luokka määrittelee kaikille sen olioille yhteiset ominaisuudet ja yhteiset toiminnallisuudet. Voimme siis kutsua samoja metodeja mille tahansa päivämääräolioille. Jokainen erillinen päivämäärä on kuitenkin toisistaan riippumaton, mutta rakenteeltaan samanlainen. 
+Esimerkiksi `LocalDate`-luokka määrittelee kaikille sen olioille yhteiset ominaisuudet ja yhteiset toiminnallisuudet. Voimme siis kutsua samoja metodeja mille tahansa päivämääräolioille. Jokainen erillinen päivämäärä on kuitenkin toisistaan riippumaton, mutta rakenteeltaan samanlainen.
 
 Seuraavassa esimerkkikoodissa **käytämme luokkien nimiä muuttujien tyyppeinä**. **Muuttujiin asetetaan arvoja, jotka ovat olioita**:
 
@@ -136,9 +139,9 @@ Oliot luodaan tavallisesti kuten yllä, eli `new`-avainsanalla. Joillain tietyil
 
 ## Datan mallintaminen luokalla
 
-Aikaisemmin tällä kurssilla olemme käsitelleet mm. kaupunkien nimiä ja väkilukuja taulukkomuodossa (csv): 
+Aikaisemmin tällä kurssilla olemme käsitelleet mm. kaupunkien nimiä ja väkilukuja taulukkomuodossa (csv):
 
-Kaupunki	| Väkiluku 
+Kaupunki	| Väkiluku
 ------------|---------
 Helsinki    | 653867
 Espoo	    | 289413
@@ -202,7 +205,7 @@ public class Kaupunki {
 }
 ```
 
-Huomaa, että tämän luokan on tarkoitus mallintaa käsitteitä eikä esim. toimia omana ohjelmanaan. Tällaiseen luokkaan **ei siis** kirjoiteta `main`-metodia, joka kuuluisi erilliseen **ohjelmaluokkaan**. Ohjelman selkeän rakenteen vuoksi on erittäin tärkeää pilkkoa eri tarkoituksia palvelevat kokonaisuudet eri luokkiin. Ohjelmaluokan tarkoitus on tarjota vuorovaikutus käyttäjän ja ohjelman välille, kun taas `Kaupunki`-luokan tarkoitus on esittää yksittäisiä tietoalkioita. 
+Huomaa, että tämän luokan on tarkoitus mallintaa käsitteitä eikä esim. toimia omana ohjelmanaan. Tällaiseen luokkaan **ei siis** kirjoiteta `main`-metodia, joka kuuluisi erilliseen **ohjelmaluokkaan**. Ohjelman selkeän rakenteen vuoksi on erittäin tärkeää pilkkoa eri tarkoituksia palvelevat kokonaisuudet eri luokkiin. Ohjelmaluokan tarkoitus on tarjota vuorovaikutus käyttäjän ja ohjelman välille, kun taas `Kaupunki`-luokan tarkoitus on esittää yksittäisiä tietoalkioita.
 
 Ohjelman pilkkomiseksi on olemassa erilaisia malleja, kuten ["separation of concerns"](https://www.google.com/search?q=separation+of+concerns) ja ["data, context and interaction"](https://www.google.com/search?q=data+context+and+interaction), joita noudatamme ohjelmointikursseilla, mutta emme perehdy tarkemmin niiden teoriaan.
 
@@ -367,7 +370,7 @@ Olioita luodaan `new`-avainsanalla. Joissain tapauksissa olemme luoneet olioita 
 Kaupunki uusiOlio = new Kaupunki("Helsinki", 653_867);
 ```
 
-Edellä oleva luontikäsky käsitellään Java-luokassa **konstruktorin** avulla. Konstruktori on ikään kuin metodi, jota kutsutaan automaattisesti olioita luotaessa. 
+Edellä oleva luontikäsky käsitellään Java-luokassa **konstruktorin** avulla. Konstruktori on ikään kuin metodi, jota kutsutaan automaattisesti olioita luotaessa.
 
 ## [Video: konstruktori, getterit, setterit ja toString](https://web.microsoftstream.com/video/0bd21fd4-a6ef-4497-9547-44766ba0a81b) *43:00*
 
@@ -386,7 +389,7 @@ Luokan lähdekoodissa konstruktorin nimi on sama kuin luokan nimi, eli tässä t
 ```java
 // konstruktorin nimi on aina sama kuin luokan nimi!
 public Kaupunki(String nimi, int vakiluku) {
-    
+
 }
 ```
 
@@ -649,13 +652,13 @@ if (numero == null) {
 
 * **Oliot, objektit, ilmentymät, instanssit**
 
-    Luokan ilmentymille on olemassa useita nimiä, jotka kuitenkin tarkoittavat samaa asiaa. 
-    
+    Luokan ilmentymille on olemassa useita nimiä, jotka kuitenkin tarkoittavat samaa asiaa.
+
     Kontekstista ja lähteestä riippuen käytetään joskus eri termejä.
 
 * **Oliomuuttujat, attribuutit, instanssimuuttujat, ilmentymämuuttujat, jäsenmuuttujat, kentät**
 
-    Luokassa määritellyille olioiden muuttujille on myös lukuisia nimiä. 
+    Luokassa määritellyille olioiden muuttujille on myös lukuisia nimiä.
 
     Kaikki niistä kuitenkin tarkoittavat muuttujaa, joka on yksilöllinen jokaiselle tietyn luokan oliolle.
 
@@ -664,6 +667,5 @@ if (numero == null) {
 
 Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
 
-<script src="/tocbot/tocbot.min.js"></script>
-<script src="/scripts.js"></script>
-<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+

@@ -5,7 +5,9 @@ theme: just-the-docs
 url: https://ohjelmointi1.github.io/
 
 aux_links:
-  Opintojaksokuvaus: https://opinto-opas.haaga-helia.fi/course_unit/SOF005AS2A
+  Esimerkkikoodit: https://github.com/ohjelmointi1/ohjelmointi1-3018/
+
+permalink: /:title/
 
 callouts:
   highlight:

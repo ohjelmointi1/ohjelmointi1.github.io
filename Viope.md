@@ -25,7 +25,7 @@ Jos luokassa on syntaksivirhe, ei kääntäjä pysty kääntämään ratkaisuasi
 
 Nähdäksesi tarkemman virheilmoituksen Viopessa, avaa näkyville Java-kääntäjän antama virhe klikkaamalla "Kääntäjän viesti"-painiketta:
 
-![Viopen kääntäjän viesti](assets/viope_ohjelmasi_ei_kaantynyt.png)
+![Viopen kääntäjän viesti](/assets/viope_ohjelmasi_ei_kaantynyt.png)
 
 Painike on Viopessa hieman hankala ymmärtää klikattavaksi sen tyylistä johtuen. Kääntäjän viesti kertoo missä kohdassa koodiasi virhe on.
 
@@ -35,7 +35,7 @@ Painike on Viopessa hieman hankala ymmärtää klikattavaksi sen tyylistä johtu
 
 ## java.util.NoSuchElementException
 
-![NoSuchElementException](assets/NoSuchElementException.jpg)
+![NoSuchElementException](/assets/NoSuchElementException.jpg)
 
 Mikäli ohjelmasi vaikuttaa toimivan Eclipsessä moitteetta, mutta saat Viopessa virheen `java.util.NoSuchElementException`, varmista, että ohjelmasi ei jää odottamaan lisää syötteitä käyttäjältä.
 

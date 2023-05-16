@@ -1,7 +1,10 @@
-[&larr; Takaisin etusivulle](/)
+---
+title: Totuusarvot ja ehtolauseet
+layout: default
+nav_order: 2
+---
 
-
-<h1 class="js-toc-ignore">Totuusarvot ja ehtolauseet</h1>
+# Totuusarvot ja ehtolauseet
 
 Tällä tunnilla tutustumme Javan totuusarvoihin `true` ja `false` sekä niihin liittyvään logiikkaan. Opimme vertailemaan eri arvoja toisiinsa ja tekemään vertailun tulosten perusteella ehdollisesti suoritettavaa ohjelmalogiikkaa.
 
@@ -9,9 +12,8 @@ Myöhemmin tällä kurssilla hyödynnämme totuusarvoja ja ehtoja toteuttaessamm
 
 Katso myös: [Ehtolauseet ja vaihtoehtoinen toiminta, Ohjelmoinnin MOOC 2020](https://ohjelmointi-20.mooc.fi/osa-1/6-ehtolauseet).
 
-**Sisällysluettelo**
-
-<div class="js-toc"></div>
+* Sisällysluettelo
+{:toc}
 
 
 # Oppitunnin videot
@@ -26,17 +28,17 @@ Videoiden katsominen edellyttää liittymistä kurssin Teams-ryhmään ja kirjau
 
 Tällä videolla katsomme, miten käyttäjän teksti- ja numeromuotoisia syötteitä voidaan lukea ja käsitellä Javan **Scanner**-työkalun avulla. Tutustumme lisäksi **DecimalFormat**-työkaluun, jonka avulla voimme määritellä liukulukujen tulostuksessa käytettävän tarkkuuden. Tähän videoon liittyvä teoriaosuus löytyy [ensimmäisen oppitunnin oppimateriaalista](/wiki/Ohjelmoinnin-aloitus).
 
-Lähdekoodit: [SyotteidenLukeminen.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/perusteet/SyotteidenLukeminen.java), 
+Lähdekoodit: [SyotteidenLukeminen.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/perusteet/SyotteidenLukeminen.java),
 [NumeroidenLukeminen.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/perusteet/NumeroidenLukeminen.java)
 
 ## [Totuusarvot ja vertailuoperaatiot](https://web.microsoftstream.com/video/c1d1f2cd-8d56-4a2c-81d1-7c27caf574bc) *30:04*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/c1d1f2cd-8d56-4a2c-81d1-7c27caf574bc?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Tällä videolla perehdymme Javan totuusarvioihin sekä erilaisiin vertailuoperaatioihin, joiden tuloksina syntyy totuusarvoja. Määrittelemme totuusarvoja varten `boolean`-muuttujia ja teemme yksinkertaisen `if`-ehtolauseen. 
+Tällä videolla perehdymme Javan totuusarvioihin sekä erilaisiin vertailuoperaatioihin, joiden tuloksina syntyy totuusarvoja. Määrittelemme totuusarvoja varten `boolean`-muuttujia ja teemme yksinkertaisen `if`-ehtolauseen.
 
-Lähdekoodit: 
-[Totuusarvot.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/ehtorakenteet/Totuusarvot.java), 
+Lähdekoodit:
+[Totuusarvot.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/ehtorakenteet/Totuusarvot.java),
 [ArvojenVertailu.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/ehtorakenteet/ArvojenVertailu.java),
 [Kasino.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/ehtorakenteet/Kasino.java),
 [EdullisempiPuoleenHintaan.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/ehtorakenteet/EdullisempiPuoleenHintaan.java),
@@ -48,7 +50,7 @@ Lähdekoodit:
 
 Tällä videolla sovellamme totuusarvoja ja ehtolauseita monimutkaisemmassa esimerkissä. Vertailtavalle arvolle määritellään useita toisistaan riippuvia ehtoja. Tehtävän idea perustuu [Ilta-Sanomien artikkeliin](https://www.is.fi/taloussanomat/art-2000006283077.html).
 
-Lähdekoodit: 
+Lähdekoodit:
 [Kangaskassit.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/ehtorakenteet/Kangaskassit.java)
 
 
@@ -58,7 +60,7 @@ Lähdekoodit:
 
 Tällä videolla tutustumme siihen, miten voit ohjelmassasi hyödyntää tietokoneen käyttöjärjestelmän kellonaikaa luodessasi ajasta riippuvaista ohjelmalogiikkaa. Videolla käsitellään Viope-tehtävää 2.2 (Tervehdykset).
 
-Lähdekoodit: 
+Lähdekoodit:
 [Tervehdykset.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/ehtorakenteet/Tervehdykset.java)
 
 
@@ -68,7 +70,7 @@ Lähdekoodit:
 
 Tällä videolla käsittelemme esimerkkiä, jossa on peräkkäisiä ehtorakenteita. Videolla koodattava esimerkkiohjelma selvittää [HSL:n lippuhinnaston](https://www.hsl.fi/liput-ja-hinnat) ja mahdollisten opiskelija-alennusten perusteella, kannattaako käyttäjän ostaa julkisen liikenteen kausilippu vai kertalippuja.
 
-Lähdekoodit: 
+Lähdekoodit:
 [MatkalippujenHinnat.java](https://github.com/ohjelmointi1/ohjelmointi1-3012/blob/main/src/viikko01/ehtorakenteet/MatkalippujenHinnat.java)
 
 
@@ -100,7 +102,7 @@ boolean no = !yes; // saa arvoksi false
 
 ## Arvojen vertailu ja loogiset operaatiot
 
-Kun vertailemme Javassa eri arvoja, saamme vertailun tuloksiksi aina totuusarvoja. Tätä voidaan kokeilla suoraviivaisesti esimerkiksi vertailemalla lukuja toisiinsa `>`- ja `<`-operaatioilla: 
+Kun vertailemme Javassa eri arvoja, saamme vertailun tuloksiksi aina totuusarvoja. Tätä voidaan kokeilla suoraviivaisesti esimerkiksi vertailemalla lukuja toisiinsa `>`- ja `<`-operaatioilla:
 
 ```java
 System.out.println(10 > 5);  // true
@@ -110,9 +112,9 @@ System.out.println(100 < 3); // false
 Vertailujen tuloksena muodostuvia totuusarvoja voidaan myös asettaa muuttujiin:
 
 ```java
-// oletetaan, että lukija on edelliseltä oppitunnilta 
+// oletetaan, että lukija on edelliseltä oppitunnilta
 // tuttu Scanner-olio
-int numero = lukija.nextInt(); 
+int numero = lukija.nextInt();
 
 boolean yliKolme = numero > 3;
 boolean alleSata = numero < 100;
@@ -174,7 +176,7 @@ Ehtona on aina oltava totuusarvo tai totuusarvon saava lauseke, esimerkiksi:
 boolean taysiIkainen = ika >= 18;
 
 if (taysiIkainen) {
-    // tähän lohkoon kirjoitettu koodi suoritetaan 
+    // tähän lohkoon kirjoitettu koodi suoritetaan
     // vain, jos taysiIkainen sai arvon true
     System.out.println("Olet täysi-ikäinen");
 }
@@ -184,7 +186,7 @@ If-lauseen sulkujen sisällä voi olla myös lauseke, joka suoritetaan (evaluoid
 
 ```java
 if (ika >= 18) {
-    // tähän lohkoon kirjoitettu koodi suoritetaan 
+    // tähän lohkoon kirjoitettu koodi suoritetaan
     // vain, jos vertailu sai arvon true
     System.out.println("Olet täysi-ikäinen");
 }
@@ -214,7 +216,7 @@ Totuusarvoja voidaan yhdistellä ja- sekä tai-operaatioilla. Näiden operaatioi
 
 ## Ja
 
-Ehdon "a ja b" (`a && b`) arvoksi tulee `true` vain silloin, kun **molemmat puolet** ovat tosia. 
+Ehdon "a ja b" (`a && b`) arvoksi tulee `true` vain silloin, kun **molemmat puolet** ovat tosia.
 
 Esimerkiksi, jos kesäkuukausiksi lasketaan kesä, heinä ja elokuu, voidaan `onKesa`-muuttujan logiikassa hyödyntää `&&`-operaatiota:
 
@@ -267,7 +269,7 @@ if (kello >= 10 && kello < 18) {
 }
 ```
 
-Edellä oleva ehto toteutuu vain, jos `kello` on samaan aikaan sekä suurempi tai yhtä suuri kuin 10 ja pienempi kuin 18. 
+Edellä oleva ehto toteutuu vain, jos `kello` on samaan aikaan sekä suurempi tai yhtä suuri kuin 10 ja pienempi kuin 18.
 
 
 ## Ehtorakenteet (tai)
@@ -311,7 +313,7 @@ boolean helpompiLukea = (kello >= 10) && (kello < 18);  // hieman helpompi lukea
 
 ## Oikean kellonajan käyttäminen Java-ohjelmassa 🕒
 
-Edellisissä esimerkeissä esitetty kellonajan "kovakoodaaminen" tai kysyminen käyttäjältä eivät vastaa tavanomaisen ohjelman oikeaa toimintalogiikkaa. Oikeaa kellonaikaa voidaan käyttää esimerkiksi seuraavalla tavalla Javan `LocalTime`-luokan avulla. 
+Edellisissä esimerkeissä esitetty kellonajan "kovakoodaaminen" tai kysyminen käyttäjältä eivät vastaa tavanomaisen ohjelman oikeaa toimintalogiikkaa. Oikeaa kellonaikaa voidaan käyttää esimerkiksi seuraavalla tavalla Javan `LocalTime`-luokan avulla.
 
 Lisää ensin `import`-käsky tiedoston alkuun mahdollisen `package`-rivin alapuolelle, jotta voit käyttää `LocalTime`-luokkaa:
 
@@ -330,7 +332,7 @@ int tunnit = nykyhetki.getHour();
 
 if (tunnit >= 10 && tunnit < 18) {
     // tähän lohkoon kirjoitettu koodi suoritetaan vain,
-    // jos tunnit-muuttujan arvo on suurempi tai 
+    // jos tunnit-muuttujan arvo on suurempi tai
     // yhtä suuri kuin 10, mutta kuitenkin alle 18
     System.out.println("Hyvää päivää!");
 }
@@ -348,8 +350,8 @@ int tunnit = nykyhetki.getHour(); // katso edellinen esimerkki
 if (tunnit >= 8 && tunnit < 16) {
     System.out.println("Työskentele ahkerasti!");
 } else {
-    // Tässä lohkossa oleva koodi suoritetaan, jos 
-    // edellä ollut if-ehto ei toteutunut 
+    // Tässä lohkossa oleva koodi suoritetaan, jos
+    // edellä ollut if-ehto ei toteutunut
     System.out.println("Vapaa-aika 🥳!");
 }
 ```
@@ -397,7 +399,7 @@ Ohjelmissa on toisinaan tarpeen tehdä sisäkkäisiä ehtorakenteita. Tällöin 
 
 Tehtävässä ehtologiikka kannattaa ensin luonnostella kaavioksi, jossa lähdet liikkeelle yksinkertaisimmasta tapauksesta (jälkitarkastus) ja etenet vaihe kerrallaan päästömittauksen ja polttoainetyypin kyselyihin.
 
-[![A nested "If–Then–Else" flow diagram by Snubcube](assets/IF-THEN-ELSE-END_flowchart.png)](https://en.wikipedia.org/wiki/Conditional_(computer_programming))
+[![A nested "If–Then–Else" flow diagram by Snubcube](/assets/IF-THEN-ELSE-END_flowchart.png)](https://en.wikipedia.org/wiki/Conditional_(computer_programming))
 
 *Kuva: A nested "If–Then–Else" flow diagram by Snubcube. CC BY-SA 3.0. [Wikipedia](https://en.wikipedia.org/wiki/Conditional_(computer_programming)#/media/File:IF-THEN-ELSE-END_flowchart.svg)*
 
@@ -495,12 +497,12 @@ Voit halutessasi lukea aiheesta lisää esim. osoitteesta [https://www.baeldung.
 Edellä esitettyjen `if`-rakenteiden lisäksi on olemassa myös toinen vaihtoehto, `switch`, johon sinun kannattaa tutustua itsenäisesti esimerkiksi osoitteessa [https://www.educative.io/edpresso/how-to-use-switch-case-statement-in-java](https://www.educative.io/edpresso/how-to-use-switch-case-statement-in-java).
 
 ```java
-/** By Educative, Inc 
+/** By Educative, Inc
  * https://www.educative.io/edpresso/how-to-use-switch-case-statement-in-java
  * License: Creative Commons -Attribution -ShareAlike 4.0 (CC-BY-SA 4.0)*/
 class HelloWorld {
     public static void main( String args[] ) {
-      
+
         int weather = 2;
         //passing variable to the switch
         switch (weather) {
@@ -522,11 +524,7 @@ class HelloWorld {
 }
 ```
 
----
-
-Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
 
 
-<script src="/tocbot/tocbot.min.js"></script>
-<script src="/scripts.js"></script>
-<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+

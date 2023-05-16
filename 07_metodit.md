@@ -1,6 +1,10 @@
-[&larr; Takaisin etusivulle](/)
+---
+title: Metodit
+layout: default
+nav_order: 7
+---
 
-<h1 class="js-toc-ignore">(Staattiset) metodit</h1>
+# (Staattiset) metodit
 
 Olemme käyttäneet ohjelmointikurssilla aikaisempien aiheiden yhteydessä lukuisia valmiita metodeja. Metodit ovat olleet luonteva osa ongelmanratkaisua, vaikka emme ole toistaiseksi kiinnittäneet niihin suurta huomiota tai toteuttaneet omia metodeja `main`-metodia lukuun ottamatta.
 
@@ -11,9 +15,8 @@ Syitä oman ohjelman jakamiseksi useisiin metodeihin on lukuisia. Ensinnäkin me
 Tämä oppimateriaali pohjautuu Helsingin yliopiston [Agile Education Research](https://www.helsinki.fi/en/researchgroups/data-driven-education) -tutkimusryhmän [MOOC-ohjelmointikurssin materiaaliin](https://materiaalit.github.io/ohjelmointi-18/part2/), jota suositellaan myös tälle ohjelmointikurssille. Lisenssi: [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi).
 
 
-**Sisällysluettelo**
-
-<div class="js-toc"></div>
+* Sisällysluettelo
+{:toc}
 
 
 # [Video: Metodien käsitteet, kutsuminen ja määrittely](https://web.microsoftstream.com/video/0281b7d0-6e35-494b-bfbe-a5033920d80b) *50:53*
@@ -113,7 +116,7 @@ Olemme kurssilla tähän asti määritelleet lukuisia kertoja main-metodin:
 
 ```java
 public static void main(String[] args) {
-    
+
 }
 ```
 
@@ -259,7 +262,7 @@ Videolla esiintyvät lähdekoodit:
 # Metodin paluuarvot ja return-käsky
 
 > *"Metodin määrittelyssä kerrotaan palauttaako metodi arvon. Jos metodi palauttaa arvon, tulee metodimäärittelyn yhteydessä kertoa palautettavan arvon tyyppi. Muulloin määrittelyssä käytetään avainsanaa void. Tähän mennessä tekemämme metodit ovat määritelty avainsanaa void käyttäen eli eivät ole palauttaneet arvoa."*
-> 
+>
 > *"Konkreettinen arvon palautus tapahtuu komennolla `return`, jota seuraa palautettava arvo (tai muuttujan tai lauseke, jonka arvo palautetaan)."*
 >
 > [Agile Education Research, 2019](https://www.helsinki.fi/en/researchgroups/data-driven-education). [Ohjelman pilkkominen osiin: metodit](https://ohjelmointi-19.mooc.fi/osa-2/3-metodit). [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi)
@@ -521,8 +524,8 @@ Ns. perustietotyyppien arvot (int, double) kopioituvat metodikutsussa, eikä nii
 
 ```java
 public static void tulostaJarjestyksessa(List<Integer> numerot) {
-    // Listan järjestäminen metodin sisällä muuttaa 
-    // järjestyksen myös siellä, mistä tätä metodia 
+    // Listan järjestäminen metodin sisällä muuttaa
+    // järjestyksen myös siellä, mistä tätä metodia
     // kutsuttiin, koska listaa ei kopioida metodikutsussa
     Collections.sort(numerot);
     System.out.println(numerot);
@@ -557,7 +560,7 @@ Tutustu interaktiiviseen esimerkkiin arvojen muuttumisesta ja muuttumattomuudest
 
 ## Suksien ja sauvojen pituuslaskuri
 
-Perinteisen hiihtotyylin sauvojen ohjepituus on [85 % hiihtäjän pituudesta](https://www.intersport.fi/fi/laji/hiihto/hiihtovinkit/hiihtosauvojen-pituusopas/). Mitta-asteikossa sauvat ilmoitetaan 5 cm pituusvälein. 
+Perinteisen hiihtotyylin sauvojen ohjepituus on [85 % hiihtäjän pituudesta](https://www.intersport.fi/fi/laji/hiihto/hiihtovinkit/hiihtosauvojen-pituusopas/). Mitta-asteikossa sauvat ilmoitetaan 5 cm pituusvälein.
 
 Suksien suosituspituus on 40 cm enemmän kuin sauvojen pituuden.
 
@@ -579,6 +582,5 @@ Materiaalin on muokannut Haaga-Helian ohjelmointikurssin mukaiseksi Teemu Havuli
 
 Lisenssi: [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi).
 
-<script src="/tocbot/tocbot.min.js"></script>
-<script src="/scripts.js"></script>
-<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+
