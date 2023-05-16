@@ -5,8 +5,15 @@ nav_order: 13
 ---
 
 # Tiedostot
+{: .no_toc }
 
 Tällä oppitunnilla tutustumme Javan `java.nio.files`-pakettiin, joka tarjoaa meille suoraviivaisen tavan lukea ja kirjoittaa tekstitiedostoja. Tiedostojen lukemisen ja kirjoittamisen yhteydessä pääsemme myös harjoittelemaan merkkijonojen käsittelyä sekä poikkeuksia, joita saattaa syntyä, mikäli tiedosto-operaatiossa tapahtuu virheitä.
+{: .fs-5 }
+
+---
+
+## Sisällysluettelo
+{: .no_toc .text-delta }
 
 * Sisällysluettelo
 {:toc}

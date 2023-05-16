@@ -6,172 +6,8 @@ nav_order: 0
 
 # Tervetuloa koodaamaan!
 
-Tervetuloa ohjelmointi 1 -opintojaksolle! Tältä sivulta löydät kurssin oppituntien muistiinpanot, videotallenteet ja koodiesimerkit.
-
-
-### 1. [Eclipse-sovelluskehitin ja perustietotyypit](./ohjelmoinnin-aloitus)
-
-<a href="https://hh.viope.com/">🔗 Viope</a><br />
-<a href="wiki/Ohjelmoinnin-aloitus">📝 Oppimateriaali</a><br />
-<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko01/perusteet">📁 Oppitunnin esimerkkikoodit</a>
-
-<a href="https://web.microsoftstream.com/video/f8cafe9c-976c-4f00-9713-4a8adc8d34bd">📼 Kurssin yleiset asiat</a><br />
-<a href="https://web.microsoftstream.com/video/00c2134a-6187-46d7-a7ac-da7218ff4a10">📼 Ensimmäisen Java-ohjelman kirjoittaminen ja lähetys Viopeen</a><br />
-<a href="https://web.microsoftstream.com/video/e5771426-2a6d-4aa4-be5b-ecd7dbe03805">📼 Javan muuttujat ja lukujen tietotyypit</a>
-
-
-### 2. [Totuusarvot ja ehtolauseet](./totuusarvot-ja-ehtolauseet)
-
-<a href="wiki/Totuusarvot-ja-ehtolauseet">📝 Oppimateriaali</a><br />
-<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko01/ehtorakenteet">📁 Oppitunnin esimerkkikoodit</a>
-
-<a href="https://web.microsoftstream.com/video/72835f81-cea0-45e8-b2fe-7deb472eb8fd">📼 Scanner ja DecimalFormat</a><br />
-<a href="https://web.microsoftstream.com/video/c1d1f2cd-8d56-4a2c-81d1-7c27caf574bc">📼 Totuusarvot ja vertailuoperaatiot</a><br />
-<a href="https://web.microsoftstream.com/video/d45036ec-153e-4685-b5cc-638ac608a657">📼 Kangaskassit-esimerkki (if-else if-else)</a><br />
-<a href="https://web.microsoftstream.com/video/a0a57cc7-bfa1-46ae-b088-6a01b947d47a">📼 Kellonaikojen vertailu ja LocalTime</a><br />
-<a href="https://web.microsoftstream.com/video/55c3e7f7-f3e3-4c83-b370-dee3635dea83">📼 Matkalippujen hinnat -esimerkki</a>
-
-
-### 3. [Toistorakenteet](./toistorakenteet)
-
-<a href="wiki/Toistorakenteet">📝 Oppimateriaali</a><br />
-<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko02/toisto">📁 Oppitunnin esimerkkikoodit</a>
-
-<a href="https://web.microsoftstream.com/video/f2aa8a54-a86a-484e-a60d-0e80cde9a891">📼 Johdanto toistorakenteisiin ja while-rakenteen hyödyntäminen</a><br />
-<a href="https://web.microsoftstream.com/video/aa745036-e5a0-489e-9bb3-85fcb84a4b55">📼 For-toistorakenne ja sen hyödyntäminen</a><br />
-<a href="https://web.microsoftstream.com/video/c3e79c0e-02d9-40df-96ad-309c235fff35">📼 Break-avainsana, sademäärät ja arvosana-asteikko</a>
-
-
-### 4. [Merkkijonot ja debuggerin hyödyntäminen](./merkkijonot)
-
-<a href="wiki/Merkkijonot">📝 Oppimateriaali</a><br />
-<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko02/merkkijonot">📁 Oppitunnin esimerkkikoodit</a>
-
-<a href="https://web.microsoftstream.com/video/8d6bbb56-51f0-48f5-8110-ccde31d19342">📼 Merkkijonojen vertailu, metodit ja Eclipsen debuggeri</a><br />
-<a href="https://web.microsoftstream.com/video/c1991f30-5797-45e7-8030-a24ecb751064">📼 String-luokan metodit: length, substring...</a><br />
-<a href="https://web.microsoftstream.com/video/78f6744a-2dc0-4708-9aac-fcf0cdd49c12">📼 Merkkijonojen muuttaminen, muuttumattomuus ja satunnaisen salasanan generointi</a><br />
-<a href="https://web.microsoftstream.com/video/17a8d25e-47b0-41fe-9446-132aed27e871">📼 Syventävää: char-tietotyyppi, säännölliset lausekkeet ja palindromin tarkastaminen</a>
-
-
-### 5. [Listat](./listat)
-
-Sekä Gitin käyttö tehtäväpohjien lataamiseksi.
-
-<a href="wiki/Listat">📝 Oppimateriaali</a><br />
-<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko03/listat">📁 Oppitunnin esimerkkikoodit</a>
-
-<a href="https://github.com/swd1tn002/mooc.fi-2019-osa3/" target="_blank">📁 Viope-tehtäväpohjat</a><br />
-<br />
-<a href="https://web.microsoftstream.com/video/05754f1f-06c2-4142-8423-7cbb22bff651">📼 Tehtäväpohjien kloonaaminen GitHubista</a><br />
-<a href="https://web.microsoftstream.com/video/f6bc6f3b-374d-4776-bb7c-981707c5f648">📼 Listan luominen, arvojen lisääminen ja arvojen hakeminen</a><br />
-<a href="https://web.microsoftstream.com/video/65e4f154-7369-4165-bf0c-3e5ddc9a6569">📼 Listan sisällön tutkiminen ja läpikäynti</a><br />
-<a href="https://web.microsoftstream.com/video/98536d7e-5621-4927-bc63-45299746dfa4">📼 Listan luominen valmiilla arvoilla sekä viittaustyyppiset muuttujat</a><br /><br />
-<em>Lisämateriaali (Ohjelmoinnin MOOC):</em><br />
-<a href="https://ohjelmointi-19.mooc.fi/osa-3/2-listat" target="_blank">Listamuuttujan käyttö useamman arvon tallentamiseen</a>
-
-
-### 6. [Taulukot](./taulukot)
-
-<a href="wiki/Taulukot-(arrays)">📝 Oppimateriaali</a><br />
-<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko03/taulukot">📁 Oppitunnin esimerkkikoodit</a>
-
-<a href="https://web.microsoftstream.com/video/99c9ef6f-d2eb-4180-8c1b-0cfef766cb10">📼 Taulukon luominen, käsitteleminen ja läpikäynti</a><br />
-<a href="https://web.microsoftstream.com/video/613511d5-aa04-41ed-bc3b-d88c2fdd2f4e">📼 Lottotarkistin (sisäkkäiset toistorakenteet ja useita taulukoita)</a><br />
-<a href="https://web.microsoftstream.com/video/fbbdf454-5222-43bb-840b-8579fdd47e13">📼 Säätilasto-esimerkki (csv-datan käsittely)</a>
-
-
-### 7. [Staattiset luokkametodit, parametrit ja paluuarvot](./metodit)
-
-<a href="wiki/Metodit">📝 Oppimateriaali</a><br />
-<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko04/metodit/">📁 Oppitunnin esimerkkikoodit</a>
-
-<a href="https://web.microsoftstream.com/video/0281b7d0-6e35-494b-bfbe-a5033920d80b">📼 Metodien käsitteet, kutsuminen ja määrittely</a><br />
-<a href="https://web.microsoftstream.com/video/d3effef4-3f42-4be2-8692-12f4ba4f9c53">📼 Parametrien välittäminen, ohjelman pilkkominen ja metodikutsut toisista luokista</a>
-
-
-### 8. [Ajan käsitteleminen Javassa, ohjelkääntäminen ja komentoriviparametrit](./ajan-kasittely-ja-ohjelman-kaantaminen)
-
-<a href="wiki/Ajan-kasittely-ja-ohjelman-kaantaminen">📝 Oppimateriaali</a><br />
-<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko04/aika/">📁 Oppitunnin esimerkkikoodit</a>
-
-<a href="https://web.microsoftstream.com/video/848a270b-1d74-4493-8d13-17db6b3a656a">📼 Javan aikaluokat ja niiden käyttäminen</a><br />
-<a href="https://web.microsoftstream.com/video/b6e65db2-c071-4db4-aee9-62d7f6e34066">📼 Aikaan liittyvä ohjelmalogiikka: myöhästymismaksut ja juhlapyhät</a><br />
-<a href="https://web.microsoftstream.com/video/8648dc7e-4195-4bea-b872-86dcd22c76af">📼 Ohjelman kääntäminen, paketointi ja suorittaminen</a>
-
-
-### 9. [Olio-ohjelmoinnin alkeet](./oliot)
-
-Käsitteet luokka ja olio<br />
-Oliometodit ja -muuttujat
-
-<a href="wiki/Oliot">📝 Oppimateriaali</a><br />
-<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko05/">📁 Oppitunnin esimerkkikoodit</a>
-
-<a href="https://web.microsoftstream.com/video/624e03b5-d220-4da5-a7a7-954bc7b07e37">📼 Olio-ohjelmoinnin käsitteet, oliomuuttujat ja metodit</a><br />
-<a href="https://web.microsoftstream.com/video/0bd21fd4-a6ef-4497-9547-44766ba0a81b">📼 Konstruktori, getterit, setterit ja toString</a><br />
-<a href="https://web.microsoftstream.com/video/0008bece-15ff-47b9-a163-7c7663d787b3">📼 Null-arvot, NullPointerException ja koodin generointi</a>
-
-
-### 10. [Olio-ohjelmointi jatkuu: luokkien yhteyssuhteet](./oliot-ja-yhteyssuhteet)
-
-Olioita listoilla ja listoja olioissa
-
-<a href="wiki/Oliot-ja-yhteyssuhteet">📝 Oppimateriaali</a><br />
-<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko05/oliot/">📁 Oppitunnin esimerkkikoodit</a>
-
-<a href="https://web.microsoftstream.com/video/d8040740-8c23-4948-a840-b40b6a32f8dc">📼 Luokan määrittely ja olioiden käsittely listoilla</a><br />
-<a href="https://web.microsoftstream.com/video/b6aa4193-13dd-4261-bcb9-49c71aff5f52">📼 Luokkien väliset yhteyssuhteet</a><br />
-<a href="https://web.microsoftstream.com/video/09b3a526-88f5-4b5a-a507-d8f53b452a5a">📼 Oliot listoilla ja listat olioilla</a><br />
-<br />
-<em>Lisämateriaali (Viope-vinkkejä):</em><br />
-<a href="https://video.haaga-helia.fi/media/Luokat+ja+oliot+osa+7+++kokoojamuuttuja/0_8k2wjem9">📼 Kokoojamuuttujan hyödyntäminen Playlist-tehtävän kaltaisessa ongelmassa</a><br />
-<a href="https://video.haaga-helia.fi/media/Oliot+listallaA+pituuksien+summan+laskeminen/0_c16cldiu">📼 Pelaajat listalla / "olioiden summan laskeminen"</a>
-
-
-### 11. [Olioiden vertailu ja järjestäminen](./olioiden-vertailu)
-
-<a href="wiki/Olioiden-vertailu">📝 Oppimateriaali</a><br />
-<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko06/">📁 Oppitunnin esimerkkikoodit</a>
-
-<a href="https://web.microsoftstream.com/video/5900cbc8-bdf8-4398-9d36-5d54890eaad9">📼 Olioiden vertailu: equals-metodi</a><br />
-<a href="https://web.microsoftstream.com/video/e0f9ab75-4957-4286-9170-913cf835d1e8">📼 Olion tyypin selvittäminen ja tyyppimuunnokset</a><br />
-<a href="https://web.microsoftstream.com/video/5ac62905-079c-4bcd-9fd5-470c1974518c">📼 Olioiden järjestäminen ja compareTo-metodi</a>
-
-
-### 12. [Poikkeukset](./poikkeukset)
-
-<a href="wiki/Poikkeukset">📝 Oppimateriaali</a><br />
-<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko06/poikkeukset">📁 Oppitunnin esimerkkikoodit</a>
-
-<a href="https://web.microsoftstream.com/video/63ec3ae4-3b02-43b5-9903-45bf34c52c92">📼 Poikkeukset ja niihin varautuminen</a><br />
-<a href="https://web.microsoftstream.com/video/64f44c7d-b7ec-4d3c-9448-5aeb87cec819">📼 Virheiden paikantaminen, poikkeustyypit ja finally-lohko</a><br />
-<a href="https://web.microsoftstream.com/video/7ac99180-b044-4638-a360-12dded0e32d7">📼 Poikkeusten heittäminen</a>
-
-
-### 13. [Tekstitiedostojen lukeminen ja tallentaminen](./tiedostot)
-
-<a href="wiki/Tiedostot">📝 Oppimateriaali</a><br />
-<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko07/tiedostot">📁 Oppitunnin esimerkkikoodit</a>
-
-<a href="https://web.microsoftstream.com/video/e8bd93e6-c0e2-477f-8716-a8aa820098f9">📼 Tiedoston lukeminen ja poikkeusten käsittely</a><br />
-<a href="https://web.microsoftstream.com/video/1f04b290-b302-476d-94ff-3abd2cf44e55">📼 Tiedoston kirjoittaminen, CSV-tiedostot ja Kalenteri-esimerkki</a><br />
-<a href="https://web.microsoftstream.com/video/54005f94-5609-45b2-9b96-9a6795655a6a">📼 CSV-käsittelyn refaktorointi</a>
-
-
-### 14. [Kurssin aiheiden soveltaminen](./soveltavat-esimerkit)
-
-<a href="wiki/Soveltavat-esimerkit">📝 Materiaali, videot ja lähdekoodit</a>
-
-
-### 15. Kurssin sisällön kertaus
-
-<a href="https://github.com/ohjelmointi1/ohjelmointi1-3018/tree/main/src/viikko08/kertaus">📁 Oppitunnin esimerkkikoodit</a><br /><br />
-<a href="https://student.home.haaga-helia.fi/group/pakki/opintojaksopalaute">💬 Opintojaksopalaute</a>
-
-<a href="https://web.microsoftstream.com/video/888c147b-ae59-4212-8c6f-4a34da9e333a">📼 Kertaustunti, osa 1 (lottorivien generointi)</a><br />
-<a href="https://web.microsoftstream.com/video/5b4727d5-f196-4aec-98e3-dcdbd16b46a9">📼 Kertaustunti, osa 2 (lottorivien tarkistus)</a><br />
-<a href="https://web.microsoftstream.com/video/37b9d9b4-01d1-4c1e-aeaa-8ce52e82abf0">📼 Kertaustunti, osa 3 (kalenteri-tehtävä)</a><br />
-<a href="https://web.microsoftstream.com/video/67715ce1-53a9-442a-bba2-136e14d461c8">📼 Kertaustunti, osa 4 (suuret kaupungit -tehtävä)</a>
+Tervetuloa ohjelmointi 1 -opintojaksolle! Tältä sivustolta löydät kurssin oppituntien muistiinpanot, videotallenteet ja koodiesimerkit.
+{: .fs-6 }
 
 
 ## Kurssin sisältö
@@ -179,6 +15,7 @@ Olioita listoilla ja listoja olioissa
 Tunneilla opetellaan ohjelmoinnin perusteita sekä hyviä ohjelmointikäytäntöjä ja käydään läpi esimerkkejä. Lisäksi opiskelijat ohjelmoivat tuntitehtäviä ja saavat niihin ohjausta. Kurssin suorittamiseksi sinun tulee palauttaa hyväksytysti automaattisesti arvioitavia harjoitustehtäviä Viope-järjestelmään sekä suorittaa kurssin lopuksi järjestettävä koe. Koe sisältää harjoitustehtävien kaltaisia ohjelmointitehtäviä ja se tehdään tietokoneella.
 
 [Opintojaksokuvaus](https://opinto-opas.haaga-helia.fi/course_unit/SOF005AS2A)
+
 
 ## Kehitys ohjelmistokehittäjänä
 
@@ -220,7 +57,6 @@ public class KurssinTyomaara {
     }
 }
 ```
-
 
 ## Kurssin työkalut
 

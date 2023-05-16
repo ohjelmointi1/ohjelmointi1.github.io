@@ -1,7 +1,21 @@
-<h1>Koe</h1>
+---
+title: Ohjeita kokeeseen
+layout: default
+nav_order: 16
+---
+
+# Koe
 
 Tällä sivulla on oleellista tietoa kokeisiin valmistautumiseen sekä järjestelyihin ja käytäntöihin liittyen, joten luethan sen kokonaan, vaikka sivu on pitkä.
+{: .fs-5 }
 
+---
+
+## Sisällysluettelo
+{: .no_toc .text-delta }
+
+* Sisällysluettelo
+{:toc}
 
 ## Viope-oppimisalusta
 

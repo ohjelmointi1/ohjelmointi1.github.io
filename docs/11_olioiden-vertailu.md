@@ -5,8 +5,15 @@ nav_order: 11
 ---
 
 # Olioiden vertaileminen
+{: .no_toc }
 
 Tällä oppitunnilla tutustumme tarkemmin olioiden yhtäsuuruuden ja suuruusjärjestyksen vertailemiseen. Kuten merkkijonoja käsitellessämme huomasimme, olioiden vertailu `==`-operaatiolla vertailee, ovatko kaksi oliota **samat** eikä olioiden sisältöä. Tämän oppitunnin aikana toteutamme omia vertailumetodeja, jotka toimivat myös Javan valmiiden metodien kanssa.
+{: .fs-5 }
+
+---
+
+## Sisällysluettelo
+{: .no_toc .text-delta }
 
 * Sisällysluettelo
 {:toc}
@@ -98,7 +105,8 @@ Toisin kuin `String`-luokan kanssa, `equals`-metodi tuottaa nyt `false`, vaikka 
 
 Jos haluamme että omien `Tuote`-olioiden vertailu `maito1.equals(maito2)` vertailee olioiden sisältöä, voimme toteuttaa oman `equals`-metodin!
 
-💡 *Omaa equals-metodia käsitellään tarkemmin [Helsingin yliopiston MOOC-kurssilla](https://ohjelmointi-20.mooc.fi/osa-8/3-olioiden-samankaltaisuus), jossa voit perehtyä olioiden samankaltaisuuden vertailuun tarkemmin.*
+{: .huom }
+Omaa equals-metodia käsitellään tarkemmin [Helsingin yliopiston MOOC-kurssilla](https://ohjelmointi-20.mooc.fi/osa-8/3-olioiden-samankaltaisuus), jossa voit perehtyä olioiden samankaltaisuuden vertailuun tarkemmin.
 
 
 ## Oman equals-metodin toteuttaminen (edistynyttä sisältöä 🌶️)
@@ -134,6 +142,7 @@ Huomaa, että `equals`-metodi ylikirjoittaa Javan standardikirjaston metodin, mi
 
 Metodeja korvattaessa on hyvä käytäntö lisätä metodin ylle `@Override`-**annotaatio**, joka toimii sekä dokumentaationa metodin korvaamisesta että Java-kääntäjän ohjeena varmistaa, että metodi korvattiin onnistuneesti. Tämä annotaatio on meille tuttu aikaisemmilta oppitunneilta myös `toString`-metodin yhteydestä.
 
+{: .warning }
 Huomaa, että metodille annettu `Object toinen` olio ei välttämättä ole toinen `Tuote`-olio, vaan se voi olla mikä tahansa olio:
 
 ```java
@@ -163,7 +172,8 @@ Emme voi kuitenkaan suoraan käsitellä saatua oliota tuotteena tai asettaa sit�
 Tuote toinenTuote = (Tuote) toinen;
 ```
 
-💡 Tyyppimuunnos ei oikeasti muuta käsiteltävää oliota toisen tyyppiseksi. Se on vain keino kertoa Java-kääntäjälle, että kyseistä arvoa tulee käsitellä tietyn tyyppisenä.
+{: .huom }
+Tyyppimuunnos ei oikeasti muuta käsiteltävää oliota toisen tyyppiseksi. Se on vain keino kertoa Java-kääntäjälle, että kyseistä arvoa tulee käsitellä tietyn tyyppisenä.
 
 Nyt kun sekä `this` että `toinenTuote` ovat `Tuote`-olioita, voimme vertailla niiden sisältöä toisiinsa:
 
@@ -194,7 +204,8 @@ System.out.println(maito1.equals(kauramaito));  // false
 Oman luokkamme `equals` toimii nyt aivan kuten Javan valmiiden luokkien metodit, joten sitä voidaan kutsua itse kuten yllä. Se toimii myös automaattisesti Javan valmiiden metodien yhteydessä, kuten seuraavassa kappaleessa "Mihin tarvitsemme olioiden vertailua?" todetaan.
 
 
-💡 [Javan uusimmissa versioissa](https://docs.oracle.com/en/java/javase/15/language/pattern-matching-instanceof-operator.html) `instanceof`-operaatiota on jatkokehitetty siten, että tarkastuksen jälkeen voidaan suoraan määritellä muuttuja, johon automaattisesti sijoitetaan tarkastettu olio, mikäli se läpäisi tarkastuksen. Näin edellä kirjoitettu koodi voidaan kirjoittaa ilman erillistä tyyppimuunnosta:
+{: .huom }
+[Javan uusimmissa versioissa](https://docs.oracle.com/en/java/javase/15/language/pattern-matching-instanceof-operator.html) `instanceof`-operaatiota on jatkokehitetty siten, että tarkastuksen jälkeen voidaan suoraan määritellä muuttuja, johon automaattisesti sijoitetaan tarkastettu olio, mikäli se läpäisi tarkastuksen. Näin edellä kirjoitettu koodi voidaan kirjoittaa ilman erillistä tyyppimuunnosta:
 
 ```java
 if (toinen instanceof Tuote t) {
@@ -204,7 +215,8 @@ if (toinen instanceof Tuote t) {
 
 Yllä `t`-muuttuja viittaa samaan olioon kuin `toinen`, mutta muuttujan tyyppi on `Tuote` eikä `Object`. Näin `t.nimi` toimii suoraan if-lohkon sisällä ilman erillisiä tyyppimuunnoksia.
 
-⚠ Huom! Yllä esitetty uudempi syntaksi ei välttämättä toimi Viopen Java-versiossa.
+{: .warning}
+Huom! Yllä esitetty uudempi syntaksi ei välttämättä toimi Viopen Java-versiossa.
 
 # Mihin tarvitsemme olioiden vertailua?
 

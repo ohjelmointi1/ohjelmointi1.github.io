@@ -5,12 +5,21 @@ nav_order: 2
 ---
 
 # Totuusarvot ja ehtolauseet
+{: .no_toc }
 
 Tällä tunnilla tutustumme Javan totuusarvoihin `true` ja `false` sekä niihin liittyvään logiikkaan. Opimme vertailemaan eri arvoja toisiinsa ja tekemään vertailun tulosten perusteella ehdollisesti suoritettavaa ohjelmalogiikkaa.
+{: .fs-5 }
 
 Myöhemmin tällä kurssilla hyödynnämme totuusarvoja ja ehtoja toteuttaessamme toistorakenteita, joissa koodia toistetaan haluamiemme ehtojen mukaisesti.
+{: .fs-5 }
 
-Katso myös: [Ehtolauseet ja vaihtoehtoinen toiminta, Ohjelmoinnin MOOC 2020](https://ohjelmointi-20.mooc.fi/osa-1/6-ehtolauseet).
+Katso myös: [Ehtolauseet ja vaihtoehtoinen toiminta, Ohjelmoinnin MOOC](https://ohjelmointi-20.mooc.fi/osa-1/6-ehtolauseet).
+{: .fs-5 }
+
+---
+
+## Sisällysluettelo
+{: .no_toc .text-delta }
 
 * Sisällysluettelo
 {:toc}

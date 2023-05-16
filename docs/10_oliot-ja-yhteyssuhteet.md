@@ -5,9 +5,15 @@ nav_order: 10
 ---
 
 # Olio-ohjelmointi: luokkien väliset yhteyssuhteet
+{: .no_toc }
 
 Aiheen toisella oppitunnilla jatkamme olio-ohjelmoinnin käsittelyä ja toteutamme luokkia, jotka hyödyntävät muita toteuttamiamme luokkia. Käsittelemme lisäksi omien luokkiemme käyttämistä listoilla, sekä listojen määrittelemistä olioiden oliomuuttujiksi.
+{: .fs-5 }
 
+---
+
+## Sisällysluettelo
+{: .no_toc .text-delta }
 
 * Sisällysluettelo
 {:toc}

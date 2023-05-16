@@ -5,15 +5,24 @@ nav_order: 7
 ---
 
 # (Staattiset) metodit
+{: .no_toc }
 
 Olemme käyttäneet ohjelmointikurssilla aikaisempien aiheiden yhteydessä lukuisia valmiita metodeja. Metodit ovat olleet luonteva osa ongelmanratkaisua, vaikka emme ole toistaiseksi kiinnittäneet niihin suurta huomiota tai toteuttaneet omia metodeja `main`-metodia lukuun ottamatta.
+{: .fs-5 }
 
 Tällä kertaa perehdymme tarkemmin omien **staattisten metodien** toteuttamiseen ja kutsumiseen sekä siihen, miten voimme välittää arvoja metodista toiseen ja takaisin. Emme vielä harjoittele olio-ohjelmoinnin käytäntöjä, joten palaamme asiaan oliometodien osalta myöhemmin olio-ohjelmoinnin yhteydessä.
+{: .fs-5 }
 
 Syitä oman ohjelman jakamiseksi useisiin metodeihin on lukuisia. Ensinnäkin metodien avulla voidaan vähentää toisteisuutta, jos samoja operaatioita tehdään useita kertoja tai useissa eri kohdissa koodia. Toiseksi metodien avulla voidaan vähentää kompleksisuutta, eli pilkkoa iso monimutkainen kokonaisuus pienemmiksi, helpommin ymmärrettäviksi paloiksi. Myöhemmin kurssilla olio-ohjelmoinnin yhteydessä metodien merkitys kasvaa entisestään, kun metodeista tulee oliokohtaisia.
+{: .fs-5 }
 
 Tämä oppimateriaali pohjautuu Helsingin yliopiston [Agile Education Research](https://www.helsinki.fi/en/researchgroups/data-driven-education) -tutkimusryhmän [MOOC-ohjelmointikurssin materiaaliin](https://materiaalit.github.io/ohjelmointi-18/part2/), jota suositellaan myös tälle ohjelmointikurssille. Lisenssi: [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi).
+{: .fs-5 }
 
+---
+
+## Sisällysluettelo
+{: .no_toc .text-delta }
 
 * Sisällysluettelo
 {:toc}

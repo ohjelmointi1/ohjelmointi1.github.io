@@ -5,10 +5,18 @@ nav_order: 4
 ---
 
 # Merkkijonot
+{: .no_toc }
 
 Merkkijonot ovat meille jo aikaisemmilta oppitunneita tuttua tekstidataa. Merkkijonot ovat "alkeistietotyypeistä" poiketen olioita, eli niillä on metodeja, joiden avulla merkkijonojen sisältöä voidaan käsitellä hyvin monipuolisesti.
+{: .fs-5 }
 
 Tällä oppitunnilla tutustumme merkkijonojen metodeihin ja merkkijonojen vertailuun.
+{: .fs-5 }
+
+---
+
+## Sisällysluettelo
+{: .no_toc .text-delta }
 
 * Sisällysluettelo
 {:toc}

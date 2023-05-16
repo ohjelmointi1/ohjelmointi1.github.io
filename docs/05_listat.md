@@ -5,9 +5,15 @@ nav_order: 5
 ---
 
 # Listat
+{: .no_toc }
 
 Tällä viikolla tutustumme Javan kenties yleisimpään kokoelmaan: listoihin. Listat ovat tietorakenteita, joiden pituus kasvaa joustavasti, kun niihin lisätään uusia arvoja. Listoihin voidaan lisätä arvoja myös aiempien arvojen väliin ja listan väleistä voidaan poistaa arvoja. Listat ovat olioita ja niillä on metodeita, joiden avulla arvoja lisätään, poistetaan, etsitään jne.
+{: .fs-5 }
 
+---
+
+## Sisällysluettelo
+{: .no_toc .text-delta }
 
 * Sisällysluettelo
 {:toc}

@@ -1,3 +1,9 @@
+---
+title: Viope-vinkit
+layout: default
+nav_order: 17
+---
+
 # Vinkkejä Viope-virhetilanteisiin
 
 ## "Could not find or load main class"

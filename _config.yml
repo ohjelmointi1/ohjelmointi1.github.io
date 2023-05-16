@@ -18,6 +18,9 @@ callouts:
   new:
     title: New
     color: green
+  huom:
+    title: 💡 Huomio!
+    color: green
   note:
     title: Note
     color: purple

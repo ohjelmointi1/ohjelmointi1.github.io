@@ -5,13 +5,21 @@ nav_order: 6
 ---
 
 # Taulukot
+{: .no_toc }
 
 Tällä kerralla tutustumme Javan taulukoihin. Taulukot ovat varsin alkeellisia tietorakenteita, joihin voidaan varastoida useita saman typpisiä arvoja. Materiaalissa ja oppitunnilla oletetaan perustason osaamista listojen käytöstä.
+{: .fs-5 }
 
 Toisin kuin listoilla, taulukon pituus on kiinteä, eli niitä ei voi lyhentää eikä kasvattaa. Taulukoilla ei myöskään ole metodeita eikä samanlaista luonnollista merkkijonoesitystä kuin listoilla.
+{: .fs-5 }
 
 Listoilla ja taulukoilla on myös lukuisia yhtäläisyyksiä, ja `ArrayList`-listat jopa käyttävät sisäisesti taulukoita tietojensa tallentamiseen nimensä mukaisesti.
+{: .fs-5 }
 
+---
+
+## Sisällysluettelo
+{: .no_toc .text-delta }
 
 * Sisällysluettelo
 {:toc}

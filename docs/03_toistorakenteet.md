@@ -5,11 +5,18 @@ nav_order: 3
 ---
 
 # Toistorakenteet
+{: .no_toc }
 
 Ehtorakenteiden tavoin toistorakenteilla voidaan vaikuttaa koodin suorituksen etenemiseen. Toistorakenteiden avulla tietyt koodirivit voidaan toistaa eri logiikoilla tai tarvittaessa jopa "ikuisesti".
+{: .fs-5 }
 
 Tällä opetusviikolla harjoittelemme pääasiassa koodin toistamista tietyn määrän kertoja, toiston keskeyttämistä, sekä käymään läpi kokonaislukuja. Toistorakenteita hyödynnetään myöhemmin myös listojen ja taulukoiden yhteydessä, jolloin käymme läpi niissä olevia arvoja yksitellen.
+{: .fs-5 }
 
+---
+
+## Sisällysluettelo
+{: .no_toc .text-delta }
 
 * Sisällysluettelo
 {:toc}

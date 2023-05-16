@@ -5,15 +5,24 @@ nav_order: 12
 ---
 
 # Poikkeukset (exceptions)
+{: .no_toc }
 
 Poikkeukset ovat ohjelman suorituksen aikana tapahtuvia tapahtumia, jotka aiheuttavat poikkeamia ohjelman normaaliin suoritusjärjestykseen. Vaikka ensikokemukset poikkeuksista ovat usein kielteisiä, ne ovat erittäin hyödyllinen työkalu erilaisten vikatilanteiden käsittelemiseksi ohjelmissa.
+{: .fs-5 }
 
 Ilman poikkeustenkäsittelyä ohjelma tyypillisesti "kaatuu", kun ohjelmassa tapahtuu jotain normaalista suorituksesta poikkeavaa, kuten yritetään käyttää listan olematonta indeksiä. Poikkeuksiin voidaan varautua, jolloin niiden sattuessa voidaan esimerkiksi yrittää uudelleen tai tulostaa virheilmoitus kaatamatta koko ohjelmaa.
+{: .fs-5 }
 
 Tällä opetuskerralla tutustumme tarkemmin poikkeuksiin, niiden hyödyntämiseen sekä niihin varautumiseen.
+{: .fs-5 }
 
 Huomaa, että Java-kääntäjän antamat virheet sekä varoitukset eivät liity poikkeuksiin, vaan ovat kokonaan eri asia. Poikkeukset tapahtuvat ohjelman suorituksen aikana, kun taas kääntäjä tekee työnsä ennen kuin ohjelma käynnistetään.
+{: .fs-5 }
 
+---
+
+## Sisällysluettelo
+{: .no_toc .text-delta }
 
 * Sisällysluettelo
 {:toc}

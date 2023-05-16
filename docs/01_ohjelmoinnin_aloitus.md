@@ -5,8 +5,15 @@ nav_order: 1
 ---
 
 # Ohjelmoinnin aloitus
+{: .no_toc }
 
 Tällä oppitunnilla tutustumme Java-lähdekooditiedostojen rakenteeseen sekä koodin kirjoittamiseen ja suorittamiseen Eclipse-sovelluskehittimessä. Käsittelemme numeerisia sekä tekstimuotoisia tietotyyppejä ja teemme yksinkertaista vuorovaikutusta käyttäjän kanssa tulosteiden ja syötteiden avulla. Lopuksi tunnilla opittuja asioita harjoitellaan Viope-järjestelmässä olevien tehtävien avulla.
+{: .fs-5 }
+
+---
+
+## Sisällysluettelo
+{: .no_toc .text-delta }
 
 * Sisällysluettelo
 {:toc}

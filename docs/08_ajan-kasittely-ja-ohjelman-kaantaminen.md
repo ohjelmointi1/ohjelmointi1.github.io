@@ -5,10 +5,18 @@ nav_order: 8
 ---
 
 # Ajan käsittely ja ohjelman kääntäminen
+{: .no_toc }
 
 Tällä oppitunnilla perehdymme Javan tapohin käsitellä aikaa. Aikaa käsitellään **olioiden** ja **luokkien** avulla, mikä toimii erinomaisena pohjustuksena seuraavalla viikolla käsiteltävään **olio-ohjelmointiaiheeseen**, jossa luomme itse vastaavia luokkia ja niiden olioita.
+{: .fs-5 }
 
 Ajan käsittelyn lisäksi tutustumme siihen, miten Java-ohjelmia voidaan suorittaa Eclipsen ulkopuolella. Tähänastinen IDE-ympäristöön sidoksissa oleva suorittaminen soveltuu ainoastaan ohjelmistokehityksen yhteyteen, mutta ohjelmat on myös pakattavissa siten, että ne voidaan suorittaa miltä vain komentoriviltä.
+{: .fs-5 }
+
+---
+
+## Sisällysluettelo
+{: .no_toc .text-delta }
 
 * Sisällysluettelo
 {:toc}
