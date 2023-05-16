@@ -1,5 +1,24 @@
-theme: jekyll-theme-cayman
 title: Ohjelmointi 1
-description: Haaga-Helia
-github:
-  is_project_page: false
+description: Haaga-Helia / Ohjelmointi 1, SOF005AS2A
+theme: just-the-docs
+
+url: https://ohjelmointi1.github.io/
+
+aux_links:
+  Opintojaksokuvaus: https://opinto-opas.haaga-helia.fi/course_unit/SOF005AS2A
+
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: purple
+  warning:
+    title: Warning
+    color: red
