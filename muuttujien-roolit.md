@@ -1,8 +1,14 @@
+---
+title: Muuttujien roolit
+layout: default
+parent: ''
+---
+
 # Muuttujien roolit
 
-Ohjelmointi on usein ongelmanratkaisua, jossa tarvitsemme syntaksin osaamisen lisäksi taitoa nähdä ongelmia eri näkökulmista ja muotoilla ongelmia eri tavoilla. 
+Ohjelmointi on usein ongelmanratkaisua, jossa tarvitsemme syntaksin osaamisen lisäksi taitoa nähdä ongelmia eri näkökulmista ja muotoilla ongelmia eri tavoilla.
 
-Kun ymmärrämme miten muuttujat toimivat ja miten niitä käytetään, pystymme soveltamaan muuttujia erilaisissa käyttötarkoituksissa ratkaisemaan erilaisia ongelmia. [Jorma Sajaniemi](http://www.cs.joensuu.fi/~saja/var_roles/stud_vers/stud_Java_fin.html) on kehittänyt muuttujille oivallisen [luokittelun](http://www.cs.joensuu.fi/~saja/var_roles/stud_vers/stud_Java_fin.html), jonka avulla pystymme hahmottamaan erilaisia toistuvia rooleja, jotka muuttujilla on eri tyyppisten ongelmien ratkaisemisessa. 
+Kun ymmärrämme miten muuttujat toimivat ja miten niitä käytetään, pystymme soveltamaan muuttujia erilaisissa käyttötarkoituksissa ratkaisemaan erilaisia ongelmia. [Jorma Sajaniemi](http://www.cs.joensuu.fi/~saja/var_roles/stud_vers/stud_Java_fin.html) on kehittänyt muuttujille oivallisen [luokittelun](http://www.cs.joensuu.fi/~saja/var_roles/stud_vers/stud_Java_fin.html), jonka avulla pystymme hahmottamaan erilaisia toistuvia rooleja, jotka muuttujilla on eri tyyppisten ongelmien ratkaisemisessa.
 
 Tietokoneen näkökulmasta muuttuja on vain muuttuja, mutta ohjelmoijan näkökulmasta eri muuttujilla on erilaisia käyttötarkoituksia, kuten:
 
@@ -15,6 +21,7 @@ Tietokoneen näkökulmasta muuttuja on vain muuttuja, mutta ohjelmoijan näköku
 
 Lue lisää näistä rooleista osoitteessa: [http://www.cs.joensuu.fi/~saja/var_roles/stud_vers/stud_Java_fin.html](http://www.cs.joensuu.fi/~saja/var_roles/stud_vers/stud_Java_fin.html)
 
+
 ## Alkuluku-esimerkki muuttujien roolien kera
 
 Tässä esimerkkikoodissa hyödynnetään kiintoarvoa, yksisuuntaista lippua ja askeltajaa ja selvitetään, onko tietty luku alkuluku, eli onko se jaettavissa jollain muulla positiivisella kokonaisluvulla kuin yhdellä ja itsellään:
@@ -23,7 +30,7 @@ Tässä esimerkkikoodissa hyödynnetään kiintoarvoa, yksisuuntaista lippua ja 
 public class Alkuluku {
 
     public static void main(String[] args) {
-        // Koodissa on tarkoitus selvittää, onko tämä luku alkuluku. 
+        // Koodissa on tarkoitus selvittää, onko tämä luku alkuluku.
         // Tätä lukua ei muuteta koodissa, joten sitä kutsutaan *kiintoarvoksi*.
         final int luku = 93;
 
@@ -36,8 +43,8 @@ public class Alkuluku {
         for (int jakaja = 2; jakaja < luku; jakaja++) {
             // jos jako menee tasan, ei ole alkuluku
             if (luku % jakaja == 0) {
-                onAlkuluku = false; // asetetaan lippu epätodeksi. 
-                
+                onAlkuluku = false; // asetetaan lippu epätodeksi.
+
                 // toisto voidaan nyt keskeyttää, koska luku on osoitettu ei-alkuluvuksi
                 break;
             }
